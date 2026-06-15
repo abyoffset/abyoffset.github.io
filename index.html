@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Sistem Absensi Fingerprint Pro (Tarif Per Karyawan)</title>
+    <style>
+        :root[data-theme="light"] {
+            --bg-global: #f1f5f9;
+            --bg-container: #ffffff;
+            --text-utama: #1e293b;
+            --text-muted: #64748b;
+            --text-nominal: #0f172a;
+            --border-color: #e2e8f0;
+            --bg-tr-even: rgba(248, 250, 252, 0.6);
+            --bg-panel: #f8fafc;
+            --bg-total-row: #eff6ff;
+            --border-total-row: #3b82f6;
+            --text-total-row: #1e3a8a;
+            --bg-grand-total: #ecfdf5;
+            --border-grand-total: #a7f3d0;
+            --text-grand-total: #047857;
+            --bg-modal: #ffffff;
+            --text-nol: #94a3b8;
+            --bg-kasbon: #fef2f2;
+            --border-kasbon: #fecaca;
+            --text-kasbon: #b91c1c;
+            --bg-bonus: #f0fdf4;
+            --border-bonus: #bbf7d0;
+            --text-bonus: #15803d;
+            --bg-jam: #1e293b;
+            --text-jam: #38bdf8;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-global: #0f172a;
+            --bg-container: #1e293b;
+            --text-utama: #cbd5e1;
+            --text-muted: #64748b;
+            --text-nominal: #38bdf8;
+            --border-color: #334155;
+            --bg-tr-even: rgba(15, 23, 42, 0.4);
+            --bg-panel: #111827;
+            --bg-total-row: #1e3a8a;
+            --border-total-row: #3b82f6;
+            --text-total-row: #ffffff;
+            --bg-grand-total: #064e3b;
+            --border-grand-total: #059669;
+            --text-grand-total: #34d399;
+            --bg-modal: #1e293b;
+            --text-nol: #475569;
+            --bg-kasbon: #451a03;
+            --border-kasbon: #78350f;
+            --text-kasbon: #fca5a5;
+            --bg-bonus: #064e3b;
+            --border-bonus: #047857;
+            --text-bonus: #a7f3d0;
+            --bg-jam: #0f172a;
+            --text-jam: #38bdf8;
+        }
+
+        html, body {
+            margin: 0; padding: 0; width: 100%;
+            background-color: var(--bg-global);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--text-utama);
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        *, *:before, *:after { box-sizing: inherit; }
+
+        .container {
+            width: 100%; min-height: 100vh;
+            background: var(--bg-container); padding: 8px;
+            display: flex; flex-direction: column;
+        }
+
+        .header {
+            margin-bottom: 8px; border-bottom: 2px solid #3b82f6; padding-bottom: 8px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .header-title-area { display: flex; flex-direction: column; gap: 2px; }
+        .header h1 { font-size: 13px; color: #3b82f6; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .nama-karyawan-header { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: var(--text-utama); 
+            margin: 0;
+        }
+
+        .btn-theme-toggle { background: none; border: none; font-size: 16px; cursor: pointer; padding: 0 4px; }
+
+        .jam-digital-container {
+            background-color: var(--bg-jam);
+            color: var(--text-jam);
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin-bottom: 8px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .jam-digital-waktu { font-size: 20px; letter-spacing: 1px; }
+        .jam-digital-tanggal { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+        /* Ganti User Box di Depan */
+        .ganti-user-box-depan {
+            background: var(--bg-panel);
+            border: 1px solid #3b82f6;
+            border-radius: 6px;
+            padding: 6px 8px;
+            margin-bottom: 8px;
+        }
+        .select-mbois {
+            width: 100%; padding: 8px; font-size: 13px; font-weight: bold;
+            border: 1px solid #3b82f6; border-radius: 4px;
+            background-color: var(--bg-container); color: var(--text-utama); cursor: pointer;
+        }
+
+        .global-settings {
+            background-color: var(--bg-panel); border: 1px solid #3b82f6;
+            border-radius: 8px; padding: 12px; margin-bottom: 8px; display: none;
+        }
+        .settings-menu-grid { display: grid; grid-template-columns: 1fr; gap: 6px; }
+
+        .form-group { display: flex; flex-direction: column; margin-bottom: 6px; }
+        .form-group label { font-size: 10px; font-weight: bold; color: var(--text-muted); margin-bottom: 4px; }
+        
+        .global-settings input, .modal-body input, .modal-body select {
+            width: 100%; padding: 8px; border: 1px solid var(--border-color);
+            background-color: var(--bg-container); color: var(--text-utama);
+            border-radius: 4px; font-size: 12px; box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 12px; font-size: 11px; font-weight: bold; border: none;
+            border-radius: 4px; cursor: pointer; display: flex; align-items: center;
+            justify-content: center; gap: 4px; white-space: nowrap;
+        }
+        button:active { transform: scale(0.97); }
+
+        .btn-edit { background-color: #3b82f6; color: white; width: 100%; }
+        .btn-tariff-trigger { background-color: #0284c7; color: white; width: 100%; }
+        .btn-hours-trigger { background-color: #8b5cf6; color: white; width: 100%; }
+        .btn-kasbon-trigger { background-color: #0d9488; color: white; width: 100%; }
+        
+        .btn-config { background-color: #475569; color: white; padding: 8px 10px; transition: background-color 0.2s ease; }
+        .btn-config.kembali-mode { background-color: #ef4444; }
+
+        .btn-save { background-color: #10b981; color: white; width: 100%; }
+        .btn-danger { background-color: #ef4444; color: white; width: 100%; }
+        .btn-reset-orange { background-color: #f97316; color: white; width: 100%; }
+        .btn-close { background-color: #64748b; color: white; width: 100%; }
+        
+        .file-input-wrapper { position: relative; width: 100%; margin-bottom: 8px; }
+        .btn-fd-import-web {
+            background-color: #059669; color: white; width: 100%; padding: 12px;
+            font-size: 12px; border-radius: 4px; font-weight: bold; text-align: center;
+        }
+        .file-input-wrapper input[type="file"] {
+            position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;
+        }
+
+        /* FAB SCREENSHOT KECIL TRANSPARAN */
+        .btn-screenshot-fab {
+            position: fixed; 
+            bottom: 16px; 
+            right: 16px; 
+            background-color: #10b981;
+            color: white; 
+            width: 42px;         
+            height: 42px;        
+            border-radius: 50%;  
+            font-size: 16px;     
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); 
+            z-index: 999; 
+            border: 2px solid white;
+            opacity: 0.4;        
+            transition: opacity 0.2s ease, transform 0.1s ease;
+            padding: 0;          
+        }
+        .btn-screenshot-fab:hover, .btn-screenshot-fab:active {
+            opacity: 1.0;
+            transform: scale(1.05);
+        }
+
+        .table-responsive { width: 100%; overflow-x: auto; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; white-space: nowrap; table-layout: fixed; }
+        th { background-color: #1e3a8a; color: #ffffff; text-align: center; padding: 8px 2px; font-size: 10px; text-transform: uppercase; }
+        td { padding: 8px 2px; border-bottom: 1px solid var(--border-color); font-size: 10px; text-align: center; overflow: hidden; text-overflow: ellipsis; }
+
+        th:nth-child(1), td:nth-child(1) { text-align: left; padding-left: 4px; width: 11%; } 
+        th:nth-child(2), td:nth-child(2) { width: 13%; } 
+        th:nth-child(3), td:nth-child(3) { width: 13%; } 
+        th:nth-child(4), td:nth-child(4) { text-align: right; padding-right: 4px; width: 20%; } 
+        th:nth-child(5), td:nth-child(5) { width: 13%; } 
+        th:nth-child(6), td:nth-child(6) { width: 10%; } 
+        th:nth-child(7), td:nth-child(7) { text-align: right; padding-right: 4px; width: 20%; } 
+
+        tr:nth-child(even) td { background-color: var(--bg-tr-even); }
+        .hari { color: var(--text-utama); font-weight: bold; }
+        .hari-minggu { color: #ef4444; }
+        .nilai-uang { font-weight: bold; color: var(--text-nominal); }
+        .nol { color: var(--text-nol); }
+
+        .total-row td {
+            background-color: var(--bg-total-row) !important; border-top: 2px solid var(--border-total-row);
+            border-bottom: 2px solid var(--border-total-row); padding: 6px 2px; font-weight: bold; color: var(--text-total-row) !important;
+        }
+        .total-row td:nth-child(1) { text-align: left; padding-left: 4px; }
+        .total-row td:nth-child(2), .total-row td:nth-child(4) { text-align: right; padding-right: 4px; }
+
+        .summary-gaji-container { margin-top: 8px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 4px; }
+        .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; border-radius: 6px; font-size: 10px; font-weight: bold; }
+        .summary-kasbon { background-color: var(--bg-kasbon); border: 1px solid var(--border-kasbon); color: var(--text-kasbon); }
+        .summary-bonus { background-color: var(--bg-bonus); border: 1px solid var(--border-bonus); color: var(--text-bonus); }
+        
+        .grand-total-box { padding: 8px; background-color: var(--bg-grand-total); border: 1px solid var(--border-grand-total); border-radius: 8px; text-align: center; }
+        .grand-total-label { font-size: 9px; color: var(--text-grand-total); font-weight: bold; }
+        .grand-total-amount { font-size: 16px; color: var(--text-grand-total); font-weight: bold; margin-top: 1px; }
+
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);
+            display: flex; justify-content: center; align-items: flex-start; padding-top: 50px; z-index: 9999; display: none;
+        }
+        .modal-content { background-color: var(--bg-modal); width: 90%; max-width: 360px; border-radius: 12px; padding: 16px; border: 1px solid var(--border-color); }
+        .modal-header { border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .modal-header h3 { margin: 0; font-size: 14px; color: #3b82f6; }
+        .modal-body { display: flex; flex-direction: column; gap: 10px; }
+
+        .badge-karyawan-baru {
+            background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af;
+            padding: 6px; margin: 4px 0; border-radius: 4px; font-size: 12px; font-weight: bold; text-align: left;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="container" id="app-capture-area">
+
+    <!-- WIDGET JAM DIGITAL -->
+    <div class="jam-digital-container">
+        <div id="live-clock" class="jam-digital-waktu">00:00:00</div>
+        <div id="live-date" class="jam-digital-tanggal">Senin, 01 Januari 2026</div>
+    </div>
+
+    <!-- DROPDOWN PILIH KARYAWAN (PINDAH KE DEPAN) -->
+    <div class="ganti-user-box-depan" id="area-dropdown-depan">
+        <label style="font-size: 10px; font-weight: bold; color: #3b82f6; display: block; margin-bottom: 4px;">🔄 PILIH KARYAWAN:</label>
+        <select id="select-karyawan-aktif" class="select-mbois" onchange="gantiKaryawanAktif()">
+            <option value="">-- Belum Ada Data / Import Excel --</option>
+        </select>
+    </div>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="header-title-area">
+            <h1 id="judul-aplikasi">Sistem Fingerprint Gaji</h1>
+            <div id="display-nama-karyawan" class="nama-karyawan-header"> Belum Ada Data</div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 4px;">
+            <button id="theme-toggle-btn" class="btn-theme-toggle" onclick="toggleTemaKerja()">🌞</button>
+            <button id="btn-config" class="btn-config" onclick="togglePengaturanMenu()">⚙️ Menu</button>
+        </div>
+    </div>
+
+    <!-- PANEL PENGATURAN -->
+    <div id="panel-pengaturan" class="global-settings">
+        <h3>⚙️ Menu Pengaturan</h3>
+
+        <div class="file-input-wrapper">
+            <div class="btn-fd-import-web">📂 IMPORT DATA ABSENSI EXCEL/CSV ASLI MESIN</div>
+            <input type="file" id="input-excel-web" accept=".xlsx, .xls, .csv" onchange="mocoFileExcelMesinFinger(this)">
+        </div>
+
+        <div class="settings-menu-grid">
+            <button class="btn-edit" onclick="bukaModalJamManual()">✏️ Edit Jam Kerja Manual (Hari Ini)</button>
+            <button class="btn-hours-trigger" onclick="bukaModalJamRegulerMaster()">⏱️ Atur Durasi Jam Kerja</button>
+            <button class="btn-tariff-trigger" onclick="bukaModalTarif()">💰 Atur Tarif Gaji & Lembur (Per Orang)</button>
+            <button class="btn-kasbon-trigger" onclick="bukaModalKasbon()">💸 Atur Kasbon & Bonus Karyawan</button>
+            <button class="btn-reset-orange" onclick="bukaModalKonfirmasiReset()">🔄 Reset Semua Data</button>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Hari</th>
+                    <th>Masuk</th>
+                    <th>Pulang</th>
+                    <th>Gaji Pokok</th>
+                    <th>P.Lbr</th>
+                    <th>Jam</th>
+                    <th>U.Lembur</th>
+                </tr>
+            </thead>
+            <tbody id="tabel-body"></tbody>
+        </table>
+    </div>
+
+    <div class="summary-gaji-container">
+        <div class="summary-row summary-bonus">
+            <span>TAMBAHAN BONUS</span>
+            <span id="text-tambahan-bonus">Rp 0</span>
+        </div>
+        <div class="summary-row summary-kasbon">
+            <span>POTONGAN KASBON</span>
+            <span id="text-potongan-kasbon">Rp 0</span>
+        </div>
+        <div class="grand-total-box">
+            <div class="grand-total-label" id="label-total-user">TOTAL PENDAPATAN BERSIH</div>
+            <div class="grand-total-amount" id="grand-total">Rp 0</div>
+        </div>
+    </div>
+</div>
+
+<!-- TOMBOL FAB SCREENSHOT BULAT TRANSPARAN -->
+<button id="fab-screenshot" class="btn-screenshot-fab" onclick="ambilScreenshotLaporan()">📸</button>
+
+<!-- POPUP MODAL -->
+<div id="modal-alert-custom" class="modal-overlay">
+    <div class="modal-content" style="text-align: center; margin-top: 100px;">
+        <div id="alert-custom-message" style="font-size: 13px; font-weight: bold; padding: 10px 0;"></div>
+        <button class="btn-edit" onclick="tutupAlertKustom()">OKE</button>
+    </div>
+</div>
+
+<div id="modal-karyawan-baru" class="modal-overlay">
+    <div class="modal-content" style="margin-top: 70px; max-width: 380px;">
+        <div class="modal-header" style="border-bottom: 2px solid #10b981;">
+            <h3 style="color: #10b981;">✨ Karyawan Baru Terdeteksi!</h3>
+        </div>
+        <div class="modal-body">
+            <p style="font-size: 12px; margin: 0; color: var(--text-utama);">
+                Sistem menemukan nama baru yang belum dikonfigurasi gajinya di LocalStorage. Silakan atur tarif gajinya nanti:
+            </p>
+            <div id="list-nama-karyawan-baru" style="max-height: 160px; overflow-y: auto; padding: 2px;"></div>
+            <button class="btn-save" onclick="tutupModalKaryawanBaru()">Siap, Atur Tarif Gaji</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-konfirmasi-reset" class="modal-overlay">
+    <div class="modal-content" style="margin-top: 80px;">
+        <div class="modal-header" style="border-bottom: 1px solid #ef4444;"><h3 style="color: #ef4444;">⚠️ Peringatan Reset</h3></div>
+        <div class="modal-body" style="text-align: center; padding: 10px 0;">
+            <p style="font-size: 13px; font-weight: bold; margin: 0 0 12px 0; color: var(--text-utama);">
+                Apakah Anda yakin ingin menghapus semua data?<br>
+                <span style="color: #ef4444; font-size: 11px; font-weight: normal;">*Semua data absensi dan tarif gaji karyawan akan terhapus permanen dari LocalStorage.</span>
+            </p>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
+                <button class="btn-close" onclick="tutupModalKonfirmasiReset()">Batal</button>
+                <button class="btn-danger" onclick="eksekusiResetDataKerja()">Ya, Hapus Semua</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-jam-manual" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header"><h3>✏️ Edit Jam Manual</h3><span style="cursor:pointer;" onclick="tutupModalJamManual()">✕</span></div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Pilih Hari:</label>
+                <select id="select-hari-edit" onchange="loadJamHariPilihan()">
+                    <option value="senin">Senin</option><option value="selasa">Selasa</option><option value="rabu">Rabu</option>
+                    <option value="kamis">Kamis</option><option value="jumat">Jumat</option><option value="sabtu">Sabtu</option><option value="minggu">Minggu</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Jam Masuk (Format 08:00)</label><input type="text" id="modal-jam-masuk"></div>
+            <div class="form-group"><label>Jam Pulang Sebenarnya / Lembur (Format 16:00 atau 21:00)</label><input type="text" id="modal-jam-plem"></div>
+            <div style="color: #8b5cf6; font-weight: bold; font-size: 11px; margin-top: -4px; margin-bottom: 6px;">*Cukup isi jam masuk & jam pulang akhir. Jam reguler dan lembur akan dihitung otomatis oleh sistem!</div>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-top:6px;">
+                <button class="btn-close" onclick="tutupModalJamManual()">Batal</button>
+                <button class="btn-save" onclick="simpanJamManualDariModal()">💾 Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-jam-reguler-master" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header"><h3>⏱️ Durasi Jam Kerja Reguler</h3><span style="cursor:pointer;" onclick="tutupModalJamRegulerMaster()">✕</span></div>
+        <div class="modal-body">
+            <div class="form-group">
+                <label>Target Jam Kerja Sehari (Jam):</label>
+                <input type="number" id="master-jam-reguler-input" value="8" min="1" max="24">
+            </div>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-top:6px;">
+                <button class="btn-close" onclick="tutupModalJamRegulerMaster()">Batal</button>
+                <button class="btn-save" style="background-color: #8b5cf6;" onclick="simpanMasterJamReguler()">💾 Simpan Durasi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-pengaturan-tarif" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header"><h3 id="judul-modal-tarif">💰 Pengaturan Tarif Gaji</h3><span style="cursor:pointer;" onclick="tutupModalTarif()">✕</span></div>
+        <div class="modal-body">
+            <div style="color: #0284c7; font-weight: bold; font-size: 11px; margin-bottom: 4px;">Masukkan angka tanpa tanda titik (misal 120 dibaca 120.000).</div>
+            <div class="form-group"><label>Gaji Pokok (Senin - Sabtu)</label><input type="number" id="master-gaji"></div>
+            <div class="form-group"><label>Tarif Lembur per Jam</label><input type="number" id="master-tarif"></div>
+            <div class="form-group"><label>Gaji Pokok (Hari Minggu)</label><input type="number" id="minggu-gaji"></div>
+            <div class="form-group"><label>Tarif Lembur (Hari Minggu)</label><input type="number" id="minggu-tarif"></div>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-top:6px;">
+                <button class="btn-close" onclick="tutupModalTarif()">Batal</button>
+                <button class="btn-save" onclick="simpanTarifGajiDariModal()">💾 Simpan Tarif</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="modal-pengaturan-kasbon" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header"><h3>💸 Atur Kasbon & Bonus</h3><span style="cursor:pointer;" onclick="tutupModalKasbon()">✕</span></div>
+        <div class="modal-body">
+            <div style="color: #0d9488; font-weight: bold; font-size: 11px; margin-bottom: 4px;">Masukkan nilai kasbon/bonus (misal 50 dibaca 50.000).</div>
+            <div class="form-group"><label>Nominal Bonus Tambahan (Rp)</label><input type="number" id="master-bonus-input"></div>
+            <div class="form-group"><label>Nominal Potongan Kasbon (Rp)</label><input type="number" id="master-kasbon-input"></div>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-top:6px;">
+                <button class="btn-close" onclick="tutupModalKasbon()">Batal</button>
+                <button class="btn-save" style="background-color: #0d9488;" onclick="simpanKasbonDanBonus()">💾 Simpan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let temaAktif = localStorage.getItem('ceklok_theme') || 'light';
+    document.documentElement.setAttribute('data-theme', temaAktif);
+    document.getElementById('theme-toggle-btn').innerText = (temaAktif === 'dark') ? '🌙' : '🌞';
+
+    function updateJamDigital() {
+        const sekarang = new Date();
+        const jam = String(sekarang.getHours()).padStart(2, '0');
+        const menit = String(sekarang.getMinutes()).padStart(2, '0');
+        const detik = String(sekarang.getSeconds()).padStart(2, '0');
+        document.getElementById('live-clock').innerText = `${jam}:${menit}:${detik}`;
+        
+        const daftarHari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+        const daftarBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+        
+        document.getElementById('live-date').innerText = `${daftarHari[sekarang.getDay()]}, ${sekarang.getDate()} ${daftarBulan[sekarang.getMonth()]} ${sekarang.getFullYear()}`;
+    }
+    updateJamDigital();
+    setInterval(updateJamDigital, 1000);
+
+    const templateHari = () => ({
+        "minggu": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
+        "senin": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
+        "selasa": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
+        "rabu": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
+        "kamis": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
+        "jumat": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
+        "sabtu": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false }
+    });
+
+    const listHari = ['minggu', 'senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu'];
+    const namaHariIndo = { 'minggu': 'Min', 'senin': 'Sen', 'selasa': 'Sel', 'rabu': 'Rab', 'kamis': 'Kam', 'jumat': "Jum", 'sabtu': 'Sab' };
+    
+    let databaseKaryawan = JSON.parse(localStorage.getItem('multiCeklok_DB')) || [];
+    let karyawanAktifNama = localStorage.getItem('multiCeklok_AktifNama') || "";
+    let masterJamReguler = Number(localStorage.getItem('dataLemburHP_MasterJamReguler')) || 8;
+
+    document.getElementById('master-jam-reguler-input').value = masterJamReguler;
+
+    function tampilAlertKustom(pesan) {
+        document.getElementById('alert-custom-message').innerHTML = pesan;
+        document.getElementById('modal-alert-custom').style.display = 'flex';
+    }
+    function tutupAlertKustom() { document.getElementById('modal-alert-custom').style.display = 'none'; }
+
+    function toggleTemaKerja() {
+        temaAktif = (temaAktif === 'light') ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', temaAktif);
+        localStorage.setItem('ceklok_theme', temaAktif);
+        document.getElementById('theme-toggle-btn').innerText = (temaAktif === 'dark') ? '🌙' : '🌞';
+        renderTabelKaryawan();
+    }
+
+    function normalisirNominal(val) {
+        let num = Number(val);
+        if (num > 0 && num < 1000) return num * 1000;
+        return num;
+    }
+
+    function bukaModalKaryawanBaru(listNama) {
+        let htmlList = '';
+        listNama.forEach((nama, index) => {
+            htmlList += `<div class="badge-karyawan-baru">👤 ${index + 1}. ${nama.toUpperCase()}</div>`;
+        });
+        document.getElementById('list-nama-karyawan-baru').innerHTML = htmlList;
+        document.getElementById('modal-karyawan-baru').style.display = 'flex';
+    }
+    function tutupModalKaryawanBaru() { document.getElementById('modal-karyawan-baru').style.display = 'none'; }
+
+    function togglePengaturanMenu() {
+        const panel = document.getElementById('panel-pengaturan');
+        const btnConfig = document.getElementById('btn-config');
+        
+        if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+            btnConfig.innerText = "⚙️ Menu";
+            btnConfig.classList.remove('kembali-mode');
+        } else {
+            panel.style.display = 'block';
+            btnConfig.innerText = "⬅️ Kembali";
+            btnConfig.classList.add('kembali-mode');
+        }
+    }
+
+    function hitungTotalJamKerjaNyata(masuk, pulang) {
+        if (masuk === "0" || pulang === "0" || !masuk || !pulang) return 0;
+        const [h1, m1] = masuk.split(':').map(Number);
+        const [h2, m2] = pulang.split(':').map(Number);
+        let selisihMenit = (h2 * 60 + m2) - (h1 * 60 + m1);
+        if (selisihMenit < 0) selisihMenit += 24 * 60; 
+        return parseFloat((selisihMenit / 60).toFixed(2));
+    }
+
+    function bukaModalJamRegulerMaster() { 
+        document.getElementById('master-jam-reguler-input').value = masterJamReguler;
+        document.getElementById('modal-jam-reguler-master').style.display = 'flex'; 
+    }
+    function tutupModalJamRegulerMaster() { document.getElementById('modal-jam-reguler-master').style.display = 'none'; }
+    
+    function simpanMasterJamReguler() {
+        masterJamReguler = Number(document.getElementById('master-jam-reguler-input').value) || 8;
+        localStorage.setItem('dataLemburHP_MasterJamReguler', masterJamReguler);
+        tutupModalJamRegulerMaster();
+        renderTabelKaryawan();
+        tampilAlertKustom(`⏱️ Sukses! Jam kerja reguler diubah menjadi <b>${masterJamReguler} Jam</b>.`);
+    }
+
+    function mocoFileExcelMesinFinger(inputElement) {
+        const file = inputElement.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            try {
+                const data = new Uint8Array(e.target.result);
+                const workbook = XLSX.read(data, { type: 'array' });
+                
+                let tempDB = [];
+                let tampunganKaryawanBaru = []; 
+                const namaHariMesinMap = { 'sn': 'senin', 'sl': 'selasa', 'ra': 'rabu', 'ka': 'kamis', 'ju': 'jumat', 'sa': 'sabtu', 'mg': 'minggu', 'mi': 'minggu' };
+
+                workbook.SheetNames.forEach(sheetName => {
+                    if (sheetName === 'Rekap' || sheetName === 'Log') return;
+
+                    const worksheet = workbook.Sheets[sheetName];
+                    const rawRows = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+
+                    for (let r = 0; r < Math.min(rawRows.length, 4); r++) {
+                        let row = rawRows[r];
+                        if (!row) continue;
+
+                        for (let c = 0; c < row.length; c++) {
+                            let cellVal = String(row[c] || '').trim();
+                            
+                            if (cellVal.toLowerCase() === "nama") {
+                                let namaKaryawan = String(row[c + 1] || '').trim();
+                                if (!namaKaryawan) continue;
+
+                                let namaDepartemen = "Umum";
+                                for(let checkC = 0; checkC < row.length; checkC++) {
+                                    let checkVal = String(row[checkC] || '').trim().toLowerCase();
+                                    if(checkVal === "departemen") {
+                                        namaDepartemen = String(row[checkC + 1] || 'Umum').trim();
+                                        break;
+                                    }
+                                }
+
+                                let krwExist = databaseKaryawan.find(x => x.nama === namaKaryawan);
+                                
+                                if (!krwExist) {
+                                    tampunganKaryawanBaru.push(`${namaKaryawan} (${namaDepartemen})`); 
+                                    krwExist = { 
+                                        nama: namaKaryawan,
+                                        departemen: namaDepartemen,
+                                        kasbon: 0, 
+                                        bonus: 0, 
+                                        gajiPokok: 0, 
+                                        tarifLembur: 0, 
+                                        gajiMinggu: 0, 
+                                        tarifLemburMinggu: 0,
+                                        infoKerja: templateHari() 
+                                    };
+                                } else {
+                                    krwExist.departemen = namaDepartemen;
+                                    krwExist.infoKerja = templateHari();
+                                }
+
+                                if (!tempDB.find(x => x.nama === namaKaryawan)) {
+                                    tempDB.push(krwExist);
+                                }
+
+                                for (let subR = 4; subR < rawRows.length; subR++) {
+                                    let subRow = rawRows[subR];
+                                    if (!subRow) continue;
+
+                                    let cellHariTgl = String(subRow[c - 7] || subRow[c - 8] || subRow[c] || '').trim();
+                                    let matchHari = cellHariTgl.match(/(\d+)\s+([A-Za-z]+)/);
+                                    
+                                    if (matchHari) {
+                                        let kodeHari = matchHari[2].toLowerCase();
+                                        let keyHariIndo = namaHariMesinMap[kodeHari];
+
+                                        if (keyHariIndo) {
+                                            let jamMasukRaw = "";
+                                            let jamPulangRaw = "";
+
+                                            for (let offset = 0; offset <= 14; offset++) {
+                                                let subCell = String(subRow[c + offset] || '').trim().replace(/\n/g, ' ');
+                                                let matchJam = subCell.match(/([0-1][0-9]|2[0-3]):[0-5][0-9]/g);
+                                                if (matchJam) {
+                                                    if (!jamMasukRaw) jamMasukRaw = matchJam[0];
+                                                    jamPulangRaw = matchJam[matchJam.length - 1];
+                                                }
+                                            }
+
+                                            if (jamMasukRaw) {
+                                                krwExist.infoKerja[keyHariIndo].jam_masuk = jamMasukRaw;
+                                                if (jamPulangRaw && jamPulangRaw !== jamMasukRaw) {
+                                                    krwExist.infoKerja[keyHariIndo].is_pulang = true;
+                                                    const totalJam = hitungTotalJamKerjaNyata(jamMasukRaw, jamPulangRaw);
+                                                    
+                                                    if (totalJam <= masterJamReguler) {
+                                                        krwExist.infoKerja[keyHariIndo].jam_pulang_reguler = jamPulangRaw;
+                                                        krwExist.infoKerja[keyHariIndo].jam_pulang_lembur = "0";
+                                                    } else {
+                                                        const [hM, mM] = jamMasukRaw.split(':').map(Number);
+                                                        let jReg = hM + masterJamReguler;
+                                                        while (jReg >= 24) jReg -= 24;
+                                                        
+                                                        krwExist.infoKerja[keyHariIndo].jam_pulang_reguler = `${String(jReg).padStart(2, '0')}:${String(mM).padStart(2, '0')}`;
+                                                        krwExist.infoKerja[keyHariIndo].jam_pulang_lembur = jamPulangRaw;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+
+                if (tempDB.length > 0) {
+                    databaseKaryawan = tempDB;
+                    if (!karyawanAktifNama || !databaseKaryawan.find(x => x.nama === karyawanAktifNama)) {
+                        karyawanAktifNama = databaseKaryawan[0].nama;
+                    }
+                    
+                    localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
+                    localStorage.setItem('multiCeklok_AktifNama', karyawanAktifNama);
+                    
+                    updateDropdownKaryawan();
+                    renderTabelKaryawan();
+
+                    if (tampunganKaryawanBaru.length > 0) {
+                        bukaModalKaryawanBaru(tampunganKaryawanBaru);
+                    } else {
+                        tampilAlertKustom("✅ SUKSES! Jam Absen Berhasil Dibaca. Semua tarif gaji karyawan lama tetap aman.");
+                    }
+                } else {
+                    tampilAlertKustom("⚠️ Gagal membaca format jam, pastikan berkas yang diunggah berisi sheet laporan riwayat jam kerja asli dari mesin.");
+                }
+            } catch (err) {
+                tampilAlertKustom("❌ Gagal membaca berkas Excel: " + err.message);
+            }
+        };
+        reader.readAsArrayBuffer(file);
+        inputElement.value = '';
+    }
+
+    function updateDropdownKaryawan() {
+        const select = document.getElementById('select-karyawan-aktif');
+        if (databaseKaryawan.length === 0) {
+            select.innerHTML = '<option value="">-- Belum Ada Data / Import Excel --</option>';
+            return;
+        }
+        let htmlOptions = '';
+        databaseKaryawan.forEach(k => {
+            let selected = (k.nama === karyawanAktifNama) ? 'selected' : '';
+            let deptLabel = k.departemen ? ` [${k.departemen}]` : '';
+            htmlOptions += `<option value="${k.nama}" ${selected}>👤 ${k.nama}${deptLabel}</option>`;
+        });
+        select.innerHTML = htmlOptions;
+    }
+
+    function gantiKaryawanAktif() {
+        karyawanAktifNama = document.getElementById('select-karyawan-aktif').value;
+        localStorage.setItem('multiCeklok_AktifNama', karyawanAktifNama);
+        renderTabelKaryawan();
+    }
+
+    function renderTabelKaryawan() {
+        if (databaseKaryawan.length === 0) {
+            document.getElementById('display-nama-karyawan').innerText = "Belum Ada Data";
+            return;
+        }
+        
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        if (!krw) krw = databaseKaryawan[0];
+
+        let deptLabel = krw.departemen ? ` [${krw.departemen.toUpperCase()}]` : '';
+        document.getElementById('display-nama-karyawan').innerText = `👤 ${krw.nama.toUpperCase()}${deptLabel}`;
+
+        let infoBagian = krw.departemen ? ` - BAGIAN: ${krw.departemen.toUpperCase()}` : '';
+        document.getElementById('label-total-user').innerText = `TOTAL PENDAPATAN BERSIH (${krw.nama.toUpperCase()}${infoBagian})`;
+
+        let htmlRows = '';
+        let totalRegulerGaji = 0;
+        let totalLemburGaji = 0;
+
+        let kGajiPokok = krw.gajiPokok || 0;
+        let kTarifLembur = krw.tarifLembur || 0;
+        let kGajiMinggu = krw.gajiMinggu || 0;
+        let kTarifLemburMinggu = krw.tarifLemburMinggu || 0;
+
+        listHari.forEach(hari => {
+            const d = krw.infoKerja[hari];
+            const belumPulang = !d.is_pulang;
+            const isLibur = d.jam_masuk === "0" || d.jam_masuk === "" || (belumPulang && d.jam_pulang_lembur === "0");
+            
+            let tarifGajiHariIni = (hari === 'minggu') ? kGajiMinggu : kGajiPokok;
+            let tarifLemburHariIni = (hari === 'minggu') ? kTarifLemburMinggu : kTarifLembur;
+
+            let gajiHariIni = 0;
+            let durasiLembur = 0;
+
+            if (!isLibur) {
+                if (d.jam_pulang_lembur !== "0" && d.jam_pulang_lembur !== "") {
+                    gajiHariIni = tarifGajiHariIni;
+                    durasiLembur = hitungTotalJamKerjaNyata(d.jam_pulang_reguler, d.jam_pulang_lembur);
+                } else {
+                    const jamKerjaRegulerNyata = hitungTotalJamKerjaNyata(d.jam_masuk, d.jam_pulang_reguler);
+                    gajiHariIni = (jamKerjaRegulerNyata >= masterJamReguler) ? tarifGajiHariIni : Math.round((jamKerjaRegulerNyata / masterJamReguler) * tarifGajiHariIni);
+                }
+            }
+
+            const gajiLembur = Math.round(durasiLembur * tarifLemburHariIni);
+            totalRegulerGaji += gajiHariIni;
+            totalLemburGaji += gajiLembur;
+
+            htmlRows += `<tr>
+                <td class="${hari === 'minggu' ? 'hari hari-minggu' : 'hari'}">${namaHariIndo[hari]}</td>
+                <td>${d.jam_masuk === "0" ? '0' : d.jam_masuk}</td>
+                <td>${belumPulang || d.jam_masuk === "0" ? '0' : d.jam_pulang_reguler}</td>
+                <td>${gajiHariIni === 0 ? '<span class="nol">0</span>' : '<span class="nilai-uang">' + gajiHariIni.toLocaleString('id-ID') + '</span>'}</td>
+                <td>${belumPulang || d.jam_pulang_lembur === "0" ? '0' : d.jam_pulang_lembur}</td>
+                <td>${durasiLembur > 0 ? '<strong>' + durasiLembur + '</strong>' : '0'}</td>
+                <td>${gajiLembur === 0 ? '<span class="nol">0</span>' : '<span class="nilai-uang">' + gajiLembur.toLocaleString('id-ID') + '</span>'}</td>
+            </tr>`;
+        });
+
+        let grandTotalBersih = (totalRegulerGaji + totalLemburGaji + (krw.bonus || 0)) - (krw.kasbon || 0);
+        if (grandTotalBersih < 0) grandTotalBersih = 0;
+
+        htmlRows += `<tr class="total-row"><td colspan="3">TOTAL</td><td>${totalRegulerGaji.toLocaleString('id-ID')}</td><td></td><td></td><td>${totalLemburGaji.toLocaleString('id-ID')}</td></tr>`;
+
+        document.getElementById('tabel-body').innerHTML = htmlRows;
+        document.getElementById('text-tambahan-bonus').innerText = krw.bonus > 0 ? '+ Rp ' + krw.bonus.toLocaleString('id-ID') : 'Rp 0';
+        document.getElementById('text-potongan-kasbon').innerText = krw.kasbon > 0 ? '- Rp ' + krw.kasbon.toLocaleString('id-ID') : 'Rp 0';
+        document.getElementById('grand-total').innerText = 'Rp ' + grandTotalBersih.toLocaleString('id-ID');
+    }
+
+    function bukaModalJamManual() { 
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        if(!krw) {
+            tampilAlertKustom("⚠️ Silakan import file Excel data karyawan terlebih dahulu!");
+            return;
+        }
+        document.getElementById('modal-jam-manual').style.display = 'flex'; 
+        loadJamHariPilihan(); 
+    }
+    function tutupModalJamManual() { document.getElementById('modal-jam-manual').style.display = 'none'; }
+    
+    function loadJamHariPilihan() {
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        const hari = document.getElementById('select-hari-edit').value;
+        if(krw) {
+            document.getElementById('modal-jam-masuk').value = krw.infoKerja[hari].jam_masuk === "0" ? "" : krw.infoKerja[hari].jam_masuk;
+            let jamAkhir = krw.infoKerja[hari].jam_pulang_lembur !== "0" ? krw.infoKerja[hari].jam_pulang_lembur : krw.infoKerja[hari].jam_pulang_reguler;
+            document.getElementById('modal-jam-plem').value = jamAkhir === "0" ? "" : jamAkhir;
+        }
+    }
+    
+    function simpanJamManualDariModal() {
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        const hari = document.getElementById('select-hari-edit').value;
+        
+        if(krw) {
+            let jamMasukRaw = document.getElementById('modal-jam-masuk').value.trim();
+            let jamPulangRaw = document.getElementById('modal-jam-plem').value.trim();
+
+            if (!jamMasukRaw || jamMasukRaw === "0" || !jamPulangRaw || jamPulangRaw === "0") {
+                krw.infoKerja[hari].jam_masuk = "0";
+                krw.infoKerja[hari].jam_pulang_reguler = "0";
+                krw.infoKerja[hari].jam_pulang_lembur = "0";
+                krw.infoKerja[hari].is_pulang = false;
+            } else {
+                krw.infoKerja[hari].jam_masuk = jamMasukRaw;
+                krw.infoKerja[hari].is_pulang = true;
+                
+                const totalJam = hitungTotalJamKerjaNyata(jamMasukRaw, jamPulangRaw);
+                
+                if (totalJam <= masterJamReguler) {
+                    krw.infoKerja[hari].jam_pulang_reguler = jamPulangRaw;
+                    krw.infoKerja[hari].jam_pulang_lembur = "0";
+                } else {
+                    const [hM, mM] = jamMasukRaw.split(':').map(Number);
+                    let jReg = hM + masterJamReguler;
+                    while (jReg >= 24) jReg -= 24;
+                    
+                    krw.infoKerja[hari].jam_pulang_reguler = `${String(jReg).padStart(2, '0')}:${String(mM).padStart(2, '0')}`;
+                    krw.infoKerja[hari].jam_pulang_lembur = jamPulangRaw;
+                }
+            }
+
+            localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
+            renderTabelKaryawan();
+            tutupModalJamManual();
+            tampilAlertKustom(`✅ Jam manual hari <b>${hari.toUpperCase()}</b> berhasil diperbarui otomatis!`);
+        }
+    }
+
+    function bukaModalTarif() { 
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        if(!krw) {
+            tampilAlertKustom("⚠️ Silakan import file Excel data karyawan terlebih dahulu!");
+            return;
+        }
+        document.getElementById('judul-modal-tarif').innerText = `💰 Tarif Gaji: ${krw.nama}`;
+        document.getElementById('master-gaji').value = krw.gajiPokok || '';
+        document.getElementById('master-tarif').value = krw.tarifLembur || '';
+        document.getElementById('minggu-gaji').value = krw.gajiMinggu || '';
+        document.getElementById('minggu-tarif').value = krw.tarifLemburMinggu || '';
+        document.getElementById('modal-pengaturan-tarif').style.display = 'flex'; 
+    }
+    function tutupModalTarif() { document.getElementById('modal-pengaturan-tarif').style.display = 'none'; }
+    
+    function simpanTarifGajiDariModal() {
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        if(krw) {
+            krw.gajiPokok = normalisirNominal(document.getElementById('master-gaji').value);
+            krw.tarifLembur = normalisirNominal(document.getElementById('master-tarif').value);
+            krw.gajiMinggu = normalisirNominal(document.getElementById('minggu-gaji').value);
+            krw.tarifLemburMinggu = normalisirNominal(document.getElementById('minggu-tarif').value);
+            
+            localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
+            tutupModalTarif(); 
+            renderTabelKaryawan();
+            tampilAlertKustom(`💰 Sukses! Tarif khusus untuk <b>${krw.nama}</b> berhasil disimpan.`);
+        }
+    }
+
+    function bukaModalKasbon() { 
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        if(krw) {
+            document.getElementById('master-kasbon-input').value = krw.kasbon || '';
+            document.getElementById('master-bonus-input').value = krw.bonus || '';
+        }
+        document.getElementById('modal-pengaturan-kasbon').style.display = 'flex'; 
+    }
+    function tutupModalKasbon() { document.getElementById('modal-pengaturan-kasbon').style.display = 'none'; }
+    
+    function simpanKasbonDanBonus() {
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        if(krw) {
+            krw.kasbon = normalisirNominal(document.getElementById('master-kasbon-input').value);
+            krw.bonus = normalisirNominal(document.getElementById('master-bonus-input').value);
+            
+            localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
+            renderTabelKaryawan();
+            tutupModalKasbon();
+            tampilAlertKustom(`💸 Sukses! Kasbon & Bonus untuk <b>${krw.nama}</b> berhasil diperbarui.`);
+        }
+    }
+
+    function bukaModalKonfirmasiReset() { document.getElementById('modal-konfirmasi-reset').style.display = 'flex'; }
+    function tutupModalKonfirmasiReset() { document.getElementById('modal-konfirmasi-reset').style.display = 'none'; }
+
+    function eksekusiResetDataKerja() {
+        localStorage.removeItem('multiCeklok_DB');
+        localStorage.removeItem('multiCeklok_AktifNama');
+        databaseKaryawan = [];
+        karyawanAktifNama = "";
+        
+        updateDropdownKaryawan();
+        document.getElementById('tabel-body').innerHTML = '';
+        document.getElementById('text-tambahan-bonus').innerText = 'Rp 0';
+        document.getElementById('text-potongan-kasbon').innerText = 'Rp 0';
+        document.getElementById('grand-total').innerText = 'Rp 0';
+        document.getElementById('label-total-user').innerText = 'TOTAL PENDAPATAN BERSIH';
+        document.getElementById('display-nama-karyawan').innerText = "Belum Ada Data";
+        
+        tutupModalKonfirmasiReset();
+        
+        const panel = document.getElementById('panel-pengaturan');
+        panel.style.display = 'none';
+        const btnConfig = document.getElementById('btn-config');
+        btnConfig.innerText = "⚙️ Menu";
+        btnConfig.classList.remove('kembali-mode');
+        
+        tampilAlertKustom("🔄 Sukses! Semua data karyawan berhasil direset.");
+    }
+
+    function ambilScreenshotLaporan() {
+        const panel = document.getElementById('panel-pengaturan');
+        const btnConfig = document.getElementById('btn-config');
+        if (panel.style.display === 'block') {
+            panel.style.display = 'none';
+            btnConfig.innerText = "⚙️ Menu";
+            btnConfig.classList.remove('kembali-mode');
+        }
+
+        const area = document.getElementById('app-capture-area');
+        const dropdownDepan = document.getElementById('area-dropdown-depan');
+        
+        // Sembunyikan tombol screenshot, tombol menu, dan dropdown karyawan agar hasil screenshot bersih total
+        document.getElementById('fab-screenshot').style.display = 'none';
+        btnConfig.style.display = 'none';
+        dropdownDepan.style.display = 'none';
+        
+        setTimeout(() => {
+            html2canvas(area, { scale: 2 }).then(canvas => {
+                const a = document.createElement('a');
+                a.download = `Laporan_Fingerprint_${karyawanAktifNama || 'Karyawan'}.png`;
+                a.href = canvas.toDataURL(); 
+                a.click();
+                
+                // Tampilkan kembali elemen setelah screenshot selesai
+                document.getElementById('fab-screenshot').style.display = 'block';
+                btnConfig.style.display = 'block';
+                dropdownDepan.style.display = 'block';
+            });
+        }, 200);
+    }
+
+    updateDropdownKaryawan();
+    renderTabelKaryawan();
+</script>
+</body>
+</html>
