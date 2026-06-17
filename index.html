@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sistem Absensi aby offset</title>
+    <title>Sistem Absensi Fingerprint Pro (Tarif Per Karyawan)</title>
     <style>
         :root[data-theme="light"] {
             --bg-global: #f1f5f9;
@@ -106,7 +106,6 @@
         .jam-digital-waktu { font-size: 20px; letter-spacing: 1px; }
         .jam-digital-tanggal { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 
-        /* Ganti User Box di Depan */
         .ganti-user-box-depan {
             background: var(--bg-panel);
             border: 1px solid #3b82f6;
@@ -164,7 +163,6 @@
             position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;
         }
 
-        /* FAB SCREENSHOT KECIL TRANSPARAN */
         .btn-screenshot-fab {
             position: fixed; 
             bottom: 16px; 
@@ -178,7 +176,7 @@
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); 
             z-index: 999; 
             border: 2px solid white;
-            opacity: 0.4;        
+            opacity: 0.5;        
             transition: opacity 0.2s ease, transform 0.1s ease;
             padding: 0;          
         }
@@ -192,6 +190,7 @@
         th { background-color: #1e3a8a; color: #ffffff; text-align: center; padding: 8px 2px; font-size: 10px; text-transform: uppercase; }
         td { padding: 8px 2px; border-bottom: 1px solid var(--border-color); font-size: 10px; text-align: center; overflow: hidden; text-overflow: ellipsis; }
 
+        /* Penyesuaian lebar kolom agar pas pasca perpindahan */
         th:nth-child(1), td:nth-child(1) { text-align: left; padding-left: 4px; width: 11%; } 
         th:nth-child(2), td:nth-child(2) { width: 13%; } 
         th:nth-child(3), td:nth-child(3) { width: 13%; } 
@@ -211,10 +210,14 @@
             border-bottom: 2px solid var(--border-total-row); padding: 6px 2px; font-weight: bold; color: var(--text-total-row) !important;
         }
         .total-row td:nth-child(1) { text-align: left; padding-left: 4px; }
-        .total-row td:nth-child(2), .total-row td:nth-child(4) { text-align: right; padding-right: 4px; }
+        /* Target kolom total gaji pokok dan total uang lembur */
+        .total-row td:nth-child(4), .total-row td:nth-child(7) { text-align: right; padding-right: 4px; }
 
         .summary-gaji-container { margin-top: 8px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 4px; }
-        .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; border-radius: 6px; font-size: 10px; font-weight: bold; }
+        
+        .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; border-radius: 6px; font-size: 10px; font-weight: bold; cursor: pointer; transition: opacity 0.2s; }
+        .summary-row:active { transform: scale(0.99); opacity: 0.8; }
+        
         .summary-kasbon { background-color: var(--bg-kasbon); border: 1px solid var(--border-kasbon); color: var(--text-kasbon); }
         .summary-bonus { background-color: var(--bg-bonus); border: 1px solid var(--border-bonus); color: var(--text-bonus); }
         
@@ -223,8 +226,9 @@
         .grand-total-amount { font-size: 16px; color: var(--text-grand-total); font-weight: bold; margin-top: 1px; }
 
         .modal-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);
-            display: flex; justify-content: center; align-items: flex-start; padding-top: 50px; z-index: 9999; display: none;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);
+            display: flex; justify-content: center; align-items: flex-start; padding-top: 40px; z-index: 9999; display: none;
+            overflow-y: auto; padding-bottom: 40px;
         }
         .modal-content { background-color: var(--bg-modal); width: 90%; max-width: 360px; border-radius: 12px; padding: 16px; border: 1px solid var(--border-color); }
         .modal-header { border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
@@ -235,6 +239,73 @@
             background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af;
             padding: 6px; margin: 4px 0; border-radius: 4px; font-size: 12px; font-weight: bold; text-align: left;
         }
+
+        /* --- STYLE KHUSUS NOTA SLIP POP-UP (KUNCI UKURAN SLIP & WATERMARK) --- */
+        .wrapper-slip-nota {
+            background-color: #ffffff;
+            color: #1e293b;
+            padding: 16px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 380px; 
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px dashed #cbd5e1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* --- WATERMARK HOLLOW/OUTLINE ELEGAN --- */
+        .wrapper-slip-nota::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='160' viewBox='0 0 240 160'><text x='30' y='90' fill='none' stroke='rgba(15, 23, 42, 0.12)' stroke-width='1.2' font-size='20' font-family='sans-serif' font-weight='900' transform='rotate(-28, 120, 80)' letter-spacing='2'>ABY OFFSET</text></svg>");
+            background-repeat: repeat;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header-nota-judul { text-align: center; border-bottom: 2px dashed #94a3b8; padding-bottom: 8px; margin-bottom: 10px; position: relative; z-index: 2; }
+        .header-nota-judul h2 { font-size: 14px; margin: 0; color: #1e3a8a; text-transform: uppercase; }
+        .header-nota-judul p { font-size: 11px; margin: 2px 0 0 0; color: #64748b; }
+        .info-karyawan-nota { font-size: 11px; line-height: 1.5; margin-bottom: 10px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; position: relative; z-index: 2; }
+        
+        .nota-table { width: 100%; border-collapse: collapse; margin-bottom: 10px; position: relative; z-index: 2; }
+        .nota-table th { background-color: #f1f5f9; color: #1e293b; font-size: 9px; padding: 5px 2px; border: 1px solid #e2e8f0; text-transform: uppercase; }
+        .nota-table td { font-size: 9px; padding: 6px 2px; border: 1px solid #e2e8f0; text-align: center; background-color: transparent !important; color: #1e293b !important; }
+        .nota-table .nilai-uang { color: #1e293b; }
+
+        .nota-footer-summary { position: relative; z-index: 2; font-size: 11px; font-weight: bold; margin-top: 6px; border-top: 1px dashed #cbd5e1; padding-top: 6px; }
+
+        #modal-nota-slip .modal-content {
+            background-color: var(--bg-container);
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 16px;
+            width: 95%;
+            max-width: 410px;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (min-width: 768px) {
+            #modal-nota-slip .modal-content {
+                max-width: 520px; 
+            }
+            .wrapper-slip-nota {
+                max-width: 480px !important; 
+            }
+            .nota-table th, .nota-table td {
+                font-size: 11px !important; 
+                padding: 8px 3px !important;
+            }
+            .header-nota-judul h2 {
+                font-size: 16px !important;
+            }
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -244,13 +315,11 @@
 
 <div class="container" id="app-capture-area">
 
-    <!-- WIDGET JAM DIGITAL -->
     <div class="jam-digital-container">
         <div id="live-clock" class="jam-digital-waktu">00:00:00</div>
         <div id="live-date" class="jam-digital-tanggal">Senin, 01 Januari 2026</div>
     </div>
 
-    <!-- DROPDOWN PILIH KARYAWAN (PINDAH KE DEPAN) -->
     <div class="ganti-user-box-depan" id="area-dropdown-depan">
         <label style="font-size: 10px; font-weight: bold; color: #3b82f6; display: block; margin-bottom: 4px;">🔄 PILIH KARYAWAN:</label>
         <select id="select-karyawan-aktif" class="select-mbois" onchange="gantiKaryawanAktif()">
@@ -258,7 +327,6 @@
         </select>
     </div>
 
-    <!-- HEADER -->
     <div class="header">
         <div class="header-title-area">
             <h1 id="judul-aplikasi">Sistem Fingerprint Gaji</h1>
@@ -270,7 +338,6 @@
         </div>
     </div>
 
-    <!-- PANEL PENGATURAN -->
     <div id="panel-pengaturan" class="global-settings">
         <h3>⚙️ Menu Pengaturan</h3>
 
@@ -306,11 +373,11 @@
     </div>
 
     <div class="summary-gaji-container">
-        <div class="summary-row summary-bonus">
+        <div class="summary-row summary-bonus" onclick="bukaModalKasbon()" title="Klik langsung untuk edit bonus">
             <span>TAMBAHAN BONUS</span>
             <span id="text-tambahan-bonus">Rp 0</span>
         </div>
-        <div class="summary-row summary-kasbon">
+        <div class="summary-row summary-kasbon" onclick="bukaModalKasbon()" title="Klik langsung untuk edit kasbon">
             <span>POTONGAN KASBON</span>
             <span id="text-potongan-kasbon">Rp 0</span>
         </div>
@@ -321,10 +388,59 @@
     </div>
 </div>
 
-<!-- TOMBOL FAB SCREENSHOT BULAT TRANSPARAN -->
 <button id="fab-screenshot" class="btn-screenshot-fab" onclick="ambilScreenshotLaporan()">📸</button>
 
-<!-- POPUP MODAL -->
+
+<div id="modal-nota-slip" class="modal-overlay" style="align-items: center; padding-top: 10px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
+    <div class="modal-content">
+        <div id="area-foto-nota" style="padding: 6px; background-color: var(--bg-global);">
+            <div class="wrapper-slip-nota">
+                <div class="header-nota-judul">
+                    <h2>SLIP GAJI KARYAWAN</h2>
+                    <p id="nota-tanggal-cetak">Selasa, 16 Juni 2026</p>
+                </div>
+                <div class="info-karyawan-nota">
+                    <b>Nama:</b> <span id="nota-nama">NAMA</span><br>
+                    <b>Bagian:</b> <span id="nota-dept">UMUM</span>
+                </div>
+                
+                <table class="nota-table">
+                    <thead>
+                        <tr>
+                            <th>Hr</th>
+                            <th>Msk</th>
+                            <th>Plg</th>
+                            <th>Gaji Pk.</th>
+                            <th>P.Lbr</th>
+                            <th>Jam</th>
+                            <th>U.Lmbr</th>
+                        </tr>
+                    </thead>
+                    <tbody id="nota-tabel-body"></tbody>
+                </table>
+                
+                <div class="nota-footer-summary">
+                    <div style="display:flex; justify-content: space-between; margin-bottom: 3px; color: #15803d;">
+                        <span>Bonus (+) :</span> <span id="nota-bonus">Rp 0</span>
+                    </div>
+                    <div style="display:flex; justify-content: space-between; margin-bottom: 5px; color: #b91c1c;">
+                        <span>Kasbon (-) :</span> <span id="nota-kasbon">Rp 0</span>
+                    </div>
+                    <div style="display:flex; justify-content: space-between; padding: 6px; background-color: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 4px; font-size: 13px; color: #047857;">
+                        <span>TOTAL BERSIH:</span> <span id="nota-grand-total">Rp 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px;">
+            <button class="btn-close" onclick="tutupModalNotaSlip()">Batal</button>
+            <button class="btn-save" style="background-color: #10b981;" onclick="eksekusiPotretNota()">💾 Unduh Gambar</button>
+        </div>
+    </div>
+</div>
+
+
 <div id="modal-alert-custom" class="modal-overlay">
     <div class="modal-content" style="text-align: center; margin-top: 100px;">
         <div id="alert-custom-message" style="font-size: 13px; font-weight: bold; padding: 10px 0;"></div>
@@ -353,7 +469,7 @@
         <div class="modal-body" style="text-align: center; padding: 10px 0;">
             <p style="font-size: 13px; font-weight: bold; margin: 0 0 12px 0; color: var(--text-utama);">
                 Apakah Anda yakin ingin menghapus semua data?<br>
-                <span style="color: #ef4444; font-size: 11px; font-weight: normal;">*Semua data absensi dan tarif gaji karyawan akan terhapus permanen dari LocalStorage.</span>
+                <span style="color: #ef4444; font-size: 11px; font-weight: normal;">*Semua data absensi and tarif gaji karyawan akan terhapus permanen dari LocalStorage.</span>
             </p>
             <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
                 <button class="btn-close" onclick="tutupModalKonfirmasiReset()">Batal</button>
@@ -420,7 +536,7 @@
 
 <div id="modal-pengaturan-kasbon" class="modal-overlay">
     <div class="modal-content">
-        <div class="modal-header"><h3>💸 Atur Kasbon & Bonus</h3><span style="cursor:pointer;" onclick="tutupModalKasbon()">✕</span></div>
+        <div class="modal-header"><h3 id="judul-modal-kasbon">💸 Atur Kasbon & Bonus</h3><span style="cursor:pointer;" onclick="tutupModalKasbon()">✕</span></div>
         <div class="modal-body">
             <div style="color: #0d9488; font-weight: bold; font-size: 11px; margin-bottom: 4px;">Masukkan nilai kasbon/bonus (misal 50 dibaca 50.000).</div>
             <div class="form-group"><label>Nominal Bonus Tambahan (Rp)</label><input type="number" id="master-bonus-input"></div>
@@ -448,7 +564,9 @@
         const daftarHari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
         const daftarBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
         
-        document.getElementById('live-date').innerText = `${daftarHari[sekarang.getDay()]}, ${sekarang.getDate()} ${daftarBulan[sekarang.getMonth()]} ${sekarang.getFullYear()}`;
+        const formatTgl = `${daftarHari[sekarang.getDay()]}, ${sekarang.getDate()} ${daftarBulan[sekarang.getMonth()]} ${sekarang.getFullYear()}`;
+        document.getElementById('live-date').innerText = formatTgl;
+        document.getElementById('nota-tanggal-cetak').innerText = formatTgl;
     }
     updateJamDigital();
     setInterval(updateJamDigital, 1000);
@@ -491,6 +609,19 @@
         if (num > 0 && num < 1000) return num * 1000;
         return num;
     }
+
+    function bukaModalKasbon() { 
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        if(!krw) {
+            tampilAlertKustom("⚠️ Silakan import file Excel data karyawan terlebih dahulu!");
+            return;
+        }
+        document.getElementById('judul-modal-kasbon').innerText = `💸 Kasbon & Bonus: ${krw.nama.toUpperCase()}`;
+        document.getElementById('master-kasbon-input').value = krw.kasbon || '';
+        document.getElementById('master-bonus-input').value = krw.bonus || '';
+        document.getElementById('modal-pengaturan-kasbon').style.display = 'flex'; 
+    }
+    function tutupModalKasbon() { document.getElementById('modal-pengaturan-kasbon').style.display = 'none'; }
 
     function bukaModalKaryawanBaru(listNama) {
         let htmlList = '';
@@ -719,7 +850,11 @@
         let infoBagian = krw.departemen ? ` - BAGIAN: ${krw.departemen.toUpperCase()}` : '';
         document.getElementById('label-total-user').innerText = `TOTAL PENDAPATAN BERSIH (${krw.nama.toUpperCase()}${infoBagian})`;
 
+        document.getElementById('nota-nama').innerText = krw.nama.toUpperCase();
+        document.getElementById('nota-dept').innerText = krw.departemen ? krw.departemen.toUpperCase() : 'UMUM';
+
         let htmlRows = '';
+        let htmlNotaRows = '';
         let totalRegulerGaji = 0;
         let totalLemburGaji = 0;
 
@@ -753,6 +888,7 @@
             totalRegulerGaji += gajiHariIni;
             totalLemburGaji += gajiLembur;
 
+            // STRUKTUR DATA UTAMA: Kolom P.Lbr dipindah setelah Gaji Pokok
             htmlRows += `<tr>
                 <td class="${hari === 'minggu' ? 'hari hari-minggu' : 'hari'}">${namaHariIndo[hari]}</td>
                 <td>${d.jam_masuk === "0" ? '0' : d.jam_masuk}</td>
@@ -762,17 +898,41 @@
                 <td>${durasiLembur > 0 ? '<strong>' + durasiLembur + '</strong>' : '0'}</td>
                 <td>${gajiLembur === 0 ? '<span class="nol">0</span>' : '<span class="nilai-uang">' + gajiLembur.toLocaleString('id-ID') + '</span>'}</td>
             </tr>`;
+
+            let nJamMasuk = d.jam_masuk === "0" ? '-' : d.jam_masuk;
+            let nJamPulangReg = belumPulang || d.jam_masuk === "0" ? '-' : d.jam_pulang_reguler;
+            let nJamPulangLbr = belumPulang || d.jam_pulang_lembur === "0" ? '-' : d.jam_pulang_lembur;
+
+            // STRUKTUR DATA NOTA SLIP: Kolom P.Lbr disamakan, berada setelah Gaji Pokok
+            htmlNotaRows += `<tr>
+                <td style="font-weight:bold; ${hari==='minggu'?'color:#ef4444;':''}">${namaHariIndo[hari]}</td>
+                <td>${nJamMasuk}</td>
+                <td>${nJamPulangReg}</td>
+                <td>${gajiHariIni === 0 ? '0' : gajiHariIni.toLocaleString('id-ID')}</td>
+                <td>${nJamPulangLbr}</td>
+                <td>${durasiLembur > 0 ? durasiLembur : '0'}</td>
+                <td>${gajiLembur === 0 ? '0' : gajiLembur.toLocaleString('id-ID')}</td>
+            </tr>`;
         });
 
         let grandTotalBersih = (totalRegulerGaji + totalLemburGaji + (krw.bonus || 0)) - (krw.kasbon || 0);
         if (grandTotalBersih < 0) grandTotalBersih = 0;
 
+        // Penyamaan posisi total di baris paling bawah tabel
         htmlRows += `<tr class="total-row"><td colspan="3">TOTAL</td><td>${totalRegulerGaji.toLocaleString('id-ID')}</td><td></td><td></td><td>${totalLemburGaji.toLocaleString('id-ID')}</td></tr>`;
+        
+        htmlNotaRows += `<tr style="font-weight:bold; background-color:#f8fafc;"><td colspan="3" style="text-align:left; padding-left:4px;">TOTAL</td><td>${totalRegulerGaji.toLocaleString('id-ID')}</td><td></td><td></td><td>${totalLemburGaji.toLocaleString('id-ID')}</td></tr>`;
 
         document.getElementById('tabel-body').innerHTML = htmlRows;
+        document.getElementById('nota-tabel-body').innerHTML = htmlNotaRows;
+        
         document.getElementById('text-tambahan-bonus').innerText = krw.bonus > 0 ? '+ Rp ' + krw.bonus.toLocaleString('id-ID') : 'Rp 0';
         document.getElementById('text-potongan-kasbon').innerText = krw.kasbon > 0 ? '- Rp ' + krw.kasbon.toLocaleString('id-ID') : 'Rp 0';
         document.getElementById('grand-total').innerText = 'Rp ' + grandTotalBersih.toLocaleString('id-ID');
+
+        document.getElementById('nota-bonus').innerText = krw.bonus > 0 ? 'Rp ' + krw.bonus.toLocaleString('id-ID') : 'Rp 0';
+        document.getElementById('nota-kasbon').innerText = krw.kasbon > 0 ? 'Rp ' + krw.kasbon.toLocaleString('id-ID') : 'Rp 0';
+        document.getElementById('nota-grand-total').innerText = 'Rp ' + grandTotalBersih.toLocaleString('id-ID');
     }
 
     function bukaModalJamManual() { 
@@ -864,16 +1024,6 @@
             tampilAlertKustom(`💰 Sukses! Tarif khusus untuk <b>${krw.nama}</b> berhasil disimpan.`);
         }
     }
-
-    function bukaModalKasbon() { 
-        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
-        if(krw) {
-            document.getElementById('master-kasbon-input').value = krw.kasbon || '';
-            document.getElementById('master-bonus-input').value = krw.bonus || '';
-        }
-        document.getElementById('modal-pengaturan-kasbon').style.display = 'flex'; 
-    }
-    function tutupModalKasbon() { document.getElementById('modal-pengaturan-kasbon').style.display = 'none'; }
     
     function simpanKasbonDanBonus() {
         let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
@@ -917,35 +1067,34 @@
     }
 
     function ambilScreenshotLaporan() {
-        const panel = document.getElementById('panel-pengaturan');
-        const btnConfig = document.getElementById('btn-config');
-        if (panel.style.display === 'block') {
-            panel.style.display = 'none';
-            btnConfig.innerText = "⚙️ Menu";
-            btnConfig.classList.remove('kembali-mode');
+        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
+        if(!krw) {
+            tampilAlertKustom("⚠️ Belum ada data karyawan yang bisa dicetak!");
+            return;
         }
+        document.getElementById('panel-pengaturan').style.display = 'none';
+        const btnConfig = document.getElementById('btn-config');
+        btnConfig.innerText = "⚙️ Menu";
+        btnConfig.classList.remove('kembali-mode');
 
-        const area = document.getElementById('app-capture-area');
-        const dropdownDepan = document.getElementById('area-dropdown-depan');
+        document.getElementById('modal-nota-slip').style.display = 'flex';
+    }
+
+    function tutupModalNotaSlip() {
+        document.getElementById('modal-nota-slip').style.display = 'none';
+    }
+
+    function eksekusiPotretNota() {
+        const areaNota = document.getElementById('area-foto-nota');
         
-        // Sembunyikan tombol screenshot, tombol menu, dan dropdown karyawan agar hasil screenshot bersih total
-        document.getElementById('fab-screenshot').style.display = 'none';
-        btnConfig.style.display = 'none';
-        dropdownDepan.style.display = 'none';
-        
-        setTimeout(() => {
-            html2canvas(area, { scale: 2 }).then(canvas => {
-                const a = document.createElement('a');
-                a.download = `Laporan_Fingerprint_${karyawanAktifNama || 'Karyawan'}.png`;
-                a.href = canvas.toDataURL(); 
-                a.click();
-                
-                // Tampilkan kembali elemen setelah screenshot selesai
-                document.getElementById('fab-screenshot').style.display = 'block';
-                btnConfig.style.display = 'block';
-                dropdownDepan.style.display = 'block';
-            });
-        }, 200);
+        html2canvas(areaNota, { scale: 2, useCORS: true }).then(canvas => {
+            const a = document.createElement('a');
+            a.download = `Slip_Gaji_${karyawanAktifNama || 'Karyawan'}.png`;
+            a.href = canvas.toDataURL('image/png'); 
+            a.click();
+            
+            tutupModalNotaSlip();
+        });
     }
 
     updateDropdownKaryawan();
