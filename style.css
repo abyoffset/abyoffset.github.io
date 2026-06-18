@@ -1,0 +1,301 @@
+:root[data-theme="light"] {
+            --bg-global: #f1f5f9;
+            --bg-container: #ffffff;
+            --text-utama: #1e293b;
+            --text-muted: #64748b;
+            --text-nominal: #0f172a;
+            --border-color: #e2e8f0;
+            --bg-tr-even: rgba(248, 250, 252, 0.6);
+            --bg-panel: #f8fafc;
+            --bg-total-row: #eff6ff;
+            --border-total-row: #3b82f6;
+            --text-total-row: #1e3a8a;
+            --bg-grand-total: #ecfdf5;
+            --border-grand-total: #a7f3d0;
+            --text-grand-total: #047857;
+            --bg-modal: #ffffff;
+            --text-nol: #94a3b8;
+            --bg-kasbon: #fef2f2;
+            --border-kasbon: #fecaca;
+            --text-kasbon: #b91c1c;
+            --bg-bonus: #f0fdf4;
+            --border-bonus: #bbf7d0;
+            --text-bonus: #15803d;
+            --bg-jam: #1e293b;
+            --text-jam: #38bdf8;
+        }
+
+        :root[data-theme="dark"] {
+            --bg-global: #0f172a;
+            --bg-container: #1e293b;
+            --text-utama: #cbd5e1;
+            --text-muted: #64748b;
+            --text-nominal: #38bdf8;
+            --border-color: #334155;
+            --bg-tr-even: rgba(15, 23, 42, 0.4);
+            --bg-panel: #111827;
+            --bg-total-row: #1e3a8a;
+            --border-total-row: #3b82f6;
+            --text-total-row: #ffffff;
+            --bg-grand-total: #064e3b;
+            --border-grand-total: #059669;
+            --text-grand-total: #34d399;
+            --bg-modal: #1e293b;
+            --text-nol: #475569;
+            --bg-kasbon: #451a03;
+            --border-kasbon: #78350f;
+            --text-kasbon: #fca5a5;
+            --bg-bonus: #064e3b;
+            --border-bonus: #047857;
+            --text-bonus: #a7f3d0;
+            --bg-jam: #0f172a;
+            --text-jam: #38bdf8;
+        }
+
+        html, body {
+            margin: 0; padding: 0; width: 100%;
+            background-color: var(--bg-global);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--text-utama);
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        *, *:before, *:after { box-sizing: inherit; }
+
+        .container {
+            width: 100%; min-height: 100vh;
+            background: var(--bg-container); padding: 8px;
+            display: flex; flex-direction: column;
+        }
+
+        .header {
+            margin-bottom: 8px; border-bottom: 2px solid #3b82f6; padding-bottom: 8px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .header-title-area { display: flex; flex-direction: column; gap: 2px; }
+        .header h1 { font-size: 13px; color: #3b82f6; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        .nama-karyawan-header { 
+            font-size: 15px; 
+            font-weight: 800; 
+            color: var(--text-utama); 
+            margin: 0;
+        }
+
+        .btn-theme-toggle { background: none; border: none; font-size: 16px; cursor: pointer; padding: 0 4px; }
+
+        .jam-digital-container {
+            background-color: var(--bg-jam);
+            color: var(--text-jam);
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            margin-bottom: 8px;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .jam-digital-waktu { font-size: 20px; letter-spacing: 1px; }
+        .jam-digital-tanggal { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+        .ganti-user-box-depan {
+            background: var(--bg-panel);
+            border: 1px solid #3b82f6;
+            border-radius: 6px;
+            padding: 6px 8px;
+            margin-bottom: 8px;
+        }
+        .select-mbois {
+            width: 100%; padding: 8px; font-size: 13px; font-weight: bold;
+            border: 1px solid #3b82f6; border-radius: 4px;
+            background-color: var(--bg-container); color: var(--text-utama); cursor: pointer;
+        }
+
+        .global-settings {
+            background-color: var(--bg-panel); border: 1px solid #3b82f6;
+            border-radius: 8px; padding: 12px; margin-bottom: 8px; display: none;
+        }
+        .settings-menu-grid { display: grid; grid-template-columns: 1fr; gap: 6px; }
+
+        .form-group { display: flex; flex-direction: column; margin-bottom: 6px; }
+        .form-group label { font-size: 10px; font-weight: bold; color: var(--text-muted); margin-bottom: 4px; }
+        
+        .global-settings input, .modal-body input, .modal-body select {
+            width: 100%; padding: 8px; border: 1px solid var(--border-color);
+            background-color: var(--bg-container); color: var(--text-utama);
+            border-radius: 4px; font-size: 12px; box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 12px; font-size: 11px; font-weight: bold; border: none;
+            border-radius: 4px; cursor: pointer; display: flex; align-items: center;
+            justify-content: center; gap: 4px; white-space: nowrap;
+        }
+        button:active { transform: scale(0.97); }
+
+        .btn-edit { background-color: #3b82f6; color: white; width: 100%; }
+        .btn-tariff-trigger { background-color: #0284c7; color: white; width: 100%; }
+        .btn-hours-trigger { background-color: #8b5cf6; color: white; width: 100%; }
+        .btn-kasbon-trigger { background-color: #0d9488; color: white; width: 100%; }
+        
+        .btn-config { background-color: #475569; color: white; padding: 8px 10px; transition: background-color 0.2s ease; }
+        .btn-config.kembali-mode { background-color: #ef4444; }
+
+        .btn-save { background-color: #10b981; color: white; width: 100%; }
+        .btn-danger { background-color: #ef4444; color: white; width: 100%; }
+        .btn-reset-orange { background-color: #f97316; color: white; width: 100%; }
+        .btn-close { background-color: #64748b; color: white; width: 100%; }
+        
+        .file-input-wrapper { position: relative; width: 100%; margin-bottom: 8px; }
+        .btn-fd-import-web {
+            background-color: #059669; color: white; width: 100%; padding: 12px;
+            font-size: 12px; border-radius: 4px; font-weight: bold; text-align: center;
+        }
+        .file-input-wrapper input[type="file"] {
+            position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;
+        }
+
+        .btn-screenshot-fab {
+            position: fixed; 
+            bottom: 16px; 
+            right: 16px; 
+            background-color: #10b981;
+            color: white; 
+            width: 42px;         
+            height: 42px;        
+            border-radius: 50%;  
+            font-size: 16px;     
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); 
+            z-index: 999; 
+            border: 2px solid white;
+            opacity: 0.5;        
+            transition: opacity 0.2s ease, transform 0.1s ease;
+            padding: 0;          
+        }
+        .btn-screenshot-fab:hover, .btn-screenshot-fab:active {
+            opacity: 1.0;
+            transform: scale(1.05);
+        }
+
+        .table-responsive { width: 100%; overflow-x: auto; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; white-space: nowrap; table-layout: fixed; }
+        th { background-color: #1e3a8a; color: #ffffff; text-align: center; padding: 8px 2px; font-size: 10px; text-transform: uppercase; }
+        td { padding: 8px 2px; border-bottom: 1px solid var(--border-color); font-size: 10px; text-align: center; overflow: hidden; text-overflow: ellipsis; }
+
+        /* Penyesuaian lebar kolom agar pas pasca perpindahan */
+        th:nth-child(1), td:nth-child(1) { text-align: left; padding-left: 4px; width: 11%; } 
+        th:nth-child(2), td:nth-child(2) { width: 13%; } 
+        th:nth-child(3), td:nth-child(3) { width: 13%; } 
+        th:nth-child(4), td:nth-child(4) { text-align: right; padding-right: 4px; width: 20%; } 
+        th:nth-child(5), td:nth-child(5) { width: 13%; } 
+        th:nth-child(6), td:nth-child(6) { width: 10%; } 
+        th:nth-child(7), td:nth-child(7) { text-align: right; padding-right: 4px; width: 20%; } 
+
+        tr:nth-child(even) td { background-color: var(--bg-tr-even); }
+        .hari { color: var(--text-utama); font-weight: bold; }
+        .hari-minggu { color: #ef4444; }
+        .nilai-uang { font-weight: bold; color: var(--text-nominal); }
+        .nol { color: var(--text-nol); }
+
+        .total-row td {
+            background-color: var(--bg-total-row) !important; border-top: 2px solid var(--border-total-row);
+            border-bottom: 2px solid var(--border-total-row); padding: 6px 2px; font-weight: bold; color: var(--text-total-row) !important;
+        }
+        .total-row td:nth-child(1) { text-align: left; padding-left: 4px; }
+        /* Target kolom total gaji pokok dan total uang lembur */
+        .total-row td:nth-child(4), .total-row td:nth-child(7) { text-align: right; padding-right: 4px; }
+
+        .summary-gaji-container { margin-top: 8px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 4px; }
+        
+        .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; border-radius: 6px; font-size: 10px; font-weight: bold; cursor: pointer; transition: opacity 0.2s; }
+        .summary-row:active { transform: scale(0.99); opacity: 0.8; }
+        
+        .summary-kasbon { background-color: var(--bg-kasbon); border: 1px solid var(--border-kasbon); color: var(--text-kasbon); }
+        .summary-bonus { background-color: var(--bg-bonus); border: 1px solid var(--border-bonus); color: var(--text-bonus); }
+        
+        .grand-total-box { padding: 8px; background-color: var(--bg-grand-total); border: 1px solid var(--border-grand-total); border-radius: 8px; text-align: center; }
+        .grand-total-label { font-size: 9px; color: var(--text-grand-total); font-weight: bold; }
+        .grand-total-amount { font-size: 16px; color: var(--text-grand-total); font-weight: bold; margin-top: 1px; }
+
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);
+            display: flex; justify-content: center; align-items: flex-start; padding-top: 40px; z-index: 9999; display: none;
+            overflow-y: auto; padding-bottom: 40px;
+        }
+        .modal-content { background-color: var(--bg-modal); width: 90%; max-width: 360px; border-radius: 12px; padding: 16px; border: 1px solid var(--border-color); }
+        .modal-header { border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .modal-header h3 { margin: 0; font-size: 14px; color: #3b82f6; }
+        .modal-body { display: flex; flex-direction: column; gap: 10px; }
+
+        .badge-karyawan-baru {
+            background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af;
+            padding: 6px; margin: 4px 0; border-radius: 4px; font-size: 12px; font-weight: bold; text-align: left;
+        }
+
+        /* --- STYLE KHUSUS NOTA SLIP POP-UP (KUNCI UKURAN SLIP & WATERMARK) --- */
+        .wrapper-slip-nota {
+            background-color: #ffffff;
+            color: #1e293b;
+            padding: 16px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 380px; 
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px dashed #cbd5e1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* --- WATERMARK HOLLOW/OUTLINE ELEGAN --- */
+        .wrapper-slip-nota::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='160' viewBox='0 0 240 160'><text x='30' y='90' fill='none' stroke='rgba(15, 23, 42, 0.12)' stroke-width='1.2' font-size='20' font-family='sans-serif' font-weight='900' transform='rotate(-28, 120, 80)' letter-spacing='2'>ABY OFFSET</text></svg>");
+            background-repeat: repeat;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header-nota-judul { text-align: center; border-bottom: 2px dashed #94a3b8; padding-bottom: 8px; margin-bottom: 10px; position: relative; z-index: 2; }
+        .header-nota-judul h2 { font-size: 14px; margin: 0; color: #1e3a8a; text-transform: uppercase; }
+        .header-nota-judul p { font-size: 11px; margin: 2px 0 0 0; color: #64748b; }
+        .info-karyawan-nota { font-size: 11px; line-height: 1.5; margin-bottom: 10px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; position: relative; z-index: 2; }
+        
+        .nota-table { width: 100%; border-collapse: collapse; margin-bottom: 10px; position: relative; z-index: 2; }
+        .nota-table th { background-color: #f1f5f9; color: #1e293b; font-size: 9px; padding: 5px 2px; border: 1px solid #e2e8f0; text-transform: uppercase; }
+        .nota-table td { font-size: 9px; padding: 6px 2px; border: 1px solid #e2e8f0; text-align: center; background-color: transparent !important; color: #1e293b !important; }
+        .nota-table .nilai-uang { color: #1e293b; }
+
+        .nota-footer-summary { position: relative; z-index: 2; font-size: 11px; font-weight: bold; margin-top: 6px; border-top: 1px dashed #cbd5e1; padding-top: 6px; }
+
+        #modal-nota-slip .modal-content {
+            background-color: var(--bg-container);
+            border: 2px solid #3b82f6;
+            border-radius: 12px;
+            padding: 16px;
+            width: 95%;
+            max-width: 410px;
+            transition: all 0.3s ease;
+        }
+
+        @media screen and (min-width: 768px) {
+            #modal-nota-slip .modal-content {
+                max-width: 520px; 
+            }
+            .wrapper-slip-nota {
+                max-width: 480px !important; 
+            }
+            .nota-table th, .nota-table td {
+                font-size: 11px !important; 
+                padding: 8px 3px !important;
+            }
+            .header-nota-judul h2 {
+                font-size: 16px !important;
+            }
+        }
