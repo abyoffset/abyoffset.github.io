@@ -120,110 +120,105 @@ let temaAktif = localStorage.getItem('ceklok_theme') || 'light';
     }
 
     function mocoFileExcelMesinFinger(inputElement) {
-        const file = inputElement.files[0];
-        if (!file) return;
+    const file = inputElement.files[0];
+    if (!file) return;
 
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                const data = new Uint8Array(e.target.result);
-                const workbook = XLSX.read(data, { type: 'array' });
-                
-                let tempDB = [];
-                let tampunganKaryawanBaru = []; 
-                const namaHariMesinMap = { 'sn': 'senin', 'sl': 'selasa', 'ra': 'rabu', 'ka': 'kamis', 'ju': 'jumat', 'sa': 'sabtu', 'mg': 'minggu', 'mi': 'minggu' };
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        try {
+            const data = new Uint8Array(e.target.result);
+            const workbook = XLSX.read(data, { type: 'array' });
+            
+            let tempDB = [];
+            let tampunganKaryawanBaru = []; 
+            const namaHariMesinMap = { 'sn': 'senin', 'sl': 'selasa', 'ra': 'rabu', 'ka': 'kamis', 'ju': 'jumat', 'sa': 'sabtu', 'mg': 'minggu', 'mi': 'minggu' };
 
-                workbook.SheetNames.forEach(sheetName => {
-                    if (sheetName === 'Rekap' || sheetName === 'Log') return;
+            // Memproses semua sheet tanpa filter
+            workbook.SheetNames.forEach(sheetName => {
+                const worksheet = workbook.Sheets[sheetName];
+                const rawRows = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
 
-                    const worksheet = workbook.Sheets[sheetName];
-                    const rawRows = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+                // Mencari baris header hingga baris ke-10
+                for (let r = 0; r < Math.min(rawRows.length, 10); r++) {
+                    let row = rawRows[r];
+                    if (!row) continue;
 
-                    for (let r = 0; r < Math.min(rawRows.length, 4); r++) {
-                        let row = rawRows[r];
-                        if (!row) continue;
+                    for (let c = 0; c < row.length; c++) {
+                        let cellVal = String(row[c] || '').trim().toLowerCase();
+                        
+                        // Deteksi kata kunci fleksibel
+                        if (cellVal.includes("nama")) {
+                            let namaKaryawan = String(row[c + 1] || '').trim();
+                            if (!namaKaryawan) continue;
 
-                        for (let c = 0; c < row.length; c++) {
-                            let cellVal = String(row[c] || '').trim();
+                            let namaDepartemen = "Umum";
+                            // Mencari kolom departemen di baris yang sama
+                            for(let checkC = 0; checkC < row.length; checkC++) {
+                                let checkVal = String(row[checkC] || '').trim().toLowerCase();
+                                if(checkVal.includes("departemen") || checkVal.includes("dept")) {
+                                    namaDepartemen = String(row[checkC + 1] || 'Umum').trim();
+                                    break;
+                                }
+                            }
+
+                            let krwExist = databaseKaryawan.find(x => x.nama === namaKaryawan);
                             
-                            if (cellVal.toLowerCase() === "nama") {
-                                let namaKaryawan = String(row[c + 1] || '').trim();
-                                if (!namaKaryawan) continue;
+                            if (!krwExist) {
+                                tampunganKaryawanBaru.push(`${namaKaryawan} (${namaDepartemen})`); 
+                                krwExist = { 
+                                    nama: namaKaryawan,
+                                    departemen: namaDepartemen,
+                                    kasbon: 0, bonus: 0, gajiPokok: 0, tarifLembur: 0, 
+                                    gajiMinggu: 0, tarifLemburMinggu: 0,
+                                    infoKerja: templateHari() 
+                                };
+                            } else {
+                                krwExist.departemen = namaDepartemen;
+                            }
 
-                                let namaDepartemen = "Umum";
-                                for(let checkC = 0; checkC < row.length; checkC++) {
-                                    let checkVal = String(row[checkC] || '').trim().toLowerCase();
-                                    if(checkVal === "departemen") {
-                                        namaDepartemen = String(row[checkC + 1] || 'Umum').trim();
-                                        break;
-                                    }
-                                }
+                            if (!tempDB.find(x => x.nama === namaKaryawan)) {
+                                tempDB.push(krwExist);
+                            }
 
-                                let krwExist = databaseKaryawan.find(x => x.nama === namaKaryawan);
+                            // Proses log absensi di bawah baris nama
+                            for (let subR = r + 1; subR < rawRows.length; subR++) {
+                                let subRow = rawRows[subR];
+                                if (!subRow) continue;
+
+                                let cellHariTgl = String(subRow[c - 7] || subRow[c - 8] || subRow[c] || '').trim();
+                                let matchHari = cellHariTgl.match(/(\d+)\s+([A-Za-z]+)/);
                                 
-                                if (!krwExist) {
-                                    tampunganKaryawanBaru.push(`${namaKaryawan} (${namaDepartemen})`); 
-                                    krwExist = { 
-                                        nama: namaKaryawan,
-                                        departemen: namaDepartemen,
-                                        kasbon: 0, 
-                                        bonus: 0, 
-                                        gajiPokok: 0, 
-                                        tarifLembur: 0, 
-                                        gajiMinggu: 0, 
-                                        tarifLemburMinggu: 0,
-                                        infoKerja: templateHari() 
-                                    };
-                                } else {
-                                    krwExist.departemen = namaDepartemen;
-                                    krwExist.infoKerja = templateHari();
-                                }
+                                if (matchHari) {
+                                    let kodeHari = matchHari[2].toLowerCase();
+                                    let keyHariIndo = namaHariMesinMap[kodeHari];
 
-                                if (!tempDB.find(x => x.nama === namaKaryawan)) {
-                                    tempDB.push(krwExist);
-                                }
+                                    if (keyHariIndo) {
+                                        let jamMasukRaw = "";
+                                        let jamPulangRaw = "";
 
-                                for (let subR = 4; subR < rawRows.length; subR++) {
-                                    let subRow = rawRows[subR];
-                                    if (!subRow) continue;
-
-                                    let cellHariTgl = String(subRow[c - 7] || subRow[c - 8] || subRow[c] || '').trim();
-                                    let matchHari = cellHariTgl.match(/(\d+)\s+([A-Za-z]+)/);
-                                    
-                                    if (matchHari) {
-                                        let kodeHari = matchHari[2].toLowerCase();
-                                        let keyHariIndo = namaHariMesinMap[kodeHari];
-
-                                        if (keyHariIndo) {
-                                            let jamMasukRaw = "";
-                                            let jamPulangRaw = "";
-
-                                            for (let offset = 0; offset <= 14; offset++) {
-                                                let subCell = String(subRow[c + offset] || '').trim().replace(/\n/g, ' ');
-                                                let matchJam = subCell.match(/([0-1][0-9]|2[0-3]):[0-5][0-9]/g);
-                                                if (matchJam) {
-                                                    if (!jamMasukRaw) jamMasukRaw = matchJam[0];
-                                                    jamPulangRaw = matchJam[matchJam.length - 1];
-                                                }
+                                        for (let offset = 0; offset <= 14; offset++) {
+                                            let subCell = String(subRow[c + offset] || '').trim().replace(/\n/g, ' ');
+                                            let matchJam = subCell.match(/([0-1][0-9]|2[0-3]):[0-5][0-9]/g);
+                                            if (matchJam) {
+                                                if (!jamMasukRaw) jamMasukRaw = matchJam[0];
+                                                jamPulangRaw = matchJam[matchJam.length - 1];
                                             }
+                                        }
 
-                                            if (jamMasukRaw) {
-                                                krwExist.infoKerja[keyHariIndo].jam_masuk = jamMasukRaw;
-                                                if (jamPulangRaw && jamPulangRaw !== jamMasukRaw) {
-                                                    krwExist.infoKerja[keyHariIndo].is_pulang = true;
-                                                    const totalJam = hitungTotalJamKerjaNyata(jamMasukRaw, jamPulangRaw);
-                                                    
-                                                    if (totalJam <= masterJamReguler) {
-                                                        krwExist.infoKerja[keyHariIndo].jam_pulang_reguler = jamPulangRaw;
-                                                        krwExist.infoKerja[keyHariIndo].jam_pulang_lembur = "0";
-                                                    } else {
-                                                        const [hM, mM] = jamMasukRaw.split(':').map(Number);
-                                                        let jReg = hM + masterJamReguler;
-                                                        while (jReg >= 24) jReg -= 24;
-                                                        
-                                                        krwExist.infoKerja[keyHariIndo].jam_pulang_reguler = `${String(jReg).padStart(2, '0')}:${String(mM).padStart(2, '0')}`;
-                                                        krwExist.infoKerja[keyHariIndo].jam_pulang_lembur = jamPulangRaw;
-                                                    }
+                                        if (jamMasukRaw) {
+                                            krwExist.infoKerja[keyHariIndo].jam_masuk = jamMasukRaw;
+                                            if (jamPulangRaw && jamPulangRaw !== jamMasukRaw) {
+                                                krwExist.infoKerja[keyHariIndo].is_pulang = true;
+                                                const totalJam = hitungTotalJamKerjaNyata(jamMasukRaw, jamPulangRaw);
+                                                
+                                                if (totalJam <= masterJamReguler) {
+                                                    krwExist.infoKerja[keyHariIndo].jam_pulang_reguler = jamPulangRaw;
+                                                } else {
+                                                    const [hM, mM] = jamMasukRaw.split(':').map(Number);
+                                                    let jReg = hM + masterJamReguler;
+                                                    while (jReg >= 24) jReg -= 24;
+                                                    krwExist.infoKerja[keyHariIndo].jam_pulang_reguler = `${String(jReg).padStart(2, '0')}:${String(mM).padStart(2, '0')}`;
+                                                    krwExist.infoKerja[keyHariIndo].jam_pulang_lembur = jamPulangRaw;
                                                 }
                                             }
                                         }
@@ -232,35 +227,27 @@ let temaAktif = localStorage.getItem('ceklok_theme') || 'light';
                             }
                         }
                     }
-                });
-
-                if (tempDB.length > 0) {
-                    databaseKaryawan = tempDB;
-                    if (!karyawanAktifNama || !databaseKaryawan.find(x => x.nama === karyawanAktifNama)) {
-                        karyawanAktifNama = databaseKaryawan[0].nama;
-                    }
-                    
-                    localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
-                    localStorage.setItem('multiCeklok_AktifNama', karyawanAktifNama);
-                    
-                    updateDropdownKaryawan();
-                    renderTabelKaryawan();
-
-                    if (tampunganKaryawanBaru.length > 0) {
-                        bukaModalKaryawanBaru(tampunganKaryawanBaru);
-                    } else {
-                        tampilAlertKustom("✅ SUKSES! Jam Absen Berhasil Dibaca. Semua tarif gaji karyawan lama tetap aman.");
-                    }
-                } else {
-                    tampilAlertKustom("⚠️ Gagal membaca format jam, pastikan berkas yang diunggah berisi sheet laporan riwayat jam kerja asli dari mesin.");
                 }
-            } catch (err) {
-                tampilAlertKustom("❌ Gagal membaca berkas Excel: " + err.message);
+            });
+
+            // Update database dan UI
+            if (tempDB.length > 0) {
+                databaseKaryawan = tempDB;
+                localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
+                updateDropdownKaryawan();
+                renderTabelKaryawan();
+                tampilAlertKustom("✅ SUKSES! Data berhasil diimpor.");
+            } else {
+                tampilAlertKustom("⚠️ Data tidak ditemukan. Pastikan file berisi kolom 'Nama'.");
             }
-        };
-        reader.readAsArrayBuffer(file);
-        inputElement.value = '';
-    }
+        } catch (err) {
+            tampilAlertKustom("❌ Error: " + err.message);
+        }
+    };
+    reader.readAsArrayBuffer(file);
+    inputElement.value = '';
+}
+
 
     function updateDropdownKaryawan() {
         const select = document.getElementById('select-karyawan-aktif');
