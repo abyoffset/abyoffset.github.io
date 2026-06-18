@@ -1,5 +1,4 @@
-<script>
-    let temaAktif = localStorage.getItem('ceklok_theme') || 'light';
+let temaAktif = localStorage.getItem('ceklok_theme') || 'light';
     document.documentElement.setAttribute('data-theme', temaAktif);
     document.getElementById('theme-toggle-btn').innerText = (temaAktif === 'dark') ? '🌙' : '🌞';
 
