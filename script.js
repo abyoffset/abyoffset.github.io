@@ -290,7 +290,7 @@ let temaAktif = localStorage.getItem('ceklok_theme') || 'light';
                     if (tampunganKaryawanBaru.length > 0) {
                         bukaModalKaryawanBaru(tampunganKaryawanBaru);
                     } else {
-                        tampilAlertKustom("✅ SUKSES! Jam Absen Ter-enter Berhasil Dipisahkan. Semua tarif gaji aman.");
+                        tampilAlertKustom("✅ SUKSES! Jam Absen Terupdate");
                     }
                 } else {
                     tampilAlertKustom("⚠️ Gagal memproses, pastikan berkas Excel Anda berisi lembar log riwayat fingerprint (sheet multi-line) yang valid.");
