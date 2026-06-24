@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <style>
+        /* --- RESET & BASE STYLE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* Warna background halaman utama */
+            color: #ffffff;
+            overflow: hidden; /* Kunci scroll selama animasi loading */
+        }
+
+        /* --- SPLASH SCREEN CONTAINER --- */
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(circle, #232526 0%, #0f2027 100%); /* Gradasi gelap premium */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1); /* Efek transisi smooth saat keluar */
+        }
+
+        /* --- LOGO ANIMATION --- */
+        .logo-container {
+            position: relative;
+            text-align: center;
+            animation: zoomInFade 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+            opacity: 0;
+        }
+
+        .logo-container img {
+            max-width: 180px; /* Sesuaikan ukuran logomu */
+            height: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Efek Kilatan Cahaya (Shimmer) */
+        .logo-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.4) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: skewX(-25deg);
+            z-index: 3;
+            animation: shine 1.5s ease-in-out infinite;
+            animation-delay: 1.2s; /* Muncul setelah logo selesai zoom-in */
+        }
+
+        /* Efek Glow/Ring di belakang logo */
+        .logo-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: rgba(0, 212, 255, 0.2); /* Ganti warna sesuai aksen logomu */
+            border-radius: 50%;
+            filter: blur(30px);
+            animation: pulse 2s infinite alternate;
+        }
+
+        /* --- KEYFRAMES ANIMASI --- */
+        @keyframes zoomInFade {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shine {
+            100% {
+                left: 250%;
+            }
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(0.9); opacity: 0.5; }
+            100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+
+        /* --- STYLING HALAMAN UTAMA (INDEX) --- */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. SPLASH SCREEN PANEL -->
+    <div id="splash-screen">
+        <div class="logo-container">
+            <div class="logo-glow"></div>
+            <!-- Ganti 'logo.png' dengan path file logomu -->
+            <img src="logo.png" alt="Logo">
+        </div>
+    </div>
+
+    <!-- 2. HALAMAN UTAMA (Akan muncul setelah Splash Screen hilang) -->
+    <div class="main-content">
+        <h1>Selamat Datang di Website Utama</h1>
+        <p>Ini adalah konten index yang otomatis muncul setelah animasi selesai.</p>
+    </div>
+
+    <!-- --- JAVASCRIPT --- -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mengatur durasi tampilan splash screen (3000ms = 3 detik)
+            setTimeout(function() {
+                const splash = document.getElementById('splash-screen');
+                
+                // Geser splash screen ke atas
+                splash.style.transform = 'translateY(-100%)';
+                
+                // Izinkan user untuk scroll halaman utama kembali
+                document.body.style.overflow = 'auto';
+                
+                // Hapus elemen splash dari DOM setelah animasi selesai agar tidak membebani memori
+                setTimeout(() => {
+                    splash.remove();
+                }, 800); 
+
+            }, 3000); 
+        });
+    </script>
+</body>
+</html>
