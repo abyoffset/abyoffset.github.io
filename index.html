@@ -2,1348 +2,149 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Sistem Absensi Aby Offset</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connecting...</title>
     <style>
-        :root[data-theme="light"] {
-            --bg-global: #f1f5f9;
-            --bg-container: #ffffff;
-            --text-utama: #1e293b;
-            --text-muted: #64748b;
-            --text-nominal: #0f172a;
-            --border-color: #e2e8f0;
-            --bg-tr-even: rgba(248, 250, 252, 0.6);
-            --bg-panel: #f8fafc;
-            --bg-total-row: #eff6ff;
-            --border-total-row: #3b82f6;
-            --text-total-row: #1e3a8a;
-            --bg-grand-total: #ecfdf5;
-            --border-grand-total: #a7f3d0;
-            --text-grand-total: #047857;
-            --bg-modal: #ffffff;
-            --text-nol: #94a3b8;
-            --bg-kasbon: #fef2f2;
-            --border-kasbon: #fecaca;
-            --text-kasbon: #b91c1c;
-            --bg-bonus: #f0fdf4;
-            --border-bonus: #bbf7d0;
-            --text-bonus: #15803d;
-            --bg-rumah: #f5f3ff;
-            --border-rumah: #ddd6fe;
-            --text-rumah: #6d28d9;
-            --bg-jam: #1e293b;
-            --text-jam: #38bdf8;
-        }
-
-        :root[data-theme="dark"] {
-            --bg-global: #0f172a;
-            --bg-container: #1e293b;
-            --text-utama: #cbd5e1;
-            --text-muted: #64748b;
-            --text-nominal: #38bdf8;
-            --border-color: #334155;
-            --bg-tr-even: rgba(15, 23, 42, 0.4);
-            --bg-panel: #111827;
-            --bg-total-row: #1e3a8a;
-            --border-total-row: #3b82f6;
-            --text-total-row: #ffffff;
-            --bg-grand-total: #064e3b;
-            --border-grand-total: #059669;
-            --text-grand-total: #34d399;
-            --bg-modal: #1e293b;
-            --text-nol: #475569;
-            --bg-kasbon: #451a03;
-            --border-kasbon: #78350f;
-            --text-kasbon: #fca5a5;
-            --bg-bonus: #064e3b;
-            --border-bonus: #047857;
-            --text-bonus: #a7f3d0;
-            --bg-rumah: #2e1065;
-            --border-rumah: #4c1d95;
-            --text-rumah: #ddd6fe;
-            --bg-jam: #0f172a;
-            --text-jam: #38bdf8;
-        }
-
-        html, body {
-            margin: 0; padding: 0; width: 100%;
-            background-color: var(--bg-global);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            color: var(--text-utama);
-            box-sizing: border-box;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        *, *:before, *:after { box-sizing: inherit; }
-
-        .container {
-            width: 100%; min-height: 100vh;
-            background: var(--bg-container); padding: 8px;
-            display: flex; flex-direction: column;
-        }
-
-        .header {
-            margin-bottom: 8px; border-bottom: 2px solid #3b82f6; padding-bottom: 8px;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .header-title-area { display: flex; flex-direction: column; gap: 2px; }
-        .header h1 { font-size: 13px; color: #3b82f6; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; }
-        
-        .nama-karyawan-header { 
-            font-size: 15px; 
-            font-weight: 800; 
-            color: var(--text-utama); 
+        /* --- RESET & BASE STYLE --- */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #0a0a0c;
+            overflow: hidden; /* Kunci scroll selama loading animasi */
         }
 
-        .btn-theme-toggle { background: none; border: none; font-size: 16px; cursor: pointer; padding: 0 4px; }
-
-        .jam-digital-container {
-            background-color: var(--bg-jam);
-            color: var(--text-jam);
-            border-radius: 6px;
-            padding: 8px;
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-            margin-bottom: 8px;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
-        }
-        .jam-digital-waktu { font-size: 20px; letter-spacing: 1px; }
-        .jam-digital-tanggal { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
-
-        .ganti-user-box-depan {
-            background: var(--bg-panel);
-            border: 1px solid #3b82f6;
-            border-radius: 6px;
-            padding: 6px 8px;
-            margin-bottom: 8px;
-        }
-        .select-mbois {
-            width: 100%; padding: 8px; font-size: 13px; font-weight: bold;
-            border: 1px solid #3b82f6; border-radius: 4px;
-            background-color: var(--bg-container); color: var(--text-utama); cursor: pointer;
-        }
-
-        .global-settings {
-            background-color: var(--bg-panel); border: 1px solid #3b82f6;
-            border-radius: 8px; padding: 12px; margin-bottom: 8px; display: none;
-        }
-        .settings-menu-grid { display: grid; grid-template-columns: 1fr; gap: 6px; }
-
-        .form-group { display: flex; flex-direction: column; margin-bottom: 6px; }
-        .form-group label { font-size: 10px; font-weight: bold; color: var(--text-muted); margin-bottom: 4px; }
-        
-        .global-settings input, .modal-body input, .modal-body select {
-            width: 100%; padding: 8px; border: 1px solid var(--border-color);
-            background-color: var(--bg-container); color: var(--text-utama);
-            border-radius: 4px; font-size: 12px; box-sizing: border-box;
-        }
-
-        button {
-            padding: 10px 12px; font-size: 11px; font-weight: bold; border: none;
-            border-radius: 4px; cursor: pointer; display: flex; align-items: center;
-            justify-content: center; gap: 4px; white-space: nowrap;
-        }
-        button:active { transform: scale(0.97); }
-
-        .btn-edit { background-color: #3b82f6; color: white; width: 100%; }
-        .btn-tariff-trigger { background-color: #0284c7; color: white; width: 100%; }
-        .btn-hours-trigger { background-color: #8b5cf6; color: white; width: 100%; }
-        .btn-kasbon-trigger { background-color: #0d9488; color: white; width: 100%; }
-        
-        .btn-config { background-color: #475569; color: white; padding: 8px 10px; transition: background-color 0.2s ease; }
-        .btn-config.kembali-mode { background-color: #ef4444; }
-
-        .btn-save { background-color: #10b981; color: white; width: 100%; }
-        .btn-danger { background-color: #ef4444; color: white; width: 100%; }
-        .btn-close { background-color: #64748b; color: white; width: 100%; }
-        
-        .file-input-wrapper { position: relative; width: 100%; margin-bottom: 8px; }
-        .btn-fd-import-web {
-            background-color: #059669; color: white; width: 100%; padding: 12px;
-            font-size: 12px; border-radius: 4px; font-weight: bold; text-align: center;
-        }
-        .file-input-wrapper input[type="file"] {
-            position: absolute; left: 0; top: 0; opacity: 0; width: 100%; height: 100%; cursor: pointer;
-        }
-
-        .btn-screenshot-fab {
-            position: fixed; 
-            bottom: 16px; 
-            right: 16px; 
-            background-color: #10b981;
-            color: white; 
-            width: 42px;         
-            height: 42px;        
-            border-radius: 50%;  
-            font-size: 16px;     
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); 
-            z-index: 999; 
-            border: 2px solid white;
-            opacity: 0.5;        
-            transition: opacity 0.2s ease, transform 0.1s ease;
-            padding: 0;          
-        }
-        .btn-screenshot-fab:hover, .btn-screenshot-fab:active {
-            opacity: 1.0;
-            transform: scale(1.05);
-        }
-
-        .table-responsive { width: 100%; overflow-x: auto; margin-top: 4px; }
-        table { width: 100%; border-collapse: collapse; white-space: nowrap; table-layout: fixed; }
-        th { background-color: #1e3a8a; color: #ffffff; text-align: center; padding: 8px 2px; font-size: 10px; text-transform: uppercase; }
-        td { padding: 8px 2px; border-bottom: 1px solid var(--border-color); font-size: 10px; text-align: center; overflow: hidden; text-overflow: ellipsis; }
-
-        th:nth-child(1), td:nth-child(1) { text-align: left; padding-left: 4px; width: 11%; } 
-        th:nth-child(2), td:nth-child(2) { width: 13%; } 
-        th:nth-child(3), td:nth-child(3) { width: 13%; } 
-        th:nth-child(4), td:nth-child(4) { text-align: right; padding-right: 4px; width: 20%; } 
-        th:nth-child(5), td:nth-child(5) { width: 13%; } 
-        th:nth-child(6), td:nth-child(6) { width: 10%; } 
-        th:nth-child(7), td:nth-child(7) { text-align: right; padding-right: 4px; width: 20%; } 
-
-        tr:nth-child(even) td { background-color: var(--bg-tr-even); }
-        .hari { color: var(--text-utama); font-weight: bold; }
-        .hari-minggu { color: #ef4444; }
-        .nilai-uang { font-weight: bold; color: var(--text-nominal); }
-        .nol { color: var(--text-nol); }
-
-        .total-row td {
-            background-color: var(--bg-total-row) !important; border-top: 2px solid var(--border-total-row);
-            border-bottom: 2px solid var(--border-total-row); padding: 6px 2px; font-weight: bold; color: var(--text-total-row) !important;
-        }
-        .total-row td:nth-child(1) { text-align: left; padding-left: 4px; }
-        .total-row td:nth-child(4), .total-row td:nth-child(7) { text-align: right; padding-right: 4px; }
-
-        .summary-gaji-container { margin-top: 8px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 4px; }
-        
-        .summary-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 10px; border-radius: 6px; font-size: 10px; font-weight: bold; cursor: pointer; transition: opacity 0.2s; }
-        .summary-row:active { transform: scale(0.99); opacity: 0.8; }
-        
-        .summary-kasbon { background-color: var(--bg-kasbon); border: 1px solid var(--border-kasbon); color: var(--text-kasbon); }
-        .summary-bonus { background-color: var(--bg-bonus); border: 1px solid var(--border-bonus); color: var(--text-bonus); }
-        .summary-rumah { background-color: var(--bg-rumah); border: 1px solid var(--border-rumah); color: var(--text-rumah); }
-        
-        .grand-total-box { padding: 8px; background-color: var(--bg-grand-total); border: 1px solid var(--border-grand-total); border-radius: 8px; text-align: center; }
-        .grand-total-label { font-size: 9px; color: var(--text-grand-total); font-weight: bold; }
-        .grand-total-amount { font-size: 16px; color: var(--text-grand-total); font-weight: bold; margin-top: 1px; }
-
-        .modal-overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.4);
-            display: flex; justify-content: center; align-items: flex-start; padding-top: 40px; z-index: 9999; display: none;
-            overflow-y: auto; padding-bottom: 40px;
-        }
-        .modal-content { background-color: var(--bg-modal); width: 90%; max-width: 360px; border-radius: 12px; padding: 16px; border: 1px solid var(--border-color); }
-        .modal-header { border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center; }
-        .modal-header h3 { margin: 0; font-size: 14px; color: #3b82f6; }
-        .modal-body { display: flex; flex-direction: column; gap: 10px; }
-
-        .badge-karyawan-baru {
-            background-color: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af;
-            padding: 6px; margin: 4px 0; border-radius: 4px; font-size: 12px; font-weight: bold; text-align: left;
-        }
-
-        .wrapper-slip-nota {
-            background-color: #ffffff;
-            color: #1e293b;
-            padding: 16px;
-            border-radius: 8px;
+        /* --- SPLASH SCREEN CONTAINER (SPLIT PANEL) --- */
+        .splash-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 380px; 
-            margin: 0 auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            border: 1px dashed #cbd5e1;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .wrapper-slip-nota::before {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='160' viewBox='0 0 240 160'><text x='30' y='90' fill='none' stroke='rgba(15, 23, 42, 0.12)' stroke-width='1.2' font-size='20' font-family='sans-serif' font-weight='900' transform='rotate(-28, 120, 80)' letter-spacing='2'>ABY OFFSET</text></svg>");
-            background-repeat: repeat;
+            height: 100vh;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
             pointer-events: none;
-            z-index: 1;
         }
 
-        .header-nota-judul { text-align: center; border-bottom: 2px dashed #94a3b8; padding-bottom: 8px; margin-bottom: 10px; position: relative; z-index: 2; }
-        .header-nota-judul h2 { font-size: 14px; margin: 0; color: #1e3a8a; text-transform: uppercase; }
-        .header-nota-judul p { font-size: 11px; margin: 2px 0 0 0; color: #64748b; }
-        .info-karyawan-nota { font-size: 11px; line-height: 1.5; margin-bottom: 10px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; position: relative; z-index: 2; }
-        
-        .nota-table { width: 100%; border-collapse: collapse; margin-bottom: 10px; position: relative; z-index: 2; }
-        .nota-table th { background-color: #f1f5f9; color: #1e293b; font-size: 9px; padding: 5px 2px; border: 1px solid #e2e8f0; text-transform: uppercase; }
-        .nota-table td { font-size: 9px; padding: 6px 2px; border: 1px solid #e2e8f0; text-align: center; background-color: transparent !important; color: #1e293b !important; }
-        .nota-table .nilai-uang { color: #1e293b; }
+        /* Membelah layar jadi dua bagian (Atas & Bawah) */
+        .splash-panel {
+            width: 100%;
+            height: 50vh;
+            background-color: #0a0a0c;
+            transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+        }
+        .panel-top { border-bottom: 1px solid rgba(0, 242, 254, 0.1); }
+        .panel-bottom { border-top: 1px solid rgba(0, 242, 254, 0.1); }
 
-        .nota-footer-summary { position: relative; z-index: 2; font-size: 11px; font-weight: bold; margin-top: 6px; border-top: 1px dashed #cbd5e1; padding-top: 6px; }
-
-        #modal-nota-slip .modal-content {
-            background-color: var(--bg-container);
-            border: 2px solid #3b82f6;
-            border-radius: 12px;
-            padding: 16px;
-            width: 95%;
-            max-width: 410px;
-            transition: all 0.3s ease;
+        /* --- KONTEN DI TENGAH LAYAR --- */
+        .splash-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            text-align: center;
+            transition: opacity 0.4s ease;
         }
 
-        @media screen and (min-width: 768px) {
-            #modal-nota-slip .modal-content { max-width: 520px; }
-            .wrapper-slip-nota { max-width: 480px !important; }
-            .nota-table th, .nota-table td { font-size: 11px !important; padding: 8px 3px !important; }
-            .header-nota-judul h2 { font-size: 16px !important; }
+        /* Animasi Logo Flicker (Kedip Neon) */
+        .logo-box img {
+            max-width: 160px;
+            height: auto;
+            animation: flicker 1.5s ease-in-out infinite alternate;
+        }
+
+        /* --- PROGRESS BAR MINIMALIS --- */
+        .loading-bar-container {
+            width: 200px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 25px auto 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .loading-bar {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(90deg, #00f2fe, #4facfe); /* Gradasi Cyan Neon */
+            box-shadow: 0 0 8px #00f2fe;
+            animation: fillBar 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        /* --- KEYFRAMES ANIMASI --- */
+        @keyframes flicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+                filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.6));
+            }
+            20%, 24%, 55% {
+                opacity: 0.7;
+                filter: none;
+            }
+        }
+
+        @keyframes fillBar {
+            0% { width: 0%; }
+            50% { width: 70%; }
+            100% { width: 100%; }
+        }
+
+        /* --- TRIGGER KELUAR --- */
+        .splash-wrapper.hide .panel-top {
+            transform: translateY(-100%); /* Panel atas meluncur ke atas */
+        }
+        .splash-wrapper.hide .panel-bottom {
+            transform: translateY(100%); /* Panel bawah meluncur ke bawah */
+        }
+        .splash-wrapper.hide .splash-content {
+            opacity: 0; /* Logo dan progress bar menghilang */
         }
     </style>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 <body>
 
-<div class="container" id="app-capture-area">
-
-    <div class="jam-digital-container">
-        <div id="live-clock" class="jam-digital-waktu">00:00:00</div>
-        <div id="live-date" class="jam-digital-tanggal">Senin, 01 Januari 2026</div>
-    </div>
-
-    <div class="ganti-user-box-depan" id="area-dropdown-depan">
-        <label style="font-size: 10px; font-weight: bold; color: #3b82f6; display: block; margin-bottom: 4px;">🔄 PILIH KARYAWAN:</label>
-        <select id="select-karyawan-aktif" class="select-mbois" onchange="gantiKaryawanAktif()">
-            <option value="">-- Belum Ada Data / Import Excel --</option>
-        </select>
-    </div>
-
-    <div class="header">
-        <div class="header-title-area">
-            <h1 id="judul-aplikasi">Sistem Fingerprint Gaji</h1>
-            <div id="display-nama-karyawan" class="nama-karyawan-header"> Belum Ada Data</div>
-        </div>
-        <div style="display: flex; align-items: center; gap: 4px;">
-            <button id="theme-toggle-btn" class="btn-theme-toggle" onclick="toggleTemaKerja()">🌞</button>
-            <button id="btn-config" class="btn-config" onclick="togglePengaturanMenu()">⚙️ Menu</button>
-        </div>
-    </div>
-
-    <div id="panel-pengaturan" class="global-settings">
-        <h3>⚙️ Menu Pengaturan</h3>
-
-        <div class="file-input-wrapper">
-            <div class="btn-fd-import-web">📂 IMPORT DATA ABSENSI EXCEL/CSV ASLI MESIN</div>
-            <input type="file" id="input-excel-web" accept=".xlsx, .xls, .csv" onchange="mocoFileExcelMesinFinger(this)">
-        </div>
-
-        <div class="settings-menu-grid">
-            <button class="btn-edit" onclick="bukaModalJamManual()">✏️ Edit Jam Kerja Manual (Hari Ini)</button>
-            <button class="btn-hours-trigger" onclick="bukaModalJamRegulerMaster()">⏱️ Atur Durasi Jam Kerja</button>
-            <button class="btn-tariff-trigger" onclick="bukaModalTarif()">💰 Atur Tarif Gaji & Bagian Kerja (Per Orang)</button>
-            <button class="btn-kasbon-trigger" onclick="bukaModalKasbon()">💸 Atur Kasbon, Bonus & Tambahan Rumah</button>
-            <button class="btn-save" style="background-color: #0284c7;" onclick="eksporDataKeCSV()">💾 Simpan / Export Semua Data CSV</button>
-            <button class="btn-danger" onclick="bukaModalKonfirmasiReset()">🔄 Reset Semua Data</button>
-        </div>
-    </div>
-
-    <div class="table-responsive">
-        <table>
-            <thead>
-                <tr>
-                    <th>Hari</th>
-                    <th>Masuk</th>
-                    <th>Pulang</th>
-                    <th>Gaji Pokok</th>
-                    <th>P.Lbr</th>
-                    <th>Jam</th>
-                    <th>U.Lembur</th>
-                </tr>
-            </thead>
-            <tbody id="tabel-body"></tbody>
-        </table>
-    </div>
-
-    <div class="summary-gaji-container">
-        <div class="summary-row summary-rumah" onclick="bukaModalKasbon()" title="Klik langsung untuk edit tambahan rumah">
-            <span>TAMBAHAN RUMAH</span>
-            <span id="text-tambahan-rumah">Rp 0</span>
-        </div>
-        <div class="summary-row summary-bonus" onclick="bukaModalKasbon()" title="Klik langsung untuk edit bonus">
-            <span>TAMBAHAN BONUS</span>
-            <span id="text-tambahan-bonus">Rp 0</span>
-        </div>
-        <div class="summary-row summary-kasbon" onclick="bukaModalKasbon()" title="Klik langsung untuk edit kasbon">
-            <span>POTONGAN KASBON</span>
-            <span id="text-potongan-kasbon">Rp 0</span>
-        </div>
-        <div class="grand-total-box">
-            <div class="grand-total-label" id="label-total-user">TOTAL PENDAPATAN BERSIH</div>
-            <div class="grand-total-amount" id="grand-total">Rp 0</div>
-        </div>
-    </div>
-</div>
-
-<button id="fab-screenshot" class="btn-screenshot-fab" onclick="ambilScreenshotLaporan()">📸</button>
-
-<div id="modal-nota-slip" class="modal-overlay" style="align-items: center; padding-top: 10px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);">
-    <div class="modal-content">
-        <div id="area-foto-nota" style="padding: 6px; background-color: var(--bg-global);">
-            <div class="wrapper-slip-nota">
-                <div class="header-nota-judul">
-                    <h2>SLIP GAJI KARYAWAN</h2>
-                    <p id="nota-tanggal-cetak">Selasa, 16 Juni 2026</p>
-                </div>
-                <div class="info-karyawan-nota">
-                    <b>Nama:</b> <span id="nota-nama">NAMA</span><br>
-                    <b>Bagian:</b> <span id="nota-dept">UMUM</span>
-                </div>
-                
-                <table class="nota-table">
-                    <thead>
-                        <tr>
-                            <th>Hr</th>
-                            <th>Msk</th>
-                            <th>Plg</th>
-                            <th>Gaji Pk.</th>
-                            <th>P.Lbr</th>
-                            <th>Jam</th>
-                            <th>U.Lmbr</th>
-                        </tr>
-                    </thead>
-                    <tbody id="nota-tabel-body"></tbody>
-                </table>
-                
-                <div class="nota-footer-summary">
-                    <div style="display:flex; justify-content: space-between; margin-bottom: 3px; color: #6d28d9;">
-                        <span>Rumah (+) :</span> <span id="nota-rumah">Rp 0</span>
-                    </div>
-                    <div style="display:flex; justify-content: space-between; margin-bottom: 3px; color: #15803d;">
-                        <span>Bonus (+) :</span> <span id="nota-bonus">Rp 0</span>
-                    </div>
-                    <div style="display:flex; justify-content: space-between; margin-bottom: 5px; color: #b91c1c;">
-                        <span>Kasbon (-) :</span> <span id="nota-kasbon">Rp 0</span>
-                    </div>
-                    <div style="display:flex; justify-content: space-between; padding: 6px; background-color: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 4px; font-size: 13px; color: #047857;">
-                        <span>TOTAL BERSIH:</span> <span id="nota-grand-total">Rp 0</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px;">
-            <button class="btn-close" onclick="tutupModalNotaSlip()">Batal</button>
-            <button class="btn-save" style="background-color: #10b981;" onclick="eksekusiPotretNota()">💾 Unduh Gambar</button>
-        </div>
-    </div>
-</div>
-
-<div id="modal-alert-custom" class="modal-overlay">
-    <div class="modal-content" style="text-align: center; margin-top: 100px;">
-        <div id="alert-custom-message" style="font-size: 13px; font-weight: bold; padding: 10px 0;"></div>
-        <button class="btn-edit" onclick="tutupAlertKustom()">OKE</button>
-    </div>
-</div>
-
-<div id="modal-karyawan-baru" class="modal-overlay">
-    <div class="modal-content" style="margin-top: 70px; max-width: 380px;">
-        <div class="modal-header" style="border-bottom: 2px solid #10b981;">
-            <h3 style="color: #10b981;">✨ Karyawan Baru Terdeteksi!</h3>
-        </div>
-        <div class="modal-body">
-            <p style="font-size: 12px; margin: 0; color: var(--text-utama);">
-                Sistem menemukan nama baru yang belum dikonfigurasi gajinya di LocalStorage. Silakan atur tarif gajinya nanti:
-            </p>
-            <div id="list-nama-karyawan-baru" style="max-height: 160px; overflow-y: auto; padding: 2px;"></div>
-            <button class="btn-save" onclick="tutupModalKaryawanBaru()">Siap, Atur Tarif Gaji</button>
-        </div>
-    </div>
-</div>
-
-<div id="modal-konfirmasi-reset" class="modal-overlay">
-    <div class="modal-content" style="margin-top: 80px;">
-        <div class="modal-header" style="border-bottom: 1px solid #ef4444;"><h3 style="color: #ef4444;">⚠️ Peringatan Reset</h3></div>
-        <div class="modal-body" style="text-align: center; padding: 10px 0;">
-            <p style="font-size: 13px; font-weight: bold; margin: 0 0 12px 0; color: var(--text-utama);">
-                Apakah Anda yakin ingin menghapus semua data?<br>
-                <span style="color: #ef4444; font-size: 11px; font-weight: normal;">*Semua data absensi dan tarif gaji karyawan akan terhapus permanen dari perangkat</span>
-            </p>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:8px;">
-                <button class="btn-close" onclick="tutupModalKonfirmasiReset()">Batal</button>
-                <button class="btn-danger" onclick="eksekusiResetDataKerja()">Ya, Hapus Semua</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal-jam-manual" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header"><h3>✏️ Edit Jam Manual</h3><span style="cursor:pointer;" onclick="tutupModalJamManual()">✕</span></div>
-        <div class="modal-body">
-            <div class="form-group">
-                <label>Pilih Hari:</label>
-                <select id="select-hari-edit" onchange="loadJamHariPilihan()">
-                    <option value="senin">Senin</option><option value="selasa">Selasa</option><option value="rabu">Rabu</option>
-                    <option value="kamis">Kamis</option><option value="jumat">Jumat</option><option value="sabtu">Sabtu</option><option value="minggu">Minggu</option>
-                </select>
-            </div>
-            <div class="form-group"><label>Jam Masuk (Format 08:00)</label><input type="text" id="modal-jam-masuk"></div>
-            <div class="form-group"><label>Jam Pulang Sebenarnya / Lembur (Format 16:00 atau 21:00)</label><input type="text" id="modal-jam-plem"></div>
-            <div style="color: #8b5cf6; font-weight: bold; font-size: 11px; margin-top: -4px; margin-bottom: 6px;">*Cukup isi jam masuk & jam pulang akhir. Jam reguler dan lembur akan dihitung otomatis oleh sistem!</div>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-top:6px;">
-                <button class="btn-close" onclick="tutupModalJamManual()">Batal</button>
-                <button class="btn-save" onclick="simpanJamManualDariModal()">💾 Simpan</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal-jam-reguler-master" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header"><h3>⏱️ Durasi Jam Kerja Reguler</h3><span style="cursor:pointer;" onclick="tutupModalJamRegulerMaster()">✕</span></div>
-        <div class="modal-body">
-            <div class="form-group">
-                <label>Target Jam Kerja Sehari (Jam):</label>
-                <input type="number" id="master-jam-reguler-input" value="8" min="1" max="24">
-            </div>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-top:6px;">
-                <button class="btn-close" onclick="tutupModalJamRegulerMaster()">Batal</button>
-                <button class="btn-save" style="background-color: #8b5cf6;" onclick="simpanMasterJamReguler()">💾 Simpan Durasi</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal-pengaturan-tarif" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header"><h3 id="judul-modal-tarif">💰 Pengaturan Tarif Gaji</h3><span style="cursor:pointer;" onclick="tutupModalTarif()">✕</span></div>
-        <div class="modal-body">
-            <div class="form-group">
-                <label>Bagian / Departemen Kerja Karyawan</label>
-                <input type="text" id="master-bagian-input" placeholder="Misal: Cetak, Finishing, Operator">
-            </div>
-            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 6px 0;">
-            <div style="color: #0284c7; font-weight: bold; font-size: 11px; margin-bottom: 4px;">Masukkan angka tanpa tanda titik (misal 120 dibaca 120.000).</div>
-            <div class="form-group"><label>Gaji Pokok (Senin - Sabtu)</label><input type="number" id="master-gaji"></div>
-            <div class="form-group"><label>Tarif Lembur per Jam</label><input type="number" id="master-tarif"></div>
-            <div class="form-group"><label>Gaji Pokok (Hari Minggu)</label><input type="number" id="minggu-gaji"></div>
-            <div class="form-group"><label>Tarif Lembur (Hari Minggu)</label><input type="number" id="minggu-tarif"></div>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-top:6px;">
-                <button class="btn-close" onclick="tutupModalTarif()">Batal</button>
-                <button class="btn-save" onclick="simpanTarifGajiDariModal()">💾 Simpan Konfigurasi</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="modal-pengaturan-kasbon" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header"><h3 id="judul-modal-kasbon">💸 Atur Kasbon & Bonus</h3><span style="cursor:pointer;" onclick="tutupModalKasbon()">✕</span></div>
-        <div class="modal-body">
-            <div style="color: #0d9488; font-weight: bold; font-size: 11px; margin-bottom: 4px;">Masukkan nilai kasbon/bonus (misal 50 dibaca 50.000).</div>
-            <div class="form-group"><label>Nominal Tambahan Rumah (Rp)</label><input type="number" id="master-rumah-input"></div>
-            <div class="form-group"><label>Nominal Bonus Tambahan (Rp)</label><input type="number" id="master-bonus-input"></div>
-            <div class="form-group"><label>Nominal Potongan Kasbon (Rp)</label><input type="number" id="master-kasbon-input"></div>
-            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:6px; margin-top:6px;">
-                <button class="btn-close" onclick="tutupModalKasbon()">Batal</button>
-                <button class="btn-save" style="background-color: #0d9488;" onclick="simpanKasbonDanBonus()">💾 Simpan</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    let temaAktif = localStorage.getItem('ceklok_theme') || 'light';
-    document.documentElement.setAttribute('data-theme', temaAktif);
-    document.getElementById('theme-toggle-btn').innerText = (temaAktif === 'dark') ? '🌙' : '🌞';
-
-    function updateJamDigital() {
-        const sekarang = new Date();
-        const jam = String(sekarang.getHours()).padStart(2, '0');
-        const menit = String(sekarang.getMinutes()).padStart(2, '0');
-        const detik = String(sekarang.getSeconds()).padStart(2, '0');
-        document.getElementById('live-clock').innerText = `${jam}:${menit}:${detik}`;
+    <!-- SPLASH SCREEN SCREEN -->
+    <div class="splash-wrapper" id="splashWrapper">
+        <div class="splash-panel panel-top"></div>
         
-        const daftarHari = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
-        const daftarBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-        
-        const formatTgl = `${daftarHari[sekarang.getDay()]}, ${sekarang.getDate()} ${daftarBulan[sekarang.getMonth()]} ${sekarang.getFullYear()}`;
-        document.getElementById('live-date').innerText = formatTgl;
-        document.getElementById('nota-tanggal-cetak').innerText = formatTgl;
-    }
-    updateJamDigital();
-    setInterval(updateJamDigital, 1000);
+        <div class="splash-content">
+            <div class="logo-box">
+                <!-- Ganti 'logo.png' dengan file gambar logomu -->
+                <img src="logo.png" alt="Logo">
+            </div>
+            <!-- Progress Bar -->
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
 
-    const templateHari = () => ({
-        "minggu": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
-        "senin": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
-        "selasa": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
-        "rabu": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
-        "kamis": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
-        "jumat": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false },
-        "sabtu": { "jam_masuk": "0", "jam_pulang_reguler": "0", "jam_pulang_lembur": "0", "is_pulang": false }
-    });
+        <div class="splash-panel panel-bottom"></div>
+    </div>
 
-    const listHari = ['minggu', 'senin', 'selasa', 'rabu', 'kamis', 'jumat', 'sabtu'];
-    const namaHariIndo = { 'minggu': 'Min', 'senin': 'Sen', 'selasa': 'Sel', 'rabu': 'Rab', 'kamis': 'Kam', 'jumat': "Jum", 'sabtu': 'Sab' };
-    
-    let databaseKaryawan = JSON.parse(localStorage.getItem('multiCeklok_DB')) || [];
-    let karyawanAktifNama = localStorage.getItem('multiCeklok_AktifNama') || "";
-    let masterJamReguler = Number(localStorage.getItem('dataLemburHP_MasterJamReguler')) || 8;
+    <!-- JAVASCRIPT REDIRECT (VERSI FIX BACK BUTTON) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Menunggu loading progress bar berjalan (2.5 detik)
+            setTimeout(function() {
+                const wrapper = document.getElementById('splashWrapper');
+                
+                // Picu animasi keluar (pintu membelah atas bawah)
+                wrapper.classList.add('hide'); 
+                
+                // Tunggu transisi pintu kebuka selesai (0.8 detik), lalu skip ke index
+                setTimeout(() => {
+                    // Pakai replace supaya riwayat welcome.html dihapus dari history browser
+                    window.location.replace("index1.html"); 
+                }, 800);
 
-    document.getElementById('master-jam-reguler-input').value = masterJamReguler;
-
-    function tampilAlertKustom(pesan) {
-        document.getElementById('alert-custom-message').innerHTML = pesan;
-        document.getElementById('modal-alert-custom').style.display = 'flex';
-    }
-    function tutupAlertKustom() { document.getElementById('modal-alert-custom').style.display = 'none'; }
-
-    function toggleTemaKerja() {
-        temaAktif = (temaAktif === 'light') ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', temaAktif);
-        localStorage.setItem('ceklok_theme', temaAktif);
-        document.getElementById('theme-toggle-btn').innerText = (temaAktif === 'dark') ? '🌙' : '🌞';
-        renderTabelKaryawan();
-    }
-
-    function normalisirNominal(val) {
-        let num = Number(val);
-        if (num > 0 && num < 1000) return num * 1000;
-        return num;
-    }
-
-    function bukaModalKasbon() { 
-        let krw = databaseKaryawan.find(x => x.nama === karyawanAktifNama);
-        if(!krw) {
-            tampilAlertKustom("⚠️ Silakan import file Excel data karyawan terlebih dahulu!");
-            return;
-        }
-        document.getElementById('judul-modal-kasbon').innerText = `💸 Kasbon, Bonus & Rumah: ${krw.nama.toUpperCase()}`;
-        document.getElementById('master-kasbon-input').value = krw.kasbon || '';
-        document.getElementById('master-bonus-input').value = krw.bonus || '';
-        document.getElementById('master-rumah-input').value = krw.rumah || '';
-        document.getElementById('modal-pengaturan-kasbon').style.display = 'flex'; 
-    }
-    function tutupModalKasbon() { document.getElementById('modal-pengaturan-kasbon').style.display = 'none'; }
-
-    function bukaModalKaryawanBaru(listNama) {
-        let htmlList = '';
-        listNama.forEach((nama, index) => {
-            htmlList += `<div class="badge-karyawan-baru">👤 ${index + 1}. ${nama.toUpperCase()}</div>`;
+            }, 2500);
         });
-        document.getElementById('list-nama-karyawan-baru').innerHTML = htmlList;
-        document.getElementById('modal-karyawan-baru').style.display = 'flex';
-    }
-    function tutupModalKaryawanBaru() { document.getElementById('modal-karyawan-baru').style.display = 'none'; }
-
-    function togglePengaturanMenu() {
-        const panel = document.getElementById('panel-pengaturan');
-        const btnConfig = document.getElementById('btn-config');
-        
-        if (panel.style.display === 'block') {
-            panel.style.display = 'none';
-            btnConfig.innerText = "⚙️ Menu";
-            btnConfig.classList.remove('kembali-mode');
-        } else {
-            panel.style.display = 'block';
-            btnConfig.innerText = "⬅️ Kembali";
-            btnConfig.classList.add('kembali-mode');
-        }
-    }
-
-    function hitungTotalJamKerjaNyata(masuk, pulang) {
-        if (masuk === "0" || pulang === "0" || !masuk || !pulang) return 0;
-        const [h1, m1] = masuk.split(':').map(Number);
-        const [h2, m2] = pulang.split(':').map(Number);
-        let selisihMenit = (h2 * 60 + m2) - (h1 * 60 + m1);
-        if (selisihMenit < 0) selisihMenit += 24 * 60; 
-        return parseFloat((selisihMenit / 60).toFixed(2));
-    }
-
-    function bukaModalJamRegulerMaster() { 
-        document.getElementById('master-jam-reguler-input').value = masterJamReguler;
-        document.getElementById('modal-jam-reguler-master').style.display = 'flex'; 
-    }
-    function tutupModalJamRegulerMaster() { document.getElementById('modal-jam-reguler-master').style.display = 'none'; }
-    
-    function simpanMasterJamReguler() {
-        masterJamReguler = Number(document.getElementById('master-jam-reguler-input').value) || 8;
-        localStorage.setItem('dataLemburHP_MasterJamReguler', masterJamReguler);
-        tutupModalJamRegulerMaster();
-        renderTabelKaryawan();
-        tampilAlertKustom(`⏱️ Sukses! Jam kerja reguler diubah menjadi <b>${masterJamReguler} Jam</b>.`);
-    }
-
-    function mocoFileExcelMesinFinger(inputElement) {
-        const file = inputElement.files[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            try {
-                const data = new Uint8Array(e.target.result);
-                const workbook = XLSX.read(data, { type: 'array', raw: false });
-                
-                let targetSheetName = "";
-                const hasLogsSheet = workbook.SheetNames.find(name => name.toLowerCase().includes('log'));
-                if (hasLogsSheet) {
-                    targetSheetName = hasLogsSheet;
-                } else {
-                    targetSheetName = workbook.SheetNames[0];
-                }
-                
-                const worksheet = workbook.Sheets[targetSheetName];
-                const rawRows = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: "" });
-                
-                let normalizedRows = [];
-                for (let i = 0; i < rawRows.length; i++) {
-                    let row = rawRows[i];
-                    if (!row) continue;
-                    if (row.length === 1 && String(row[0]).includes(";")) {
-                        normalizedRows.push(String(row[0]).split(";"));
-                    } else if (row.length > 0) {
-                        normalizedRows.push(row.map(cell => String(cell)));
-                    }
-                }
-
-                let isFormatRekapBawaan = false;
-                if (normalizedRows.length > 0) {
-                    const firstRowText = normalizedRows[0].join(";").toLowerCase();
-                    if (firstRowText.includes("nama karyawan") && firstRowText.includes("jam masuk") && firstRowText.includes("jam pulang reguler")) {
-                        isFormatRekapBawaan = true;
-                    }
-                }
-
-                if (isFormatRekapBawaan) {
-                    let tempDB = [];
-                    let currentKrw = null;
-                    const mapNamaHariKeKey = {
-                        'Min': 'minggu', 'Sen': 'senin', 'Sel': 'selasa', 'Rab': 'rabu',
-                        'Kam': 'kamis', 'Jum': 'jumat', 'Sab': 'sabtu'
-                    };
-
-                    for (let i = 1; i < normalizedRows.length; i++) {
-                        const row = normalizedRows[i];
-                        if (!row || row.length === 0) continue;
-                        
-                        if (row.every(cell => !cell || cell.trim() === "" || cell.trim() === "-")) {
-                            continue;
-                        }
-
-                        let namaKaryawan = row[0] ? row[0].trim() : "";
-                        let dept = row[1] ? row[1].trim() : "";
-                        let hariIndo = row[2] ? row[2].trim() : "";
-                        let jamMasuk = row[3] ? row[3].trim() : "";
-                        let jamPulangReg = row[4] ? row[4].trim() : "";
-                        let jamPulangLembur = row[5] ? row[5].trim() : "";
-                        let rumah = (row[8] && row[8].trim() !== "" && row[8].trim() !== "-") ? Number(row[8].trim()) : 0;
-                        let bonus = (row[9] && row[9].trim() !== "" && row[9].trim() !== "-") ? Number(row[9].trim()) : 0;
-                        let kasbon = (row[10] && row[10].trim() !== "" && row[10].trim() !== "-") ? Number(row[10].trim()) : 0;
-
-                        if (namaKaryawan !== "") {
-                            let namaKaryawanLower = namaKaryawan.toLowerCase();
-                            let krwExist = databaseKaryawan.find(x => x.nama.toLowerCase() === namaKaryawanLower);
-                            
-                            currentKrw = {
-                                nama: namaKaryawanLower,
-                                departemen: dept || (krwExist ? krwExist.departemen : "UMUM"),
-                                kasbon: kasbon || (krwExist ? krwExist.kasbon : 0),
-                                bonus: bonus || (krwExist ? krwExist.bonus : 0),
-                                rumah: rumah || (krwExist ? krwExist.rumah : 0),
-                                gajiPokok: krwExist ? krwExist.gajiPokok : 0,
-                                tarifLembur: krwExist ? krwExist.tarifLembur : 0,
-                                gajiMinggu: krwExist ? krwExist.gajiMinggu : 0,
-                                tarifLemburMinggu: krwExist ? krwExist.tarifLemburMinggu : 0,
-                                infoKerja: templateHari()
-                            };
-                            tempDB.push(currentKrw);
-                        }
-
-                        if (currentKrw && hariIndo !== "") {
-                            const keyHari = mapNamaHariKeKey[hariIndo];
-                            if (keyHari) {
-                                currentKrw.infoKerja[keyHari].jam_masuk = (jamMasuk === "-" || jamMasuk === "") ? "0" : jamMasuk;
-                                currentKrw.infoKerja[keyHari].jam_pulang_reguler = (jamPulangReg === "-" || jamPulangReg === "") ? "0" : jamPulangReg;
-                                currentKrw.infoKerja[keyHari].jam_pulang_lembur = (jamPulangLembur === "-" || jamPulangLembur === "") ? "0" : jamPulangLembur;
-                                currentKrw.infoKerja[keyHari].is_pulang = (jamPulangReg !== "-" && jamPulangReg !== "" && jamPulangReg !== "0") || 
-                                                                          (jamPulangLembur !== "-" && jamPulangLembur !== "" && jamPulangLembur !== "0");
-                            }
-                        }
-                    }
-
-                    if (tempDB.length > 0) {
-                        databaseKaryawan = tempDB;
-                        if (!karyawanAktifNama || !databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase())) {
-                            karyawanAktifNama = databaseKaryawan[0].nama;
-                        }
-                        
-                        localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
-                        localStorage.setItem('multiCeklok_AktifNama', karyawanAktifNama);
-                        
-                        updateDropdownKaryawan();
-                        renderTabelKaryawan();
-                        tampilAlertKustom("✅ SUKSES! Berhasil mengimpor file rekap backup CSV.");
-                        return;
-                    }
-                }
-
-                let tempDB = [];
-                let tampunganKaryawanBaru = []; 
-                
-                let currentNo = "";
-                let currentName = "";
-                let headerTanggal = [];
-                let dataFound = false;
-
-                for (let i = 0; i < normalizedRows.length; i++) {
-                    const row = normalizedRows[i];
-                    if (!row || row.length === 0) continue;
-
-                    const rowText = row.join(" ");
-
-                    const isBarisTanggal = row.some(cell => {
-                        if (cell === "") return false;
-                        const num = Number(cell);
-                        return !isNaN(num) && num > 0 && num <= 31;
-                    });
-
-                    if (isBarisTanggal && !rowText.includes("No :") && !rowText.includes("Name :")) {
-                        headerTanggal = row.map(cell => {
-                            const val = String(cell).trim();
-                            return val !== "" && !isNaN(Number(val)) ? Math.floor(Number(val)) : "";
-                        });
-                        continue;
-                    }
-
-                    if (rowText.includes("No :") || rowText.includes("Name :")) {
-                        row.forEach((cell, idx) => {
-                            const txt = String(cell).trim();
-                            if (txt === "No :" && row[idx + 2]) currentNo = String(row[idx + 2]).trim();
-                            if (txt === "Name :" && row[idx + 2]) currentName = String(row[idx + 2]).trim().toLowerCase();
-                        });
-                        continue;
-                    }
-
-                    const hasTimeFormat = row.some(cell => /\b\d{2}:\d{2}\b/.test(String(cell)));
-                    
-                    if (hasTimeFormat && currentName !== "") {
-                        let namaKaryawan = currentName;
-                        let namaDepartemen = "UMUM";
-
-                        let krwExist = databaseKaryawan.find(x => x.nama.toLowerCase() === namaKaryawan);
-                        
-                        if (!krwExist) {
-                            tampunganKaryawanBaru.push(`${namaKaryawan.toUpperCase()}`); 
-                            krwExist = { 
-                                nama: namaKaryawan,
-                                departemen: namaDepartemen,
-                                kasbon: 0, 
-                                bonus: 0,
-                                rumah: 0,
-                                gajiPokok: 0, 
-                                tarifLembur: 0, 
-                                gajiMinggu: 0, 
-                                tarifLemburMinggu: 0,
-                                infoKerja: templateHari() 
-                            };
-                        } else {
-                            krwExist.infoKerja = templateHari();
-                        }
-
-                        if (!tempDB.find(x => x.nama.toLowerCase() === namaKaryawan)) {
-                            tempDB.push(krwExist);
-                        }
-
-                        row.forEach((cell, index) => {
-                            const cellText = String(cell).trim();
-                            
-                            if (/\b\d{2}:\d{2}\b/.test(cellText)) {
-                                const linesInCell = cellText.split(/\r?\n/);
-                                
-                                let jamMasukRaw = "";
-                                let jamPulangRaw = "";
-                                
-                                if (linesInCell[0] && /\b\d{2}:\d{2}\b/.test(linesInCell[0])) {
-                                    jamMasukRaw = linesInCell[0].trim();
-                                }
-                                if (linesInCell[1] && /\b\d{2}:\d{2}\b/.test(linesInCell[1])) {
-                                    jamPulangRaw = linesInCell[1].trim();
-                                }
-
-                                const tglAngka = headerTanggal[index];
-
-                                if (jamMasukRaw && tglAngka) {
-                                    const tglDummy = new Date(2026, 5, tglAngka); 
-                                    const indexHariJs = tglDummy.getDay(); 
-                                    const keyHariAplikasi = listHari[indexHariJs]; 
-
-                                    krwExist.infoKerja[keyHariAplikasi].jam_masuk = jamMasukRaw;
-
-                                    if (jamPulangRaw && jamPulangRaw !== jamMasukRaw) {
-                                        krwExist.infoKerja[keyHariAplikasi].is_pulang = true;
-                                        const totalJam = hitungTotalJamKerjaNyata(jamMasukRaw, jamPulangRaw);
-                                        
-                                        if (totalJam <= masterJamReguler) {
-                                            krwExist.infoKerja[keyHariAplikasi].jam_pulang_reguler = jamPulangRaw;
-                                            krwExist.infoKerja[keyHariAplikasi].jam_pulang_lembur = "0";
-                                        } else {
-                                            const [hM, mM] = jamMasukRaw.split(':').map(Number);
-                                            let jReg = hM + masterJamReguler;
-                                            while (jReg >= 24) jReg -= 24;
-                                            
-                                            krwExist.infoKerja[keyHariAplikasi].jam_pulang_reguler = `${String(jReg).padStart(2, '0')}:${String(mM).padStart(2, '0')}`;
-                                            krwExist.infoKerja[keyHariAplikasi].jam_pulang_lembur = jamPulangRaw;
-                                        }
-                                    }
-                                }
-                            }
-                        });
-                        
-                        currentName = ""; 
-                        currentNo = "";
-                        dataFound = true;
-                    }
-                }
-
-                if (dataFound && tempDB.length > 0) {
-                    databaseKaryawan = tempDB;
-                    if (!karyawanAktifNama || !databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase())) {
-                        karyawanAktifNama = databaseKaryawan[0].nama;
-                    }
-                    
-                    localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
-                    localStorage.setItem('multiCeklok_AktifNama', karyawanAktifNama);
-                    
-                    updateDropdownKaryawan();
-                    renderTabelKaryawan();
-
-                    if (tampunganKaryawanBaru.length > 0) {
-                        bukaModalKaryawanBaru(tampunganKaryawanBaru);
-                    } else {
-                        tampilAlertKustom("✅ SUKSES! Jam Absen Ter-enter Berhasil Dipisahkan. Semua tarif gaji aman.");
-                    }
-                } else {
-                    tampilAlertKustom("⚠️ Gagal memproses, pastikan berkas Excel Anda berisi lembar log riwayat fingerprint yang valid.");
-                }
-            } catch (err) {
-                console.error(err);
-                tampilAlertKustom("❌ Gagal membaca berkas berkas: " + err.message);
-            }
-        };
-        reader.readAsArrayBuffer(file);
-        inputElement.value = '';
-    }
-
-    function updateDropdownKaryawan() {
-        const select = document.getElementById('select-karyawan-aktif');
-        if (databaseKaryawan.length === 0) {
-            select.innerHTML = '<option value="">-- Belum Ada Data / Import Excel --</option>';
-            return;
-        }
-        let htmlOptions = '';
-        databaseKaryawan.forEach(k => {
-            let selected = (k.nama.toLowerCase() === karyawanAktifNama.toLowerCase()) ? 'selected' : '';
-            let deptLabel = k.departemen ? ` [${k.departemen.toUpperCase()}]` : '';
-            htmlOptions += `<option value="${k.nama}" ${selected}>👤 ${k.nama.toUpperCase()}${deptLabel}</option>`;
-        });
-        select.innerHTML = htmlOptions;
-    }
-
-    function gantiKaryawanAktif() {
-        karyawanAktifNama = document.getElementById('select-karyawan-aktif').value;
-        localStorage.setItem('multiCeklok_AktifNama', karyawanAktifNama);
-        renderTabelKaryawan();
-    }
-
-    function renderTabelKaryawan() {
-        if (databaseKaryawan.length === 0) {
-            document.getElementById('display-nama-karyawan').innerText = "Belum Ada Data";
-            return;
-        }
-        
-        let krw = databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase());
-        if (!krw) krw = databaseKaryawan[0];
-
-        let deptLabel = krw.departemen ? ` [${krw.departemen.toUpperCase()}]` : '';
-        document.getElementById('display-nama-karyawan').innerText = `👤 ${krw.nama.toUpperCase()}${deptLabel}`;
-
-        let infoBagian = krw.departemen ? ` - BAGIAN: ${krw.departemen.toUpperCase()}` : '';
-        document.getElementById('label-total-user').innerText = `TOTAL PENDAPATAN BERSIH (${krw.nama.toUpperCase()}${infoBagian})`;
-
-        document.getElementById('nota-nama').innerText = krw.nama.toUpperCase();
-        document.getElementById('nota-dept').innerText = krw.departemen ? krw.departemen.toUpperCase() : 'UMUM';
-
-        let htmlRows = '';
-        let htmlNotaRows = '';
-        let totalRegulerGaji = 0;
-        let totalLemburGaji = 0;
-
-        let kGajiPokok = krw.gajiPokok || 0;
-        let kTarifLembur = krw.tarifLembur || 0;
-        let kGajiMinggu = krw.gajiMinggu || 0;
-        let kTarifLemburMinggu = krw.tarifLemburMinggu || 0;
-
-                        listHari.forEach(hari => {
-            const d = krw.infoKerja[hari];
-            const belumPulang = !d.is_pulang;
-            const isLibur = d.jam_masuk === "0" || d.jam_masuk === "" || (belumPulang && d.jam_pulang_lembur === "0");
-            
-            let tarifGajiHariIni = (hari === 'minggu') ? kGajiMinggu : kGajiPokok;
-            let tarifLemburHariIni = (hari === 'minggu') ? kTarifLemburMinggu : kTarifLembur;
-
-            let gajiHariIni = 0;
-            let durasiLembur = 0;
-
-            if (!isLibur) {
-                if (d.jam_pulang_lembur !== "0" && d.jam_pulang_lembur !== "") {
-                    gajiHariIni = tarifGajiHariIni;
-                    durasiLembur = hitungTotalJamKerjaNyata(d.jam_pulang_reguler, d.jam_pulang_lembur);
-                } else {
-                    const jamKerjaRegulerNyata = hitungTotalJamKerjaNyata(d.jam_masuk, d.jam_pulang_reguler);
-                    
-                    // --- EDIT MENIT JAM TELAT DI SINI ---
-                    const batesMenit = 20; 
-                    const targetMenitKerja = masterJamReguler * 60;
-                    const realitaMenitKerja = jamKerjaRegulerNyata * 60;
-
-                    if ((targetMenitKerja - realitaMenitKerja) <= batesMenit) {
-                        gajiHariIni = tarifGajiHariIni; 
-                    } else {
-                        gajiHariIni = Math.round((jamKerjaRegulerNyata / masterJamReguler) * tarifGajiHariIni);
-                    }
-                }
-            }
-            const gajiLembur = Math.round(durasiLembur * tarifLemburHariIni);
-            totalRegulerGaji += gajiHariIni;
-            totalLemburGaji += gajiLembur;
-
-            // 1. Render untuk Tabel Depan (Aplikasi)
-            htmlRows += `<tr>
-                <td class="${hari === 'minggu' ? 'hari hari-minggu' : 'hari'}">${namaHariIndo[hari]}</td>
-                <td>${d.jam_masuk === "0" ? '0' : d.jam_masuk}</td>
-                <td>${belumPulang || d.jam_masuk === "0" ? '0' : d.jam_pulang_reguler}</td>
-                <td>${gajiHariIni === 0 ? '<span class="nol">0</span>' : '<span class="nilai-uang">' + gajiHariIni.toLocaleString('id-ID') + '</span>'}</td>
-                <td>${belumPulang || d.jam_pulang_lembur === "0" ? '0' : d.jam_pulang_lembur}</td>
-                <td>${durasiLembur > 0 ? '<strong>' + durasiLembur + '</strong>' : '0'}</td>
-                <td>${gajiLembur === 0 ? '<span class="nol">0</span>' : '<span class="nilai-uang">' + gajiLembur.toLocaleString('id-ID') + '</span>'}</td>
-            </tr>`;
-
-            let nJamMasuk = d.jam_masuk === "0" ? '-' : d.jam_masuk;
-            let nJamPulangReg = belumPulang || d.jam_masuk === "0" ? '-' : d.jam_pulang_reguler;
-            let nJamPulangLbr = belumPulang || d.jam_pulang_lembur === "0" ? '-' : d.jam_pulang_lembur;
-
-            // 2. Render untuk Tabel Slip Gaji (Nota) - Otomatis Merah jika Hari Minggu
-            let styleMinggu = (hari === 'minggu') ? 'style="color: #ef4444 !important; font-weight: bold;"' : '';
-
-            htmlNotaRows += `<tr ${styleMinggu}>
-                <td style="font-weight: bold; ${hari === 'minggu' ? 'color: #ef4444 !important;' : ''}">${namaHariIndo[hari]}</td>
-                <td ${styleMinggu}>${nJamMasuk}</td>
-                <td ${styleMinggu}>${nJamPulangReg}</td>
-                <td ${styleMinggu}>${gajiHariIni === 0 ? '0' : gajiHariIni.toLocaleString('id-ID')}</td>
-                <td ${styleMinggu}>${nJamPulangLbr}</td>
-                <td ${styleMinggu}>${durasiLembur > 0 ? durasiLembur : '0'}</td>
-                <td ${styleMinggu}>${gajiLembur === 0 ? '0' : gajiLembur.toLocaleString('id-ID')}</td>
-            </tr>`;
-        });
-
-        let grandTotalBersih = (totalRegulerGaji + totalLemburGaji + (krw.bonus || 0) + (krw.rumah || 0)) - (krw.kasbon || 0);
-        if (grandTotalBersih < 0) grandTotalBersih = 0;
-
-        htmlRows += `<tr class="total-row"><td colspan="3">TOTAL</td><td>${totalRegulerGaji.toLocaleString('id-ID')}</td><td></td><td></td><td>${totalLemburGaji.toLocaleString('id-ID')}</td></tr>`;
-        htmlNotaRows += `<tr style="font-weight:bold; background-color:#f8fafc;"><td colspan="3" style="text-align:left; padding-left:4px;">TOTAL</td><td>${totalRegulerGaji.toLocaleString('id-ID')}</td><td></td><td></td><td>${totalLemburGaji.toLocaleString('id-ID')}</td></tr>`;
-
-        document.getElementById('tabel-body').innerHTML = htmlRows;
-        document.getElementById('nota-tabel-body').innerHTML = htmlNotaRows;
-        
-        document.getElementById('text-tambahan-rumah').innerText = krw.rumah > 0 ? '+ Rp ' + krw.rumah.toLocaleString('id-ID') : 'Rp 0';
-        document.getElementById('text-tambahan-bonus').innerText = krw.bonus > 0 ? '+ Rp ' + krw.bonus.toLocaleString('id-ID') : 'Rp 0';
-        document.getElementById('text-potongan-kasbon').innerText = krw.kasbon > 0 ? '- Rp ' + krw.kasbon.toLocaleString('id-ID') : 'Rp 0';
-        document.getElementById('grand-total').innerText = 'Rp ' + grandTotalBersih.toLocaleString('id-ID');
-
-        document.getElementById('nota-rumah').innerText = krw.rumah > 0 ? 'Rp ' + krw.rumah.toLocaleString('id-ID') : 'Rp 0';
-        document.getElementById('nota-bonus').innerText = krw.bonus > 0 ? 'Rp ' + krw.bonus.toLocaleString('id-ID') : 'Rp 0';
-        document.getElementById('nota-kasbon').innerText = krw.kasbon > 0 ? 'Rp ' + krw.kasbon.toLocaleString('id-ID') : 'Rp 0';
-        document.getElementById('nota-grand-total').innerText = 'Rp ' + grandTotalBersih.toLocaleString('id-ID');
-    }
-
-    function bukaModalJamManual() { 
-        let krw = databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase());
-        if(!krw) {
-            tampilAlertKustom("⚠️ Silakan import file Excel data karyawan terlebih dahulu!");
-            return;
-        }
-        document.getElementById('modal-jam-manual').style.display = 'flex'; 
-        loadJamHariPilihan(); 
-    }
-    function tutupModalJamManual() { document.getElementById('modal-jam-manual').style.display = 'none'; }
-    
-    function loadJamHariPilihan() {
-        let krw = databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase());
-        const hari = document.getElementById('select-hari-edit').value;
-        if(krw) {
-            document.getElementById('modal-jam-masuk').value = krw.infoKerja[hari].jam_masuk === "0" ? "" : krw.infoKerja[hari].jam_masuk;
-            let jamAkhir = krw.infoKerja[hari].jam_pulang_lembur !== "0" ? krw.infoKerja[hari].jam_pulang_lembur : krw.infoKerja[hari].jam_pulang_reguler;
-            document.getElementById('modal-jam-plem').value = jamAkhir === "0" ? "" : jamAkhir;
-        }
-    }
-    
-    function simpanJamManualDariModal() {
-        let krw = databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase());
-        const hari = document.getElementById('select-hari-edit').value;
-        
-        if(krw) {
-            let jamMasukRaw = document.getElementById('modal-jam-masuk').value.trim();
-            let jamPulangRaw = document.getElementById('modal-jam-plem').value.trim();
-
-            if (!jamMasukRaw || jamMasukRaw === "0" || !jamPulangRaw || jamPulangRaw === "0") {
-                krw.infoKerja[hari].jam_masuk = "0";
-                krw.infoKerja[hari].jam_pulang_reguler = "0";
-                krw.infoKerja[hari].jam_pulang_lembur = "0";
-                krw.infoKerja[hari].is_pulang = false;
-            } else {
-                krw.infoKerja[hari].jam_masuk = jamMasukRaw;
-                krw.infoKerja[hari].is_pulang = true;
-                
-                const totalJam = hitungTotalJamKerjaNyata(jamMasukRaw, jamPulangRaw);
-                
-                if (totalJam <= masterJamReguler) {
-                    krw.infoKerja[hari].jam_pulang_reguler = jamPulangRaw;
-                    krw.infoKerja[hari].jam_pulang_lembur = "0";
-                } else {
-                    const [hM, mM] = jamMasukRaw.split(':').map(Number);
-                    let jReg = hM + masterJamReguler;
-                    while (jReg >= 24) jReg -= 24;
-                    
-                    krw.infoKerja[hari].jam_pulang_reguler = `${String(jReg).padStart(2, '0')}:${String(mM).padStart(2, '0')}`;
-                    krw.infoKerja[hari].jam_pulang_lembur = jamPulangRaw;
-                }
-            }
-
-            localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
-            renderTabelKaryawan();
-            tutupModalJamManual();
-            tampilAlertKustom(`✅ Jam manual hari <b>${hari.toUpperCase()}</b> berhasil diperbarui otomatis!`);
-        }
-    }
-
-    function bukaModalTarif() { 
-        let krw = databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase());
-        if(!krw) {
-            tampilAlertKustom("⚠️ Silakan import file Excel data karyawan terlebih dahulu!");
-            return;
-        }
-        document.getElementById('judul-modal-tarif').innerText = `💰 Tarif Gaji & Bagian: ${krw.nama.toUpperCase()}`;
-        document.getElementById('master-bagian-input').value = krw.departemen || '';
-        document.getElementById('master-gaji').value = krw.gajiPokok || '';
-        document.getElementById('master-tarif').value = krw.tarifLembur || '';
-        document.getElementById('minggu-gaji').value = krw.gajiMinggu || '';
-        document.getElementById('minggu-tarif').value = krw.tarifLemburMinggu || '';
-        document.getElementById('modal-pengaturan-tarif').style.display = 'flex'; 
-    }
-    function tutupModalTarif() { document.getElementById('modal-pengaturan-tarif').style.display = 'none'; }
-    
-    function simpanTarifGajiDariModal() {
-        let krw = databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase());
-        if(krw) {
-            let bagianInput = document.getElementById('master-bagian-input').value.trim();
-            krw.departemen = bagianInput !== "" ? bagianInput.toUpperCase() : "UMUM";
-            
-            krw.gajiPokok = normalisirNominal(document.getElementById('master-gaji').value);
-            krw.tarifLembur = normalisirNominal(document.getElementById('master-tarif').value);
-            krw.gajiMinggu = normalisirNominal(document.getElementById('minggu-gaji').value);
-            krw.tarifLemburMinggu = normalisirNominal(document.getElementById('minggu-tarif').value);
-            
-            localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
-            tutupModalTarif(); 
-            updateDropdownKaryawan();
-            renderTabelKaryawan();
-            tampilAlertKustom(`💰 Sukses! Tarif khusus & Bagian Kerja untuk <b>${krw.nama.toUpperCase()}</b> berhasil disimpan.`);
-        }
-    }
-    
-    function simpanKasbonDanBonus() {
-        let krw = databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase());
-        if(krw) {
-            krw.rumah = normalisirNominal(document.getElementById('master-rumah-input').value);
-            krw.kasbon = normalisirNominal(document.getElementById('master-kasbon-input').value);
-            krw.bonus = normalisirNominal(document.getElementById('master-bonus-input').value);
-            
-            localStorage.setItem('multiCeklok_DB', JSON.stringify(databaseKaryawan));
-            renderTabelKaryawan();
-            tutupModalKasbon();
-            tampilAlertKustom(`💸 Sukses! Kasbon, Bonus & Tambahan Rumah untuk <b>${krw.nama.toUpperCase()}</b> berhasil diperbarui.`);
-        }
-    }
-
-    function bukaModalKonfirmasiReset() { document.getElementById('modal-konfirmasi-reset').style.display = 'flex'; }
-    function tutupModalKonfirmasiReset() { document.getElementById('modal-konfirmasi-reset').style.display = 'none'; }
-
-    function eksekusiResetDataKerja() {
-        localStorage.removeItem('multiCeklok_DB');
-        localStorage.removeItem('multiCeklok_AktifNama');
-        databaseKaryawan = [];
-        karyawanAktifNama = "";
-        
-        updateDropdownKaryawan();
-        document.getElementById('tabel-body').innerHTML = '';
-        document.getElementById('text-tambahan-rumah').innerText = 'Rp 0';
-        document.getElementById('text-tambahan-bonus').innerText = 'Rp 0';
-        document.getElementById('text-potongan-kasbon').innerText = 'Rp 0';
-        document.getElementById('grand-total').innerText = 'Rp 0';
-        document.getElementById('label-total-user').innerText = 'TOTAL PENDAPATAN BERSIH';
-        document.getElementById('display-nama-karyawan').innerText = "Belum Ada Data";
-        
-        tutupModalKonfirmasiReset();
-        
-        const panel = document.getElementById('panel-pengaturan');
-        panel.style.display = 'none';
-        const btnConfig = document.getElementById('btn-config');
-        btnConfig.innerText = "⚙️ Menu";
-        btnConfig.classList.remove('kembali-mode');
-        
-        tampilAlertKustom("🔄 Sukses! Semua data karyawan berhasil direset.");
-    }
-
-    function ambilScreenshotLaporan() {
-        let krw = databaseKaryawan.find(x => x.nama.toLowerCase() === karyawanAktifNama.toLowerCase());
-        if(!krw) {
-            tampilAlertKustom("⚠️ Belum ada data karyawan yang bisa dicetak!");
-            return;
-        }
-        document.getElementById('panel-pengaturan').style.display = 'none';
-        const btnConfig = document.getElementById('btn-config');
-        btnConfig.innerText = "⚙️ Menu";
-        btnConfig.classList.remove('kembali-mode');
-
-        document.getElementById('modal-nota-slip').style.display = 'flex';
-    }
-
-    function tutupModalNotaSlip() {
-        document.getElementById('modal-nota-slip').style.display = 'none';
-    }
-
-    function eksekusiPotretNota() {
-        const areaNota = document.getElementById('area-foto-nota');
-        
-        html2canvas(areaNota, { scale: 2, useCORS: true }).then(canvas => {
-            const a = document.createElement('a');
-            a.download = `Slip_Gaji_${karyawanAktifNama || 'Karyawan'}.png`;
-            a.href = canvas.toDataURL('image/png'); 
-            a.click();
-            
-            tutupModalNotaSlip();
-        });
-    }
-
-    function eksporDataKeCSV() {
-        if (databaseKaryawan.length === 0) {
-            tampilAlertKustom("⚠️ Tidak ada data karyawan yang bisa diekspor ke CSV!");
-            return;
-        }
-
-        let barisCsv = [];
-        barisCsv.push("Nama Karyawan;Bagian/Dept;Hari;Jam Masuk;Jam Pulang Reguler;Jam Pulang Lembur;Gaji Pokok Hari Ini;Gaji Lembur Hari Ini;Tambahan Rumah;Total Bonus;Total Kasbon;Total Bersih");
-
-        databaseKaryawan.forEach(krw => {
-            let kGajiPokok = krw.gajiPokok || 0;
-            let kTarifLembur = krw.tarifLembur || 0;
-            let kGajiMinggu = krw.gajiMinggu || 0;
-            let kTarifLemburMinggu = krw.tarifLemburMinggu || 0;
-            let kBonus = krw.bonus || 0;
-            let kKasbon = krw.kasbon || 0;
-            let kRumah = krw.rumah || 0;
-
-            let totalRegulerGaji = 0;
-            let totalLemburGaji = 0;
-            let tampunganHari = [];
-
-            listHari.forEach(hari => {
-                const d = krw.infoKerja[hari];
-                const belumPulang = !d.is_pulang;
-                const isLibur = d.jam_masuk === "0" || d.jam_masuk === "" || (belumPulang && d.jam_pulang_lembur === "0");
-                
-                let tarifGajiHariIni = (hari === 'minggu') ? kGajiMinggu : kGajiPokok;
-                let tarifLemburHariIni = (hari === 'minggu') ? kTarifLemburMinggu : kTarifLembur;
-
-                let gajiHariIni = 0;
-                let durasiLembur = 0;
-
-                if (!isLibur) {
-                    if (d.jam_pulang_lembur !== "0" && d.jam_pulang_lembur !== "") {
-                        gajiHariIni = tarifGajiHariIni;
-                        durasiLembur = hitungTotalJamKerjaNyata(d.jam_pulang_reguler, d.jam_pulang_lembur);
-                    } else {
-                        const jamKerjaRegulerNyata = hitungTotalJamKerjaNyata(d.jam_masuk, d.jam_pulang_reguler);
-                        gajiHariIni = (jamKerjaRegulerNyata >= masterJamReguler) ? tarifGajiHariIni : Math.round((jamKerjaRegulerNyata / masterJamReguler) * tarifGajiHariIni);
-                    }
-                }
-
-                const gajiLembur = Math.round(durasiLembur * tarifLemburHariIni);
-                totalRegulerGaji += gajiHariIni;
-                totalLemburGaji += gajiLembur;
-
-                tampunganHari.push({
-                    namaHari: namaHariIndo[hari],
-                    masuk: d.jam_masuk === "0" ? "-" : d.jam_masuk,
-                    pulangReg: belumPulang || d.jam_masuk === "0" ? "-" : d.jam_pulang_reguler,
-                    pulangLembur: belumPulang || d.jam_pulang_lembur === "0" ? "-" : d.jam_pulang_lembur,
-                    gajiPokokHari: gajiHariIni,
-                    gajiLemburHari: gajiLembur
-                });
-            });
-
-            let grandTotalBersih = (totalRegulerGaji + totalLemburGaji + kBonus + kRumah) - kKasbon;
-            if (grandTotalBersih < 0) grandTotalBersih = 0;
-
-            tampunganHari.forEach((h, index) => {
-                let namaKaryawanKolom = (index === 0) ? krw.nama.toUpperCase() : "";
-                let deptKolom = (index === 0) ? (krw.departemen ? krw.departemen.toUpperCase() : "UMUM") : "";
-                let rumahKolom = (index === 0) ? kRumah : "";
-                let bonusKolom = (index === 0) ? kBonus : "";
-                let kasbonKolom = (index === 0) ? kKasbon : "";
-                let totalBersihKolom = (index === 0) ? grandTotalBersih : "";
-
-                let baris = [
-                    namaKaryawanKolom,
-                    deptKolom,
-                    h.namaHari,
-                    h.masuk,
-                    h.pulangReg,
-                    h.pulangLembur,
-                    h.gajiPokokHari,
-                    h.gajiLemburHari,
-                    rumahKolom,
-                    bonusKolom,
-                    kasbonKolom,
-                    totalBersihKolom
-                ].join(";");
-                
-                barisCsv.push(baris);
-            });
-
-            barisCsv.push(";;;;;;;;;;;"); 
-        });
-
-        const kontenCsvContent = barisCsv.join("\n");
-        const blob = new Blob(["\uFEFF" + kontenCsvContent], { type: 'text/csv;charset=utf-8;' });
-        
-        const link = document.createElement("a");
-        const url = URL.createObjectURL(blob);
-        link.setAttribute("href", url);
-        link.setAttribute("download", `Rekap_Data_Kerja_Aby_Offset_${new Date().toISOString().slice(0,10)}.csv`);
-        link.style.visibility = 'hidden';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-
-        tampilAlertKustom("✅ SUKSES! File CSV Rekap Data Kerja berhasil diunduh.");
-    }
-
-    updateDropdownKaryawan();
-    renderTabelKaryawan();
-</script>
+    </script>
 </body>
 </html>
