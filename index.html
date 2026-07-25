@@ -704,7 +704,7 @@
 
   <script>
     // 1. Validasi Domain Lock
-    const allowedDomain = ""; 
+    const allowedDomain = "abyoffset"; 
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
       document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
       throw new Error("Unauthorized domain");
