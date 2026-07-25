@@ -703,7 +703,7 @@
   </div>
 
   <script>
-    // 1. Validasi Domain Lock (Ganti 'github.io' atau domain Anda, biarkan localhost untuk testing)
+    // 1. Validasi Domain Lock
     const allowedDomain = ""; 
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
       document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
@@ -734,10 +734,8 @@
       }
     });
 
-    // Terenkripsi Base64 untuk Kunci/Variabel Sensitif
     const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
 
-    // Obfuscated Code menggunakan String Array & Hex Decoding untuk Logic Utama
     const _0x1a2b = [
       "decodeURIComponent", "atob", "match", "^[A-Za-z0-9+/=]+$", "active", "classList", 
       "value", "files", "FileReader", "readAsText", "target", "result", "parse", "setItem", 
@@ -1028,10 +1026,28 @@
 
     function updateMoviesData(newData) {
       if (Array.isArray(newData)) {
-        currentData = newData;
+        // Menggabungkan data lama dan baru serta mencegah duplikat berdasarkan link (lnk) atau judul (ttl)
+        const existingMap = new Map();
+        
+        currentData.forEach(movie => {
+          const key = movie.lnk || movie.ttl;
+          existingMap.set(key, movie);
+        });
+
+        newData.forEach(movie => {
+          const key = movie.lnk || movie.ttl;
+          existingMap.set(key, movie); // Update jika sudah ada, tambahkan jika baru
+        });
+
+        currentData = Array.from(existingMap.values());
         displayData = shuffleArray(currentData);
         renderMovies(displayData);
-        try { localStorage.setItem('custom_json_data', JSON.stringify(newData)); } catch(e) {}
+
+        try { 
+          localStorage.setItem('custom_json_data', JSON.stringify(currentData)); 
+        } catch(e) {}
+
+        alert(`Data berhasil dimuat! Total koleksi film saat ini: ${currentData.length}`);
       } else {
         alert("Format JSON harus berupa Array / List []!");
       }
