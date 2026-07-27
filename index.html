@@ -25,10 +25,18 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    body {
+    /* Menghilangkan scrollbar secara global untuk semua browser */
+    html, body {
       background-color: var(--bg-color);
       color: var(--text-color);
       padding-bottom: 30px;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer & Edge */
+    }
+
+    body::-webkit-scrollbar,
+    .player-modal::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
     }
 
     header {
@@ -281,6 +289,8 @@
       background-color: rgba(0, 0, 0, 0.96);
       z-index: 1000;
       overflow-y: auto;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer & Edge */
     }
 
     .player-modal.active {
@@ -1026,7 +1036,6 @@
 
     function updateMoviesData(newData) {
       if (Array.isArray(newData)) {
-        // Menggabungkan data lama dan baru serta mencegah duplikat berdasarkan link (lnk) atau judul (ttl)
         const existingMap = new Map();
         
         currentData.forEach(movie => {
@@ -1036,7 +1045,7 @@
 
         newData.forEach(movie => {
           const key = movie.lnk || movie.ttl;
-          existingMap.set(key, movie); // Update jika sudah ada, tambahkan jika baru
+          existingMap.set(key, movie);
         });
 
         currentData = Array.from(existingMap.values());
