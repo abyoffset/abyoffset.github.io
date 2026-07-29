@@ -400,8 +400,6 @@
             atas.innerHTML = ''; 
 
             const APP_VERSION = 'v1.2.0'; 
-
-            // URL index.json utama Anda
             const indexJsonUrl = 'index.json';
 
             let directFiles = [];
@@ -607,11 +605,12 @@
                     let isCollection = false;
 
                     if (item.type === 'collection') {
+                        // MODIFIKASI: Pindah ke koleksi.html dengan window.location.href
                         action = () => openCollection(item.koleksi, 'Koleksi ' + item.koleksi.toUpperCase());
                         isCollection = true;
                     } else { 
                         action = () => {
-                            sessionStorage.setItem('lastActiveMenuPage', 'beranda');
+                            sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
                             playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
                         };
                         isCollection = false;
@@ -732,38 +731,13 @@
             }
 
             function openCollection(collectionKey, collectionTitle) {
-                const collectionItems = allItems.filter(item => item.koleksi === collectionKey);
-                
-                container.style.display = 'block';
-                pengaturanMenu.style.display = 'none';
-                currentItems = collectionItems;
-                
-                sessionStorage.setItem('isInCollection', 'true');
+                // Simpan data ke sessionStorage agar bisa dibaca oleh koleksi.html
                 sessionStorage.setItem('currentCollectionKey', collectionKey);
+                sessionStorage.setItem('currentCollectionTitle', collectionTitle);
                 sessionStorage.setItem('lastActiveMenuPage', 'koleksi-' + collectionKey);
-
-                container.innerHTML = ''; 
-                currentItems.forEach(item => {
-                    let action;
-                    let isCollection = false;
-
-                    if (item.koleksi && item.koleksi !== collectionKey) {
-                        action = () => openCollection(item.koleksi, 'Koleksi ' + item.koleksi.toUpperCase());
-                        isCollection = true;
-                    } else if (item.lnk) { 
-                        action = () => {
-                            sessionStorage.setItem('lastActiveMenuPage', 'beranda');
-                            playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
-                        };
-                        isCollection = false;
-                    } else {
-                        action = () => openCollection(item.koleksi, item.ttl);
-                        isCollection = true;
-                    }
-                    createFilmElement(item, action, isCollection);
-                });
                 
-                restoreFocusOnContent();
+                // Pindah halaman ke koleksi.html
+                window.location.href = 'koleksi.html';
             }
 
             function playVideo(videoFile, logoFile, textFile, cropMode, cropPosition, cropScale) { 
@@ -831,28 +805,6 @@
                 const searchInput = document.getElementById('cari');
                 const focusedElement = document.activeElement;
                 
-                // Tangkap Escape (27), Tombol Back TV/Android (4), atau e.key 'Escape'
-                if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
-                    const isInCollection = sessionStorage.getItem('isInCollection');
-                    
-                    if (isInCollection === 'true') {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        sessionStorage.removeItem('isInCollection');
-                        sessionStorage.removeItem('currentCollectionKey');
-                        sessionStorage.setItem('lastActiveMenuPage', 'beranda');
-                        sessionStorage.removeItem('lastFocusedCardTitle');
-                        loadAndRenderHomeContent();
-                        
-                        const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
-                        if (homeNav) homeNav.focus();
-                        return false;
-                    } else {
-                        window.history.back();
-                    }
-                }
-
                 if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'Enter') {
                     e.preventDefault(); 
                     
@@ -916,8 +868,6 @@
                             }
                         } else if (e.key === 'Enter') {
                             const page = focusedElement.getAttribute('data-page');
-                            sessionStorage.removeItem('isInCollection');
-                            sessionStorage.removeItem('currentCollectionKey');
                             sessionStorage.setItem('lastActiveMenuPage', page);
                             sessionStorage.removeItem('scrollPosition');
                             sessionStorage.removeItem('lastVideoTitle'); 
@@ -1010,6 +960,14 @@
                         divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
                         saveScrollPosition();
                     }
+                } else if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
+                    // Mencegah keluar aplikasi langsung jika berada di halaman sekunder
+                    const activePage = sessionStorage.getItem('lastActiveMenuPage');
+                    if (activePage && activePage !== 'beranda') {
+                        e.preventDefault();
+                        const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
+                        if (homeNav) homeNav.click();
+                    }
                 }
             });
 
@@ -1022,10 +980,6 @@
                     item.addEventListener('click', () => {
                         document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
                         const page = item.getAttribute('data-page');
-                        
-                        sessionStorage.removeItem('isInCollection');
-                        sessionStorage.removeItem('currentCollectionKey');
-                        
                         sessionStorage.setItem('lastActiveMenuPage', page); 
                         container.innerHTML = ''; 
                         

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiviku - Koleksi</title>
+    <style>
+        body {
+            background-color: black;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh; 
+            overflow: hidden; 
+            font-family: Arial, sans-serif;
+        }
+
+        h1 { display: none; }
+        b { display: none; }
+
+        .re {
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            font-weight: 1000;
+            font-style: italic;
+            position: relative;
+            letter-spacing: 1px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 5px;
+            font-size: 15px;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .dur {
+            color: white;
+            font-weight: 900;
+            font-style: italic;
+            position: absolute;
+            border-radius: 3px;
+            bottom: 180px;
+            padding: 3px;
+            background-color: rgba(0, 0, 0, 0.6);
+            font-size: 15px;
+            z-index: 1;
+        }
+
+        .responsive-div:focus .re,
+        .responsive-div:hover .re {
+            font-size: 19px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .responsive-div:focus,
+        .responsive-div:hover,
+        .highlight {
+            border: 5px solid #fff; 
+            border-radius: 13px;
+            outline: none;
+        }
+
+        #imgv {                
+            border-radius: 11px;
+            width: 270px;
+            height: 220px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        #atas {                
+            position: relative;
+            height: 60px; 
+            color: yellowgreen;
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #container {
+            height: calc(100vh - 80px); 
+            position: relative;
+            top: 10px;
+            padding: 0px;
+            overflow: auto; 
+        }
+
+        .responsive-div {
+            width: 260px;
+            height: 210px;
+            display: inline-block; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 13px;
+            overflow: hidden;
+            position: relative;
+            padding: 8px 8px;
+            margin: 15px;
+            border: 5px solid #6c7c13; 
+        }
+
+        #app-wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: black;
+            transition: background-color 0.3s;
+        }
+
+        /* GAYA TEMA (APPLIED CLASSES) */
+        .theme-blue-dark { background-color: #121c29 !important; }
+        .theme-blue-dark .responsive-div { border: 5px solid #4a90e2 !important; }
+        .theme-blue-dark .responsive-div:focus,
+        .theme-blue-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #4a90e2; }
+
+        .theme-red-dark { background-color: #1f0505 !important; }
+        .theme-red-dark .responsive-div { border: 5px solid #ff4d4d !important; }
+        .theme-red-dark .responsive-div:focus,
+        .theme-red-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #ff4d4d; }
+    </style>
+</head>
+<body>
+    <div id="app-wrapper">
+        <div id="atas"></div> 
+        <div id="container"></div>
+    </div>
+
+    <script>
+        const indexJsonUrl = 'index.json';
+        const container = document.getElementById('container');
+        const headerTitle = document.getElementById('atas');
+        
+        const collectionKey = sessionStorage.getItem('currentCollectionKey');
+        const collectionTitle = sessionStorage.getItem('currentCollectionTitle') || 'Koleksi';
+        headerTitle.innerText = collectionTitle.toUpperCase();
+
+        function applyTheme() {
+            const savedTheme = localStorage.getItem('currentTheme') || 'default';
+            if (savedTheme !== 'default') {
+                document.body.classList.add(`theme-${savedTheme}`);
+                document.getElementById('app-wrapper').classList.add(`theme-${savedTheme}`);
+            }
+        }
+        applyTheme();
+
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target.querySelector('.lazy-img'); 
+                    if (img) {
+                        const src = img.getAttribute('data-src');
+                        if (src) {
+                            img.src = src; 
+                            img.removeAttribute('data-src');
+                            observer.unobserve(entry.target); 
+                        }
+                    }
+                }
+            });
+        }, {
+            root: container, 
+            rootMargin: '100px 0px', 
+            threshold: 0.01
+        });
+
+        function createFilmElement(item, clickAction, isCollection = false) {
+            const img = document.createElement('img');
+            img.id = 'imgv';
+            img.setAttribute('data-src', item.logo); 
+            img.src = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="270" height="220" viewBox="0 0 270 220"%3E%3Crect width="100%25" height="100%25" fill="%231a1a1a"%3E%3C/rect%3E%3C/svg%3E'; 
+            img.classList.add('lazy-img'); 
+
+            const pp = document.createElement('p');
+            pp.className = 're';
+            pp.innerText = item.ttl;
+
+            const dur = document.createElement('p');
+            dur.className = 'dur';
+            dur.innerText = isCollection ? 'Koleksi (klik)' : (item.dur || '');
+
+            const dv = document.createElement('div');
+            dv.className = 'responsive-div';
+            dv.tabIndex = 0; 
+            dv.onclick = clickAction;
+
+            dv.appendChild(img);
+            dv.appendChild(pp);
+            dv.appendChild(dur);
+            container.appendChild(dv);
+            
+            imageObserver.observe(dv);
+            return dv; 
+        }
+
+        function loadCollectionContent() {
+            container.innerHTML = '<h2>Memuat Koleksi...</h2>';
+            
+            fetch(indexJsonUrl)
+                .then(response => response.json())
+                .then(indexData => {
+                    const directFiles = indexData.source_list || [];
+                    let allItems = [];
+                    let filesProcessed = 0;
+
+                    if (directFiles.length === 0) {
+                        container.innerHTML = '<h2>Koleksi Kosong</h2>';
+                        return;
+                    }
+
+                    directFiles.forEach(fileUrl => {
+                        fetch(fileUrl)
+                            .then(response => response.json())
+                            .then(data => {
+                                function extractItems(entries) {
+                                    if (!Array.isArray(entries)) return;
+                                    entries.forEach(entry => {
+                                        if (entry.koleksi || entry.lnk) {
+                                            allItems.push(entry);
+                                        }
+                                        for (let key in entry) {
+                                            if (Array.isArray(entry[key])) {
+                                                extractItems(entry[key]);
+                                            }
+                                        }
+                                    });
+                                }
+                                
+                                extractItems(data);
+                                filesProcessed++;
+                                
+                                if (filesProcessed === directFiles.length) {
+                                    renderCollectionItems(allItems);
+                                }
+                            })
+                            .catch(error => {
+                                filesProcessed++;
+                                if (filesProcessed === directFiles.length) {
+                                    renderCollectionItems(allItems);
+                                }
+                            });
+                    });
+                })
+                .catch(error => {
+                    container.innerHTML = '<h2>❌ Gagal memuat data</h2>';
+                });
+        }
+
+        function renderCollectionItems(allItems) {
+            const collectionItems = allItems.filter(item => 
+                item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
+            );
+            
+            container.innerHTML = '';
+
+            if (collectionItems.length === 0) {
+                container.innerHTML = `<h2>Tidak ada item di dalam koleksi "${collectionTitle}".</h2>`;
+                return;
+            }
+
+            collectionItems.forEach(item => {
+                let action;
+                let isCollection = false;
+
+                if (item.lnk) {
+                    action = () => {
+                        sessionStorage.setItem('videoLink', item.lnk);
+                        sessionStorage.setItem('videoTitle', item.ttl);
+                        sessionStorage.setItem('logoFile', item.logo);
+                        sessionStorage.setItem('videoCropMode', item.crop_mode || 'fill');
+                        sessionStorage.setItem('videoCropPosition', item.crop_position || '50% 50%');
+                        sessionStorage.setItem('videoCropScale', item.crop_scale || '');
+                        window.location.href = 'p.html';
+                    };
+                } else {
+                    action = () => {
+                        sessionStorage.setItem('currentCollectionKey', item.koleksi);
+                        sessionStorage.setItem('currentCollectionTitle', item.ttl);
+                        window.location.reload();
+                    };
+                    isCollection = true;
+                }
+                createFilmElement(item, action, isCollection);
+            });
+
+            const firstDiv = document.querySelector('.responsive-div');
+            if (firstDiv) {
+                firstDiv.classList.add('highlight');
+                firstDiv.focus();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const focusedElement = document.activeElement;
+
+            if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
+                e.preventDefault();
+                sessionStorage.removeItem('currentCollectionKey');
+                sessionStorage.removeItem('currentCollectionTitle');
+                window.location.href = 'index.html';
+                return;
+            }
+
+            if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'Enter') {
+                e.preventDefault();
+                
+                const divs = Array.from(document.querySelectorAll('.responsive-div')).filter(div => getComputedStyle(div).display !== 'none');
+                const currentIndex = divs.findIndex(div => div === focusedElement);
+                if (divs.length === 0 || currentIndex === -1) return;
+
+                let nextIndex = -1;
+                const containerRect = container.getBoundingClientRect();
+                const cardWidthWithMargin = divs[0].offsetWidth + 30;
+                const itemsPerRow = Math.max(1, Math.floor(containerRect.width / cardWidthWithMargin));
+                
+                focusedElement.classList.remove('highlight');
+                    
+                switch (e.key) {
+                    case 'ArrowDown':
+                        nextIndex = Math.min(currentIndex + itemsPerRow, divs.length - 1);
+                        break;
+                    case 'ArrowUp':
+                        nextIndex = Math.max(0, currentIndex - itemsPerRow);
+                        break;
+                    case 'ArrowRight':
+                        nextIndex = Math.min(currentIndex + 1, divs.length - 1);
+                        break;
+                    case 'ArrowLeft':
+                        nextIndex = Math.max(0, currentIndex - 1);
+                        break;
+                    case 'Enter':
+                        focusedElement.click();
+                        return; 
+                }
+
+                if (nextIndex !== -1 && divs[nextIndex]) {
+                    divs[nextIndex].classList.add('highlight');
+                    divs[nextIndex].focus();
+                    divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
+                }
+            }
+        });
+
+        loadCollectionContent();
+    </script>
+</body>
+</html>
