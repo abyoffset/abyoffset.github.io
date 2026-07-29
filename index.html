@@ -402,9 +402,9 @@
             const container = document.getElementById('container');
             const pengaturanMenu = document.getElementById('pengaturan-menu'); 
 
-            let directItems = []; // Item satuan (lnk)
-            let collectionGroups = new Map(); // Map untuk menampung grup koleksi berdasarkan key koleksi
-            let currentHomeItems = []; // Kombinasi item satuan dan seluruh item koleksi untuk beranda
+            let directItems = []; 
+            let collectionGroups = new Map(); 
+            let currentHomeItems = []; 
 
             function setLocalStorage(name, value) {
                 try {
@@ -543,7 +543,6 @@
                 }
             }
 
-            // Fungsi rekursif untuk mengurai JSON dan memisahkan item satuan dengan koleksi
             function extractItemsAndCollections(entries) {
                 if (!Array.isArray(entries)) return;
                 entries.forEach(entry => {
