@@ -393,7 +393,7 @@
             const atas = document.getElementById('atas');
             atas.innerHTML = ''; 
 
-            const APP_VERSION = 'v1.2.0'; 
+            const APP_VERSION = 'v1.2.1'; 
             const indexJsonUrl = 'index.json';
 
             let directFiles = [];
@@ -402,9 +402,9 @@
             const container = document.getElementById('container');
             const pengaturanMenu = document.getElementById('pengaturan-menu'); 
 
-            let allItems = []; // Hanya menyimpan item satuan (direct/lnk) untuk Beranda
-            let currentItems = []; 
-            let detectedCollections = new Map(); // Menyimpan koleksi unik untuk sidebar
+            let directItems = []; // Item satuan (lnk)
+            let collectionGroups = new Map(); // Map untuk menampung grup koleksi berdasarkan key koleksi
+            let currentHomeItems = []; // Kombinasi item satuan dan seluruh item koleksi untuk beranda
 
             function setLocalStorage(name, value) {
                 try {
@@ -491,7 +491,7 @@
                 threshold: 0.01
             });
 
-            function createFilmElement(item, clickAction, isCollection = false) {
+            function createFilmElement(item, clickAction) {
                 const img = document.createElement('img');
                 img.id = 'imgv';
                 img.setAttribute('data-src', item.logo); 
@@ -504,7 +504,7 @@
 
                 const dur = document.createElement('p');
                 dur.className = 'dur';
-                dur.innerText = isCollection ? 'Koleksi (klik)' : (item.dur || '');
+                dur.innerText = item.dur || '';
 
                 const dv = document.createElement('div');
                 dv.className = 'responsive-div';
@@ -520,30 +520,41 @@
                 return dv; 
             }
 
-            function shuffleAndSaveItems() {
-                let combinedList = [...allItems]; // Hanya item langsung/satuan yang masuk Beranda
+            function shuffleAndSaveHomeItems() {
+                let combinedList = [];
+                
+                // Masukkan semua item satuan
+                directItems.forEach(item => {
+                    combinedList.push({ ...item, itemType: 'direct' });
+                });
+
+                // Masukkan seluruh isi dari masing-masing koleksi langsung ke beranda
+                collectionGroups.forEach((itemsInGroup, colKey) => {
+                    itemsInGroup.forEach(item => {
+                        combinedList.push({ ...item, itemType: 'collection-item' });
+                    });
+                });
+
                 shuffleArray(combinedList);
                 try {
-                    sessionStorage.setItem('savedItemList', JSON.stringify(combinedList));
+                    sessionStorage.setItem('savedHomeItemList', JSON.stringify(combinedList));
                 } catch (e) {
                     console.error("Gagal menyimpan item list Beranda ke sessionStorage.", e);
                 }
             }
 
-            // Fungsi rekursif untuk mendeteksi koleksi (hanya untuk sidebar) dan item satuan di dalam JSON
+            // Fungsi rekursif untuk mengurai JSON dan memisahkan item satuan dengan koleksi
             function extractItemsAndCollections(entries) {
                 if (!Array.isArray(entries)) return;
                 entries.forEach(entry => {
                     if (entry.koleksi) {
                         const colKey = entry.koleksi.toString().toLowerCase();
-                        
-                        // Deteksi judul koleksi untuk menu sidebar (ambil judul dari entry pertama yang memiliki properti ttl atau gunakan nilai koleksi)
-                        if (!detectedCollections.has(colKey)) {
-                            const colTitle = entry.ttl ? ('Koleksi ' + entry.koleksi) : ('Koleksi ' + entry.koleksi);
-                            detectedCollections.set(colKey, colTitle);
+                        if (!collectionGroups.has(colKey)) {
+                            collectionGroups.set(colKey, []);
                         }
+                        collectionGroups.get(colKey).push(entry);
                     } else if (entry.lnk) {
-                        allItems.push({...entry, type: 'direct'});
+                        directItems.push(entry);
                     }
 
                     for (let key in entry) {
@@ -559,17 +570,22 @@
                 if (!menuContainer) return;
                 menuContainer.innerHTML = '';
 
-                detectedCollections.forEach((title, key) => {
+                collectionGroups.forEach((itemsInGroup, colKey) => {
+                    let colTitle = 'Koleksi ' + colKey;
+                    if (itemsInGroup.length > 0 && itemsInGroup[0].koleksi_title) {
+                        colTitle = itemsInGroup[0].koleksi_title;
+                    }
+
                     const navItem = document.createElement('div');
                     navItem.className = 'nav-item focus-target';
                     navItem.tabIndex = 0;
-                    navItem.setAttribute('data-page', 'koleksi-' + key);
-                    navItem.innerText = '📁 ' + title;
+                    navItem.setAttribute('data-page', 'koleksi-' + colKey);
+                    navItem.innerText = '📁 ' + colTitle;
                     
                     navItem.addEventListener('click', () => {
                         document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
-                        sessionStorage.setItem('lastActiveMenuPage', 'koleksi-' + key);
-                        openCollection(key, title);
+                        sessionStorage.setItem('lastActiveMenuPage', 'koleksi-' + colKey);
+                        openCollection(colKey, colTitle);
                     });
 
                     menuContainer.appendChild(navItem);
@@ -584,8 +600,8 @@
                 
                 if (filesProcessedCount === 0) {
                     container.innerHTML = '<h2>Memuat Index Konten...</h2>';
-                    allItems = []; 
-                    detectedCollections.clear();
+                    directItems = []; 
+                    collectionGroups.clear();
                     
                     fetch(indexJsonUrl)
                         .then(response => response.json())
@@ -642,12 +658,12 @@
 
             function renderCurrentItems() {
                 container.innerHTML = ''; 
-                currentItems.forEach(item => {
-                    let action = () => {
+                currentHomeItems.forEach(item => {
+                    const action = () => {
                         sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
                         playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
                     };
-                    createFilmElement(item, action, false);
+                    createFilmElement(item, action);
                 });
                 renderDynamicCollectionsMenu();
                 restoreFocusOnContent(); 
@@ -656,18 +672,24 @@
             function checkAndRenderItems() {
                 if (filesProcessedCount < totalFiles) return; 
                 
-                const savedItems = sessionStorage.getItem('savedItemList');
+                const savedItems = sessionStorage.getItem('savedHomeItemList');
                 if (savedItems) {
                     try {
                         let parsed = JSON.parse(savedItems);
-                        currentItems = parsed;
+                        currentHomeItems = parsed;
                     } catch (e) {
-                        shuffleAndSaveItems();
-                        currentItems = [...allItems];
+                        shuffleAndSaveHomeItems();
+                        currentHomeItems = [...directItems];
                     }
                 } else {
-                    shuffleAndSaveItems();
-                    currentItems = [...allItems];
+                    shuffleAndSaveHomeItems();
+                    let combinedList = [];
+                    directItems.forEach(item => combinedList.push({ ...item, itemType: 'direct' }));
+                    collectionGroups.forEach((itemsInGroup, colKey) => {
+                        itemsInGroup.forEach(item => combinedList.push({ ...item, itemType: 'collection-item' }));
+                    });
+                    shuffleArray(combinedList);
+                    currentHomeItems = combinedList;
                 }
                 renderCurrentItems(); 
             }
@@ -911,7 +933,11 @@
                                 showPengaturanMenu();
                             } else if (page && page.startsWith('koleksi-')) {
                                 const colKey = page.replace('koleksi-', '');
-                                const colTitle = detectedCollections.get(colKey) || 'Koleksi';
+                                const itemsInGroup = collectionGroups.get(colKey);
+                                let colTitle = 'Koleksi ' + colKey;
+                                if (itemsInGroup && itemsInGroup.length > 0 && itemsInGroup[0].koleksi_title) {
+                                    colTitle = itemsInGroup[0].koleksi_title;
+                                }
                                 openCollection(colKey, colTitle);
                             }
                         }
@@ -1025,11 +1051,15 @@
                             showPengaturanMenu();
                         } else if (page && page.startsWith('koleksi-')) {
                             const colKey = page.replace('koleksi-', '');
-                            const colTitle = detectedCollections.get(colKey) || 'Koleksi';
+                            const itemsInGroup = collectionGroups.get(colKey);
+                            let colTitle = 'Koleksi ' + colKey;
+                            if (itemsInGroup && itemsInGroup.length > 0 && itemsInGroup[0].koleksi_title) {
+                                colTitle = itemsInGroup[0].koleksi_title;
+                            }
                             openCollection(colKey, colTitle);
                         } else {
                             filesProcessedCount = 0; 
-                            currentItems = []; 
+                            currentHomeItems = []; 
                             container.style.display = 'block';
                             pengaturanMenu.style.display = 'none';
                             container.innerHTML = `<h2>Konten untuk ${item.innerText} belum tersedia.</h2>`; 
