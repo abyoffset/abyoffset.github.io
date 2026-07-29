@@ -611,7 +611,7 @@
                         isCollection = true;
                     } else { 
                         action = () => {
-                            sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
+                            sessionStorage.setItem('lastActiveMenuPage', 'beranda');
                             playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
                         };
                         isCollection = false;
@@ -738,7 +738,10 @@
                 pengaturanMenu.style.display = 'none';
                 currentItems = collectionItems;
                 
-                // Render ulang item di dalam koleksi dengan memastikan item video langsung dapat diputar
+                sessionStorage.setItem('isInCollection', 'true');
+                sessionStorage.setItem('currentCollectionKey', collectionKey);
+                sessionStorage.setItem('lastActiveMenuPage', 'koleksi-' + collectionKey);
+
                 container.innerHTML = ''; 
                 currentItems.forEach(item => {
                     let action;
@@ -749,7 +752,7 @@
                         isCollection = true;
                     } else if (item.lnk) { 
                         action = () => {
-                            sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
+                            sessionStorage.setItem('lastActiveMenuPage', 'beranda');
                             playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
                         };
                         isCollection = false;
@@ -761,7 +764,6 @@
                 });
                 
                 restoreFocusOnContent();
-                sessionStorage.setItem('lastActiveMenuPage', 'koleksi-' + collectionKey);
             }
 
             function playVideo(videoFile, logoFile, textFile, cropMode, cropPosition, cropScale) { 
@@ -892,6 +894,8 @@
                             }
                         } else if (e.key === 'Enter') {
                             const page = focusedElement.getAttribute('data-page');
+                            sessionStorage.removeItem('isInCollection');
+                            sessionStorage.removeItem('currentCollectionKey');
                             sessionStorage.setItem('lastActiveMenuPage', page);
                             sessionStorage.removeItem('scrollPosition');
                             sessionStorage.removeItem('lastVideoTitle'); 
@@ -985,7 +989,21 @@
                         saveScrollPosition();
                     }
                 } else if (e.key === 'Escape') {
-                    window.history.back();
+                    const isInCollection = sessionStorage.getItem('isInCollection');
+                    
+                    if (isInCollection === 'true') {
+                        e.preventDefault();
+                        sessionStorage.removeItem('isInCollection');
+                        sessionStorage.removeItem('currentCollectionKey');
+                        sessionStorage.setItem('lastActiveMenuPage', 'beranda');
+                        sessionStorage.removeItem('lastFocusedCardTitle');
+                        loadAndRenderHomeContent();
+                        
+                        const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
+                        if (homeNav) homeNav.focus();
+                    } else {
+                        window.history.back();
+                    }
                 }
             });
 
@@ -998,6 +1016,10 @@
                     item.addEventListener('click', () => {
                         document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
                         const page = item.getAttribute('data-page');
+                        
+                        sessionStorage.removeItem('isInCollection');
+                        sessionStorage.removeItem('currentCollectionKey');
+                        
                         sessionStorage.setItem('lastActiveMenuPage', page); 
                         container.innerHTML = ''; 
                         
