@@ -488,12 +488,10 @@
         }
 
         function renderCollectionItems(allItems) {
-            // Saring item berdasarkan koleksi
             let collectionItems = allItems.filter(item => 
                 item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
             );
             
-            // Acak (Shuffle) item di dalam koleksi
             shuffleArray(collectionItems);
 
             container.innerHTML = '';
@@ -527,6 +525,12 @@
                 }
                 createFilmElement(item, action, isCollection);
             });
+
+            const firstDiv = document.querySelector('.responsive-div');
+            if (firstDiv) {
+                firstDiv.classList.add('highlight');
+                firstDiv.focus();
+            }
         }
 
         function showPengaturanMenu() {
@@ -545,7 +549,6 @@
             }
         }
 
-        // Fitur Pencarian
         function prosesMenu() {
             var filter = searchInput.value.toLowerCase();
             var li = document.querySelectorAll('.responsive-div');
@@ -566,7 +569,6 @@
         }
         searchInput.addEventListener("input", prosesMenu);
 
-        // Navigasi Tombol Remote TV
         document.addEventListener('keydown', (e) => {
             const focusedElement = document.activeElement;
 
@@ -691,7 +693,6 @@
             }
         });
 
-        // Event listener untuk menu sidebar
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', () => {
                 const page = item.getAttribute('data-page');
@@ -703,7 +704,6 @@
             });
         });
 
-        // Jalankan pemuatan data koleksi saat awal buka
         loadCollectionContent();
     </script>
 </body>
