@@ -1,5 +1,12 @@
 [
 {
+"logo": "https://i.imgur.com/ON3jgoM.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq8@10d10d0/1/master.m3u8",
+"ttl": "Elio (2025) dubbing",
+"dur": "1:37:45",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/g23f6dK.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq8@15206ab/1/master.m3u8",
 "ttl": "Mufasa: The Lion King (2024) dubbing",
@@ -231,7 +238,7 @@
 "ttl": "Jagal Teluh (2025)",
 "dur": "1:19:24",
 "crop_mode": "stretch_crop",
-"crop_scale": "1.35",
+"crop_scale": "1.40",
 "tiviku": "apk"
 },
 {
