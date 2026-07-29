@@ -831,6 +831,28 @@
                 const searchInput = document.getElementById('cari');
                 const focusedElement = document.activeElement;
                 
+                // Tangkap Escape (27), Tombol Back TV/Android (4), atau e.key 'Escape'
+                if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
+                    const isInCollection = sessionStorage.getItem('isInCollection');
+                    
+                    if (isInCollection === 'true') {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        sessionStorage.removeItem('isInCollection');
+                        sessionStorage.removeItem('currentCollectionKey');
+                        sessionStorage.setItem('lastActiveMenuPage', 'beranda');
+                        sessionStorage.removeItem('lastFocusedCardTitle');
+                        loadAndRenderHomeContent();
+                        
+                        const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
+                        if (homeNav) homeNav.focus();
+                        return false;
+                    } else {
+                        window.history.back();
+                    }
+                }
+
                 if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'Enter') {
                     e.preventDefault(); 
                     
@@ -987,22 +1009,6 @@
                         sessionStorage.setItem('lastFocusedCardTitle', focusedTitle); 
                         divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
                         saveScrollPosition();
-                    }
-                } else if (e.key === 'Escape') {
-                    const isInCollection = sessionStorage.getItem('isInCollection');
-                    
-                    if (isInCollection === 'true') {
-                        e.preventDefault();
-                        sessionStorage.removeItem('isInCollection');
-                        sessionStorage.removeItem('currentCollectionKey');
-                        sessionStorage.setItem('lastActiveMenuPage', 'beranda');
-                        sessionStorage.removeItem('lastFocusedCardTitle');
-                        loadAndRenderHomeContent();
-                        
-                        const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
-                        if (homeNav) homeNav.focus();
-                    } else {
-                        window.history.back();
                     }
                 }
             });
