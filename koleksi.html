@@ -516,7 +516,8 @@
 
                 if (item.lnk) {
                     action = () => {
-                        // Simpan judul item terakhir yang diklik sebelum pindah halaman video
+                        // Tandai bahwa kita akan masuk ke player dari halaman koleksi ini
+                        sessionStorage.setItem('comingFromPlayer', 'true');
                         sessionStorage.setItem('lastFocusedTitle', item.ttl);
 
                         sessionStorage.setItem('videoLink', item.lnk);
@@ -529,6 +530,8 @@
                     };
                 } else {
                     action = () => {
+                        // Masuk ke sub-koleksi baru, hapus tanda player agar fokus kembali ke awal
+                        sessionStorage.removeItem('comingFromPlayer');
                         sessionStorage.removeItem('lastFocusedTitle');
                         sessionStorage.setItem('currentCollectionKey', item.koleksi);
                         sessionStorage.setItem('currentCollectionTitle', item.ttl);
@@ -539,18 +542,23 @@
                 createFilmElement(item, action, isCollection);
             });
 
-            // Pulihkan fokus dan highlight ke kartu terakhir yang diklik, atau ke kartu pertama jika belum ada
+            // Cek apakah halaman ini dibuka karena baru saja kembali dari player (`p.html`)
+            const comingFromPlayer = sessionStorage.getItem('comingFromPlayer') === 'true';
             const lastTitle = sessionStorage.getItem('lastFocusedTitle');
             let targetDiv = null;
 
-            if (lastTitle) {
+            if (comingFromPlayer && lastTitle) {
                 const allDivs = Array.from(document.querySelectorAll('.responsive-div'));
                 targetDiv = allDivs.find(div => {
                     const titleEl = div.querySelector('.re');
                     return titleEl && titleEl.innerText === lastTitle;
                 });
+                // Bersihkan flag setelah dipakai agar kunjungan berikutnya kembali ke awal
+                sessionStorage.removeItem('comingFromPlayer');
+                sessionStorage.removeItem('lastFocusedTitle');
             }
 
+            // Jika bukan dari player (misal baru masuk koleksi dari beranda), ambil kartu pertama
             if (!targetDiv) {
                 targetDiv = document.querySelector('.responsive-div');
             }
@@ -649,6 +657,7 @@
                     } else if (e.key === 'Enter') {
                         const page = focusedElement.getAttribute('data-page');
                         if (page === 'beranda') {
+                            sessionStorage.removeItem('comingFromPlayer');
                             sessionStorage.removeItem('lastFocusedTitle');
                             window.location.href = 'index.html';
                         } else if (page === 'pengaturan') {
@@ -719,6 +728,7 @@
                 e.preventDefault();
                 sessionStorage.removeItem('currentCollectionKey');
                 sessionStorage.removeItem('currentCollectionTitle');
+                sessionStorage.removeItem('comingFromPlayer');
                 sessionStorage.removeItem('lastFocusedTitle');
                 window.location.href = 'index.html';
             }
@@ -728,6 +738,7 @@
             item.addEventListener('click', () => {
                 const page = item.getAttribute('data-page');
                 if (page === 'beranda') {
+                    sessionStorage.removeItem('comingFromPlayer');
                     sessionStorage.removeItem('lastFocusedTitle');
                     window.location.href = 'index.html';
                 } else if (page === 'pengaturan') {
