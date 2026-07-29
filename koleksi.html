@@ -492,14 +492,11 @@
                 item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
             );
             
-            // Periksa apakah sudah pernah diacak untuk sesi koleksi ini di tab browser (sessionStorage)
             const shuffleKey = `shuffled_${collectionKey}`;
             if (!sessionStorage.getItem(shuffleKey)) {
                 shuffleArray(collectionItems);
-                // Simpan urutan yang sudah diacak ke sessionStorage agar tetap konsisten selama sesi ini
                 sessionStorage.setItem(shuffleKey, JSON.stringify(collectionItems.map(item => item.ttl)));
             } else {
-                // Jika sudah ada riwayat acaknya, susun ulang urutannya agar konsisten dengan sesi sebelumnya
                 let savedOrder = JSON.parse(sessionStorage.getItem(shuffleKey));
                 collectionItems.sort((a, b) => {
                     return savedOrder.indexOf(a.ttl) - savedOrder.indexOf(b.ttl);
@@ -519,6 +516,9 @@
 
                 if (item.lnk) {
                     action = () => {
+                        // Simpan judul item terakhir yang diklik sebelum pindah halaman video
+                        sessionStorage.setItem('lastFocusedTitle', item.ttl);
+
                         sessionStorage.setItem('videoLink', item.lnk);
                         sessionStorage.setItem('videoTitle', item.ttl);
                         sessionStorage.setItem('logoFile', item.logo);
@@ -529,6 +529,7 @@
                     };
                 } else {
                     action = () => {
+                        sessionStorage.removeItem('lastFocusedTitle');
                         sessionStorage.setItem('currentCollectionKey', item.koleksi);
                         sessionStorage.setItem('currentCollectionTitle', item.ttl);
                         window.location.reload();
@@ -538,10 +539,26 @@
                 createFilmElement(item, action, isCollection);
             });
 
-            const firstDiv = document.querySelector('.responsive-div');
-            if (firstDiv) {
-                firstDiv.classList.add('highlight');
-                firstDiv.focus();
+            // Pulihkan fokus dan highlight ke kartu terakhir yang diklik, atau ke kartu pertama jika belum ada
+            const lastTitle = sessionStorage.getItem('lastFocusedTitle');
+            let targetDiv = null;
+
+            if (lastTitle) {
+                const allDivs = Array.from(document.querySelectorAll('.responsive-div'));
+                targetDiv = allDivs.find(div => {
+                    const titleEl = div.querySelector('.re');
+                    return titleEl && titleEl.innerText === lastTitle;
+                });
+            }
+
+            if (!targetDiv) {
+                targetDiv = document.querySelector('.responsive-div');
+            }
+
+            if (targetDiv) {
+                targetDiv.classList.add('highlight');
+                targetDiv.focus();
+                targetDiv.scrollIntoView({ behavior: 'instant', block: 'center' });
             }
         }
 
@@ -632,6 +649,7 @@
                     } else if (e.key === 'Enter') {
                         const page = focusedElement.getAttribute('data-page');
                         if (page === 'beranda') {
+                            sessionStorage.removeItem('lastFocusedTitle');
                             window.location.href = 'index.html';
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
@@ -701,6 +719,7 @@
                 e.preventDefault();
                 sessionStorage.removeItem('currentCollectionKey');
                 sessionStorage.removeItem('currentCollectionTitle');
+                sessionStorage.removeItem('lastFocusedTitle');
                 window.location.href = 'index.html';
             }
         });
@@ -709,6 +728,7 @@
             item.addEventListener('click', () => {
                 const page = item.getAttribute('data-page');
                 if (page === 'beranda') {
+                    sessionStorage.removeItem('lastFocusedTitle');
                     window.location.href = 'index.html';
                 } else if (page === 'pengaturan') {
                     showPengaturanMenu();
