@@ -402,10 +402,9 @@
             const container = document.getElementById('container');
             const pengaturanMenu = document.getElementById('pengaturan-menu'); 
 
-            let allItems = []; 
+            let allItems = []; // Hanya menyimpan item satuan (direct/lnk) untuk Beranda
             let currentItems = []; 
             let detectedCollections = new Map(); // Menyimpan koleksi unik untuk sidebar
-            let uniqueCollectionsMap = new Map(); // Menyimpan 1 kartu representatif per koleksi untuk Beranda
 
             function setLocalStorage(name, value) {
                 try {
@@ -522,8 +521,7 @@
             }
 
             function shuffleAndSaveItems() {
-                // Gabungkan item direct dan kartu representatif koleksi, lalu acak
-                let combinedList = [...allItems, ...Array.from(uniqueCollectionsMap.values())];
+                let combinedList = [...allItems]; // Hanya item langsung/satuan yang masuk Beranda
                 shuffleArray(combinedList);
                 try {
                     sessionStorage.setItem('savedItemList', JSON.stringify(combinedList));
@@ -532,23 +530,17 @@
                 }
             }
 
-            // Fungsi rekursif untuk mendeteksi koleksi dan item satuan di dalam JSON
+            // Fungsi rekursif untuk mendeteksi koleksi (hanya untuk sidebar) dan item satuan di dalam JSON
             function extractItemsAndCollections(entries) {
                 if (!Array.isArray(entries)) return;
                 entries.forEach(entry => {
                     if (entry.koleksi) {
                         const colKey = entry.koleksi.toString().toLowerCase();
                         
-                        // Hanya ambil satu entry pertama sebagai kartu representatif utama di Beranda
-                        if (!uniqueCollectionsMap.has(colKey)) {
-                            const collectionData = {
-                                ...entry,
-                                type: 'collection',
-                                ttl: entry.ttl || ('Koleksi ' + entry.koleksi),
-                                logo: entry.logo || ''
-                            };
-                            uniqueCollectionsMap.set(colKey, collectionData);
-                            detectedCollections.set(colKey, collectionData.ttl);
+                        // Deteksi judul koleksi untuk menu sidebar (ambil judul dari entry pertama yang memiliki properti ttl atau gunakan nilai koleksi)
+                        if (!detectedCollections.has(colKey)) {
+                            const colTitle = entry.ttl ? ('Koleksi ' + entry.koleksi) : ('Koleksi ' + entry.koleksi);
+                            detectedCollections.set(colKey, colTitle);
                         }
                     } else if (entry.lnk) {
                         allItems.push({...entry, type: 'direct'});
@@ -593,7 +585,6 @@
                 if (filesProcessedCount === 0) {
                     container.innerHTML = '<h2>Memuat Index Konten...</h2>';
                     allItems = []; 
-                    uniqueCollectionsMap.clear();
                     detectedCollections.clear();
                     
                     fetch(indexJsonUrl)
@@ -652,20 +643,11 @@
             function renderCurrentItems() {
                 container.innerHTML = ''; 
                 currentItems.forEach(item => {
-                    let action;
-                    let isCollection = false;
-
-                    if (item.type === 'collection') {
-                        action = () => openCollection(item.koleksi, item.ttl || ('Koleksi ' + item.koleksi));
-                        isCollection = true;
-                    } else { 
-                        action = () => {
-                            sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
-                            playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
-                        };
-                        isCollection = false;
-                    }
-                    createFilmElement(item, action, isCollection);
+                    let action = () => {
+                        sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
+                        playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
+                    };
+                    createFilmElement(item, action, false);
                 });
                 renderDynamicCollectionsMenu();
                 restoreFocusOnContent(); 
@@ -679,20 +661,13 @@
                     try {
                         let parsed = JSON.parse(savedItems);
                         currentItems = parsed;
-                        
-                        detectedCollections.clear();
-                        parsed.forEach(item => {
-                            if (item.type === 'collection' && item.koleksi) {
-                                detectedCollections.set(item.koleksi.toString().toLowerCase(), item.ttl);
-                            }
-                        });
                     } catch (e) {
                         shuffleAndSaveItems();
-                        currentItems = [...allItems, ...Array.from(uniqueCollectionsMap.values())];
+                        currentItems = [...allItems];
                     }
                 } else {
                     shuffleAndSaveItems();
-                    currentItems = [...allItems, ...Array.from(uniqueCollectionsMap.values())];
+                    currentItems = [...allItems];
                 }
                 renderCurrentItems(); 
             }
@@ -984,7 +959,7 @@
                     switch (e.key) {
                         case 'ArrowDown':
                             nextIndex = Math.min(currentIndex + actualItemsPerRow, divs.length - 1);
-                            break;
+                        break;
                         case 'ArrowUp':
                             nextIndex = currentIndex - actualItemsPerRow;
                             if (nextIndex < 0) {
