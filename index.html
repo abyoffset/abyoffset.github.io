@@ -352,7 +352,7 @@
             
             <div id="nav-menu">
                 <div class="nav-item focus-target" tabindex="0" data-page="beranda">🏠 Beranda</div>
-                <div id="dynamic-collections-menu"></div>
+                <div class="nav-item focus-target" tabindex="0" data-page="koleksi-utama">📁 Koleksi</div>
                 <div class="nav-item focus-target" tabindex="0" data-page="pengaturan">🛠️ Pengaturan</div>
             </div>
         </div>
@@ -523,12 +523,10 @@
             function shuffleAndSaveHomeItems() {
                 let combinedList = [];
                 
-                // Masukkan semua item satuan
                 directItems.forEach(item => {
                     combinedList.push({ ...item, itemType: 'direct' });
                 });
 
-                // Masukkan seluruh isi dari masing-masing koleksi langsung ke beranda
                 collectionGroups.forEach((itemsInGroup, colKey) => {
                     itemsInGroup.forEach(item => {
                         combinedList.push({ ...item, itemType: 'collection-item' });
@@ -562,35 +560,6 @@
                         }
                     }
                 });
-            }
-
-            function renderDynamicCollectionsMenu() {
-                const menuContainer = document.getElementById('dynamic-collections-menu');
-                if (!menuContainer) return;
-                menuContainer.innerHTML = '';
-
-                collectionGroups.forEach((itemsInGroup, colKey) => {
-                    let colTitle = 'Koleksi ' + colKey;
-                    if (itemsInGroup.length > 0 && itemsInGroup[0].koleksi_title) {
-                        colTitle = itemsInGroup[0].koleksi_title;
-                    }
-
-                    const navItem = document.createElement('div');
-                    navItem.className = 'nav-item focus-target';
-                    navItem.tabIndex = 0;
-                    navItem.setAttribute('data-page', 'koleksi-' + colKey);
-                    navItem.innerText = '📁 ' + colTitle;
-                    
-                    navItem.addEventListener('click', () => {
-                        document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
-                        sessionStorage.setItem('lastActiveMenuPage', 'koleksi-' + colKey);
-                        openCollection(colKey, colTitle);
-                    });
-
-                    menuContainer.appendChild(navItem);
-                });
-                
-                setupNavListeners();
             }
 
             function loadAndRenderHomeContent() {
@@ -664,7 +633,6 @@
                     };
                     createFilmElement(item, action);
                 });
-                renderDynamicCollectionsMenu();
                 restoreFocusOnContent(); 
             }
 
@@ -786,10 +754,8 @@
                 return document.querySelector('.responsive-div:not([style*="display: none"])');
             }
 
-            function openCollection(collectionKey, collectionTitle) {
-                sessionStorage.setItem('currentCollectionKey', collectionKey);
-                sessionStorage.setItem('currentCollectionTitle', collectionTitle);
-                sessionStorage.setItem('lastActiveMenuPage', 'koleksi-' + collectionKey);
+            function openCollectionPage() {
+                sessionStorage.setItem('lastActiveMenuPage', 'koleksi-utama');
                 window.location.href = 'koleksi.html';
             }
 
@@ -901,6 +867,9 @@
                                 if (firstThemeButton) firstThemeButton.focus();
                                 return;
                             }
+                            if (page === 'koleksi-utama') {
+                                return; 
+                            }
                             
                             const lastFocusedTitle = sessionStorage.getItem('lastFocusedCardTitle');
                             let targetDiv = null;
@@ -930,14 +899,8 @@
                                 loadAndRenderHomeContent(); 
                             } else if (page === 'pengaturan') { 
                                 showPengaturanMenu();
-                            } else if (page && page.startsWith('koleksi-')) {
-                                const colKey = page.replace('koleksi-', '');
-                                const itemsInGroup = collectionGroups.get(colKey);
-                                let colTitle = 'Koleksi ' + colKey;
-                                if (itemsInGroup && itemsInGroup.length > 0 && itemsInGroup[0].koleksi_title) {
-                                    colTitle = itemsInGroup[0].koleksi_title;
-                                }
-                                openCollection(colKey, colTitle);
+                            } else if (page === 'koleksi-utama') {
+                                openCollectionPage();
                             }
                         }
                         return;
@@ -1048,14 +1011,8 @@
                             loadAndRenderHomeContent();
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
-                        } else if (page && page.startsWith('koleksi-')) {
-                            const colKey = page.replace('koleksi-', '');
-                            const itemsInGroup = collectionGroups.get(colKey);
-                            let colTitle = 'Koleksi ' + colKey;
-                            if (itemsInGroup && itemsInGroup.length > 0 && itemsInGroup[0].koleksi_title) {
-                                colTitle = itemsInGroup[0].koleksi_title;
-                            }
-                            openCollection(colKey, colTitle);
+                        } else if (page === 'koleksi-utama') {
+                            openCollectionPage();
                         } else {
                             filesProcessedCount = 0; 
                             currentHomeItems = []; 
@@ -1071,6 +1028,7 @@
             function initNavigation() {
                 loadInitialTheme();
                 setupThemeButtons();
+                setupNavListeners();
                 loadAndRenderHomeContent();
             }
 
