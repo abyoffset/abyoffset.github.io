@@ -404,7 +404,8 @@
 
             let allItems = []; 
             let currentItems = []; 
-            let detectedCollections = new Map(); // Menyimpan koleksi unik yang ditemukan
+            let detectedCollections = new Map(); // Menyimpan koleksi unik untuk sidebar
+            let uniqueCollectionsMap = new Map(); // Menyimpan 1 kartu representatif per koleksi untuk Beranda
 
             function setLocalStorage(name, value) {
                 try {
@@ -521,31 +522,38 @@
             }
 
             function shuffleAndSaveItems() {
-                shuffleArray(allItems);
+                // Gabungkan item direct dan kartu representatif koleksi, lalu acak
+                let combinedList = [...allItems, ...Array.from(uniqueCollectionsMap.values())];
+                shuffleArray(combinedList);
                 try {
-                    sessionStorage.setItem('savedItemList', JSON.stringify(allItems));
+                    sessionStorage.setItem('savedItemList', JSON.stringify(combinedList));
                 } catch (e) {
                     console.error("Gagal menyimpan item list Beranda ke sessionStorage.", e);
                 }
             }
 
-            // Fungsi rekursif untuk mendeteksi seluruh item dan koleksi bersarang di dalam JSON
+            // Fungsi rekursif untuk mendeteksi koleksi dan item satuan di dalam JSON
             function extractItemsAndCollections(entries) {
                 if (!Array.isArray(entries)) return;
                 entries.forEach(entry => {
-                    if (entry.koleksi || entry.lnk) {
-                        const itemType = entry.koleksi ? 'collection' : 'direct';
-                        allItems.push({...entry, type: itemType});
-
-                        // Jika item adalah koleksi, simpan mapping key dan title-nya
-                        if (entry.koleksi) {
-                            const colKey = entry.koleksi.toString().toLowerCase();
-                            if (!detectedCollections.has(colKey)) {
-                                detectedCollections.set(colKey, entry.ttl || ('Koleksi ' + entry.koleksi));
-                            }
+                    if (entry.koleksi) {
+                        const colKey = entry.koleksi.toString().toLowerCase();
+                        
+                        // Hanya ambil satu entry pertama sebagai kartu representatif utama di Beranda
+                        if (!uniqueCollectionsMap.has(colKey)) {
+                            const collectionData = {
+                                ...entry,
+                                type: 'collection',
+                                ttl: entry.ttl || ('Koleksi ' + entry.koleksi),
+                                logo: entry.logo || ''
+                            };
+                            uniqueCollectionsMap.set(colKey, collectionData);
+                            detectedCollections.set(colKey, collectionData.ttl);
                         }
+                    } else if (entry.lnk) {
+                        allItems.push({...entry, type: 'direct'});
                     }
-                    // Cek elemen turunan jika ada array di dalam properti objek
+
                     for (let key in entry) {
                         if (Array.isArray(entry[key])) {
                             extractItemsAndCollections(entry[key]);
@@ -575,7 +583,6 @@
                     menuContainer.appendChild(navItem);
                 });
                 
-                // Pasang kembali event listener keyboard untuk elemen navigasi baru
                 setupNavListeners();
             }
 
@@ -586,6 +593,7 @@
                 if (filesProcessedCount === 0) {
                     container.innerHTML = '<h2>Memuat Index Konten...</h2>';
                     allItems = []; 
+                    uniqueCollectionsMap.clear();
                     detectedCollections.clear();
                     
                     fetch(indexJsonUrl)
@@ -669,24 +677,23 @@
                 const savedItems = sessionStorage.getItem('savedItemList');
                 if (savedItems) {
                     try {
-                        allItems = JSON.parse(savedItems); 
-                        // Tetap deteksi koleksi dari item tersimpan untuk menu sidebar
+                        let parsed = JSON.parse(savedItems);
+                        currentItems = parsed;
+                        
                         detectedCollections.clear();
-                        allItems.forEach(item => {
-                            if (item.koleksi) {
-                                const colKey = item.koleksi.toString().toLowerCase();
-                                if (!detectedCollections.has(colKey)) {
-                                    detectedCollections.set(colKey, item.ttl || ('Koleksi ' + item.koleksi));
-                                }
+                        parsed.forEach(item => {
+                            if (item.type === 'collection' && item.koleksi) {
+                                detectedCollections.set(item.koleksi.toString().toLowerCase(), item.ttl);
                             }
                         });
                     } catch (e) {
                         shuffleAndSaveItems();
+                        currentItems = [...allItems, ...Array.from(uniqueCollectionsMap.values())];
                     }
                 } else {
                     shuffleAndSaveItems();
+                    currentItems = [...allItems, ...Array.from(uniqueCollectionsMap.values())];
                 }
-                currentItems = allItems;
                 renderCurrentItems(); 
             }
 
@@ -1027,7 +1034,6 @@
             function setupNavListeners() {
                 const navItems = document.querySelectorAll('.nav-item');
                 navItems.forEach(item => {
-                    // Hindari duplikasi event listener
                     item.replaceWith(item.cloneNode(true));
                 });
                 
@@ -1061,10 +1067,6 @@
             function initNavigation() {
                 loadInitialTheme();
                 setupThemeButtons();
-
-                const lastPage = sessionStorage.getItem('lastActiveMenuPage') || 'beranda';
-                
-                // Jika halaman terakhir bukan beranda atau pengaturan, pastikan data beranda dimuat dulu di background agar menu koleksi terdeteksi
                 loadAndRenderHomeContent();
             }
 
