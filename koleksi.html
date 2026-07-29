@@ -492,7 +492,19 @@
                 item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
             );
             
-            shuffleArray(collectionItems);
+            // Periksa apakah sudah pernah diacak untuk sesi koleksi ini di tab browser (sessionStorage)
+            const shuffleKey = `shuffled_${collectionKey}`;
+            if (!sessionStorage.getItem(shuffleKey)) {
+                shuffleArray(collectionItems);
+                // Simpan urutan yang sudah diacak ke sessionStorage agar tetap konsisten selama sesi ini
+                sessionStorage.setItem(shuffleKey, JSON.stringify(collectionItems.map(item => item.ttl)));
+            } else {
+                // Jika sudah ada riwayat acaknya, susun ulang urutannya agar konsisten dengan sesi sebelumnya
+                let savedOrder = JSON.parse(sessionStorage.getItem(shuffleKey));
+                collectionItems.sort((a, b) => {
+                    return savedOrder.indexOf(a.ttl) - savedOrder.indexOf(b.ttl);
+                });
+            }
 
             container.innerHTML = '';
 
