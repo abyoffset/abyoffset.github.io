@@ -15,7 +15,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Sembunyikan h1/b global yang lama */
         h1 {
             display: none; 
         }
@@ -23,7 +22,6 @@
             display: none;
         }
 
-        /* MODIFIKASI: WARNA TEKS RE DEFAULT */
         .re {
             color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
@@ -60,7 +58,6 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        /* MODIFIKASI: DEFAULT HIGHLIGHT (Beranda) */
         .responsive-div:focus {
             border: 5px solid #fff; 
             border-radius: 13px;
@@ -77,7 +74,6 @@
             border-radius: 13px;
             outline: none;
         }
-        /* END MODIFIKASI DEFAULT HIGHLIGHT */
 
         #imgv {                
             border-radius: 11px;
@@ -114,17 +110,14 @@
             position: relative;
             padding: 8px 8px;
             margin: 15px;
-            /* MODIFIKASI: DEFAULT BORDER CARD */
             border: 5px solid #6c7c13; 
-            /* END MODIFIKASI */
         }
 
-        /* --- LAYOUT DUA KOLOM (SIDEBAR) & GAYA TIVIKU/SEARCH BARU --- */
+        /* --- LAYOUT DUA KOLOM & SIDEBAR ANIMASI COLLAPSE --- */
         #app-wrapper {
             display: flex;
             height: 100vh;
             background-color: black;
-            /* MODIFIKASI: Theme Class */
             transition: background-color 0.3s;
         }
 
@@ -135,22 +128,27 @@
             flex-shrink: 0;
             border-right: 2px solid #282828;
             text-align: left;
-            /* MODIFIKASI: Theme Class */
-            transition: background-color 0.3s;
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        /* Kelas saat sidebar menyusut (collapse) */
+        #app-wrapper.sidebar-collapsed #sidebar {
+            width: 80px;
         }
 
         #logo-search {
             padding: 0 20px 20px;
         }
 
-        /* MODIFIKASI: DEFAULT WARNA HIJAU */
         #sidebar-h1 { 
             color: yellowgreen; 
             font-size: 32px;
             margin: 0;
             font-family: inherit;
             font-weight: 700;
-            transition: color 0.3s;
+            transition: opacity 0.2s ease, transform 0.3s ease;
         }
 
         #sidebar-b { 
@@ -159,7 +157,7 @@
             margin-top: 0px;
             font-size: 30px; 
             font-weight: bold; 
-            transition: color 0.3s;
+            transition: opacity 0.2s ease;
         }
 
         #sidebar #cari {
@@ -176,7 +174,18 @@
             margin-top: 15px; 
             position: relative; 
             transform: none;
-            transition: background-color 0.3s;
+            transition: opacity 0.2s ease, background-color 0.3s;
+        }
+
+        /* Sembunyikan teks & input search sebagian/total saat collapsed tapi tetap rapi untuk ikon */
+        #app-wrapper.sidebar-collapsed #logo-search {
+            padding: 0 15px 15px;
+        }
+        #app-wrapper.sidebar-collapsed #sidebar-h1,
+        #app-wrapper.sidebar-collapsed #sidebar-b,
+        #app-wrapper.sidebar-collapsed #cari {
+            opacity: 0;
+            pointer-events: none;
         }
 
         #nav-menu {
@@ -188,7 +197,26 @@
             font-size: 18px;
             color: #aaa;
             cursor: pointer;
-            transition: background-color 0.2s, color 0.2s;
+            transition: background-color 0.2s, color 0.2s, padding 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Styling teks menu agar bisa bergeser halus saat collapse */
+        .nav-text {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        #app-wrapper.sidebar-collapsed .nav-item {
+            padding: 15px 25px; /* Sesuaikan posisi ikon agar di tengah saat sidebar kecil */
+        }
+
+        #app-wrapper.sidebar-collapsed .nav-text {
+            opacity: 0;
+            transform: translateX(-20px);
+            pointer-events: none;
         }
 
         .nav-item:focus,
@@ -238,7 +266,7 @@
             font-family: Arial, sans-serif;
         }
 
-        /* --- MODIFIKASI: GAYA PENGATURAN TEMA --- */
+        /* --- GAYA PENGATURAN TEMA --- */
         #pengaturan-menu {
             height: calc(100vh - 100px); 
             display: flex;
@@ -358,9 +386,9 @@
             </div>
             
             <div id="nav-menu">
-                <div class="nav-item focus-target" tabindex="0" data-page="beranda">🏠 Beranda</div>
-                <div class="nav-item focus-target" tabindex="0" data-page="koleksi">📁 Koleksi</div>
-                <div class="nav-item focus-target" tabindex="0" data-page="pengaturan">🛠️ Pengaturan</div>
+                <div class="nav-item focus-target" tabindex="0" data-page="beranda">🏠 <span class="nav-text">Beranda</span></div>
+                <div class="nav-item focus-target" tabindex="0" data-page="koleksi">📁 <span class="nav-text">Koleksi</span></div>
+                <div class="nav-item focus-target" tabindex="0" data-page="pengaturan">🛠️ <span class="nav-text">Pengaturan</span></div>
             </div>
         </div>
 
@@ -408,6 +436,7 @@
             let filesProcessedCount = 0; 
             const container = document.getElementById('container');
             const pengaturanMenu = document.getElementById('pengaturan-menu'); 
+            const appWrapper = document.getElementById('app-wrapper');
 
             let allItems = []; 
             let currentItems = []; 
@@ -430,9 +459,7 @@
             }
 
             function applyTheme(themeName) {
-                const appWrapper = document.getElementById('app-wrapper');
                 const body = document.body;
-                
                 body.classList.remove('theme-blue-dark', 'theme-red-dark');
                 appWrapper.classList.remove('theme-blue-dark', 'theme-red-dark'); 
 
@@ -638,7 +665,7 @@
 
                         collectionMap.set(koleksiKey, {
                             logo: randomSelectedItem.logo, 
-                            ttl: koleksiKey, // Mengambil langsung nama koleksi/variabel JSON tanpa awalan teks tambahan
+                            ttl: koleksiKey, 
                             koleksi: koleksiKey,
                             dur: 'Koleksi (klik)',
                             type: 'collection'
@@ -671,6 +698,15 @@
                 const firstThemeButton = document.querySelector('.theme-button');
                 if (firstThemeButton) {
                     firstThemeButton.focus();
+                }
+            }
+
+            // Fungsi pengatur status sidebar collapse atau expanded
+            function updateSidebarState(isCollapsed) {
+                if (isCollapsed) {
+                    appWrapper.classList.add('sidebar-collapsed');
+                } else {
+                    appWrapper.classList.remove('sidebar-collapsed');
                 }
             }
 
@@ -734,6 +770,7 @@
                          targetElement.scrollIntoView({ behavior: 'instant', block: 'center' });
                     }
                     focusRestoredToCard = true; 
+                    updateSidebarState(true); // Sidebar mengecil karena fokus ada di kartu
                 } 
                 
                 if (!focusRestoredToCard && (activePage === 'beranda' || activePage === 'koleksi')) { 
@@ -745,6 +782,7 @@
                              firstVisible.classList.add('highlight');
                              firstVisible.focus();
                              focusRestoredToCard = true;
+                             updateSidebarState(true); // Sidebar mengecil
                         }
                     }
                 }
@@ -755,6 +793,7 @@
                     if (firstThemeButton) {
                          firstThemeButton.focus();
                          focusRestoredToCard = true;
+                         updateSidebarState(false); // Sidebar melebar di menu pengaturan
                     }
                 }
                 
@@ -762,9 +801,11 @@
                     const activeNav = document.querySelector(`.nav-item[data-page="${activePage}"]`);
                     if (activeNav) {
                         activeNav.focus();
+                        updateSidebarState(false); // Sidebar melebar karena fokus di menu
                     } else {
                          const searchInput = document.getElementById('cari');
                          if (searchInput) searchInput.focus();
+                         updateSidebarState(false); // Sidebar melebar karena fokus di pencarian
                     }
                 }
             }
@@ -792,7 +833,6 @@
                 sessionStorage.setItem('currentCollectionKey', collectionKey);
                 sessionStorage.setItem('currentCollectionTitle', collectionTitle);
                 sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
-                
                 window.location.href = 'koleksi.html';
             }
 
@@ -921,6 +961,7 @@
                                 firstDiv.classList.add('highlight');
                                 firstDiv.focus();
                                 firstDiv.scrollIntoView({ behavior: 'instant', block: 'center' }); 
+                                updateSidebarState(true); // Pindah ke kartu -> sidebar mengecil
                             }
                         } else if (e.key === 'Enter') {
                             const page = focusedElement.getAttribute('data-page');
@@ -960,6 +1001,7 @@
                             if (firstDiv) {
                                 firstDiv.classList.add('highlight');
                                 firstDiv.focus();
+                                updateSidebarState(true); // Pindah ke kartu dari search -> sidebar mengecil
                             }
                         }
                         return; 
@@ -986,6 +1028,7 @@
                             nextIndex = currentIndex - actualItemsPerRow;
                             if (nextIndex < 0) {
                                 searchInput.focus(); 
+                                updateSidebarState(false); // Kembali ke search bar -> sidebar melebar
                                 return;
                             }
                             break;
@@ -1002,6 +1045,7 @@
                                 } else {
                                     searchInput.focus(); 
                                 }
+                                updateSidebarState(false); // Mentok kiri kembali ke sidebar -> sidebar melebar halus
                                 return;
                             }
                             break;
@@ -1017,6 +1061,7 @@
                         sessionStorage.setItem('lastFocusedCardTitle', focusedTitle); 
                         divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
                         saveScrollPosition();
+                        updateSidebarState(true); // Pastikan sidebar tetap kecil saat navigasi antar kartu
                     }
                 } else if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
                     const activePage = sessionStorage.getItem('lastActiveMenuPage');
