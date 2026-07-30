@@ -194,6 +194,20 @@
             padding: 0 20px; 
         }
 
+        /* JAM DIGITAL */
+        #digital-clock {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.7);
+            z-index: 50;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
         /* PENGATURAN MENU */
         #pengaturan-menu {
             height: calc(100vh - 100px); 
@@ -307,11 +321,13 @@
             
             <div id="nav-menu">
                 <div class="nav-item focus-target" tabindex="0" data-page="beranda">🏠 Beranda</div>
+                <div class="nav-item focus-target" tabindex="0" data-page="koleksi">📁 Koleksi</div>
                 <div class="nav-item focus-target" tabindex="0" data-page="pengaturan">🛠️ Pengaturan</div>
             </div>
         </div>
 
         <div id="main-content">
+            <div id="digital-clock"></div>
             <div id="atas"></div> 
             <div id="container"></div>
 
@@ -328,6 +344,7 @@
     </div>
 
     <script>
+        const APP_VERSION = 'v1.2.0';
         const indexJsonUrl = 'index.json';
         const container = document.getElementById('container');
         const headerTitle = document.getElementById('atas');
@@ -374,6 +391,19 @@
             });
         }
         setupThemeButtons();
+
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}`;
+            const clockElement = document.getElementById('digital-clock');
+            if (clockElement) {
+                clockElement.innerText = timeString;
+            }
+        }
+        updateClock(); 
+        setInterval(updateClock, 1000);
 
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
@@ -456,7 +486,7 @@
                                 function extractItems(entries) {
                                     if (!Array.isArray(entries)) return;
                                     entries.forEach(entry => {
-                                        if (entry.lnk) {
+                                        if (entry.koleksi || entry.lnk) {
                                             allItems.push(entry);
                                         }
                                         for (let key in entry) {
@@ -492,18 +522,15 @@
                 item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
             );
             
-            // Cek apakah koleksi ini memiliki properti episode
             const hasEpisode = collectionItems.some(item => item.episode !== undefined);
 
             if (hasEpisode) {
-                // Urutkan dari episode terkecil (1, 2, 3, dst.)
                 collectionItems.sort((a, b) => {
                     let epA = parseInt(a.episode) || 0;
                     let epB = parseInt(b.episode) || 0;
                     return epA - epB;
                 });
             } else {
-                // Jika bukan episode (misal film biasa), gunakan sistem acak seperti sebelumnya
                 const shuffleKey = `shuffled_${collectionKey}`;
                 if (!sessionStorage.getItem(shuffleKey)) {
                     shuffleArray(collectionItems);
@@ -585,7 +612,7 @@
             
             const versionInfo = document.getElementById('app-version-info');
             if (versionInfo) {
-                versionInfo.innerHTML = `Versi Aplikasi: 2.0 <b>v1.2.0</b>`;
+                versionInfo.innerHTML = `Versi Aplikasi: 2.0 <b>${APP_VERSION}</b>`;
             }
             
             const firstThemeButton = document.querySelector('.theme-button');
@@ -670,6 +697,8 @@
                             sessionStorage.removeItem('comingFromPlayer');
                             sessionStorage.removeItem('lastFocusedTitle');
                             history.back();
+                        } else if (page === 'koleksi') {
+                            history.back();
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
                         }
@@ -752,6 +781,8 @@
                     sessionStorage.removeItem('currentCollectionTitle');
                     sessionStorage.removeItem('comingFromPlayer');
                     sessionStorage.removeItem('lastFocusedTitle');
+                    history.back();
+                } else if (page === 'koleksi') {
                     history.back();
                 } else if (page === 'pengaturan') {
                     showPengaturanMenu();
