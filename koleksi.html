@@ -413,10 +413,6 @@
             pp.className = 're';
             pp.innerText = item.ttl;
 
-            const dur = document.createElement('p');
-            dur.className = 'dur';
-            dur.innerText = isCollection ? 'Koleksi (klik)' : (item.dur || '');
-
             const dv = document.createElement('div');
             dv.className = 'responsive-div';
             dv.tabIndex = 0; 
@@ -424,7 +420,14 @@
 
             dv.appendChild(img);
             dv.appendChild(pp);
-            dv.appendChild(dur);
+
+            if (!isCollection && item.dur) {
+                const dur = document.createElement('p');
+                dur.className = 'dur';
+                dur.innerText = item.dur;
+                dv.appendChild(dur);
+            }
+
             container.appendChild(dv);
             
             imageObserver.observe(dv);
@@ -492,18 +495,15 @@
                 item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
             );
             
-            // Cek apakah koleksi ini memiliki properti episode
             const hasEpisode = collectionItems.some(item => item.episode !== undefined);
 
             if (hasEpisode) {
-                // Urutkan dari episode terkecil (1, 2, 3, dst.)
                 collectionItems.sort((a, b) => {
                     let epA = parseInt(a.episode) || 0;
                     let epB = parseInt(b.episode) || 0;
                     return epA - epB;
                 });
             } else {
-                // Jika bukan episode (misal film biasa), gunakan sistem acak seperti sebelumnya
                 const shuffleKey = `shuffled_${collectionKey}`;
                 if (!sessionStorage.getItem(shuffleKey)) {
                     shuffleArray(collectionItems);
