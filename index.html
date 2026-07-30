@@ -557,7 +557,6 @@
                                     .then(response => response.json())
                                     .then(data => {
                                         data.forEach(item => {
-                                            // Di beranda, semua item dimuat apa adanya (properti koleksi diabaikan)
                                             allItems.push({...item, type: 'direct'}); 
                                         });
                                         filesProcessedCount++;
@@ -588,18 +587,8 @@
                 pengaturanMenu.style.display = 'none'; 
                 
                 fetchDataAndInit(() => {
-                    const savedItems = sessionStorage.getItem('savedItemList');
-                    if (savedItems && allItems.length === 0) {
-                        try {
-                            allItems = JSON.parse(savedItems); 
-                        } catch (e) {
-                            shuffleAndSaveItems();
-                        }
-                    } else if (!savedItems) {
-                        shuffleAndSaveItems();
-                    }
-                    
-                    // Di Beranda, tampilkan semua item apa adanya
+                    // Selalu acak ulang setiap kali halaman beranda dibuka/dimuat ulang
+                    shuffleAndSaveItems();
                     currentItems = allItems;
                     renderCurrentItems();
                 });
@@ -610,21 +599,51 @@
                 pengaturanMenu.style.display = 'none'; 
                 
                 fetchDataAndInit(() => {
-                    // Cari semua koleksi unik berdasarkan nilai .koleksi khusus di menu koleksi
-                    const collectionMap = new Map();
+                    const savedCollection = sessionStorage.getItem('savedCollectionList');
+                    
+                    if (savedCollection) {
+                        try {
+                            currentItems = JSON.parse(savedCollection);
+                            renderCurrentItems();
+                            return;
+                        } catch (e) {
+                            console.error("Gagal memparsing savedCollection dari sessionStorage.", e);
+                        }
+                    }
+                    
+                    const collectionGroups = {};
                     allItems.forEach(item => {
-                        if (item.koleksi && !collectionMap.has(item.koleksi)) {
-                            collectionMap.set(item.koleksi, {
-                                logo: item.logo,
-                                ttl: 'Koleksi ' + item.koleksi.toUpperCase(),
-                                koleksi: item.koleksi,
-                                dur: 'Koleksi (klik)',
-                                type: 'collection'
-                            });
+                        if (item.koleksi) {
+                            if (!collectionGroups[item.koleksi]) {
+                                collectionGroups[item.koleksi] = [];
+                            }
+                            collectionGroups[item.koleksi].push(item);
                         }
                     });
                     
+                    const collectionMap = new Map();
+                    Object.keys(collectionGroups).forEach(koleksiKey => {
+                        const itemsInGroup = collectionGroups[koleksiKey];
+                        const randomIndex = Math.floor(Math.random() * itemsInGroup.length);
+                        const randomSelectedItem = itemsInGroup[randomIndex];
+
+                        collectionMap.set(koleksiKey, {
+                            logo: randomSelectedItem.logo, 
+                            ttl: 'Koleksi ' + koleksiKey.toUpperCase(),
+                            koleksi: koleksiKey,
+                            dur: 'Koleksi (klik)',
+                            type: 'collection'
+                        });
+                    });
+                    
                     currentItems = Array.from(collectionMap.values());
+                    
+                    try {
+                        sessionStorage.setItem('savedCollectionList', JSON.stringify(currentItems));
+                    } catch (e) {
+                        console.error("Gagal menyimpan collection list ke sessionStorage.", e);
+                    }
+
                     renderCurrentItems();
                 });
             }
