@@ -413,6 +413,10 @@
             pp.className = 're';
             pp.innerText = item.ttl;
 
+            const dur = document.createElement('p');
+            dur.className = 'dur';
+            dur.innerText = isCollection ? '' : (item.dur || '');
+
             const dv = document.createElement('div');
             dv.className = 'responsive-div';
             dv.tabIndex = 0; 
@@ -420,14 +424,7 @@
 
             dv.appendChild(img);
             dv.appendChild(pp);
-
-            if (!isCollection && item.dur) {
-                const dur = document.createElement('p');
-                dur.className = 'dur';
-                dur.innerText = item.dur;
-                dv.appendChild(dur);
-            }
-
+            dv.appendChild(dur);
             container.appendChild(dv);
             
             imageObserver.observe(dv);
