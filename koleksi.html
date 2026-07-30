@@ -537,7 +537,6 @@
                         sessionStorage.setItem('comingFromPlayer', 'true');
                         sessionStorage.setItem('lastFocusedTitle', item.ttl);
 
-                        // Simpan otomatis ke Riwayat
                         try {
                             let history = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
                             history = history.filter(i => i.ttl !== item.ttl);
@@ -797,7 +796,7 @@
                             sessionStorage.removeItem('currentCollectionTitle');
                             sessionStorage.removeItem('comingFromPlayer');
                             sessionStorage.removeItem('lastFocusedTitle');
-                            window.location.href = 'index.html'; // atau sesuaikan jika halaman utama daftar koleksi terpisah
+                            window.location.href = 'index.html';
                         } else if (page === 'riwayat') {
                             loadAndRenderRiwayatContent();
                         } else if (page === 'favorit') {
