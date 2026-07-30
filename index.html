@@ -468,44 +468,49 @@
             }
 
             function fetchDataAndInit(callback) {
-                if (filesProcessedCount === 0) {
-                    container.innerHTML = '<h2>Memuat Index Konten...</h2>';
-                    allItems = []; 
-                    
-                    fetch(indexJsonUrl)
-                        .then(response => response.json())
-                        .then(indexData => {
-                            directFiles = indexData.source_list || [];
-                            totalFiles = directFiles.length;
-                            
-                            if (directFiles.length === 0) {
-                                filesProcessedCount++;
-                                if(callback) callback();
-                                return;
-                            }
-
-                            directFiles.forEach(fileUrl => {
-                                fetch(fileUrl)
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        data.forEach(item => {
-                                            allItems.push({...item, type: 'direct'}); 
-                                        });
-                                        filesProcessedCount++;
-                                        if (filesProcessedCount >= totalFiles) if(callback) callback();
-                                    })
-                                    .catch(error => {
-                                        filesProcessedCount++;
-                                        if (filesProcessedCount >= totalFiles) if(callback) callback();
-                                    });
-                            });
-                        })
-                        .catch(error => {
-                            container.innerHTML = '<h2>❌ Gagal memuat index.json</h2>';
-                        });
-                } else {
-                    if(callback) callback();
+                if (allItems.length > 0) {
+                    if (callback) callback();
+                    return;
                 }
+
+                container.innerHTML = '<h2>Memuat Index Konten...</h2>';
+                allItems = []; 
+                filesProcessedCount = 0;
+                
+                fetch(indexJsonUrl)
+                    .then(response => response.json())
+                    .then(indexData => {
+                        directFiles = indexData.source_list || [];
+                        totalFiles = directFiles.length;
+                        
+                        if (totalFiles === 0) {
+                            if (callback) callback();
+                            return;
+                        }
+
+                        directFiles.forEach(fileUrl => {
+                            fetch(fileUrl)
+                                .then(response => response.json())
+                                .then(data => {
+                                    data.forEach(item => {
+                                        allItems.push({...item, type: 'direct'}); 
+                                    });
+                                    filesProcessedCount++;
+                                    if (filesProcessedCount >= totalFiles) {
+                                        if (callback) callback();
+                                    }
+                                })
+                                .catch(error => {
+                                    filesProcessedCount++;
+                                    if (filesProcessedCount >= totalFiles) {
+                                        if (callback) callback();
+                                    }
+                                });
+                        });
+                    })
+                    .catch(error => {
+                        container.innerHTML = '<h2>❌ Gagal memuat index.json</h2>';
+                    });
             }
 
             function loadAndRenderHomeContent() {
@@ -625,7 +630,6 @@
                         action = () => {
                             sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
                             
-                            // Save to History automatically
                             try {
                                 let history = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
                                 history = history.filter(i => i.ttl !== item.ttl);
