@@ -492,15 +492,28 @@
                 item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
             );
             
-            const shuffleKey = `shuffled_${collectionKey}`;
-            if (!sessionStorage.getItem(shuffleKey)) {
-                shuffleArray(collectionItems);
-                sessionStorage.setItem(shuffleKey, JSON.stringify(collectionItems.map(item => item.ttl)));
-            } else {
-                let savedOrder = JSON.parse(sessionStorage.getItem(shuffleKey));
+            // Cek apakah koleksi ini memiliki properti episode
+            const hasEpisode = collectionItems.some(item => item.episode !== undefined);
+
+            if (hasEpisode) {
+                // Urutkan dari episode terkecil (1, 2, 3, dst.)
                 collectionItems.sort((a, b) => {
-                    return savedOrder.indexOf(a.ttl) - savedOrder.indexOf(b.ttl);
+                    let epA = parseInt(a.episode) || 0;
+                    let epB = parseInt(b.episode) || 0;
+                    return epA - epB;
                 });
+            } else {
+                // Jika bukan episode (misal film biasa), gunakan sistem acak seperti sebelumnya
+                const shuffleKey = `shuffled_${collectionKey}`;
+                if (!sessionStorage.getItem(shuffleKey)) {
+                    shuffleArray(collectionItems);
+                    sessionStorage.setItem(shuffleKey, JSON.stringify(collectionItems.map(item => item.ttl)));
+                } else {
+                    let savedOrder = JSON.parse(sessionStorage.getItem(shuffleKey));
+                    collectionItems.sort((a, b) => {
+                        return savedOrder.indexOf(a.ttl) - savedOrder.indexOf(b.ttl);
+                    });
+                }
             }
 
             container.innerHTML = '';
