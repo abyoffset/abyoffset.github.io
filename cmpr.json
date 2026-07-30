@@ -1,85 +1,9 @@
 [
 {
-"logo": "https://i.imgur.com/8lFb0tV.png",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq5@755ce1e/1/master.m3u8",
-"ttl": "Doraemon tikus dan bom dubbing",
-"koleksi": "doraemon",
-"dur": "06:30",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/mLQJz3U.png",
-"lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq@267c923/1/master.m3u8",
-"ttl": "Doraemon alat konsentrasi dubbing",
-"koleksi": "doraemon",
-"dur": "11:06",
-"crop_mode": "stretch_crop",
-"crop_scale": "2.40",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/u1MODI0.png",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe1@17b3e9c/1/master.m3u8",
-"ttl": "Doraemon berenang di pantai dubbing",
-"koleksi": "doraemon",
-"dur": "06:39",
-"crop_mode": "stretch_crop",
-"crop_scale": "2.40",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/fp1hGrj.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe@ae4c4bd/1/master.m3u8",
-"ttl": "Doraemon eps 365 dubbing",
-"koleksi": "doraemon",
-"dur": "25:03",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/VAB8YHs.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe@ae4c4bd/2/master.m3u8",
-"ttl": "Doraemon eps 366 dubbing",
-"koleksi": "doraemon",
-"dur": "25:09",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/9DL0BPO.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/nwe@570d5da/2/master.m3u8",
-"ttl": "Doraemon eps 367 dubbing",
-"koleksi": "doraemon",
-"dur": "25:08",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/IKmjinU.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe@79c3bc8/1/master.m3u8",
-"ttl": "Doraemon eps 368 dubbing",
-"koleksi": "doraemon",
-"dur": "25:03",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/1CXr2AG.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/nwe@5dc9743/2/master.m3u8",
-"ttl": "Doraemon eps 369 dubbing",
-"koleksi": "doraemon",
-"dur": "25:09",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/hXiAy2U.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/nwe@ffcc1b0/5/master.m3u8",
-"ttl": "Doraemon eps 370 dubbing",
-"koleksi": "doraemon",
-"dur": "25:08",
-"tiviku": "apk"
-},
-{
 "logo": "https://i.imgur.com/TH4z4yg.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@5a52c61/1/master.m3u8",
+"lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq9@cd8e13d/1/master.m3u8",
 "ttl": "Oo Nina Bobo (2014)",
-"dur": "1:38:58",
+"dur": "1:28:21",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -126,6 +50,8 @@
 "ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 2 (2017)",
 "koleksi": "warkop",
 "dur": "1:31:05",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
@@ -143,6 +69,8 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@6e3c374/1/master.m3u8",
 "ttl": "Up (2009) dubbing",
 "dur": "1:31:33",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
@@ -150,6 +78,8 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@84afe08/1/master.m3u8",
 "ttl": "George of the Jungle (1997) dubbing",
 "dur": "1:31:44",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
@@ -157,6 +87,8 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@0adec8a/1/master.m3u8",
 "ttl": "Pokémon Detective Pikachu (2019) dubbing",
 "dur": "1:44:23",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
@@ -173,6 +105,8 @@
 "lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq4@d4750f1/1/master.m3u8",
 "ttl": "Digimon Adventure: Filme 2 - Bokura no War Game (2000) dubbing",
 "dur": "40:44",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
@@ -180,6 +114,8 @@
 "lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq4@c92dc47/1/master.m3u8",
 "ttl": "Lost Ollie (2022) dubbing",
 "dur": "2:44:16",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
@@ -187,6 +123,8 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq4@f42c3ee/1/master.m3u8",
 "ttl": "Doraemon: Nobita and the Legend of the Sun King (2000)",
 "dur": "1:31:24",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
@@ -521,6 +459,7 @@
 "logo": "https://i.imgur.com/TvIoBZ4.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/itu%20bisa%20di%20atur/wrkp.m3u8",
 "ttl": "Itu Bisa Diatur (1984) warkop",
+"koleksi": "warkop",
 "dur": "1:25:33",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.20",
@@ -558,6 +497,7 @@
 "logo": "https://i.imgur.com/BsTyONV.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/nwe@f8138b0/2/master.m3u8",
 "ttl": "Atas Boleh Bawah Boleh (1986) warkop",
+"koleksi": "warkop",
 "dur": "1:27:31",
 "tiviku": "apk"
 },
@@ -565,6 +505,7 @@
 "logo": "https://i.imgur.com/v88GqeB.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/nwe1@6f1e8df/1/master.m3u8",
 "ttl": "Bisa Naik Bisa Turun (1992) warkop",
+"koleksi": "warkop",
 "dur": "1:22:13",
 "tiviku": "apk"
 },

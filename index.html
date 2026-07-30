@@ -526,8 +526,24 @@
                 return dv; 
             }
 
-            function shuffleAndSaveItems() {
-                shuffleArray(allItems);
+            function processAndSortItems() {
+                // Pisahkan item yang memiliki properti 'episode' dan yang tidak
+                let episodicItems = allItems.filter(item => item.episode !== undefined && item.episode !== null && item.episode !== '');
+                let normalItems = allItems.filter(item => item.episode === undefined || item.episode === null || item.episode === '');
+
+                // Urutkan item ber-episode berdasarkan nomor episode (dari kecil ke besar / angka 1 di atas)
+                episodicItems.sort((a, b) => {
+                    let epA = parseInt(a.episode, 10);
+                    let epB = parseInt(b.episode, 10);
+                    return (isNaN(epA) ? 0 : epA) - (isNaN(epB) ? 0 : epB);
+                });
+
+                // Acak hanya item yang tidak memiliki episode
+                shuffleArray(normalItems);
+
+                // Gabungkan kembali: item ber-episode di urutan teratas (urut dari kecil), diikuti item normal yang diacak
+                allItems = [...episodicItems, ...normalItems];
+
                 try {
                     sessionStorage.setItem('savedItemList', JSON.stringify(allItems));
                 } catch (e) {
@@ -593,10 +609,10 @@
                             allItems = JSON.parse(savedItemList);
                         } catch (e) {
                             console.error("Gagal memparsing savedItemList dari sessionStorage.", e);
-                            shuffleAndSaveItems();
+                            processAndSortItems();
                         }
                     } else {
-                        shuffleAndSaveItems();
+                        processAndSortItems();
                     }
                     currentItems = allItems;
                     renderCurrentItems();
