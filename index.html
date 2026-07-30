@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Tiviku - Smart TV</title>
     <style>
-        /* --- GAYA ASLI FILM CARD & UTAMA (Reverted) --- */
         body {
             background-color: black;
             text-align: center;
@@ -15,12 +14,8 @@
             font-family: Arial, sans-serif;
         }
 
-        h1 {
-            display: none; 
-        }
-        b {
-            display: none;
-        }
+        h1 { display: none; }
+        b { display: none; }
 
         .re {
             color: rgba(255, 255, 255, 0.8);
@@ -113,7 +108,6 @@
             border: 5px solid #6c7c13; 
         }
 
-        /* --- LAYOUT DUA KOLOM & SIDEBAR ANIMASI COLLAPSE --- */
         #app-wrapper {
             display: flex;
             height: 100vh;
@@ -128,14 +122,7 @@
             flex-shrink: 0;
             border-right: 2px solid #282828;
             text-align: left;
-            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        /* Kelas saat sidebar menyusut (collapse) */
-        #app-wrapper.sidebar-collapsed #sidebar {
-            width: 80px;
+            transition: background-color 0.3s;
         }
 
         #logo-search {
@@ -148,7 +135,7 @@
             margin: 0;
             font-family: inherit;
             font-weight: 700;
-            transition: opacity 0.2s ease, transform 0.3s ease;
+            transition: color 0.3s;
         }
 
         #sidebar-b { 
@@ -157,7 +144,7 @@
             margin-top: 0px;
             font-size: 30px; 
             font-weight: bold; 
-            transition: opacity 0.2s ease;
+            transition: color 0.3s;
         }
 
         #sidebar #cari {
@@ -174,49 +161,21 @@
             margin-top: 15px; 
             position: relative; 
             transform: none;
-            transition: opacity 0.2s ease, background-color 0.3s;
-        }
-
-        /* Sembunyikan teks & input search sebagian/total saat collapsed tapi tetap rapi untuk ikon */
-        #app-wrapper.sidebar-collapsed #logo-search {
-            padding: 0 15px 15px;
-        }
-        #app-wrapper.sidebar-collapsed #sidebar-h1,
-        #app-wrapper.sidebar-collapsed #sidebar-b,
-        #app-wrapper.sidebar-collapsed #cari {
-            opacity: 0;
-            pointer-events: none;
+            transition: background-color 0.3s;
         }
 
         #nav-menu {
-            margin-top: 30px;
+            margin-top: 20px;
+            max-height: calc(100vh - 180px);
+            overflow-y: auto;
         }
 
         .nav-item {
-            padding: 15px 20px;
-            font-size: 18px;
+            padding: 12px 20px;
+            font-size: 16px;
             color: #aaa;
             cursor: pointer;
-            transition: background-color 0.2s, color 0.2s, padding 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        /* Styling teks menu agar bisa bergeser halus saat collapse */
-        .nav-text {
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            display: inline-block;
-        }
-
-        #app-wrapper.sidebar-collapsed .nav-item {
-            padding: 15px 25px; /* Sesuaikan posisi ikon agar di tengah saat sidebar kecil */
-        }
-
-        #app-wrapper.sidebar-collapsed .nav-text {
-            opacity: 0;
-            transform: translateX(-20px);
-            pointer-events: none;
+            transition: background-color 0.2s, color 0.2s;
         }
 
         .nav-item:focus,
@@ -233,7 +192,6 @@
             padding: 0 20px; 
         }
 
-        /* --- GAYA BARU: JAM DIGITAL --- */
         #digital-clock {
             position: absolute;
             top: 25px;
@@ -247,7 +205,6 @@
             border-radius: 5px;
         }
 
-        /* --- Pemberitahuan Offline --- */
         #offline-message {
             position: fixed;
             top: 50%;
@@ -266,7 +223,6 @@
             font-family: Arial, sans-serif;
         }
 
-        /* --- GAYA PENGATURAN TEMA --- */
         #pengaturan-menu {
             height: calc(100vh - 100px); 
             display: flex;
@@ -274,18 +230,21 @@
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 20px;
+            font-size: 18px;
+            overflow-y: auto;
         }
 
         #theme-options {
             display: flex;
-            gap: 30px;
-            margin-top: 40px;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .theme-button {
-            padding: 15px 30px;
-            font-size: 18px;
+        .theme-button, .setting-action-btn {
+            padding: 12px 24px;
+            font-size: 16px;
             border: 3px solid transparent;
             border-radius: 10px;
             cursor: pointer;
@@ -296,84 +255,36 @@
         }
 
         .theme-button:focus,
-        .theme-button:hover {
+        .theme-button:hover,
+        .setting-action-btn:focus,
+        .setting-action-btn:hover {
             outline: none;
             transform: scale(1.05);
+            border-color: white !important;
         }
 
-        .theme-button[data-theme="default"] {
-            background-color: #2c2c2c;
-            border-color: yellowgreen;
-        }
-        .theme-button[data-theme="default"]:focus {
-            border-color: white;
-            box-shadow: 0 0 15px yellowgreen;
-        }
-
-        .theme-button[data-theme="blue-dark"] {
-            background-color: #0d1a2c;
-            border-color: #4a90e2;
-        }
-        .theme-button[data-theme="blue-dark"]:focus {
-            border-color: white;
-            box-shadow: 0 0 15px #4a90e2;
+        .theme-button[data-theme="default"] { background-color: #2c2c2c; border-color: yellowgreen; }
+        .theme-button[data-theme="blue-dark"] { background-color: #0d1a2c; border-color: #4a90e2; }
+        .theme-button[data-theme="red-dark"] { background-color: #3d0a0a; border-color: #ff4d4d; }
+        
+        .setting-action-btn {
+            background-color: #444;
+            border-color: #777;
         }
 
-        .theme-button[data-theme="red-dark"] {
-            background-color: #3d0a0a;
-            border-color: #ff4d4d;
-        }
-        .theme-button[data-theme="red-dark"]:focus {
-            border-color: white;
-            box-shadow: 0 0 15px #ff4d4d;
-        }
+        .theme-blue-dark { background-color: #121c29 !important; }
+        .theme-blue-dark #sidebar { background-color: #0b141d !important; border-right-color: #1e2a39 !important; }
+        .theme-blue-dark #sidebar-h1, .theme-blue-dark #sidebar-b { color: yellowgreen; }
+        .theme-blue-dark #sidebar #cari { background: #1e2a39 !important; }
+        .theme-blue-dark .responsive-div { border: 5px solid #4a90e2 !important; }
+        .theme-blue-dark .responsive-div:focus, .theme-blue-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #4a90e2; }
 
-        /* GAYA TEMA (APPLIED CLASSES) */
-        .theme-blue-dark {
-            background-color: #121c29 !important;
-        }
-        .theme-blue-dark #sidebar {
-            background-color: #0b141d !important;
-            border-right-color: #1e2a39 !important;
-        }
-        .theme-blue-dark #sidebar-h1,
-        .theme-blue-dark #sidebar-b {
-            color: yellowgreen;
-        }
-        .theme-blue-dark #sidebar #cari {
-            background: #1e2a39 !important;
-        }
-        .theme-blue-dark .responsive-div {
-            border: 5px solid #4a90e2 !important;
-        }
-        .theme-blue-dark .responsive-div:focus,
-        .theme-blue-dark .highlight {
-            border: 5px solid white !important; 
-            box-shadow: 0 0 15px #4a90e2;
-        }
-
-        .theme-red-dark {
-            background-color: #1f0505 !important;
-        }
-        .theme-red-dark #sidebar {
-            background-color: #150000 !important;
-            border-right-color: #330000 !important;
-        }
-        .theme-red-dark #sidebar-h1,
-        .theme-red-dark #sidebar-b {
-            color: yellowgreen;
-        }
-        .theme-red-dark #sidebar #cari {
-            background: #330000 !important;
-        }
-        .theme-red-dark .responsive-div {
-            border: 5px solid #ff4d4d !important;
-        }
-        .theme-red-dark .responsive-div:focus,
-        .theme-red-dark .highlight {
-            border: 5px solid white !important;
-            box-shadow: 0 0 15px #ff4d4d;
-        }
+        .theme-red-dark { background-color: #1f0505 !important; }
+        .theme-red-dark #sidebar { background-color: #150000 !important; border-right-color: #330000 !important; }
+        .theme-red-dark #sidebar-h1, .theme-red-dark #sidebar-b { color: yellowgreen; }
+        .theme-red-dark #sidebar #cari { background: #330000 !important; }
+        .theme-red-dark .responsive-div { border: 5px solid #ff4d4d !important; }
+        .theme-red-dark .responsive-div:focus, .theme-red-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #ff4d4d; }
     </style>
 </head>
 <body>
@@ -386,9 +297,11 @@
             </div>
             
             <div id="nav-menu">
-                <div class="nav-item focus-target" tabindex="0" data-page="beranda">🏠 <span class="nav-text">Beranda</span></div>
-                <div class="nav-item focus-target" tabindex="0" data-page="koleksi">📁 <span class="nav-text">Koleksi</span></div>
-                <div class="nav-item focus-target" tabindex="0" data-page="pengaturan">🛠️ <span class="nav-text">Pengaturan</span></div>
+                <div class="nav-item focus-target" tabindex="0" data-page="beranda">🏠 Beranda</div>
+                <div class="nav-item focus-target" tabindex="0" data-page="koleksi">📁 Koleksi</div>
+                <div class="nav-item focus-target" tabindex="0" data-page="riwayat">⏱️ Riwayat</div>
+                <div class="nav-item focus-target" tabindex="0" data-page="favorit">⭐ Favorit</div>
+                <div class="nav-item focus-target" tabindex="0" data-page="pengaturan">🛠️ Pengaturan</div>
             </div>
         </div>
 
@@ -404,7 +317,14 @@
                     <button class="theme-button focus-target" tabindex="0" data-theme="blue-dark">Biru Tua</button>
                     <button class="theme-button focus-target" tabindex="0" data-theme="red-dark">Merah Gelap</button>
                 </div>
-                <div id="app-version-info" style="margin-top: 50px;"></div>
+                
+                <h2 style="margin-top: 30px;">⚙️ Tindakan & Sistem</h2>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <button class="setting-action-btn focus-target" tabindex="0" id="btn-clearcache">🧹 Hapus Cache Data</button>
+                </div>
+
+                <div id="network-status" style="margin-top: 20px; font-size: 16px; color: #aaa;">Status Jaringan: Memeriksa...</div>
+                <div id="app-version-info" style="margin-top: 20px; margin-bottom: 30px;"></div>
             </div>
         </div>
     </div>
@@ -436,65 +356,50 @@
             let filesProcessedCount = 0; 
             const container = document.getElementById('container');
             const pengaturanMenu = document.getElementById('pengaturan-menu'); 
-            const appWrapper = document.getElementById('app-wrapper');
 
             let allItems = []; 
             let currentItems = []; 
 
             function setLocalStorage(name, value) {
-                try {
-                    localStorage.setItem(name, value);
-                } catch (e) {
-                    console.error("Gagal menyimpan ke LocalStorage:", e);
-                }
+                try { localStorage.setItem(name, value); } catch (e) { console.error(e); }
             }
 
             function getLocalStorage(name) {
-                try {
-                    return localStorage.getItem(name);
-                } catch (e) {
-                    console.warn("Gagal membaca dari LocalStorage:", e);
-                    return null;
-                }
+                try { return localStorage.getItem(name); } catch (e) { return null; }
             }
 
             function applyTheme(themeName) {
+                const appWrapper = document.getElementById('app-wrapper');
                 const body = document.body;
                 body.classList.remove('theme-blue-dark', 'theme-red-dark');
                 appWrapper.classList.remove('theme-blue-dark', 'theme-red-dark'); 
-
                 if (themeName !== 'default') {
-                    const themeClass = `theme-${themeName}`;
-                    body.classList.add(themeClass);
-                    appWrapper.classList.add(themeClass);
+                    body.classList.add(`theme-${themeName}`);
+                    appWrapper.classList.add(`theme-${themeName}`);
                 }
-                
-                try {
-                    setLocalStorage('currentTheme', themeName);
-                } catch (e) {
-                    console.error("Gagal menyimpan tema ke LocalStorage:", e);
-                }
+                setLocalStorage('currentTheme', themeName);
             }
 
             function setupThemeButtons() {
-                const themeButtons = document.querySelectorAll('.theme-button');
-                themeButtons.forEach(button => {
+                document.querySelectorAll('.theme-button').forEach(button => {
                     button.onclick = () => {
-                        const theme = button.getAttribute('data-theme');
-                        applyTheme(theme);
+                        applyTheme(button.getAttribute('data-theme'));
                         button.focus(); 
                     };
                 });
+                
+                const clearCacheBtn = document.getElementById('btn-clearcache');
+                if (clearCacheBtn) {
+                    clearCacheBtn.onclick = () => {
+                        sessionStorage.clear();
+                        alert('Cache sesi berhasil dibersihkan! Memuat ulang...');
+                        window.location.reload();
+                    };
+                }
             }
 
             function loadInitialTheme() {
-                let savedTheme = 'default';
-                try {
-                    savedTheme = getLocalStorage('currentTheme') || 'default';
-                } catch (e) {
-                    console.warn("Gagal membaca tema dari LocalStorage:", e);
-                }
-                applyTheme(savedTheme);
+                applyTheme(getLocalStorage('currentTheme') || 'default');
             }
 
             function shuffleArray(array) {
@@ -508,21 +413,14 @@
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const img = entry.target.querySelector('.lazy-img'); 
-                        if (img) {
-                            const src = img.getAttribute('data-src');
-                            if (src) {
-                                img.src = src; 
-                                img.removeAttribute('data-src');
-                                observer.unobserve(entry.target); 
-                            }
+                        if (img && img.getAttribute('data-src')) {
+                            img.src = img.getAttribute('data-src'); 
+                            img.removeAttribute('data-src');
+                            observer.unobserve(entry.target); 
                         }
                     }
                 });
-            }, {
-                root: document.getElementById('container'), 
-                rootMargin: '100px 0px', 
-                threshold: 0.01
-            });
+            }, { root: document.getElementById('container'), rootMargin: '100px 0px', threshold: 0.01 });
 
             function createFilmElement(item, clickAction, isCollection = false) {
                 const img = document.createElement('img');
@@ -555,11 +453,7 @@
 
             function shuffleAndSaveItems() {
                 shuffleArray(allItems);
-                try {
-                    sessionStorage.setItem('savedItemList', JSON.stringify(allItems));
-                } catch (e) {
-                    console.error("Gagal menyimpan item list Beranda ke sessionStorage.", e);
-                }
+                try { sessionStorage.setItem('savedItemList', JSON.stringify(allItems)); } catch (e) {}
             }
 
             function fetchDataAndInit(callback) {
@@ -587,21 +481,15 @@
                                             allItems.push({...item, type: 'direct'}); 
                                         });
                                         filesProcessedCount++;
-                                        if (filesProcessedCount >= totalFiles) {
-                                            if(callback) callback();
-                                        }
+                                        if (filesProcessedCount >= totalFiles) if(callback) callback();
                                     })
                                     .catch(error => {
-                                        console.error('Error loading JSON:', fileUrl, error);
                                         filesProcessedCount++;
-                                        if (filesProcessedCount >= totalFiles) {
-                                            if(callback) callback();
-                                        }
+                                        if (filesProcessedCount >= totalFiles) if(callback) callback();
                                     });
                             });
                         })
                         .catch(error => {
-                            console.error('Error loading index.json:', indexJsonUrl, error);
                             container.innerHTML = '<h2>❌ Gagal memuat index.json</h2>';
                         });
                 } else {
@@ -612,16 +500,10 @@
             function loadAndRenderHomeContent() {
                 container.style.display = 'block'; 
                 pengaturanMenu.style.display = 'none'; 
-                
                 fetchDataAndInit(() => {
                     const savedItemList = sessionStorage.getItem('savedItemList');
                     if (savedItemList) {
-                        try {
-                            allItems = JSON.parse(savedItemList);
-                        } catch (e) {
-                            console.error("Gagal memparsing savedItemList dari sessionStorage.", e);
-                            shuffleAndSaveItems();
-                        }
+                        try { allItems = JSON.parse(savedItemList); } catch (e) { shuffleAndSaveItems(); }
                     } else {
                         shuffleAndSaveItems();
                     }
@@ -633,26 +515,20 @@
             function loadAndRenderKoleksiContent() {
                 container.style.display = 'block'; 
                 pengaturanMenu.style.display = 'none'; 
-                
                 fetchDataAndInit(() => {
                     const savedCollection = sessionStorage.getItem('savedCollectionList');
-                    
                     if (savedCollection) {
                         try {
                             currentItems = JSON.parse(savedCollection);
                             renderCurrentItems();
                             return;
-                        } catch (e) {
-                            console.error("Gagal memparsing savedCollection dari sessionStorage.", e);
-                        }
+                        } catch (e) {}
                     }
                     
                     const collectionGroups = {};
                     allItems.forEach(item => {
                         if (item.koleksi) {
-                            if (!collectionGroups[item.koleksi]) {
-                                collectionGroups[item.koleksi] = [];
-                            }
+                            if (!collectionGroups[item.koleksi]) collectionGroups[item.koleksi] = [];
                             collectionGroups[item.koleksi].push(item);
                         }
                     });
@@ -660,12 +536,10 @@
                     const collectionMap = new Map();
                     Object.keys(collectionGroups).forEach(koleksiKey => {
                         const itemsInGroup = collectionGroups[koleksiKey];
-                        const randomIndex = Math.floor(Math.random() * itemsInGroup.length);
-                        const randomSelectedItem = itemsInGroup[randomIndex];
-
+                        const randomSelectedItem = itemsInGroup[Math.floor(Math.random() * itemsInGroup.length)];
                         collectionMap.set(koleksiKey, {
                             logo: randomSelectedItem.logo, 
-                            ttl: koleksiKey, 
+                            ttl: koleksiKey,
                             koleksi: koleksiKey,
                             dur: 'Koleksi (klik)',
                             type: 'collection'
@@ -673,15 +547,39 @@
                     });
                     
                     currentItems = Array.from(collectionMap.values());
-                    
-                    try {
-                        sessionStorage.setItem('savedCollectionList', JSON.stringify(currentItems));
-                    } catch (e) {
-                        console.error("Gagal menyimpan collection list ke sessionStorage.", e);
-                    }
-
+                    try { sessionStorage.setItem('savedCollectionList', JSON.stringify(currentItems)); } catch (e) {}
                     renderCurrentItems();
                 });
+            }
+
+            function loadAndRenderRiwayatContent() {
+                container.style.display = 'block';
+                pengaturanMenu.style.display = 'none';
+                try {
+                    currentItems = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
+                } catch(e) {
+                    currentItems = [];
+                }
+                if (currentItems.length === 0) {
+                    container.innerHTML = '<h2>Belum ada riwayat tontonan.</h2>';
+                    return;
+                }
+                renderCurrentItems();
+            }
+
+            function loadAndRenderFavoritContent() {
+                container.style.display = 'block';
+                pengaturanMenu.style.display = 'none';
+                try {
+                    currentItems = JSON.parse(localStorage.getItem('tivikuFavorites') || '[]');
+                } catch(e) {
+                    currentItems = [];
+                }
+                if (currentItems.length === 0) {
+                    container.innerHTML = '<h2>Belum ada daftar favorit.</h2>';
+                    return;
+                }
+                renderCurrentItems();
             }
 
             function showPengaturanMenu() {
@@ -690,24 +588,17 @@
                 
                 const versionInfo = document.getElementById('app-version-info');
                 if (versionInfo) {
-                    versionInfo.innerHTML = `Versi Aplikasi: 2.0<b>${APP_VERSION}</b>`;
+                    versionInfo.innerHTML = `Versi Aplikasi: 2.0 <b>${APP_VERSION}</b>`;
+                }
+
+                const netStatus = document.getElementById('network-status');
+                if (netStatus) {
+                    netStatus.innerText = navigator.onLine ? 'Status Jaringan: Terhubung (Online)' : 'Status Jaringan: Terputus (Offline)';
                 }
                 
                 sessionStorage.removeItem('lastFocusedCardTitle');
-                
                 const firstThemeButton = document.querySelector('.theme-button');
-                if (firstThemeButton) {
-                    firstThemeButton.focus();
-                }
-            }
-
-            // Fungsi pengatur status sidebar collapse atau expanded
-            function updateSidebarState(isCollapsed) {
-                if (isCollapsed) {
-                    appWrapper.classList.add('sidebar-collapsed');
-                } else {
-                    appWrapper.classList.remove('sidebar-collapsed');
-                }
+                if (firstThemeButton) firstThemeButton.focus();
             }
 
             function renderCurrentItems() {
@@ -722,6 +613,16 @@
                     } else { 
                         action = () => {
                             sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
+                            
+                            // Save to History automatically
+                            try {
+                                let history = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
+                                history = history.filter(i => i.ttl !== item.ttl);
+                                history.unshift(item);
+                                if (history.length > 20) history.pop();
+                                localStorage.setItem('tivikuHistory', JSON.stringify(history));
+                            } catch(e) {}
+
                             playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
                         };
                         isCollection = false;
@@ -741,25 +642,18 @@
                 document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
                 
                 let targetElement = null;
-                
                 if (savedTitle) {
-                    const allDivs = document.querySelectorAll('.responsive-div');
-                    allDivs.forEach(div => {
+                    document.querySelectorAll('.responsive-div').forEach(div => {
                         const pElement = div.querySelector('.re');
-                        if (pElement && pElement.innerText === savedTitle) {
-                            targetElement = div;
-                        }
+                        if (pElement && pElement.innerText === savedTitle) targetElement = div;
                     });
-                    if(targetElement) sessionStorage.removeItem('lastVideoTitle'); 
+                    sessionStorage.removeItem('lastVideoTitle'); 
                 } 
                 
                 if (!targetElement && lastFocusedTitle) {
-                    const allDivs = document.querySelectorAll('.responsive-div');
-                    allDivs.forEach(div => {
+                    document.querySelectorAll('.responsive-div').forEach(div => {
                         const pElement = div.querySelector('.re');
-                        if (pElement && pElement.innerText === lastFocusedTitle) {
-                            targetElement = div;
-                        }
+                        if (pElement && pElement.innerText === lastFocusedTitle) targetElement = div;
                     });
                 }
 
@@ -770,10 +664,9 @@
                          targetElement.scrollIntoView({ behavior: 'instant', block: 'center' });
                     }
                     focusRestoredToCard = true; 
-                    updateSidebarState(true); // Sidebar mengecil karena fokus ada di kartu
                 } 
                 
-                if (!focusRestoredToCard && (activePage === 'beranda' || activePage === 'koleksi')) { 
+                if (!focusRestoredToCard && (activePage === 'beranda' || activePage === 'koleksi' || activePage === 'riwayat' || activePage === 'favorit')) { 
                     const savedScrollPosition = sessionStorage.getItem('scrollPosition');
                     if (savedScrollPosition !== null && container) {
                         container.scrollTop = parseInt(savedScrollPosition, 10);
@@ -782,7 +675,6 @@
                              firstVisible.classList.add('highlight');
                              firstVisible.focus();
                              focusRestoredToCard = true;
-                             updateSidebarState(true); // Sidebar mengecil
                         }
                     }
                 }
@@ -793,38 +685,24 @@
                     if (firstThemeButton) {
                          firstThemeButton.focus();
                          focusRestoredToCard = true;
-                         updateSidebarState(false); // Sidebar melebar di menu pengaturan
                     }
                 }
                 
                 if (!focusRestoredToCard && activePage !== 'pengaturan') {
                     const activeNav = document.querySelector(`.nav-item[data-page="${activePage}"]`);
-                    if (activeNav) {
-                        activeNav.focus();
-                        updateSidebarState(false); // Sidebar melebar karena fokus di menu
-                    } else {
-                         const searchInput = document.getElementById('cari');
-                         if (searchInput) searchInput.focus();
-                         updateSidebarState(false); // Sidebar melebar karena fokus di pencarian
-                    }
+                    if (activeNav) activeNav.focus();
                 }
             }
 
             function isElementInView(el, container) {
                 const elRect = el.getBoundingClientRect();
                 const containerRect = container.getBoundingClientRect();
-                return (
-                    elRect.top >= containerRect.top &&
-                    elRect.bottom <= containerRect.bottom + elRect.height
-                );
+                return (elRect.top >= containerRect.top && elRect.bottom <= containerRect.bottom + elRect.height);
             }
 
             function getFirstVisibleElement(container) {
-                const allDivs = document.querySelectorAll('.responsive-div');
-                for (const div of allDivs) {
-                    if (getComputedStyle(div).display !== 'none' && isElementInView(div, container)) {
-                        return div;
-                    }
+                for (const div of document.querySelectorAll('.responsive-div')) {
+                    if (getComputedStyle(div).display !== 'none' && isElementInView(div, container)) return div;
                 }
                 return document.querySelector('.responsive-div:not([style*="display: none"])');
             }
@@ -848,24 +726,21 @@
             }
 
             function prosesMenu() {
-                var input = document.getElementById("cari");
-                var filter = input.value.toLowerCase();
-                var li = document.querySelectorAll('.responsive-div');
-                for (var i = 0; i < li.length; i++) {
-                    var textToSearch = li[i].querySelector('.re').innerText.toLowerCase(); 
+                var filter = document.getElementById("cari").value.toLowerCase();
+                document.querySelectorAll('.responsive-div').forEach(li => {
+                    var textToSearch = li.querySelector('.re').innerText.toLowerCase(); 
                     if (textToSearch.indexOf(filter) > -1) {
-                        li[i].style.display = "";
-                        const img = li[i].querySelector('.lazy-img');
+                        li.style.display = "";
+                        const img = li.querySelector('.lazy-img');
                         if (img && img.hasAttribute('data-src')) {
-                             const src = img.getAttribute('data-src');
-                             img.src = src;
+                             img.src = img.getAttribute('data-src');
                              img.removeAttribute('data-src');
-                             imageObserver.unobserve(li[i]); 
+                             imageObserver.unobserve(li); 
                         }
                     } else {
-                        li[i].style.display = "none";
+                        li.style.display = "none";
                     }
-                }
+                });
             }
 
             document.getElementById("cari").addEventListener("input", prosesMenu);
@@ -873,27 +748,20 @@
             const saveScrollPosition = () => {
                 const container = document.getElementById('container');
                 const activePage = sessionStorage.getItem('lastActiveMenuPage');
-                if (container && (activePage === 'beranda' || activePage === 'koleksi')) { 
+                if (container && activePage) { 
                     sessionStorage.setItem('scrollPosition', container.scrollTop);
                 }
             };
 
             const containerScrollElement = document.getElementById('container');
-            if (containerScrollElement) {
-                containerScrollElement.addEventListener('scroll', saveScrollPosition);
-            }
+            if (containerScrollElement) containerScrollElement.addEventListener('scroll', saveScrollPosition);
 
             function updateClock() {
                 const now = new Date();
-                const hours = String(now.getHours()).padStart(2, '0');
-                const minutes = String(now.getMinutes()).padStart(2, '0');
-                const timeString = `${hours}:${minutes}`;
+                const timeString = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
                 const clockElement = document.getElementById('digital-clock');
-                if (clockElement) {
-                    clockElement.innerText = timeString;
-                }
+                if (clockElement) clockElement.innerText = timeString;
             }
-
             updateClock(); 
             setInterval(updateClock, 1000); 
 
@@ -901,22 +769,24 @@
                 const searchInput = document.getElementById('cari');
                 const focusedElement = document.activeElement;
                 
-                if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'Enter') {
+                if (['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', 'Enter'].includes(e.key)) {
                     e.preventDefault(); 
                     
-                    if (focusedElement.classList.contains('theme-button')) {
-                        const themeButtons = Array.from(document.querySelectorAll('.theme-button'));
-                        const currentIndex = themeButtons.findIndex(item => item === focusedElement);
+                    if (focusedElement.classList.contains('theme-button') || focusedElement.classList.contains('setting-action-btn')) {
+                        const buttons = Array.from(document.querySelectorAll('.theme-button, .setting-action-btn'));
+                        const currentIndex = buttons.findIndex(item => item === focusedElement);
                         
                         if (e.key === 'ArrowRight') {
-                            const nextIndex = Math.min(currentIndex + 1, themeButtons.length - 1);
-                            themeButtons[nextIndex].focus();
+                            buttons[Math.min(currentIndex + 1, buttons.length - 1)].focus();
                         } else if (e.key === 'ArrowLeft') {
-                            const nextIndex = Math.max(currentIndex - 1, 0);
-                            themeButtons[nextIndex].focus();
-                        } else if (e.key === 'ArrowUp') {
-                            const settingNav = document.querySelector('.nav-item[data-page="pengaturan"]');
-                            if (settingNav) settingNav.focus();
+                            buttons[Math.max(currentIndex - 1, 0)].focus();
+                        } else if (e.key === 'ArrowUp' && focusedElement.classList.contains('setting-action-btn')) {
+                            document.querySelector('.theme-button').focus();
+                        } else if (e.key === 'ArrowDown' && focusedElement.classList.contains('theme-button')) {
+                            const actionBtn = document.querySelector('.setting-action-btn');
+                            if (actionBtn) actionBtn.focus();
+                        } else if (e.key === 'ArrowUp' && focusedElement.classList.contains('theme-button')) {
+                            document.querySelector('.nav-item[data-page="pengaturan"]').focus();
                         } else if (e.key === 'Enter') {
                             focusedElement.click(); 
                         }
@@ -928,40 +798,20 @@
                         const currentIndex = navItems.findIndex(item => item === focusedElement);
                         
                         if (e.key === 'ArrowDown') {
-                            const nextIndex = Math.min(currentIndex + 1, navItems.length - 1);
-                            navItems[nextIndex].focus();
+                            navItems[Math.min(currentIndex + 1, navItems.length - 1)].focus();
                         } else if (e.key === 'ArrowUp') {
-                            if (currentIndex === 0) {
-                                 searchInput.focus();
-                                 return;
-                            }
-                            const nextIndex = Math.max(currentIndex - 1, 0);
-                            navItems[nextIndex].focus();
+                            if (currentIndex === 0) searchInput.focus();
+                            else navItems[Math.max(currentIndex - 1, 0)].focus();
                         } else if (e.key === 'ArrowRight') {
-                            const page = focusedElement.getAttribute('data-page');
-                            if (page === 'pengaturan') {
-                                const firstThemeButton = document.querySelector('.theme-button');
-                                if (firstThemeButton) firstThemeButton.focus();
+                            if (focusedElement.getAttribute('data-page') === 'pengaturan') {
+                                document.querySelector('.theme-button').focus();
                                 return;
                             }
-                            
-                            const lastFocusedTitle = sessionStorage.getItem('lastFocusedCardTitle');
-                            let targetDiv = null;
-                            if (lastFocusedTitle) {
-                                const allDivs = document.querySelectorAll('.responsive-div');
-                                allDivs.forEach(div => {
-                                     const pElement = div.querySelector('.re');
-                                     if (pElement && pElement.innerText === lastFocusedTitle && getComputedStyle(div).display !== 'none') {
-                                         targetDiv = div;
-                                     }
-                                });
-                            }
-                            const firstDiv = targetDiv || getFirstVisibleElement(container) || document.querySelector('.responsive-div:not([style*="display: none"])');
+                            const firstDiv = getFirstVisibleElement(container) || document.querySelector('.responsive-div:not([style*="display: none"])');
                             if (firstDiv) {
                                 firstDiv.classList.add('highlight');
                                 firstDiv.focus();
                                 firstDiv.scrollIntoView({ behavior: 'instant', block: 'center' }); 
-                                updateSidebarState(true); // Pindah ke kartu -> sidebar mengecil
                             }
                         } else if (e.key === 'Enter') {
                             const page = focusedElement.getAttribute('data-page');
@@ -970,38 +820,23 @@
                             sessionStorage.removeItem('lastVideoTitle'); 
                             sessionStorage.removeItem('lastFocusedCardTitle'); 
                             
-                            if (page === 'beranda') {
-                                loadAndRenderHomeContent(); 
-                            } else if (page === 'koleksi') {
-                                loadAndRenderKoleksiContent();
-                            } else if (page === 'pengaturan') { 
-                                showPengaturanMenu();
-                            }
+                            if (page === 'beranda') loadAndRenderHomeContent();
+                            else if (page === 'koleksi') loadAndRenderKoleksiContent();
+                            else if (page === 'riwayat') loadAndRenderRiwayatContent();
+                            else if (page === 'favorit') loadAndRenderFavoritContent();
+                            else if (page === 'pengaturan') showPengaturanMenu();
                         }
                         return;
                     }
 
                     if (focusedElement === searchInput) {
                         if (e.key === 'ArrowDown') {
-                            const firstNavItem = document.querySelector('.nav-item');
-                            if (firstNavItem) firstNavItem.focus();
+                            document.querySelector('.nav-item').focus();
                         } else if (e.key === 'ArrowRight') {
-                            const lastFocusedTitle = sessionStorage.getItem('lastFocusedCardTitle');
-                            let targetDiv = null;
-                            if (lastFocusedTitle) {
-                                const allDivs = document.querySelectorAll('.responsive-div');
-                                allDivs.forEach(div => {
-                                     const pElement = div.querySelector('.re');
-                                     if (pElement && pElement.innerText === lastFocusedTitle && getComputedStyle(div).display !== 'none') {
-                                         targetDiv = div;
-                                     }
-                                });
-                            }
-                            const firstDiv = targetDiv || getFirstVisibleElement(container) || document.querySelector('.responsive-div:not([style*="display: none"])');
+                            const firstDiv = getFirstVisibleElement(container) || document.querySelector('.responsive-div:not([style*="display: none"])');
                             if (firstDiv) {
                                 firstDiv.classList.add('highlight');
                                 firstDiv.focus();
-                                updateSidebarState(true); // Pindah ke kartu dari search -> sidebar mengecil
                             }
                         }
                         return; 
@@ -1015,37 +850,27 @@
                     const containerRect = container.getBoundingClientRect();
                     const firstVisibleDiv = getFirstVisibleElement(container);
                     const cardWidthWithMargin = firstVisibleDiv ? firstVisibleDiv.offsetWidth + 30 : 300; 
-                    const itemsPerRow = Math.floor(containerRect.width / cardWidthWithMargin);
-                    const actualItemsPerRow = Math.max(1, itemsPerRow); 
+                    const itemsPerRow = Math.max(1, Math.floor(containerRect.width / cardWidthWithMargin)); 
                     
                     focusedElement.classList.remove('highlight');
                         
                     switch (e.key) {
                         case 'ArrowDown':
-                            nextIndex = Math.min(currentIndex + actualItemsPerRow, divs.length - 1);
+                            nextIndex = Math.min(currentIndex + itemsPerRow, divs.length - 1);
                             break;
                         case 'ArrowUp':
-                            nextIndex = currentIndex - actualItemsPerRow;
-                            if (nextIndex < 0) {
-                                searchInput.focus(); 
-                                updateSidebarState(false); // Kembali ke search bar -> sidebar melebar
-                                return;
-                            }
+                            nextIndex = currentIndex - itemsPerRow;
+                            if (nextIndex < 0) { searchInput.focus(); return; }
                             break;
                         case 'ArrowRight':
                             nextIndex = Math.min(currentIndex + 1, divs.length - 1);
                             break;
                         case 'ArrowLeft':
                             nextIndex = currentIndex - 1;
-                            if (nextIndex < 0 || (currentIndex % actualItemsPerRow === 0)) {
-                                const activePage = sessionStorage.getItem('lastActiveMenuPage') || 'beranda';
-                                const activeNav = document.querySelector(`.nav-item[data-page="${activePage}"]`);
-                                if (activeNav) {
-                                    activeNav.focus();
-                                } else {
-                                    searchInput.focus(); 
-                                }
-                                updateSidebarState(false); // Mentok kiri kembali ke sidebar -> sidebar melebar halus
+                            if (nextIndex < 0 || (currentIndex % itemsPerRow === 0)) {
+                                const activeNav = document.querySelector(`.nav-item[data-page="${sessionStorage.getItem('lastActiveMenuPage') || 'beranda'}"]`);
+                                if (activeNav) activeNav.focus();
+                                else searchInput.focus(); 
                                 return;
                             }
                             break;
@@ -1057,18 +882,14 @@
                     if (nextIndex !== -1 && divs[nextIndex]) {
                         divs[nextIndex].classList.add('highlight');
                         divs[nextIndex].focus();
-                        const focusedTitle = divs[nextIndex].querySelector('.re').innerText;
-                        sessionStorage.setItem('lastFocusedCardTitle', focusedTitle); 
+                        sessionStorage.setItem('lastFocusedCardTitle', divs[nextIndex].querySelector('.re').innerText); 
                         divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
                         saveScrollPosition();
-                        updateSidebarState(true); // Pastikan sidebar tetap kecil saat navigasi antar kartu
                     }
                 } else if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
-                    const activePage = sessionStorage.getItem('lastActiveMenuPage');
-                    if (activePage && activePage !== 'beranda') {
+                    if (sessionStorage.getItem('lastActiveMenuPage') !== 'beranda') {
                         e.preventDefault();
-                        const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
-                        if (homeNav) homeNav.click();
+                        document.querySelector('.nav-item[data-page="beranda"]').click();
                     }
                 }
             });
@@ -1077,42 +898,24 @@
                 loadInitialTheme();
                 setupThemeButtons();
 
-                const navItems = document.querySelectorAll('.nav-item');
-                navItems.forEach(item => {
+                document.querySelectorAll('.nav-item').forEach(item => {
                     item.addEventListener('click', () => {
                         document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
                         const page = item.getAttribute('data-page');
                         sessionStorage.setItem('lastActiveMenuPage', page); 
                         container.innerHTML = ''; 
                         
-                        if (page === 'beranda') {
-                            loadAndRenderHomeContent();
-                        } else if (page === 'koleksi') {
-                            loadAndRenderKoleksiContent();
-                        } else if (page === 'pengaturan') {
-                            showPengaturanMenu();
-                        } else {
-                            filesProcessedCount = 0; 
-                            currentItems = []; 
-                            container.style.display = 'block';
-                            pengaturanMenu.style.display = 'none';
-                            container.innerHTML = `<h2>Konten untuk ${item.innerText} belum tersedia.</h2>`; 
-                            restoreFocusOnContent();
-                        }
+                        if (page === 'beranda') loadAndRenderHomeContent();
+                        else if (page === 'koleksi') loadAndRenderKoleksiContent();
+                        else if (page === 'riwayat') loadAndRenderRiwayatContent();
+                        else if (page === 'favorit') loadAndRenderFavoritContent();
+                        else if (page === 'pengaturan') showPengaturanMenu();
                     });
                 });
                 
                 const lastPage = sessionStorage.getItem('lastActiveMenuPage') || 'beranda';
-                const validPages = ['beranda', 'koleksi', 'pengaturan'];
-                const initialPage = validPages.includes(lastPage) ? lastPage : 'beranda';
-                const initialNav = document.querySelector(`.nav-item[data-page="${initialPage}"]`);
-
-                if (initialNav) {
-                    initialNav.click();
-                } else {
-                    const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
-                    if (homeNav) homeNav.click();
-                }
+                const initialNav = document.querySelector(`.nav-item[data-page="${['beranda', 'koleksi', 'riwayat', 'favorit', 'pengaturan'].includes(lastPage) ? lastPage : 'beranda'}"]`);
+                if (initialNav) initialNav.click();
             }
 
             initNavigation();
