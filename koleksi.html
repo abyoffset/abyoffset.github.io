@@ -335,7 +335,7 @@
         const searchInput = document.getElementById('cari');
         
         const collectionKey = sessionStorage.getItem('currentCollectionKey');
-        const collectionTitle = sessionStorage.getItem('currentCollectionTitle') || '';
+        const collectionTitle = sessionStorage.getItem('currentCollectionTitle') || 'Koleksi';
         headerTitle.innerText = collectionTitle.toUpperCase();
 
         function applyTheme(themeName) {
@@ -456,7 +456,7 @@
                                 function extractItems(entries) {
                                     if (!Array.isArray(entries)) return;
                                     entries.forEach(entry => {
-                                        if (entry.koleksi || entry.lnk) {
+                                        if (entry.lnk) {
                                             allItems.push(entry);
                                         }
                                         for (let key in entry) {
