@@ -2,7 +2,7 @@
 <html lang="in">
 <head>
     <meta charset="UTF-8">
-    <title>Tiviku - Smart TV</title>
+    <title>Tiviku - Beranda</title>
     <style>
         body {
             background-color: black;
@@ -83,6 +83,12 @@
         #atas {                
             position: relative;
             height: 80px; 
+            color: yellowgreen;
+            font-size: 28px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         #container {
@@ -135,7 +141,6 @@
             margin: 0;
             font-family: inherit;
             font-weight: 700;
-            transition: color 0.3s;
         }
 
         #sidebar-b { 
@@ -144,7 +149,6 @@
             margin-top: 0px;
             font-size: 30px; 
             font-weight: bold; 
-            transition: color 0.3s;
         }
 
         #sidebar #cari {
@@ -161,7 +165,6 @@
             margin-top: 15px; 
             position: relative; 
             transform: none;
-            transition: background-color 0.3s;
         }
 
         #nav-menu {
@@ -203,24 +206,6 @@
             background-color: rgba(0, 0, 0, 0.2);
             padding: 5px 10px;
             border-radius: 5px;
-        }
-
-        #offline-message {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #ffcccc; 
-            background-color: rgba(50, 0, 0, 0.9);
-            padding: 30px 40px;
-            border-radius: 15px;
-            border: 3px solid red;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-            z-index: 100;
-            text-align: center;
-            font-size: 24px;
-            line-height: 1.5;
-            font-family: Arial, sans-serif;
         }
 
         #pengaturan-menu {
@@ -274,14 +259,12 @@
 
         .theme-blue-dark { background-color: #121c29 !important; }
         .theme-blue-dark #sidebar { background-color: #0b141d !important; border-right-color: #1e2a39 !important; }
-        .theme-blue-dark #sidebar-h1, .theme-blue-dark #sidebar-b { color: yellowgreen; }
         .theme-blue-dark #sidebar #cari { background: #1e2a39 !important; }
         .theme-blue-dark .responsive-div { border: 5px solid #4a90e2 !important; }
         .theme-blue-dark .responsive-div:focus, .theme-blue-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #4a90e2; }
 
         .theme-red-dark { background-color: #1f0505 !important; }
         .theme-red-dark #sidebar { background-color: #150000 !important; border-right-color: #330000 !important; }
-        .theme-red-dark #sidebar-h1, .theme-red-dark #sidebar-b { color: yellowgreen; }
         .theme-red-dark #sidebar #cari { background: #330000 !important; }
         .theme-red-dark .responsive-div { border: 5px solid #ff4d4d !important; }
         .theme-red-dark .responsive-div:focus, .theme-red-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #ff4d4d; }
@@ -306,8 +289,8 @@
         </div>
 
         <div id="main-content">
-            <div id="digital-clock"></div> 
-            <div id="atas"></div> 
+            <div id="digital-clock"></div>
+            <div id="atas">BERANDA UTAMA</div> 
             <div id="container"></div>
 
             <div id="pengaturan-menu" style="display: none;">
@@ -320,621 +303,476 @@
                 
                 <h2 style="margin-top: 30px;">⚙️ Tindakan & Sistem</h2>
                 <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
-                    <button class="setting-action-btn focus-target" tabindex="0" id="btn-clearhistory">🗑️ Hapus Riwayat Tontonan</button>
                     <button class="setting-action-btn focus-target" tabindex="0" id="btn-clearcache">🧹 Hapus Cache Data</button>
                 </div>
 
                 <div id="network-status" style="margin-top: 20px; font-size: 16px; color: #aaa;">Status Jaringan: Memeriksa...</div>
-                <div id="app-version-info" style="margin-top: 20px; margin-bottom: 30px;"></div>
+                <div id="app-version-info" style="margin-top: 20px; margin-bottom: 30px; color: white;"></div>
             </div>
         </div>
     </div>
-    
-    <div id="offline-message" style="display: none;">
-        ❌ **TIDAK ADA KONEKSI INTERNET** ❌<br>Daftar film gagal dimuat.
-    </div>
 
     <script>
-        if (!navigator.onLine) {
-            document.getElementById('atas').innerHTML = ''; 
-            document.getElementById('offline-message').style.display = 'block';
-        } else {
-            window.addEventListener('offline', () => {
-                document.getElementById('offline-message').style.display = 'block';
+        const APP_VERSION = 'v1.2.0';
+        const indexJsonUrl = 'index.json';
+        const container = document.getElementById('container');
+        const headerTitle = document.getElementById('atas');
+        const pengaturanMenu = document.getElementById('pengaturan-menu');
+        const searchInput = document.getElementById('cari');
+
+        function applyTheme(themeName) {
+            const appWrapper = document.getElementById('app-wrapper');
+            const body = document.body;
+            
+            body.classList.remove('theme-blue-dark', 'theme-red-dark');
+            appWrapper.classList.remove('theme-blue-dark', 'theme-red-dark'); 
+
+            if (themeName !== 'default') {
+                const themeClass = `theme-${themeName}`;
+                body.classList.add(themeClass);
+                appWrapper.classList.add(themeClass);
+            }
+            
+            try {
+                localStorage.setItem('currentTheme', themeName);
+            } catch (e) {
+                console.error("Gagal menyimpan tema:", e);
+            }
+        }
+
+        function loadInitialTheme() {
+            const savedTheme = localStorage.getItem('currentTheme') || 'default';
+            applyTheme(savedTheme);
+        }
+        loadInitialTheme();
+
+        function setupThemeButtons() {
+            document.querySelectorAll('.theme-button').forEach(button => {
+                button.onclick = () => {
+                    const theme = button.getAttribute('data-theme');
+                    applyTheme(theme);
+                    button.focus(); 
+                };
             });
-            window.addEventListener('online', () => {
-                document.getElementById('offline-message').style.display = 'none';
-            });
 
-            const atas = document.getElementById('atas');
-            atas.innerHTML = ''; 
-
-            const APP_VERSION = 'v1.2.0'; 
-            const indexJsonUrl = 'index.json';
-
-            let directFiles = [];
-            let totalFiles = 0; 
-            let filesProcessedCount = 0; 
-            const container = document.getElementById('container');
-            const pengaturanMenu = document.getElementById('pengaturan-menu'); 
-
-            let allItems = []; 
-            let currentItems = []; 
-
-            function setLocalStorage(name, value) {
-                try { localStorage.setItem(name, value); } catch (e) { console.error(e); }
+            const clearCacheBtn = document.getElementById('btn-clearcache');
+            if (clearCacheBtn) {
+                clearCacheBtn.onclick = () => {
+                    sessionStorage.clear();
+                    alert('Cache sesi berhasil dibersihkan! Memuat ulang...');
+                    window.location.reload();
+                };
             }
+        }
+        setupThemeButtons();
 
-            function getLocalStorage(name) {
-                try { return localStorage.getItem(name); } catch (e) { return null; }
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}`;
+            const clockElement = document.getElementById('digital-clock');
+            if (clockElement) {
+                clockElement.innerText = timeString;
             }
+        }
+        updateClock(); 
+        setInterval(updateClock, 1000);
 
-            function applyTheme(themeName) {
-                const appWrapper = document.getElementById('app-wrapper');
-                const body = document.body;
-                body.classList.remove('theme-blue-dark', 'theme-red-dark');
-                appWrapper.classList.remove('theme-blue-dark', 'theme-red-dark'); 
-                if (themeName !== 'default') {
-                    body.classList.add(`theme-${themeName}`);
-                    appWrapper.classList.add(`theme-${themeName}`);
-                }
-                setLocalStorage('currentTheme', themeName);
-            }
-
-            function setupThemeButtons() {
-                document.querySelectorAll('.theme-button').forEach(button => {
-                    button.onclick = () => {
-                        applyTheme(button.getAttribute('data-theme'));
-                        button.focus(); 
-                    };
-                });
-                
-                const clearCacheBtn = document.getElementById('btn-clearcache');
-                if (clearCacheBtn) {
-                    clearCacheBtn.onclick = () => {
-                        sessionStorage.clear();
-                        alert('Cache sesi berhasil dibersihkan! Memuat ulang...');
-                        window.location.reload();
-                    };
-                }
-
-                const clearHistoryBtn = document.getElementById('btn-clearhistory');
-                if (clearHistoryBtn) {
-                    clearHistoryBtn.onclick = () => {
-                        if (confirm('Apakah Anda yakin ingin menghapus seluruh riwayat tontonan?')) {
-                            localStorage.removeItem('tivikuHistory');
-                            alert('Riwayat tontonan berhasil dihapus!');
-                        }
-                    };
-                }
-            }
-
-            function loadInitialTheme() {
-                applyTheme(getLocalStorage('currentTheme') || 'default');
-            }
-
-            function shuffleArray(array) {
-                for (let i = array.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    [array[i], array[j]] = [array[j], array[i]];
-                }
-            }
-
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target.querySelector('.lazy-img'); 
-                        if (img && img.getAttribute('data-src')) {
-                            img.src = img.getAttribute('data-src'); 
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target.querySelector('.lazy-img'); 
+                    if (img) {
+                        const src = img.getAttribute('data-src');
+                        if (src) {
+                            img.src = src; 
                             img.removeAttribute('data-src');
                             observer.unobserve(entry.target); 
                         }
                     }
-                });
-            }, { root: document.getElementById('container'), rootMargin: '100px 0px', threshold: 0.01 });
-
-            function createFilmElement(item, clickAction, isCollection = false) {
-                const img = document.createElement('img');
-                img.id = 'imgv';
-                img.setAttribute('data-src', item.logo); 
-                img.src = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="270" height="220" viewBox="0 0 270 220"%3E%3Crect width="100%25" height="100%25" fill="%231a1a1a"%3E%3C/rect%3E%3C/svg%3E'; 
-                img.classList.add('lazy-img'); 
-
-                const pp = document.createElement('p');
-                pp.className = 're';
-                pp.innerText = item.ttl;
-
-                const dur = document.createElement('p');
-                dur.className = 'dur';
-                dur.innerText = isCollection ? 'Koleksi (klik)' : (item.dur || '');
-
-                const dv = document.createElement('div');
-                dv.className = 'responsive-div';
-                dv.tabIndex = 0; 
-                dv.onclick = clickAction;
-
-                dv.appendChild(img);
-                dv.appendChild(pp);
-                dv.appendChild(dur);
-                container.appendChild(dv);
-                
-                imageObserver.observe(dv);
-                return dv; 
-            }
-
-            function shuffleAndSaveItems() {
-                shuffleArray(allItems);
-                try { sessionStorage.setItem('savedItemList', JSON.stringify(allItems)); } catch (e) {}
-            }
-
-            function fetchDataAndInit(callback) {
-                if (allItems.length > 0) {
-                    if (callback) callback();
-                    return;
-                }
-
-                container.innerHTML = '<h2>Memuat Index Konten...</h2>';
-                allItems = []; 
-                filesProcessedCount = 0;
-                
-                fetch(indexJsonUrl)
-                    .then(response => response.json())
-                    .then(indexData => {
-                        directFiles = indexData.source_list || [];
-                        totalFiles = directFiles.length;
-                        
-                        if (totalFiles === 0) {
-                            if (callback) callback();
-                            return;
-                        }
-
-                        directFiles.forEach(fileUrl => {
-                            fetch(fileUrl)
-                                .then(response => response.json())
-                                .then(data => {
-                                    data.forEach(item => {
-                                        allItems.push({...item, type: 'direct'}); 
-                                    });
-                                    filesProcessedCount++;
-                                    if (filesProcessedCount >= totalFiles) {
-                                        if (callback) callback();
-                                    }
-                                })
-                                .catch(error => {
-                                    filesProcessedCount++;
-                                    if (filesProcessedCount >= totalFiles) {
-                                        if (callback) callback();
-                                    }
-                                });
-                        });
-                    })
-                    .catch(error => {
-                        container.innerHTML = '<h2>❌ Gagal memuat index.json</h2>';
-                    });
-            }
-
-            function loadAndRenderHomeContent() {
-                container.style.display = 'block'; 
-                pengaturanMenu.style.display = 'none'; 
-                fetchDataAndInit(() => {
-                    const savedItemList = sessionStorage.getItem('savedItemList');
-                    if (savedItemList) {
-                        try { allItems = JSON.parse(savedItemList); } catch (e) { shuffleAndSaveItems(); }
-                    } else {
-                        shuffleAndSaveItems();
-                    }
-                    currentItems = allItems;
-                    renderCurrentItems();
-                });
-            }
-
-            function loadAndRenderKoleksiContent() {
-                container.style.display = 'block'; 
-                pengaturanMenu.style.display = 'none'; 
-                fetchDataAndInit(() => {
-                    const savedCollection = sessionStorage.getItem('savedCollectionList');
-                    if (savedCollection) {
-                        try {
-                            currentItems = JSON.parse(savedCollection);
-                            renderCurrentItems();
-                            return;
-                        } catch (e) {}
-                    }
-                    
-                    const collectionGroups = {};
-                    allItems.forEach(item => {
-                        if (item.koleksi) {
-                            if (!collectionGroups[item.koleksi]) collectionGroups[item.koleksi] = [];
-                            collectionGroups[item.koleksi].push(item);
-                        }
-                    });
-                    
-                    const collectionMap = new Map();
-                    Object.keys(collectionGroups).forEach(koleksiKey => {
-                        const itemsInGroup = collectionGroups[koleksiKey];
-                        const randomSelectedItem = itemsInGroup[Math.floor(Math.random() * itemsInGroup.length)];
-                        collectionMap.set(koleksiKey, {
-                            logo: randomSelectedItem.logo, 
-                            ttl: koleksiKey,
-                            koleksi: koleksiKey,
-                            dur: 'Koleksi (klik)',
-                            type: 'collection'
-                        });
-                    });
-                    
-                    currentItems = Array.from(collectionMap.values());
-                    try { sessionStorage.setItem('savedCollectionList', JSON.stringify(currentItems)); } catch (e) {}
-                    renderCurrentItems();
-                });
-            }
-
-            function loadAndRenderRiwayatContent() {
-                container.style.display = 'block';
-                pengaturanMenu.style.display = 'none';
-                try {
-                    currentItems = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
-                } catch(e) {
-                    currentItems = [];
-                }
-                if (currentItems.length === 0) {
-                    container.innerHTML = '<h2>Belum ada riwayat tontonan.</h2>';
-                    return;
-                }
-                renderCurrentItems();
-            }
-
-            function loadAndRenderFavoritContent() {
-                container.style.display = 'block';
-                pengaturanMenu.style.display = 'none';
-                try {
-                    currentItems = JSON.parse(localStorage.getItem('tivikuFavorites') || '[]');
-                } catch(e) {
-                    currentItems = [];
-                }
-                if (currentItems.length === 0) {
-                    container.innerHTML = '<h2>Belum ada daftar favorit.</h2>';
-                    return;
-                }
-                renderCurrentItems();
-            }
-
-            function showPengaturanMenu() {
-                container.style.display = 'none'; 
-                pengaturanMenu.style.display = 'flex'; 
-                
-                const versionInfo = document.getElementById('app-version-info');
-                if (versionInfo) {
-                    versionInfo.innerHTML = `Versi Aplikasi: 2.0 <b>${APP_VERSION}</b>`;
-                }
-
-                const netStatus = document.getElementById('network-status');
-                if (netStatus) {
-                    netStatus.innerText = navigator.onLine ? 'Status Jaringan: Terhubung (Online)' : 'Status Jaringan: Terputus (Offline)';
-                }
-                
-                sessionStorage.removeItem('lastFocusedCardTitle');
-                const firstThemeButton = document.querySelector('.theme-button');
-                if (firstThemeButton) firstThemeButton.focus();
-            }
-
-            function renderCurrentItems() {
-                container.innerHTML = ''; 
-                currentItems.forEach(item => {
-                    let action;
-                    let isCollection = false;
-
-                    if (item.type === 'collection') {
-                        action = () => openCollection(item.koleksi, item.ttl);
-                        isCollection = true;
-                    } else { 
-                        action = () => {
-                            sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
-                            
-                            try {
-                                let history = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
-                                history = history.filter(i => i.ttl !== item.ttl);
-                                history.unshift(item);
-                                if (history.length > 20) history.pop();
-                                localStorage.setItem('tivikuHistory', JSON.stringify(history));
-                            } catch(e) {}
-
-                            playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
-                        };
-                        isCollection = false;
-                    }
-                    createFilmElement(item, action, isCollection);
-                });
-                restoreFocusOnContent(); 
-            }
-
-            const restoreFocusOnContent = () => {
-                const savedTitle = sessionStorage.getItem('lastVideoTitle'); 
-                const lastFocusedTitle = sessionStorage.getItem('lastFocusedCardTitle'); 
-                const container = document.getElementById('container');
-                const activePage = sessionStorage.getItem('lastActiveMenuPage') || 'beranda';
-                
-                let focusRestoredToCard = false; 
-                document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
-                
-                let targetElement = null;
-                if (savedTitle) {
-                    document.querySelectorAll('.responsive-div').forEach(div => {
-                        const pElement = div.querySelector('.re');
-                        if (pElement && pElement.innerText === savedTitle) targetElement = div;
-                    });
-                    sessionStorage.removeItem('lastVideoTitle'); 
-                } 
-                
-                if (!targetElement && lastFocusedTitle) {
-                    document.querySelectorAll('.responsive-div').forEach(div => {
-                        const pElement = div.querySelector('.re');
-                        if (pElement && pElement.innerText === lastFocusedTitle) targetElement = div;
-                    });
-                }
-
-                if (targetElement) {
-                    targetElement.classList.add('highlight');
-                    targetElement.focus();
-                    if (!isElementInView(targetElement, container)) {
-                         targetElement.scrollIntoView({ behavior: 'instant', block: 'center' });
-                    }
-                    focusRestoredToCard = true; 
-                } 
-                
-                if (!focusRestoredToCard && (activePage === 'beranda' || activePage === 'koleksi' || activePage === 'riwayat' || activePage === 'favorit')) { 
-                    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
-                    if (savedScrollPosition !== null && container) {
-                        container.scrollTop = parseInt(savedScrollPosition, 10);
-                        const firstVisible = getFirstVisibleElement(container);
-                        if (firstVisible) {
-                             firstVisible.classList.add('highlight');
-                             firstVisible.focus();
-                             focusRestoredToCard = true;
-                        }
-                    }
-                }
-                
-                if (activePage === 'pengaturan') {
-                    showPengaturanMenu();
-                    const firstThemeButton = document.querySelector('.theme-button');
-                    if (firstThemeButton) {
-                         firstThemeButton.focus();
-                         focusRestoredToCard = true;
-                    }
-                }
-                
-                if (!focusRestoredToCard && activePage !== 'pengaturan') {
-                    const activeNav = document.querySelector(`.nav-item[data-page="${activePage}"]`);
-                    if (activeNav) activeNav.focus();
-                }
-            }
-
-            function isElementInView(el, container) {
-                const elRect = el.getBoundingClientRect();
-                const containerRect = container.getBoundingClientRect();
-                return (elRect.top >= containerRect.top && elRect.bottom <= containerRect.bottom + elRect.height);
-            }
-
-            function getFirstVisibleElement(container) {
-                for (const div of document.querySelectorAll('.responsive-div')) {
-                    if (getComputedStyle(div).display !== 'none' && isElementInView(div, container)) return div;
-                }
-                return document.querySelector('.responsive-div:not([style*="display: none"])');
-            }
-
-            function openCollection(collectionKey, collectionTitle) {
-                sessionStorage.setItem('currentCollectionKey', collectionKey);
-                sessionStorage.setItem('currentCollectionTitle', collectionTitle);
-                sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
-                window.location.href = 'koleksi.html';
-            }
-
-            function playVideo(videoFile, logoFile, textFile, cropMode, cropPosition, cropScale) { 
-                sessionStorage.setItem('lastVideoTitle', textFile);
-                sessionStorage.setItem('videoLink', videoFile);
-                sessionStorage.setItem('videoTitle', textFile);
-                sessionStorage.setItem('logoFile', logoFile);
-                sessionStorage.setItem('videoCropMode', cropMode || 'fill'); 
-                sessionStorage.setItem('videoCropPosition', cropPosition || '50% 50%'); 
-                sessionStorage.setItem('videoCropScale', cropScale || ''); 
-                window.location.href = 'p.html';
-            }
-
-            function prosesMenu() {
-                var filter = document.getElementById("cari").value.toLowerCase();
-                document.querySelectorAll('.responsive-div').forEach(li => {
-                    var textToSearch = li.querySelector('.re').innerText.toLowerCase(); 
-                    if (textToSearch.indexOf(filter) > -1) {
-                        li.style.display = "";
-                        const img = li.querySelector('.lazy-img');
-                        if (img && img.hasAttribute('data-src')) {
-                             img.src = img.getAttribute('data-src');
-                             img.removeAttribute('data-src');
-                             imageObserver.unobserve(li); 
-                        }
-                    } else {
-                        li.style.display = "none";
-                    }
-                });
-            }
-
-            document.getElementById("cari").addEventListener("input", prosesMenu);
-
-            const saveScrollPosition = () => {
-                const container = document.getElementById('container');
-                const activePage = sessionStorage.getItem('lastActiveMenuPage');
-                if (container && activePage) { 
-                    sessionStorage.setItem('scrollPosition', container.scrollTop);
-                }
-            };
-
-            const containerScrollElement = document.getElementById('container');
-            if (containerScrollElement) containerScrollElement.addEventListener('scroll', saveScrollPosition);
-
-            function updateClock() {
-                const now = new Date();
-                const timeString = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-                const clockElement = document.getElementById('digital-clock');
-                if (clockElement) clockElement.innerText = timeString;
-            }
-            updateClock(); 
-            setInterval(updateClock, 1000); 
-
-            document.addEventListener('keydown', (e) => {
-                const searchInput = document.getElementById('cari');
-                const focusedElement = document.activeElement;
-                
-                if (['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', 'Enter'].includes(e.key)) {
-                    e.preventDefault(); 
-                    
-                    if (focusedElement.classList.contains('theme-button') || focusedElement.classList.contains('setting-action-btn')) {
-                        const buttons = Array.from(document.querySelectorAll('.theme-button, .setting-action-btn'));
-                        const currentIndex = buttons.findIndex(item => item === focusedElement);
-                        
-                        if (e.key === 'ArrowRight') {
-                            buttons[Math.min(currentIndex + 1, buttons.length - 1)].focus();
-                        } else if (e.key === 'ArrowLeft') {
-                            buttons[Math.max(currentIndex - 1, 0)].focus();
-                        } else if (e.key === 'ArrowUp' && focusedElement.classList.contains('setting-action-btn')) {
-                            document.querySelector('.theme-button').focus();
-                        } else if (e.key === 'ArrowDown' && focusedElement.classList.contains('theme-button')) {
-                            const actionBtn = document.querySelector('.setting-action-btn');
-                            if (actionBtn) actionBtn.focus();
-                        } else if (e.key === 'ArrowUp' && focusedElement.classList.contains('theme-button')) {
-                            document.querySelector('.nav-item[data-page="pengaturan"]').focus();
-                        } else if (e.key === 'Enter') {
-                            focusedElement.click(); 
-                        }
-                        return;
-                    }
-
-                    if (focusedElement.classList.contains('nav-item')) {
-                        const navItems = Array.from(document.querySelectorAll('.nav-item'));
-                        const currentIndex = navItems.findIndex(item => item === focusedElement);
-                        
-                        if (e.key === 'ArrowDown') {
-                            navItems[Math.min(currentIndex + 1, navItems.length - 1)].focus();
-                        } else if (e.key === 'ArrowUp') {
-                            if (currentIndex === 0) searchInput.focus();
-                            else navItems[Math.max(currentIndex - 1, 0)].focus();
-                        } else if (e.key === 'ArrowRight') {
-                            if (focusedElement.getAttribute('data-page') === 'pengaturan') {
-                                document.querySelector('.theme-button').focus();
-                                return;
-                            }
-                            const firstDiv = getFirstVisibleElement(container) || document.querySelector('.responsive-div:not([style*="display: none"])');
-                            if (firstDiv) {
-                                firstDiv.classList.add('highlight');
-                                firstDiv.focus();
-                                firstDiv.scrollIntoView({ behavior: 'instant', block: 'center' }); 
-                            }
-                        } else if (e.key === 'Enter') {
-                            const page = focusedElement.getAttribute('data-page');
-                            sessionStorage.setItem('lastActiveMenuPage', page);
-                            sessionStorage.removeItem('scrollPosition');
-                            sessionStorage.removeItem('lastVideoTitle'); 
-                            sessionStorage.removeItem('lastFocusedCardTitle'); 
-                            
-                            if (page === 'beranda') loadAndRenderHomeContent();
-                            else if (page === 'koleksi') loadAndRenderKoleksiContent();
-                            else if (page === 'riwayat') loadAndRenderRiwayatContent();
-                            else if (page === 'favorit') loadAndRenderFavoritContent();
-                            else if (page === 'pengaturan') showPengaturanMenu();
-                        }
-                        return;
-                    }
-
-                    if (focusedElement === searchInput) {
-                        if (e.key === 'ArrowDown') {
-                            document.querySelector('.nav-item').focus();
-                        } else if (e.key === 'ArrowRight') {
-                            const firstDiv = getFirstVisibleElement(container) || document.querySelector('.responsive-div:not([style*="display: none"])');
-                            if (firstDiv) {
-                                firstDiv.classList.add('highlight');
-                                firstDiv.focus();
-                            }
-                        }
-                        return; 
-                    }
-                    
-                    const divs = Array.from(document.querySelectorAll('.responsive-div')).filter(div => getComputedStyle(div).display !== 'none');
-                    const currentIndex = divs.findIndex(div => div === focusedElement);
-                    if (divs.length === 0 || currentIndex === -1) return;
-
-                    let nextIndex = -1;
-                    const containerRect = container.getBoundingClientRect();
-                    const firstVisibleDiv = getFirstVisibleElement(container);
-                    const cardWidthWithMargin = firstVisibleDiv ? firstVisibleDiv.offsetWidth + 30 : 300; 
-                    const itemsPerRow = Math.max(1, Math.floor(containerRect.width / cardWidthWithMargin)); 
-                    
-                    focusedElement.classList.remove('highlight');
-                        
-                    switch (e.key) {
-                        case 'ArrowDown':
-                            nextIndex = Math.min(currentIndex + itemsPerRow, divs.length - 1);
-                            break;
-                        case 'ArrowUp':
-                            nextIndex = currentIndex - itemsPerRow;
-                            if (nextIndex < 0) { searchInput.focus(); return; }
-                            break;
-                        case 'ArrowRight':
-                            nextIndex = Math.min(currentIndex + 1, divs.length - 1);
-                            break;
-                        case 'ArrowLeft':
-                            nextIndex = currentIndex - 1;
-                            if (nextIndex < 0 || (currentIndex % itemsPerRow === 0)) {
-                                const activeNav = document.querySelector(`.nav-item[data-page="${sessionStorage.getItem('lastActiveMenuPage') || 'beranda'}"]`);
-                                if (activeNav) activeNav.focus();
-                                else searchInput.focus(); 
-                                return;
-                            }
-                            break;
-                        case 'Enter':
-                            focusedElement.click();
-                            return; 
-                    }
-
-                    if (nextIndex !== -1 && divs[nextIndex]) {
-                        divs[nextIndex].classList.add('highlight');
-                        divs[nextIndex].focus();
-                        sessionStorage.setItem('lastFocusedCardTitle', divs[nextIndex].querySelector('.re').innerText); 
-                        divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
-                        saveScrollPosition();
-                    }
-                } else if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
-                    if (sessionStorage.getItem('lastActiveMenuPage') !== 'beranda') {
-                        e.preventDefault();
-                        document.querySelector('.nav-item[data-page="beranda"]').click();
-                    }
                 }
             });
+        }, {
+            root: container, 
+            rootMargin: '100px 0px', 
+            threshold: 0.01
+        });
 
-            function initNavigation() {
-                loadInitialTheme();
-                setupThemeButtons();
+        function createFilmElement(item, clickAction, isCollection = false) {
+            const img = document.createElement('img');
+            img.id = 'imgv';
+            img.setAttribute('data-src', item.logo); 
+            img.src = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="270" height="220" viewBox="0 0 270 220"%3E%3Crect width="100%25" height="100%25" fill="%231a1a1a"%3E%3C/rect%3E%3C/svg%3E'; 
+            img.classList.add('lazy-img'); 
 
-                document.querySelectorAll('.nav-item').forEach(item => {
-                    item.addEventListener('click', () => {
-                        document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
-                        const page = item.getAttribute('data-page');
-                        sessionStorage.setItem('lastActiveMenuPage', page); 
-                        container.innerHTML = ''; 
-                        
-                        if (page === 'beranda') loadAndRenderHomeContent();
-                        else if (page === 'koleksi') loadAndRenderKoleksiContent();
-                        else if (page === 'riwayat') loadAndRenderRiwayatContent();
-                        else if (page === 'favorit') loadAndRenderFavoritContent();
-                        else if (page === 'pengaturan') showPengaturanMenu();
+            const pp = document.createElement('p');
+            pp.className = 're';
+            pp.innerText = item.ttl;
+
+            const dur = document.createElement('p');
+            dur.className = 'dur';
+            dur.innerText = isCollection ? 'Koleksi (klik)' : (item.dur || '');
+
+            const dv = document.createElement('div');
+            dv.className = 'responsive-div';
+            dv.tabIndex = 0; 
+            dv.onclick = clickAction;
+
+            dv.appendChild(img);
+            dv.appendChild(pp);
+            dv.appendChild(dur);
+            container.appendChild(dv);
+            
+            imageObserver.observe(dv);
+            return dv; 
+        }
+
+        function loadBerandaContent() {
+            container.style.display = 'block';
+            pengaturanMenu.style.display = 'none';
+            headerTitle.style.display = 'flex';
+            headerTitle.innerText = 'BERANDA UTAMA';
+            container.innerHTML = '<h2>Memuat Beranda...</h2>';
+
+            fetch(indexJsonUrl)
+                .then(response => response.json())
+                .then(indexData => {
+                    const directFiles = indexData.source_list || [];
+                    let allItems = [];
+                    let filesProcessed = 0;
+
+                    if (directFiles.length === 0) {
+                        container.innerHTML = '<h2>Tidak ada sumber data</h2>';
+                        return;
+                    }
+
+                    directFiles.forEach(fileUrl => {
+                        fetch(fileUrl)
+                            .then(response => response.json())
+                            .then(data => {
+                                function extractItems(entries) {
+                                    if (!Array.isArray(entries)) return;
+                                    entries.forEach(entry => {
+                                        if (entry.koleksi || entry.lnk) {
+                                            allItems.push(entry);
+                                        }
+                                        for (let key in entry) {
+                                            if (Array.isArray(entry[key])) {
+                                                extractItems(entry[key]);
+                                            }
+                                        }
+                                    });
+                                }
+                                extractItems(data);
+                                filesProcessed++;
+                                if (filesProcessed === directFiles.length) {
+                                    renderBerandaItems(allItems);
+                                }
+                            })
+                            .catch(() => {
+                                filesProcessed++;
+                                if (filesProcessed === directFiles.length) {
+                                    renderBerandaItems(allItems);
+                                }
+                            });
                     });
+                })
+                .catch(() => {
+                    container.innerHTML = '<h2>❌ Gagal memuat data index.json</h2>';
                 });
-                
-                const lastPage = sessionStorage.getItem('lastActiveMenuPage') || 'beranda';
-                const initialNav = document.querySelector(`.nav-item[data-page="${['beranda', 'koleksi', 'riwayat', 'favorit', 'pengaturan'].includes(lastPage) ? lastPage : 'beranda'}"]`);
-                if (initialNav) initialNav.click();
+        }
+
+        function renderBerandaItems(allItems) {
+            container.innerHTML = '';
+            if (allItems.length === 0) {
+                container.innerHTML = '<h2>Konten kosong</h2>';
+                return;
             }
 
-            initNavigation();
+            allItems.forEach(item => {
+                let action;
+                let isCollection = false;
+
+                if (item.lnk) {
+                    action = () => {
+                        sessionStorage.setItem('comingFromPlayer', 'true');
+                        sessionStorage.setItem('lastFocusedTitle', item.ttl);
+                        try {
+                            let history = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
+                            history = history.filter(i => i.ttl !== item.ttl);
+                            history.unshift(item);
+                            if (history.length > 20) history.pop();
+                            localStorage.setItem('tivikuHistory', JSON.stringify(history));
+                        } catch(e) {}
+
+                        sessionStorage.setItem('videoLink', item.lnk);
+                        sessionStorage.setItem('videoTitle', item.ttl);
+                        sessionStorage.setItem('logoFile', item.logo);
+                        sessionStorage.setItem('videoCropMode', item.crop_mode || 'fill');
+                        sessionStorage.setItem('videoCropPosition', item.crop_position || '50% 50%');
+                        sessionStorage.setItem('videoCropScale', item.crop_scale || '');
+                        window.location.href = 'p.html';
+                    };
+                } else {
+                    action = () => {
+                        sessionStorage.setItem('currentCollectionKey', item.koleksi);
+                        sessionStorage.setItem('currentCollectionTitle', item.ttl);
+                        window.location.href = 'Koleksi.html';
+                    };
+                    isCollection = true;
+                }
+                createFilmElement(item, action, isCollection);
+            });
+
+            const firstDiv = document.querySelector('.responsive-div');
+            if (firstDiv) {
+                firstDiv.classList.add('highlight');
+                firstDiv.focus();
+            }
         }
+
+        function loadAndRenderRiwayatContent() {
+            container.style.display = 'block';
+            pengaturanMenu.style.display = 'none';
+            headerTitle.style.display = 'flex';
+            headerTitle.innerText = 'RIWAYAT TONTONAN';
+            
+            let historyItems = [];
+            try {
+                historyItems = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
+            } catch(e) { historyItems = []; }
+
+            container.innerHTML = '';
+            if (historyItems.length === 0) {
+                container.innerHTML = '<h2>Belum ada riwayat tontonan.</h2>';
+                return;
+            }
+
+            historyItems.forEach(item => {
+                const action = () => {
+                    sessionStorage.setItem('videoLink', item.lnk);
+                    sessionStorage.setItem('videoTitle', item.ttl);
+                    sessionStorage.setItem('logoFile', item.logo);
+                    window.location.href = 'p.html';
+                };
+                createFilmElement(item, action, false);
+            });
+            const firstDiv = document.querySelector('.responsive-div');
+            if (firstDiv) { firstDiv.classList.add('highlight'); firstDiv.focus(); }
+        }
+
+        function loadAndRenderFavoritContent() {
+            container.style.display = 'block';
+            pengaturanMenu.style.display = 'none';
+            headerTitle.style.display = 'flex';
+            headerTitle.innerText = 'DAFTAR FAVORIT';
+            
+            let favoriteItems = [];
+            try {
+                favoriteItems = JSON.parse(localStorage.getItem('tivikuFavorites') || '[]');
+            } catch(e) { favoriteItems = []; }
+
+            container.innerHTML = '';
+            if (favoriteItems.length === 0) {
+                container.innerHTML = '<h2>Belum ada daftar favorit.</h2>';
+                return;
+            }
+
+            favoriteItems.forEach(item => {
+                const action = () => {
+                    sessionStorage.setItem('videoLink', item.lnk);
+                    sessionStorage.setItem('videoTitle', item.ttl);
+                    sessionStorage.setItem('logoFile', item.logo);
+                    window.location.href = 'p.html';
+                };
+                createFilmElement(item, action, false);
+            });
+            const firstDiv = document.querySelector('.responsive-div');
+            if (firstDiv) { firstDiv.classList.add('highlight'); firstDiv.focus(); }
+        }
+
+        function showPengaturanMenu() {
+            container.style.display = 'none';
+            headerTitle.style.display = 'none';
+            pengaturanMenu.style.display = 'flex';
+            
+            const versionInfo = document.getElementById('app-version-info');
+            if (versionInfo) {
+                versionInfo.innerHTML = `Versi Aplikasi: 2.0 <b>${APP_VERSION}</b>`;
+            }
+            const netStatus = document.getElementById('network-status');
+            if (netStatus) {
+                netStatus.innerText = navigator.onLine ? 'Status Jaringan: Terhubung (Online)' : 'Status Jaringan: Terputus (Offline)';
+            }
+            const firstThemeButton = document.querySelector('.theme-button');
+            if (firstThemeButton) { firstThemeButton.focus(); }
+        }
+
+        function prosesMenu() {
+            var filter = searchInput.value.toLowerCase();
+            var li = document.querySelectorAll('.responsive-div');
+            for (var i = 0; i < li.length; i++) {
+                var textToSearch = li[i].querySelector('.re').innerText.toLowerCase(); 
+                if (textToSearch.indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+        searchInput.addEventListener("input", prosesMenu);
+
+        document.addEventListener('keydown', (e) => {
+            const focusedElement = document.activeElement;
+
+            if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'Enter') {
+                e.preventDefault(); 
+                
+                if (focusedElement.classList.contains('theme-button') || focusedElement.classList.contains('setting-action-btn')) {
+                    const buttons = Array.from(document.querySelectorAll('.theme-button, .setting-action-btn'));
+                    const currentIndex = buttons.findIndex(item => item === focusedElement);
+                    
+                    if (e.key === 'ArrowRight') {
+                        buttons[Math.min(currentIndex + 1, buttons.length - 1)].focus();
+                    } else if (e.key === 'ArrowLeft') {
+                        buttons[Math.max(currentIndex - 1, 0)].focus();
+                    } else if (e.key === 'ArrowUp' && focusedElement.classList.contains('setting-action-btn')) {
+                        document.querySelector('.theme-button').focus();
+                    } else if (e.key === 'ArrowDown' && focusedElement.classList.contains('theme-button')) {
+                        const actionBtn = document.querySelector('.setting-action-btn');
+                        if (actionBtn) actionBtn.focus();
+                    } else if (e.key === 'ArrowUp' && focusedElement.classList.contains('theme-button')) {
+                        const settingNav = document.querySelector('.nav-item[data-page="pengaturan"]');
+                        if (settingNav) settingNav.focus();
+                    } else if (e.key === 'Enter') {
+                        focusedElement.click(); 
+                    }
+                    return;
+                }
+
+                if (focusedElement.classList.contains('nav-item')) {
+                    const navItems = Array.from(document.querySelectorAll('.nav-item'));
+                    const currentIndex = navItems.findIndex(item => item === focusedElement);
+                    
+                    if (e.key === 'ArrowDown') {
+                        navItems[Math.min(currentIndex + 1, navItems.length - 1)].focus();
+                    } else if (e.key === 'ArrowUp') {
+                        if (currentIndex === 0) {
+                            searchInput.focus();
+                            return;
+                        }
+                        navItems[Math.max(currentIndex - 1, 0)].focus();
+                    } else if (e.key === 'ArrowRight') {
+                        const page = focusedElement.getAttribute('data-page');
+                        if (page === 'pengaturan') {
+                            const firstTheme = document.querySelector('.theme-button');
+                            if (firstTheme) firstTheme.focus();
+                            return;
+                        }
+                        const firstDiv = document.querySelector('.responsive-div:not([style*="display: none"])');
+                        if (firstDiv) {
+                            firstDiv.classList.add('highlight');
+                            firstDiv.focus();
+                            firstDiv.scrollIntoView({ behavior: 'instant', block: 'center' }); 
+                        }
+                    } else if (e.key === 'Enter') {
+                        const page = focusedElement.getAttribute('data-page');
+                        if (page === 'beranda') {
+                            loadBerandaContent();
+                        } else if (page === 'koleksi') {
+                            loadBerandaContent();
+                        } else if (page === 'riwayat') {
+                            loadAndRenderRiwayatContent();
+                        } else if (page === 'favorit') {
+                            loadAndRenderFavoritContent();
+                        } else if (page === 'pengaturan') {
+                            showPengaturanMenu();
+                        }
+                    }
+                    return;
+                }
+
+                if (focusedElement === searchInput) {
+                    if (e.key === 'ArrowDown') {
+                        const firstNavItem = document.querySelector('.nav-item');
+                        if (firstNavItem) firstNavItem.focus();
+                    } else if (e.key === 'ArrowRight') {
+                        const firstDiv = document.querySelector('.responsive-div:not([style*="display: none"])');
+                        if (firstDiv) {
+                            firstDiv.classList.add('highlight');
+                            firstDiv.focus();
+                        }
+                    }
+                    return; 
+                }
+                
+                const divs = Array.from(document.querySelectorAll('.responsive-div')).filter(div => getComputedStyle(div).display !== 'none');
+                const currentIndex = divs.findIndex(div => div === focusedElement);
+                if (divs.length === 0 || currentIndex === -1) return;
+
+                let nextIndex = -1;
+                const containerRect = container.getBoundingClientRect();
+                const cardWidthWithMargin = divs[0].offsetWidth + 30; 
+                const itemsPerRow = Math.max(1, Math.floor(containerRect.width / cardWidthWithMargin));
+                
+                focusedElement.classList.remove('highlight');
+                    
+                switch (e.key) {
+                    case 'ArrowDown':
+                        nextIndex = Math.min(currentIndex + itemsPerRow, divs.length - 1);
+                        break;
+                    case 'ArrowUp':
+                        nextIndex = currentIndex - itemsPerRow;
+                        if (nextIndex < 0) {
+                            searchInput.focus(); 
+                            return;
+                        }
+                        break;
+                    case 'ArrowRight':
+                        nextIndex = Math.min(currentIndex + 1, divs.length - 1);
+                        break;
+                    case 'ArrowLeft':
+                        nextIndex = currentIndex - 1;
+                        if (nextIndex < 0 || (currentIndex % itemsPerRow === 0)) {
+                            const activeNav = document.querySelector('.nav-item[data-page="beranda"]');
+                            if (activeNav) activeNav.focus();
+                            return;
+                        }
+                        break;
+                    case 'Enter':
+                        focusedElement.click();
+                        return; 
+                }
+
+                if (nextIndex !== -1 && divs[nextIndex]) {
+                    divs[nextIndex].classList.add('highlight');
+                    divs[nextIndex].focus();
+                    divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
+                }
+            } else if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
+                e.preventDefault();
+                sessionStorage.clear();
+                window.close(); // Tutup aplikasi jika di beranda utama
+            }
+        });
+
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const page = item.getAttribute('data-page');
+                if (page === 'beranda' || page === 'koleksi') {
+                    loadBerandaContent();
+                } else if (page === 'riwayat') {
+                    loadAndRenderRiwayatContent();
+                } else if (page === 'favorit') {
+                    loadAndRenderFavoritContent();
+                } else if (page === 'pengaturan') {
+                    showPengaturanMenu();
+                }
+            });
+        });
+
+        loadBerandaContent();
     </script>
 </body>
 </html>

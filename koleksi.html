@@ -336,12 +336,9 @@
                 body.classList.add(themeClass);
                 appWrapper.classList.add(themeClass);
             }
-            
             try {
                 localStorage.setItem('currentTheme', themeName);
-            } catch (e) {
-                console.error("Gagal menyimpan tema:", e);
-            }
+            } catch (e) {}
         }
 
         function loadInitialTheme() {
@@ -376,9 +373,7 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const timeString = `${hours}:${minutes}`;
             const clockElement = document.getElementById('digital-clock');
-            if (clockElement) {
-                clockElement.innerText = timeString;
-            }
+            if (clockElement) { clockElement.innerText = timeString; }
         }
         updateClock(); 
         setInterval(updateClock, 1000);
@@ -474,15 +469,13 @@
                                         }
                                     });
                                 }
-                                
                                 extractItems(data);
                                 filesProcessed++;
-                                
                                 if (filesProcessed === directFiles.length) {
                                     renderCollectionItems(allItems);
                                 }
                             })
-                            .catch(error => {
+                            .catch(() => {
                                 filesProcessed++;
                                 if (filesProcessed === directFiles.length) {
                                     renderCollectionItems(allItems);
@@ -490,7 +483,7 @@
                             });
                     });
                 })
-                .catch(error => {
+                .catch(() => {
                     container.innerHTML = '<h2>❌ Gagal memuat data</h2>';
                 });
         }
@@ -503,11 +496,7 @@
             const hasEpisode = collectionItems.some(item => item.episode !== undefined);
 
             if (hasEpisode) {
-                collectionItems.sort((a, b) => {
-                    let epA = parseInt(a.episode) || 0;
-                    let epB = parseInt(b.episode) || 0;
-                    return epA - epB;
-                });
+                collectionItems.sort((a, b) => (parseInt(a.episode) || 0) - (parseInt(b.episode) || 0));
             } else {
                 const shuffleKey = `shuffled_${collectionKey}`;
                 if (!sessionStorage.getItem(shuffleKey)) {
@@ -515,14 +504,11 @@
                     sessionStorage.setItem(shuffleKey, JSON.stringify(collectionItems.map(item => item.ttl)));
                 } else {
                     let savedOrder = JSON.parse(sessionStorage.getItem(shuffleKey));
-                    collectionItems.sort((a, b) => {
-                        return savedOrder.indexOf(a.ttl) - savedOrder.indexOf(b.ttl);
-                    });
+                    collectionItems.sort((a, b) => savedOrder.indexOf(a.ttl) - savedOrder.indexOf(b.ttl));
                 }
             }
 
             container.innerHTML = '';
-
             if (collectionItems.length === 0) {
                 container.innerHTML = `<h2>Tidak ada item di dalam koleksi "${collectionTitle}".</h2>`;
                 return;
@@ -536,7 +522,6 @@
                     action = () => {
                         sessionStorage.setItem('comingFromPlayer', 'true');
                         sessionStorage.setItem('lastFocusedTitle', item.ttl);
-
                         try {
                             let history = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
                             history = history.filter(i => i.ttl !== item.ttl);
@@ -548,15 +533,10 @@
                         sessionStorage.setItem('videoLink', item.lnk);
                         sessionStorage.setItem('videoTitle', item.ttl);
                         sessionStorage.setItem('logoFile', item.logo);
-                        sessionStorage.setItem('videoCropMode', item.crop_mode || 'fill');
-                        sessionStorage.setItem('videoCropPosition', item.crop_position || '50% 50%');
-                        sessionStorage.setItem('videoCropScale', item.crop_scale || '');
                         window.location.href = 'p.html';
                     };
                 } else {
                     action = () => {
-                        sessionStorage.removeItem('comingFromPlayer');
-                        sessionStorage.removeItem('lastFocusedTitle');
                         sessionStorage.setItem('currentCollectionKey', item.koleksi);
                         sessionStorage.setItem('currentCollectionTitle', item.ttl);
                         window.location.reload();
@@ -566,28 +546,10 @@
                 createFilmElement(item, action, isCollection);
             });
 
-            const comingFromPlayer = sessionStorage.getItem('comingFromPlayer') === 'true';
-            const lastTitle = sessionStorage.getItem('lastFocusedTitle');
-            let targetDiv = null;
-
-            if (comingFromPlayer && lastTitle) {
-                const allDivs = Array.from(document.querySelectorAll('.responsive-div'));
-                targetDiv = allDivs.find(div => {
-                    const titleEl = div.querySelector('.re');
-                    return titleEl && titleEl.innerText === lastTitle;
-                });
-                sessionStorage.removeItem('comingFromPlayer');
-                sessionStorage.removeItem('lastFocusedTitle');
-            }
-
-            if (!targetDiv) {
-                targetDiv = document.querySelector('.responsive-div');
-            }
-
-            if (targetDiv) {
-                targetDiv.classList.add('highlight');
-                targetDiv.focus();
-                targetDiv.scrollIntoView({ behavior: 'instant', block: 'center' });
+            const firstDiv = document.querySelector('.responsive-div');
+            if (firstDiv) {
+                firstDiv.classList.add('highlight');
+                firstDiv.focus();
             }
         }
 
@@ -598,11 +560,7 @@
             headerTitle.innerText = 'RIWAYAT TONTONAN';
             
             let historyItems = [];
-            try {
-                historyItems = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
-            } catch(e) {
-                historyItems = [];
-            }
+            try { historyItems = JSON.parse(localStorage.getItem('tivikuHistory') || '[]'); } catch(e) {}
 
             container.innerHTML = '';
             if (historyItems.length === 0) {
@@ -612,32 +570,15 @@
 
             historyItems.forEach(item => {
                 const action = () => {
-                    sessionStorage.setItem('comingFromPlayer', 'true');
-                    sessionStorage.setItem('lastFocusedTitle', item.ttl);
-                    
-                    try {
-                        let history = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
-                        history = history.filter(i => i.ttl !== item.ttl);
-                        history.unshift(item);
-                        if (history.length > 20) history.pop();
-                        localStorage.setItem('tivikuHistory', JSON.stringify(history));
-                    } catch(e) {}
-
                     sessionStorage.setItem('videoLink', item.lnk);
                     sessionStorage.setItem('videoTitle', item.ttl);
                     sessionStorage.setItem('logoFile', item.logo);
-                    sessionStorage.setItem('videoCropMode', item.crop_mode || 'fill');
-                    sessionStorage.setItem('videoCropPosition', item.crop_position || '50% 50%');
-                    sessionStorage.setItem('videoCropScale', item.crop_scale || '');
                     window.location.href = 'p.html';
                 };
                 createFilmElement(item, action, false);
             });
             const firstDiv = document.querySelector('.responsive-div');
-            if (firstDiv) {
-                firstDiv.classList.add('highlight');
-                firstDiv.focus();
-            }
+            if (firstDiv) { firstDiv.classList.add('highlight'); firstDiv.focus(); }
         }
 
         function loadAndRenderFavoritContent() {
@@ -647,11 +588,7 @@
             headerTitle.innerText = 'DAFTAR FAVORIT';
             
             let favoriteItems = [];
-            try {
-                favoriteItems = JSON.parse(localStorage.getItem('tivikuFavorites') || '[]');
-            } catch(e) {
-                favoriteItems = [];
-            }
+            try { favoriteItems = JSON.parse(localStorage.getItem('tivikuFavorites') || '[]'); } catch(e) {}
 
             container.innerHTML = '';
             if (favoriteItems.length === 0) {
@@ -661,32 +598,15 @@
 
             favoriteItems.forEach(item => {
                 const action = () => {
-                    sessionStorage.setItem('comingFromPlayer', 'true');
-                    sessionStorage.setItem('lastFocusedTitle', item.ttl);
-                    
-                    try {
-                        let history = JSON.parse(localStorage.getItem('tivikuHistory') || '[]');
-                        history = history.filter(i => i.ttl !== item.ttl);
-                        history.unshift(item);
-                        if (history.length > 20) history.pop();
-                        localStorage.setItem('tivikuHistory', JSON.stringify(history));
-                    } catch(e) {}
-
                     sessionStorage.setItem('videoLink', item.lnk);
                     sessionStorage.setItem('videoTitle', item.ttl);
                     sessionStorage.setItem('logoFile', item.logo);
-                    sessionStorage.setItem('videoCropMode', item.crop_mode || 'fill');
-                    sessionStorage.setItem('videoCropPosition', item.crop_position || '50% 50%');
-                    sessionStorage.setItem('videoCropScale', item.crop_scale || '');
                     window.location.href = 'p.html';
                 };
                 createFilmElement(item, action, false);
             });
             const firstDiv = document.querySelector('.responsive-div');
-            if (firstDiv) {
-                firstDiv.classList.add('highlight');
-                firstDiv.focus();
-            }
+            if (firstDiv) { firstDiv.classList.add('highlight'); firstDiv.focus(); }
         }
 
         function showPengaturanMenu() {
@@ -695,19 +615,11 @@
             pengaturanMenu.style.display = 'flex';
             
             const versionInfo = document.getElementById('app-version-info');
-            if (versionInfo) {
-                versionInfo.innerHTML = `Versi Aplikasi: 2.0 <b>${APP_VERSION}</b>`;
-            }
-
+            if (versionInfo) { versionInfo.innerHTML = `Versi Aplikasi: 2.0 <b>${APP_VERSION}</b>`; }
             const netStatus = document.getElementById('network-status');
-            if (netStatus) {
-                netStatus.innerText = navigator.onLine ? 'Status Jaringan: Terhubung (Online)' : 'Status Jaringan: Terputus (Offline)';
-            }
-            
+            if (netStatus) { netStatus.innerText = navigator.onLine ? 'Status Jaringan: Terhubung (Online)' : 'Status Jaringan: Terputus (Offline)'; }
             const firstThemeButton = document.querySelector('.theme-button');
-            if (firstThemeButton) {
-                firstThemeButton.focus();
-            }
+            if (firstThemeButton) { firstThemeButton.focus(); }
         }
 
         function prosesMenu() {
@@ -717,12 +629,6 @@
                 var textToSearch = li[i].querySelector('.re').innerText.toLowerCase(); 
                 if (textToSearch.indexOf(filter) > -1) {
                     li[i].style.display = "";
-                    const img = li[i].querySelector('.lazy-img');
-                    if (img && img.hasAttribute('data-src')) {
-                         img.src = img.getAttribute('data-src');
-                         img.removeAttribute('data-src');
-                         imageObserver.unobserve(li[i]); 
-                    }
                 } else {
                     li[i].style.display = "none";
                 }
@@ -785,17 +691,9 @@
                         }
                     } else if (e.key === 'Enter') {
                         const page = focusedElement.getAttribute('data-page');
-                        if (page === 'beranda') {
+                        if (page === 'beranda' || page === 'koleksi') {
                             sessionStorage.removeItem('currentCollectionKey');
                             sessionStorage.removeItem('currentCollectionTitle');
-                            sessionStorage.removeItem('comingFromPlayer');
-                            sessionStorage.removeItem('lastFocusedTitle');
-                            window.location.href = 'index.html';
-                        } else if (page === 'koleksi') {
-                            sessionStorage.removeItem('currentCollectionKey');
-                            sessionStorage.removeItem('currentCollectionTitle');
-                            sessionStorage.removeItem('comingFromPlayer');
-                            sessionStorage.removeItem('lastFocusedTitle');
                             window.location.href = 'index.html';
                         } else if (page === 'riwayat') {
                             loadAndRenderRiwayatContent();
@@ -869,23 +767,19 @@
                 e.preventDefault();
                 sessionStorage.removeItem('currentCollectionKey');
                 sessionStorage.removeItem('currentCollectionTitle');
-                sessionStorage.removeItem('comingFromPlayer');
-                sessionStorage.removeItem('lastFocusedTitle');
-                history.back();
+                
+                // Mencegah looping back, arahkan secara tegas ke index.html
+                window.location.href = 'index.html';
             }
         });
 
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', () => {
                 const page = item.getAttribute('data-page');
-                if (page === 'beranda') {
+                if (page === 'beranda' || page === 'koleksi') {
                     sessionStorage.removeItem('currentCollectionKey');
                     sessionStorage.removeItem('currentCollectionTitle');
-                    sessionStorage.removeItem('comingFromPlayer');
-                    sessionStorage.removeItem('lastFocusedTitle');
                     window.location.href = 'index.html';
-                } else if (page === 'koleksi') {
-                    history.back();
                 } else if (page === 'riwayat') {
                     loadAndRenderRiwayatContent();
                 } else if (page === 'favorit') {
