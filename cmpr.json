@@ -1,14 +1,119 @@
 [
 {
+"logo": "https://i.imgur.com/8lFb0tV.png",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq5@755ce1e/1/master.m3u8",
+"ttl": "Doraemon tikus dan bom dubbing",
+"koleksi": "doraemon",
+"dur": "06:30",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/mLQJz3U.png",
+"lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq@267c923/1/master.m3u8",
+"ttl": "Doraemon alat konsentrasi dubbing",
+"koleksi": "doraemon",
+"dur": "11:06",
+"crop_mode": "stretch_crop",
+"crop_scale": "2.40",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/u1MODI0.png",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe1@17b3e9c/1/master.m3u8",
+"ttl": "Doraemon berenang di pantai dubbing",
+"koleksi": "doraemon",
+"dur": "06:39",
+"crop_mode": "stretch_crop",
+"crop_scale": "2.40",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/fp1hGrj.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe@ae4c4bd/1/master.m3u8",
+"ttl": "Doraemon eps 365 dubbing",
+"koleksi": "doraemon",
+"dur": "25:03",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/VAB8YHs.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe@ae4c4bd/2/master.m3u8",
+"ttl": "Doraemon eps 366 dubbing",
+"koleksi": "doraemon",
+"dur": "25:09",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/9DL0BPO.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/nwe@570d5da/2/master.m3u8",
+"ttl": "Doraemon eps 367 dubbing",
+"koleksi": "doraemon",
+"dur": "25:08",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/IKmjinU.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe@79c3bc8/1/master.m3u8",
+"ttl": "Doraemon eps 368 dubbing",
+"koleksi": "doraemon",
+"dur": "25:03",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/1CXr2AG.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/nwe@5dc9743/2/master.m3u8",
+"ttl": "Doraemon eps 369 dubbing",
+"koleksi": "doraemon",
+"dur": "25:09",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/hXiAy2U.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/nwe@ffcc1b0/5/master.m3u8",
+"ttl": "Doraemon eps 370 dubbing",
+"koleksi": "doraemon",
+"dur": "25:08",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/TH4z4yg.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@5a52c61/1/master.m3u8",
+"ttl": "Oo Nina Bobo (2014)",
+"dur": "1:38:58",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/9pe5H7J.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@5a52c61/1/master.m3u8",
+"ttl": "Bayi Ajaib (2023)",
+"dur": "1:38:58",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/XQSuHqX.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@9d224bf/1/master.m3u8",
+"ttl": "Plankton: The Movie (2025) dubbing",
+"dur": "1:27:43",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.03",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/ON3jgoM.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq8@10d10d0/1/master.m3u8",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@10d10d0/1/master.m3u8",
 "ttl": "Elio (2025) dubbing",
 "dur": "1:37:45",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
 "logo": "https://i.imgur.com/g23f6dK.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq8@15206ab/1/master.m3u8",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@15206ab/1/master.m3u8",
 "ttl": "Mufasa: The Lion King (2024) dubbing",
 "dur": "1:57:58",
 "crop_mode": "stretch_crop",
@@ -19,6 +124,7 @@
 "logo": "https://i.imgur.com/O85HfUV.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@0b6b1c9/1/master.m3u8",
 "ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 2 (2017)",
+"koleksi": "warkop",
 "dur": "1:31:05",
 "tiviku": "apk"
 },
@@ -26,6 +132,7 @@
 "logo": "https://i.imgur.com/CIPnPmC.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@6f596bd/1/master.m3u8",
 "ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 1 (2016)",
+"koleksi": "warkop",
 "dur": "1:32:04",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.07",
@@ -86,7 +193,7 @@
 "logo": "https://i.imgur.com/sgJSN60.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq3@e1858cd/1/master.m3u8",
 "ttl": "Lupa Aturan Main (1991) warkop",
-"grup": "warkop",
+"koleksi": "warkop",
 "dur": "1:17:51",
 "tiviku": "apk"
 },
@@ -94,7 +201,7 @@
 "logo": "https://i.imgur.com/aD89FIb.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq3@11031c2/1/master.m3u8",
 "ttl": "Setan Kredit (1982) warkop",
-"grup": "warkop",
+"koleksi": "warkop",
 "dur": "1:23:52",
 "tiviku": "apk"
 },
@@ -132,7 +239,7 @@
 "logo": "https://i.imgur.com/pZd0WK8.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq1@2044a7b/1/master.m3u8",
 "ttl": "Sabar Dulu Dong...! (1990) warkop",
-"grup": "warkop",
+"koleksi": "warkop",
 "dur": "1:17:36",
 "tiviku": "apk"
 },
