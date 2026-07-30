@@ -587,8 +587,17 @@
                 pengaturanMenu.style.display = 'none'; 
                 
                 fetchDataAndInit(() => {
-                    // Selalu acak ulang setiap kali halaman beranda dibuka/dimuat ulang
-                    shuffleAndSaveItems();
+                    const savedItemList = sessionStorage.getItem('savedItemList');
+                    if (savedItemList) {
+                        try {
+                            allItems = JSON.parse(savedItemList);
+                        } catch (e) {
+                            console.error("Gagal memparsing savedItemList dari sessionStorage.", e);
+                            shuffleAndSaveItems();
+                        }
+                    } else {
+                        shuffleAndSaveItems();
+                    }
                     currentItems = allItems;
                     renderCurrentItems();
                 });
