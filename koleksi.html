@@ -44,7 +44,6 @@
             background-color: rgba(0, 0, 0, 0.6);
             font-size: 15px;
             z-index: 1;
-            display: none;
         }
 
         .responsive-div:focus .re,
@@ -336,7 +335,7 @@
         const searchInput = document.getElementById('cari');
         
         const collectionKey = sessionStorage.getItem('currentCollectionKey');
-        const collectionTitle = sessionStorage.getItem('currentCollectionTitle') || 'Koleksi';
+        const collectionTitle = sessionStorage.getItem('currentCollectionTitle') || '';
         headerTitle.innerText = collectionTitle.toUpperCase();
 
         function applyTheme(themeName) {
