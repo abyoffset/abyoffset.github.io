@@ -1,0 +1,79 @@
+[
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe@79c3bc8/3/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/nwe@79c3bc8/3/master.m3u8",
+"ttl": "eps1 BLUELOCK (2022) dubbing",
+"episode": "1",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:49",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/spLpqPv.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/nwe@5dc9743/1/master.m3u8",
+"ttl": "eps2 BLUELOCK (2022) dubbing",
+"episode": "2",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/y2jaZdP.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/nwe@75e2a30/1/master.m3u8",
+"ttl": "eps3 BLUELOCK (2022) dubbing",
+"episode": "3",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:37",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/0QBOvkh.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/nwe@9ff100f/2/master.m3u8",
+"ttl": "eps4 BLUELOCK (2022) dubbing",
+"episode": "4",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:52",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/jBHy5GF.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/nwe@d8fe823/2/master.m3u8",
+"ttl": "eps5 BLUELOCK (2022) dubbing",
+"episode": "5",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/32JH0Qh.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/nwe1@8cfbe97/3/master.m3u8",
+"ttl": "eps6 BLUELOCK (2022) dubbing",
+"episode": "6",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:44",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/VDyRPAr.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/nwe3@ad213fb/2/master.m3u8",
+"ttl": "eps7 BLUELOCK (2022) dubbing",
+"episode": "7",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:50",
+"tiviku": "apk"
+}
+]

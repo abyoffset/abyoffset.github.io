@@ -1,0 +1,79 @@
+[
+{
+"logo": "https://i.imgur.com/6gauGja.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/nwe@9b2aa2c/2/master.m3u8",
+"ttl": "eps1 Hunter x Hunter (2011) dubbing",
+"episode": "1",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"dur": "23:35",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/ECaK4Pe.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/nwe@01a88b5/3/master.m3u8",
+"ttl": "eps2 Hunter x Hunter (2011) dubbing",
+"episode": "2",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"dur": "23:35",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/flh0b6R.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/nwe@f5d56e3/5/master.m3u8",
+"ttl": "eps3 Hunter x Hunter (2011) dubbing",
+"episode": "3",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"dur": "23:35",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/7tnNAfl.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/nwe@7ae6138/1/master.m3u8",
+"ttl": "eps4 Hunter x Hunter (2011) dubbing",
+"episode": "4",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"dur": "23:35",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/mUDJqyl.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/nwe@bbde20f/3/master.m3u8",
+"ttl": "eps5 Hunter x Hunter (2011) dubbing",
+"episode": "5",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"dur": "23:35",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/JouSSz3.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/nwe1@46bd7dd/2/master.m3u8",
+"ttl": "eps6 Hunter x Hunter (2011) dubbing",
+"episode": "6",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"dur": "23:35",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/Br47Gj9.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/nwe3@bd49854/3/master.m3u8",
+"ttl": "eps7 Hunter x Hunter (2011) dubbing",
+"episode": "7",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"dur": "23:35",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+}
+]
