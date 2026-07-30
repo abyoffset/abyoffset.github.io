@@ -320,6 +320,7 @@
                 
                 <h2 style="margin-top: 30px;">⚙️ Tindakan & Sistem</h2>
                 <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                    <button class="setting-action-btn focus-target" tabindex="0" id="btn-clearhistory">🗑️ Hapus Riwayat Tontonan</button>
                     <button class="setting-action-btn focus-target" tabindex="0" id="btn-clearcache">🧹 Hapus Cache Data</button>
                 </div>
 
@@ -394,6 +395,16 @@
                         sessionStorage.clear();
                         alert('Cache sesi berhasil dibersihkan! Memuat ulang...');
                         window.location.reload();
+                    };
+                }
+
+                const clearHistoryBtn = document.getElementById('btn-clearhistory');
+                if (clearHistoryBtn) {
+                    clearHistoryBtn.onclick = () => {
+                        if (confirm('Apakah Anda yakin ingin menghapus seluruh riwayat tontonan?')) {
+                            localStorage.removeItem('tivikuHistory');
+                            alert('Riwayat tontonan berhasil dihapus!');
+                        }
                     };
                 }
             }
