@@ -1,11 +1,20 @@
 [
 {
+"logo": "https://i.imgur.com/JSFkvw4.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@837cb24/1/master.m3u8",
+"ttl": "Crayon Shin-chan: The Legend Called Buri Buri: 3 Minutes Charge (2005) dubbing",
+"dur": "1:28:32",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.17",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/TH4z4yg.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq9@cd8e13d/1/master.m3u8",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@cd8e13d/1/master.m3u8",
 "ttl": "Oo Nina Bobo (2014)",
 "dur": "1:28:21",
 "crop_mode": "stretch_crop",
-"crop_scale": "1.00",
+"crop_scale": "1.15",
 "tiviku": "apk"
 },
 {
