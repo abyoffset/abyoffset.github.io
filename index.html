@@ -638,7 +638,7 @@
 
                         collectionMap.set(koleksiKey, {
                             logo: randomSelectedItem.logo, 
-                            ttl: 'Koleksi ' + koleksiKey.toUpperCase(),
+                            ttl: koleksiKey, // Mengambil langsung nama koleksi/variabel JSON tanpa awalan teks tambahan
                             koleksi: koleksiKey,
                             dur: 'Koleksi (klik)',
                             type: 'collection'
