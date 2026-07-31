@@ -1,5 +1,58 @@
 [
 {
+"logo": "https://i.imgur.com/h0yqLLJ.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq10@0ceb284/1/master.m3u8",
+"ttl": "Yowis Ben 2 (2019)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:48:46",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/O3S0w02.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/tiviku@e71918b/squid.game.(2021).dubb/squid.game.(2021).dubb.e1.m3u8",
+"ttl": "eps1 Squid Game (2021) dubbing",
+"episode": "1",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "59:42",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/nqRaBfX.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/squid.game.2021/squid2.m3u8",
+"ttl": "eps2 Squid Game (2021) dubbing",
+"episode": "2",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "1:02:30",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/4nRasQm.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/squid.game.2021/epso3.m3u8",
+"ttl": "eps3 Squid Game (2021) dubbing",
+"episode": "3",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "54:03",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/kNJxEPt.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/squid.game.2021/eps4.m3u8",
+"ttl": "eps4 Squid Game (2021) dubbing",
+"episode": "4",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "54:53",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/JSFkvw4.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@837cb24/1/master.m3u8",
 "ttl": "Crayon Shin-chan: The Legend Called Buri Buri: 3 Minutes Charge (2005) dubbing",
@@ -299,6 +352,8 @@
 "logo": "https://i.imgur.com/kgmAZxA.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/op8@13f6bda/uZiv5tA/yS53d.m3u8",
 "ttl": "Yowis Ben (2018)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "dur": "1:38:48",
 "tiviku": "apk"
 },
@@ -314,6 +369,61 @@
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/Ztf7/Ztf7.m3u8",
 "ttl": "Detective Conan Movie 2 Case Closed: The Fourteenth Target (1998) dubbing",
 "dur": "1:39:37",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/kTir3wU.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/squid.game.2021/e411.m3u8",
+"ttl": "eps5 Squid Game (2021) dubbing",
+"episode": "5",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "51:34",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/naBu0ci.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/bym@2a8aa7b/vods/squid%20game/e6.m3u8",
+"ttl": "eps6 Squid Game (2021) dubbing",
+"episode": "6",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "1:01:37",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/VKLLKy0.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/bym@2a8aa7b/vods/squid%20game/eps7.m3u8",
+"ttl": "eps7 Squid Game (2021) dubbing",
+"episode": "7",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "57:57",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/ySHG5YV.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/bym@2a8aa7b/vods/squid%20game/e8.m3u8",
+"ttl": "eps8 Squid Game (2021) dubbing",
+"episode": "8",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "32:13",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/x0f90vK.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/bym@2a8aa7b/vods/squid%20game/4773.m3u8",
+"ttl": "eps9 Squid Game (2021) dubbing",
+"episode": "9",
+"koleksi": "Squid Game (2021) dubbing",
+"dur": "55:28",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
 "tiviku": "apk"
 },
 {
