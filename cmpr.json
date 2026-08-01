@@ -1,7 +1,25 @@
 [
 {
+"logo": "https://i.imgur.com/Y16AmhN.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@e824070/1/master.m3u8",
+"ttl": "Suzzanna: Santet Dosa di Atas Dosa (2026)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:15:20",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/QIQ3XAL.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@7e30153/1/master.m3u8",
+"ttl": "Danur: The Last Chapter (2026)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:37:33",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/h0yqLLJ.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq10@0ceb284/1/master.m3u8",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@0ceb284/1/master.m3u8",
 "ttl": "Yowis Ben 2 (2019)",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
@@ -644,7 +662,7 @@
 },
 {
 "logo": "https://i.imgur.com/lSoVC05.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/nwe@5e5ce59/5/master.m3u8",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq11@5e5ce59/5/master.m3u8",
 "ttl": "Detective Conan: The Time Bombed Skyscraper (1997) dubbing",
 "dur": "1:34:15",
 "tiviku": "apk"
