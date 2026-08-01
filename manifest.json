@@ -1,6 +1,6 @@
 {
-  "name": "Tiviku Web Player",
-  "short_name": "Tiviku",
+  "name": "tiviku",
+  "short_name": "tiviku",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
