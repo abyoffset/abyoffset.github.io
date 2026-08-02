@@ -73,7 +73,7 @@
             z-index: 1001;
         }
 
-        #iklan { /* Div Iklan 1: Wadah Transparan */
+        #iklan { /* Div Iklan 1: Wadah Transparan (Dikembalikan ke ukuran semula 250x100) */
             width: 250px;
             height: 100px;
             background-color: transparent; 
@@ -89,7 +89,7 @@
             display: flex; 
             justify-content: center;
             align-items: center;
-            background-color: red; 
+            background-color: transparent; 
             color: white;
             border-radius: 12px;
             font-weight: bold;
@@ -316,7 +316,24 @@
             iklan.id = 'iklan';
             iklan2 = document.createElement('div'); 
             iklan2.id = 'iklan2';
-            iklan2.innerHTML = 'INFO TERBARU<br>GABUNG DI SINI<br>( https://t.me/tiviku )'; 
+            
+            // Script Adsterra dengan parameter ukuran 50x50 untuk memperkecil tampilan iklan
+            const script1 = document.createElement('script');
+            script1.innerHTML = `
+              atOptions = {
+                'key' : '07ec82fdf6989af1b3035f505091411c',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+              };
+            `;
+            const script2 = document.createElement('script');
+            script2.src = "https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js";
+            
+            iklan2.appendChild(script1);
+            iklan2.appendChild(script2);
+
             iklan.appendChild(iklan2);
             iklanContainer.appendChild(iklan);
             document.body.appendChild(iklanContainer);
@@ -585,6 +602,7 @@
                             break;
                         case 'ArrowRight':
                             playerElement.currentTime += 10;
+                            updateTimeDurationAndProgress = updateTimeDisplayAndProgress;
                             updateTimeDisplayAndProgress(); 
                             break;
                         case 'ArrowLeft':
