@@ -130,14 +130,6 @@
             border-right: 2px solid #282828;
             text-align: left;
             transition: background-color 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        #sidebar-top-content {
-            display: flex;
-            flex-direction: column;
         }
 
         #logo-search {
@@ -177,11 +169,11 @@
         }
 
         #nav-menu {
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
         .nav-item {
-            padding: 12px 20px;
+            padding: 15px 20px;
             font-size: 18px;
             color: #aaa;
             cursor: pointer;
@@ -193,31 +185,6 @@
             background-color: #333;
             color: white;
             outline: none;
-        }
-
-        /* GAYA KOTAK IKLAN DI SIDEBAR */
-        #sidebar-ad {
-            margin: 0 15px 15px 15px;
-            padding: 12px;
-            background-color: #141414;
-            border: 2px dashed #444;
-            border-radius: 8px;
-            text-align: center;
-            color: #888;
-            font-size: 13px;
-        }
-
-        #sidebar-ad a {
-            color: yellowgreen;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            margin-top: 5px;
-            font-size: 14px;
-        }
-
-        #sidebar-ad a:hover {
-            text-decoration: underline;
         }
 
         #main-content {
@@ -314,13 +281,6 @@
         .theme-blue-dark #sidebar #cari {
             background: #1e2a39 !important;
         }
-        .theme-blue-dark #sidebar-ad {
-            background-color: #0d1722 !important;
-            border-color: #1e2a39 !important;
-        }
-        .theme-blue-dark #sidebar-ad a {
-            color: #4a90e2 !important;
-        }
         .theme-blue-dark .responsive-div {
             border: 5px solid #4a90e2 !important;
         }
@@ -340,13 +300,6 @@
         .theme-red-dark #sidebar #cari {
             background: #330000 !important;
         }
-        .theme-red-dark #sidebar-ad {
-            background-color: #240303 !important;
-            border-color: #440000 !important;
-        }
-        .theme-red-dark #sidebar-ad a {
-            color: #ff4d4d !important;
-        }
         .theme-red-dark .responsive-div {
             border: 5px solid #ff4d4d !important;
         }
@@ -360,24 +313,16 @@
 <body>
     <div id="app-wrapper">
         <div id="sidebar">
-            <div id="sidebar-top-content">
-                <div id="logo-search">
-                    <h1 id="sidebar-h1">tiviku</h1>
-                    <b id="sidebar-b">tiviku</b>
-                    <input type="text" name="" id="cari" placeholder="cari...">
-                </div>
-                
-                <div id="nav-menu">
-                    <div class="nav-item focus-target" tabindex="0" data-page="beranda">🏠 Beranda</div>
-                    <div class="nav-item focus-target" tabindex="0" data-page="koleksi">📁 Koleksi</div>
-                    <div class="nav-item focus-target" tabindex="0" data-page="pengaturan">🛠️ Pengaturan</div>
-                </div>
+            <div id="logo-search">
+                <h1 id="sidebar-h1">tiviku</h1>
+                <b id="sidebar-b">tiviku</b>
+                <input type="text" name="" id="cari" placeholder="cari...">
             </div>
-
-            <!-- KOTAK IKLAN / SPONSOR DI SIDEBAR -->
-            <div id="sidebar-ad">
-                <span>Sponsored</span>
-                <a href="#" onclick="alert('Iklan diklik!'); return false;">Pasang Iklan / Info Disini</a>
+            
+            <div id="nav-menu">
+                <div class="nav-item focus-target" tabindex="0" data-page="beranda">🏠 Beranda</div>
+                <div class="nav-item focus-target" tabindex="0" data-page="koleksi">📁 Koleksi</div>
+                <div class="nav-item focus-target" tabindex="0" data-page="pengaturan">🛠️ Pengaturan</div>
             </div>
         </div>
 

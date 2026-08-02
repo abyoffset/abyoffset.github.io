@@ -1,5 +1,15 @@
 [
 {
+"logo": "https://i.imgur.com/oRJG2Po.png",
+"lnk": "https://cdn.jsdelivr.net/gh/tivikufm/tvq12@b6fd487/1/master.m3u8",
+"ttl": "Doraemon eps 381 dubbing",
+"koleksi": "doraemon dubbing",
+"dur": "24:39",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/8lFb0tV.png",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq5@755ce1e/1/master.m3u8",
 "ttl": "Doraemon tikus dan bom dubbing",
