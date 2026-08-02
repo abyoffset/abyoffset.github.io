@@ -699,9 +699,9 @@
                             sessionStorage.setItem('lastActiveMenuPage', 'beranda');
                             window.location.replace('index.html');
                         } else if (page === 'koleksi') {
+                            // Cukup kembali ke tampilan utama koleksi/index.html halaman utama dengan mode koleksi (jika ada) atau tetap di halaman ini dengan menghapus key sub-koleksi
                             sessionStorage.removeItem('currentCollectionKey');
                             sessionStorage.removeItem('currentCollectionTitle');
-                            sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
                             window.location.replace('index.html');
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
@@ -791,7 +791,6 @@
                 } else if (page === 'koleksi') {
                     sessionStorage.removeItem('currentCollectionKey');
                     sessionStorage.removeItem('currentCollectionTitle');
-                    sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
                     window.location.replace('index.html');
                 } else if (page === 'pengaturan') {
                     showPengaturanMenu();
