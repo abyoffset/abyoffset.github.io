@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiviku Web Player - Secure</title>
+  <title>Tiviku Web Player</title>
   
-  <!-- PWA Manifest & Theme Color -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0f0f12">
 
-  <!-- HLS.js Library -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  
   <style>
     :root {
       --bg-color: #0f0f12;
@@ -29,19 +25,17 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* Menghilangkan scrollbar secara global untuk semua browser */
     html, body {
       background-color: var(--bg-color);
       color: var(--text-color);
       padding-bottom: 30px;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* Internet Explorer & Edge */
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
 
     body::-webkit-scrollbar,
-    .player-modal::-webkit-scrollbar,
     .drawer-content::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
+      display: none;
     }
 
     header {
@@ -146,7 +140,6 @@
       background: rgba(0, 0, 0, 0.75);
       z-index: 800;
       backdrop-filter: blur(4px);
-      transition: opacity 0.3s ease;
     }
 
     .drawer-overlay.active {
@@ -194,11 +187,6 @@
       font-size: 1.3rem;
       cursor: pointer;
       padding: 4px;
-      transition: color 0.2s ease;
-    }
-
-    .drawer-close:hover {
-      color: #fff;
     }
 
     .drawer-content {
@@ -208,8 +196,6 @@
       gap: 20px;
       overflow-y: auto;
       flex-grow: 1;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
     }
 
     .drawer-section {
@@ -240,7 +226,7 @@
       font-weight: 600;
       text-align: left;
       width: 100%;
-      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
     }
 
     .drawer-item:hover {
@@ -248,14 +234,21 @@
       border-color: rgba(229, 9, 20, 0.5);
     }
 
-    .drawer-item.danger {
-      color: #ff4d4d;
-      border-color: rgba(255, 77, 77, 0.2);
+    .theme-picker-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 5px;
     }
 
-    .drawer-item.danger:hover {
-      background-color: rgba(255, 77, 77, 0.1);
-      border-color: #ff4d4d;
+    .theme-color-btn {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #fff;
     }
 
     .drawer-footer {
@@ -307,7 +300,6 @@
       display: flex;
       justify-content: flex-end;
       gap: 10px;
-      margin-top: 5px;
     }
 
     .btn {
@@ -319,12 +311,6 @@
       cursor: pointer;
       font-weight: 600;
       font-size: 0.9rem;
-      transition: background-color 0.2s ease;
-      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
-    }
-
-    .btn:hover {
-      background-color: var(--accent-hover);
     }
 
     .container {
@@ -337,7 +323,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
       gap: 20px;
-      contain: content;
     }
 
     .movie-card {
@@ -349,7 +334,6 @@
       display: flex;
       flex-direction: column;
       border: 1px solid #24242a;
-      will-change: transform;
       transition: transform 0.15s ease, border-color 0.15s ease;
     }
 
@@ -406,313 +390,6 @@
       color: #e0e0e0;
     }
 
-    /* PLAYER MODAL */
-    .player-modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.96);
-      z-index: 1000;
-      overflow-y: auto;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .player-modal.active {
-      display: block;
-    }
-
-    .player-inner {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 0 40px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .sticky-player-wrapper {
-      position: sticky;
-      top: 0;
-      z-index: 1005;
-      width: 100%;
-      background: rgba(15, 15, 18, 0.98);
-      padding-top: 0;
-      padding-bottom: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
-      backdrop-filter: blur(8px);
-    }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      background: #000;
-      border-radius: 0;
-      overflow: hidden;
-      box-shadow: 0 0 35px rgba(229, 9, 20, 0.25), 0 10px 40px rgba(0,0,0,0.9);
-      border: none;
-      cursor: default;
-      user-select: none;
-      -webkit-user-select: none;
-    }
-
-    .video-container.hide-controls {
-      cursor: none;
-    }
-
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      height: 0;
-      padding-top: 56.25%;
-      overflow: hidden;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    video#videoPlayer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: fill;
-      object-position: 50% 50%;
-      transform: none;
-      transition: transform 0.2s ease, object-fit 0.2s ease;
-    }
-
-    .player-logo {
-      position: absolute;
-      top: 12px;
-      left: 16px;
-      width: 100px;
-      height: 50px;
-      object-fit: contain;
-      z-index: 25;
-      pointer-events: none;
-      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.7));
-      opacity: 0.85;
-      transition: opacity 0.3s ease;
-    }
-
-    .video-container:fullscreen,
-    .video-container:-webkit-full-screen {
-      width: 100vw !important;
-      height: 100vh !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      background: #000 !important;
-      border-radius: 0 !important;
-      border: none !important;
-    }
-
-    .video-container:fullscreen .video-wrapper,
-    .video-container:-webkit-full-screen .video-wrapper {
-      width: 100% !important;
-      height: 100% !important;
-      padding-top: 0 !important;
-    }
-
-    .video-container:fullscreen video#videoPlayer,
-    .video-container:-webkit-full-screen video#videoPlayer {
-      width: 100% !important;
-      height: 100% !important;
-      object-fit: fill !important;
-    }
-
-    .seek-feedback {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 35%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.12);
-      color: #fff;
-      font-size: 1.2rem;
-      font-weight: 700;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-      z-index: 20;
-    }
-
-    .seek-feedback.left {
-      left: 0;
-      border-top-right-radius: 50%;
-      border-bottom-right-radius: 50%;
-    }
-
-    .seek-feedback.right {
-      right: 0;
-      border-top-left-radius: 50%;
-      border-bottom-left-radius: 50%;
-    }
-
-    .seek-feedback.active {
-      animation: seekRipple 0.6s ease-out forwards;
-    }
-
-    @keyframes seekRipple {
-      0% { opacity: 0; transform: scale(0.8); }
-      50% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(1.05); }
-    }
-
-    .custom-controls {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(transparent, rgba(0,0,0,0.95));
-      padding: 12px 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      z-index: 30;
-      pointer-events: none;
-    }
-
-    .video-container.show-controls .custom-controls {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .progress-bar-container {
-      width: 100%;
-      height: 8px;
-      background: rgba(255, 255, 255, 0.25);
-      border-radius: 4px;
-      cursor: pointer;
-      position: relative;
-      touch-action: none;
-      transition: height 0.15s ease;
-    }
-
-    .progress-bar-container:hover {
-      height: 10px;
-    }
-
-    .progress-bar-fill {
-      height: 100%;
-      width: 0%;
-      background: var(--accent-color);
-      border-radius: 4px;
-      position: relative;
-      pointer-events: none;
-    }
-
-    .preview-box {
-      position: absolute;
-      bottom: 18px;
-      transform: translateX(-50%);
-      display: none;
-      pointer-events: none;
-      z-index: 40;
-    }
-
-    .preview-box.active {
-      display: block;
-    }
-
-    .preview-time {
-      background: rgba(0, 0, 0, 0.9);
-      color: #fff;
-      font-size: 0.8rem;
-      font-weight: 700;
-      padding: 4px 10px;
-      border-radius: 6px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-      white-space: nowrap;
-    }
-
-    .controls-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #fff;
-    }
-
-    .controls-left, .controls-right {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .control-btn {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 1.1rem;
-      cursor: pointer;
-      padding: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: color 0.2s ease;
-    }
-
-    .control-btn:hover {
-      color: var(--accent-color);
-    }
-
-    .time-display {
-      font-size: 0.8rem;
-      color: #ccc;
-      font-family: monospace;
-    }
-
-    .player-details {
-      padding: 12px 16px 0 16px;
-      color: #fff;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    .player-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 0.5px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 60%;
-    }
-
-    .recommendation-header {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin: 20px 0 16px 0;
-      padding: 0 16px;
-      width: 100%;
-    }
-
-    .player-recommendations-wrapper {
-      width: 100%;
-      padding: 0 16px;
-    }
-
     @media (max-width: 600px) {
       .movie-grid {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -721,26 +398,8 @@
       .search-box {
         width: 100%;
       }
-      .search-wrapper {
-        width: 100%;
-      }
       .header-actions {
         width: 100%;
-        justify-content: space-between;
-      }
-      .player-logo {
-        width: 35px;
-        height: 35px;
-        top: 6px;
-        left: 8px;
-      }
-      .player-details {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      .player-title {
-        max-width: 100%;
       }
     }
   </style>
@@ -773,14 +432,26 @@
     </div>
     <div class="drawer-content">
       <div class="drawer-section">
-        <div class="drawer-section-title">Tampilan & Sistem</div>
-        <button class="drawer-item danger" onclick="toggleDrawer(); resetAppData();">
-          <span>🔄</span> Muat Ulang Data
+        <div class="drawer-section-title">Navigasi Utama</div>
+        <button class="drawer-item" onclick="toggleDrawer(); goToCollection();">
+          <span>📁</span> Koleksi Film
         </button>
       </div>
 
       <div class="drawer-section">
-        <div class="drawer-section-title">Informasi</div>
+        <div class="drawer-section-title">Tema Tampilan</div>
+        <div class="theme-picker-group">
+          <button class="theme-color-btn" style="background: #e50914;" onclick="setTheme('default')">Merah</button>
+          <button class="theme-color-btn" style="background: #0070f3;" onclick="setTheme('blue')">Biru</button>
+          <button class="theme-color-btn" style="background: #10b981;" onclick="setTheme('green')">Hijau</button>
+        </div>
+      </div>
+
+      <div class="drawer-section">
+        <div class="drawer-section-title">Sistem & Informasi</div>
+        <button class="drawer-item" onclick="toggleDrawer(); resetAppData();">
+          <span>🔄</span> Muat Ulang Data
+        </button>
         <button class="drawer-item" onclick="toggleDrawer(); showAppInfo();">
           <span>ℹ️</span> Tentang Aplikasi
         </button>
@@ -791,7 +462,7 @@
     </div>
   </div>
 
-  <!-- Custom Alert / Notification Modal -->
+  <!-- Custom Alert Modal -->
   <div id="customAlertModal" class="modal">
     <div class="modal-content">
       <h3 id="customAlertTitle">Informasi</h3>
@@ -807,143 +478,28 @@
     <div id="movieGrid" class="movie-grid"></div>
   </div>
 
-  <!-- Player Modal -->
-  <div id="playerModal" class="player-modal">
-    <div class="player-inner">
-
-      <div class="sticky-player-wrapper">
-        <div class="video-container show-controls" id="videoContainer">
-          <div class="video-wrapper">
-            <video id="videoPlayer" playsinline></video>
-          </div>
-
-          <img src="https://i.imgur.com/KsWH0uL.png" alt="Tiviku Logo" class="player-logo">
-
-          <div class="seek-feedback left" id="seekLeft">
-            <span id="seekLeftText">≪ 10s</span>
-          </div>
-          <div class="seek-feedback right" id="seekRight">
-            <span id="seekRightText">10s ≫</span>
-          </div>
-
-          <div class="custom-controls" id="customControls">
-            <div class="progress-bar-container" id="progressBar">
-              <div class="progress-bar-fill" id="progressFill"></div>
-              <div class="preview-box" id="previewBox">
-                <span class="preview-time" id="previewTime">00:00</span>
-              </div>
-            </div>
-
-            <div class="controls-row">
-              <div class="controls-left">
-                <button class="control-btn" id="playBtn">▶</button>
-                <button class="control-btn" id="muteBtn">🔊</button>
-                <span class="time-display" id="timeDisplay">00:00 / 00:00</span>
-              </div>
-              <div class="controls-right">
-                <button class="control-btn" id="fullscreenBtn" title="Fullscreen">⛶</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="player-details">
-          <span id="playingTitle" class="player-title">Judul Film</span>
-          <div class="search-wrapper">
-            <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-            <input type="text" id="playerSearchInput" class="search-box" placeholder="Cari koleksi...">
-          </div>
-        </div>
-      </div>
-
-      <!-- IKLAN BANNER BAWAH (CENTERED) -->
-      <div id="adContainerBottom" style="width: 100%; display: flex; justify-content: center; align-items: center; margin: 20px 0; position: relative;">
-        <div style="position: relative; width: 320px; display: flex; justify-content: center;">
-          <button onclick="document.getElementById('adContainerBottom').style.display='none'" style="position: absolute; top: -10px; right: -10px; background: #222; color: #fff; border: 1px solid #444; border-radius: 50%; width: 24px; height: 24px; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 2px 6px rgba(0,0,0,0.5);" title="Tutup Iklan">✕</button>
-          
-          <script>
-            atOptions = {
-              'key' : '07ec82fdf6989af1b3035f505091411c',
-              'format' : 'iframe',
-              'height' : 50,
-              'width' : 320,
-              'params' : {}
-            };
-          </script>
-          <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
-
-        </div>
-      </div>
-<script>
-            atOptions = {
-              'key' : '07ec82fdf6989af1b3035f505091411c',
-              'format' : 'iframe',
-              'height' : 50,
-              'width' : 320,
-              'params' : {}
-            };
-          </script>
-          <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
-      <div class="recommendation-header">Rekomendasi / Koleksi Film Lainnya</div>
-      <div class="player-recommendations-wrapper">
-        <div id="playerMovieGrid" class="movie-grid"></div>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // 1. Domain Lock Validation
-    const allowedDomain = ""; 
-    if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
-      document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
-      throw new Error("Unauthorized domain");
+    // Theme Customizer
+    function setTheme(theme) {
+      let accent = '#e50914', hover = '#ff1e27';
+      if (theme === 'blue') { accent = '#0070f3'; hover = '#3291ff'; }
+      else if (theme === 'green') { accent = '#10b981'; hover = '#34d399'; }
+      
+      document.documentElement.style.setProperty('--accent-color', accent);
+      document.documentElement.style.setProperty('--accent-hover', hover);
+      localStorage.setItem('tiviku_theme', theme);
     }
 
-    // 2. DevTools Detection & Shortcut Blocker
-    (function() {
-      const threshold = 160;
-      const checkDevTools = () => {
-        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-        if (widthThreshold || heightThreshold) {
-          document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Akses Ditolak: Developer Tools Terdeteksi!</h1>";
-        }
-      };
-      setInterval(checkDevTools, 1000);
-    })();
+    const savedTheme = localStorage.getItem('tiviku_theme');
+    if (savedTheme) setTheme(savedTheme);
 
-    document.addEventListener('keydown', function(e) {
-      if (
-        e.key === 'F12' || 
-        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) || 
-        (e.ctrlKey && e.key === 'U')
-      ) {
-        e.preventDefault();
-        return false;
-      }
-    });
-
-    const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
-
-    function _decode(_0x3c21) {
-      try {
-        if (!_0x3c21 || ![_0x3c21][0].match(/^[A-Za-z0-9+/=]+$/)) return _0x3c21;
-        return decodeURIComponent(atob(_0x3c21));
-      } catch (_0x5e12) {
-        return _0x3c21;
-      }
-    }
-
-    // Custom Modal Alert Helpers
     const customAlertModal = document.getElementById('customAlertModal');
     const customAlertTitle = document.getElementById('customAlertTitle');
     const customAlertMessage = document.getElementById('customAlertMessage');
-    const customAlertButtons = document.getElementById('customAlertButtons');
 
-    function showCustomAlert(title, message, buttonsHtml = '<button class="btn" onclick="closeCustomAlert()">OK</button>') {
+    function showCustomAlert(title, message) {
       customAlertTitle.innerText = title;
       customAlertMessage.innerHTML = message;
-      customAlertButtons.innerHTML = buttonsHtml;
       customAlertModal.classList.add('active');
     }
 
@@ -951,58 +507,13 @@
       customAlertModal.classList.remove('active');
     }
 
-    const defaultData = [
-      {
-        "logo": "https://i.imgur.com/99jz7YJ.jpeg",
-        "lnk": "aHR0cHM6Ly9jZG4uanNkZWxpdI5ubmV0L2doL3R2a3VhcHAyL3R2cTIwODVkYTA4LzEvbWFzdGVyLm0zdTg=",
-        "ttl": "Wiro Sableng: Pendekar Kapak Maut Naga Geni 212 (2018)",
-        "dur": "2:03:35",
-        "crop_mode": "fill_width",
-        "crop_scale": "1.2"
-      }
-    ];
-
     let currentData = [...defaultData];
     let displayData = [];
-
     const movieGrid = document.getElementById('movieGrid');
-    const playerMovieGrid = document.getElementById('playerMovieGrid');
     const searchInput = document.getElementById('searchInput');
-    const playerSearchInput = document.getElementById('playerSearchInput');
-    const playerModal = document.getElementById('playerModal');
-    
-    const videoContainer = document.getElementById('videoContainer');
-    const videoPlayer = document.getElementById('videoPlayer');
-    const playingTitle = document.getElementById('playingTitle');
-    
-    const seekLeft = document.getElementById('seekLeft');
-    const seekRight = document.getElementById('seekRight');
-    const seekLeftText = document.getElementById('seekLeftText');
-    const seekRightText = document.getElementById('seekRightText');
-
-    const playBtn = document.getElementById('playBtn');
-    const muteBtn = document.getElementById('muteBtn');
-    const fullscreenBtn = document.getElementById('fullscreenBtn');
-    const progressBar = document.getElementById('progressBar');
-    const progressFill = document.getElementById('progressFill');
-    const timeDisplay = document.getElementById('timeDisplay');
-    const previewBox = document.getElementById('previewBox');
-    const previewTime = document.getElementById('previewTime');
-
     const appDrawer = document.getElementById('appDrawer');
     const drawerOverlay = document.getElementById('drawerOverlay');
 
-    let hls = null;
-    let controlsTimeout = null;
-    let isScrubbing = false;
-
-    let lastTapTime = 0;
-    let singleTapTimeout = null;
-    let accumulatedSeconds = 0;
-    let currentTapSide = null;
-    let resetAccumulatedTimeout = null;
-
-    // Toggle Drawer Menu
     function toggleDrawer() {
       appDrawer.classList.toggle('active');
       drawerOverlay.classList.toggle('active');
@@ -1019,155 +530,15 @@
 
     function resetAppData() {
       loadAutoSourceList();
-      toggleDrawer();
     }
 
     function showAppInfo() {
-      showCustomAlert(
-        "Tentang Aplikasi",
-        "<b>tiviku v2.6</b><br>"
-      );
+      showCustomAlert("Tentang Aplikasi", "<b>Tiviku Web Player v2.6</b><br>Mode Pemutar Video Terpisah & Sidebar Menu.");
     }
 
-    function showControls() {
-      videoContainer.classList.add('show-controls');
-      videoContainer.classList.remove('hide-controls');
-      clearTimeout(controlsTimeout);
-
-      if (!videoPlayer.paused && !isScrubbing) {
-        controlsTimeout = setTimeout(() => {
-          videoContainer.classList.remove('show-controls');
-          videoContainer.classList.add('hide-controls');
-        }, 3000);
-      }
+    function goToCollection() {
+      window.location.href = "koleksi.html";
     }
-
-    function handleVideoTap(e) {
-      if (e.target.closest('.custom-controls')) return;
-
-      const rect = videoContainer.getBoundingClientRect();
-      const clientX = e.clientX || (e.changedTouches && e.changedTouches[0].clientX);
-      if (!clientX) return;
-
-      const clickX = clientX - rect.left;
-      const containerWidth = rect.width;
-      const currentTime = new Date().getTime();
-      const tapLength = currentTime - lastTapTime;
-
-      let side = null;
-      if (clickX < containerWidth * 0.4) side = 'left';
-      else if (clickX > containerWidth * 0.6) side = 'right';
-
-      if (tapLength < 400 && tapLength > 0 && side === currentTapSide && side !== null) {
-        clearTimeout(singleTapTimeout);
-        clearTimeout(resetAccumulatedTimeout);
-
-        accumulatedSeconds = Math.min(30, accumulatedSeconds + 10);
-
-        if (side === 'left') {
-          videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime - 10);
-          seekLeftText.innerText = `≪ ${accumulatedSeconds}s`;
-          triggerSeekAnimation(seekLeft);
-        } else if (side === 'right') {
-          videoPlayer.currentTime = Math.min(videoPlayer.duration || 0, videoPlayer.currentTime + 10);
-          seekRightText.innerText = `${accumulatedSeconds}s ≫`;
-          triggerSeekAnimation(seekRight);
-        }
-
-        if (accumulatedSeconds >= 30) {
-          accumulatedSeconds = 0;
-          currentTapSide = null;
-        } else {
-          resetAccumulatedTimeout = setTimeout(() => {
-            accumulatedSeconds = 0;
-            currentTapSide = null;
-          }, 800);
-        }
-        showControls();
-      } else {
-        clearTimeout(resetAccumulatedTimeout);
-        if (side !== null) {
-          currentTapSide = side;
-          accumulatedSeconds = 10;
-          singleTapTimeout = setTimeout(() => {
-            showControls();
-            accumulatedSeconds = 0;
-            currentTapSide = null;
-          }, 300);
-        } else {
-          singleTapTimeout = setTimeout(() => {
-            showControls();
-            accumulatedSeconds = 0;
-            currentTapSide = null;
-          }, 300);
-        }
-      }
-      lastTapTime = currentTime;
-    }
-
-    function triggerSeekAnimation(element) {
-      element.classList.remove('active');
-      void element.offsetWidth;
-      element.classList.add('active');
-      setTimeout(() => element.classList.remove('active'), 600);
-    }
-
-    videoContainer.addEventListener('click', handleVideoTap);
-    videoContainer.addEventListener('mousemove', showControls);
-
-    function formatTime(seconds) {
-      const min = Math.floor(seconds / 60);
-      const sec = Math.floor(seconds % 60);
-      return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
-    }
-
-    function updateScrubbing(e) {
-      if (!videoPlayer.duration) return;
-
-      const rect = progressBar.getBoundingClientRect();
-      const clientX = e.clientX || (e.touches && e.touches[0].clientX);
-      let posX = clientX - rect.left;
-      posX = Math.max(0, Math.min(posX, rect.width));
-
-      const percentage = posX / rect.width;
-      const targetTime = percentage * videoPlayer.duration;
-
-      progressFill.style.width = `${percentage * 100}%`;
-      previewBox.style.left = `${posX}px`;
-      previewTime.innerText = formatTime(targetTime);
-      previewBox.classList.add('active');
-
-      if (isScrubbing) {
-        videoPlayer.currentTime = targetTime;
-      }
-    }
-
-    function startScrubbing(e) {
-      isScrubbing = true;
-      showControls();
-      updateScrubbing(e);
-      window.addEventListener('mousemove', updateScrubbing);
-      window.addEventListener('mouseup', stopScrubbing);
-      window.addEventListener('touchmove', updateScrubbing);
-      window.addEventListener('touchend', stopScrubbing);
-    }
-
-    function stopScrubbing(e) {
-      if (isScrubbing) {
-        isScrubbing = false;
-        previewBox.classList.remove('active');
-        showControls();
-        window.removeEventListener('mousemove', updateScrubbing);
-        window.removeEventListener('mouseup', stopScrubbing);
-        window.removeEventListener('touchmove', updateScrubbing);
-        window.removeEventListener('touchend', stopScrubbing);
-      }
-    }
-
-    progressBar.addEventListener('mousedown', startScrubbing);
-    progressBar.addEventListener('touchstart', startScrubbing, { passive: true });
-    progressBar.addEventListener('mousemove', (e) => { if (!isScrubbing) updateScrubbing(e); });
-    progressBar.addEventListener('mouseleave', () => { if (!isScrubbing) previewBox.classList.remove('active'); });
 
     function renderMoviesTo(data, targetContainer) {
       targetContainer.innerHTML = '';
@@ -1182,7 +553,7 @@
         card.className = 'movie-card';
         card.innerHTML = `
           <div class="poster-wrapper">
-            <img src="${movie.logo || ''}" alt="${movie.ttl}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'">
+            <img src="${movie.logo || ''}" alt="${movie.ttl}" loading="lazy" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'">
             <span class="duration-badge">${movie.dur || 'N/A'}</span>
           </div>
           <div class="movie-info">
@@ -1195,226 +566,52 @@
       targetContainer.appendChild(fragment);
     }
 
-    function renderMovies(data) {
-      renderMoviesTo(data, movieGrid);
-      renderMoviesTo(data, playerMovieGrid);
-    }
-
     async function parseAndLoadData(data) {
       let allMovies = [];
-      let listUrls = null;
-
-      if (data.source_list && Array.isArray(data.source_list)) {
-        listUrls = data.source_list.filter(item => typeof item === 'string' && item.trim() !== '');
-      } else if (data.categories && Array.isArray(data.categories)) {
-        listUrls = data.categories.map(cat => cat.json_url).filter(Boolean);
-      }
+      let listUrls = data.source_list || (data.categories ? data.categories.map(c => c.json_url) : null);
 
       if (listUrls && listUrls.length > 0) {
         try {
-          const fetchPromises = listUrls.map(async (jsonLink) => {
-            const res = await fetch(jsonLink);
-            if (!res.ok) throw new Error(`Gagal fetch: ${jsonLink}`);
-            return await res.json();
-          });
-
-          const results = await Promise.all(fetchPromises);
-          results.forEach(subData => {
-            if (Array.isArray(subData)) {
-              allMovies = allMovies.concat(subData);
-            }
-          });
+          const results = await Promise.all(listUrls.map(url => fetch(url).then(res => res.json())));
+          results.forEach(sub => { if (Array.isArray(sub)) allMovies = allMovies.concat(sub); });
         } catch (err) {
-          showCustomAlert("Kesalahan", "Gagal memuat salah satu file JSON cabang: " + err.message);
-          return;
+          console.error("Gagal fetch cabang:", err);
         }
       } else if (Array.isArray(data)) {
         allMovies = data;
-      } else {
-        showCustomAlert("Kesalahan", "Format JSON tidak dikenali!");
-        return;
       }
 
       if (allMovies.length > 0) {
-        updateMoviesData(allMovies);
-      } else {
-        showCustomAlert("Informasi", "Tidak ada data film yang berhasil dimuat.");
-      }
-    }
-
-    function updateMoviesData(newData) {
-      if (Array.isArray(newData)) {
-        const existingMap = new Map();
-        
-        currentData.forEach(movie => {
-          const key = movie.lnk || movie.ttl;
-          existingMap.set(key, movie);
-        });
-
-        newData.forEach(movie => {
-          const key = movie.lnk || movie.ttl;
-          existingMap.set(key, movie);
-        });
-
-        currentData = Array.from(existingMap.values());
+        currentData = allMovies;
         displayData = shuffleArray(currentData);
-        renderMovies(displayData);
+        renderMoviesTo(displayData, movieGrid);
       }
     }
 
     async function loadAutoSourceList() {
-      const githubJsonUrl = "index.json";
-      
       try {
-        const response = await fetch(githubJsonUrl);
-        if (!response.ok) throw new Error("Gagal mengambil data dari GitHub");
-        
+        const response = await fetch("index.json");
         const data = await response.json();
         await parseAndLoadData(data);
       } catch (err) {
-        console.error("Gagal memuat otomatis:", err.message);
-        currentData = [...defaultData];
-        displayData = shuffleArray(currentData);
-        renderMovies(displayData);
+        displayData = shuffleArray(defaultData);
+        renderMoviesTo(displayData, movieGrid);
       }
     }
 
-    function applyPlayerCropConfig(movie) {
-      const cropMode = movie.crop_mode || (movie.crop_scale ? 'fill_width' : 'fill');
-      const cropPosition = movie.crop_position || '50% 50%';
-      const cropScale = parseFloat(movie.crop_scale) || 1.2;
-
-      videoPlayer.style.objectFit = 'fill';
-      videoPlayer.style.objectPosition = '50% 50%';
-      videoPlayer.style.transform = 'none';
-
-      if (cropMode === 'cover') {
-        videoPlayer.style.objectFit = 'cover';
-        videoPlayer.style.objectPosition = cropPosition;
-      } else if (cropMode === 'stretch_crop') {
-        videoPlayer.style.objectFit = 'fill';
-        videoPlayer.style.transform = `scaleY(${cropScale})`;
-        videoPlayer.style.objectPosition = '50% 50%';
-      } else if (cropMode === 'fill_width') {
-        videoPlayer.style.objectFit = 'fill';
-        videoPlayer.style.transform = `scaleY(${cropScale})`;
-        videoPlayer.style.objectPosition = '50% 50%';
-      } else {
-        videoPlayer.style.objectFit = 'fill';
-      }
-    }
-
+    // Lempar data film ke session storage lalu buka p.html
     function playMovie(movie) {
-      playingTitle.innerText = movie.ttl || 'Playing Video';
-      playerModal.classList.add('active');
-
-      searchInput.value = '';
-      playerSearchInput.value = '';
-      renderMovies(displayData);
-
-      applyPlayerCropConfig(movie);
-
-      const streamUrl = _decode(movie.lnk);
-
-      if (Hls.isSupported()) {
-        if (hls) hls.destroy();
-        hls = new Hls({
-          maxBufferLength: 6,
-          maxMaxBufferLength: 10,
-          maxBufferSize: 15 * 1000 * 1000,
-          backBufferLength: 0,
-          capLevelToPlayerSize: true,
-          enableWorker: false,
-          xhrSetup: function (xhr, url) {
-            if (url.includes("tiviku_system.bin") || url.includes(".key")) {
-              const originalOpen = xhr.open;
-              xhr.open = function(method, url, async, user, password) {
-                originalOpen.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, async, user, password);
-              };
-            }
-          }
-        });
-        hls.loadSource(streamUrl);
-        hls.attachMedia(videoPlayer);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          videoPlayer.play().catch(() => {});
-        });
-      } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
-        videoPlayer.src = streamUrl;
-        videoPlayer.addEventListener('loadedmetadata', () => {
-          videoPlayer.play().catch(() => {});
-        });
-      }
-
-      showControls();
-    }
-
-    playBtn.onclick = () => {
-      if (videoPlayer.paused) videoPlayer.play();
-      else videoPlayer.pause();
-    };
-
-    videoPlayer.onplay = () => {
-      playBtn.innerText = '⏸';
-      showControls();
-    };
-
-    videoPlayer.onpause = () => {
-      playBtn.innerText = '▶';
-      showControls();
-    };
-
-    muteBtn.onclick = () => {
-      videoPlayer.muted = !videoPlayer.muted;
-      muteBtn.innerText = videoPlayer.muted ? '🔇' : '🔊';
-    };
-
-    fullscreenBtn.onclick = async () => {
-      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (videoContainer.requestFullscreen) await videoContainer.requestFullscreen();
-        else if (videoContainer.webkitRequestFullscreen) await videoContainer.webkitRequestFullscreen();
-
-        if (screen.orientation && screen.orientation.lock) {
-          screen.orientation.lock('landscape').catch(() => {});
-        }
-      } else {
-        if (document.exitFullscreen) document.exitFullscreen();
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-        if (screen.orientation && screen.orientation.unlock) {
-          screen.orientation.unlock();
-        }
-      }
-      showControls();
-    };
-
-    videoPlayer.ontimeupdate = () => {
-      if (videoPlayer.duration && !isScrubbing) {
-        const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
-        progressFill.style.width = `${pct}%`;
-        timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
-      }
-    };
-
-    function filterMovies(query) {
-      const filteredMovies = displayData.filter(movie => 
-        (movie.ttl || '').toLowerCase().includes(query.toLowerCase())
-      );
-      renderMovies(filteredMovies);
+      sessionStorage.setItem('currentMovie', JSON.stringify(movie));
+      window.location.href = "p.html";
     }
 
     searchInput.addEventListener('input', (e) => {
-      playerSearchInput.value = e.target.value;
-      filterMovies(e.target.value);
+      const q = e.target.value.toLowerCase();
+      const filtered = displayData.filter(m => (m.ttl || '').toLowerCase().includes(q));
+      renderMoviesTo(filtered, movieGrid);
     });
 
-    playerSearchInput.addEventListener('input', (e) => {
-      searchInput.value = e.target.value;
-      filterMovies(e.target.value);
-    });
-
-    window.onload = () => {
-      loadAutoSourceList();
-    };
+    window.onload = loadAutoSourceList;
   </script>
 </body>
 </html>
