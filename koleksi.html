@@ -697,12 +697,12 @@
                             sessionStorage.removeItem('comingFromPlayer');
                             sessionStorage.removeItem('lastFocusedTitle');
                             sessionStorage.setItem('lastActiveMenuPage', 'beranda');
-                            window.location.href = 'index.html';
+                            window.location.replace('index.html');
                         } else if (page === 'koleksi') {
                             sessionStorage.removeItem('currentCollectionKey');
                             sessionStorage.removeItem('currentCollectionTitle');
                             sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
-                            window.location.href = 'index.html';
+                            window.location.replace('index.html');
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
                         }
@@ -774,7 +774,7 @@
                 sessionStorage.removeItem('comingFromPlayer');
                 sessionStorage.removeItem('lastFocusedTitle');
                 sessionStorage.setItem('lastActiveMenuPage', 'beranda');
-                window.location.href = 'index.html';
+                window.location.replace('index.html');
             }
         });
 
@@ -787,12 +787,12 @@
                     sessionStorage.removeItem('comingFromPlayer');
                     sessionStorage.removeItem('lastFocusedTitle');
                     sessionStorage.setItem('lastActiveMenuPage', 'beranda');
-                    window.location.href = 'index.html';
+                    window.location.replace('index.html');
                 } else if (page === 'koleksi') {
                     sessionStorage.removeItem('currentCollectionKey');
                     sessionStorage.removeItem('currentCollectionTitle');
                     sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
-                    window.location.href = 'index.html';
+                    window.location.replace('index.html');
                 } else if (page === 'pengaturan') {
                     showPengaturanMenu();
                 }
