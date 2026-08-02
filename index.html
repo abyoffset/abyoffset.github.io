@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tiviku Web Player - Secure</title>
   
+  <!-- PWA Manifest & Theme Color -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f0f12">
+
   <!-- HLS.js Library -->
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   
@@ -35,7 +39,8 @@
     }
 
     body::-webkit-scrollbar,
-    .player-modal::-webkit-scrollbar {
+    .player-modal::-webkit-scrollbar,
+    .drawer-content::-webkit-scrollbar {
       display: none; /* Chrome, Safari, Opera */
     }
 
@@ -53,6 +58,31 @@
       flex-wrap: wrap;
     }
 
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .hamburger-btn {
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .hamburger-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--accent-color);
+    }
+
     .logo-title {
       font-size: 1.6rem;
       font-weight: 800;
@@ -66,23 +96,6 @@
       display: flex;
       gap: 12px;
       align-items: center;
-    }
-
-    .btn {
-      background-color: var(--accent-color);
-      color: white;
-      border: none;
-      padding: 9px 18px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: background-color 0.2s ease;
-      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
-    }
-
-    .btn:hover {
-      background-color: var(--accent-hover);
     }
 
     .search-wrapper {
@@ -122,6 +135,138 @@
       fill: var(--accent-color);
     }
 
+    /* DRAWER / SIDEBAR MENU */
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 800;
+      backdrop-filter: blur(4px);
+      transition: opacity 0.3s ease;
+    }
+
+    .drawer-overlay.active {
+      display: block;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      left: -320px;
+      width: 300px;
+      height: 100%;
+      background: var(--card-bg);
+      z-index: 900;
+      box-shadow: 5px 0 25px rgba(0,0,0,0.8);
+      border-right: 1px solid #2a2a30;
+      transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer.active {
+      left: 0;
+    }
+
+    .drawer-header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2a2a30;
+    }
+
+    .drawer-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      letter-spacing: 0.5px;
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s ease;
+    }
+
+    .drawer-close:hover {
+      color: #fff;
+    }
+
+    .drawer-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      overflow-y: auto;
+      flex-grow: 1;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .drawer-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .drawer-section-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      font-weight: 700;
+    }
+
+    .drawer-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #121215;
+      border: 1px solid #24242a;
+      color: var(--text-color);
+      padding: 12px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .drawer-item:hover {
+      background-color: #1a1a20;
+      border-color: rgba(229, 9, 20, 0.5);
+    }
+
+    .drawer-item.danger {
+      color: #ff4d4d;
+      border-color: rgba(255, 77, 77, 0.2);
+    }
+
+    .drawer-item.danger:hover {
+      background-color: rgba(255, 77, 77, 0.1);
+      border-color: #ff4d4d;
+    }
+
+    .drawer-footer {
+      padding: 16px 20px;
+      border-top: 1px solid #2a2a30;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    /* MODAL */
     .modal {
       display: none;
       position: fixed;
@@ -130,7 +275,7 @@
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.85);
-      z-index: 900;
+      z-index: 950;
       justify-content: center;
       align-items: center;
     }
@@ -158,31 +303,6 @@
       font-size: 1.1rem;
     }
 
-    .input-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .input-group label {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-    }
-
-    .input-control {
-      background: #0f0f12;
-      border: 1px solid #333;
-      color: #fff;
-      padding: 10px;
-      border-radius: 6px;
-      outline: none;
-      font-size: 0.88rem;
-    }
-
-    .input-control:focus {
-      border-color: var(--accent-color);
-    }
-
     .modal-buttons {
       display: flex;
       justify-content: flex-end;
@@ -190,13 +310,21 @@
       margin-top: 5px;
     }
 
-    .btn-secondary {
-      background: #2a2a30;
-      box-shadow: none;
+    .btn {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
     }
 
-    .btn-secondary:hover {
-      background: #3a3a42;
+    .btn:hover {
+      background-color: var(--accent-hover);
     }
 
     .container {
@@ -289,8 +417,8 @@
       background-color: rgba(0, 0, 0, 0.96);
       z-index: 1000;
       overflow-y: auto;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* Internet Explorer & Edge */
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
 
     .player-modal.active {
@@ -621,33 +749,55 @@
 
   <!-- Header -->
   <header>
-    <div class="logo-title">Tiviku App</div>
+    <div class="header-left">
+      <button class="hamburger-btn" onclick="toggleDrawer()" title="Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <div class="logo-title">Tiviku App</div>
+    </div>
     
     <div class="header-actions">
-      <button class="btn" onclick="openImportModal()">+ Load JSON</button>
       <div class="search-wrapper">
         <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-        <input type="text" id="searchInput" class="search-box" placeholder="Cari ...">
+        <input type="text" id="searchInput" class="search-box" placeholder="Cari film...">
       </div>
     </div>
   </header>
 
-  <!-- Modal Import -->
-  <div id="importModal" class="modal">
+  <!-- Drawer / Sidebar Menu -->
+  <div id="drawerOverlay" class="drawer-overlay" onclick="toggleDrawer()"></div>
+  <div id="appDrawer" class="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu & Pengaturan</div>
+      <button class="drawer-close" onclick="toggleDrawer()">✕</button>
+    </div>
+    <div class="drawer-content">
+      <div class="drawer-section">
+        <div class="drawer-section-title">Tampilan & Sistem</div>
+        <button class="drawer-item danger" onclick="toggleDrawer(); resetAppData();">
+          <span>🔄</span> Muat Ulang Data
+        </button>
+      </div>
+
+      <div class="drawer-section">
+        <div class="drawer-section-title">Informasi</div>
+        <button class="drawer-item" onclick="toggleDrawer(); showAppInfo();">
+          <span>ℹ️</span> Tentang Aplikasi
+        </button>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      Tiviku Web Player v2.6 &bull; Secure Mode
+    </div>
+  </div>
+
+  <!-- Custom Alert / Notification Modal -->
+  <div id="customAlertModal" class="modal">
     <div class="modal-content">
-      <h3>Load Data JSON Film</h3>
-      <div class="input-group">
-        <label for="jsonFileInput">1. Upload File JSON Local:</label>
-        <input type="file" id="jsonFileInput" class="input-control" accept=".json">
-      </div>
-      <p style="text-align: center; color: #555; font-size: 0.8rem; font-weight: bold;">— ATAU —</p>
-      <div class="input-group">
-        <label for="jsonUrlInput">2. Ambil dari Link / URL JSON:</label>
-        <input type="url" id="jsonUrlInput" class="input-control" placeholder="https://example.com/movies.json">
-      </div>
-      <div class="modal-buttons">
-        <button class="btn btn-secondary" onclick="closeImportModal()">Batal</button>
-        <button class="btn" onclick="processJSONInput()">Terapkan Data</button>
+      <h3 id="customAlertTitle">Informasi</h3>
+      <p id="customAlertMessage" style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;"></p>
+      <div class="modal-buttons" id="customAlertButtons">
+        <button class="btn" onclick="closeCustomAlert()">OK</button>
       </div>
     </div>
   </div>
@@ -660,6 +810,7 @@
   <!-- Player Modal -->
   <div id="playerModal" class="player-modal">
     <div class="player-inner">
+
       <div class="sticky-player-wrapper">
         <div class="video-container show-controls" id="videoContainer">
           <div class="video-wrapper">
@@ -700,11 +851,39 @@
           <span id="playingTitle" class="player-title">Judul Film</span>
           <div class="search-wrapper">
             <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-            <input type="text" id="playerSearchInput" class="search-box" placeholder="Cari ...">
+            <input type="text" id="playerSearchInput" class="search-box" placeholder="Cari koleksi...">
           </div>
         </div>
       </div>
 
+      <!-- IKLAN BANNER BAWAH (CENTERED) -->
+      <div id="adContainerBottom" style="width: 100%; display: flex; justify-content: center; align-items: center; margin: 20px 0; position: relative;">
+        <div style="position: relative; width: 320px; display: flex; justify-content: center;">
+          <button onclick="document.getElementById('adContainerBottom').style.display='none'" style="position: absolute; top: -10px; right: -10px; background: #222; color: #fff; border: 1px solid #444; border-radius: 50%; width: 24px; height: 24px; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 2px 6px rgba(0,0,0,0.5);" title="Tutup Iklan">✕</button>
+          
+          <script>
+            atOptions = {
+              'key' : '07ec82fdf6989af1b3035f505091411c',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
+
+        </div>
+      </div>
+<script>
+            atOptions = {
+              'key' : '07ec82fdf6989af1b3035f505091411c',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
       <div class="recommendation-header">Rekomendasi / Koleksi Film Lainnya</div>
       <div class="player-recommendations-wrapper">
         <div id="playerMovieGrid" class="movie-grid"></div>
@@ -713,14 +892,14 @@
   </div>
 
   <script>
-    // 1. vercel.app Validasi Domain Lock
+    // 1. Domain Lock Validation
     const allowedDomain = ""; 
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
       document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
       throw new Error("Unauthorized domain");
     }
 
-    // 2. Deteksi Pembukaan Developer Tools & Cegah Shortcut F12 / Inspect
+    // 2. DevTools Detection & Shortcut Blocker
     (function() {
       const threshold = 160;
       const checkDevTools = () => {
@@ -746,26 +925,33 @@
 
     const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
 
-    const _0x1a2b = [
-      "decodeURIComponent", "atob", "match", "^[A-Za-z0-9+/=]+$", "active", "classList", 
-      "value", "files", "FileReader", "readAsText", "target", "result", "parse", "setItem", 
-      "stringify", "error", "getElementById", "innerHTML", "createElement", "className", 
-      "appendChild", "onclick", "classList", "remove", "add", "loadSource", "attachMedia", 
-      "play", "canPlayType", "addEventListener", "paused", "muted", "requestFullscreen", 
-      "exitFullscreen", "duration", "currentTime", "toLowerCase", "includes", "length", 
-      "floor", "random", "push", "style", "objectFit", "objectPosition", "transform", "src"
-    ];
-
     function _decode(_0x3c21) {
       try {
-        if (!_0x3c21 || ![_0x3c21][_0x1a2b[2]](/^[A-Za-z0-9+/=]+$/)) return _0x3c21;
-        return window[_0x1a2b[0]](window[_0x1a2b[1]](_0x3c21));
+        if (!_0x3c21 || ![_0x3c21][0].match(/^[A-Za-z0-9+/=]+$/)) return _0x3c21;
+        return decodeURIComponent(atob(_0x3c21));
       } catch (_0x5e12) {
         return _0x3c21;
       }
     }
 
-    let currentData = [
+    // Custom Modal Alert Helpers
+    const customAlertModal = document.getElementById('customAlertModal');
+    const customAlertTitle = document.getElementById('customAlertTitle');
+    const customAlertMessage = document.getElementById('customAlertMessage');
+    const customAlertButtons = document.getElementById('customAlertButtons');
+
+    function showCustomAlert(title, message, buttonsHtml = '<button class="btn" onclick="closeCustomAlert()">OK</button>') {
+      customAlertTitle.innerText = title;
+      customAlertMessage.innerHTML = message;
+      customAlertButtons.innerHTML = buttonsHtml;
+      customAlertModal.classList.add('active');
+    }
+
+    function closeCustomAlert() {
+      customAlertModal.classList.remove('active');
+    }
+
+    const defaultData = [
       {
         "logo": "https://i.imgur.com/99jz7YJ.jpeg",
         "lnk": "aHR0cHM6Ly9jZG4uanNkZWxpdI5ubmV0L2doL3R2a3VhcHAyL3R2cTIwODVkYTA4LzEvbWFzdGVyLm0zdTg=",
@@ -776,15 +962,13 @@
       }
     ];
 
+    let currentData = [...defaultData];
     let displayData = [];
 
     const movieGrid = document.getElementById('movieGrid');
     const playerMovieGrid = document.getElementById('playerMovieGrid');
     const searchInput = document.getElementById('searchInput');
     const playerSearchInput = document.getElementById('playerSearchInput');
-    const importModal = document.getElementById('importModal');
-    const jsonFileInput = document.getElementById('jsonFileInput');
-    const jsonUrlInput = document.getElementById('jsonUrlInput');
     const playerModal = document.getElementById('playerModal');
     
     const videoContainer = document.getElementById('videoContainer');
@@ -805,6 +989,9 @@
     const previewBox = document.getElementById('previewBox');
     const previewTime = document.getElementById('previewTime');
 
+    const appDrawer = document.getElementById('appDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+
     let hls = null;
     let controlsTimeout = null;
     let isScrubbing = false;
@@ -815,6 +1002,12 @@
     let currentTapSide = null;
     let resetAccumulatedTimeout = null;
 
+    // Toggle Drawer Menu
+    function toggleDrawer() {
+      appDrawer.classList.toggle('active');
+      drawerOverlay.classList.toggle('active');
+    }
+
     function shuffleArray(array) {
       let shuffled = [...array];
       for (let i = shuffled.length - 1; i > 0; i--) {
@@ -822,6 +1015,18 @@
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
       return shuffled;
+    }
+
+    function resetAppData() {
+      loadAutoSourceList();
+      toggleDrawer();
+    }
+
+    function showAppInfo() {
+      showCustomAlert(
+        "Tentang Aplikasi",
+        "<b>tiviku v2.6</b><br>"
+      );
     }
 
     function showControls() {
@@ -995,43 +1200,46 @@
       renderMoviesTo(data, playerMovieGrid);
     }
 
-    function openImportModal() { importModal.classList.add('active'); }
-    function closeImportModal() { importModal.classList.remove('active'); }
+    async function parseAndLoadData(data) {
+      let allMovies = [];
+      let listUrls = null;
 
-    async function processJSONInput() {
-      const file = jsonFileInput.files[0];
-      const url = jsonUrlInput.value.trim();
-
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-          try {
-            const data = JSON.parse(e.target.result);
-            updateMoviesData(data);
-            cleanAndCloseModal();
-          } catch (err) { alert("File JSON tidak valid!"); }
-        };
-        reader.readAsText(file);
-        return;
+      if (data.source_list && Array.isArray(data.source_list)) {
+        listUrls = data.source_list.filter(item => typeof item === 'string' && item.trim() !== '');
+      } else if (data.categories && Array.isArray(data.categories)) {
+        listUrls = data.categories.map(cat => cat.json_url).filter(Boolean);
       }
 
-      if (url) {
+      if (listUrls && listUrls.length > 0) {
         try {
-          const response = await fetch(url);
-          if (!response.ok) throw new Error("Gagal mengambil URL");
-          const data = await response.json();
-          updateMoviesData(data);
-          cleanAndCloseModal();
-        } catch (err) { alert("Gagal memuat URL JSON! " + err.message); }
+          const fetchPromises = listUrls.map(async (jsonLink) => {
+            const res = await fetch(jsonLink);
+            if (!res.ok) throw new Error(`Gagal fetch: ${jsonLink}`);
+            return await res.json();
+          });
+
+          const results = await Promise.all(fetchPromises);
+          results.forEach(subData => {
+            if (Array.isArray(subData)) {
+              allMovies = allMovies.concat(subData);
+            }
+          });
+        } catch (err) {
+          showCustomAlert("Kesalahan", "Gagal memuat salah satu file JSON cabang: " + err.message);
+          return;
+        }
+      } else if (Array.isArray(data)) {
+        allMovies = data;
+      } else {
+        showCustomAlert("Kesalahan", "Format JSON tidak dikenali!");
         return;
       }
-      alert("Pilih file atau masukkan link URL terlebih dahulu.");
-    }
 
-    function cleanAndCloseModal() {
-      jsonFileInput.value = "";
-      jsonUrlInput.value = "";
-      closeImportModal();
+      if (allMovies.length > 0) {
+        updateMoviesData(allMovies);
+      } else {
+        showCustomAlert("Informasi", "Tidak ada data film yang berhasil dimuat.");
+      }
     }
 
     function updateMoviesData(newData) {
@@ -1051,14 +1259,23 @@
         currentData = Array.from(existingMap.values());
         displayData = shuffleArray(currentData);
         renderMovies(displayData);
+      }
+    }
 
-        try { 
-          localStorage.setItem('custom_json_data', JSON.stringify(currentData)); 
-        } catch(e) {}
-
-        alert(`Data berhasil dimuat! Total koleksi film saat ini: ${currentData.length}`);
-      } else {
-        alert("Format JSON harus berupa Array / List []!");
+    async function loadAutoSourceList() {
+      const githubJsonUrl = "index.json";
+      
+      try {
+        const response = await fetch(githubJsonUrl);
+        if (!response.ok) throw new Error("Gagal mengambil data dari GitHub");
+        
+        const data = await response.json();
+        await parseAndLoadData(data);
+      } catch (err) {
+        console.error("Gagal memuat otomatis:", err.message);
+        currentData = [...defaultData];
+        displayData = shuffleArray(currentData);
+        renderMovies(displayData);
       }
     }
 
@@ -1196,12 +1413,7 @@
     });
 
     window.onload = () => {
-      const savedData = localStorage.getItem('custom_json_data');
-      if (savedData) {
-        try { currentData = JSON.parse(savedData); } catch(e) {}
-      }
-      displayData = shuffleArray(currentData);
-      renderMovies(displayData);
+      loadAutoSourceList();
     };
   </script>
 </body>
