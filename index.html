@@ -2,8 +2,9 @@
 <html lang="in">
 <head>
     <meta charset="UTF-8">
-    <title>Tiviku - Beranda & Koleksi</title>
+    <title>Tiviku - Smart TV</title>
     <style>
+        /* --- GAYA ASLI FILM CARD & UTAMA (Reverted) --- */
         body {
             background-color: black;
             text-align: center;
@@ -14,9 +15,15 @@
             font-family: Arial, sans-serif;
         }
 
-        h1 { display: none; }
-        b { display: none; }
+        /* Sembunyikan h1/b global yang lama */
+        h1 {
+            display: none; 
+        }
+        b {
+            display: none;
+        }
 
+        /* MODIFIKASI: WARNA TEKS RE DEFAULT */
         .re {
             color: rgba(255, 255, 255, 0.8);
             border-radius: 5px;
@@ -53,6 +60,7 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
+        /* MODIFIKASI: DEFAULT HIGHLIGHT (Beranda) */
         .responsive-div:focus {
             border: 5px solid #fff; 
             border-radius: 13px;
@@ -69,6 +77,7 @@
             border-radius: 13px;
             outline: none;
         }
+        /* END MODIFIKASI DEFAULT HIGHLIGHT */
 
         #imgv {                
             border-radius: 11px;
@@ -83,12 +92,6 @@
         #atas {                
             position: relative;
             height: 80px; 
-            color: yellowgreen;
-            font-size: 28px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         #container {
@@ -111,14 +114,17 @@
             position: relative;
             padding: 8px 8px;
             margin: 15px;
+            /* MODIFIKASI: DEFAULT BORDER CARD */
             border: 5px solid #6c7c13; 
+            /* END MODIFIKASI */
         }
 
-        /* LAYOUT DUA KOLOM (SIDEBAR) */
+        /* --- LAYOUT DUA KOLOM (SIDEBAR) & GAYA TIVIKU/SEARCH BARU --- */
         #app-wrapper {
             display: flex;
             height: 100vh;
             background-color: black;
+            /* MODIFIKASI: Theme Class */
             transition: background-color 0.3s;
         }
 
@@ -129,6 +135,7 @@
             flex-shrink: 0;
             border-right: 2px solid #282828;
             text-align: left;
+            /* MODIFIKASI: Theme Class */
             transition: background-color 0.3s;
         }
 
@@ -136,12 +143,14 @@
             padding: 0 20px 20px;
         }
 
+        /* MODIFIKASI: DEFAULT WARNA HIJAU */
         #sidebar-h1 { 
             color: yellowgreen; 
             font-size: 32px;
             margin: 0;
             font-family: inherit;
             font-weight: 700;
+            transition: color 0.3s;
         }
 
         #sidebar-b { 
@@ -150,6 +159,7 @@
             margin-top: 0px;
             font-size: 30px; 
             font-weight: bold; 
+            transition: color 0.3s;
         }
 
         #sidebar #cari {
@@ -166,6 +176,7 @@
             margin-top: 15px; 
             position: relative; 
             transform: none;
+            transition: background-color 0.3s;
         }
 
         #nav-menu {
@@ -194,7 +205,7 @@
             padding: 0 20px; 
         }
 
-        /* JAM DIGITAL */
+        /* --- GAYA BARU: JAM DIGITAL --- */
         #digital-clock {
             position: absolute;
             top: 25px;
@@ -208,7 +219,26 @@
             border-radius: 5px;
         }
 
-        /* PENGATURAN MENU */
+        /* --- Pemberitahuan Offline --- */
+        #offline-message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffcccc; 
+            background-color: rgba(50, 0, 0, 0.9);
+            padding: 30px 40px;
+            border-radius: 15px;
+            border: 3px solid red;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            z-index: 100;
+            text-align: center;
+            font-size: 24px;
+            line-height: 1.5;
+            font-family: Arial, sans-serif;
+        }
+
+        /* --- MODIFIKASI: GAYA PENGATURAN TEMA --- */
         #pengaturan-menu {
             height: calc(100vh - 100px); 
             display: flex;
@@ -270,18 +300,52 @@
             box-shadow: 0 0 15px #ff4d4d;
         }
 
-        /* GAYA TEMA */
-        .theme-blue-dark { background-color: #121c29 !important; }
-        .theme-blue-dark #sidebar { background-color: #0b141d !important; border-right-color: #1e2a39 !important; }
-        .theme-blue-dark #sidebar #cari { background: #1e2a39 !important; }
-        .theme-blue-dark .responsive-div { border: 5px solid #4a90e2 !important; }
-        .theme-blue-dark .responsive-div:focus, .theme-blue-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #4a90e2; }
+        /* GAYA TEMA (APPLIED CLASSES) */
+        .theme-blue-dark {
+            background-color: #121c29 !important;
+        }
+        .theme-blue-dark #sidebar {
+            background-color: #0b141d !important;
+            border-right-color: #1e2a39 !important;
+        }
+        .theme-blue-dark #sidebar-h1,
+        .theme-blue-dark #sidebar-b {
+            color: yellowgreen;
+        }
+        .theme-blue-dark #sidebar #cari {
+            background: #1e2a39 !important;
+        }
+        .theme-blue-dark .responsive-div {
+            border: 5px solid #4a90e2 !important;
+        }
+        .theme-blue-dark .responsive-div:focus,
+        .theme-blue-dark .highlight {
+            border: 5px solid white !important; 
+            box-shadow: 0 0 15px #4a90e2;
+        }
 
-        .theme-red-dark { background-color: #1f0505 !important; }
-        .theme-red-dark #sidebar { background-color: #150000 !important; border-right-color: #330000 !important; }
-        .theme-red-dark #sidebar #cari { background: #330000 !important; }
-        .theme-red-dark .responsive-div { border: 5px solid #ff4d4d !important; }
-        .theme-red-dark .responsive-div:focus, .theme-red-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #ff4d4d; }
+        .theme-red-dark {
+            background-color: #1f0505 !important;
+        }
+        .theme-red-dark #sidebar {
+            background-color: #150000 !important;
+            border-right-color: #330000 !important;
+        }
+        .theme-red-dark #sidebar-h1,
+        .theme-red-dark #sidebar-b {
+            color: yellowgreen;
+        }
+        .theme-red-dark #sidebar #cari {
+            background: #330000 !important;
+        }
+        .theme-red-dark .responsive-div {
+            border: 5px solid #ff4d4d !important;
+        }
+        .theme-red-dark .responsive-div:focus,
+        .theme-red-dark .highlight {
+            border: 5px solid white !important;
+            box-shadow: 0 0 15px #ff4d4d;
+        }
     </style>
 </head>
 <body>
@@ -301,8 +365,8 @@
         </div>
 
         <div id="main-content">
-            <div id="digital-clock"></div>
-            <div id="atas">BERANDA</div> 
+            <div id="digital-clock"></div> 
+            <div id="atas"></div> 
             <div id="container"></div>
 
             <div id="pengaturan-menu" style="display: none;">
@@ -312,451 +376,702 @@
                     <button class="theme-button focus-target" tabindex="0" data-theme="blue-dark">Biru Tua</button>
                     <button class="theme-button focus-target" tabindex="0" data-theme="red-dark">Merah Gelap</button>
                 </div>
-                <div id="app-version-info" style="margin-top: 50px; color: white;"></div>
+                <div id="app-version-info" style="margin-top: 50px;"></div>
             </div>
         </div>
     </div>
+    
+    <div id="offline-message" style="display: none;">
+        ❌ **TIDAK ADA KONEKSI INTERNET** ❌<br>Daftar film gagal dimuat.
+    </div>
 
     <script>
-        const APP_VERSION = 'v1.2.0';
-        const indexJsonUrl = 'index.json';
-        const container = document.getElementById('container');
-        const headerTitle = document.getElementById('atas');
-        const pengaturanMenu = document.getElementById('pengaturan-menu');
-        const searchInput = document.getElementById('cari');
-
-        function applyTheme(themeName) {
-            const appWrapper = document.getElementById('app-wrapper');
-            const body = document.body;
-            body.classList.remove('theme-blue-dark', 'theme-red-dark');
-            appWrapper.classList.remove('theme-blue-dark', 'theme-red-dark'); 
-            if (themeName !== 'default') {
-                body.classList.add(`theme-${themeName}`);
-                appWrapper.classList.add(`theme-${themeName}`);
-            }
-            try { localStorage.setItem('currentTheme', themeName); } catch (e) {}
-        }
-
-        function loadInitialTheme() {
-            applyTheme(localStorage.getItem('currentTheme') || 'default');
-        }
-        loadInitialTheme();
-
-        function setupThemeButtons() {
-            document.querySelectorAll('.theme-button').forEach(button => {
-                button.onclick = () => {
-                    applyTheme(button.getAttribute('data-theme'));
-                    button.focus(); 
-                };
+        if (!navigator.onLine) {
+            document.getElementById('atas').innerHTML = ''; 
+            document.getElementById('offline-message').style.display = 'block';
+        } else {
+            window.addEventListener('offline', () => {
+                document.getElementById('offline-message').style.display = 'block';
             });
-        }
-        setupThemeButtons();
-
-        function updateClock() {
-            const now = new Date();
-            const timeString = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-            const clockElement = document.getElementById('digital-clock');
-            if (clockElement) clockElement.innerText = timeString;
-        }
-        updateClock(); 
-        setInterval(updateClock, 1000);
-
-        const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target.querySelector('.lazy-img'); 
-                    if (img && img.getAttribute('data-src')) {
-                        img.src = img.getAttribute('data-src'); 
-                        img.removeAttribute('data-src');
-                        observer.unobserve(entry.target); 
-                    }
-                }
-            });
-        }, { root: container, rootMargin: '100px 0px', threshold: 0.01 });
-
-        function createFilmElement(item, clickAction, isCollection = false) {
-            const img = document.createElement('img');
-            img.id = 'imgv';
-            img.setAttribute('data-src', item.logo); 
-            img.src = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="270" height="220" viewBox="0 0 270 220"%3E%3Crect width="100%25" height="100%25" fill="%231a1a1a"%3E%3C/rect%3E%3C/svg%3E'; 
-            img.classList.add('lazy-img'); 
-
-            const pp = document.createElement('p');
-            pp.className = 're';
-            pp.innerText = item.ttl;
-
-            const dur = document.createElement('p');
-            dur.className = 'dur';
-            dur.innerText = isCollection ? 'Koleksi (klik)' : (item.dur || '');
-
-            const dv = document.createElement('div');
-            dv.className = 'responsive-div';
-            dv.tabIndex = 0; 
-            dv.onclick = clickAction;
-
-            dv.appendChild(img);
-            dv.appendChild(pp);
-            dv.appendChild(dur);
-            container.appendChild(dv);
-            
-            imageObserver.observe(dv);
-            return dv; 
-        }
-
-        // FUNGSI MEMUAT HALAMAN BERANDA
-        function loadBerandaContent() {
-            container.style.display = 'block';
-            pengaturanMenu.style.display = 'none';
-            headerTitle.style.display = 'flex';
-            headerTitle.innerText = 'BERANDA';
-            container.innerHTML = '<h2>Memuat Beranda...</h2>';
-            
-            fetch(indexJsonUrl)
-                .then(response => response.json())
-                .then(indexData => {
-                    const directFiles = indexData.source_list || [];
-                    let allItems = [];
-                    let filesProcessed = 0;
-
-                    if (directFiles.length === 0) {
-                        container.innerHTML = '<h2>Konten Kosong</h2>';
-                        return;
-                    }
-
-                    directFiles.forEach(fileUrl => {
-                        fetch(fileUrl)
-                            .then(response => response.json())
-                            .then(data => {
-                                function extractItems(entries) {
-                                    if (!Array.isArray(entries)) return;
-                                    entries.forEach(entry => {
-                                        if (entry.koleksi || entry.lnk) {
-                                            allItems.push(entry);
-                                        }
-                                        for (let key in entry) {
-                                            if (Array.isArray(entry[key])) {
-                                                extractItems(entry[key]);
-                                            }
-                                        }
-                                    });
-                                }
-                                extractItems(data);
-                                filesProcessed++;
-                                if (filesProcessed === directFiles.length) {
-                                    renderBerandaItems(allItems);
-                                }
-                            })
-                            .catch(() => {
-                                filesProcessed++;
-                                if (filesProcessed === directFiles.length) {
-                                    renderBerandaItems(allItems);
-                                }
-                            });
-                    });
-                })
-                .catch(() => {
-                    container.innerHTML = '<h2>❌ Gagal memuat data</h2>';
-                });
-        }
-
-        function renderBerandaItems(allItems) {
-            container.innerHTML = '';
-            if (allItems.length === 0) {
-                container.innerHTML = '<h2>Tidak ada konten di Beranda.</h2>';
-                return;
-            }
-
-            allItems.forEach(item => {
-                let action;
-                let isCollection = false;
-
-                if (item.lnk) {
-                    action = () => {
-                        sessionStorage.setItem('comingFromPlayer', 'true');
-                        sessionStorage.setItem('lastFocusedTitle', item.ttl);
-                        sessionStorage.setItem('videoLink', item.lnk);
-                        sessionStorage.setItem('videoTitle', item.ttl);
-                        sessionStorage.setItem('logoFile', item.logo);
-                        sessionStorage.setItem('videoCropMode', item.crop_mode || 'fill');
-                        sessionStorage.setItem('videoCropPosition', item.crop_position || '50% 50%');
-                        sessionStorage.setItem('videoCropScale', item.crop_scale || '');
-                        window.location.href = 'p.html';
-                    };
-                } else {
-                    action = () => {
-                        sessionStorage.removeItem('comingFromPlayer');
-                        sessionStorage.removeItem('lastFocusedTitle');
-                        sessionStorage.setItem('currentCollectionKey', item.koleksi);
-                        sessionStorage.setItem('currentCollectionTitle', item.ttl);
-                        window.location.href = 'koleksi.html';
-                    };
-                    isCollection = true;
-                }
-                createFilmElement(item, action, isCollection);
+            window.addEventListener('online', () => {
+                document.getElementById('offline-message').style.display = 'none';
             });
 
-            const targetDiv = document.querySelector('.responsive-div');
-            if (targetDiv) {
-                targetDiv.classList.add('highlight');
-                targetDiv.focus();
-                targetDiv.scrollIntoView({ behavior: 'instant', block: 'center' });
-            }
-        }
+            const atas = document.getElementById('atas');
+            atas.innerHTML = ''; 
 
-        // FUNGSI MEMUAT KARTU-KARTU KOLEKSI (KATEGORI UTAMA) DI INDEX.HTML
-        function loadKoleksiMenuContent() {
-            container.style.display = 'block';
-            pengaturanMenu.style.display = 'none';
-            headerTitle.style.display = 'flex';
-            headerTitle.innerText = 'KOLEKSI';
-            container.innerHTML = '<h2>Memuat Daftar Koleksi...</h2>';
+            const APP_VERSION = 'v1.2.0'; 
+            const indexJsonUrl = 'index.json';
 
-            fetch(indexJsonUrl)
-                .then(response => response.json())
-                .then(indexData => {
-                    const directFiles = indexData.source_list || [];
-                    let allItems = [];
-                    let filesProcessed = 0;
+            let directFiles = [];
+            let totalFiles = 0; 
+            let filesProcessedCount = 0; 
+            const container = document.getElementById('container');
+            const pengaturanMenu = document.getElementById('pengaturan-menu'); 
 
-                    if (directFiles.length === 0) {
-                        container.innerHTML = '<h2>Koleksi Kosong</h2>';
-                        return;
-                    }
+            let allItems = []; 
+            let currentItems = []; 
 
-                    directFiles.forEach(fileUrl => {
-                        fetch(fileUrl)
-                            .then(response => response.json())
-                            .then(data => {
-                                function extractParentCollections(entries) {
-                                    if (!Array.isArray(entries)) return;
-                                    entries.forEach(entry => {
-                                        // Mengambil item yang bertindak sebagai induk koleksi (memiliki properti koleksi tapi bukan link langsung video)
-                                        if (entry.koleksi && !entry.lnk) {
-                                            // Hindari duplikat koleksi berdasarkan key
-                                            if (!allItems.some(existing => existing.koleksi === entry.koleksi)) {
-                                                allItems.push(entry);
-                                            }
-                                        }
-                                        for (let key in entry) {
-                                            if (Array.isArray(entry[key])) {
-                                                extractParentCollections(entry[key]);
-                                            }
-                                        }
-                                    });
-                                }
-                                extractParentCollections(data);
-                                filesProcessed++;
-                                if (filesProcessed === directFiles.length) {
-                                    renderKoleksiMenuCards(allItems);
-                                }
-                            })
-                            .catch(() => {
-                                filesProcessed++;
-                                if (filesProcessed === directFiles.length) {
-                                    renderKoleksiMenuCards(allItems);
-                                }
-                            });
-                    });
-                })
-                .catch(() => {
-                    container.innerHTML = '<h2>❌ Gagal memuat data koleksi</h2>';
-                });
-        }
-
-        function renderKoleksiMenuCards(collectionList) {
-            container.innerHTML = '';
-            if (collectionList.length === 0) {
-                container.innerHTML = '<h2>Tidak ada kategori koleksi ditemukan.</h2>';
-                return;
-            }
-
-            collectionList.forEach(item => {
-                const action = () => {
-                    sessionStorage.setItem('currentCollectionKey', item.koleksi);
-                    sessionStorage.setItem('currentCollectionTitle', item.ttl);
-                    window.location.href = 'koleksi.html';
-                };
-                createFilmElement(item, action, true);
-            });
-
-            const targetDiv = document.querySelector('.responsive-div');
-            if (targetDiv) {
-                targetDiv.classList.add('highlight');
-                targetDiv.focus();
-                targetDiv.scrollIntoView({ behavior: 'instant', block: 'center' });
-            }
-        }
-
-        function showPengaturanMenu() {
-            container.style.display = 'none';
-            headerTitle.style.display = 'none';
-            pengaturanMenu.style.display = 'flex';
-            
-            const versionInfo = document.getElementById('app-version-info');
-            if (versionInfo) {
-                versionInfo.innerHTML = `Versi Aplikasi: 2.0 <b>${APP_VERSION}</b>`;
-            }
-            
-            const firstThemeButton = document.querySelector('.theme-button');
-            if (firstThemeButton) firstThemeButton.focus();
-        }
-
-        function prosesMenu() {
-            var filter = searchInput.value.toLowerCase();
-            var li = document.querySelectorAll('.responsive-div');
-            for (var i = 0; i < li.length; i++) {
-                var textToSearch = li[i].querySelector('.re').innerText.toLowerCase(); 
-                if (textToSearch.indexOf(filter) > -1) {
-                    li[i].style.display = "";
-                    const img = li[i].querySelector('.lazy-img');
-                    if (img && img.hasAttribute('data-src')) {
-                         img.src = img.getAttribute('data-src');
-                         img.removeAttribute('data-src');
-                         imageObserver.unobserve(li[i]); 
-                    }
-                } else {
-                    li[i].style.display = "none";
+            function setLocalStorage(name, value) {
+                try {
+                    localStorage.setItem(name, value);
+                } catch (e) {
+                    console.error("Gagal menyimpan ke LocalStorage:", e);
                 }
             }
-        }
-        searchInput.addEventListener("input", prosesMenu);
 
-        document.addEventListener('keydown', (e) => {
-            const focusedElement = document.activeElement;
+            function getLocalStorage(name) {
+                try {
+                    return localStorage.getItem(name);
+                } catch (e) {
+                    console.warn("Gagal membaca dari LocalStorage:", e);
+                    return null;
+                }
+            }
 
-            if (['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', 'Enter'].includes(e.key)) {
-                e.preventDefault(); 
+            function applyTheme(themeName) {
+                const appWrapper = document.getElementById('app-wrapper');
+                const body = document.body;
                 
-                if (focusedElement.classList.contains('theme-button')) {
-                    const themeButtons = Array.from(document.querySelectorAll('.theme-button'));
-                    const currentIndex = themeButtons.findIndex(item => item === focusedElement);
-                    
-                    if (e.key === 'ArrowRight') {
-                        themeButtons[Math.min(currentIndex + 1, themeButtons.length - 1)].focus();
-                    } else if (e.key === 'ArrowLeft') {
-                        themeButtons[Math.max(currentIndex - 1, 0)].focus();
-                    } else if (e.key === 'ArrowUp') {
-                        const settingNav = document.querySelector('.nav-item[data-page="pengaturan"]');
-                        if (settingNav) settingNav.focus();
-                    } else if (e.key === 'Enter') {
-                        focusedElement.click(); 
+                body.classList.remove('theme-blue-dark', 'theme-red-dark');
+                appWrapper.classList.remove('theme-blue-dark', 'theme-red-dark'); 
+
+                if (themeName !== 'default') {
+                    const themeClass = `theme-${themeName}`;
+                    body.classList.add(themeClass);
+                    appWrapper.classList.add(themeClass);
+                }
+                
+                try {
+                    setLocalStorage('currentTheme', themeName);
+                } catch (e) {
+                    console.error("Gagal menyimpan tema ke LocalStorage:", e);
+                }
+            }
+
+            function setupThemeButtons() {
+                const themeButtons = document.querySelectorAll('.theme-button');
+                themeButtons.forEach(button => {
+                    button.onclick = () => {
+                        const theme = button.getAttribute('data-theme');
+                        applyTheme(theme);
+                        button.focus(); 
+                    };
+                });
+            }
+
+            function loadInitialTheme() {
+                let savedTheme = 'default';
+                try {
+                    savedTheme = getLocalStorage('currentTheme') || 'default';
+                } catch (e) {
+                    console.warn("Gagal membaca tema dari LocalStorage:", e);
+                }
+                applyTheme(savedTheme);
+            }
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target.querySelector('.lazy-img'); 
+                        if (img) {
+                            const src = img.getAttribute('data-src');
+                            if (src) {
+                                img.src = src; 
+                                img.removeAttribute('data-src');
+                                observer.unobserve(entry.target); 
+                            }
+                        }
                     }
-                    return;
+                });
+            }, {
+                root: document.getElementById('container'), 
+                rootMargin: '100px 0px', 
+                threshold: 0.01
+            });
+
+            function createFilmElement(item, clickAction, isCollection = false) {
+                const img = document.createElement('img');
+                img.id = 'imgv';
+                img.setAttribute('data-src', item.logo); 
+                img.src = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="270" height="220" viewBox="0 0 270 220"%3E%3Crect width="100%25" height="100%25" fill="%231a1a1a"%3E%3C/rect%3E%3C/svg%3E'; 
+                img.classList.add('lazy-img'); 
+
+                const pp = document.createElement('p');
+                pp.className = 're';
+                pp.innerText = item.ttl;
+
+                const dur = document.createElement('p');
+                dur.className = 'dur';
+                dur.innerText = isCollection ? 'Koleksi (klik)' : (item.dur || '');
+
+                const dv = document.createElement('div');
+                dv.className = 'responsive-div';
+                dv.tabIndex = 0; 
+                dv.onclick = clickAction;
+
+                dv.appendChild(img);
+                dv.appendChild(pp);
+                dv.appendChild(dur);
+                container.appendChild(dv);
+                
+                imageObserver.observe(dv);
+                return dv; 
+            }
+
+            function shuffleAndSaveItems() {
+                shuffleArray(allItems);
+                try {
+                    sessionStorage.setItem('savedItemList', JSON.stringify(allItems));
+                } catch (e) {
+                    console.error("Gagal menyimpan item list Beranda ke sessionStorage.", e);
+                }
+            }
+
+            function fetchDataAndInit(callback) {
+                if (filesProcessedCount === 0) {
+                    container.innerHTML = '<h2>Memuat Index Konten...</h2>';
+                    allItems = []; 
+                    
+                    fetch(indexJsonUrl)
+                        .then(response => response.json())
+                        .then(indexData => {
+                            directFiles = indexData.source_list || [];
+                            totalFiles = directFiles.length;
+                            
+                            if (directFiles.length === 0) {
+                                filesProcessedCount++;
+                                if(callback) callback();
+                                return;
+                            }
+
+                            directFiles.forEach(fileUrl => {
+                                fetch(fileUrl)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                        data.forEach(item => {
+                                            allItems.push({...item, type: 'direct'}); 
+                                        });
+                                        filesProcessedCount++;
+                                        if (filesProcessedCount >= totalFiles) {
+                                            if(callback) callback();
+                                        }
+                                    })
+                                    .catch(error => {
+                                        console.error('Error loading JSON:', fileUrl, error);
+                                        filesProcessedCount++;
+                                        if (filesProcessedCount >= totalFiles) {
+                                            if(callback) callback();
+                                        }
+                                    });
+                            });
+                        })
+                        .catch(error => {
+                            console.error('Error loading index.json:', indexJsonUrl, error);
+                            container.innerHTML = '<h2>❌ Gagal memuat index.json</h2>';
+                        });
+                } else {
+                    if(callback) callback();
+                }
+            }
+
+            function loadAndRenderHomeContent() {
+                container.style.display = 'block'; 
+                pengaturanMenu.style.display = 'none'; 
+                
+                fetchDataAndInit(() => {
+                    const savedItemList = sessionStorage.getItem('savedItemList');
+                    if (savedItemList) {
+                        try {
+                            allItems = JSON.parse(savedItemList);
+                        } catch (e) {
+                            console.error("Gagal memparsing savedItemList dari sessionStorage.", e);
+                            shuffleAndSaveItems();
+                        }
+                    } else {
+                        shuffleAndSaveItems();
+                    }
+                    currentItems = allItems;
+                    renderCurrentItems();
+                });
+            }
+
+            function loadAndRenderKoleksiContent() {
+                container.style.display = 'block'; 
+                pengaturanMenu.style.display = 'none'; 
+                
+                fetchDataAndInit(() => {
+                    const savedCollection = sessionStorage.getItem('savedCollectionList');
+                    
+                    if (savedCollection) {
+                        try {
+                            currentItems = JSON.parse(savedCollection);
+                            renderCurrentItems();
+                            return;
+                        } catch (e) {
+                            console.error("Gagal memparsing savedCollection dari sessionStorage.", e);
+                        }
+                    }
+                    
+                    const collectionGroups = {};
+                    allItems.forEach(item => {
+                        if (item.koleksi) {
+                            if (!collectionGroups[item.koleksi]) {
+                                collectionGroups[item.koleksi] = [];
+                            }
+                            collectionGroups[item.koleksi].push(item);
+                        }
+                    });
+                    
+                    const collectionMap = new Map();
+                    Object.keys(collectionGroups).forEach(koleksiKey => {
+                        const itemsInGroup = collectionGroups[koleksiKey];
+                        const randomIndex = Math.floor(Math.random() * itemsInGroup.length);
+                        const randomSelectedItem = itemsInGroup[randomIndex];
+
+                        collectionMap.set(koleksiKey, {
+                            logo: randomSelectedItem.logo, 
+                            ttl: koleksiKey, // Mengambil langsung nama koleksi/variabel JSON tanpa awalan teks tambahan
+                            koleksi: koleksiKey,
+                            dur: 'Koleksi (klik)',
+                            type: 'collection'
+                        });
+                    });
+                    
+                    currentItems = Array.from(collectionMap.values());
+                    
+                    try {
+                        sessionStorage.setItem('savedCollectionList', JSON.stringify(currentItems));
+                    } catch (e) {
+                        console.error("Gagal menyimpan collection list ke sessionStorage.", e);
+                    }
+
+                    renderCurrentItems();
+                });
+            }
+
+            function showPengaturanMenu() {
+                container.style.display = 'none'; 
+                pengaturanMenu.style.display = 'flex'; 
+                
+                const versionInfo = document.getElementById('app-version-info');
+                if (versionInfo) {
+                    versionInfo.innerHTML = `Versi Aplikasi: 2.0<b>${APP_VERSION}</b>`;
+                }
+                
+                sessionStorage.removeItem('lastFocusedCardTitle');
+                
+                const firstThemeButton = document.querySelector('.theme-button');
+                if (firstThemeButton) {
+                    firstThemeButton.focus();
+                }
+            }
+
+            function renderCurrentItems() {
+                container.innerHTML = ''; 
+                currentItems.forEach(item => {
+                    let action;
+                    let isCollection = false;
+
+                    if (item.type === 'collection') {
+                        action = () => openCollection(item.koleksi, item.ttl);
+                        isCollection = true;
+                    } else { 
+                        action = () => {
+                            sessionStorage.setItem('lastActiveMenuPage', sessionStorage.getItem('lastActiveMenuPage') || 'beranda');
+                            playVideo(item.lnk, item.logo, item.ttl, item.crop_mode, item.crop_position, item.crop_scale);
+                        };
+                        isCollection = false;
+                    }
+                    createFilmElement(item, action, isCollection);
+                });
+                restoreFocusOnContent(); 
+            }
+
+            const restoreFocusOnContent = () => {
+                const savedTitle = sessionStorage.getItem('lastVideoTitle'); 
+                const lastFocusedTitle = sessionStorage.getItem('lastFocusedCardTitle'); 
+                const container = document.getElementById('container');
+                const activePage = sessionStorage.getItem('lastActiveMenuPage') || 'beranda';
+                
+                let focusRestoredToCard = false; 
+                document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
+                
+                let targetElement = null;
+                
+                if (savedTitle) {
+                    const allDivs = document.querySelectorAll('.responsive-div');
+                    allDivs.forEach(div => {
+                        const pElement = div.querySelector('.re');
+                        if (pElement && pElement.innerText === savedTitle) {
+                            targetElement = div;
+                        }
+                    });
+                    if(targetElement) sessionStorage.removeItem('lastVideoTitle'); 
+                } 
+                
+                if (!targetElement && lastFocusedTitle) {
+                    const allDivs = document.querySelectorAll('.responsive-div');
+                    allDivs.forEach(div => {
+                        const pElement = div.querySelector('.re');
+                        if (pElement && pElement.innerText === lastFocusedTitle) {
+                            targetElement = div;
+                        }
+                    });
                 }
 
-                if (focusedElement.classList.contains('nav-item')) {
-                    const navItems = Array.from(document.querySelectorAll('.nav-item'));
-                    const currentIndex = navItems.findIndex(item => item === focusedElement);
+                if (targetElement) {
+                    targetElement.classList.add('highlight');
+                    targetElement.focus();
+                    if (!isElementInView(targetElement, container)) {
+                         targetElement.scrollIntoView({ behavior: 'instant', block: 'center' });
+                    }
+                    focusRestoredToCard = true; 
+                } 
+                
+                if (!focusRestoredToCard && (activePage === 'beranda' || activePage === 'koleksi')) { 
+                    const savedScrollPosition = sessionStorage.getItem('scrollPosition');
+                    if (savedScrollPosition !== null && container) {
+                        container.scrollTop = parseInt(savedScrollPosition, 10);
+                        const firstVisible = getFirstVisibleElement(container);
+                        if (firstVisible) {
+                             firstVisible.classList.add('highlight');
+                             firstVisible.focus();
+                             focusRestoredToCard = true;
+                        }
+                    }
+                }
+                
+                if (activePage === 'pengaturan') {
+                    showPengaturanMenu();
+                    const firstThemeButton = document.querySelector('.theme-button');
+                    if (firstThemeButton) {
+                         firstThemeButton.focus();
+                         focusRestoredToCard = true;
+                    }
+                }
+                
+                if (!focusRestoredToCard && activePage !== 'pengaturan') {
+                    const activeNav = document.querySelector(`.nav-item[data-page="${activePage}"]`);
+                    if (activeNav) {
+                        activeNav.focus();
+                    } else {
+                         const searchInput = document.getElementById('cari');
+                         if (searchInput) searchInput.focus();
+                    }
+                }
+            }
+
+            function isElementInView(el, container) {
+                const elRect = el.getBoundingClientRect();
+                const containerRect = container.getBoundingClientRect();
+                return (
+                    elRect.top >= containerRect.top &&
+                    elRect.bottom <= containerRect.bottom + elRect.height
+                );
+            }
+
+            function getFirstVisibleElement(container) {
+                const allDivs = document.querySelectorAll('.responsive-div');
+                for (const div of allDivs) {
+                    if (getComputedStyle(div).display !== 'none' && isElementInView(div, container)) {
+                        return div;
+                    }
+                }
+                return document.querySelector('.responsive-div:not([style*="display: none"])');
+            }
+
+            function openCollection(collectionKey, collectionTitle) {
+                sessionStorage.setItem('currentCollectionKey', collectionKey);
+                sessionStorage.setItem('currentCollectionTitle', collectionTitle);
+                sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
+                
+                window.location.href = 'koleksi.html';
+            }
+
+            function playVideo(videoFile, logoFile, textFile, cropMode, cropPosition, cropScale) { 
+                sessionStorage.setItem('lastVideoTitle', textFile);
+                sessionStorage.setItem('videoLink', videoFile);
+                sessionStorage.setItem('videoTitle', textFile);
+                sessionStorage.setItem('logoFile', logoFile);
+                sessionStorage.setItem('videoCropMode', cropMode || 'fill'); 
+                sessionStorage.setItem('videoCropPosition', cropPosition || '50% 50%'); 
+                sessionStorage.setItem('videoCropScale', cropScale || ''); 
+                window.location.href = 'p.html';
+            }
+
+            function prosesMenu() {
+                var input = document.getElementById("cari");
+                var filter = input.value.toLowerCase();
+                var li = document.querySelectorAll('.responsive-div');
+                for (var i = 0; i < li.length; i++) {
+                    var textToSearch = li[i].querySelector('.re').innerText.toLowerCase(); 
+                    if (textToSearch.indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                        const img = li[i].querySelector('.lazy-img');
+                        if (img && img.hasAttribute('data-src')) {
+                             const src = img.getAttribute('data-src');
+                             img.src = src;
+                             img.removeAttribute('data-src');
+                             imageObserver.unobserve(li[i]); 
+                        }
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+
+            document.getElementById("cari").addEventListener("input", prosesMenu);
+
+            const saveScrollPosition = () => {
+                const container = document.getElementById('container');
+                const activePage = sessionStorage.getItem('lastActiveMenuPage');
+                if (container && (activePage === 'beranda' || activePage === 'koleksi')) { 
+                    sessionStorage.setItem('scrollPosition', container.scrollTop);
+                }
+            };
+
+            const containerScrollElement = document.getElementById('container');
+            if (containerScrollElement) {
+                containerScrollElement.addEventListener('scroll', saveScrollPosition);
+            }
+
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const timeString = `${hours}:${minutes}`;
+                const clockElement = document.getElementById('digital-clock');
+                if (clockElement) {
+                    clockElement.innerText = timeString;
+                }
+            }
+
+            updateClock(); 
+            setInterval(updateClock, 1000); 
+
+            document.addEventListener('keydown', (e) => {
+                const searchInput = document.getElementById('cari');
+                const focusedElement = document.activeElement;
+                
+                if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'Enter') {
+                    e.preventDefault(); 
                     
-                    if (e.key === 'ArrowDown') {
-                        navItems[Math.min(currentIndex + 1, navItems.length - 1)].focus();
-                    } else if (e.key === 'ArrowUp') {
-                        if (currentIndex === 0) {
-                            searchInput.focus();
-                            return;
+                    if (focusedElement.classList.contains('theme-button')) {
+                        const themeButtons = Array.from(document.querySelectorAll('.theme-button'));
+                        const currentIndex = themeButtons.findIndex(item => item === focusedElement);
+                        
+                        if (e.key === 'ArrowRight') {
+                            const nextIndex = Math.min(currentIndex + 1, themeButtons.length - 1);
+                            themeButtons[nextIndex].focus();
+                        } else if (e.key === 'ArrowLeft') {
+                            const nextIndex = Math.max(currentIndex - 1, 0);
+                            themeButtons[nextIndex].focus();
+                        } else if (e.key === 'ArrowUp') {
+                            const settingNav = document.querySelector('.nav-item[data-page="pengaturan"]');
+                            if (settingNav) settingNav.focus();
+                        } else if (e.key === 'Enter') {
+                            focusedElement.click(); 
                         }
-                        navItems[Math.max(currentIndex - 1, 0)].focus();
-                    } else if (e.key === 'ArrowRight') {
-                        const page = focusedElement.getAttribute('data-page');
-                        if (page === 'pengaturan') {
-                            const firstTheme = document.querySelector('.theme-button');
-                            if (firstTheme) firstTheme.focus();
-                            return;
+                        return;
+                    }
+
+                    if (focusedElement.classList.contains('nav-item')) {
+                        const navItems = Array.from(document.querySelectorAll('.nav-item'));
+                        const currentIndex = navItems.findIndex(item => item === focusedElement);
+                        
+                        if (e.key === 'ArrowDown') {
+                            const nextIndex = Math.min(currentIndex + 1, navItems.length - 1);
+                            navItems[nextIndex].focus();
+                        } else if (e.key === 'ArrowUp') {
+                            if (currentIndex === 0) {
+                                 searchInput.focus();
+                                 return;
+                            }
+                            const nextIndex = Math.max(currentIndex - 1, 0);
+                            navItems[nextIndex].focus();
+                        } else if (e.key === 'ArrowRight') {
+                            const page = focusedElement.getAttribute('data-page');
+                            if (page === 'pengaturan') {
+                                const firstThemeButton = document.querySelector('.theme-button');
+                                if (firstThemeButton) firstThemeButton.focus();
+                                return;
+                            }
+                            
+                            const lastFocusedTitle = sessionStorage.getItem('lastFocusedCardTitle');
+                            let targetDiv = null;
+                            if (lastFocusedTitle) {
+                                const allDivs = document.querySelectorAll('.responsive-div');
+                                allDivs.forEach(div => {
+                                     const pElement = div.querySelector('.re');
+                                     if (pElement && pElement.innerText === lastFocusedTitle && getComputedStyle(div).display !== 'none') {
+                                         targetDiv = div;
+                                     }
+                                });
+                            }
+                            const firstDiv = targetDiv || getFirstVisibleElement(container) || document.querySelector('.responsive-div:not([style*="display: none"])');
+                            if (firstDiv) {
+                                firstDiv.classList.add('highlight');
+                                firstDiv.focus();
+                                firstDiv.scrollIntoView({ behavior: 'instant', block: 'center' }); 
+                            }
+                        } else if (e.key === 'Enter') {
+                            const page = focusedElement.getAttribute('data-page');
+                            sessionStorage.setItem('lastActiveMenuPage', page);
+                            sessionStorage.removeItem('scrollPosition');
+                            sessionStorage.removeItem('lastVideoTitle'); 
+                            sessionStorage.removeItem('lastFocusedCardTitle'); 
+                            
+                            if (page === 'beranda') {
+                                loadAndRenderHomeContent(); 
+                            } else if (page === 'koleksi') {
+                                loadAndRenderKoleksiContent();
+                            } else if (page === 'pengaturan') { 
+                                showPengaturanMenu();
+                            }
                         }
-                        const firstDiv = document.querySelector('.responsive-div:not([style*="display: none"])');
-                        if (firstDiv) {
-                            firstDiv.classList.add('highlight');
-                            firstDiv.focus();
-                            firstDiv.scrollIntoView({ behavior: 'instant', block: 'center' }); 
+                        return;
+                    }
+
+                    if (focusedElement === searchInput) {
+                        if (e.key === 'ArrowDown') {
+                            const firstNavItem = document.querySelector('.nav-item');
+                            if (firstNavItem) firstNavItem.focus();
+                        } else if (e.key === 'ArrowRight') {
+                            const lastFocusedTitle = sessionStorage.getItem('lastFocusedCardTitle');
+                            let targetDiv = null;
+                            if (lastFocusedTitle) {
+                                const allDivs = document.querySelectorAll('.responsive-div');
+                                allDivs.forEach(div => {
+                                     const pElement = div.querySelector('.re');
+                                     if (pElement && pElement.innerText === lastFocusedTitle && getComputedStyle(div).display !== 'none') {
+                                         targetDiv = div;
+                                     }
+                                });
+                            }
+                            const firstDiv = targetDiv || getFirstVisibleElement(container) || document.querySelector('.responsive-div:not([style*="display: none"])');
+                            if (firstDiv) {
+                                firstDiv.classList.add('highlight');
+                                firstDiv.focus();
+                            }
                         }
-                    } else if (e.key === 'Enter') {
-                        const page = focusedElement.getAttribute('data-page');
+                        return; 
+                    }
+                    
+                    const divs = Array.from(document.querySelectorAll('.responsive-div')).filter(div => getComputedStyle(div).display !== 'none');
+                    const currentIndex = divs.findIndex(div => div === focusedElement);
+                    if (divs.length === 0 || currentIndex === -1) return;
+
+                    let nextIndex = -1;
+                    const containerRect = container.getBoundingClientRect();
+                    const firstVisibleDiv = getFirstVisibleElement(container);
+                    const cardWidthWithMargin = firstVisibleDiv ? firstVisibleDiv.offsetWidth + 30 : 300; 
+                    const itemsPerRow = Math.floor(containerRect.width / cardWidthWithMargin);
+                    const actualItemsPerRow = Math.max(1, itemsPerRow); 
+                    
+                    focusedElement.classList.remove('highlight');
+                        
+                    switch (e.key) {
+                        case 'ArrowDown':
+                            nextIndex = Math.min(currentIndex + actualItemsPerRow, divs.length - 1);
+                            break;
+                        case 'ArrowUp':
+                            nextIndex = currentIndex - actualItemsPerRow;
+                            if (nextIndex < 0) {
+                                searchInput.focus(); 
+                                return;
+                            }
+                            break;
+                        case 'ArrowRight':
+                            nextIndex = Math.min(currentIndex + 1, divs.length - 1);
+                            break;
+                        case 'ArrowLeft':
+                            nextIndex = currentIndex - 1;
+                            if (nextIndex < 0 || (currentIndex % actualItemsPerRow === 0)) {
+                                const activePage = sessionStorage.getItem('lastActiveMenuPage') || 'beranda';
+                                const activeNav = document.querySelector(`.nav-item[data-page="${activePage}"]`);
+                                if (activeNav) {
+                                    activeNav.focus();
+                                } else {
+                                    searchInput.focus(); 
+                                }
+                                return;
+                            }
+                            break;
+                        case 'Enter':
+                            focusedElement.click();
+                            return; 
+                    }
+
+                    if (nextIndex !== -1 && divs[nextIndex]) {
+                        divs[nextIndex].classList.add('highlight');
+                        divs[nextIndex].focus();
+                        const focusedTitle = divs[nextIndex].querySelector('.re').innerText;
+                        sessionStorage.setItem('lastFocusedCardTitle', focusedTitle); 
+                        divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
+                        saveScrollPosition();
+                    }
+                } else if (e.key === 'Escape' || e.keyCode === 27 || e.keyCode === 4) {
+                    const activePage = sessionStorage.getItem('lastActiveMenuPage');
+                    if (activePage && activePage !== 'beranda') {
+                        e.preventDefault();
+                        const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
+                        if (homeNav) homeNav.click();
+                    }
+                }
+            });
+
+            function initNavigation() {
+                loadInitialTheme();
+                setupThemeButtons();
+
+                const navItems = document.querySelectorAll('.nav-item');
+                navItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        document.querySelectorAll('.responsive-div').forEach(div => div.classList.remove('highlight'));
+                        const page = item.getAttribute('data-page');
+                        sessionStorage.setItem('lastActiveMenuPage', page); 
+                        container.innerHTML = ''; 
+                        
                         if (page === 'beranda') {
-                            loadBerandaContent();
+                            loadAndRenderHomeContent();
                         } else if (page === 'koleksi') {
-                            loadKoleksiMenuContent();
+                            loadAndRenderKoleksiContent();
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
+                        } else {
+                            filesProcessedCount = 0; 
+                            currentItems = []; 
+                            container.style.display = 'block';
+                            pengaturanMenu.style.display = 'none';
+                            container.innerHTML = `<h2>Konten untuk ${item.innerText} belum tersedia.</h2>`; 
+                            restoreFocusOnContent();
                         }
-                    }
-                    return;
-                }
-
-                if (focusedElement === searchInput) {
-                    if (e.key === 'ArrowDown') {
-                        const firstNavItem = document.querySelector('.nav-item');
-                        if (firstNavItem) firstNavItem.focus();
-                    } else if (e.key === 'ArrowRight') {
-                        const firstDiv = document.querySelector('.responsive-div:not([style*="display: none"])');
-                        if (firstDiv) {
-                            firstDiv.classList.add('highlight');
-                            firstDiv.focus();
-                        }
-                    }
-                    return; 
-                }
+                    });
+                });
                 
-                const divs = Array.from(document.querySelectorAll('.responsive-div')).filter(div => getComputedStyle(div).display !== 'none');
-                const currentIndex = divs.findIndex(div => div === focusedElement);
-                if (divs.length === 0 || currentIndex === -1) return;
+                const lastPage = sessionStorage.getItem('lastActiveMenuPage') || 'beranda';
+                const validPages = ['beranda', 'koleksi', 'pengaturan'];
+                const initialPage = validPages.includes(lastPage) ? lastPage : 'beranda';
+                const initialNav = document.querySelector(`.nav-item[data-page="${initialPage}"]`);
 
-                let nextIndex = -1;
-                const containerRect = container.getBoundingClientRect();
-                const cardWidthWithMargin = divs[0].offsetWidth + 30; 
-                const itemsPerRow = Math.max(1, Math.floor(containerRect.width / cardWidthWithMargin));
-                
-                focusedElement.classList.remove('highlight');
-                    
-                switch (e.key) {
-                    case 'ArrowDown':
-                        nextIndex = Math.min(currentIndex + itemsPerRow, divs.length - 1);
-                        break;
-                    case 'ArrowUp':
-                        nextIndex = currentIndex - itemsPerRow;
-                        if (nextIndex < 0) {
-                            searchInput.focus(); 
-                            return;
-                        }
-                        break;
-                    case 'ArrowRight':
-                        nextIndex = Math.min(currentIndex + 1, divs.length - 1);
-                        break;
-                    case 'ArrowLeft':
-                        nextIndex = currentIndex - 1;
-                        if (nextIndex < 0 || (currentIndex % itemsPerRow === 0)) {
-                            const activeNav = document.querySelector('.nav-item[data-page="beranda"]');
-                            if (activeNav) activeNav.focus();
-                            return;
-                        }
-                        break;
-                    case 'Enter':
-                        focusedElement.click();
-                        return; 
-                }
-
-                if (nextIndex !== -1 && divs[nextIndex]) {
-                    divs[nextIndex].classList.add('highlight');
-                    divs[nextIndex].focus();
-                    divs[nextIndex].scrollIntoView({ behavior: 'instant', block: 'center' });
+                if (initialNav) {
+                    initialNav.click();
+                } else {
+                    const homeNav = document.querySelector('.nav-item[data-page="beranda"]');
+                    if (homeNav) homeNav.click();
                 }
             }
-        });
 
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.addEventListener('click', () => {
-                const page = item.getAttribute('data-page');
-                if (page === 'beranda') {
-                    loadBerandaContent();
-                } else if (page === 'koleksi') {
-                    loadKoleksiMenuContent();
-                } else if (page === 'pengaturan') {
-                    showPengaturanMenu();
-                }
-            });
-        });
-
-        // Inisialisasi awal saat halaman dimuat
-        loadBerandaContent();
+            initNavigation();
+        }
     </script>
 </body>
 </html>

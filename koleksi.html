@@ -351,8 +351,8 @@
         const pengaturanMenu = document.getElementById('pengaturan-menu');
         const searchInput = document.getElementById('cari');
         
-        let collectionKey = sessionStorage.getItem('currentCollectionKey');
-        let collectionTitle = sessionStorage.getItem('currentCollectionTitle') || 'Koleksi';
+        const collectionKey = sessionStorage.getItem('currentCollectionKey');
+        const collectionTitle = sessionStorage.getItem('currentCollectionTitle') || 'Koleksi';
         headerTitle.innerText = collectionTitle.toUpperCase();
 
         function applyTheme(themeName) {
@@ -465,9 +465,6 @@
             container.style.display = 'block';
             pengaturanMenu.style.display = 'none';
             headerTitle.style.display = 'flex';
-            collectionKey = sessionStorage.getItem('currentCollectionKey');
-            collectionTitle = sessionStorage.getItem('currentCollectionTitle') || 'Koleksi';
-            headerTitle.innerText = collectionTitle.toUpperCase();
             container.innerHTML = '<h2>Memuat Koleksi...</h2>';
             
             fetch(indexJsonUrl)
@@ -521,13 +518,9 @@
         }
 
         function renderCollectionItems(allItems) {
-            let collectionItems = allItems;
-            
-            if (collectionKey) {
-                collectionItems = allItems.filter(item => 
-                    item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
-                );
-            }
+            let collectionItems = allItems.filter(item => 
+                item.koleksi && item.koleksi.toString().toLowerCase() === collectionKey.toString().toLowerCase()
+            );
             
             const hasEpisode = collectionItems.some(item => item.episode !== undefined);
 
@@ -537,7 +530,7 @@
                     let epB = parseInt(b.episode) || 0;
                     return epA - epB;
                 });
-            } else if (collectionKey) {
+            } else {
                 const shuffleKey = `shuffled_${collectionKey}`;
                 if (!sessionStorage.getItem(shuffleKey)) {
                     shuffleArray(collectionItems);
@@ -580,7 +573,7 @@
                         sessionStorage.removeItem('lastFocusedTitle');
                         sessionStorage.setItem('currentCollectionKey', item.koleksi);
                         sessionStorage.setItem('currentCollectionTitle', item.ttl);
-                        loadCollectionContent();
+                        window.location.reload();
                     };
                     isCollection = true;
                 }
@@ -699,11 +692,13 @@
                     } else if (e.key === 'Enter') {
                         const page = focusedElement.getAttribute('data-page');
                         if (page === 'beranda') {
-                            window.location.href = 'index.html';
-                        } else if (page === 'koleksi') {
                             sessionStorage.removeItem('currentCollectionKey');
                             sessionStorage.removeItem('currentCollectionTitle');
-                            loadCollectionContent();
+                            sessionStorage.removeItem('comingFromPlayer');
+                            sessionStorage.removeItem('lastFocusedTitle');
+                            history.back();
+                        } else if (page === 'koleksi') {
+                            history.back();
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
                         }
@@ -774,7 +769,7 @@
                 sessionStorage.removeItem('currentCollectionTitle');
                 sessionStorage.removeItem('comingFromPlayer');
                 sessionStorage.removeItem('lastFocusedTitle');
-                window.location.href = 'index.html';
+                history.back();
             }
         });
 
@@ -782,11 +777,13 @@
             item.addEventListener('click', () => {
                 const page = item.getAttribute('data-page');
                 if (page === 'beranda') {
-                    window.location.href = 'index.html';
-                } else if (page === 'koleksi') {
                     sessionStorage.removeItem('currentCollectionKey');
                     sessionStorage.removeItem('currentCollectionTitle');
-                    loadCollectionContent();
+                    sessionStorage.removeItem('comingFromPlayer');
+                    sessionStorage.removeItem('lastFocusedTitle');
+                    history.back();
+                } else if (page === 'koleksi') {
+                    history.back();
                 } else if (page === 'pengaturan') {
                     showPengaturanMenu();
                 }
