@@ -696,9 +696,13 @@
                             sessionStorage.removeItem('currentCollectionTitle');
                             sessionStorage.removeItem('comingFromPlayer');
                             sessionStorage.removeItem('lastFocusedTitle');
-                            history.back();
+                            sessionStorage.setItem('lastActiveMenuPage', 'beranda');
+                            window.location.href = 'index.html';
                         } else if (page === 'koleksi') {
-                            history.back();
+                            sessionStorage.removeItem('currentCollectionKey');
+                            sessionStorage.removeItem('currentCollectionTitle');
+                            sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
+                            window.location.href = 'index.html';
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
                         }
@@ -769,7 +773,8 @@
                 sessionStorage.removeItem('currentCollectionTitle');
                 sessionStorage.removeItem('comingFromPlayer');
                 sessionStorage.removeItem('lastFocusedTitle');
-                history.back();
+                sessionStorage.setItem('lastActiveMenuPage', 'beranda');
+                window.location.href = 'index.html';
             }
         });
 
@@ -781,9 +786,13 @@
                     sessionStorage.removeItem('currentCollectionTitle');
                     sessionStorage.removeItem('comingFromPlayer');
                     sessionStorage.removeItem('lastFocusedTitle');
-                    history.back();
+                    sessionStorage.setItem('lastActiveMenuPage', 'beranda');
+                    window.location.href = 'index.html';
                 } else if (page === 'koleksi') {
-                    history.back();
+                    sessionStorage.removeItem('currentCollectionKey');
+                    sessionStorage.removeItem('currentCollectionTitle');
+                    sessionStorage.setItem('lastActiveMenuPage', 'koleksi');
+                    window.location.href = 'index.html';
                 } else if (page === 'pengaturan') {
                     showPengaturanMenu();
                 }
