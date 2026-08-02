@@ -2,7 +2,7 @@
 <html lang="in">
 <head>
     <meta charset="UTF-8">
-    <title>Tiviku - Beranda</title>
+    <title>Tiviku - Beranda & Koleksi</title>
     <style>
         body {
             background-color: black;
@@ -270,44 +270,18 @@
             box-shadow: 0 0 15px #ff4d4d;
         }
 
-        /* GAYA TEMA (APPLIED CLASSES) */
-        .theme-blue-dark {
-            background-color: #121c29 !important;
-        }
-        .theme-blue-dark #sidebar {
-            background-color: #0b141d !important;
-            border-right-color: #1e2a39 !important;
-        }
-        .theme-blue-dark #sidebar #cari {
-            background: #1e2a39 !important;
-        }
-        .theme-blue-dark .responsive-div {
-            border: 5px solid #4a90e2 !important;
-        }
-        .theme-blue-dark .responsive-div:focus,
-        .theme-blue-dark .highlight {
-            border: 5px solid white !important; 
-            box-shadow: 0 0 15px #4a90e2;
-        }
+        /* GAYA TEMA */
+        .theme-blue-dark { background-color: #121c29 !important; }
+        .theme-blue-dark #sidebar { background-color: #0b141d !important; border-right-color: #1e2a39 !important; }
+        .theme-blue-dark #sidebar #cari { background: #1e2a39 !important; }
+        .theme-blue-dark .responsive-div { border: 5px solid #4a90e2 !important; }
+        .theme-blue-dark .responsive-div:focus, .theme-blue-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #4a90e2; }
 
-        .theme-red-dark {
-            background-color: #1f0505 !important;
-        }
-        .theme-red-dark #sidebar {
-            background-color: #150000 !important;
-            border-right-color: #330000 !important;
-        }
-        .theme-red-dark #sidebar #cari {
-            background: #330000 !important;
-        }
-        .theme-red-dark .responsive-div {
-            border: 5px solid #ff4d4d !important;
-        }
-        .theme-red-dark .responsive-div:focus,
-        .theme-red-dark .highlight {
-            border: 5px solid white !important;
-            box-shadow: 0 0 15px #ff4d4d;
-        }
+        .theme-red-dark { background-color: #1f0505 !important; }
+        .theme-red-dark #sidebar { background-color: #150000 !important; border-right-color: #330000 !important; }
+        .theme-red-dark #sidebar #cari { background: #330000 !important; }
+        .theme-red-dark .responsive-div { border: 5px solid #ff4d4d !important; }
+        .theme-red-dark .responsive-div:focus, .theme-red-dark .highlight { border: 5px solid white !important; box-shadow: 0 0 15px #ff4d4d; }
     </style>
 </head>
 <body>
@@ -354,34 +328,24 @@
         function applyTheme(themeName) {
             const appWrapper = document.getElementById('app-wrapper');
             const body = document.body;
-            
             body.classList.remove('theme-blue-dark', 'theme-red-dark');
             appWrapper.classList.remove('theme-blue-dark', 'theme-red-dark'); 
-
             if (themeName !== 'default') {
-                const themeClass = `theme-${themeName}`;
-                body.classList.add(themeClass);
-                appWrapper.classList.add(themeClass);
+                body.classList.add(`theme-${themeName}`);
+                appWrapper.classList.add(`theme-${themeName}`);
             }
-            
-            try {
-                localStorage.setItem('currentTheme', themeName);
-            } catch (e) {
-                console.error("Gagal menyimpan tema:", e);
-            }
+            try { localStorage.setItem('currentTheme', themeName); } catch (e) {}
         }
 
         function loadInitialTheme() {
-            const savedTheme = localStorage.getItem('currentTheme') || 'default';
-            applyTheme(savedTheme);
+            applyTheme(localStorage.getItem('currentTheme') || 'default');
         }
         loadInitialTheme();
 
         function setupThemeButtons() {
             document.querySelectorAll('.theme-button').forEach(button => {
                 button.onclick = () => {
-                    const theme = button.getAttribute('data-theme');
-                    applyTheme(theme);
+                    applyTheme(button.getAttribute('data-theme'));
                     button.focus(); 
                 };
             });
@@ -390,13 +354,9 @@
 
         function updateClock() {
             const now = new Date();
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            const timeString = `${hours}:${minutes}`;
+            const timeString = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
             const clockElement = document.getElementById('digital-clock');
-            if (clockElement) {
-                clockElement.innerText = timeString;
-            }
+            if (clockElement) clockElement.innerText = timeString;
         }
         updateClock(); 
         setInterval(updateClock, 1000);
@@ -405,21 +365,14 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target.querySelector('.lazy-img'); 
-                    if (img) {
-                        const src = img.getAttribute('data-src');
-                        if (src) {
-                            img.src = src; 
-                            img.removeAttribute('data-src');
-                            observer.unobserve(entry.target); 
-                        }
+                    if (img && img.getAttribute('data-src')) {
+                        img.src = img.getAttribute('data-src'); 
+                        img.removeAttribute('data-src');
+                        observer.unobserve(entry.target); 
                     }
                 }
             });
-        }, {
-            root: container, 
-            rootMargin: '100px 0px', 
-            threshold: 0.01
-        });
+        }, { root: container, rootMargin: '100px 0px', threshold: 0.01 });
 
         function createFilmElement(item, clickAction, isCollection = false) {
             const img = document.createElement('img');
@@ -450,10 +403,12 @@
             return dv; 
         }
 
+        // FUNGSI MEMUAT HALAMAN BERANDA
         function loadBerandaContent() {
             container.style.display = 'block';
             pengaturanMenu.style.display = 'none';
             headerTitle.style.display = 'flex';
+            headerTitle.innerText = 'BERANDA';
             container.innerHTML = '<h2>Memuat Beranda...</h2>';
             
             fetch(indexJsonUrl)
@@ -485,15 +440,13 @@
                                         }
                                     });
                                 }
-                                
                                 extractItems(data);
                                 filesProcessed++;
-                                
                                 if (filesProcessed === directFiles.length) {
                                     renderBerandaItems(allItems);
                                 }
                             })
-                            .catch(error => {
+                            .catch(() => {
                                 filesProcessed++;
                                 if (filesProcessed === directFiles.length) {
                                     renderBerandaItems(allItems);
@@ -501,14 +454,13 @@
                             });
                     });
                 })
-                .catch(error => {
+                .catch(() => {
                     container.innerHTML = '<h2>❌ Gagal memuat data</h2>';
                 });
         }
 
         function renderBerandaItems(allItems) {
             container.innerHTML = '';
-
             if (allItems.length === 0) {
                 container.innerHTML = '<h2>Tidak ada konten di Beranda.</h2>';
                 return;
@@ -522,7 +474,6 @@
                     action = () => {
                         sessionStorage.setItem('comingFromPlayer', 'true');
                         sessionStorage.setItem('lastFocusedTitle', item.ttl);
-
                         sessionStorage.setItem('videoLink', item.lnk);
                         sessionStorage.setItem('videoTitle', item.ttl);
                         sessionStorage.setItem('logoFile', item.logo);
@@ -552,6 +503,90 @@
             }
         }
 
+        // FUNGSI MEMUAT KARTU-KARTU KOLEKSI (KATEGORI UTAMA) DI INDEX.HTML
+        function loadKoleksiMenuContent() {
+            container.style.display = 'block';
+            pengaturanMenu.style.display = 'none';
+            headerTitle.style.display = 'flex';
+            headerTitle.innerText = 'KOLEKSI';
+            container.innerHTML = '<h2>Memuat Daftar Koleksi...</h2>';
+
+            fetch(indexJsonUrl)
+                .then(response => response.json())
+                .then(indexData => {
+                    const directFiles = indexData.source_list || [];
+                    let allItems = [];
+                    let filesProcessed = 0;
+
+                    if (directFiles.length === 0) {
+                        container.innerHTML = '<h2>Koleksi Kosong</h2>';
+                        return;
+                    }
+
+                    directFiles.forEach(fileUrl => {
+                        fetch(fileUrl)
+                            .then(response => response.json())
+                            .then(data => {
+                                function extractParentCollections(entries) {
+                                    if (!Array.isArray(entries)) return;
+                                    entries.forEach(entry => {
+                                        // Mengambil item yang bertindak sebagai induk koleksi (memiliki properti koleksi tapi bukan link langsung video)
+                                        if (entry.koleksi && !entry.lnk) {
+                                            // Hindari duplikat koleksi berdasarkan key
+                                            if (!allItems.some(existing => existing.koleksi === entry.koleksi)) {
+                                                allItems.push(entry);
+                                            }
+                                        }
+                                        for (let key in entry) {
+                                            if (Array.isArray(entry[key])) {
+                                                extractParentCollections(entry[key]);
+                                            }
+                                        }
+                                    });
+                                }
+                                extractParentCollections(data);
+                                filesProcessed++;
+                                if (filesProcessed === directFiles.length) {
+                                    renderKoleksiMenuCards(allItems);
+                                }
+                            })
+                            .catch(() => {
+                                filesProcessed++;
+                                if (filesProcessed === directFiles.length) {
+                                    renderKoleksiMenuCards(allItems);
+                                }
+                            });
+                    });
+                })
+                .catch(() => {
+                    container.innerHTML = '<h2>❌ Gagal memuat data koleksi</h2>';
+                });
+        }
+
+        function renderKoleksiMenuCards(collectionList) {
+            container.innerHTML = '';
+            if (collectionList.length === 0) {
+                container.innerHTML = '<h2>Tidak ada kategori koleksi ditemukan.</h2>';
+                return;
+            }
+
+            collectionList.forEach(item => {
+                const action = () => {
+                    sessionStorage.setItem('currentCollectionKey', item.koleksi);
+                    sessionStorage.setItem('currentCollectionTitle', item.ttl);
+                    window.location.href = 'koleksi.html';
+                };
+                createFilmElement(item, action, true);
+            });
+
+            const targetDiv = document.querySelector('.responsive-div');
+            if (targetDiv) {
+                targetDiv.classList.add('highlight');
+                targetDiv.focus();
+                targetDiv.scrollIntoView({ behavior: 'instant', block: 'center' });
+            }
+        }
+
         function showPengaturanMenu() {
             container.style.display = 'none';
             headerTitle.style.display = 'none';
@@ -563,9 +598,7 @@
             }
             
             const firstThemeButton = document.querySelector('.theme-button');
-            if (firstThemeButton) {
-                firstThemeButton.focus();
-            }
+            if (firstThemeButton) firstThemeButton.focus();
         }
 
         function prosesMenu() {
@@ -591,7 +624,7 @@
         document.addEventListener('keydown', (e) => {
             const focusedElement = document.activeElement;
 
-            if (e.key === 'ArrowUp' || e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.key === 'Enter') {
+            if (['ArrowUp', 'ArrowDown', 'ArrowRight', 'ArrowLeft', 'Enter'].includes(e.key)) {
                 e.preventDefault(); 
                 
                 if (focusedElement.classList.contains('theme-button')) {
@@ -641,9 +674,7 @@
                         if (page === 'beranda') {
                             loadBerandaContent();
                         } else if (page === 'koleksi') {
-                            sessionStorage.removeItem('currentCollectionKey');
-                            sessionStorage.removeItem('currentCollectionTitle');
-                            window.location.href = 'koleksi.html';
+                            loadKoleksiMenuContent();
                         } else if (page === 'pengaturan') {
                             showPengaturanMenu();
                         }
@@ -717,15 +748,14 @@
                 if (page === 'beranda') {
                     loadBerandaContent();
                 } else if (page === 'koleksi') {
-                    sessionStorage.removeItem('currentCollectionKey');
-                    sessionStorage.removeItem('currentCollectionTitle');
-                    window.location.href = 'koleksi.html';
+                    loadKoleksiMenuContent();
                 } else if (page === 'pengaturan') {
                     showPengaturanMenu();
                 }
             });
         });
 
+        // Inisialisasi awal saat halaman dimuat
         loadBerandaContent();
     </script>
 </body>
