@@ -31,18 +31,14 @@
       background-color: var(--bg-color);
       color: var(--text-color);
       padding-bottom: 30px;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE & Edge */
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
 
-    /* Menyembunyikan scrollbar di seluruh elemen container */
     body::-webkit-scrollbar,
     .player-modal::-webkit-scrollbar,
-    .drawer-content::-webkit-scrollbar,
-    .drawer-dropdown-content::-webkit-scrollbar {
-      display: none !important;
-      width: 0 !important;
-      height: 0 !important;
+    .drawer-content::-webkit-scrollbar {
+      display: none;
     }
 
     header {
@@ -255,8 +251,22 @@
       max-height: 290px;
       overflow-y: auto;
       padding-right: 4px;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
+    }
+
+    .drawer-dropdown-content::-webkit-scrollbar {
+      display: block;
+      width: 4px;
+    }
+    .drawer-dropdown-content::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.1);
+      border-radius: 4px;
+    }
+    .drawer-dropdown-content::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+    .drawer-dropdown-content::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-color);
     }
 
     .drawer-item {
@@ -1395,6 +1405,7 @@
       playingTitle.innerText = movie.ttl || 'Playing Video';
       playerModal.classList.add('active');
 
+      // Tambahkan state history agar tombol back menangani penutupan player terlebih dahulu
       history.pushState({ modalOpen: true }, '', '#player');
 
       searchInput.value = '';
@@ -1437,12 +1448,14 @@
       showControls();
     }
 
+    // Listener tombol Back (Android / Browser History)
     window.addEventListener('popstate', (event) => {
       if (playerModal.classList.contains('active')) {
         closePlayerModalOnly();
       }
     });
 
+    // Fungsi bantu menutup player dan menghentikan video
     function closePlayerModalOnly() {
       playerModal.classList.remove('active');
       if (videoPlayer) {
