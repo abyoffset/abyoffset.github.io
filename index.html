@@ -248,13 +248,11 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      /* Batasi tinggi maksimal agar setara dengan ~6 item, lalu buat bisa di-scroll */
       max-height: 290px;
       overflow-y: auto;
       padding-right: 4px;
     }
 
-    /* Kustomisasi scrollbar untuk list kategori koleksi agar rapi */
     .drawer-dropdown-content::-webkit-scrollbar {
       display: block;
       width: 4px;
@@ -782,6 +780,99 @@
       padding: 0 16px;
     }
 
+    /* MINI PLAYER STYLES */
+    .mini-player {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 320px;
+      background: #18181c;
+      border: 1px solid #333;
+      border-radius: 12px;
+      z-index: 1000;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+      overflow: hidden;
+      animation: slideUpMini 0.3s ease;
+    }
+
+    .mini-player.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes slideUpMini {
+      from { transform: translateY(100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .mini-player-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: #121215;
+      border-bottom: 1px solid #24242a;
+    }
+
+    .mini-player-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 220px;
+    }
+
+    .mini-player-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .mini-btn {
+      background: none;
+      border: none;
+      color: #aaa;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
+
+    .mini-btn:hover {
+      color: #fff;
+    }
+
+    .mini-video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #000;
+      cursor: pointer;
+    }
+
+    .mini-video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .mini-player-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px;
+      background: #18181c;
+    }
+
     @media (max-width: 600px) {
       .movie-grid {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
@@ -810,6 +901,11 @@
       }
       .player-title {
         max-width: 100%;
+      }
+      .mini-player {
+        width: 280px;
+        bottom: 15px;
+        right: 15px;
       }
     }
   </style>
@@ -840,7 +936,7 @@
     </div>
   </header>
 
-  <!-- Drawer / Sidebar Menu (Koleksi Otomatis) -->
+  <!-- Drawer / Sidebar Menu -->
   <div id="drawerOverlay" class="drawer-overlay" onclick="toggleDrawer()"></div>
   <div id="appDrawer" class="drawer">
     <div class="drawer-header">
@@ -849,13 +945,10 @@
     </div>
     <div class="drawer-content">
       
-      <!-- Kategori Koleksi menggunakan <details> dengan maksimal tampil 6 item + scroll -->
       <div class="drawer-section">
         <details>
           <summary class="drawer-section-title">Kategori Koleksi</summary>
-          <div id="drawerKoleksiList" class="drawer-dropdown-content">
-            <!-- Otomatis diisi oleh JavaScript -->
-          </div>
+          <div id="drawerKoleksiList" class="drawer-dropdown-content"></div>
         </details>
       </div>
 
@@ -925,6 +1018,8 @@
                 <span class="time-display" id="timeDisplay">00:00 / 00:00</span>
               </div>
               <div class="controls-right">
+                <!-- Tombol Minimize ke Beranda -->
+                <button class="control-btn" id="minimizeBtn" title="Mini Player" onclick="openMiniPlayer()">🗕</button>
                 <button class="control-btn" id="fullscreenBtn" title="Fullscreen">⛶</button>
               </div>
             </div>
@@ -940,7 +1035,7 @@
         </div>
       </div>
 
-      <!-- IKLAN BANNER BAWAH (CENTERED) -->
+      <!-- IKLAN BANNER BAWAH -->
       <div id="adContainerBottom" style="width: 100%; display: flex; justify-content: center; align-items: center; margin: 20px 0; position: relative;">
         <div style="position: relative; width: 320px; display: flex; justify-content: center;">
           <button onclick="document.getElementById('adContainerBottom').style.display='none'" style="position: absolute; top: -10px; right: -10px; background: #222; color: #fff; border: 1px solid #444; border-radius: 50%; width: 24px; height: 24px; font-size: 12px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 2px 6px rgba(0,0,0,0.5);" title="Tutup Iklan">✕</button>
@@ -955,7 +1050,6 @@
             };
           </script>
           <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
-
         </div>
       </div>
 
@@ -963,6 +1057,24 @@
       <div class="player-recommendations-wrapper">
         <div id="playerMovieGrid" class="movie-grid"></div>
       </div>
+    </div>
+  </div>
+
+  <!-- MINI PLAYER FLOATING -->
+  <div id="miniPlayer" class="mini-player">
+    <div class="mini-player-header">
+      <span id="miniPlayerTitle" class="mini-player-title">Judul Film</span>
+      <div class="mini-player-actions">
+        <button class="mini-btn" onclick="expandPlayer()" title="Perbesar">⤢</button>
+        <button class="mini-btn" onclick="closeMiniPlayer()" title="Tutup">✕</button>
+      </div>
+    </div>
+    <div class="mini-video-container" onclick="expandPlayer()">
+      <div id="miniVideoPlaceholder"></div>
+    </div>
+    <div class="mini-player-footer">
+      <button class="mini-btn" id="miniPlayBtn" onclick="toggleMiniPlay()" style="font-size: 1.2rem;">⏸</button>
+      <span id="miniTimeDisplay" style="font-size: 0.75rem; color: #aaa; font-family: monospace;">00:00 / 00:00</span>
     </div>
   </div>
 
@@ -1042,6 +1154,7 @@
     let currentData = [];
     let displayData = [];
     let currentKoleksiFilter = null;
+    let currentActiveMovie = null;
 
     const movieGrid = document.getElementById('movieGrid');
     const playerMovieGrid = document.getElementById('playerMovieGrid');
@@ -1073,6 +1186,13 @@
     const appDrawer = document.getElementById('appDrawer');
     const drawerOverlay = document.getElementById('drawerOverlay');
 
+    // Elemen Mini Player
+    const miniPlayer = document.getElementById('miniPlayer');
+    const miniPlayerTitle = document.getElementById('miniPlayerTitle');
+    const miniVideoPlaceholder = document.getElementById('miniVideoPlaceholder');
+    const miniPlayBtn = document.getElementById('miniPlayBtn');
+    const miniTimeDisplay = document.getElementById('miniTimeDisplay');
+
     let hls = null;
     let controlsTimeout = null;
     let isScrubbing = false;
@@ -1091,7 +1211,7 @@
     function showAppInfo() {
       showCustomAlert(
         "Tentang Aplikasi",
-        "<b>Tiviku Web Player v2.6</b><br>Fitur urut episode otomatis aktif."
+        "<b>Tiviku Web Player v2.6</b><br>Fitur Mini Player & urut episode otomatis aktif."
       );
     }
 
@@ -1342,7 +1462,7 @@
     }
 
     async function loadAutoSourceList() {
-      const githubJsonUrl = "index.json";
+      const githubJsonUrl = "https://cdn.jsdelivr.net/gh/abyoffset/abyoffset.github.io@4579477/index.json";
       
       try {
         const response = await fetch(githubJsonUrl);
@@ -1408,8 +1528,13 @@
     }
 
     function playMovie(movie) {
+      currentActiveMovie = movie;
+      closeMiniPlayer(); // Tutup mini player jika sedang aktif
+
       playingTitle.innerText = movie.ttl || 'Playing Video';
       playerModal.classList.add('active');
+
+      history.pushState({ modalOpen: true }, '', '#player');
 
       searchInput.value = '';
       playerSearchInput.value = '';
@@ -1451,6 +1576,75 @@
       showControls();
     }
 
+    // Fungsi Mini Player
+    function openMiniPlayer() {
+      if (!currentActiveMovie) return;
+      playerModal.classList.remove('active');
+      
+      miniPlayerTitle.innerText = currentActiveMovie.ttl || 'Playing Video';
+      miniVideoPlaceholder.appendChild(videoPlayer); // Pindahkan elemen video ke dalam mini player
+      miniPlayer.classList.add('active');
+    }
+
+    function expandPlayer() {
+      miniPlayer.classList.remove('active');
+      const videoWrapper = document.querySelector('.video-wrapper');
+      videoWrapper.appendChild(videoPlayer); // Kembalikan elemen video ke modal utama
+      playerModal.classList.add('active');
+    }
+
+    function closeMiniPlayer() {
+      miniPlayer.classList.remove('active');
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+      }
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
+      currentActiveMovie = null;
+    }
+
+    function toggleMiniPlay() {
+      if (videoPlayer.paused) {
+        videoPlayer.play();
+      } else {
+        videoPlayer.pause();
+      }
+    }
+
+    window.addEventListener('popstate', (event) => {
+      if (playerModal.classList.contains('active')) {
+        // Alih-alih langsung menutup total, otomatis turunkan ke Mini Player jika sedang memutar video
+        if (videoPlayer && !videoPlayer.paused && currentActiveMovie) {
+          openMiniPlayer();
+        } else {
+          closePlayerModalOnly();
+        }
+      }
+    });
+
+    function closePlayerModalOnly() {
+      playerModal.classList.remove('active');
+      if (videoPlayer && !miniPlayer.classList.contains('active')) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+        if (hls) {
+          hls.destroy();
+          hls = null;
+        }
+      }
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
+      }
+    }
+
     playBtn.onclick = () => {
       if (videoPlayer.paused) videoPlayer.play();
       else videoPlayer.pause();
@@ -1458,11 +1652,13 @@
 
     videoPlayer.onplay = () => {
       playBtn.innerText = '⏸';
+      miniPlayBtn.innerText = '⏸';
       showControls();
     };
 
     videoPlayer.onpause = () => {
       playBtn.innerText = '▶';
+      miniPlayBtn.innerText = '▶';
       showControls();
     };
 
@@ -1493,7 +1689,9 @@
       if (videoPlayer.duration && !isScrubbing) {
         const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
         progressFill.style.width = `${pct}%`;
-        timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
+        const formattedTime = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
+        timeDisplay.innerText = formattedTime;
+        miniTimeDisplay.innerText = formattedTime;
       }
     };
 
