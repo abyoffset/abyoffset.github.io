@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tiviku Web Player - Secure</title>
   
-  <!-- PWA Manifest & Theme Color -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0f0f12">
 
-  <!-- HLS.js Library -->
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   
   <style>
@@ -29,19 +27,18 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    /* Menghilangkan scrollbar secara global untuk semua browser */
     html, body {
       background-color: var(--bg-color);
       color: var(--text-color);
       padding-bottom: 30px;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* Internet Explorer & Edge */
+      scrollbar-width: none;
+      -ms-overflow-style: none;
     }
 
     body::-webkit-scrollbar,
     .player-modal::-webkit-scrollbar,
     .drawer-content::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, Opera */
+      display: none;
     }
 
     header {
@@ -90,6 +87,7 @@
       text-transform: uppercase;
       letter-spacing: 1.5px;
       text-shadow: 0 2px 10px rgba(229, 9, 20, 0.3);
+      cursor: pointer;
     }
 
     .header-actions {
@@ -224,12 +222,59 @@
       letter-spacing: 1px;
       color: var(--text-secondary);
       font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drawer-section-title::-webkit-details-marker {
+      display: none;
+    }
+
+    .drawer-section-title::after {
+      content: '▼';
+      font-size: 0.65rem;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] > .drawer-section-title::after {
+      transform: rotate(180deg);
+    }
+
+    .drawer-dropdown-content {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      /* Batasi tinggi maksimal agar setara dengan ~6 item, lalu buat bisa di-scroll */
+      max-height: 290px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    /* Kustomisasi scrollbar untuk list kategori koleksi agar rapi */
+    .drawer-dropdown-content::-webkit-scrollbar {
+      display: block;
+      width: 4px;
+    }
+    .drawer-dropdown-content::-webkit-scrollbar-track {
+      background: rgba(0,0,0,0.1);
+      border-radius: 4px;
+    }
+    .drawer-dropdown-content::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+    .drawer-dropdown-content::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-color);
     }
 
     .drawer-item {
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: space-between;
       background: #121215;
       border: 1px solid #24242a;
       color: var(--text-color);
@@ -248,14 +293,10 @@
       border-color: rgba(229, 9, 20, 0.5);
     }
 
-    .drawer-item.danger {
-      color: #ff4d4d;
-      border-color: rgba(255, 77, 77, 0.2);
-    }
-
-    .drawer-item.danger:hover {
-      background-color: rgba(255, 77, 77, 0.1);
-      border-color: #ff4d4d;
+    .drawer-item.active-koleksi {
+      border-color: var(--accent-color);
+      background-color: rgba(229, 9, 20, 0.1);
+      color: var(--accent-color);
     }
 
     .drawer-footer {
@@ -331,6 +372,34 @@
       max-width: 1280px;
       margin: 24px auto;
       padding: 0 16px;
+    }
+
+    .section-info-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .current-filter-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      letter-spacing: 0.5px;
+    }
+
+    .reset-filter-btn {
+      background: none;
+      border: none;
+      color: var(--accent-color);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: none;
+    }
+    .reset-filter-btn.show {
+      display: block;
     }
 
     .movie-grid {
@@ -747,7 +816,7 @@
 </head>
 <body oncontextmenu="return false;">
 
-  <!-- LAYOUT ERROR OFFLINE (Menutupi seluruh layar saat tidak ada internet) -->
+  <!-- LAYOUT ERROR OFFLINE -->
   <div id="offlineErrorContainer" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #0f0f12; z-index: 99999; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
     <h2 style="color: #e50914; margin-bottom: 10px; font-size: 1.5rem; font-weight: 700;">Koneksi Internet Terputus</h2>
     <p style="color: #a0a0a0; font-size: 0.95rem; margin-bottom: 24px;">Silakan periksa kembali jaringan Anda agar aplikasi dapat berjalan.</p>
@@ -760,7 +829,7 @@
       <button class="hamburger-btn" onclick="toggleDrawer()" title="Menu">
         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
-      <div class="logo-title">Tiviku App</div>
+      <div class="logo-title" onclick="resetFilter()">Tiviku App</div>
     </div>
     
     <div class="header-actions">
@@ -771,24 +840,28 @@
     </div>
   </header>
 
-  <!-- Drawer / Sidebar Menu -->
+  <!-- Drawer / Sidebar Menu (Koleksi Otomatis) -->
   <div id="drawerOverlay" class="drawer-overlay" onclick="toggleDrawer()"></div>
   <div id="appDrawer" class="drawer">
     <div class="drawer-header">
-      <div class="drawer-title">Menu & Pengaturan</div>
+      <div class="drawer-title">Menu Utama</div>
       <button class="drawer-close" onclick="toggleDrawer()">✕</button>
     </div>
     <div class="drawer-content">
+      
+      <!-- Kategori Koleksi menggunakan <details> dengan maksimal tampil 6 item + scroll -->
       <div class="drawer-section">
-        <div class="drawer-section-title">Tampilan & Sistem</div>
-        <button class="drawer-item danger" onclick="toggleDrawer(); resetAppData();">
-          <span>🔄</span> Muat Ulang Data
-        </button>
+        <details>
+          <summary class="drawer-section-title">Kategori Koleksi</summary>
+          <div id="drawerKoleksiList" class="drawer-dropdown-content">
+            <!-- Otomatis diisi oleh JavaScript -->
+          </div>
+        </details>
       </div>
 
       <div class="drawer-section">
-        <div class="drawer-section-title">Informasi</div>
-        <button class="drawer-item" onclick="toggleDrawer(); showAppInfo();">
+        <div class="drawer-section-title" style="cursor: default; pointer-events: none;">Informasi</div>
+        <button class="drawer-item" onclick="toggleDrawer(); showAppInfo();" style="justify-content: flex-start; gap: 10px;">
           <span>ℹ️</span> Tentang Aplikasi
         </button>
       </div>
@@ -811,6 +884,10 @@
 
   <!-- Grid Utama -->
   <div class="container">
+    <div class="section-info-bar">
+      <span id="currentFilterTitle" class="current-filter-title">Semua Koleksi</span>
+      <button id="resetFilterBtn" class="reset-filter-btn" onclick="resetFilter()">Tampilkan Semua ✕</button>
+    </div>
     <div id="movieGrid" class="movie-grid"></div>
   </div>
 
@@ -890,7 +967,6 @@
   </div>
 
   <script>
-    // 0. Pengecekan Status Koneksi Internet Otomatis (JavaScript)
     function checkConnectionStatus() {
       const offlineContainer = document.getElementById('offlineErrorContainer');
       if (!navigator.onLine) {
@@ -900,24 +976,19 @@
       }
     }
 
-    // Jalankan saat halaman dimuat
     window.addEventListener('load', checkConnectionStatus);
-    // Jalankan saat koneksi terputus di tengah penggunaan
     window.addEventListener('offline', checkConnectionStatus);
-    // Jalankan saat koneksi kembali normal
     window.addEventListener('online', function() {
       checkConnectionStatus();
       location.reload();
     });
 
-    // 1. Domain Lock Validation
     const allowedDomain = ""; 
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
       document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
       throw new Error("Unauthorized domain");
     }
 
-    // 2. DevTools Detection & Shortcut Blocker
     (function() {
       const threshold = 160;
       const checkDevTools = () => {
@@ -952,7 +1023,6 @@
       }
     }
 
-    // Custom Modal Alert Helpers
     const customAlertModal = document.getElementById('customAlertModal');
     const customAlertTitle = document.getElementById('customAlertTitle');
     const customAlertMessage = document.getElementById('customAlertMessage');
@@ -969,25 +1039,18 @@
       customAlertModal.classList.remove('active');
     }
 
-    const defaultData = [
-      {
-        "logo": "https://i.imgur.com/99jz7YJ.jpeg",
-        "lnk": "aHR0cHM6Ly9jZG4uanNkZWxpdI5ubmV0L2doL3R2a3VhcHAyL3R2cTIwODVkYTA4LzEvbWFzdGVyLm0zdTg=",
-        "ttl": "Wiro Sableng: Pendekar Kapak Maut Naga Geni 212 (2018)",
-        "dur": "2:03:35",
-        "crop_mode": "fill_width",
-        "crop_scale": "1.2"
-      }
-    ];
-
-    let currentData = [...defaultData];
+    let currentData = [];
     let displayData = [];
+    let currentKoleksiFilter = null;
 
     const movieGrid = document.getElementById('movieGrid');
     const playerMovieGrid = document.getElementById('playerMovieGrid');
     const searchInput = document.getElementById('searchInput');
     const playerSearchInput = document.getElementById('playerSearchInput');
     const playerModal = document.getElementById('playerModal');
+    const drawerKoleksiList = document.getElementById('drawerKoleksiList');
+    const currentFilterTitle = document.getElementById('currentFilterTitle');
+    const resetFilterBtn = document.getElementById('resetFilterBtn');
     
     const videoContainer = document.getElementById('videoContainer');
     const videoPlayer = document.getElementById('videoPlayer');
@@ -1020,10 +1083,16 @@
     let currentTapSide = null;
     let resetAccumulatedTimeout = null;
 
-    // Toggle Drawer Menu
     function toggleDrawer() {
       appDrawer.classList.toggle('active');
       drawerOverlay.classList.toggle('active');
+    }
+
+    function showAppInfo() {
+      showCustomAlert(
+        "Tentang Aplikasi",
+        "<b>Tiviku Web Player v2.6</b><br>Fitur urut episode otomatis aktif."
+      );
     }
 
     function shuffleArray(array) {
@@ -1033,18 +1102,6 @@
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
       return shuffled;
-    }
-
-    function resetAppData() {
-      loadAutoSourceList();
-      toggleDrawer();
-    }
-
-    function showAppInfo() {
-      showCustomAlert(
-        "Tentang Aplikasi",
-        "<b>tiviku v2.6</b><br>"
-      );
     }
 
     function showControls() {
@@ -1218,66 +1275,70 @@
       renderMoviesTo(data, playerMovieGrid);
     }
 
-    async function parseAndLoadData(data) {
-      let allMovies = [];
-      let listUrls = null;
-
-      if (data.source_list && Array.isArray(data.source_list)) {
-        listUrls = data.source_list.filter(item => typeof item === 'string' && item.trim() !== '');
-      } else if (data.categories && Array.isArray(data.categories)) {
-        listUrls = data.categories.map(cat => cat.json_url).filter(Boolean);
-      }
-
-      if (listUrls && listUrls.length > 0) {
-        try {
-          const fetchPromises = listUrls.map(async (jsonLink) => {
-            const res = await fetch(jsonLink);
-            if (!res.ok) throw new Error(`Gagal fetch: ${jsonLink}`);
-            return await res.json();
-          });
-
-          const results = await Promise.all(fetchPromises);
-          results.forEach(subData => {
-            if (Array.isArray(subData)) {
-              allMovies = allMovies.concat(subData);
-            }
-          });
-        } catch (err) {
-          showCustomAlert("Kesalahan", "Gagal memuat salah satu file JSON cabang: " + err.message);
-          return;
+    function buildKoleksiDrawerMenu(data) {
+      drawerKoleksiList.innerHTML = '';
+      
+      const koleksiMap = new Map();
+      data.forEach(item => {
+        if (item.koleksi) {
+          if (!koleksiMap.has(item.koleksi)) {
+            koleksiMap.set(item.koleksi, 0);
+          }
+          koleksiMap.set(item.koleksi, koleksiMap.get(item.koleksi) + 1);
         }
-      } else if (Array.isArray(data)) {
-        allMovies = data;
-      } else {
-        showCustomAlert("Kesalahan", "Format JSON tidak dikenali!");
+      });
+
+      if (koleksiMap.size === 0) {
+        drawerKoleksiList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada koleksi</span>';
         return;
       }
 
-      if (allMovies.length > 0) {
-        updateMoviesData(allMovies);
-      } else {
-        showCustomAlert("Informasi", "Tidak ada data film yang berhasil dimuat.");
-      }
+      koleksiMap.forEach((count, koleksiName) => {
+        const btn = document.createElement('button');
+        btn.className = `drawer-item ${currentKoleksiFilter === koleksiName ? 'active-koleksi' : ''}`;
+        btn.innerHTML = `<span>📂 ${koleksiName}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
+        btn.onclick = () => {
+          filterByKoleksi(koleksiName);
+          toggleDrawer();
+        };
+        drawerKoleksiList.appendChild(btn);
+      });
     }
 
-    function updateMoviesData(newData) {
-      if (Array.isArray(newData)) {
-        const existingMap = new Map();
-        
-        currentData.forEach(movie => {
-          const key = movie.lnk || movie.ttl;
-          existingMap.set(key, movie);
-        });
+    function filterByKoleksi(koleksiName) {
+      currentKoleksiFilter = koleksiName;
+      currentFilterTitle.innerText = `Koleksi: ${koleksiName}`;
+      resetFilterBtn.classList.add('show');
 
-        newData.forEach(movie => {
-          const key = movie.lnk || movie.ttl;
-          existingMap.set(key, movie);
-        });
+      let filtered = currentData.filter(item => item.koleksi === koleksiName);
 
-        currentData = Array.from(existingMap.values());
-        displayData = shuffleArray(currentData);
-        renderMovies(displayData);
+      const hasEpisode = filtered.some(item => item.episode !== undefined && item.episode !== null && item.episode !== "");
+
+      if (hasEpisode) {
+        filtered.sort((a, b) => {
+          const epA = parseFloat(a.episode) || 0;
+          const epB = parseFloat(b.episode) || 0;
+          return epA - epB;
+        });
+      } else {
+        filtered = shuffleArray(filtered);
       }
+
+      displayData = filtered;
+      renderMovies(displayData);
+      buildKoleksiDrawerMenu(currentData);
+    }
+
+    function resetFilter() {
+      currentKoleksiFilter = null;
+      currentFilterTitle.innerText = "Semua Koleksi";
+      resetFilterBtn.classList.remove('show');
+      searchInput.value = '';
+      
+      displayData = shuffleArray(currentData);
+      renderMovies(displayData);
+      buildKoleksiDrawerMenu(currentData);
+      if(appDrawer.classList.contains('active')) toggleDrawer();
     }
 
     async function loadAutoSourceList() {
@@ -1285,15 +1346,39 @@
       
       try {
         const response = await fetch(githubJsonUrl);
-        if (!response.ok) throw new Error("Gagal mengambil data dari GitHub");
+        if (!response.ok) throw new Error("Gagal mengambil data index.json");
         
-        const data = await response.json();
-        await parseAndLoadData(data);
+        const rootJson = await response.json();
+        let sourceFiles = rootJson.source_list || [];
+
+        let allMovies = [];
+        for (const fileUrl of sourceFiles) {
+          try {
+            const subRes = await fetch(fileUrl);
+            if (subRes.ok) {
+              const subData = await subRes.json();
+              if (Array.isArray(subData)) {
+                allMovies = allMovies.concat(subData);
+              } else if (typeof subData === 'object' && subData !== null) {
+                allMovies.push(subData);
+              }
+            }
+          } catch (e) {
+            console.error(`Gagal memuat file cabang: ${fileUrl}`, e);
+          }
+        }
+
+        if (allMovies.length > 0) {
+          currentData = allMovies;
+          displayData = shuffleArray(currentData);
+          renderMovies(displayData);
+          buildKoleksiDrawerMenu(currentData);
+        } else {
+          renderMovies([]);
+        }
       } catch (err) {
         console.error("Gagal memuat otomatis:", err.message);
-        currentData = [...defaultData];
-        displayData = shuffleArray(currentData);
-        renderMovies(displayData);
+        renderMovies([]);
       }
     }
 
@@ -1328,7 +1413,6 @@
 
       searchInput.value = '';
       playerSearchInput.value = '';
-      renderMovies(displayData);
 
       applyPlayerCropConfig(movie);
 
@@ -1414,10 +1498,12 @@
     };
 
     function filterMovies(query) {
-      const filteredMovies = displayData.filter(movie => 
+      let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
+      const filteredMovies = baseList.filter(movie => 
         (movie.ttl || '').toLowerCase().includes(query.toLowerCase())
       );
-      renderMovies(filteredMovies);
+      renderMoviesTo(filteredMovies, movieGrid);
+      renderMoviesTo(filteredMovies, playerMovieGrid);
     }
 
     searchInput.addEventListener('input', (e) => {
