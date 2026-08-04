@@ -1,8 +1,18 @@
 [
 {
+"logo": "https://i.imgur.com/kR2ZT65.png",
+"ttl": "Doraemon eps 383 dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq15@4d563a0/1/master.m3u8",
+"koleksi": "doraemon dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "25:09",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/lX43u5G.png",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq12@bfed369/1/master.m3u8",
 "ttl": "Doraemon eps 382 dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq12@bfed369/1/master.m3u8",
 "koleksi": "doraemon dubbing",
 "dur": "24:39",
 "crop_mode": "stretch_crop",
