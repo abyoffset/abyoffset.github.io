@@ -9,6 +9,8 @@
   <meta name="theme-color" content="#0f0f12">
 
   <script src="js.js"></script>
+  <!-- CDN HLS.js untuk pemutaran streaming -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   
   <style>
     :root {
@@ -555,6 +557,31 @@
       transition: transform 0.2s ease, object-fit 0.2s ease;
     }
 
+    /* Loading Spinner untuk Video */
+    .video-spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top-color: var(--accent-color);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      display: none;
+      z-index: 25;
+      pointer-events: none;
+    }
+
+    .video-container.buffering .video-spinner {
+      display: block;
+    }
+
+    @keyframes spin {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
     .player-logo {
       position: absolute;
       top: 12px;
@@ -894,6 +921,7 @@
         <div class="video-container show-controls" id="videoContainer">
           <div class="video-wrapper">
             <video id="videoPlayer" playsinline></video>
+            <div class="video-spinner" id="videoSpinner"></div>
           </div>
 
           <img src="https://i.imgur.com/KsWH0uL.png" alt="Tiviku Logo" class="player-logo">
@@ -983,29 +1011,6 @@
       throw new Error("Unauthorized domain");
     }
 
-    (function() {
-      const threshold = 160;
-      const checkDevTools = () => {
-        const widthThreshold = window.outerWidth - window.innerWidth > threshold;
-        const heightThreshold = window.outerHeight - window.innerHeight > threshold;
-        if (widthThreshold || heightThreshold) {
-          document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Akses Ditolak: Developer Tools Terdeteksi!</h1>";
-        }
-      };
-      setInterval(checkDevTools, 1000);
-    })();
-
-    document.addEventListener('keydown', function(e) {
-      if (
-        e.key === 'F12' || 
-        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'C' || e.key === 'J')) || 
-        (e.ctrlKey && e.key === 'U')
-      ) {
-        e.preventDefault();
-        return false;
-      }
-    });
-
     const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
 
     function _decode(_0x3c21) {
@@ -1048,6 +1053,7 @@
     
     const videoContainer = document.getElementById('videoContainer');
     const videoPlayer = document.getElementById('videoPlayer');
+    const videoSpinner = document.getElementById('videoSpinner');
     const playingTitle = document.getElementById('playingTitle');
     
     const seekLeft = document.getElementById('seekLeft');
@@ -1405,8 +1411,9 @@
       playingTitle.innerText = movie.ttl || 'Playing Video';
       playerModal.classList.add('active');
 
-      // Tambahkan state history agar tombol back menangani penutupan player terlebih dahulu
-      history.pushState({ modalOpen: true }, '', '#player');
+      if (!window.location.hash.includes('player')) {
+        history.pushState({ modalOpen: true }, '', '#player');
+      }
 
       searchInput.value = '';
       playerSearchInput.value = '';
@@ -1414,16 +1421,16 @@
       applyPlayerCropConfig(movie);
 
       const streamUrl = _decode(movie.lnk);
+      videoContainer.classList.add('buffering');
 
       if (Hls.isSupported()) {
         if (hls) hls.destroy();
         hls = new Hls({
-          maxBufferLength: 6,
-          maxMaxBufferLength: 10,
-          maxBufferSize: 15 * 1000 * 1000,
+          maxBufferLength: 10,
+          maxMaxBufferLength: 20,
+          maxBufferSize: 30 * 1000 * 1000,
           backBufferLength: 0,
-          capLevelToPlayerSize: true,
-          enableWorker: false,
+          enableWorker: true,
           xhrSetup: function (xhr, url) {
             if (url.includes("tiviku_system.bin") || url.includes(".key")) {
               const originalOpen = xhr.open;
@@ -1448,16 +1455,15 @@
       showControls();
     }
 
-    // Listener tombol Back (Android / Browser History)
-    window.addEventListener('popstate', (event) => {
+    window.addEventListener('popstate', () => {
       if (playerModal.classList.contains('active')) {
-        closePlayerModalOnly();
+        closePlayerModalOnly(false);
       }
     });
 
-    // Fungsi bantu menutup player dan menghentikan video
-    function closePlayerModalOnly() {
+    function closePlayerModalOnly(backHistory = true) {
       playerModal.classList.remove('active');
+      videoContainer.classList.remove('buffering');
       if (videoPlayer) {
         videoPlayer.pause();
         videoPlayer.currentTime = 0;
@@ -1472,6 +1478,9 @@
         if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
       }
+      if (backHistory && window.location.hash.includes('player')) {
+        history.back();
+      }
     }
 
     playBtn.onclick = () => {
@@ -1481,12 +1490,21 @@
 
     videoPlayer.onplay = () => {
       playBtn.innerText = '⏸';
+      videoContainer.classList.remove('buffering');
       showControls();
     };
 
     videoPlayer.onpause = () => {
       playBtn.innerText = '▶';
       showControls();
+    };
+
+    videoPlayer.onwaiting = () => {
+      videoContainer.classList.add('buffering');
+    };
+
+    videoPlayer.onplaying = () => {
+      videoContainer.classList.remove('buffering');
     };
 
     muteBtn.onclick = () => {
