@@ -1,5 +1,24 @@
 [
 {
+"logo": "https://i.imgur.com/502nt2H.jpeg",
+"ttl": "Doraemon: Nobita and the Island of Miracles – Animal Adventure (2012) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq16@9821542/1/master.m3u8",
+"koleksi": "doraemon dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "3.15",
+"dur": "1:39:30",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/sQAOWLu.jpeg",
+"ttl": "Migration (2023) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq16@b61e470/1/master.m3u8",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:23:05",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/tnuhI2j.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq14@5aa32b5/1/master.m3u8",
 "ttl": "Crayon Shin-chan: Fierceness That Invites Storm! The Singing Buttocks Bomb (2007) dubbing",
@@ -24,6 +43,33 @@
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:37:33",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/UwinUOP.jpeg",
+"ttl": "Luca (2021) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/luca%20(2021)%20dubb/in12.m3u8",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.05",
+"dur": "1:35:18",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/tRCWTOm.jpeg",
+"ttl": "Ballerina (2023) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/op8@13f6bda/55dTziseD4/ballerina/bl3.m3u8",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "1:33:47",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/rhRAtXr.jpeg",
+"ttl": "Detective Conan Movie 2 Case Closed: The Fourteenth Target (1998) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/Ztf7/Ztf7.m3u8",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.03",
+"dur": "1:39:37",
 "tiviku": "apk"
 },
 {
@@ -392,13 +438,6 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://i.imgur.com/rhRAtXr.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/Ztf7/Ztf7.m3u8",
-"ttl": "Detective Conan Movie 2 Case Closed: The Fourteenth Target (1998) dubbing",
-"dur": "1:39:37",
-"tiviku": "apk"
-},
-{
 "logo": "https://i.imgur.com/kTir3wU.png",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/squid.game.2021/e411.m3u8",
 "ttl": "eps5 Squid Game (2021) dubbing",
@@ -479,13 +518,6 @@
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/Fullmetal.Alchemist.the.Revenge.of.Scar.(2022).dub/1778.m3u8",
 "ttl": "Fullmetal Alchemist the Revenge of Scar (2022) dubbing",
 "dur": "1:05:32",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/UwinUOP.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/luca%20(2021)%20dubb/in12.m3u8",
-"ttl": "Luca (2021) dubbing",
-"dur": "1:35:18",
 "tiviku": "apk"
 },
 {
@@ -583,15 +615,6 @@
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8",
 "ttl": "Air Terjun Pengantin (2009)",
 "dur": "1:20:15",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/tRCWTOm.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie/op8@13f6bda/55dTziseD4/ballerina/bl3.m3u8",
-"ttl": "Ballerina (2023) dubbing",
-"dur": "1:33:47",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.30",
 "tiviku": "apk"
 },
 {
