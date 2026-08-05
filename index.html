@@ -8,9 +8,10 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0f0f12">
 
+  <script src="js.js"></script>
   <!-- CDN HLS.js untuk pemutaran streaming -->
- <script src="hls.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  
   <style>
     :root {
       --bg-color: #0f0f12;
@@ -26,8 +27,6 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* Menghilangkan kilatan putih saat disentuh/diklik di perangkat mobile */
-      -webkit-tap-highlight-color: transparent;
     }
 
     html, body {
@@ -83,23 +82,14 @@
       color: var(--accent-color);
     }
 
-    /* Desain Logo Teks Miring, Gradasi, dan Modern */
     .logo-title {
       font-size: 1.6rem;
-      font-weight: 900;
-      font-style: italic;
-      background: linear-gradient(135deg, #ffffff 30%, var(--accent-color) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      color: var(--accent-color);
       text-transform: uppercase;
-      letter-spacing: 2px;
-      filter: drop-shadow(0 2px 8px rgba(229, 9, 20, 0.4));
+      letter-spacing: 1.5px;
+      text-shadow: 0 2px 10px rgba(229, 9, 20, 0.3);
       cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .logo-title:hover {
-      transform: scale(1.03);
     }
 
     .header-actions {
@@ -430,8 +420,6 @@
       border: 1px solid #24242a;
       will-change: transform;
       transition: transform 0.15s ease, border-color 0.15s ease;
-      -webkit-touch-callout: none;
-      user-select: none;
     }
 
     .movie-card:hover {
@@ -535,7 +523,7 @@
       border-radius: 0;
       overflow: hidden;
       box-shadow: 0 0 35px rgba(229, 9, 20, 0.25), 0 10px 40px rgba(0,0,0,0.9);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      border: none;
       cursor: default;
       user-select: none;
       -webkit-user-select: none;
@@ -569,6 +557,7 @@
       transition: transform 0.2s ease, object-fit 0.2s ease;
     }
 
+    /* Loading Spinner untuk Video */
     .video-spinner {
       position: absolute;
       top: 50%;
@@ -595,7 +584,7 @@
 
     .player-logo {
       position: absolute;
-      bottom: 305px;
+      top: 12px;
       left: 16px;
       width: 100px;
       height: 50px;
@@ -603,6 +592,7 @@
       z-index: 25;
       pointer-events: none;
       filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.7));
+      opacity: 0.85;
       transition: opacity 0.3s ease;
     }
 
@@ -833,9 +823,9 @@
         justify-content: space-between;
       }
       .player-logo {
-        width: 50px;
-        height: 30px;
-        bottom: 172px;
+        width: 35px;
+        height: 35px;
+        top: 6px;
         left: 8px;
       }
       .player-details {
@@ -864,7 +854,7 @@
       <button class="hamburger-btn" onclick="toggleDrawer()" title="Menu">
         <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
       </button>
-      <div class="logo-title" onclick="resetFilter()">tiviku app</div>
+      <div class="logo-title" onclick="resetFilter()">Tiviku App</div>
     </div>
     
     <div class="header-actions">
@@ -926,19 +916,17 @@
   <!-- Player Modal -->
   <div id="playerModal" class="player-modal">
     <div class="player-inner">
-
-      <!-- byC -->
-      <script>
-        atOptions = {
-          'key' : '07ec82fdf6989af1b3035f505091411c',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-      <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
-
+<!-- byC -->
+<script>
+            atOptions = {
+              'key' : '07ec82fdf6989af1b3035f505091411c',
+              'format' : 'iframe',
+              'height' : 50,
+              'width' : 320,
+              'params' : {}
+            };
+          </script>
+          <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
       <div class="sticky-player-wrapper">
         <div class="video-container show-controls" id="videoContainer">
           <div class="video-wrapper">
@@ -985,17 +973,17 @@
         </div>
       </div>
 
-      <!-- byC2 -->
-      <script>
-        atOptions = {
-          'key' : '860bb1a2ada410323267313554915298',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-      <script src="https://www.highperformanceformat.com/860bb1a2ada410323267313554915298/invoke.js"></script>
+          <!-- byC2 -->
+<script>
+  atOptions = {
+    'key' : '860bb1a2ada410323267313554915298',
+    'format' : 'iframe',
+    'height' : 250,
+    'width' : 300,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highperformanceformat.com/860bb1a2ada410323267313554915298/invoke.js"></script>
 
       <div class="recommendation-header">Rekomendasi / Koleksi Film Lainnya</div>
       <div class="player-recommendations-wrapper">
@@ -1207,15 +1195,8 @@
     videoContainer.addEventListener('mousemove', showControls);
 
     function formatTime(seconds) {
-      if (isNaN(seconds) || seconds < 0) return "00:00";
-      
-      const hrs = Math.floor(seconds / 3600);
-      const min = Math.floor((seconds % 3600) / 60);
+      const min = Math.floor(seconds / 60);
       const sec = Math.floor(seconds % 60);
-
-      if (hrs > 0) {
-        return `${hrs.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
-      }
       return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
     }
 
@@ -1357,7 +1338,6 @@
       currentFilterTitle.innerText = "Semua Koleksi";
       resetFilterBtn.classList.remove('show');
       searchInput.value = '';
-      playerSearchInput.value = '';
       
       displayData = shuffleArray(currentData);
       renderMovies(displayData);
@@ -1538,40 +1518,17 @@
 
     fullscreenBtn.onclick = async () => {
       if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        try {
-          if (videoContainer.requestFullscreen) {
-            await videoContainer.requestFullscreen();
-          } else if (videoContainer.webkitRequestFullscreen) {
-            await videoContainer.webkitRequestFullscreen();
-          }
+        if (videoContainer.requestFullscreen) await videoContainer.requestFullscreen();
+        else if (videoContainer.webkitRequestFullscreen) await videoContainer.webkitRequestFullscreen();
 
-          if (screen.orientation && screen.orientation.lock) {
-            screen.orientation.lock('landscape').catch(() => {});
-          }
-        } catch (err) {
-          console.error("Gagal masuk fullscreen:", err);
+        if (screen.orientation && screen.orientation.lock) {
+          screen.orientation.lock('landscape').catch(() => {});
         }
       } else {
-        try {
-          if (document.exitFullscreen) {
-            await document.exitFullscreen();
-          } else if (document.webkitExitFullscreen) {
-            await document.webkitExitFullscreen();
-          }
-
-          if (screen.orientation && screen.orientation.unlock) {
-            screen.orientation.unlock().catch(() => {});
-          }
-
-          // FIX: Memperbarui state dan membersihkan fokus agar event keyboard kembali responsif
-          setTimeout(() => {
-            if (playerSearchInput) playerSearchInput.blur();
-            if (searchInput) searchInput.blur();
-            window.focus();
-          }, 300);
-
-        } catch (err) {
-          console.error("Gagal keluar fullscreen:", err);
+        if (document.exitFullscreen) document.exitFullscreen();
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        if (screen.orientation && screen.orientation.unlock) {
+          screen.orientation.unlock();
         }
       }
       showControls();
@@ -1586,32 +1543,12 @@
     };
 
     function filterMovies(query) {
-      const trimmedQuery = query.trim().toLowerCase();
-      
       let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
-
-      if (!trimmedQuery) {
-        renderMoviesTo(baseList, movieGrid);
-        renderMoviesTo(baseList, playerMovieGrid);
-        return;
-      }
-
-      const matched = [];
-      const unmatched = [];
-
-      baseList.forEach(movie => {
-        const title = (movie.ttl || '').toLowerCase();
-        if (title.includes(trimmedQuery)) {
-          matched.push(movie);
-        } else {
-          unmatched.push(movie);
-        }
-      });
-
-      const sortedList = [...matched, ...unmatched];
-
-      renderMoviesTo(sortedList, movieGrid);
-      renderMoviesTo(sortedList, playerMovieGrid);
+      const filteredMovies = baseList.filter(movie => 
+        (movie.ttl || '').toLowerCase().includes(query.toLowerCase())
+      );
+      renderMoviesTo(filteredMovies, movieGrid);
+      renderMoviesTo(filteredMovies, playerMovieGrid);
     }
 
     searchInput.addEventListener('input', (e) => {
