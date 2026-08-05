@@ -1681,9 +1681,17 @@
       showControls();
     };
 
-    function filterMovies(query) {
+    // FUNGSI DEBOUNCE UNTUK OPTIMALISASI KINERJA KETIKAN QWERTY
+    function debounce(func, wait) {
+      let timeout;
+      return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+      };
+    }
+
+    const handleSearch = debounce((query) => {
       const trimmedQuery = query.trim().toLowerCase();
-      
       let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
 
       if (!trimmedQuery) {
@@ -1692,33 +1700,23 @@
         return;
       }
 
-      const matched = [];
-      const unmatched = [];
-
-      baseList.forEach(movie => {
-        const title = (movie.ttl || '').toLowerCase();
-        if (title.includes(trimmedQuery)) {
-          matched.push(movie);
-        } else {
-          unmatched.push(movie);
-        }
-      });
-
+      const matched = baseList.filter(movie => (movie.ttl || '').toLowerCase().includes(trimmedQuery));
+      const unmatched = baseList.filter(movie => !(movie.ttl || '').toLowerCase().includes(trimmedQuery));
       const sortedList = [...matched, ...unmatched];
 
       renderMoviesTo(sortedList, movieGrid, false);
       renderMoviesTo(sortedList, playerMovieGrid, true);
-    }
+    }, 250);
 
     searchInput.addEventListener('input', (e) => {
       if(playerSearchInput) playerSearchInput.value = e.target.value;
-      filterMovies(e.target.value);
+      handleSearch(e.target.value);
     });
 
     if(playerSearchInput) {
       playerSearchInput.addEventListener('input', (e) => {
         searchInput.value = e.target.value;
-        filterMovies(e.target.value);
+        handleSearch(e.target.value);
       });
     }
 
