@@ -1,5 +1,38 @@
 [
 {
+"logo": "https://i.imgur.com/CSl6jzy.png",
+"ttl": "eps13 ghost at school (2000) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq18@abc0df2/3/ghost13.m3u8",
+"episode": "13",
+"koleksi": "ghost at school (2000) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:47",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/OYRznZu.png",
+"ttl": "eps12 ghost at school (2000) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq18@c411ade/1/master.m3u8",
+"episode": "12",
+"koleksi": "ghost at school (2000) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:49",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/TSow4na.png",
+"ttl": "eps11 ghost at school (2000) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq18@b5acdf0/1/ghost11.m3u8",
+"episode": "11",
+"koleksi": "ghost at school (2000) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:46",
+"tiviku": "apk"
+},
+{
 "logo":
 "https://i.imgur.com/JBccGwz.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/96@8fcc8a9/ghost/ghost1.m3u8",
