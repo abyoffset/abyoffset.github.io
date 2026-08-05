@@ -1668,12 +1668,6 @@
             screen.orientation.unlock().catch(() => {});
           }
 
-          setTimeout(() => {
-            if (playerSearchInput) playerSearchInput.blur();
-            if (searchInput) searchInput.blur();
-            window.focus();
-          }, 300);
-
         } catch (err) {
           console.error("Gagal keluar fullscreen:", err);
         }
