@@ -118,12 +118,12 @@
       width: 16px;
       height: 16px;
       fill: var(--text-secondary);
-      pointer-events: none;
+      cursor: pointer;
       transition: fill 0.3s ease;
     }
 
     .search-box {
-      padding: 9px 16px 9px 36px;
+      padding: 9px 34px 9px 36px;
       border-radius: 20px;
       border: 1px solid #333;
       background-color: #1a1a1e;
@@ -141,6 +141,26 @@
 
     .search-wrapper:focus-within .search-icon {
       fill: var(--accent-color);
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: none;
+      padding: 2px;
+    }
+
+    .search-clear-btn:hover {
+      color: #fff;
+    }
+
+    .search-clear-btn.show {
+      display: block;
     }
 
     /* DRAWER / SIDEBAR MENU */
@@ -882,8 +902,9 @@
     
     <div class="header-actions">
       <div class="search-wrapper">
-        <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <svg class="search-icon" viewBox="0 0 24 24" onclick="triggerSearch()"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
         <input type="text" id="searchInput" class="search-box" placeholder="Cari ...">
+        <button id="searchClearBtn" class="search-clear-btn" onclick="clearSearchInput()">✕</button>
       </div>
     </div>
   </header>
@@ -980,8 +1001,9 @@
         <div class="player-details">
           <span id="playingTitle" class="player-title"></span>
           <div class="search-wrapper">
-            <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <svg class="search-icon" viewBox="0 0 24 24" onclick="triggerSearch()"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
             <input type="text" id="playerSearchInput" class="search-box" placeholder="Cari ...">
+            <button id="playerSearchClearBtn" class="search-clear-btn" onclick="clearSearchInput()">✕</button>
           </div>
         </div>
       </div>
@@ -1053,6 +1075,9 @@
     const playerMovieGrid = document.getElementById('playerMovieGrid');
     const searchInput = document.getElementById('searchInput');
     const playerSearchInput = document.getElementById('playerSearchInput');
+    const searchClearBtn = document.getElementById('searchClearBtn');
+    const playerSearchClearBtn = document.getElementById('playerSearchClearBtn');
+
     const playerModal = document.getElementById('playerModal');
     const drawerKoleksiList = document.getElementById('drawerKoleksiList');
     const currentFilterTitle = document.getElementById('currentFilterTitle');
@@ -1375,8 +1400,7 @@
       currentKoleksiFilter = null;
       currentFilterTitle.innerText = "Semua Koleksi";
       resetFilterBtn.classList.remove('show');
-      searchInput.value = '';
-      if(playerSearchInput) playerSearchInput.value = '';
+      clearSearchInput();
       
       displayData = shuffleArray(currentData);
       renderMovies(displayData);
@@ -1457,8 +1481,7 @@
         history.pushState({ modalOpen: true }, '', '#player');
       }
 
-      searchInput.value = '';
-      if(playerSearchInput) playerSearchInput.value = '';
+      clearSearchInput();
 
       const videoWrapper = document.querySelector('.video-wrapper');
       videoContainer.classList.remove('show-controls');
@@ -1675,23 +1698,22 @@
       showControls();
     };
 
-    function debounce(func, wait) {
-      let timeout;
-      return function(...args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(() => func.apply(this, args), wait);
-      };
-    }
-
-    const handleSearch = debounce((query) => {
+    // --- LOGIKA PENCARIAN MANUAL (KLIK IKON / ENTER) ---
+    function executeSearch(query) {
       const trimmedQuery = query.trim().toLowerCase();
       let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
 
+      if (trimmedQuery.length > 0) {
+        if(searchClearBtn) searchClearBtn.classList.add('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+      } else {
+        if(searchClearBtn) searchClearBtn.classList.remove('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
+      }
+
       if (!trimmedQuery) {
-        requestAnimationFrame(() => {
-          renderMoviesTo(baseList, movieGrid, false);
-          renderMoviesTo(baseList, playerMovieGrid, true);
-        });
+        renderMoviesTo(baseList, movieGrid, false);
+        renderMoviesTo(baseList, playerMovieGrid, true);
         return;
       }
 
@@ -1699,21 +1721,64 @@
       const unmatched = baseList.filter(movie => !(movie.ttl || '').toLowerCase().includes(trimmedQuery));
       const sortedList = [...matched, ...unmatched];
 
-      requestAnimationFrame(() => {
-        renderMoviesTo(sortedList, movieGrid, false);
-        renderMoviesTo(sortedList, playerMovieGrid, true);
-      });
-    }, 250);
+      renderMoviesTo(sortedList, movieGrid, false);
+      renderMoviesTo(sortedList, playerMovieGrid, true);
+      
+      if(searchInput) searchInput.blur();
+      if(playerSearchInput) playerSearchInput.blur();
+    }
+
+    function triggerSearch() {
+      const query = searchInput.value || (playerSearchInput ? playerSearchInput.value : '');
+      executeSearch(query);
+    }
+
+    function clearSearchInput() {
+      if(searchInput) searchInput.value = '';
+      if(playerSearchInput) playerSearchInput.value = '';
+      if(searchClearBtn) searchClearBtn.classList.remove('show');
+      if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
+      
+      let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
+      renderMoviesTo(baseList, movieGrid, false);
+      renderMoviesTo(baseList, playerMovieGrid, true);
+    }
 
     searchInput.addEventListener('input', (e) => {
-      if(playerSearchInput) playerSearchInput.value = e.target.value;
-      handleSearch(e.target.value);
+      const val = e.target.value;
+      if(playerSearchInput) playerSearchInput.value = val;
+      if (val.trim().length > 0) {
+        if(searchClearBtn) searchClearBtn.classList.add('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+      } else {
+        clearSearchInput();
+      }
     });
 
     if(playerSearchInput) {
       playerSearchInput.addEventListener('input', (e) => {
-        searchInput.value = e.target.value;
-        handleSearch(e.target.value);
+        const val = e.target.value;
+        searchInput.value = val;
+        if (val.trim().length > 0) {
+          if(searchClearBtn) searchClearBtn.classList.add('show');
+          if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+        } else {
+          clearSearchInput();
+        }
+      });
+    }
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        triggerSearch();
+      }
+    });
+
+    if(playerSearchInput) {
+      playerSearchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          triggerSearch();
+        }
       });
     }
 
