@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#0f0f12">
 
   <!-- CDN HLS.js untuk pemutaran streaming -->
- <script src="hls.js"></script>
+  <script src="hls.js"></script>
 
   <style>
     :root {
@@ -26,7 +26,6 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* Menghilangkan kilatan putih saat disentuh/diklik di perangkat mobile */
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -83,7 +82,6 @@
       color: var(--accent-color);
     }
 
-    /* Desain Logo Teks Miring, Gradasi, dan Modern */
     .logo-title {
       font-size: 1.6rem;
       font-weight: 900;
@@ -437,6 +435,22 @@
     .movie-card:hover {
       transform: translateY(-4px);
       border-color: rgba(229, 9, 20, 0.6);
+    }
+
+    /* KARTU BANNER IKLAN DI DALAM GRID */
+    .ad-banner-card {
+      grid-column: 1 / -1;
+      background-color: var(--card-bg);
+      border: 1px dashed #333;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 120px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      overflow: hidden;
     }
 
     .poster-wrapper {
@@ -927,18 +941,6 @@
   <div id="playerModal" class="player-modal">
     <div class="player-inner">
 
-      <!-- byC -->
-      <script>
-        atOptions = {
-          'key' : '07ec82fdf6989af1b3035f505091411c',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-      <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
-
       <div class="sticky-player-wrapper">
         <div class="video-container show-controls" id="videoContainer">
           <div class="video-wrapper">
@@ -977,7 +979,7 @@
         </div>
         
         <div class="player-details">
-          <span id="playingTitle" class="player-title">Judul Film</span>
+          <span id="playingTitle" class="player-title"></span>
           <div class="search-wrapper">
             <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
             <input type="text" id="playerSearchInput" class="search-box" placeholder="Cari ...">
@@ -985,19 +987,7 @@
         </div>
       </div>
 
-      <!-- byC2 -->
-      <script>
-        atOptions = {
-          'key' : '860bb1a2ada410323267313554915298',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-      <script src="https://www.highperformanceformat.com/860bb1a2ada410323267313554915298/invoke.js"></script>
-
-      <div class="recommendation-header">Rekomendasi / Koleksi Film Lainnya</div>
+      <div class="recommendation-header">Rekomendasi film lainnya</div>
       <div class="player-recommendations-wrapper">
         <div id="playerMovieGrid" class="movie-grid"></div>
       </div>
@@ -1057,6 +1047,8 @@
     let currentData = [];
     let displayData = [];
     let currentKoleksiFilter = null;
+    let pendingMovieData = null;
+    let lastAdShownTime = 0;
 
     const movieGrid = document.getElementById('movieGrid');
     const playerMovieGrid = document.getElementById('playerMovieGrid');
@@ -1068,7 +1060,7 @@
     const resetFilterBtn = document.getElementById('resetFilterBtn');
     
     const videoContainer = document.getElementById('videoContainer');
-    const videoPlayer = document.getElementById('videoPlayer');
+    let videoPlayer = document.getElementById('videoPlayer');
     const videoSpinner = document.getElementById('videoSpinner');
     const playingTitle = document.getElementById('playingTitle');
     
@@ -1125,7 +1117,7 @@
       videoContainer.classList.remove('hide-controls');
       clearTimeout(controlsTimeout);
 
-      if (!videoPlayer.paused && !isScrubbing) {
+      if (videoPlayer && !videoPlayer.paused && !isScrubbing) {
         controlsTimeout = setTimeout(() => {
           videoContainer.classList.remove('show-controls');
           videoContainer.classList.add('hide-controls');
@@ -1134,7 +1126,7 @@
     }
 
     function handleVideoTap(e) {
-      if (e.target.closest('.custom-controls')) return;
+      if (!videoPlayer || e.target.closest('.custom-controls')) return;
 
       const rect = videoContainer.getBoundingClientRect();
       const clientX = e.clientX || (e.changedTouches && e.changedTouches[0].clientX);
@@ -1220,7 +1212,7 @@
     }
 
     function updateScrubbing(e) {
-      if (!videoPlayer.duration) return;
+      if (!videoPlayer || !videoPlayer.duration) return;
 
       const rect = progressBar.getBoundingClientRect();
       const clientX = e.clientX || (e.touches && e.touches[0].clientX);
@@ -1267,7 +1259,7 @@
     progressBar.addEventListener('mousemove', (e) => { if (!isScrubbing) updateScrubbing(e); });
     progressBar.addEventListener('mouseleave', () => { if (!isScrubbing) previewBox.classList.remove('active'); });
 
-    function renderMoviesTo(data, targetContainer) {
+    function renderMoviesTo(data, targetContainer, includeAds = false) {
       targetContainer.innerHTML = '';
       if (!data || data.length === 0) {
         targetContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #888; padding: 40px 0;">Tidak ada data film.</p>';
@@ -1275,7 +1267,7 @@
       }
 
       const fragment = document.createDocumentFragment();
-      data.forEach((movie) => {
+      data.forEach((movie, index) => {
         const card = document.createElement('div');
         card.className = 'movie-card';
         card.innerHTML = `
@@ -1289,13 +1281,43 @@
         `;
         card.onclick = () => playMovie(movie);
         fragment.appendChild(card);
+
+        // SISIPKAN IKLAN BANNER TEPAT DI BAWAH KARTU KE-6 (Indeks 5) KHUSUS DI GRID REKOMENDASI PLAYER
+        if (includeAds && index === 5) {
+          const adCard = document.createElement('div');
+          adCard.className = 'ad-banner-card';
+          
+          const adInner = document.createElement('div');
+          adInner.style.cssText = "display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden;";
+          
+          const confScript = document.createElement('script');
+          confScript.text = `
+            atOptions = {
+              'key' : '860bb1a2ada410323267313554915298',
+              'format' : 'iframe',
+              'height' : 250,
+              'width' : 300,
+              'params' : {}
+            };
+          `;
+          
+          const invokeScript = document.createElement('script');
+          invokeScript.src = 'https://www.highperformanceformat.com/860bb1a2ada410323267313554915298/invoke.js';
+          invokeScript.async = true;
+
+          adInner.appendChild(confScript);
+          adInner.appendChild(invokeScript);
+          adCard.appendChild(adInner);
+          
+          fragment.appendChild(adCard);
+        }
       });
       targetContainer.appendChild(fragment);
     }
 
     function renderMovies(data) {
-      renderMoviesTo(data, movieGrid);
-      renderMoviesTo(data, playerMovieGrid);
+      renderMoviesTo(data, movieGrid, false);
+      renderMoviesTo(data, playerMovieGrid, true);
     }
 
     function buildKoleksiDrawerMenu(data) {
@@ -1357,7 +1379,7 @@
       currentFilterTitle.innerText = "Semua Koleksi";
       resetFilterBtn.classList.remove('show');
       searchInput.value = '';
-      playerSearchInput.value = '';
+      if(playerSearchInput) playerSearchInput.value = '';
       
       displayData = shuffleArray(currentData);
       renderMovies(displayData);
@@ -1432,16 +1454,76 @@
     }
 
     function playMovie(movie) {
-      playingTitle.innerText = movie.ttl || 'Playing Video';
+      pendingMovieData = movie;
+      
       playerModal.classList.add('active');
-
       if (!window.location.hash.includes('player')) {
         history.pushState({ modalOpen: true }, '', '#player');
       }
 
       searchInput.value = '';
-      playerSearchInput.value = '';
+      if(playerSearchInput) playerSearchInput.value = '';
 
+      const videoWrapper = document.querySelector('.video-wrapper');
+      videoContainer.classList.remove('show-controls');
+      
+      const currentTime = new Date().getTime();
+      const timeDifference = currentTime - lastAdShownTime;
+      const cooldownLimit = 5 * 60 * 1000;
+
+      if (lastAdShownTime !== 0 && timeDifference < cooldownLimit) {
+        executeDirectPlay(movie);
+        return;
+      }
+
+      lastAdShownTime = new Date().getTime();
+      videoWrapper.innerHTML = `
+        <iframe src="ad_interstitial.html" style="width:100%; height:100%; border:none; position:absolute; top:0; left:0; z-index:50;" sandbox="allow-scripts allow-same-origin allow-forms"></iframe>
+        <video id="videoPlayer" playsinline style="display:none;"></video>
+        <div class="video-spinner" id="videoSpinner" style="display:none;"></div>
+      `;
+    }
+
+    window.onAdPreload = function() {
+      if (!pendingMovieData) return;
+      
+      videoPlayer = document.getElementById('videoPlayer');
+      if (!videoPlayer) return;
+
+      applyPlayerCropConfig(pendingMovieData);
+      const streamUrl = _decode(pendingMovieData.lnk);
+
+      if (Hls.isSupported()) {
+        if (hls) hls.destroy();
+        hls = new Hls({
+          maxBufferLength: 15,
+          maxMaxBufferLength: 30,
+          enableWorker: true,
+          xhrSetup: function (xhr, url) {
+            if (url.includes("tiviku_system.bin") || url.includes(".key")) {
+              const originalOpen = xhr.open;
+              xhr.open = function(method, url, async, user, password) {
+                originalOpen.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, async, user, password);
+              };
+            }
+          }
+        });
+        hls.loadSource(streamUrl);
+        hls.attachMedia(videoPlayer);
+      } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+        videoPlayer.src = streamUrl;
+      }
+    };
+
+    function executeDirectPlay(movie) {
+      const videoWrapper = document.querySelector('.video-wrapper');
+      videoWrapper.innerHTML = `
+        <video id="videoPlayer" playsinline></video>
+        <div class="video-spinner" id="videoSpinner"></div>
+      `;
+      
+      videoPlayer = document.getElementById('videoPlayer');
+      playingTitle.innerText = movie.ttl || 'Playing Video';
       applyPlayerCropConfig(movie);
 
       const streamUrl = _decode(movie.lnk);
@@ -1450,10 +1532,8 @@
       if (Hls.isSupported()) {
         if (hls) hls.destroy();
         hls = new Hls({
-          maxBufferLength: 10,
-          maxMaxBufferLength: 20,
-          maxBufferSize: 30 * 1000 * 1000,
-          backBufferLength: 0,
+          maxBufferLength: 15,
+          maxMaxBufferLength: 30,
           enableWorker: true,
           xhrSetup: function (xhr, url) {
             if (url.includes("tiviku_system.bin") || url.includes(".key")) {
@@ -1476,7 +1556,51 @@
         });
       }
 
+      setupVideoEvents();
+    }
+
+    window.onAdFinished = function() {
+      if (!pendingMovieData) return;
+      
+      const videoWrapper = document.querySelector('.video-wrapper');
+      const iframe = videoWrapper.querySelector('iframe');
+      if (iframe) iframe.remove();
+
+      videoPlayer = document.getElementById('videoPlayer');
+      if (videoPlayer) {
+        videoPlayer.style.display = 'block';
+      }
+      
+      playingTitle.innerText = pendingMovieData.ttl || 'Playing Video';
+      
+      if (videoPlayer) {
+        videoPlayer.play().catch(() => {});
+      }
+
+      setupVideoEvents();
       showControls();
+    };
+
+    function setupVideoEvents() {
+      if (!videoPlayer) return;
+      videoPlayer.onplay = () => {
+        playBtn.innerText = '⏸';
+        videoContainer.classList.remove('buffering');
+        showControls();
+      };
+      videoPlayer.onpause = () => {
+        playBtn.innerText = '▶';
+        showControls();
+      };
+      videoPlayer.onwaiting = () => videoContainer.classList.add('buffering');
+      videoPlayer.onplaying = () => videoContainer.classList.remove('buffering');
+      videoPlayer.ontimeupdate = () => {
+        if (videoPlayer.duration && !isScrubbing) {
+          const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+          progressFill.style.width = `${pct}%`;
+          timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
+        }
+      };
     }
 
     window.addEventListener('popstate', () => {
@@ -1512,25 +1636,6 @@
       else videoPlayer.pause();
     };
 
-    videoPlayer.onplay = () => {
-      playBtn.innerText = '⏸';
-      videoContainer.classList.remove('buffering');
-      showControls();
-    };
-
-    videoPlayer.onpause = () => {
-      playBtn.innerText = '▶';
-      showControls();
-    };
-
-    videoPlayer.onwaiting = () => {
-      videoContainer.classList.add('buffering');
-    };
-
-    videoPlayer.onplaying = () => {
-      videoContainer.classList.remove('buffering');
-    };
-
     muteBtn.onclick = () => {
       videoPlayer.muted = !videoPlayer.muted;
       muteBtn.innerText = videoPlayer.muted ? '🔇' : '🔊';
@@ -1563,7 +1668,6 @@
             screen.orientation.unlock().catch(() => {});
           }
 
-          // FIX: Memperbarui state dan membersihkan fokus agar event keyboard kembali responsif
           setTimeout(() => {
             if (playerSearchInput) playerSearchInput.blur();
             if (searchInput) searchInput.blur();
@@ -1577,22 +1681,14 @@
       showControls();
     };
 
-    videoPlayer.ontimeupdate = () => {
-      if (videoPlayer.duration && !isScrubbing) {
-        const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
-        progressFill.style.width = `${pct}%`;
-        timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
-      }
-    };
-
     function filterMovies(query) {
       const trimmedQuery = query.trim().toLowerCase();
       
       let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
 
       if (!trimmedQuery) {
-        renderMoviesTo(baseList, movieGrid);
-        renderMoviesTo(baseList, playerMovieGrid);
+        renderMoviesTo(baseList, movieGrid, false);
+        renderMoviesTo(baseList, playerMovieGrid, true);
         return;
       }
 
@@ -1610,19 +1706,21 @@
 
       const sortedList = [...matched, ...unmatched];
 
-      renderMoviesTo(sortedList, movieGrid);
-      renderMoviesTo(sortedList, playerMovieGrid);
+      renderMoviesTo(sortedList, movieGrid, false);
+      renderMoviesTo(sortedList, playerMovieGrid, true);
     }
 
     searchInput.addEventListener('input', (e) => {
-      playerSearchInput.value = e.target.value;
+      if(playerSearchInput) playerSearchInput.value = e.target.value;
       filterMovies(e.target.value);
     });
 
-    playerSearchInput.addEventListener('input', (e) => {
-      searchInput.value = e.target.value;
-      filterMovies(e.target.value);
-    });
+    if(playerSearchInput) {
+      playerSearchInput.addEventListener('input', (e) => {
+        searchInput.value = e.target.value;
+        filterMovies(e.target.value);
+      });
+    }
 
     window.onload = () => {
       loadAutoSourceList();

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iklan</title>
+  <style>
+    body {
+      background-color: #0f0f12;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .ad-container {
+      background: #18181c;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #2a2a30;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      max-width: 360px;
+      width: 100%;
+    }
+    .ad-box {
+      min-height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .info-text {
+      font-size: 0.85rem;
+      color: #a0a0a0;
+    }
+    .btn-skip {
+      background-color: #333;
+      color: #777;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: not-allowed;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      width: 100%;
+    }
+    .btn-skip.active {
+      background-color: #e50914;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
+    }
+    .btn-skip.active:hover {
+      background-color: #ff1e27;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="ad-container">
+    <div class="info-text">tiviku app</div>
+    
+    <!-- Kotak Iklan Adsterra 320x50 -->
+    <div class="ad-box" id="adBox">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '07ec82fdf6989af1b3035f505091411c',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
+    </div>
+
+    <button id="skipBtn" class="btn-skip" disabled>tonton video dalam (7)</button>
+  </div>
+
+  <script>
+    let timeLeft = 7;
+    const skipBtn = document.getElementById('skipBtn');
+
+    // Beritahu parent (index.html) untuk mulai preload video di latar belakang saat iklan muncul
+    if (window.parent && window.parent.onAdPreload) {
+      window.parent.onAdPreload();
+    }
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      if (timeLeft > 0) {
+        skipBtn.innerText = `tonton video dalam (${timeLeft})`;
+      } else {
+        clearInterval(countdown);
+        skipBtn.innerText = "play";
+        skipBtn.classList.add('active');
+        skipBtn.removeAttribute('disabled');
+      }
+    }, 1000);
+
+    skipBtn.onclick = () => {
+      if (!skipBtn.hasAttribute('disabled')) {
+        if (window.parent && window.parent.onAdFinished) {
+          window.parent.onAdFinished();
+        }
+      }
+    };
+  </script>
+</body>
+</html>
