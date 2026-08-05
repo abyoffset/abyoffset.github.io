@@ -437,7 +437,6 @@
       border-color: rgba(229, 9, 20, 0.6);
     }
 
-    /* KARTU BANNER IKLAN DI DALAM GRID */
     .ad-banner-card {
       grid-column: 1 / -1;
       background-color: var(--card-bg);
@@ -917,7 +916,7 @@
     </div>
   </div>
 
-  <!-- Custom Alert / Notification Modal -->
+  <!-- Custom Alert Modal -->
   <div id="customAlertModal" class="modal">
     <div class="modal-content">
       <h3 id="customAlertTitle">Informasi</h3>
@@ -1282,7 +1281,6 @@
         card.onclick = () => playMovie(movie);
         fragment.appendChild(card);
 
-        // SISIPKAN IKLAN BANNER TEPAT DI BAWAH KARTU KE-6 (Indeks 5) KHUSUS DI GRID REKOMENDASI PLAYER
         if (includeAds && index === 5) {
           const adCard = document.createElement('div');
           adCard.className = 'ad-banner-card';
@@ -1356,7 +1354,6 @@
       resetFilterBtn.classList.add('show');
 
       let filtered = currentData.filter(item => item.koleksi === koleksiName);
-
       const hasEpisode = filtered.some(item => item.episode !== undefined && item.episode !== null && item.episode !== "");
 
       if (hasEpisode) {
@@ -1389,7 +1386,6 @@
 
     async function loadAutoSourceList() {
       const githubJsonUrl = "index.json";
-      
       try {
         const response = await fetch(githubJsonUrl);
         if (!response.ok) throw new Error("Gagal mengambil data index.json");
@@ -1486,7 +1482,6 @@
 
     window.onAdPreload = function() {
       if (!pendingMovieData) return;
-      
       videoPlayer = document.getElementById('videoPlayer');
       if (!videoPlayer) return;
 
@@ -1561,7 +1556,6 @@
 
     window.onAdFinished = function() {
       if (!pendingMovieData) return;
-      
       const videoWrapper = document.querySelector('.video-wrapper');
       const iframe = videoWrapper.querySelector('iframe');
       if (iframe) iframe.remove();
@@ -1668,6 +1662,12 @@
             screen.orientation.unlock().catch(() => {});
           }
 
+          setTimeout(() => {
+            if (playerSearchInput) playerSearchInput.blur();
+            if (searchInput) searchInput.blur();
+            window.focus();
+          }, 300);
+
         } catch (err) {
           console.error("Gagal keluar fullscreen:", err);
         }
@@ -1675,7 +1675,6 @@
       showControls();
     };
 
-    // FUNGSI DEBOUNCE UNTUK OPTIMALISASI KINERJA KETIKAN QWERTY
     function debounce(func, wait) {
       let timeout;
       return function(...args) {
@@ -1689,8 +1688,10 @@
       let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
 
       if (!trimmedQuery) {
-        renderMoviesTo(baseList, movieGrid, false);
-        renderMoviesTo(baseList, playerMovieGrid, true);
+        requestAnimationFrame(() => {
+          renderMoviesTo(baseList, movieGrid, false);
+          renderMoviesTo(baseList, playerMovieGrid, true);
+        });
         return;
       }
 
@@ -1698,8 +1699,10 @@
       const unmatched = baseList.filter(movie => !(movie.ttl || '').toLowerCase().includes(trimmedQuery));
       const sortedList = [...matched, ...unmatched];
 
-      renderMoviesTo(sortedList, movieGrid, false);
-      renderMoviesTo(sortedList, playerMovieGrid, true);
+      requestAnimationFrame(() => {
+        renderMoviesTo(sortedList, movieGrid, false);
+        renderMoviesTo(sortedList, playerMovieGrid, true);
+      });
     }, 250);
 
     searchInput.addEventListener('input', (e) => {
