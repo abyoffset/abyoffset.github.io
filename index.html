@@ -595,7 +595,7 @@
 
     .player-logo {
       position: absolute;
-      bottom: 295px;
+      bottom: 305px;
       left: 16px;
       width: 100px;
       height: 50px;
@@ -927,17 +927,17 @@
   <div id="playerModal" class="player-modal">
     <div class="player-inner">
 
-<!-- byC -->
-<script>
-            atOptions = {
-              'key' : '07ec82fdf6989af1b3035f505091411c',
-              'format' : 'iframe',
-              'height' : 50,
-              'width' : 320,
-              'params' : {}
-            };
-          </script>
-          <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
+      <!-- byC -->
+      <script>
+        atOptions = {
+          'key' : '07ec82fdf6989af1b3035f505091411c',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
 
       <div class="sticky-player-wrapper">
         <div class="video-container show-controls" id="videoContainer">
@@ -986,16 +986,16 @@
       </div>
 
       <!-- byC2 -->
-<script>
-  atOptions = {
-    'key' : '860bb1a2ada410323267313554915298',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/860bb1a2ada410323267313554915298/invoke.js"></script>
+      <script>
+        atOptions = {
+          'key' : '860bb1a2ada410323267313554915298',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/860bb1a2ada410323267313554915298/invoke.js"></script>
 
       <div class="recommendation-header">Rekomendasi / Koleksi Film Lainnya</div>
       <div class="player-recommendations-wrapper">
@@ -1538,17 +1538,40 @@
 
     fullscreenBtn.onclick = async () => {
       if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (videoContainer.requestFullscreen) await videoContainer.requestFullscreen();
-        else if (videoContainer.webkitRequestFullscreen) await videoContainer.webkitRequestFullscreen();
+        try {
+          if (videoContainer.requestFullscreen) {
+            await videoContainer.requestFullscreen();
+          } else if (videoContainer.webkitRequestFullscreen) {
+            await videoContainer.webkitRequestFullscreen();
+          }
 
-        if (screen.orientation && screen.orientation.lock) {
-          screen.orientation.lock('landscape').catch(() => {});
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(() => {});
+          }
+        } catch (err) {
+          console.error("Gagal masuk fullscreen:", err);
         }
       } else {
-        if (document.exitFullscreen) document.exitFullscreen();
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-        if (screen.orientation && screen.orientation.unlock) {
-          screen.orientation.unlock();
+        try {
+          if (document.exitFullscreen) {
+            await document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            await document.webkitExitFullscreen();
+          }
+
+          if (screen.orientation && screen.orientation.unlock) {
+            screen.orientation.unlock().catch(() => {});
+          }
+
+          // FIX: Memperbarui state dan membersihkan fokus agar event keyboard kembali responsif
+          setTimeout(() => {
+            if (playerSearchInput) playerSearchInput.blur();
+            if (searchInput) searchInput.blur();
+            window.focus();
+          }, 300);
+
+        } catch (err) {
+          console.error("Gagal keluar fullscreen:", err);
         }
       }
       showControls();
