@@ -1,5 +1,14 @@
 [
 {
+"logo": "https://i.imgur.com/uVEtQ8L.jpeg",
+"ttl": "Yowis Ben 3 (2021)",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq17@8455d6e/1/master.m3u8",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:51:34",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/502nt2H.jpeg",
 "ttl": "Doraemon: Nobita and the Island of Miracles – Animal Adventure (2012) dubbing",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq16@9821542/1/master.m3u8",
@@ -255,11 +264,12 @@
 },
 {
 "logo": "https://i.imgur.com/RL2CDEJ.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq4@f42c3ee/1/master.m3u8",
 "ttl": "Doraemon: Nobita and the Legend of the Sun King (2000)",
-"dur": "1:31:24",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq4@f42c3ee/1/master.m3u8",
+"koleksi": "doraemon dubbing",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
+"dur": "1:31:24",
 "tiviku": "apk"
 },
 {

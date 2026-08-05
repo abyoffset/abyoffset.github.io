@@ -1,5 +1,16 @@
 [
 {
+"logo": "https://i.imgur.com/cR9dl0R.png",
+"ttl": "eps10 BLUELOCK (2022) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq17@d5c60f9/1/master.m3u8",
+"episode": "10",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:28",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/t0BWg2f.png",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq14@fc47310/1/master.m3u8",
 "ttl": "eps9 BLUELOCK (2022) dubbing",
