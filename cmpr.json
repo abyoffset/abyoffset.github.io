@@ -1,8 +1,19 @@
 [
 {
+"logo": "https://media.themoviedb.org/t/p/w440_and_h660_face/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq19@56b61a1/1/master.m3u8",
+"ttl": "Toy Story (1995) dubbing",
+"thn": "1995",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:17:12",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/uVEtQ8L.jpeg",
 "ttl": "Yowis Ben 3 (2021)",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq17@8455d6e/1/master.m3u8",
+"thn": "2021",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:51:34",
@@ -13,6 +24,7 @@
 "ttl": "Doraemon: Nobita and the Island of Miracles – Animal Adventure (2012) dubbing",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq16@9821542/1/master.m3u8",
 "koleksi": "doraemon dubbing",
+"thn": "2012",
 "crop_mode": "stretch_crop",
 "crop_scale": "3.15",
 "dur": "1:39:30",
@@ -22,6 +34,7 @@
 "logo": "https://i.imgur.com/sQAOWLu.jpeg",
 "ttl": "Migration (2023) dubbing",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq16@b61e470/1/master.m3u8",
+"thn": "2023",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:23:05",
@@ -29,8 +42,9 @@
 },
 {
 "logo": "https://i.imgur.com/tnuhI2j.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq14@5aa32b5/1/master.m3u8",
 "ttl": "Crayon Shin-chan: Fierceness That Invites Storm! The Singing Buttocks Bomb (2007) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq14@5aa32b5/1/master.m3u8",
+"thn": "2007",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.16",
 "dur": "1:39:31",
@@ -38,8 +52,9 @@
 },
 {
 "logo": "https://i.imgur.com/Y16AmhN.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@e824070/1/master.m3u8",
 "ttl": "Suzzanna: Santet Dosa di Atas Dosa (2026)",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@e824070/1/master.m3u8",
+"thn": "2026",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "2:15:20",
@@ -49,6 +64,7 @@
 "logo": "https://i.imgur.com/QIQ3XAL.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@7e30153/1/master.m3u8",
 "ttl": "Danur: The Last Chapter (2026)",
+"thn": "2026",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:37:33",
@@ -58,6 +74,7 @@
 "logo": "https://i.imgur.com/UwinUOP.jpeg",
 "ttl": "Luca (2021) dubbing",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/luca%20(2021)%20dubb/in12.m3u8",
+"thn": "2021",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.05",
 "dur": "1:35:18",
@@ -67,6 +84,7 @@
 "logo": "https://i.imgur.com/tRCWTOm.jpeg",
 "ttl": "Ballerina (2023) dubbing",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/op8@13f6bda/55dTziseD4/ballerina/bl3.m3u8",
+"thn": "2023",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.35",
 "dur": "1:33:47",
@@ -76,6 +94,7 @@
 "logo": "https://i.imgur.com/rhRAtXr.jpeg",
 "ttl": "Detective Conan Movie 2 Case Closed: The Fourteenth Target (1998) dubbing",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/Ztf7/Ztf7.m3u8",
+"thn": "1998",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.03",
 "dur": "1:39:37",
@@ -85,6 +104,7 @@
 "logo": "https://i.imgur.com/h0yqLLJ.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@0ceb284/1/master.m3u8",
 "ttl": "Yowis Ben 2 (2019)",
+"thn": "2019",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:48:46",
@@ -96,6 +116,7 @@
 "ttl": "eps1 Squid Game (2021) dubbing",
 "episode": "1",
 "koleksi": "Squid Game (2021) dubbing",
+"thn": "2021",
 "dur": "59:42",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.13",
@@ -108,6 +129,7 @@
 "episode": "2",
 "koleksi": "Squid Game (2021) dubbing",
 "dur": "1:02:30",
+"thn": "2021",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.13",
 "tiviku": "apk"
@@ -119,6 +141,7 @@
 "episode": "3",
 "koleksi": "Squid Game (2021) dubbing",
 "dur": "54:03",
+"thn": "2021",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.13",
 "tiviku": "apk"
@@ -130,6 +153,7 @@
 "episode": "4",
 "koleksi": "Squid Game (2021) dubbing",
 "dur": "54:53",
+"thn": "2021",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.13",
 "tiviku": "apk"
@@ -139,6 +163,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@837cb24/1/master.m3u8",
 "ttl": "Crayon Shin-chan: The Legend Called Buri Buri: 3 Minutes Charge (2005) dubbing",
 "dur": "1:28:32",
+"thn": "2005",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.17",
 "tiviku": "apk"
@@ -148,6 +173,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@cd8e13d/1/master.m3u8",
 "ttl": "Oo Nina Bobo (2014)",
 "dur": "1:28:21",
+"thn": "2014",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.15",
 "tiviku": "apk"
@@ -157,6 +183,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@5a52c61/1/master.m3u8",
 "ttl": "Bayi Ajaib (2023)",
 "dur": "1:38:58",
+"thn": "2023",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -166,6 +193,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@9d224bf/1/master.m3u8",
 "ttl": "Plankton: The Movie (2025) dubbing",
 "dur": "1:27:43",
+"thn": "2025",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.03",
 "tiviku": "apk"
@@ -175,6 +203,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@10d10d0/1/master.m3u8",
 "ttl": "Elio (2025) dubbing",
 "dur": "1:37:45",
+"thn": "2025",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -184,6 +213,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@15206ab/1/master.m3u8",
 "ttl": "Mufasa: The Lion King (2024) dubbing",
 "dur": "1:57:58",
+"thn": "2024",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.05",
 "tiviku": "apk"
@@ -194,6 +224,7 @@
 "ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 2 (2017)",
 "koleksi": "warkop",
 "dur": "1:31:05",
+"thn": "2017",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -204,6 +235,7 @@
 "ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 1 (2016)",
 "koleksi": "warkop",
 "dur": "1:32:04",
+"thn": "2016",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.07",
 "tiviku": "apk"
@@ -213,6 +245,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@6e3c374/1/master.m3u8",
 "ttl": "Up (2009) dubbing",
 "dur": "1:31:33",
+"thn": "2009",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -222,6 +255,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@84afe08/1/master.m3u8",
 "ttl": "George of the Jungle (1997) dubbing",
 "dur": "1:31:44",
+"thn": "1997",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -231,6 +265,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@0adec8a/1/master.m3u8",
 "ttl": "Pokémon Detective Pikachu (2019) dubbing",
 "dur": "1:44:23",
+"thn": "2019",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -240,6 +275,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@2f106a9/1/master.m3u8",
 "ttl": "Bayi Ajaib (1982)",
 "dur": "1:37:15",
+"thn": "1982",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.35",
 "tiviku": "apk"
@@ -249,6 +285,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq4@d4750f1/1/master.m3u8",
 "ttl": "Digimon Adventure: Filme 2 - Bokura no War Game (2000) dubbing",
 "dur": "40:44",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -258,6 +295,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq4@c92dc47/1/master.m3u8",
 "ttl": "Lost Ollie (2022) dubbing",
 "dur": "2:44:16",
+"thn": "2022",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -267,6 +305,7 @@
 "ttl": "Doraemon: Nobita and the Legend of the Sun King (2000)",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq4@f42c3ee/1/master.m3u8",
 "koleksi": "doraemon dubbing",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:31:24",
@@ -277,6 +316,9 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq3@e1858cd/1/master.m3u8",
 "ttl": "Lupa Aturan Main (1991) warkop",
 "koleksi": "warkop",
+"thn": "1991",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "dur": "1:17:51",
 "tiviku": "apk"
 },

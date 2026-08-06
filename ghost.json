@@ -1,10 +1,23 @@
 [
 {
+"logo": "https://i.imgur.com/B12c5k3.png",
+"ttl": "eps14 ghost at school (2000) dubbing",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq19@d724a03/1/master.m3u8",
+"episode": "14",
+"koleksi": "ghost at school (2000) dubbing",
+"thn": "2000",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:46",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/CSl6jzy.png",
 "ttl": "eps13 ghost at school (2000) dubbing",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq18@abc0df2/3/ghost13.m3u8",
 "episode": "13",
 "koleksi": "ghost at school (2000) dubbing",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "23:47",
@@ -16,6 +29,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq18@c411ade/1/master.m3u8",
 "episode": "12",
 "koleksi": "ghost at school (2000) dubbing",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "23:49",
@@ -27,6 +41,7 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq18@b5acdf0/1/ghost11.m3u8",
 "episode": "11",
 "koleksi": "ghost at school (2000) dubbing",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "23:46",
@@ -40,6 +55,7 @@
 "episode": "1",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:43",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -51,6 +67,7 @@
 "episode": "2",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:17",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -62,6 +79,7 @@
 "episode": "3",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:45",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -73,6 +91,7 @@
 "episode": "4",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:45",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -84,6 +103,7 @@
 "episode": "5",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:48",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -95,6 +115,7 @@
 "episode": "6",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:22",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -106,6 +127,7 @@
 "episode": "7",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:34",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -117,6 +139,7 @@
 "episode": "8",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:44",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -128,6 +151,7 @@
 "episode": "9",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:48",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
@@ -139,6 +163,7 @@
 "episode": "10",
 "koleksi": "ghost at school (2000) dubbing",
 "dur": "23:48",
+"thn": "2000",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
