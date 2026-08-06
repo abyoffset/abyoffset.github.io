@@ -1152,7 +1152,6 @@
     let pendingMovieData = null;
     let lastAdShownTime = 0;
 
-    // State untuk Pagination & Lazy Loading
     let currentPage = 1;
     const itemsPerPage = 12;
     let activePlayingMovie = null;
@@ -1224,7 +1223,6 @@
       return shuffled;
     }
 
-    // Manajemen LocalStorage Riwayat Tontonan (Continue Watching)
     function getWatchHistory() {
       try {
         return JSON.parse(localStorage.getItem('tiviku_history')) || {};
@@ -1241,7 +1239,19 @@
       } else {
         history[movieId] = { time, duration, updatedAt: Date.now() };
       }
-      localStorage.setItem('tiviku_history', JSON.stringify(history));
+      
+      // Hitung total ukuran localStorage (Batas 3 MB)
+      try {
+        const historyString = JSON.stringify(history);
+        const currentTotalBytes = new Blob([historyString]).size;
+        const limitBytes = 3 * 1024 * 1024; // 3 MB
+
+        if (currentTotalBytes < limitBytes) {
+          localStorage.setItem('tiviku_history', historyString);
+        }
+      } catch(e) {
+        console.warn("localStorage penuh atau melewati batas 3MB, riwayat batal disimpan.");
+      }
       renderWatchHistory();
     }
 
@@ -1438,7 +1448,6 @@
     progressBar.addEventListener('mousemove', (e) => { if (!isScrubbing) updateScrubbing(e); });
     progressBar.addEventListener('mouseleave', () => { if (!isScrubbing) previewBox.classList.remove('active'); });
 
-    // Sistem Pemuatan Bertahap / Pagination
     function renderMoviesTo(data, targetContainer, includeAds = false, isPaginated = false) {
       targetContainer.innerHTML = '';
       if (!data || data.length === 0) {
@@ -1495,7 +1504,6 @@
         }
       });
 
-      // Tombol Load More tanpa teks jumlah film
       if (isPaginated && currentSlice.length < data.length) {
         const loadMoreDiv = document.createElement('div');
         loadMoreDiv.className = 'load-more-container';
@@ -1583,8 +1591,30 @@
       if(appDrawer.classList.contains('active')) toggleDrawer();
     }
 
+    // Caching dengan proteksi Batas 3 MB localStorage
     async function loadAutoSourceList() {
+      const STORAGE_KEY = 'tiviku_cached_movies';
       const githubJsonUrl = "index.json";
+      let isDataLoadedFromCache = false;
+
+      // 1. Coba ambil dari Cache Lokal jika ada
+      try {
+        const cachedData = localStorage.getItem(STORAGE_KEY);
+        if (cachedData) {
+          const parsedCache = JSON.parse(cachedData);
+          if (Array.isArray(parsedCache) && parsedCache.length > 0) {
+            currentData = parsedCache;
+            displayData = shuffleArray(currentData);
+            renderMovies(displayData);
+            buildKoleksiDrawerMenu(currentData);
+            isDataLoadedFromCache = true;
+          }
+        }
+      } catch (e) {
+        console.error("Gagal membaca cache lokal:", e);
+      }
+
+      // 2. Fetch data terbaru dari server
       try {
         const response = await fetch(githubJsonUrl);
         if (!response.ok) throw new Error("Gagal mengambil data index.json");
@@ -1614,12 +1644,29 @@
           displayData = shuffleArray(currentData);
           renderMovies(displayData);
           buildKoleksiDrawerMenu(currentData);
-        } else {
-          renderMovies([]);
+
+          // Cek ukuran data baru sebelum disimpan ke localStorage
+          const newString = JSON.stringify(allMovies);
+          const dataSizeInBytes = new Blob([newString]).size;
+          const maxAllowedBytes = 3 * 1024 * 1024; // 3 Megabyte
+
+          if (dataSizeInBytes < maxAllowedBytes) {
+            const cachedString = localStorage.getItem(STORAGE_KEY);
+            if (cachedString !== newString) {
+              localStorage.setItem(STORAGE_KEY, newString);
+              console.log("Data berhasil diperbarui ke localStorage.");
+            }
+          } else {
+            console.warn("Ukuran data film mencapai/melebihi 3 MB! Penyimpanan ke localStorage dilewati demi keamanan memori.");
+            // Hapus cache lama jika terlanjur ada agar memori bersih
+            localStorage.removeItem(STORAGE_KEY);
+          }
         }
       } catch (err) {
-        console.error("Gagal memuat otomatis:", err.message);
-        renderMovies([]);
+        console.error("Gagal memperbarui data dari server:", err.message);
+        if (!isDataLoadedFromCache) {
+          renderMovies([]);
+        }
       }
     }
 
