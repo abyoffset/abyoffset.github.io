@@ -1236,7 +1236,6 @@
     function saveWatchHistory(movieId, time, duration) {
       if (!movieId || !duration || duration <= 0) return;
       const history = getWatchHistory();
-      // Jangan simpan jika sudah hampir habis (>95%)
       if (time / duration > 0.95) {
         delete history[movieId];
       } else {
@@ -1439,7 +1438,7 @@
     progressBar.addEventListener('mousemove', (e) => { if (!isScrubbing) updateScrubbing(e); });
     progressBar.addEventListener('mouseleave', () => { if (!isScrubbing) previewBox.classList.remove('active'); });
 
-    // Sistem Pemuatan Bertahap / Pagination (Fitur 6)
+    // Sistem Pemuatan Bertahap / Pagination
     function renderMoviesTo(data, targetContainer, includeAds = false, isPaginated = false) {
       targetContainer.innerHTML = '';
       if (!data || data.length === 0) {
@@ -1496,7 +1495,7 @@
         }
       });
 
-      // Tombol Load More jika masih ada data yang belum dirender
+      // Tombol Load More tanpa teks jumlah film
       if (isPaginated && currentSlice.length < data.length) {
         const loadMoreDiv = document.createElement('div');
         loadMoreDiv.className = 'load-more-container';
@@ -1805,7 +1804,6 @@
           progressFill.style.width = `${pct}%`;
           timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
           
-          // Simpan progress tontonan secara berkala
           if (activePlayingMovie) {
             const movieId = activePlayingMovie.id || activePlayingMovie.lnk;
             saveWatchHistory(movieId, videoPlayer.currentTime, videoPlayer.duration);
