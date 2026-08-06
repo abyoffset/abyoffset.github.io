@@ -430,54 +430,6 @@
       display: block;
     }
 
-    /* Continue Watching Section */
-    .history-section {
-      margin-bottom: 30px;
-      display: none;
-    }
-    .history-section.show {
-      display: block;
-    }
-    .history-header {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--accent-color);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 12px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .clear-history-btn {
-      background: none;
-      border: none;
-      color: var(--text-secondary);
-      font-size: 0.75rem;
-      cursor: pointer;
-    }
-    .clear-history-btn:hover {
-      color: #fff;
-    }
-    .history-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 20px;
-    }
-    .watch-progress-container {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: rgba(255, 255, 255, 0.3);
-      z-index: 5;
-    }
-    .watch-progress-fill {
-      height: 100%;
-      background: var(--accent-color);
-    }
-
     .movie-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -566,29 +518,6 @@
       -webkit-box-orient: vertical;
       overflow: hidden;
       color: #e0e0e0;
-    }
-
-    .load-more-container {
-      text-align: center;
-      margin-top: 30px;
-      grid-column: 1 / -1;
-    }
-
-    .load-more-btn {
-      background-color: #1a1a1e;
-      color: var(--text-color);
-      border: 1px solid #333;
-      padding: 10px 24px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: all 0.2s ease;
-    }
-
-    .load-more-btn:hover {
-      border-color: var(--accent-color);
-      color: var(--accent-color);
     }
 
     /* PLAYER MODAL */
@@ -922,7 +851,7 @@
     }
 
     @media (max-width: 600px) {
-      .movie-grid, .history-grid {
+      .movie-grid {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
         gap: 12px;
       }
@@ -1021,16 +950,6 @@
 
   <!-- Grid Utama -->
   <div class="container">
-    
-    <!-- Lanjutkan Tontonan Section -->
-    <div id="historySection" class="history-section">
-      <div class="history-header">
-        <span>Lanjutkan Tontonan</span>
-        <button class="clear-history-btn" onclick="clearWatchHistory()">Hapus Riwayat</button>
-      </div>
-      <div id="historyGrid" class="history-grid"></div>
-    </div>
-
     <div class="section-info-bar">
       <span id="currentFilterTitle" class="current-filter-title">Semua Koleksi</span>
       <button id="resetFilterBtn" class="reset-filter-btn" onclick="resetFilter()">Tampilkan Semua ✕</button>
@@ -1152,10 +1071,6 @@
     let pendingMovieData = null;
     let lastAdShownTime = 0;
 
-    let currentPage = 1;
-    const itemsPerPage = 12;
-    let activePlayingMovie = null;
-
     const movieGrid = document.getElementById('movieGrid');
     const playerMovieGrid = document.getElementById('playerMovieGrid');
     const searchInput = document.getElementById('searchInput');
@@ -1189,8 +1104,6 @@
 
     const appDrawer = document.getElementById('appDrawer');
     const drawerOverlay = document.getElementById('drawerOverlay');
-    const historySection = document.getElementById('historySection');
-    const historyGrid = document.getElementById('historyGrid');
 
     let hls = null;
     let controlsTimeout = null;
@@ -1221,84 +1134,6 @@
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
       return shuffled;
-    }
-
-    function getWatchHistory() {
-      try {
-        return JSON.parse(localStorage.getItem('tiviku_history')) || {};
-      } catch(e) {
-        return {};
-      }
-    }
-
-    function saveWatchHistory(movieId, time, duration) {
-      if (!movieId || !duration || duration <= 0) return;
-      const history = getWatchHistory();
-      if (time / duration > 0.95) {
-        delete history[movieId];
-      } else {
-        history[movieId] = { time, duration, updatedAt: Date.now() };
-      }
-      
-      // Hitung total ukuran localStorage (Batas 3 MB)
-      try {
-        const historyString = JSON.stringify(history);
-        const currentTotalBytes = new Blob([historyString]).size;
-        const limitBytes = 3 * 1024 * 1024; // 3 MB
-
-        if (currentTotalBytes < limitBytes) {
-          localStorage.setItem('tiviku_history', historyString);
-        }
-      } catch(e) {
-        console.warn("localStorage penuh atau melewati batas 3MB, riwayat batal disimpan.");
-      }
-      renderWatchHistory();
-    }
-
-    function clearWatchHistory() {
-      localStorage.removeItem('tiviku_history');
-      renderWatchHistory();
-    }
-
-    function renderWatchHistory() {
-      const history = getWatchHistory();
-      const historyKeys = Object.keys(history);
-      
-      if (historyKeys.length === 0 || currentKoleksiFilter || (searchInput && searchInput.value.trim())) {
-        historySection.classList.remove('show');
-        return;
-      }
-
-      historySection.classList.add('show');
-      historyGrid.innerHTML = '';
-
-      const fragment = document.createDocumentFragment();
-      historyKeys.sort((a, b) => history[b].updatedAt - history[a].updatedAt).forEach(id => {
-        const movie = currentData.find(m => (m.id || m.lnk) === id);
-        if (!movie) return;
-
-        const prog = history[id];
-        const percent = Math.min(100, (prog.time / prog.duration) * 100);
-
-        const card = document.createElement('div');
-        card.className = 'movie-card';
-        card.innerHTML = `
-          <div class="poster-wrapper">
-            <img src="${movie.logo || ''}" alt="${movie.ttl}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'">
-            <span class="duration-badge">${movie.dur || 'N/A'}</span>
-            <div class="watch-progress-container">
-              <div class="watch-progress-fill" style="width: ${percent}%;"></div>
-            </div>
-          </div>
-          <div class="movie-info">
-            <div class="movie-title">${movie.ttl || 'Tanpa Judul'}</div>
-          </div>
-        `;
-        card.onclick = () => playMovie(movie, prog.time);
-        fragment.appendChild(card);
-      });
-
-      historyGrid.appendChild(fragment);
     }
 
     function showControls() {
@@ -1448,18 +1283,15 @@
     progressBar.addEventListener('mousemove', (e) => { if (!isScrubbing) updateScrubbing(e); });
     progressBar.addEventListener('mouseleave', () => { if (!isScrubbing) previewBox.classList.remove('active'); });
 
-    function renderMoviesTo(data, targetContainer, includeAds = false, isPaginated = false) {
+    function renderMoviesTo(data, targetContainer, includeAds = false) {
       targetContainer.innerHTML = '';
       if (!data || data.length === 0) {
         targetContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #888; padding: 40px 0;">Tidak ada data film.</p>';
         return;
       }
 
-      const limit = isPaginated ? currentPage * itemsPerPage : data.length;
-      const currentSlice = data.slice(0, limit);
-
       const fragment = document.createDocumentFragment();
-      currentSlice.forEach((movie, index) => {
+      data.forEach((movie, index) => {
         const card = document.createElement('div');
         card.className = 'movie-card';
         card.innerHTML = `
@@ -1503,25 +1335,12 @@
           fragment.appendChild(adCard);
         }
       });
-
-      if (isPaginated && currentSlice.length < data.length) {
-        const loadMoreDiv = document.createElement('div');
-        loadMoreDiv.className = 'load-more-container';
-        loadMoreDiv.innerHTML = `<button class="load-more-btn">Muat Lebih Banyak</button>`;
-        loadMoreDiv.querySelector('button').onclick = () => {
-          currentPage++;
-          renderMoviesTo(data, targetContainer, includeAds, isPaginated);
-        };
-        fragment.appendChild(loadMoreDiv);
-      }
-
       targetContainer.appendChild(fragment);
     }
 
     function renderMovies(data) {
-      renderMoviesTo(data, movieGrid, false, true);
-      renderMoviesTo(data, playerMovieGrid, true, false);
-      renderWatchHistory();
+      renderMoviesTo(data, movieGrid, false);
+      renderMoviesTo(data, playerMovieGrid, true);
     }
 
     function buildKoleksiDrawerMenu(data) {
@@ -1558,7 +1377,6 @@
       currentKoleksiFilter = koleksiName;
       currentFilterTitle.innerText = `Koleksi: ${koleksiName}`;
       resetFilterBtn.classList.add('show');
-      currentPage = 1;
 
       let filtered = currentData.filter(item => item.koleksi === koleksiName);
       const hasEpisode = filtered.some(item => item.episode !== undefined && item.episode !== null && item.episode !== "");
@@ -1582,7 +1400,6 @@
       currentKoleksiFilter = null;
       currentFilterTitle.innerText = "Semua Koleksi";
       resetFilterBtn.classList.remove('show');
-      currentPage = 1;
       clearSearchInput();
       
       displayData = shuffleArray(currentData);
@@ -1591,30 +1408,8 @@
       if(appDrawer.classList.contains('active')) toggleDrawer();
     }
 
-    // Caching dengan proteksi Batas 3 MB localStorage
     async function loadAutoSourceList() {
-      const STORAGE_KEY = 'tiviku_cached_movies';
       const githubJsonUrl = "index.json";
-      let isDataLoadedFromCache = false;
-
-      // 1. Coba ambil dari Cache Lokal jika ada
-      try {
-        const cachedData = localStorage.getItem(STORAGE_KEY);
-        if (cachedData) {
-          const parsedCache = JSON.parse(cachedData);
-          if (Array.isArray(parsedCache) && parsedCache.length > 0) {
-            currentData = parsedCache;
-            displayData = shuffleArray(currentData);
-            renderMovies(displayData);
-            buildKoleksiDrawerMenu(currentData);
-            isDataLoadedFromCache = true;
-          }
-        }
-      } catch (e) {
-        console.error("Gagal membaca cache lokal:", e);
-      }
-
-      // 2. Fetch data terbaru dari server
       try {
         const response = await fetch(githubJsonUrl);
         if (!response.ok) throw new Error("Gagal mengambil data index.json");
@@ -1644,29 +1439,12 @@
           displayData = shuffleArray(currentData);
           renderMovies(displayData);
           buildKoleksiDrawerMenu(currentData);
-
-          // Cek ukuran data baru sebelum disimpan ke localStorage
-          const newString = JSON.stringify(allMovies);
-          const dataSizeInBytes = new Blob([newString]).size;
-          const maxAllowedBytes = 3 * 1024 * 1024; // 3 Megabyte
-
-          if (dataSizeInBytes < maxAllowedBytes) {
-            const cachedString = localStorage.getItem(STORAGE_KEY);
-            if (cachedString !== newString) {
-              localStorage.setItem(STORAGE_KEY, newString);
-              console.log("Data berhasil diperbarui ke localStorage.");
-            }
-          } else {
-            console.warn("Ukuran data film mencapai/melebihi 3 MB! Penyimpanan ke localStorage dilewati demi keamanan memori.");
-            // Hapus cache lama jika terlanjur ada agar memori bersih
-            localStorage.removeItem(STORAGE_KEY);
-          }
-        }
-      } catch (err) {
-        console.error("Gagal memperbarui data dari server:", err.message);
-        if (!isDataLoadedFromCache) {
+        } else {
           renderMovies([]);
         }
+      } catch (err) {
+        console.error("Gagal memuat otomatis:", err.message);
+        renderMovies([]);
       }
     }
 
@@ -1695,9 +1473,8 @@
       }
     }
 
-    function playMovie(movie, startTime = 0) {
+    function playMovie(movie) {
       pendingMovieData = movie;
-      activePlayingMovie = movie;
       
       playerModal.classList.add('active');
       if (!window.location.hash.includes('player')) {
@@ -1714,7 +1491,7 @@
       const cooldownLimit = 5 * 60 * 1000;
 
       if (lastAdShownTime !== 0 && timeDifference < cooldownLimit) {
-        executeDirectPlay(movie, startTime);
+        executeDirectPlay(movie);
         return;
       }
 
@@ -1756,7 +1533,7 @@
       }
     };
 
-    function executeDirectPlay(movie, startTime = 0) {
+    function executeDirectPlay(movie) {
       const videoWrapper = document.querySelector('.video-wrapper');
       videoWrapper.innerHTML = `
         <video id="videoPlayer" playsinline></video>
@@ -1769,14 +1546,6 @@
 
       const streamUrl = _decode(movie.lnk);
       videoContainer.classList.add('buffering');
-
-      let hasSeeked = false;
-      const performSeek = () => {
-        if (startTime > 0 && !hasSeeked && videoPlayer.duration) {
-          videoPlayer.currentTime = startTime;
-          hasSeeked = true;
-        }
-      };
 
       if (Hls.isSupported()) {
         if (hls) hls.destroy();
@@ -1796,13 +1565,11 @@
         hls.loadSource(streamUrl);
         hls.attachMedia(videoPlayer);
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
-          performSeek();
           videoPlayer.play().catch(() => {});
         });
       } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
         videoPlayer.src = streamUrl;
         videoPlayer.addEventListener('loadedmetadata', () => {
-          performSeek();
           videoPlayer.play().catch(() => {});
         });
       }
@@ -1850,11 +1617,6 @@
           const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
           progressFill.style.width = `${pct}%`;
           timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
-          
-          if (activePlayingMovie) {
-            const movieId = activePlayingMovie.id || activePlayingMovie.lnk;
-            saveWatchHistory(movieId, videoPlayer.currentTime, videoPlayer.duration);
-          }
         }
       };
     }
@@ -1868,7 +1630,6 @@
     function closePlayerModalOnly(backHistory = true) {
       playerModal.classList.remove('active');
       videoContainer.classList.remove('buffering');
-      activePlayingMovie = null;
       if (videoPlayer) {
         videoPlayer.pause();
         videoPlayer.currentTime = 0;
@@ -1951,9 +1712,8 @@
       }
 
       if (!trimmedQuery) {
-        renderMoviesTo(baseList, movieGrid, false, true);
-        renderMoviesTo(baseList, playerMovieGrid, true, false);
-        renderWatchHistory();
+        renderMoviesTo(baseList, movieGrid, false);
+        renderMoviesTo(baseList, playerMovieGrid, true);
         return;
       }
 
@@ -1961,10 +1721,8 @@
       const unmatched = baseList.filter(movie => !(movie.ttl || '').toLowerCase().includes(trimmedQuery));
       const sortedList = [...matched, ...unmatched];
 
-      currentPage = 1;
-      renderMoviesTo(sortedList, movieGrid, false, true);
-      renderMoviesTo(sortedList, playerMovieGrid, true, false);
-      historySection.classList.remove('show');
+      renderMoviesTo(sortedList, movieGrid, false);
+      renderMoviesTo(sortedList, playerMovieGrid, true);
       
       if(searchInput) searchInput.blur();
       if(playerSearchInput) playerSearchInput.blur();
@@ -1981,11 +1739,9 @@
       if(searchClearBtn) searchClearBtn.classList.remove('show');
       if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
       
-      currentPage = 1;
       let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
-      renderMoviesTo(baseList, movieGrid, false, true);
-      renderMoviesTo(baseList, playerMovieGrid, true, false);
-      renderWatchHistory();
+      renderMoviesTo(baseList, movieGrid, false);
+      renderMoviesTo(baseList, playerMovieGrid, true);
     }
 
     searchInput.addEventListener('input', (e) => {
