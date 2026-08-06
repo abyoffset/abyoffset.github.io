@@ -1154,7 +1154,7 @@
 
     // State untuk Pagination & Lazy Loading
     let currentPage = 1;
-    const itemsPerPage = 20;
+    const itemsPerPage = 12;
     let activePlayingMovie = null;
 
     const movieGrid = document.getElementById('movieGrid');
@@ -1500,7 +1500,7 @@
       if (isPaginated && currentSlice.length < data.length) {
         const loadMoreDiv = document.createElement('div');
         loadMoreDiv.className = 'load-more-container';
-        loadMoreDiv.innerHTML = `<button class="load-more-btn">Muat Lebih Banyak (${data.length - currentSlice.length} lainnya)</button>`;
+        loadMoreDiv.innerHTML = `<button class="load-more-btn">Muat Lebih Banyak</button>`;
         loadMoreDiv.querySelector('button').onclick = () => {
           currentPage++;
           renderMoviesTo(data, targetContainer, includeAds, isPaginated);
