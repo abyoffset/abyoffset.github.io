@@ -1137,7 +1137,6 @@
       );
     }
 
-    // Fungsi Pengecekan Notifikasi Otomatis
     async function checkAppNotification() {
       try {
         const response = await fetch('notification.json?t=' + new Date().getTime());
@@ -1345,41 +1344,68 @@
         card.onclick = () => playMovie(movie);
         fragment.appendChild(card);
 
-        if (includeAds && index === 5) {
+        // Fungsi pembantu menggunakan iframe srcdoc agar script iklan (document.write) berjalan sempurna
+        function createAdCard(keyId) {
           const adCard = document.createElement('div');
           adCard.className = 'ad-banner-card';
           
-          const adInner = document.createElement('div');
-          adInner.style.cssText = "display: flex; justify-content: center; align-items: center; width: 100%; overflow: hidden;";
+          const iframe = document.createElement('iframe');
+          iframe.width = '300';
+          iframe.height = '250';
+          iframe.style.cssText = 'border: none; overflow: hidden; width: 100%; max-width: 300px; height: 250px; background: transparent;';
+          iframe.scrolling = 'no';
           
-          const confScript = document.createElement('script');
-          confScript.text = `
-            atOptions = {
-              'key' : '860bb1a2ada410323267313554915298',
-              'format' : 'iframe',
-              'height' : 250,
-              'width' : 300,
-              'params' : {}
-            };
+          iframe.srcdoc = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <style>
+                body {
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: transparent;
+                  overflow: hidden;
+                }
+              </style>
+            </head>
+            <body>
+              <script type="text/javascript">
+                atOptions = {
+                  'key' : '${keyId}',
+                  'format' : 'iframe',
+                  'height' : 250,
+                  'width' : 300,
+                  'params' : {}
+                };
+              <\/script>
+              <script type="text/javascript" src="https://www.highperformanceformat.com/${keyId}/invoke.js"><\/script>
+            </body>
+            </html>
           `;
           
-          const invokeScript = document.createElement('script');
-          invokeScript.src = 'https://www.highperformanceformat.com/860bb1a2ada410323267313554915298/invoke.js';
-          invokeScript.async = true;
+          adCard.appendChild(iframe);
+          return adCard;
+        }
 
-          adInner.appendChild(confScript);
-          adInner.appendChild(invokeScript);
-          adCard.appendChild(adInner);
-          
-          fragment.appendChild(adCard);
+        // Iklan pertama di bawah kartu ke-6 (indeks 5)
+        if (includeAds && index === 5) {
+          fragment.appendChild(createAdCard('860bb1a2ada410323267313554915298'));
+        }
+
+        // Iklan kedua di bawah kartu ke-12 (indeks 11)
+        if (includeAds && index === 11) {
+          fragment.appendChild(createAdCard('320fbeda84412a4babbc0de0ead72961'));
         }
       });
       targetContainer.appendChild(fragment);
     }
 
     function renderMovies(data) {
-      renderMoviesTo(data, movieGrid, false);
-      renderMoviesTo(data, playerMovieGrid, true);
+      renderMoviesTo(data, movieGrid, true); // Menampilkan iklan di halaman depan
+      renderMoviesTo(data, playerMovieGrid, true); // Menampilkan iklan di rekomendasi player
     }
 
     function buildKoleksiDrawerMenu(data) {
@@ -1751,7 +1777,7 @@
       }
 
       if (!trimmedQuery) {
-        renderMoviesTo(baseList, movieGrid, false);
+        renderMoviesTo(baseList, movieGrid, true);
         renderMoviesTo(baseList, playerMovieGrid, true);
         return;
       }
@@ -1760,7 +1786,7 @@
       const unmatched = baseList.filter(movie => !(movie.ttl || '').toLowerCase().includes(trimmedQuery));
       const sortedList = [...matched, ...unmatched];
 
-      renderMoviesTo(sortedList, movieGrid, false);
+      renderMoviesTo(sortedList, movieGrid, true);
       renderMoviesTo(sortedList, playerMovieGrid, true);
       
       if(searchInput) searchInput.blur();
@@ -1779,7 +1805,7 @@
       if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
       
       let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
-      renderMoviesTo(baseList, movieGrid, false);
+      renderMoviesTo(baseList, movieGrid, true);
       renderMoviesTo(baseList, playerMovieGrid, true);
     }
 
@@ -1824,7 +1850,6 @@
     window.onload = () => {
       loadAutoSourceList();
       
-      // Pengecekan notifikasi saat aplikasi dibuka (dengan jeda stabil 2.5 detik)
       setTimeout(() => {
         checkAppNotification();
       }, 2500);
