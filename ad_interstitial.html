@@ -32,27 +32,32 @@
       max-width: 360px;
       width: 100%;
     }
+    .ads-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      width: 100%;
+      align-items: center;
+    }
     .ad-box {
       min-height: 50px;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-    .info-text {
-      font-size: 0.85rem;
-      color: #a0a0a0;
+      width: 100%;
     }
     .btn-skip {
       background-color: #333;
       color: #777;
       border: none;
-      padding: 10px 20px;
+      padding: 8px 24px;
       border-radius: 20px;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       cursor: not-allowed;
       transition: background-color 0.2s ease, color 0.2s ease;
-      width: 100%;
+      width: auto;
+      min-width: 180px;
     }
     .btn-skip.active {
       background-color: #e50914;
@@ -68,20 +73,35 @@
 <body>
 
   <div class="ad-container">
-    <div class="info-text">tiviku app</div>
-    
-    <!-- Kotak Iklan Adsterra 320x50 -->
-    <div class="ad-box" id="adBox">
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '07ec82fdf6989af1b3035f505091411c',
-          'format' : 'iframe',
-          'height' : 50,
-          'width' : 320,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
+    <!-- Wrapper untuk menampung kedua kotak iklan dengan jarak -->
+    <div class="ads-wrapper">
+      <!-- Kotak Iklan Adsterra 1 (320x50) -->
+      <div class="ad-box" id="adBox1">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '07ec82fdf6989af1b3035f505091411c',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
+      </div>
+
+      <!-- Kotak Iklan Adsterra 2 (320x50) -->
+      <div class="ad-box" id="adBox2">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '34b4bdc40ca17a93c33f191426c8b44e',
+            'format' : 'iframe',
+            'height' : 50,
+            'width' : 320,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.highperformanceformat.com/34b4bdc40ca17a93c33f191426c8b44e/invoke.js"></script>
+      </div>
     </div>
 
     <button id="skipBtn" class="btn-skip" disabled>tonton video dalam (7)</button>
