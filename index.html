@@ -1137,6 +1137,35 @@
       );
     }
 
+    // Fungsi Pengecekan Notifikasi Otomatis
+    async function checkAppNotification() {
+      try {
+        const response = await fetch('notification.json?t=' + new Date().getTime());
+        if (!response.ok) return;
+        
+        const notif = await response.json();
+        
+        if (notif.active) {
+          const lastReadId = localStorage.getItem('last_read_notif_id');
+          
+          if (lastReadId !== notif.id) {
+            showCustomAlert(
+              notif.title,
+              notif.message,
+              `<button class="btn" onclick="markNotifAsRead('${notif.id}')">Mengerti</button>`
+            );
+          }
+        }
+      } catch (error) {
+        console.log("Gagal memuat notifikasi:", error);
+      }
+    }
+
+    function markNotifAsRead(id) {
+      localStorage.setItem('last_read_notif_id', id);
+      closeCustomAlert();
+    }
+
     function shuffleArray(array) {
       let shuffled = [...array];
       for (let i = shuffled.length - 1; i > 0; i--) {
@@ -1794,6 +1823,11 @@
 
     window.onload = () => {
       loadAutoSourceList();
+      
+      // Pengecekan notifikasi saat aplikasi dibuka (dengan jeda stabil 2.5 detik)
+      setTimeout(() => {
+        checkAppNotification();
+      }, 2500);
     };
   </script>
 </body>
