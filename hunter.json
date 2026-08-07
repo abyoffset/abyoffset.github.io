@@ -1,5 +1,17 @@
 [
 {
+"logo": "https://i.imgur.com/UDt39Zu.png",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq21@565f656/1/master.m3u8",
+"ttl": "eps11 Hunter x Hunter (2011) dubbing",
+"episode": "11",
+"thn": "2011",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:35",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/5BVjdpd.png",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq20@af5dc83/1/master.m3u8",
 "ttl": "eps10 Hunter x Hunter (2011) dubbing",
