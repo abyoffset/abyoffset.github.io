@@ -1,5 +1,25 @@
 [
 {
+"logo": "https://image.tmdb.org/t/p/w220_and_h330_face/A5imhXiFF3AL9RRA4FBzNDFmfgW.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq21@720d5e4/1/master.m3u8",
+"ttl": "Black Adam (2022) dubbing",
+"thn": "2022",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "2:04:50",
+"tiviku": "apk"
+},
+{
+"logo": "https://media.themoviedb.org/t/p/w220_and_h330_face/4sYLSgUTwbudPu4GkU8LKWGXyRm.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq20@95780ad/1/master.m3u8",
+"ttl": "Sekawan Limo (2024)",
+"thn": "2024",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "1:52:17",
+"tiviku": "apk"
+},
+{
 "logo": "https://media.themoviedb.org/t/p/w440_and_h660_face/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq19@56b61a1/1/master.m3u8",
 "ttl": "Toy Story (1995) dubbing",
