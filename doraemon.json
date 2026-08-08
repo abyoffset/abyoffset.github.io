@@ -1,5 +1,16 @@
 [
 {
+"logo": "https://i.imgur.com/brydOc6.png",
+"lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq23@ea9653e/1/master.m3u8",
+"ttl": "Doraemon full durasi (1979) dubbing",
+"thn": "1979",
+"koleksi": "doraemon dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "2.15",
+"dur": "53:07",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/kR2ZT65.png",
 "ttl": "Doraemon eps 383 dubbing",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq15@4d563a0/1/master.m3u8",
