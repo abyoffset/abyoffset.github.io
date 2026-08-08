@@ -1,0 +1,1840 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tiviku app</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f0f12">
+
+  <!-- CDN HLS.js untuk pemutaran streaming -->
+  <script src="hls.js"></script>
+
+  <style>
+    :root {
+      --bg-color: #0f0f12;
+      --card-bg: #18181c;
+      --accent-color: #e50914;
+      --accent-hover: #ff1e27;
+      --text-color: #ffffff;
+      --text-secondary: #a0a0a0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding-bottom: 30px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    body::-webkit-scrollbar,
+    .player-modal::-webkit-scrollbar,
+    .drawer-content::-webkit-scrollbar {
+      display: none;
+    }
+
+    header {
+      background-color: rgba(15, 15, 18, 0.95);
+      padding: 15px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .hamburger-btn {
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.4rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .hamburger-btn:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--accent-color);
+    }
+
+    .logo-title {
+      font-size: 1.6rem;
+      font-weight: 900;
+      font-style: italic;
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-color) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      filter: drop-shadow(0 2px 8px rgba(229, 9, 20, 0.4));
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .logo-title:hover {
+      transform: scale(1.03);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      width: 16px;
+      height: 16px;
+      fill: var(--text-secondary);
+      cursor: pointer;
+      transition: fill 0.3s ease;
+    }
+
+    .search-box {
+      padding: 9px 34px 9px 36px;
+      border-radius: 20px;
+      border: 1px solid #333;
+      background-color: #1a1a1e;
+      color: #fff;
+      outline: none;
+      width: 200px;
+      transition: width 0.3s ease, border-color 0.3s ease;
+      font-size: 0.88rem;
+    }
+
+    .search-box:focus {
+      width: 240px;
+      border-color: var(--accent-color);
+    }
+
+    .search-wrapper:focus-within .search-icon {
+      fill: var(--accent-color);
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 12px;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: none;
+      padding: 2px;
+    }
+
+    .search-clear-btn:hover {
+      color: #fff;
+    }
+
+    .search-clear-btn.show {
+      display: block;
+    }
+
+    .header-ad-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      background: rgba(15, 15, 18, 0.95);
+      padding: 6px 0;
+      border-top: 1px solid #222;
+    }
+
+    #connectionToast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background-color: rgba(229, 9, 20, 0.95);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 99999;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    #connectionToast.show {
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .drawer-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 800;
+      backdrop-filter: blur(4px);
+      transition: opacity 0.3s ease;
+    }
+
+    .drawer-overlay.active {
+      display: block;
+    }
+
+    .drawer {
+      position: fixed;
+      top: 0;
+      left: -320px;
+      width: 300px;
+      height: 100%;
+      background: var(--card-bg);
+      z-index: 900;
+      box-shadow: 5px 0 25px rgba(0,0,0,0.8);
+      border-right: 1px solid #2a2a30;
+      transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .drawer.active {
+      left: 0;
+    }
+
+    .drawer-header {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #2a2a30;
+    }
+
+    .drawer-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      letter-spacing: 0.5px;
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.3rem;
+      cursor: pointer;
+      padding: 4px;
+      transition: color 0.2s ease;
+    }
+
+    .drawer-close:hover {
+      color: #fff;
+    }
+
+    .drawer-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      overflow-y: auto;
+      flex-grow: 1;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .drawer-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .drawer-section-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .drawer-section-title::-webkit-details-marker {
+      display: none;
+    }
+
+    .drawer-section-title::after {
+      content: '▼';
+      font-size: 0.65rem;
+      transition: transform 0.2s ease;
+    }
+
+    details[open] > .drawer-section-title::after {
+      transform: rotate(180deg);
+    }
+
+    .drawer-dropdown-content {
+      margin-top: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      max-height: 250px;
+      overflow-y: auto;
+      padding-right: 4px;
+    }
+
+    .drawer-dropdown-content::-webkit-scrollbar {
+      display: block;
+      width: 4px;
+    }
+    .drawer-dropdown-content::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    .drawer-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #121215;
+      border: 1px solid #24242a;
+      color: var(--text-color);
+      padding: 12px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .drawer-item:hover {
+      background-color: #1a1a20;
+      border-color: rgba(229, 9, 20, 0.5);
+    }
+
+    .drawer-item.active-koleksi {
+      border-color: var(--accent-color);
+      background-color: rgba(229, 9, 20, 0.1);
+      color: var(--accent-color);
+    }
+
+    .drawer-footer {
+      padding: 16px 20px;
+      border-top: 1px solid #2a2a30;
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      text-align: center;
+    }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      z-index: 950;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border: 1px solid #2a2a30;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    }
+
+    .modal-content h3 {
+      border-bottom: 1px solid #2a2a30;
+      padding-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 5px;
+    }
+
+    .btn {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+    }
+
+    .btn:hover {
+      background-color: var(--accent-hover);
+    }
+
+    /* DETAIL FILM MODAL (PREVIEW) */
+    .detail-modal-body {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .detail-poster {
+      width: 110px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #333;
+    }
+    .detail-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .detail-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .detail-synopsis {
+      font-size: 0.82rem;
+      line-height: 1.4;
+      color: #ccc;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+
+    .section-info-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .current-filter-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      letter-spacing: 0.5px;
+    }
+
+    .reset-filter-btn {
+      background: none;
+      border: none;
+      color: var(--accent-color);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: none;
+    }
+    .reset-filter-btn.show {
+      display: block;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      contain: content;
+    }
+
+    .movie-card {
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #24242a;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+      user-select: none;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(229, 9, 20, 0.6);
+    }
+
+    .fav-btn {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border: none;
+      color: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 1rem;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+    .fav-btn:hover {
+      background-color: rgba(229, 9, 20, 0.9);
+      transform: scale(1.1);
+    }
+    .fav-btn.active {
+      color: var(--accent-color);
+    }
+
+    .ad-banner-card {
+      grid-column: 1 / -1;
+      background-color: var(--card-bg);
+      border: 1px dashed #333;
+      border-radius: 10px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 120px;
+      margin: 10px 0;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .poster-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 145%;
+      background-color: #121215;
+    }
+
+    .poster-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .duration-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 3px 7px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .movie-info {
+      padding: 12px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .movie-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: #e0e0e0;
+    }
+
+    /* PLAYER MODAL */
+    .player-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.96);
+      z-index: 1000;
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .player-modal.active {
+      display: block;
+    }
+
+    .player-inner {
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 0 0 40px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sticky-player-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1005;
+      width: 100%;
+      background: rgba(15, 15, 18, 0.98);
+      padding-bottom: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+      backdrop-filter: blur(8px);
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+      box-shadow: 0 0 35px rgba(229, 9, 20, 0.25), 0 10px 40px rgba(0,0,0,0.9);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      user-select: none;
+    }
+
+    .video-container.hide-controls {
+      cursor: none;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%;
+      overflow: hidden;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video#videoPlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .video-spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top-color: var(--accent-color);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      display: none;
+      z-index: 25;
+      pointer-events: none;
+    }
+
+    .video-container.buffering .video-spinner {
+      display: block;
+    }
+
+    @keyframes spin {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .player-logo {
+      position: absolute;
+      bottom: 305px;
+      left: 16px;
+      width: 100px;
+      height: 50px;
+      object-fit: contain;
+      z-index: 25;
+      pointer-events: none;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.7));
+    }
+
+    .video-container:fullscreen,
+    .video-container:-webkit-full-screen {
+      width: 100vw !important;
+      height: 100vh !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: #000 !important;
+      border: none !important;
+    }
+
+    .video-container:fullscreen .video-wrapper,
+    .video-container:-webkit-full-screen .video-wrapper {
+      width: 100% !important;
+      height: 100% !important;
+      padding-top: 0 !important;
+    }
+
+    .seek-feedback {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 35%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 20;
+    }
+
+    .seek-feedback.left { left: 0; border-top-right-radius: 50%; border-bottom-right-radius: 50%; }
+    .seek-feedback.right { right: 0; border-top-left-radius: 50%; border-bottom-left-radius: 50%; }
+    .seek-feedback.active { animation: seekRipple 0.6s ease-out forwards; }
+
+    @keyframes seekRipple {
+      0% { opacity: 0; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1.05); }
+    }
+
+    .custom-controls {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.95));
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 30;
+      pointer-events: none;
+    }
+
+    .video-container.show-controls .custom-controls {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+      touch-action: none;
+      transition: height 0.15s ease;
+    }
+
+    .progress-bar-container:hover { height: 10px; }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent-color);
+      border-radius: 4px;
+      position: relative;
+      pointer-events: none;
+    }
+
+    .preview-box {
+      position: absolute;
+      bottom: 18px;
+      transform: translateX(-50%);
+      display: none;
+      pointer-events: none;
+      z-index: 40;
+    }
+
+    .preview-box.active { display: block; }
+
+    .preview-time {
+      background: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .controls-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+
+    .controls-left, .controls-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .control-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease;
+    }
+
+    .control-btn:hover { color: var(--accent-color); }
+
+    .time-display {
+      font-size: 0.8rem;
+      color: #ccc;
+      font-family: monospace;
+    }
+
+    /* PENGATUR KECEPATAN (SPEED SELECTOR) */
+    .speed-select {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 0.78rem;
+      padding: 3px 6px;
+      border-radius: 4px;
+      cursor: pointer;
+      outline: none;
+    }
+    .speed-select option {
+      background: #18181c;
+      color: #fff;
+    }
+
+    .player-details {
+      padding: 12px 16px 0 16px;
+      color: #fff;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .player-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 60%;
+    }
+
+    .player-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .player-ad-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 16px 0 16px;
+      box-sizing: border-box;
+      background: transparent;
+    }
+
+    .recommendation-header {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 20px 0 16px 0;
+      padding: 0 16px;
+      width: 100%;
+    }
+
+    .player-recommendations-wrapper {
+      width: 100%;
+      padding: 0 16px;
+    }
+
+    @media (max-width: 600px) {
+      .movie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 12px;
+      }
+      .search-box { width: 100%; }
+      .search-wrapper { width: 100%; }
+      .header-actions { width: 100%; justify-content: space-between; }
+      .player-logo { width: 50px; height: 30px; bottom: 172px; left: 8px; }
+      .player-details { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .player-title-row { max-width: 100%; width: 100%; justify-content: space-between; }
+    }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+
+  <div id="connectionToast">
+    <span>⚠️</span> <span id="toastMessage">Koneksi internet terputus...</span>
+  </div>
+
+  <header>
+    <div class="header-left">
+      <button class="hamburger-btn" onclick="toggleDrawer()" title="Menu">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <div class="logo-title" onclick="resetFilter()">tiviku app</div>
+    </div>
+    
+    <div class="header-actions">
+      <div class="search-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" onclick="triggerSearch()"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        <input type="text" id="searchInput" class="search-box" placeholder="Cari ...">
+        <button id="searchClearBtn" class="search-clear-btn" onclick="clearSearchInput()">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="header-ad-container">
+    <script type="text/javascript">
+      atOptions = { 'key' : '34b4bdc40ca17a93c33f191426c8b44e', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+    </script>
+    <script type="text/javascript" src="https://www.highperformanceformat.com/34b4bdc40ca17a93c33f191426c8b44e/invoke.js"></script>
+  </div>
+
+  <!-- Drawer Menu -->
+  <div id="drawerOverlay" class="drawer-overlay" onclick="toggleDrawer()"></div>
+  <div id="appDrawer" class="drawer">
+    <div class="drawer-header">
+      <div class="drawer-title">Menu Utama</div>
+      <button class="drawer-close" onclick="toggleDrawer()">✕</button>
+    </div>
+    <div class="drawer-content">
+      
+      <div class="drawer-section">
+        <button class="drawer-item" onclick="filterFavorites()" style="border-color: rgba(229, 9, 20, 0.4);">
+          <span>❤️ Daftar Favorit Saya</span>
+          <span id="favCountBadge" style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">0</span>
+        </button>
+        <button class="drawer-item" onclick="filterHistory()" style="border-color: rgba(52, 152, 219, 0.4);">
+          <span>⏱️ Riwayat Tontonan</span>
+          <span id="historyCountBadge" style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">0</span>
+        </button>
+      </div>
+
+      <div class="drawer-section">
+        <details>
+          <summary class="drawer-section-title">Kategori</summary>
+          <div id="drawerKoleksiList" class="drawer-dropdown-content"></div>
+        </details>
+      </div>
+
+      <div class="drawer-section">
+        <div class="drawer-section-title" style="cursor: default; pointer-events: none;">Informasi</div>
+        <button class="drawer-item" onclick="toggleDrawer(); showAppInfo();" style="justify-content: flex-start; gap: 10px;">
+          <span>ℹ️</span> Tentang Aplikasi
+        </button>
+      </div>
+    </div>
+    <div class="drawer-footer">tiviku v2.7 &bull; by,C</div>
+  </div>
+
+  <!-- Custom Alert Modal -->
+  <div id="customAlertModal" class="modal">
+    <div class="modal-content">
+      <h3 id="customAlertTitle">Informasi</h3>
+      <p id="customAlertMessage" style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;"></p>
+      <div class="modal-buttons" id="customAlertButtons">
+        <button class="btn" onclick="closeCustomAlert()">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Detail/Preview Film -->
+  <div id="movieDetailModal" class="modal">
+    <div class="modal-content">
+      <h3 id="modalDetailHeaderTitle">Detail Film</h3>
+      <div class="detail-modal-body">
+        <img id="modalDetailPoster" class="detail-poster" src="" alt="Poster">
+        <div class="detail-info">
+          <div id="modalDetailTitle" class="detail-title"></div>
+          <div id="modalDetailMeta"></div>
+          <div id="modalDetailSynopsis" class="detail-synopsis"></div>
+        </div>
+      </div>
+      <div class="modal-buttons">
+        <button class="btn" style="background:#333;" onclick="closeMovieDetailModal()">Tutup</button>
+        <button class="btn" id="modalPlayBtn">▶ Putar Film</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section-info-bar">
+      <span id="currentFilterTitle" class="current-filter-title">Semua Koleksi</span>
+      <button id="resetFilterBtn" class="reset-filter-btn" onclick="resetFilter()">Tampilkan Semua ✕</button>
+    </div>
+    <div id="movieGrid" class="movie-grid"></div>
+  </div>
+
+  <!-- Player Modal -->
+  <div id="playerModal" class="player-modal">
+    <div class="player-inner">
+
+      <div class="sticky-player-wrapper">
+        <div class="video-container show-controls" id="videoContainer">
+          <div class="video-wrapper">
+            <video id="videoPlayer" playsinline></video>
+            <div class="video-spinner" id="videoSpinner"></div>
+          </div>
+
+          <img src="https://i.imgur.com/KsWH0uL.png" alt="Tiviku Logo" class="player-logo">
+
+          <div class="seek-feedback left" id="seekLeft"><span id="seekLeftText">≪ 10s</span></div>
+          <div class="seek-feedback right" id="seekRight"><span id="seekRightText">10s ≫</span></div>
+
+          <div class="custom-controls" id="customControls">
+            <div class="progress-bar-container" id="progressBar">
+              <div class="progress-bar-fill" id="progressFill"></div>
+              <div class="preview-box" id="previewBox"><span class="preview-time" id="previewTime">00:00</span></div>
+            </div>
+
+            <div class="controls-row">
+              <div class="controls-left">
+                <button class="control-btn" id="playBtn">▶</button>
+                <button class="control-btn" id="muteBtn">🔊</button>
+                <span class="time-display" id="timeDisplay">00:00 / 00:00</span>
+              </div>
+              <div class="controls-right">
+                <select id="playbackSpeed" class="speed-select" title="Kecepatan Video">
+                  <option value="0.5">0.5x</option>
+                  <option value="1.0" selected>1.0x</option>
+                  <option value="1.25">1.25x</option>
+                  <option value="1.5">1.5x</option>
+                  <option value="2.0">2.0x</option>
+                </select>
+                <button class="control-btn" id="fullscreenBtn" title="Fullscreen">⛶</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="player-details">
+          <div class="player-title-row">
+            <span id="playingTitle" class="player-title"></span>
+          </div>
+          <div class="search-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" onclick="triggerSearch()"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <input type="text" id="playerSearchInput" class="search-box" placeholder="Cari ...">
+            <button id="playerSearchClearBtn" class="search-clear-btn" onclick="clearSearchInput()">✕</button>
+          </div>
+        </div>
+
+        <div class="player-ad-wrapper">
+          <script type="text/javascript">
+            atOptions = { 'key' : '07ec82fdf6989af1b3035f505091411c', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
+          </script>
+          <script type="text/javascript" src="https://www.highperformanceformat.com/07ec82fdf6989af1b3035f505091411c/invoke.js"></script>
+        </div>
+      </div>
+
+      <div class="recommendation-header">Rekomendasi film lainnya</div>
+      <div class="player-recommendations-wrapper">
+        <div id="playerMovieGrid" class="movie-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const toast = document.getElementById('connectionToast');
+    const toastMsg = document.getElementById('toastMessage');
+
+    function showToast(msg) {
+      toastMsg.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }
+
+    function checkConnectionStatus() {
+      if (!navigator.onLine) showToast("⚠️ Koneksi internet terputus.");
+      else showToast("✅ Koneksi internet kembali terhubung.");
+    }
+    window.addEventListener('offline', checkConnectionStatus);
+    window.addEventListener('online', checkConnectionStatus);
+
+    const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
+
+    function _decode(_0x3c21) {
+      try {
+        if (!_0x3c21 || ![_0x3c21][0].match(/^[A-Za-z0-9+/=]+$/)) return _0x3c21;
+        return decodeURIComponent(atob(_0x3c21));
+      } catch (_0x5e12) { return _0x3c21; }
+    }
+
+    const customAlertModal = document.getElementById('customAlertModal');
+    const customAlertTitle = document.getElementById('customAlertTitle');
+    const customAlertMessage = document.getElementById('customAlertMessage');
+    const customAlertButtons = document.getElementById('customAlertButtons');
+
+    function showCustomAlert(title, message, buttonsHtml = '<button class="btn" onclick="closeCustomAlert()">OK</button>') {
+      customAlertTitle.innerText = title;
+      customAlertMessage.innerHTML = message;
+      customAlertButtons.innerHTML = buttonsHtml;
+      customAlertModal.classList.add('active');
+    }
+    function closeCustomAlert() { customAlertModal.classList.remove('active'); }
+
+    // Modal Detail Film
+    const movieDetailModal = document.getElementById('movieDetailModal');
+    const modalDetailPoster = document.getElementById('modalDetailPoster');
+    const modalDetailTitle = document.getElementById('modalDetailTitle');
+    const modalDetailMeta = document.getElementById('modalDetailMeta');
+    const modalDetailSynopsis = document.getElementById('modalDetailSynopsis');
+    const modalPlayBtn = document.getElementById('modalPlayBtn');
+    let selectedMovieCache = null;
+
+    function showMovieDetail(movie) {
+      selectedMovieCache = movie;
+      modalDetailPoster.src = movie.logo || '';
+      modalDetailTitle.innerText = movie.ttl || 'Tanpa Judul';
+      modalDetailMeta.innerHTML = `<b>Tahun:</b> ${movie.thn || '-'} &bull; <b>Durasi:</b> ${movie.dur || '-'}`;
+      modalDetailSynopsis.innerText = movie.sinopsis || 'Tidak ada sinopsis ringkas untuk film ini.';
+      modalPlayBtn.onclick = () => {
+        closeMovieDetailModal();
+        playMovie(movie);
+      };
+      movieDetailModal.classList.add('active');
+    }
+    function closeMovieDetailModal() { movieDetailModal.classList.remove('active'); }
+
+    let currentData = [];
+    let displayData = [];
+    let currentKoleksiFilter = null;
+    let isFavViewActive = false;
+    let isHistoryViewActive = false;
+    let pendingMovieData = null;
+    let lastAdShownTime = 0;
+
+    function getFavorites() {
+      try { return JSON.parse(localStorage.getItem('tiviku_favorites')) || []; } catch(e) { return []; }
+    }
+
+    function toggleFavorite(movieTitle, event) {
+      event.stopPropagation();
+      let favs = getFavorites();
+      const index = favs.indexOf(movieTitle);
+      if (index > -1) favs.splice(index, 1);
+      else favs.push(movieTitle);
+      
+      localStorage.setItem('tiviku_favorites', JSON.stringify(favs));
+      updateFavBadge();
+      renderMovies(displayData);
+      if (isFavViewActive) filterFavorites();
+    }
+
+    function updateFavBadge() {
+      const favs = getFavorites();
+      const badge = document.getElementById('favCountBadge');
+      if (badge) badge.innerText = favs.length;
+      
+      // Update history badge juga
+      const historyKeys = Object.keys(localStorage).filter(k => k.startsWith('tiviku_time_'));
+      const histBadge = document.getElementById('historyCountBadge');
+      if (histBadge) histBadge.innerText = historyKeys.length;
+    }
+
+    function filterFavorites() {
+      isFavViewActive = true;
+      isHistoryViewActive = false;
+      currentKoleksiFilter = null;
+      currentFilterTitle.innerText = "Daftar Favorit Saya";
+      resetFilterBtn.classList.add('show');
+
+      const favs = getFavorites();
+      displayData = currentData.filter(item => favs.includes(item.ttl));
+      renderMovies(displayData);
+      if(appDrawer.classList.contains('active')) toggleDrawer();
+    }
+
+    function filterHistory() {
+      isHistoryViewActive = true;
+      isFavViewActive = false;
+      currentKoleksiFilter = null;
+      currentFilterTitle.innerText = "Riwayat Tontonan";
+      resetFilterBtn.classList.add('show');
+
+      const historyTitles = Object.keys(localStorage)
+        .filter(k => k.startsWith('tiviku_time_'))
+        .map(k => k.replace('tiviku_time_', ''));
+
+      displayData = currentData.filter(item => historyTitles.includes(item.ttl));
+      renderMovies(displayData);
+      if(appDrawer.classList.contains('active')) toggleDrawer();
+    }
+
+    const movieGrid = document.getElementById('movieGrid');
+    const playerMovieGrid = document.getElementById('playerMovieGrid');
+    const searchInput = document.getElementById('searchInput');
+    const playerSearchInput = document.getElementById('playerSearchInput');
+    const searchClearBtn = document.getElementById('searchClearBtn');
+    const playerSearchClearBtn = document.getElementById('playerSearchClearBtn');
+
+    const playerModal = document.getElementById('playerModal');
+    const drawerKoleksiList = document.getElementById('drawerKoleksiList');
+    const currentFilterTitle = document.getElementById('currentFilterTitle');
+    const resetFilterBtn = document.getElementById('resetFilterBtn');
+    
+    const videoContainer = document.getElementById('videoContainer');
+    let videoPlayer = document.getElementById('videoPlayer');
+    const playingTitle = document.getElementById('playingTitle');
+    
+    const seekLeft = document.getElementById('seekLeft');
+    const seekRight = document.getElementById('seekRight');
+    const seekLeftText = document.getElementById('seekLeftText');
+    const seekRightText = document.getElementById('seekRightText');
+
+    const playBtn = document.getElementById('playBtn');
+    const muteBtn = document.getElementById('muteBtn');
+    const playbackSpeed = document.getElementById('playbackSpeed');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const progressBar = document.getElementById('progressBar');
+    const progressFill = document.getElementById('progressFill');
+    const timeDisplay = document.getElementById('timeDisplay');
+    const previewBox = document.getElementById('previewBox');
+    const previewTime = document.getElementById('previewTime');
+
+    const appDrawer = document.getElementById('appDrawer');
+    const drawerOverlay = document.getElementById('drawerOverlay');
+
+    let hls = null;
+    let controlsTimeout = null;
+    let isScrubbing = false;
+    let lastTapTime = 0;
+    let singleTapTimeout = null;
+    let accumulatedSeconds = 0;
+    let currentTapSide = null;
+    let resetAccumulatedTimeout = null;
+
+    function toggleDrawer() {
+      appDrawer.classList.toggle('active');
+      drawerOverlay.classList.toggle('active');
+    }
+
+    function showAppInfo() {
+      showCustomAlert("Tentang Aplikasi", "<b>tiviku v2.7</b><br>Streaming Film Aman, Cepat & Canggih.");
+    }
+
+    async function checkAppNotification() {
+      try {
+        const response = await fetch('notification.json?t=' + new Date().getTime());
+        if (!response.ok) return;
+        const notif = await response.json();
+        if (notif.active) {
+          const lastReadId = localStorage.getItem('last_read_notif_id');
+          if (lastReadId !== notif.id) {
+            showCustomAlert(notif.title, notif.message, `<button class="btn" onclick="markNotifAsRead('${notif.id}')">Mengerti</button>`);
+          }
+        }
+      } catch (error) { console.log("Gagal memuat notifikasi:", error); }
+    }
+
+    function markNotifAsRead(id) {
+      localStorage.setItem('last_read_notif_id', id);
+      closeCustomAlert();
+    }
+
+    function shuffleArray(array) {
+      let shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+
+    function showControls() {
+      videoContainer.classList.add('show-controls');
+      videoContainer.classList.remove('hide-controls');
+      clearTimeout(controlsTimeout);
+
+      if (videoPlayer && !videoPlayer.paused && !isScrubbing) {
+        controlsTimeout = setTimeout(() => {
+          videoContainer.classList.remove('show-controls');
+          videoContainer.classList.add('hide-controls');
+        }, 3000);
+      }
+    }
+
+    function handleVideoTap(e) {
+      if (!videoPlayer || e.target.closest('.custom-controls')) return;
+      const rect = videoContainer.getBoundingClientRect();
+      const clientX = e.clientX || (e.changedTouches && e.changedTouches[0].clientX);
+      if (!clientX) return;
+
+      const clickX = clientX - rect.left;
+      const containerWidth = rect.width;
+      const currentTime = new Date().getTime();
+      const tapLength = currentTime - lastTapTime;
+
+      let side = null;
+      if (clickX < containerWidth * 0.4) side = 'left';
+      else if (clickX > containerWidth * 0.6) side = 'right';
+
+      if (tapLength < 400 && tapLength > 0 && side === currentTapSide && side !== null) {
+        clearTimeout(singleTapTimeout);
+        clearTimeout(resetAccumulatedTimeout);
+        accumulatedSeconds = Math.min(30, accumulatedSeconds + 10);
+
+        if (side === 'left') {
+          videoPlayer.currentTime = Math.max(0, videoPlayer.currentTime - 10);
+          seekLeftText.innerText = `≪ ${accumulatedSeconds}s`;
+          triggerSeekAnimation(seekLeft);
+        } else {
+          videoPlayer.currentTime = Math.min(videoPlayer.duration || 0, videoPlayer.currentTime + 10);
+          seekRightText.innerText = `${accumulatedSeconds}s ≫`;
+          triggerSeekAnimation(seekRight);
+        }
+
+        if (accumulatedSeconds >= 30) { accumulatedSeconds = 0; currentTapSide = null; }
+        else {
+          resetAccumulatedTimeout = setTimeout(() => { accumulatedSeconds = 0; currentTapSide = null; }, 800);
+        }
+        showControls();
+      } else {
+        clearTimeout(resetAccumulatedTimeout);
+        if (side !== null) {
+          currentTapSide = side;
+          accumulatedSeconds = 10;
+          singleTapTimeout = setTimeout(() => { showControls(); accumulatedSeconds = 0; currentTapSide = null; }, 300);
+        } else {
+          singleTapTimeout = setTimeout(() => { showControls(); accumulatedSeconds = 0; currentTapSide = null; }, 300);
+        }
+      }
+      lastTapTime = currentTime;
+    }
+
+    function triggerSeekAnimation(element) {
+      element.classList.remove('active');
+      void element.offsetWidth;
+      element.classList.add('active');
+      setTimeout(() => element.classList.remove('active'), 600);
+    }
+
+    videoContainer.addEventListener('click', handleVideoTap);
+    videoContainer.addEventListener('mousemove', showControls);
+
+    function formatTime(seconds) {
+      if (isNaN(seconds) || seconds < 0) return "00:00";
+      const hrs = Math.floor(seconds / 3600);
+      const min = Math.floor((seconds % 3600) / 60);
+      const sec = Math.floor(seconds % 60);
+      if (hrs > 0) return `${hrs.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+      return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+    }
+
+    function updateScrubbing(e) {
+      if (!videoPlayer || !videoPlayer.duration) return;
+      const rect = progressBar.getBoundingClientRect();
+      const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+      let posX = Math.max(0, Math.min(clientX - rect.left, rect.width));
+
+      const percentage = posX / rect.width;
+      const targetTime = percentage * videoPlayer.duration;
+
+      progressFill.style.width = `${percentage * 100}%`;
+      previewBox.style.left = `${posX}px`;
+      previewTime.innerText = formatTime(targetTime);
+      previewBox.classList.add('active');
+
+      if (isScrubbing) videoPlayer.currentTime = targetTime;
+    }
+
+    function startScrubbing(e) {
+      isScrubbing = true;
+      showControls();
+      updateScrubbing(e);
+      window.addEventListener('mousemove', updateScrubbing);
+      window.addEventListener('mouseup', stopScrubbing);
+      window.addEventListener('touchmove', updateScrubbing);
+      window.addEventListener('touchend', stopScrubbing);
+    }
+
+    function stopScrubbing(e) {
+      if (isScrubbing) {
+        isScrubbing = false;
+        previewBox.classList.remove('active');
+        showControls();
+        window.removeEventListener('mousemove', updateScrubbing);
+        window.removeEventListener('mouseup', stopScrubbing);
+        window.removeEventListener('touchmove', updateScrubbing);
+        window.removeEventListener('touchend', stopScrubbing);
+      }
+    }
+
+    progressBar.addEventListener('mousedown', startScrubbing);
+    progressBar.addEventListener('touchstart', startScrubbing, { passive: true });
+
+    function renderMoviesTo(data, targetContainer, includeAds = false) {
+      targetContainer.innerHTML = '';
+      if (!data || data.length === 0) {
+        targetContainer.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: #888; padding: 40px 0;">Tidak ada data film.</p>';
+        return;
+      }
+
+      const favs = getFavorites();
+      const fragment = document.createDocumentFragment();
+
+      data.forEach((movie, index) => {
+        const isFav = favs.includes(movie.ttl);
+        const card = document.createElement('div');
+        card.className = 'movie-card';
+        card.innerHTML = `
+          <button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${movie.ttl}', event)" title="Favorit">
+            ${isFav ? '♥' : '♡'}
+          </button>
+          <div class="poster-wrapper">
+            <img src="${movie.logo || ''}" alt="${movie.ttl}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'">
+            <span class="duration-badge">${movie.dur || 'N/A'}</span>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title">${movie.ttl || 'Tanpa Judul'}</div>
+          </div>
+        `;
+        // Klik kartu sekarang membuka modal detail film terlebih dahulu
+        card.onclick = () => showMovieDetail(movie);
+        fragment.appendChild(card);
+
+        function createAdCard(keyId, width, height) {
+          const adCard = document.createElement('div');
+          adCard.className = 'ad-banner-card';
+          const iframe = document.createElement('iframe');
+          iframe.width = width;
+          iframe.height = height;
+          iframe.style.cssText = `border: none; overflow: hidden; width: 100%; max-width: ${width}px; height: ${height}px; background: transparent;`;
+          iframe.scrolling = 'no';
+          iframe.srcdoc = `<!DOCTYPE html><html><head><style>body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden;}</style></head><body><script type="text/javascript">atOptions = { 'key' : '${keyId}', 'format' : 'iframe', 'height' : ${height}, 'width' : ${width}, 'params' : {} };<\/script><script type="text/javascript" src="https://www.highperformanceformat.com/${keyId}/invoke.js"><\/script></body></html>`;
+          adCard.appendChild(iframe);
+          return adCard;
+        }
+
+        if (includeAds && index === 5) fragment.appendChild(createAdCard('860bb1a2ada410323267313554915298', 300, 250));
+        if (includeAds && index === 11) fragment.appendChild(createAdCard('320fbeda84412a4babbc0de0ead72961', 300, 250));
+      });
+      targetContainer.appendChild(fragment);
+    }
+
+    function renderMovies(data) {
+      renderMoviesTo(data, movieGrid, true);
+      renderMoviesTo(data, playerMovieGrid, true);
+    }
+
+    function buildKoleksiDrawerMenu(data) {
+      drawerKoleksiList.innerHTML = '';
+      const koleksiMap = new Map();
+      data.forEach(item => {
+        if (item.koleksi) {
+          if (!koleksiMap.has(item.koleksi)) koleksiMap.set(item.koleksi, 0);
+          koleksiMap.set(item.koleksi, koleksiMap.get(item.koleksi) + 1);
+        }
+      });
+
+      if (koleksiMap.size === 0) {
+        drawerKoleksiList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada koleksi</span>';
+        return;
+      }
+
+      koleksiMap.forEach((count, koleksiName) => {
+        const btn = document.createElement('button');
+        btn.className = `drawer-item ${currentKoleksiFilter === koleksiName ? 'active-koleksi' : ''}`;
+        btn.innerHTML = `<span>📂 ${koleksiName}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
+        btn.onclick = () => { filterByKoleksi(koleksiName); toggleDrawer(); };
+        drawerKoleksiList.appendChild(btn);
+      });
+    }
+
+    function filterByKoleksi(koleksiName) {
+      isFavViewActive = false;
+      isHistoryViewActive = false;
+      currentKoleksiFilter = koleksiName;
+      currentFilterTitle.innerText = `Koleksi: ${koleksiName}`;
+      resetFilterBtn.classList.add('show');
+
+      let filtered = currentData.filter(item => item.koleksi === koleksiName);
+      const hasEpisode = filtered.some(item => item.episode !== undefined && item.episode !== null && item.episode !== "");
+      if (hasEpisode) filtered.sort((a, b) => (parseFloat(a.episode) || 0) - (parseFloat(b.episode) || 0));
+      else filtered = shuffleArray(filtered);
+
+      displayData = filtered;
+      renderMovies(displayData);
+      buildKoleksiDrawerMenu(currentData);
+    }
+
+    function resetFilter() {
+      isFavViewActive = false;
+      isHistoryViewActive = false;
+      currentKoleksiFilter = null;
+      currentFilterTitle.innerText = "Semua Koleksi";
+      resetFilterBtn.classList.remove('show');
+      clearSearchInput();
+      
+      displayData = shuffleArray(currentData);
+      renderMovies(displayData);
+      buildKoleksiDrawerMenu(currentData);
+      if(appDrawer.classList.contains('active')) toggleDrawer();
+    }
+
+    async function loadAutoSourceList() {
+      const githubJsonUrl = "index.json";
+      try {
+        const response = await fetch(githubJsonUrl);
+        if (!response.ok) throw new Error("Gagal mengambil index.json");
+        const rootJson = await response.json();
+        let sourceFiles = rootJson.source_list || [];
+
+        let allMovies = [];
+        for (const fileUrl of sourceFiles) {
+          try {
+            const subRes = await fetch(fileUrl);
+            if (subRes.ok) {
+              const subData = await subRes.json();
+              if (Array.isArray(subData)) allMovies = allMovies.concat(subData);
+              else if (typeof subData === 'object' && subData !== null) allMovies.push(subData);
+            }
+          } catch (e) { console.error(`Gagal memuat cabang: ${fileUrl}`, e); }
+        }
+
+        if (allMovies.length > 0) {
+          currentData = allMovies;
+          displayData = shuffleArray(currentData);
+          renderMovies(displayData);
+          buildKoleksiDrawerMenu(currentData);
+          updateFavBadge();
+        } else { renderMovies([]); }
+      } catch (err) { renderMovies([]); }
+    }
+
+    function applyPlayerCropConfig(movie) {
+      videoPlayer.style.objectFit = 'fill';
+      videoPlayer.style.transform = 'none';
+      if (movie.crop_mode === 'cover') {
+        videoPlayer.style.objectFit = 'cover';
+      } else if (movie.crop_mode === 'stretch_crop') {
+        videoPlayer.style.transform = `scaleY(${parseFloat(movie.crop_scale) || 1.0})`;
+      }
+    }
+
+    function playMovie(movie) {
+      pendingMovieData = movie;
+      playerModal.classList.add('active');
+      if (!window.location.hash.includes('player')) history.pushState({ modalOpen: true }, '', '#player');
+
+      clearSearchInput();
+      const videoWrapper = document.querySelector('.video-wrapper');
+      videoContainer.classList.remove('show-controls');
+      
+      const currentTime = new Date().getTime();
+      if (lastAdShownTime !== 0 && (currentTime - lastAdShownTime) < (5 * 60 * 1000)) {
+        executeDirectPlay(movie);
+        return;
+      }
+
+      lastAdShownTime = new Date().getTime();
+      videoWrapper.innerHTML = `
+        <iframe src="ad_interstitial.html" style="width:100%; height:100%; border:none; position:absolute; top:0; left:0; z-index:50;"></iframe>
+        <video id="videoPlayer" playsinline style="display:none;"></video>
+        <div class="video-spinner" id="videoSpinner"></div>
+      `;
+    }
+
+    window.onAdPreload = function() {
+      if (!pendingMovieData) return;
+      videoPlayer = document.getElementById('videoPlayer');
+      if (!videoPlayer) return;
+      applyPlayerCropConfig(pendingMovieData);
+      const streamUrl = _decode(pendingMovieData.lnk);
+
+      if (Hls.isSupported()) {
+        if (hls) hls.destroy();
+        hls = new Hls({
+          maxBufferLength: 15, maxMaxBufferLength: 30, enableWorker: true,
+          xhrSetup: function (xhr, url) {
+            if (url.includes("tiviku_system.bin") || url.includes(".key")) {
+              const originalOpen = xhr.open;
+              xhr.open = function(m, u, a, usr, pwd) { originalOpen.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, a, usr, pwd); };
+            }
+          }
+        });
+        hls.loadSource(streamUrl);
+        hls.attachMedia(videoPlayer);
+      }
+    };
+
+    function executeDirectPlay(movie) {
+      const videoWrapper = document.querySelector('.video-wrapper');
+      videoWrapper.innerHTML = `
+        <video id="videoPlayer" playsinline></video>
+        <div class="video-spinner" id="videoSpinner"></div>
+      `;
+      
+      videoPlayer = document.getElementById('videoPlayer');
+      playingTitle.innerText = movie.ttl || 'Playing Video';
+      applyPlayerCropConfig(movie);
+
+      const streamUrl = _decode(movie.lnk);
+      videoContainer.classList.add('buffering');
+
+      if (Hls.isSupported()) {
+        if (hls) hls.destroy();
+        hls = new Hls({
+          maxBufferLength: 15, maxMaxBufferLength: 30, enableWorker: true,
+          xhrSetup: function (xhr, url) {
+            if (url.includes("tiviku_system.bin") || url.includes(".key")) {
+              const originalOpen = xhr.open;
+              xhr.open = function(m, u, a, usr, pwd) { originalOpen.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, a, usr, pwd); };
+            }
+          }
+        });
+        hls.loadSource(streamUrl);
+        hls.attachMedia(videoPlayer);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          videoPlayer.play().catch(() => {});
+          restoreSavedTime(movie.ttl);
+        });
+      }
+      setupVideoEvents();
+    }
+
+    window.onAdFinished = function() {
+      if (!pendingMovieData) return;
+      const videoWrapper = document.querySelector('.video-wrapper');
+      const iframe = videoWrapper.querySelector('iframe');
+      if (iframe) iframe.remove();
+
+      videoPlayer = document.getElementById('videoPlayer');
+      if (videoPlayer) videoPlayer.style.display = 'block';
+      
+      playingTitle.innerText = pendingMovieData.ttl || 'Playing Video';
+      setupVideoEvents();
+      videoContainer.classList.add('buffering');
+
+      if (videoPlayer) {
+        videoPlayer.play().catch(() => {});
+        restoreSavedTime(pendingMovieData.ttl);
+      }
+      showControls();
+    };
+
+    function saveCurrentTime(movieTitle) {
+      if (!videoPlayer || !movieTitle || isNaN(videoPlayer.currentTime)) return;
+      if (videoPlayer.currentTime > 5 && videoPlayer.duration && videoPlayer.currentTime < videoPlayer.duration - 10) {
+        localStorage.setItem(`tiviku_time_${movieTitle}`, videoPlayer.currentTime);
+      } else {
+        localStorage.removeItem(`tiviku_time_${movieTitle}`);
+      }
+      updateFavBadge();
+    }
+
+    function restoreSavedTime(movieTitle) {
+      const savedTime = localStorage.getItem(`tiviku_time_${movieTitle}`);
+      if (savedTime && parseFloat(savedTime) > 0) {
+        videoPlayer.currentTime = parseFloat(savedTime);
+        showToast(`▶ Dilanjutkan dari ${formatTime(parseFloat(savedTime))}`);
+      }
+    }
+
+    function setupVideoEvents() {
+      if (!videoPlayer) return;
+      videoPlayer.onplay = () => { playBtn.innerText = '⏸'; showControls(); };
+      videoPlayer.onpause = () => { playBtn.innerText = '▶'; showControls(); if (pendingMovieData) saveCurrentTime(pendingMovieData.ttl); };
+      videoPlayer.onwaiting = () => videoContainer.classList.add('buffering');
+      videoPlayer.onplaying = () => videoContainer.classList.remove('buffering');
+      videoPlayer.ontimeupdate = () => {
+        if (videoPlayer.duration && !isScrubbing) {
+          const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+          progressFill.style.width = `${pct}%`;
+          timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
+          if (Math.floor(videoPlayer.currentTime) % 5 === 0 && pendingMovieData) saveCurrentTime(pendingMovieData.ttl);
+        }
+      };
+    }
+
+    playbackSpeed.onchange = (e) => {
+      if (videoPlayer) videoPlayer.playbackRate = parseFloat(e.target.value);
+    };
+
+    window.addEventListener('popstate', () => {
+      if (playerModal.classList.contains('active')) closePlayerModalOnly(false);
+    });
+
+    function closePlayerModalOnly(backHistory = true) {
+      if (videoPlayer && pendingMovieData) saveCurrentTime(pendingMovieData.ttl);
+      playerModal.classList.remove('active');
+      videoContainer.classList.remove('buffering');
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+      }
+      if (hls) { hls.destroy(); hls = null; }
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+      }
+      if (backHistory && window.location.hash.includes('player')) history.back();
+    }
+
+    playBtn.onclick = () => { if (videoPlayer.paused) videoPlayer.play(); else videoPlayer.pause(); };
+    muteBtn.onclick = () => { videoPlayer.muted = !videoPlayer.muted; muteBtn.innerText = videoPlayer.muted ? '🔇' : '🔊'; };
+
+    fullscreenBtn.onclick = async () => {
+      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (videoContainer.requestFullscreen) await videoContainer.requestFullscreen();
+        if (screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(() => {});
+      } else {
+        if (document.exitFullscreen) await document.exitFullscreen();
+        if (screen.orientation && screen.orientation.unlock) screen.orientation.unlock().catch(() => {});
+      }
+      showControls();
+    };
+
+    function executeSearch(query) {
+      const trimmedQuery = query.trim().toLowerCase();
+      let baseList = isFavViewActive ? currentData.filter(item => getFavorites().includes(item.ttl)) : 
+                     (isHistoryViewActive ? currentData.filter(item => localStorage.getItem(`tiviku_time_${item.ttl}`)) : 
+                     (currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData));
+
+      if (trimmedQuery.length > 0) {
+        if(searchClearBtn) searchClearBtn.classList.add('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+      } else {
+        if(searchClearBtn) searchClearBtn.classList.remove('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
+      }
+
+      if (!trimmedQuery) {
+        renderMoviesTo(baseList, movieGrid, true);
+        renderMoviesTo(baseList, playerMovieGrid, true);
+        return;
+      }
+
+      const matched = baseList.filter(movie => (movie.ttl || '').toLowerCase().includes(trimmedQuery));
+      const unmatched = baseList.filter(movie => !(movie.ttl || '').toLowerCase().includes(trimmedQuery));
+      const sortedList = [...matched, ...unmatched];
+
+      renderMoviesTo(sortedList, movieGrid, true);
+      renderMoviesTo(sortedList, playerMovieGrid, true);
+    }
+
+    function triggerSearch() {
+      const query = searchInput.value || (playerSearchInput ? playerSearchInput.value : '');
+      executeSearch(query);
+    }
+
+    function clearSearchInput() {
+      if(searchInput) searchInput.value = '';
+      if(playerSearchInput) playerSearchInput.value = '';
+      if(searchClearBtn) searchClearBtn.classList.remove('show');
+      if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
+      
+      let baseList = isFavViewActive ? currentData.filter(item => getFavorites().includes(item.ttl)) : 
+                     (isHistoryViewActive ? currentData.filter(item => localStorage.getItem(`tiviku_time_${item.ttl}`)) : 
+                     (currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData));
+      renderMoviesTo(baseList, movieGrid, true);
+      renderMoviesTo(baseList, playerMovieGrid, true);
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      if(playerSearchInput) playerSearchInput.value = val;
+      if (val.trim().length > 0) { searchClearBtn.classList.add('show'); playerSearchClearBtn.classList.add('show'); }
+      else clearSearchInput();
+    });
+
+    if(playerSearchInput) {
+      playerSearchInput.addEventListener('input', (e) => {
+        const val = e.target.value;
+        searchInput.value = val;
+        if (val.trim().length > 0) { searchClearBtn.classList.add('show'); playerSearchClearBtn.classList.add('show'); }
+        else clearSearchInput();
+      });
+    }
+
+    searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') triggerSearch(); });
+    if(playerSearchInput) playerSearchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') triggerSearch(); });
+
+    window.onload = () => {
+      loadAutoSourceList();
+      setTimeout(checkAppNotification, 2500);
+    };
+  </script>
+</body>
+</html>
