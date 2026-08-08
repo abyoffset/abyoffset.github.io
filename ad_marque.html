@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iklan Berjalan</title>
+  <style>
+    body {
+      background-color: #0f0f12;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .marquee-container {
+      width: 468px;
+      overflow: hidden;
+      white-space: nowrap;
+      border: 1px solid #2a2a30;
+      background: #18181c;
+      padding: 5px;
+      border-radius: 8px;
+      /* Animasi berhenti di posisi akhir (forwards) agar hilang setelah selesai */
+      animation: hideContainer 0s ease 50s forwards; 
+    }
+
+    .marquee-content {
+      display: inline-block;
+      /* 25s per putaran x 2 putaran = 50s total durasi */
+      animation: marquee 25s linear 2 forwards; 
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @keyframes hideContainer {
+      to { display: none; opacity: 0; }
+    }
+
+    .ad-box {
+      display: inline-block;
+      width: 468px;
+      height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="marquee-container" id="adContainer">
+    <div class="marquee-content">
+      <div class="ad-box">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '37df383d15d7f772f52ce0a07acdcb26',
+            'format' : 'iframe',
+            'height' : 60,
+            'width' : 468,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="https://www.highperformanceformat.com/37df383d15d7f772f52ce0a07acdcb26/invoke.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Opsional: Jika Anda ingin memicu fungsi tertentu di parent (misal: index.html) saat iklan selesai
+    setTimeout(() => {
+      if (window.parent && window.parent.onAdFinished) {
+        window.parent.onAdFinished();
+      }
+    }, 50000); // 50 detik (sesuai total durasi animasi)
+  </script>
+
+</body>
+</html>
