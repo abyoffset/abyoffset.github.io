@@ -1,6 +1,8 @@
+[
 {
-  "id": "info_update_06",
-  "title": "🎬 Film & Episode Baru Di Tambahkan",
-  "message": "Beberapa koleksi film sudah ditambahkan. Yuk, cek sekarang!",
-  "active": true
+"id": "info_update_06",
+"title": "🎬 Film & Episode Baru Di Tambahkan",
+"message": "Beberapa koleksi film sudah ditambahkan. Yuk cek sekarang!",
+"active": "true"
 }
+]
