@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://i.ibb.co.com/7NXZq6Pm/Screenshot-20260809-191645.png",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq25@69f3264/1/master.m3u8",
+"ttl": "eps13 BLUELOCK (2022) dubbing",
+"episode": "13",
+"koleksi": "BLUELOCK (2022) dubbing",
+"thn": "2022",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:33",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/yShZxVx.png",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq24@69f7f29/1/master.m3u8",
+"ttl": "eps12 BLUELOCK (2022) dubbing",
+"episode": "12",
+"koleksi": "BLUELOCK (2022) dubbing",
+"thn": "2022",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:58",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/caCE7ew.png",
 "lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq23@1e7a41c/1/master.m3u8",
 "ttl": "eps11 BLUELOCK (2022) dubbing",

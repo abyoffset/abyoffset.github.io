@@ -1,5 +1,35 @@
 [
 {
+"logo": "https://i.ibb.co.com/Kj84spPv/Thunderbolt.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8",
+"ttl": "Thunderbolt (1995) hardsub",
+"thn": "1995",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:50:13",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.ibb.co.com/pBXWh4dC/Jembatan-Shiratal-Mustaqim.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq25@a8ebba3/1/master.m3u8",
+"ttl": "Jembatan Shiratal Mustaqim (2025)",
+"thn": "2025",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:36:27",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/D6lvyMI.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq24@eb2de2c/1/master.m3u8",
+"ttl": "Serbuan Halilintar (1982)",
+"thn": "1982",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "1:26:36",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/yaurCUq.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq22@83368c4/1/master.m3u8",
 "ttl": "Dunkirk (2017) dubbing",
@@ -30,7 +60,7 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://media.themoviedb.org/t/p/w220_and_h330_face/4sYLSgUTwbudPu4GkU8LKWGXyRm.jpg",
+"logo": "https://i.ibb.co.com/cXbfTHG2/sk.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq20@95780ad/1/master.m3u8",
 "ttl": "Sekawan Limo (2024)",
 "thn": "2024",
@@ -40,7 +70,7 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://media.themoviedb.org/t/p/w440_and_h660_face/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+"logo": "https://i.ibb.co.com/wrcJhB4s/Toy-Story-1995-Poster-The-Movie-Database-TMDB-1.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq19@56b61a1/1/master.m3u8",
 "ttl": "Toy Story (1995) dubbing",
 "thn": "1995",
