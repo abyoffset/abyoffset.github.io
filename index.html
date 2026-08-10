@@ -11,9 +11,6 @@
   <!-- CDN HLS.js untuk pemutaran streaming -->
   <script src="hls.js"></script>
 
-  <!-- KODE IKLAN SOCIAL BAR ADSTERRA -->
-  <script src="https://pl30775961.effectivecpmnetwork.com/d4/08/d1/d408d1c2d38eb5ffb20c4b45bd9cff56.js"></script>
-
   <style>
     :root {
       --bg-color: #0f0f12;
@@ -1045,7 +1042,7 @@
           </div>
         </div>
 
-        <!-- Wadah Iklan Saat Nonton Film (Banner 320x50 - Key: 07ec82fdf6989af1b3035f505091411c) -->
+        <!-- Wadah Iklan Saat Nonton Film (Banner 468x60 - Key: 37df383d15d7f772f52ce0a07acdcb26 / atau 320x50 - Key: 07ec82fdf6989af1b3035f505091411c) -->
         <div class="player-ad-wrapper">
           <script type="text/javascript">
             atOptions = {
@@ -1431,10 +1428,12 @@
           return adCard;
         }
 
+        // Menyisipkan Iklan Banner 300x250 (Key: 860bb1a2ada410323267313554915298) pada indeks ke-5
         if (includeAds && index === 5) {
           fragment.appendChild(createAdCard('860bb1a2ada410323267313554915298', 300, 250));
         }
 
+        // Menyisipkan Iklan Banner 300x250 (Key: 320fbeda84412a4babbc0de0ead72961) pada indeks ke-11
         if (includeAds && index === 11) {
           fragment.appendChild(createAdCard('320fbeda84412a4babbc0de0ead72961', 300, 250));
         }
@@ -1853,7 +1852,7 @@
       if(playerSearchInput) playerSearchInput.value = val;
       if (val.trim().length > 0) {
         if(searchClearBtn) searchClearBtn.classList.add('show');
-        if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+        if(playerSearchClearBtn) searchClearBtn.classList.add('show');
       } else {
         clearSearchInput();
       }
