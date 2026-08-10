@@ -11,6 +11,9 @@
   <!-- CDN HLS.js untuk pemutaran streaming -->
   <script src="hls.js"></script>
 
+  <!-- KODE IKLAN SOCIAL BAR ADSTERRA -->
+  <script src="https://pl30775961.effectivecpmnetwork.com/d4/08/d1/d408d1c2d38eb5ffb20c4b45bd9cff56.js"></script>
+
   <style>
     :root {
       --bg-color: #0f0f12;
@@ -171,29 +174,6 @@
       background: rgba(15, 15, 18, 0.95);
       padding: 6px 0;
       border-top: 1px solid #222;
-    }
-
-    /* TOAST KONEKSI HALUS */
-    #connectionToast {
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%) translateY(100px);
-      background-color: rgba(229, 9, 20, 0.95);
-      color: white;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      z-index: 99999;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.6);
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    #connectionToast.show {
-      transform: translateX(-50%) translateY(0);
     }
 
     /* DRAWER / SIDEBAR MENU */
@@ -488,33 +468,6 @@
     .movie-card:hover {
       transform: translateY(-4px);
       border-color: rgba(229, 9, 20, 0.6);
-    }
-
-    /* TOMBOL FAVORIT */
-    .fav-btn {
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      background-color: rgba(0, 0, 0, 0.7);
-      border: none;
-      color: #fff;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 10;
-      font-size: 1rem;
-      transition: background 0.2s ease, transform 0.2s ease;
-    }
-    .fav-btn:hover {
-      background-color: rgba(229, 9, 20, 0.9);
-      transform: scale(1.1);
-    }
-    .fav-btn.active {
-      color: var(--accent-color);
     }
 
     .ad-banner-card {
@@ -883,13 +836,6 @@
       flex-wrap: wrap;
     }
 
-    .player-title-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      max-width: 60%;
-    }
-
     .player-title {
       font-size: 1.1rem;
       font-weight: 700;
@@ -898,9 +844,10 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      max-width: 60%;
     }
 
-    /* WADAH IKLAN SAAT NONTON FILM */
+    /* WADAH IKLAN SAAT NONTON FILM (Landscape Mode / HP Diam) */
     .player-ad-wrapper {
       width: 100%;
       display: flex;
@@ -953,19 +900,19 @@
         align-items: flex-start;
         gap: 10px;
       }
-      .player-title-row {
+      .player-title {
         max-width: 100%;
-        width: 100%;
-        justify-content: space-between;
       }
     }
   </style>
 </head>
 <body oncontextmenu="return false;">
 
-  <!-- TOAST KONEKSI HALUS -->
-  <div id="connectionToast">
-    <span>⚠️</span> <span id="toastMessage">Koneksi internet terputus...</span>
+  <!-- LAYOUT ERROR OFFLINE -->
+  <div id="offlineErrorContainer" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #0f0f12; z-index: 99999; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
+    <h2 style="color: #e50914; margin-bottom: 10px; font-size: 1.5rem; font-weight: 700;">Koneksi Internet Terputus</h2>
+    <p style="color: #a0a0a0; font-size: 0.95rem; margin-bottom: 24px;">Silakan periksa kembali jaringan Anda agar aplikasi dapat berjalan.</p>
+    <button onclick="location.reload()" style="background-color: #e50914; color: white; border: none; padding: 10px 24px; border-radius: 20px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);">Coba Lagi</button>
   </div>
 
   <!-- Header -->
@@ -1009,14 +956,6 @@
     </div>
     <div class="drawer-content">
       
-      <!-- DAFTAR FAVORIT -->
-      <div class="drawer-section">
-        <button class="drawer-item" onclick="filterFavorites()" style="border-color: rgba(229, 9, 20, 0.4);">
-          <span>❤️ Daftar Favorit Saya</span>
-          <span id="favCountBadge" style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">0</span>
-        </button>
-      </div>
-
       <div class="drawer-section">
         <details>
           <summary class="drawer-section-title">Kategori</summary>
@@ -1032,7 +971,7 @@
       </div>
     </div>
     <div class="drawer-footer">
-      tiviku v2.6 &bull; by,C
+      tiviku v2.5 &bull; by,C
     </div>
   </div>
 
@@ -1098,9 +1037,7 @@
         </div>
         
         <div class="player-details">
-          <div class="player-title-row">
-            <span id="playingTitle" class="player-title"></span>
-          </div>
+          <span id="playingTitle" class="player-title"></span>
           <div class="search-wrapper">
             <svg class="search-icon" viewBox="0 0 24 24" onclick="triggerSearch()"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
             <input type="text" id="playerSearchInput" class="search-box" placeholder="Cari ...">
@@ -1131,27 +1068,21 @@
   </div>
 
   <script>
-    const toast = document.getElementById('connectionToast');
-    const toastMsg = document.getElementById('toastMessage');
-
-    function showToast(msg) {
-      toastMsg.innerText = msg;
-      toast.classList.add('show');
-      setTimeout(() => {
-        toast.classList.remove('show');
-      }, 3500);
-    }
-
     function checkConnectionStatus() {
+      const offlineContainer = document.getElementById('offlineErrorContainer');
       if (!navigator.onLine) {
-        showToast("⚠️ Koneksi internet terputus.");
+        offlineContainer.style.display = 'flex';
       } else {
-        showToast("✅ Koneksi internet kembali terhubung.");
+        offlineContainer.style.display = 'none';
       }
     }
 
-    window.addEventListener('offline', () => checkConnectionStatus());
-    window.addEventListener('online', () => checkConnectionStatus());
+    window.addEventListener('load', checkConnectionStatus);
+    window.addEventListener('offline', checkConnectionStatus);
+    window.addEventListener('online', function() {
+      checkConnectionStatus();
+      location.reload();
+    });
 
     const allowedDomain = ""; 
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
@@ -1189,59 +1120,8 @@
     let currentData = [];
     let displayData = [];
     let currentKoleksiFilter = null;
-    let isFavViewActive = false;
     let pendingMovieData = null;
     let lastAdShownTime = 0;
-
-    // FAVORIT / WATCHLIST
-    function getFavorites() {
-      try {
-        return JSON.parse(localStorage.getItem('tiviku_favorites')) || [];
-      } catch(e) {
-        return [];
-      }
-    }
-
-    function toggleFavorite(movieTitle, event) {
-      event.stopPropagation();
-      let favs = getFavorites();
-      const index = favs.indexOf(movieTitle);
-      
-      if (index > -1) {
-        favs.splice(index, 1);
-      } else {
-        favs.push(movieTitle);
-      }
-      
-      localStorage.setItem('tiviku_favorites', JSON.stringify(favs));
-      updateFavBadge();
-      
-      renderMovies(displayData);
-      if (isFavViewActive) {
-        filterFavorites();
-      }
-    }
-
-    function updateFavBadge() {
-      const favs = getFavorites();
-      const badge = document.getElementById('favCountBadge');
-      if (badge) badge.innerText = favs.length;
-    }
-
-    function filterFavorites() {
-      isFavViewActive = true;
-      currentKoleksiFilter = null;
-      currentFilterTitle.innerText = "Daftar Favorit Saya";
-      resetFilterBtn.classList.add('show');
-
-      const favs = getFavorites();
-      const filtered = currentData.filter(item => favs.includes(item.ttl));
-      displayData = filtered;
-      
-      renderMovies(displayData);
-      buildKoleksiDrawerMenu(currentData);
-      if(appDrawer.classList.contains('active')) toggleDrawer();
-    }
 
     const movieGrid = document.getElementById('movieGrid');
     const playerMovieGrid = document.getElementById('playerMovieGrid');
@@ -1295,7 +1175,7 @@
     function showAppInfo() {
       showCustomAlert(
         "Tentang Aplikasi",
-        "<b>tiviku v2.6</b><br>Streaming Film Aman & Cepat."
+        "<b>tiviku v2.5</b><br>"
       );
     }
 
@@ -1303,9 +1183,12 @@
       try {
         const response = await fetch('notification.json?t=' + new Date().getTime());
         if (!response.ok) return;
+        
         const notif = await response.json();
+        
         if (notif.active) {
           const lastReadId = localStorage.getItem('last_read_notif_id');
+          
           if (lastReadId !== notif.id) {
             showCustomAlert(
               notif.title,
@@ -1421,6 +1304,7 @@
 
     function formatTime(seconds) {
       if (isNaN(seconds) || seconds < 0) return "00:00";
+      
       const hrs = Math.floor(seconds / 3600);
       const min = Math.floor((seconds % 3600) / 60);
       const sec = Math.floor(seconds % 60);
@@ -1486,17 +1370,11 @@
         return;
       }
 
-      const favs = getFavorites();
       const fragment = document.createDocumentFragment();
-
       data.forEach((movie, index) => {
-        const isFav = favs.includes(movie.ttl);
         const card = document.createElement('div');
         card.className = 'movie-card';
         card.innerHTML = `
-          <button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${movie.ttl}', event)" title="Favorit">
-            ${isFav ? '♥' : '♡'}
-          </button>
           <div class="poster-wrapper">
             <img src="${movie.logo || ''}" alt="${movie.ttl}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'">
             <span class="duration-badge">${movie.dur || 'N/A'}</span>
@@ -1521,15 +1399,34 @@
           iframe.srcdoc = `
             <!DOCTYPE html>
             <html>
-            <head><style>body{margin:0;padding:0;display:flex;justify-content:center;align-items:center;background:transparent;overflow:hidden;}</style></head>
+            <head>
+              <style>
+                body {
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: transparent;
+                  overflow: hidden;
+                }
+              </style>
+            </head>
             <body>
               <script type="text/javascript">
-                atOptions = { 'key' : '${keyId}', 'format' : 'iframe', 'height' : ${height}, 'width' : ${width}, 'params' : {} };
+                atOptions = {
+                  'key' : '${keyId}',
+                  'format' : 'iframe',
+                  'height' : ${height},
+                  'width' : ${width},
+                  'params' : {}
+                };
               <\/script>
               <script type="text/javascript" src="https://www.highperformanceformat.com/${keyId}/invoke.js"><\/script>
             </body>
             </html>
           `;
+          
           adCard.appendChild(iframe);
           return adCard;
         }
@@ -1537,6 +1434,7 @@
         if (includeAds && index === 5) {
           fragment.appendChild(createAdCard('860bb1a2ada410323267313554915298', 300, 250));
         }
+
         if (includeAds && index === 11) {
           fragment.appendChild(createAdCard('320fbeda84412a4babbc0de0ead72961', 300, 250));
         }
@@ -1551,10 +1449,13 @@
 
     function buildKoleksiDrawerMenu(data) {
       drawerKoleksiList.innerHTML = '';
+      
       const koleksiMap = new Map();
       data.forEach(item => {
         if (item.koleksi) {
-          if (!koleksiMap.has(item.koleksi)) koleksiMap.set(item.koleksi, 0);
+          if (!koleksiMap.has(item.koleksi)) {
+            koleksiMap.set(item.koleksi, 0);
+          }
           koleksiMap.set(item.koleksi, koleksiMap.get(item.koleksi) + 1);
         }
       });
@@ -1577,7 +1478,6 @@
     }
 
     function filterByKoleksi(koleksiName) {
-      isFavViewActive = false;
       currentKoleksiFilter = koleksiName;
       currentFilterTitle.innerText = `Koleksi: ${koleksiName}`;
       resetFilterBtn.classList.add('show');
@@ -1586,7 +1486,11 @@
       const hasEpisode = filtered.some(item => item.episode !== undefined && item.episode !== null && item.episode !== "");
 
       if (hasEpisode) {
-        filtered.sort((a, b) => (parseFloat(a.episode) || 0) - (parseFloat(b.episode) || 0));
+        filtered.sort((a, b) => {
+          const epA = parseFloat(a.episode) || 0;
+          const epB = parseFloat(b.episode) || 0;
+          return epA - epB;
+        });
       } else {
         filtered = shuffleArray(filtered);
       }
@@ -1597,7 +1501,6 @@
     }
 
     function resetFilter() {
-      isFavViewActive = false;
       currentKoleksiFilter = null;
       currentFilterTitle.innerText = "Semua Koleksi";
       resetFilterBtn.classList.remove('show');
@@ -1614,6 +1517,7 @@
       try {
         const response = await fetch(githubJsonUrl);
         if (!response.ok) throw new Error("Gagal mengambil data index.json");
+        
         const rootJson = await response.json();
         let sourceFiles = rootJson.source_list || [];
 
@@ -1623,8 +1527,11 @@
             const subRes = await fetch(fileUrl);
             if (subRes.ok) {
               const subData = await subRes.json();
-              if (Array.isArray(subData)) allMovies = allMovies.concat(subData);
-              else if (typeof subData === 'object' && subData !== null) allMovies.push(subData);
+              if (Array.isArray(subData)) {
+                allMovies = allMovies.concat(subData);
+              } else if (typeof subData === 'object' && subData !== null) {
+                allMovies.push(subData);
+              }
             }
           } catch (e) {
             console.error(`Gagal memuat file cabang: ${fileUrl}`, e);
@@ -1636,7 +1543,6 @@
           displayData = shuffleArray(currentData);
           renderMovies(displayData);
           buildKoleksiDrawerMenu(currentData);
-          updateFavBadge();
         } else {
           renderMovies([]);
         }
@@ -1658,21 +1564,29 @@
       if (cropMode === 'cover') {
         videoPlayer.style.objectFit = 'cover';
         videoPlayer.style.objectPosition = cropPosition;
-      } else if (cropMode === 'stretch_crop' || cropMode === 'fill_width') {
+      } else if (cropMode === 'stretch_crop') {
         videoPlayer.style.objectFit = 'fill';
         videoPlayer.style.transform = `scaleY(${cropScale})`;
         videoPlayer.style.objectPosition = '50% 50%';
+      } else if (cropMode === 'fill_width') {
+        videoPlayer.style.objectFit = 'fill';
+        videoPlayer.style.transform = `scaleY(${cropScale})`;
+        videoPlayer.style.objectPosition = '50% 50%';
+      } else {
+        videoPlayer.style.objectFit = 'fill';
       }
     }
 
     function playMovie(movie) {
       pendingMovieData = movie;
+      
       playerModal.classList.add('active');
       if (!window.location.hash.includes('player')) {
         history.pushState({ modalOpen: true }, '', '#player');
       }
 
       clearSearchInput();
+
       const videoWrapper = document.querySelector('.video-wrapper');
       videoContainer.classList.remove('show-controls');
       
@@ -1756,13 +1670,11 @@
         hls.attachMedia(videoPlayer);
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
           videoPlayer.play().catch(() => {});
-          restoreSavedTime(movie.ttl);
         });
       } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
         videoPlayer.src = streamUrl;
         videoPlayer.addEventListener('loadedmetadata', () => {
           videoPlayer.play().catch(() => {});
-          restoreSavedTime(movie.ttl);
         });
       }
 
@@ -1776,44 +1688,31 @@
       if (iframe) iframe.remove();
 
       videoPlayer = document.getElementById('videoPlayer');
-      if (videoPlayer) videoPlayer.style.display = 'block';
+      if (videoPlayer) {
+        videoPlayer.style.display = 'block';
+      }
       
       playingTitle.innerText = pendingMovieData.ttl || 'Playing Video';
+      
       setupVideoEvents();
       videoContainer.classList.add('buffering');
 
       if (videoPlayer) {
         videoPlayer.play().catch(() => {});
-        restoreSavedTime(pendingMovieData.ttl);
       }
+
       showControls();
     };
 
-    // FITUR LANJUTKAN MENONTON (Simpan & Pulihkan Posisi Durasi)
-    function saveCurrentTime(movieTitle) {
-      if (!videoPlayer || !movieTitle || isNaN(videoPlayer.currentTime)) return;
-      if (videoPlayer.currentTime > 5 && videoPlayer.duration && videoPlayer.currentTime < videoPlayer.duration - 10) {
-        localStorage.setItem(`tiviku_time_${movieTitle}`, videoPlayer.currentTime);
-      } else {
-        localStorage.removeItem(`tiviku_time_${movieTitle}`);
-      }
-    }
-
-    function restoreSavedTime(movieTitle) {
-      const savedTime = localStorage.getItem(`tiviku_time_${movieTitle}`);
-      if (savedTime && parseFloat(savedTime) > 0) {
-        videoPlayer.currentTime = parseFloat(savedTime);
-        showToast(`▶ Dilanjutkan dari ${formatTime(parseFloat(savedTime))}`);
-      }
-    }
-
     function setupVideoEvents() {
       if (!videoPlayer) return;
-      videoPlayer.onplay = () => { playBtn.innerText = '⏸'; showControls(); };
-      videoPlayer.onpause = () => { 
-        playBtn.innerText = '▶'; 
-        showControls(); 
-        if (pendingMovieData) saveCurrentTime(pendingMovieData.ttl);
+      videoPlayer.onplay = () => {
+        playBtn.innerText = '⏸';
+        showControls();
+      };
+      videoPlayer.onpause = () => {
+        playBtn.innerText = '▶';
+        showControls();
       };
       videoPlayer.onwaiting = () => videoContainer.classList.add('buffering');
       videoPlayer.onplaying = () => videoContainer.classList.remove('buffering');
@@ -1822,11 +1721,6 @@
           const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
           progressFill.style.width = `${pct}%`;
           timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
-          
-          // Simpan otomatis tiap 5 detik
-          if (Math.floor(videoPlayer.currentTime) % 5 === 0 && pendingMovieData) {
-            saveCurrentTime(pendingMovieData.ttl);
-          }
         }
       };
     }
@@ -1838,9 +1732,6 @@
     });
 
     function closePlayerModalOnly(backHistory = true) {
-      if (videoPlayer && pendingMovieData) {
-        saveCurrentTime(pendingMovieData.ttl);
-      }
       playerModal.classList.remove('active');
       videoContainer.classList.remove('buffering');
       if (videoPlayer) {
@@ -1875,8 +1766,11 @@
     fullscreenBtn.onclick = async () => {
       if (!document.fullscreenElement && !document.webkitFullscreenElement) {
         try {
-          if (videoContainer.requestFullscreen) await videoContainer.requestFullscreen();
-          else if (videoContainer.webkitRequestFullscreen) await videoContainer.webkitRequestFullscreen();
+          if (videoContainer.requestFullscreen) {
+            await videoContainer.requestFullscreen();
+          } else if (videoContainer.webkitRequestFullscreen) {
+            await videoContainer.webkitRequestFullscreen();
+          }
 
           if (screen.orientation && screen.orientation.lock) {
             screen.orientation.lock('landscape').catch(() => {});
@@ -1886,17 +1780,22 @@
         }
       } else {
         try {
-          if (document.exitFullscreen) await document.exitFullscreen();
-          else if (document.webkitExitFullscreen) await document.webkitExitFullscreen();
+          if (document.exitFullscreen) {
+            await document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            await document.webkitExitFullscreen();
+          }
 
           if (screen.orientation && screen.orientation.unlock) {
             screen.orientation.unlock().catch(() => {});
           }
+
           setTimeout(() => {
             if (playerSearchInput) playerSearchInput.blur();
             if (searchInput) searchInput.blur();
             window.focus();
           }, 300);
+
         } catch (err) {
           console.error("Gagal keluar fullscreen:", err);
         }
@@ -1906,7 +1805,7 @@
 
     function executeSearch(query) {
       const trimmedQuery = query.trim().toLowerCase();
-      let baseList = isFavViewActive ? currentData.filter(item => getFavorites().includes(item.ttl)) : (currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData);
+      let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
 
       if (trimmedQuery.length > 0) {
         if(searchClearBtn) searchClearBtn.classList.add('show');
@@ -1928,6 +1827,7 @@
 
       renderMoviesTo(sortedList, movieGrid, true);
       renderMoviesTo(sortedList, playerMovieGrid, true);
+      
       if(searchInput) searchInput.blur();
       if(playerSearchInput) playerSearchInput.blur();
     }
@@ -1941,9 +1841,9 @@
       if(searchInput) searchInput.value = '';
       if(playerSearchInput) playerSearchInput.value = '';
       if(searchClearBtn) searchClearBtn.classList.remove('show');
-      if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
+      if(playerSearchClearBtn) searchClearBtn.classList.remove('show');
       
-      let baseList = isFavViewActive ? currentData.filter(item => getFavorites().includes(item.ttl)) : (currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData);
+      let baseList = currentKoleksiFilter ? currentData.filter(item => item.koleksi === currentKoleksiFilter) : displayData;
       renderMoviesTo(baseList, movieGrid, true);
       renderMoviesTo(baseList, playerMovieGrid, true);
     }
@@ -1972,14 +1872,26 @@
       });
     }
 
-    searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') triggerSearch(); });
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        triggerSearch();
+      }
+    });
+
     if(playerSearchInput) {
-      playerSearchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') triggerSearch(); });
+      playerSearchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          triggerSearch();
+        }
+      });
     }
 
     window.onload = () => {
       loadAutoSourceList();
-      setTimeout(() => { checkAppNotification(); }, 2500);
+      
+      setTimeout(() => {
+        checkAppNotification();
+      }, 2500);
     };
   </script>
 </body>
