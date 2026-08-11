@@ -1,5 +1,55 @@
 [
 {
+"logo": "https://i.ibb.co.com/Txfh3j6s/Back.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq31@a420c0e/1/master.m3u8",
+"ttl": "Back in Action (2025) dubbing",
+"thn": "2025",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:54:22",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.ibb.co.com/Rk4HrK23/Ice.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq29@7fdbc9a/1/master.m3u8",
+"ttl": "Ice Age (2002) dubbing",
+"thn": "2002",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:16:11",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.ibb.co.com/4ZGz4yzx/Godzilla-2014-Wikizilla-the-kaiju-encyclopedia.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq28@b470d45/1/master.m3u8",
+"ttl": "Godzilla (2014) dubbing",
+"thn": "2014",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:51:23",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.ibb.co.com/YBPdgZJx/Yowis32.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq27@b9cff71/1/master.m3u8",
+"ttl": "Yowis Ben Finale (2021)",
+"thn": "2021",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:31:55",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.ibb.co.com/fYFkntkK/Cars.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq26@5909e0c/1/master.m3u8",
+"ttl": "Cars (2006) dubbing",
+"thn": "2006",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:55:22",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.ibb.co.com/Kj84spPv/Thunderbolt.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8",
 "ttl": "Thunderbolt (1995) hardsub",
