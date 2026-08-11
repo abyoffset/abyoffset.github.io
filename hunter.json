@@ -1,7 +1,19 @@
 [
 {
-"logo": "https://i.imgur.com/NtkqTne.png",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq24@6773cac/1/master.m3u8",
+"logo": "https://i.ibb.co.com/bRRfGMPJ/Screenshot-20260811-093450.png",
+"lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq31@7f72b7f/1/master.m3u8",
+"ttl": "eps14 Hunter x Hunter (2011) dubbing",
+"episode": "14",
+"thn": "2011",
+"koleksi": "Hunter x Hunter (2011) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:35",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.ibb.co.com/GvCJ1tzh/Screenshot-20260811-050651.png",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq30@a90d0ed/1/master.m3u8",
 "ttl": "eps13 Hunter x Hunter (2011) dubbing",
 "episode": "13",
 "thn": "2011",
@@ -12,8 +24,8 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://i.imgur.com/UDt39Zu.png",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq22@6969b68/1/master.m3u8",
+"logo": "https://i.ibb.co.com/mFzSpVWK/Screenshot-20260810-212948.png",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq30@462463e/1/master.m3u8",
 "ttl": "eps12 Hunter x Hunter (2011) dubbing",
 "episode": "12",
 "thn": "2011",
