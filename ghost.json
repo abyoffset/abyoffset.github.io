@@ -1,5 +1,41 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq34@634a7db/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq34@634a7db/1/master.m3u8",
+"ttl": "eps20 ghost at school (2000) dubbing",
+"episode": "20",
+"koleksi": "ghost at school (2000) dubbing",
+"thn": "2000",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:21",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq34@0b00862/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq34@0b00862/1/master.m3u8",
+"ttl": "eps19 ghost at school (2000) dubbing",
+"episode": "19",
+"koleksi": "ghost at school (2000) dubbing",
+"thn": "2000",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:36",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@8b48221/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@8b48221/1/master.m3u8",
+"ttl": "eps18 ghost at school (2000) dubbing",
+"episode": "18",
+"koleksi": "ghost at school (2000) dubbing",
+"thn": "2000",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:39",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.ibb.co.com/rGG0cCJG/Screenshot-20260811-181838.png",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq25@82d7a25/1/master.m3u8",
 "ttl": "eps17 ghost at school (2000) dubbing",

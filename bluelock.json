@@ -1,5 +1,18 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq35@97821f1/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq35@97821f1/1/master.m3u8",
+"ttl": "eps16 BLUELOCK (2022) dubbing",
+"thn": "2022",
+"episode": "16",
+"koleksi": "BLUELOCK (2022) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:07",
+"tiviku": "apk"
+},
+
+{
 "logo": "https://i.ibb.co.com/hRpgKzMh/Screenshot-20260810-062520.png",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq27@3f1bc30/1/master.m3u8",
 "ttl": "eps15 BLUELOCK (2022) dubbing",

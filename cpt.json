@@ -1,0 +1,38 @@
+[
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq38@501f42d/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq38@501f42d/1/master.m3u8",
+"ttl": "eps03 Captain Tsubasa: Road to 2002 (2001) dubbing",
+"episode": "03",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:10",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq38@845a579/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq38@845a579/1/master.m3u8",
+"ttl": "eps02 Captain Tsubasa: Road to 2002 (2001) dubbing",
+"episode": "02",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:10",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq38@f05301c/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq38@f05301c/1/master.m3u8",
+"ttl": "eps01 Captain Tsubasa: Road to 2002 (2001) dubbing",
+"episode": "01",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:10",
+"tiviku": "apk"
+}
+]

@@ -1,5 +1,85 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq39@d081ad7/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq39@d081ad7/1/master.m3u8",
+"ttl": "Cars 2 (2011) dubbing",
+"episode": "",
+"thn": "2011",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "1:46:12",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq39@7d252e4/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq39@7d252e4/1/master.m3u8",
+"ttl": "eps04 Captain Tsubasa: Road to 2002 (2001) dubbing",
+"episode": "04",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:11",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq38@274f979/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq38@274f979/1/master.m3u8",
+"ttl": "Seal Team (2021) dubbing",
+"episode": "",
+"thn": "2021",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:40:45",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq37@6cf1540/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq37@6cf1540/1/master.m3u8",
+"ttl": "Demon Slayer: Kimetsu no Yaiba Infinity Castle (2025)",
+"episode": "",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:34:43",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq36@f310b7a/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq36@f310b7a/1/master.m3u8",
+"ttl": "Masuk Kena Keluar Kena (1992)",
+"episode": "",
+"thn": "1992",
+"koleksi": "warkop",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:24:56",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tvq33@e0dd4ca/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq33@e0dd4ca/1/master.m3u8",
+"ttl": "Kuch Kuch Hota Hai (1998) dubbing",
+"thn": "1998",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "3:05:03",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/master.m3u8",
+"ttl": "Toy Story 2 (1999) dubbing",
+"thn": "1999",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:28:17",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.ibb.co.com/Txfh3j6s/Back.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq31@a420c0e/1/master.m3u8",
 "ttl": "Back in Action (2025) dubbing",
