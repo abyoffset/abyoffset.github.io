@@ -1,5 +1,65 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tvq44@be1813e/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkapp69/tvq44@be1813e/1/master.m3u8",
+"ttl": "eps13 Captain Tsubasa: Road to 2002 (2001) dubbing",
+"episode": "13",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:58",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tvq43@3d0367c/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq43@3d0367c/1/master.m3u8",
+"ttl": "eps12 Captain Tsubasa: Road to 2002 (2001) dubbing",
+"episode": "12",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:08",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq42@030d1b0/1/poster_1.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq42@030d1b0/1/master.m3u8",
+"ttl": "Pesta Babi (2026)",
+"episode": "",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:35:52",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq42@44c6a2e/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq42@44c6a2e/1/master.m3u8",
+"ttl": "eps11 Captain Tsubasa: Road to 2002 (2001) dubbing",
+"episode": "11",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:08",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq42@ce8ecf0/1/poster.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq42@ce8ecf0/1/master.m3u8",
+"ttl": "eps10 Captain Tsubasa: Road to 2002 (2001) dubbing",
+"episode": "10",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001) dubbing",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:57",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq41@c0d74a8/1/poster.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq41@c0d74a8/1/master.m3u8",
 "ttl": "eps09 Captain Tsubasa: Road to 2002 (2001) dubbing",
