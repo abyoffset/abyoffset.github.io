@@ -174,11 +174,11 @@
 <body oncontextmenu="return false;">
 
   <header>
-    <div class="logo-title" onclick="location.href='index.html'">tiviku app</div>
+    <div class="logo-title" onclick="location.href='index2.html'">tiviku app</div>
   </header>
 
   <div class="container">
-    <a href="index.html" class="back-link">&#8592; Kembali ke Beranda</a>
+    <a href="index2.html" class="back-link">&#8592; Kembali ke Beranda</a>
     <div class="section-title">Daftar Koleksi</div>
     
     <div id="koleksiMenuContainer" class="koleksi-list"></div>
@@ -259,7 +259,7 @@
         `;
         card.onclick = () => {
           localStorage.setItem('tiviku_selected_movie', JSON.stringify(movie));
-          window.location.href = 'player.html';
+          window.location.href = 'player2.html';
         };
         movieGrid.appendChild(card);
       });
