@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tiviku app - Pemutar Video</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f0f12">
+
+  <!-- CDN HLS.js -->
+  <script src="hls.js"></script>
+
+  <style>
+    :root {
+      --bg-color: #0f0f12;
+      --card-bg: #18181c;
+      --accent-color: #e50914;
+      --text-color: #ffffff;
+      --text-secondary: #a0a0a0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding-bottom: 40px;
+    }
+
+    .player-inner {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sticky-player-wrapper {
+      width: 100%;
+      background: rgba(15, 15, 18, 0.98);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.9);
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      background: #000;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-top: 56.25%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    video#videoPlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+
+    .video-spinner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 48px;
+      height: 48px;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top-color: var(--accent-color);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      display: none;
+      z-index: 25;
+    }
+
+    .video-container.buffering .video-spinner { display: block; }
+
+    @keyframes spin {
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .player-logo {
+      position: absolute;
+      bottom: 20px;
+      left: 16px;
+      width: 80px;
+      height: 40px;
+      object-fit: contain;
+      z-index: 25;
+      pointer-events: none;
+      filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.7));
+    }
+
+    .custom-controls {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.95));
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 30;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent-color);
+      border-radius: 4px;
+    }
+
+    .controls-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+    }
+
+    .control-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .control-btn:hover { color: var(--accent-color); }
+
+    .time-display {
+      font-size: 0.8rem;
+      color: #ccc;
+      font-family: monospace;
+    }
+
+    .player-details {
+      padding: 16px;
+      color: #fff;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .player-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .recommendation-header {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 30px 0 16px 0;
+      padding: 0 16px;
+      width: 100%;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+      width: 100%;
+      padding: 0 16px;
+    }
+
+    .movie-card {
+      background-color: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #24242a;
+      transition: transform 0.15s ease;
+    }
+
+    .movie-card:hover { transform: translateY(-4px); }
+
+    .poster-wrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 145%;
+      background-color: #121215;
+    }
+
+    .poster-wrapper img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .duration-badge {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background-color: rgba(0, 0, 0, 0.85);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 3px 7px;
+      border-radius: 4px;
+    }
+
+    .movie-info { padding: 12px; }
+
+    .movie-title-card {
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      color: #e0e0e0;
+    }
+
+    .back-btn {
+      background: #222;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    .back-btn:hover { background: var(--accent-color); }
+  </style>
+</head>
+<body oncontextmenu="return false;">
+
+  <div class="player-inner">
+    <div class="sticky-player-wrapper">
+      <div class="video-container" id="videoContainer">
+        <div class="video-wrapper">
+          <video id="videoPlayer" playsinline></video>
+          <div class="video-spinner" id="videoSpinner"></div>
+        </div>
+
+        <img src="https://i.imgur.com/KsWH0uL.png" alt="Tiviku Logo" class="player-logo">
+
+        <div class="custom-controls" id="customControls">
+          <div class="progress-bar-container" id="progressBar">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+
+          <div class="controls-row">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <button class="control-btn" id="playBtn">▶</button>
+              <button class="control-btn" id="muteBtn">🔊</button>
+              <span class="time-display" id="timeDisplay">00:00 / 00:00</span>
+            </div>
+            <div>
+              <button class="control-btn" id="fullscreenBtn">⛶</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="player-details">
+        <span id="playingTitle" class="player-title">Memuat...</span>
+        <a href="index.html" class="back-btn">&#8592; Beranda</a>
+      </div>
+    </div>
+
+    <div class="recommendation-header">Rekomendasi film lainnya</div>
+    <div id="playerMovieGrid" class="movie-grid"></div>
+  </div>
+
+  <script>
+    const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
+
+    function _decode(_0x3c21) {
+      try {
+        if (!_0x3c21 || ![_0x3c21][0].match(/^[A-Za-z0-9+/=]+$/)) return _0x3c21;
+        return decodeURIComponent(atob(_0x3c21));
+      } catch (_0x5e12) {
+        return _0x3c21;
+      }
+    }
+
+    const videoContainer = document.getElementById('videoContainer');
+    const videoPlayer = document.getElementById('videoPlayer');
+    const playingTitle = document.getElementById('playingTitle');
+    const playBtn = document.getElementById('playBtn');
+    const muteBtn = document.getElementById('muteBtn');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const progressBar = document.getElementById('progressBar');
+    const progressFill = document.getElementById('progressFill');
+    const timeDisplay = document.getElementById('timeDisplay');
+    const playerMovieGrid = document.getElementById('playerMovieGrid');
+
+    let hls = null;
+
+    function formatTime(seconds) {
+      if (isNaN(seconds) || seconds < 0) return "00:00";
+      const min = Math.floor(seconds / 60);
+      const sec = Math.floor(seconds % 60);
+      return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
+    }
+
+    function initPlayer() {
+      const movieDataStr = localStorage.getItem('tiviku_selected_movie');
+      if (!movieDataStr) {
+        alert("Tidak ada film yang dipilih!");
+        window.location.href = 'index.html';
+        return;
+      }
+
+      const movie = JSON.parse(movieDataStr);
+      playingTitle.innerText = movie.ttl || 'Playing Video';
+      const streamUrl = _decode(movie.lnk);
+
+      videoContainer.classList.add('buffering');
+
+      if (Hls.isSupported()) {
+        hls = new Hls({
+          xhrSetup: function (xhr, url) {
+            if (url.includes("tiviku_system.bin") || url.includes(".key")) {
+              const originalOpen = xhr.open;
+              xhr.open = function(method, url, async, user, password) {
+                originalOpen.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, async, user, password);
+              };
+            }
+          }
+        });
+        hls.loadSource(streamUrl);
+        hls.attachMedia(videoPlayer);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          videoPlayer.play().catch(() => {});
+        });
+      } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+        videoPlayer.src = streamUrl;
+        videoPlayer.addEventListener('loadedmetadata', () => {
+          videoPlayer.play().catch(() => {});
+        });
+      }
+
+      setupVideoEvents();
+      loadRecommendations();
+    }
+
+    function setupVideoEvents() {
+      videoPlayer.onplay = () => { playBtn.innerText = '⏸'; };
+      videoPlayer.onpause = () => { playBtn.innerText = '▶'; };
+      videoPlayer.onwaiting = () => videoContainer.classList.add('buffering');
+      videoPlayer.onplaying = () => videoContainer.classList.remove('buffering');
+      videoPlayer.ontimeupdate = () => {
+        if (videoPlayer.duration) {
+          const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+          progressFill.style.width = `${pct}%`;
+          timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
+        }
+      };
+    }
+
+    playBtn.onclick = () => {
+      if (videoPlayer.paused) videoPlayer.play();
+      else videoPlayer.pause();
+    };
+
+    muteBtn.onclick = () => {
+      videoPlayer.muted = !videoPlayer.muted;
+      muteBtn.innerText = videoPlayer.muted ? '🔇' : '🔊';
+    };
+
+    fullscreenBtn.onclick = async () => {
+      if (!document.fullscreenElement) {
+        if (videoContainer.requestFullscreen) videoContainer.requestFullscreen();
+      } else {
+        if (document.exitFullscreen) document.exitFullscreen();
+      }
+    };
+
+    progressBar.onclick = (e) => {
+      const rect = progressBar.getBoundingClientRect();
+      const pos = (e.clientX - rect.left) / rect.width;
+      videoPlayer.currentTime = pos * videoPlayer.duration;
+    };
+
+    function loadRecommendations() {
+      const allDataStr = localStorage.getItem('tiviku_all_data');
+      if (!allDataStr) return;
+      const allData = JSON.parse(allDataStr);
+
+      // Acak urutan rekomendasi
+      let shuffled = [...allData].sort(() => 0.5 - Math.random());
+      playerMovieGrid.innerHTML = '';
+
+      shuffled.slice(0, 12).forEach(movie => {
+        const card = document.createElement('div');
+        card.className = 'movie-card';
+        card.innerHTML = `
+          <div class="poster-wrapper">
+            <img src="${movie.logo || ''}" alt="${movie.ttl}" loading="lazy">
+            <span class="duration-badge">${movie.dur || 'N/A'}</span>
+          </div>
+          <div class="movie-info">
+            <div class="movie-title-card">${movie.ttl || 'Tanpa Judul'}</div>
+          </div>
+        `;
+        card.onclick = () => {
+          localStorage.setItem('tiviku_selected_movie', JSON.stringify(movie));
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          initPlayer();
+        };
+        playerMovieGrid.appendChild(card);
+      });
+    }
+
+    window.onload = initPlayer;
+  </script>
+</body>
+</html>
