@@ -1256,7 +1256,7 @@
     let activeFilterType = null;
     let activeFilterValue = null;
     let pendingMovieData = null;
-    let selectedMovieToPlay = null; // Menyimpan film sementara untuk modal iklan
+    let selectedMovieToPlay = null; // Menyimpan film sementara untuk modal info & iklan
     let userCancelledNextEpisode = false;
 
     const nextEpisodeOverlay = document.getElementById('nextEpisodeOverlay');
@@ -1776,7 +1776,7 @@
       }
     }
 
-    // Integrasi Modal Preview dan Iklan Adsterra saat kartu diklik
+    // 1. Dipanggil saat kartu film diklik (Menampilkan modal keterangan, kilasan, poster & tombol tonton video)
     function playMovie(movie) {
       selectedMovieToPlay = movie;
       
@@ -1787,28 +1787,35 @@
       let rawTitle = movie.ttl || 'Tanpa Judul';
       let fullTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
 
+      let kilasanText = movie.kilasan && movie.kilasan.trim() !== "" 
+        ? movie.kilasan 
+        : "Tidak ada ringkasan atau kilasan untuk film ini.";
+
       showCustomAlert(
-        "Putar Film",
-        `<div style="text-align:center;">
-           <img src="${movie.logo || ''}" style="width:100px; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px;" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'"><br>
-           <b>${fullTitle}</b><br>
-           <span style="font-size:0.8rem; color:#aaa;">Durasi: ${movie.dur || '-'}</span>
+        "Detail Film",
+        `<div style="text-align: center; display: flex; flex-direction: column; gap: 10px; align-items: center;">
+           <img src="${movie.logo || ''}" style="width: 110px; height: 155px; object-fit: cover; border-radius: 8px; border: 1px solid #333;" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'">
+           <div style="font-weight: 700; font-size: 0.95rem; color: #fff;">${fullTitle}</div>
+           <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.4; max-height: 100px; overflow-y: auto; padding: 0 4px; text-align: left; width: 100%;">
+             ${kilasanText}
+           </div>
+           <div style="font-size: 0.78rem; color: #aaa; align-self: flex-start;">Durasi: ${movie.dur || '-'} &bull; Tahun: ${movie.thn || '-'}</div>
          </div>`,
-        `<button class="btn" onclick="triggerAdAndPlay()">Tonton Sekarang</button>
-         <button class="btn" style="background:#333; color:#ccc;" onclick="closeCustomAlert()">Batal</button>`
+        `<button class="btn" onclick="proceedToPlayer()">Tonton Video</button>
+         <button class="btn" style="background: #2a2a30; color: #ccc;" onclick="closeCustomAlert()">Batal</button>`
       );
     }
 
-    // Fungsi pemicu iklan Adsterra & eksekusi putar video
-    function triggerAdAndPlay() {
+    // 2. Dipanggil saat tombol "Tonton Video" di modal diklik (Memicu Iklan Adsterra & Membuka Pemutar)
+    function proceedToPlayer() {
       closeCustomAlert();
       
-      // 1. Panggil script Social Bar Adsterra secara dinamis
+      // Panggil script Social Bar Adsterra secara dinamis di sini
       const adScript = document.createElement('script');
       adScript.src = "https://pl30775961.effectivecpmnetwork.com/d4/08/d1/d408d1c2d38eb5ffb20c4b45bd9cff56.js";
       document.body.appendChild(adScript);
 
-      // 2. Buka pemutar video film
+      // Langsung eksekusi pemutaran video
       if (selectedMovieToPlay) {
         cancelNextEpisodeOverlay();
         userCancelledNextEpisode = false;
@@ -1844,7 +1851,6 @@
       
       videoPlayer = document.getElementById('videoPlayer');
       
-      // Sinkronkan status mute video baru dengan status tombol UI saat ini
       videoPlayer.muted = (muteBtn.innerText === '🔇');
 
       let prefixTitle = '';
