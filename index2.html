@@ -8,8 +8,11 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0f0f12">
 
-  <!-- CDN HLS.js Resmi yang Stabil -->
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <!-- CDN HLS.js untuk pemutaran streaming -->
+  <script src="hls.js"></script>
+
+  <!-- Iklan Social Bar Adsterra -->
+  <script src="https://pl30775961.effectivecpmnetwork.com/d4/08/d1/d408d1c2d38eb5ffb20c4b45bd9cff56.js"></script>
 
   <style>
     :root {
@@ -563,6 +566,55 @@
       backdrop-filter: blur(8px);
     }
 
+    /* BANNER / KARTU FILM DI ATAS PLAYER */
+    .player-top-banner {
+      width: 100%;
+      background: linear-gradient(135deg, #18181c 0%, #121215 100%);
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid #2a2a30;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .player-top-banner img {
+      width: 45px;
+      height: 65px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.15);
+      flex-shrink: 0;
+    }
+
+    .player-top-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      overflow: hidden;
+    }
+
+    .player-top-badge {
+      font-size: 0.62rem;
+      background: var(--accent-color);
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 4px;
+      width: fit-content;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .player-top-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #fff;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
     .video-container {
       position: relative;
       width: 100%;
@@ -628,6 +680,7 @@
       to { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
+    /* NEXT EPISODE OVERLAY */
     .next-episode-overlay {
       position: absolute;
       bottom: 70px;
@@ -974,6 +1027,9 @@
       background: #333;
       border-radius: 4px;
     }
+    .player-kilasan-box::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-color);
+    }
 
     .player-title-container.open .player-kilasan-box {
       display: block;
@@ -1000,7 +1056,10 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
       }
-      .search-box, .search-wrapper {
+      .search-box {
+        width: 100%;
+      }
+      .search-wrapper {
         width: 100%;
       }
       .header-actions {
@@ -1024,12 +1083,14 @@
 </head>
 <body oncontextmenu="return false;">
 
+  <!-- LAYOUT ERROR OFFLINE -->
   <div id="offlineErrorContainer" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #0f0f12; z-index: 99999; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
     <h2 style="color: #e50914; margin-bottom: 10px; font-size: 1.5rem; font-weight: 700;">Koneksi Internet Terputus</h2>
     <p style="color: #a0a0a0; font-size: 0.95rem; margin-bottom: 24px;">Silakan periksa kembali jaringan Anda agar aplikasi dapat berjalan.</p>
     <button onclick="location.reload()" style="background-color: #e50914; color: white; border: none; padding: 10px 24px; border-radius: 20px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);">Coba Lagi</button>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="header-left">
       <button class="hamburger-btn" onclick="toggleDrawer()" title="Menu">
@@ -1047,6 +1108,7 @@
     </div>
   </header>
 
+  <!-- Drawer / Sidebar Menu -->
   <div id="drawerOverlay" class="drawer-overlay" onclick="toggleDrawer()"></div>
   <div id="appDrawer" class="drawer">
     <div class="drawer-header">
@@ -1088,6 +1150,7 @@
     </div>
   </div>
 
+  <!-- Custom Alert Modal -->
   <div id="customAlertModal" class="modal">
     <div class="modal-content">
       <h3 id="customAlertTitle">Informasi</h3>
@@ -1098,6 +1161,7 @@
     </div>
   </div>
 
+  <!-- Grid Utama -->
   <div class="container">
     <div class="section-info-bar">
       <span id="currentFilterTitle" class="current-filter-title">Semua Koleksi</span>
@@ -1106,16 +1170,28 @@
     <div id="movieGrid" class="movie-grid"></div>
   </div>
 
+  <!-- Player Modal -->
   <div id="playerModal" class="player-modal">
     <div class="player-inner">
 
       <div class="sticky-player-wrapper">
+        
+        <!-- Banner/Kartu Film di Atas Player (Menghindari Iklan Atas) -->
+        <div class="player-top-banner" id="playerTopBanner">
+          <img id="playerBannerImg" src="" alt="Poster" onerror="this.src='https://via.placeholder.com/45x65?text=No+Image'">
+          <div class="player-top-info">
+            <span class="player-top-badge" id="playerTopBadge">SEDANG DIPUTAR</span>
+            <span class="player-top-title" id="playerTopTitleText">-</span>
+          </div>
+        </div>
+
         <div class="video-container show-controls" id="videoContainer">
           <div class="video-wrapper">
             <video id="videoPlayer" playsinline></video>
             <div class="video-spinner" id="videoSpinner"></div>
           </div>
 
+          <!-- Next Episode Overlay -->
           <div class="next-episode-overlay" id="nextEpisodeOverlay">
             <div class="next-episode-content">
               <span class="next-label">Episode Berikutnya</span>
@@ -1157,6 +1233,7 @@
           </div>
         </div>
         
+        <!-- Bagian Judul Interaktif -->
         <div class="player-details-row">
           <div class="player-title-container" id="playerTitleContainer" onclick="togglePlayerTitleDetails()" data-has-kilasan="false">
             <div class="player-title-header">
@@ -1198,6 +1275,12 @@
       checkConnectionStatus();
       location.reload();
     });
+
+    const allowedDomain = ""; 
+    if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
+      document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
+      throw new Error("Unauthorized domain");
+    }
 
     const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
 
@@ -1280,13 +1363,24 @@
 
     if (detailsKoleksi && detailsTahun && detailsBahasa) {
       detailsKoleksi.addEventListener('toggle', function() {
-        if (this.open) { detailsTahun.open = false; detailsBahasa.open = false; }
+        if (this.open) {
+          detailsTahun.open = false;
+          detailsBahasa.open = false;
+        }
       });
+
       detailsTahun.addEventListener('toggle', function() {
-        if (this.open) { detailsKoleksi.open = false; detailsBahasa.open = false; }
+        if (this.open) {
+          detailsKoleksi.open = false;
+          detailsBahasa.open = false;
+        }
       });
+
       detailsBahasa.addEventListener('toggle', function() {
-        if (this.open) { detailsKoleksi.open = false; detailsTahun.open = false; }
+        if (this.open) {
+          detailsKoleksi.open = false;
+          detailsTahun.open = false;
+        }
       });
     }
 
@@ -1306,21 +1400,33 @@
     }
 
     function showAppInfo() {
-      showCustomAlert("Tentang Aplikasi", "<b>tiviku v2.6</b><br>");
+      showCustomAlert(
+        "Tentang Aplikasi",
+        "<b>tiviku v2.6</b><br>"
+      );
     }
 
     async function checkAppNotification() {
       try {
         const response = await fetch('notification.json?t=' + new Date().getTime());
         if (!response.ok) return;
+        
         const notif = await response.json();
+        
         if (notif.active) {
           const lastReadId = localStorage.getItem('last_read_notif_id');
+          
           if (lastReadId !== notif.id) {
-            showCustomAlert(notif.title, notif.message, `<button class="btn" onclick="markNotifAsRead('${notif.id}')">Mengerti</button>`);
+            showCustomAlert(
+              notif.title,
+              notif.message,
+              `<button class="btn" onclick="markNotifAsRead('${notif.id}')">Mengerti</button>`
+            );
           }
         }
-      } catch (error) {}
+      } catch (error) {
+        console.log("Gagal memuat notifikasi:", error);
+      }
     }
 
     function markNotifAsRead(id) {
@@ -1369,6 +1475,7 @@
       if (tapLength < 400 && tapLength > 0 && side === currentTapSide && side !== null) {
         clearTimeout(singleTapTimeout);
         clearTimeout(resetAccumulatedTimeout);
+
         accumulatedSeconds = Math.min(30, accumulatedSeconds + 10);
 
         if (side === 'left') {
@@ -1385,7 +1492,10 @@
           accumulatedSeconds = 0;
           currentTapSide = null;
         } else {
-          resetAccumulatedTimeout = setTimeout(() => { accumulatedSeconds = 0; currentTapSide = null; }, 800);
+          resetAccumulatedTimeout = setTimeout(() => {
+            accumulatedSeconds = 0;
+            currentTapSide = null;
+          }, 800);
         }
         showControls();
       } else {
@@ -1393,9 +1503,17 @@
         if (side !== null) {
           currentTapSide = side;
           accumulatedSeconds = 10;
-          singleTapTimeout = setTimeout(() => { showControls(); accumulatedSeconds = 0; currentTapSide = null; }, 300);
+          singleTapTimeout = setTimeout(() => {
+            showControls();
+            accumulatedSeconds = 0;
+            currentTapSide = null;
+          }, 300);
         } else {
-          singleTapTimeout = setTimeout(() => { showControls(); accumulatedSeconds = 0; currentTapSide = null; }, 300);
+          singleTapTimeout = setTimeout(() => {
+            showControls();
+            accumulatedSeconds = 0;
+            currentTapSide = null;
+          }, 300);
         }
       }
       lastTapTime = currentTime;
@@ -1413,9 +1531,11 @@
 
     function formatTime(seconds) {
       if (isNaN(seconds) || seconds < 0) return "00:00";
+      
       const hrs = Math.floor(seconds / 3600);
       const min = Math.floor((seconds % 3600) / 60);
       const sec = Math.floor(seconds % 60);
+
       if (hrs > 0) {
         return `${hrs.toString().padStart(2, '0')}:${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
       }
@@ -1424,6 +1544,7 @@
 
     function updateScrubbing(e) {
       if (!videoPlayer || !videoPlayer.duration) return;
+
       const rect = progressBar.getBoundingClientRect();
       const clientX = e.clientX || (e.touches && e.touches[0].clientX);
       let posX = clientX - rect.left;
@@ -1482,7 +1603,12 @@
         card.className = 'movie-card';
         
         const bahasaBadge = movie.bahasa ? `<span class="language-badge">${movie.bahasa}</span>` : '';
-        let prefixTitle = (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') ? `Ep. ${movie.episode} ` : '';
+        
+        let prefixTitle = '';
+        if (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') {
+          prefixTitle = `Ep. ${movie.episode} `;
+        }
+
         let rawTitle = movie.ttl || 'Tanpa Judul';
         let displayTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
 
@@ -1496,12 +1622,7 @@
             <div class="movie-title">${displayTitle}</div>
           </div>
         `;
-        
-        card.onclick = () => {
-          localStorage.setItem('selectedMovie', JSON.stringify(movie));
-          window.location.href = 'detail.html';
-        };
-
+        card.onclick = () => playMovie(movie);
         fragment.appendChild(card);
       });
       targetContainer.appendChild(fragment);
@@ -1518,52 +1639,85 @@
       data.forEach(item => {
         if (item.koleksi && item.koleksi.trim() !== "") {
           let koleksiName = item.koleksi.trim();
-          if (item.bahasa && item.bahasa.trim() !== "") koleksiName = `${item.koleksi.trim()} [${item.bahasa.trim()}]`;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiName = `${item.koleksi.trim()} [${item.bahasa.trim()}]`;
+          }
           koleksiMap.set(koleksiName, (koleksiMap.get(koleksiName) || 0) + 1);
         }
       });
 
-      koleksiMap.forEach((count, koleksiDisplayName) => {
-        const btn = document.createElement('button');
-        const isActive = (activeFilterType === 'koleksi' && activeFilterValue === koleksiDisplayName);
-        btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
-        btn.innerHTML = `<span>📂 ${koleksiDisplayName}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
-        btn.onclick = () => { filterBy('koleksi', koleksiDisplayName); toggleDrawer(); };
-        drawerKoleksiList.appendChild(btn);
-      });
+      if (koleksiMap.size === 0) {
+        drawerKoleksiList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada koleksi</span>';
+      } else {
+        koleksiMap.forEach((count, koleksiDisplayName) => {
+          const btn = document.createElement('button');
+          const isActive = (activeFilterType === 'koleksi' && activeFilterValue === koleksiDisplayName);
+          btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
+          btn.innerHTML = `<span>📂 ${koleksiDisplayName}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
+          btn.onclick = () => {
+            filterBy('koleksi', koleksiDisplayName);
+            toggleDrawer();
+          };
+          drawerKoleksiList.appendChild(btn);
+        });
+      }
 
       drawerTahunList.innerHTML = '';
       const tahunMap = new Map();
       data.forEach(item => {
-        if (item.thn && item.thn.toString().trim() !== "") tahunMap.set(item.thn.toString().trim(), 1);
+        if (item.thn && item.thn.toString().trim() !== "") {
+          const tahunVal = item.thn.toString().trim();
+          tahunMap.set(tahunVal, (tahunMap.get(tahunVal) || 0) + 1);
+        }
       });
-      Array.from(tahunMap.keys()).sort((a, b) => b.localeCompare(a)).forEach(tahunVal => {
-        const btn = document.createElement('button');
-        const isActive = (activeFilterType === 'thn' && activeFilterValue === tahunVal);
-        btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
-        btn.innerHTML = `<span>📅 ${tahunVal}</span>`;
-        btn.onclick = () => { filterBy('thn', tahunVal); toggleDrawer(); };
-        drawerTahunList.appendChild(btn);
-      });
+
+      if (tahunMap.size === 0) {
+        drawerTahunList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada data tahun</span>';
+      } else {
+        const sortedTahun = Array.from(tahunMap.keys()).sort((a, b) => b.localeCompare(a));
+        sortedTahun.forEach(tahunVal => {
+          const btn = document.createElement('button');
+          const isActive = (activeFilterType === 'thn' && activeFilterValue === tahunVal);
+          btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
+          btn.innerHTML = `<span>📅 ${tahunVal}</span>`;
+          btn.onclick = () => {
+            filterBy('thn', tahunVal);
+            toggleDrawer();
+          };
+          drawerTahunList.appendChild(btn);
+        });
+      }
 
       drawerBahasaList.innerHTML = '';
       const bahasaMap = new Map();
       data.forEach(item => {
-        if (item.bahasa && item.bahasa.toString().trim() !== "") bahasaMap.set(item.bahasa.toString().trim(), 1);
+        if (item.bahasa && item.bahasa.toString().trim() !== "") {
+          const bahasaVal = item.bahasa.toString().trim();
+          bahasaMap.set(bahasaVal, (bahasaMap.get(bahasaVal) || 0) + 1);
+        }
       });
-      bahasaMap.forEach((_, bahasaVal) => {
-        const btn = document.createElement('button');
-        const isActive = (activeFilterType === 'bahasa' && activeFilterValue === bahasaVal);
-        btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
-        btn.innerHTML = `<span>🌐 ${bahasaVal}</span>`;
-        btn.onclick = () => { filterBy('bahasa', bahasaVal); toggleDrawer(); };
-        drawerBahasaList.appendChild(btn);
-      });
+
+      if (bahasaMap.size === 0) {
+        drawerBahasaList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada data bahasa</span>';
+      } else {
+        bahasaMap.forEach((count, bahasaVal) => {
+          const btn = document.createElement('button');
+          const isActive = (activeFilterType === 'bahasa' && activeFilterValue === bahasaVal);
+          btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
+          btn.innerHTML = `<span>🌐 ${bahasaVal}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
+          btn.onclick = () => {
+            filterBy('bahasa', bahasaVal);
+            toggleDrawer();
+          };
+          drawerBahasaList.appendChild(btn);
+        });
+      }
     }
 
     function filterBy(type, value) {
       activeFilterType = type;
       activeFilterValue = value;
+      
       currentFilterTitle.innerText = value;
       resetFilterBtn.classList.add('show');
 
@@ -1571,7 +1725,9 @@
         if (type === 'koleksi') {
           let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
           let koleksiDisplayName = itemKoleksiName;
-          if (item.bahasa && item.bahasa.trim() !== "") koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
           return itemKoleksiName === value || koleksiDisplayName === value;
         }
         if (type === 'thn') return item.thn && item.thn.toString().trim() === value;
@@ -1579,8 +1735,17 @@
         return false;
       });
 
-      if (type === 'koleksi' && filtered.some(i => i.episode !== undefined)) {
-        filtered.sort((a, b) => (parseFloat(a.episode) || 0) - (parseFloat(b.episode) || 0));
+      if (type === 'koleksi') {
+        const hasEpisode = filtered.some(item => item.episode !== undefined && item.episode !== null && item.episode !== "");
+        if (hasEpisode) {
+          filtered.sort((a, b) => {
+            const epA = parseFloat(a.episode) || 0;
+            const epB = parseFloat(b.episode) || 0;
+            return epA - epB;
+          });
+        } else {
+          filtered = shuffleArray(filtered);
+        }
       } else {
         filtered = shuffleArray(filtered);
       }
@@ -1596,6 +1761,7 @@
       currentFilterTitle.innerText = "Semua Koleksi";
       resetFilterBtn.classList.remove('show');
       clearSearchInput();
+      
       displayData = shuffleArray(currentData);
       renderMovies(displayData);
       buildDrawerMenus(currentData);
@@ -1603,42 +1769,67 @@
     }
 
     async function loadAutoSourceList() {
+      const githubJsonUrl = "index.json";
       try {
-        const response = await fetch("index.json");
-        if (!response.ok) throw new Error("Gagal mengambil index.json");
+        const response = await fetch(githubJsonUrl);
+        if (!response.ok) throw new Error("Gagal mengambil data index.json");
+        
         const rootJson = await response.json();
+        let sourceFiles = rootJson.source_list || [];
+
         let allMovies = [];
-        for (const fileUrl of (rootJson.source_list || [])) {
+        for (const fileUrl of sourceFiles) {
           try {
             const subRes = await fetch(fileUrl);
             if (subRes.ok) {
               const subData = await subRes.json();
-              if (Array.isArray(subData)) allMovies = allMovies.concat(subData);
-              else if (subData) allMovies.push(subData);
+              if (Array.isArray(subData)) {
+                allMovies = allMovies.concat(subData);
+              } else if (typeof subData === 'object' && subData !== null) {
+                allMovies.push(subData);
+              }
             }
-          } catch (e) {}
+          } catch (e) {
+            console.error(`Gagal memuat file cabang: ${fileUrl}`, e);
+          }
         }
+
         if (allMovies.length > 0) {
           currentData = allMovies;
           displayData = shuffleArray(currentData);
           renderMovies(displayData);
           buildDrawerMenus(currentData);
+        } else {
+          renderMovies([]);
         }
-      } catch (err) {}
+      } catch (err) {
+        console.error("Gagal memuat otomatis:", err.message);
+        renderMovies([]);
+      }
     }
 
     function applyPlayerCropConfig(movie) {
+      const cropMode = movie.crop_mode || (movie.crop_scale ? 'fill_width' : 'fill');
+      const cropPosition = movie.crop_position || '50% 50%';
+      const cropScale = parseFloat(movie.crop_scale) || 1.2;
+
       videoPlayer.style.objectFit = 'fill';
       videoPlayer.style.objectPosition = '50% 50%';
       videoPlayer.style.transform = 'none';
 
-      if (movie.crop_mode === 'cover' || movie.crop_mode === 'stretch_crop') {
+      if (cropMode === 'cover') {
         videoPlayer.style.objectFit = 'cover';
-        videoPlayer.style.objectPosition = movie.crop_position || '50% 50%';
-      }
-      
-      if (movie.crop_scale) {
-        videoPlayer.style.transform = `scaleY(${parseFloat(movie.crop_scale) || 1.2})`;
+        videoPlayer.style.objectPosition = cropPosition;
+      } else if (cropMode === 'stretch_crop') {
+        videoPlayer.style.objectFit = 'fill';
+        videoPlayer.style.transform = `scaleY(${cropScale})`;
+        videoPlayer.style.objectPosition = '50% 50%';
+      } else if (cropMode === 'fill_width') {
+        videoPlayer.style.objectFit = 'fill';
+        videoPlayer.style.transform = `scaleY(${cropScale})`;
+        videoPlayer.style.objectPosition = '50% 50%';
+      } else {
+        videoPlayer.style.objectFit = 'fill';
       }
     }
 
@@ -1657,7 +1848,8 @@
     }
 
     function togglePlayerTitleDetails() {
-      document.getElementById('playerTitleContainer').classList.toggle('open');
+      const container = document.getElementById('playerTitleContainer');
+      container.classList.toggle('open');
     }
 
     function executeDirectPlay(movie) {
@@ -1668,16 +1860,31 @@
         <video id="videoPlayer" playsinline></video>
         <div class="video-spinner" id="videoSpinner"></div>
       `;
-      if (existingOverlay) videoWrapper.appendChild(existingOverlay);
+      
+      if (existingOverlay) {
+        videoWrapper.appendChild(existingOverlay);
+      }
       
       videoPlayer = document.getElementById('videoPlayer');
       videoPlayer.muted = (muteBtn.innerText === '🔇');
 
-      let prefixTitle = (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') ? `Ep. ${movie.episode} ` : '';
-      playingTitle.innerText = movie.bahasa ? `${prefixTitle}${movie.ttl || ''} [${movie.bahasa}]` : `${prefixTitle}${movie.ttl || ''}`;
+      let prefixTitle = '';
+      if (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') {
+        prefixTitle = `Ep. ${movie.episode} `;
+      }
+      let rawTitle = movie.ttl || 'Playing Video';
+      const fullPlayingTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
+      
+      // Update Banner di Atas Player
+      document.getElementById('playerBannerImg').src = movie.logo || '';
+      document.getElementById('playerTopBadge').innerText = movie.koleksi ? movie.koleksi.toUpperCase() : 'SEDANG DIPUTAR';
+      document.getElementById('playerTopTitleText').innerText = fullPlayingTitle;
+
+      playingTitle.innerText = fullPlayingTitle;
 
       const titleContainer = document.getElementById('playerTitleContainer');
       const kilasanText = document.getElementById('playingKilasanText');
+
       titleContainer.classList.remove('open');
 
       if (movie.kilasan && movie.kilasan.trim() !== "") {
@@ -1690,7 +1897,16 @@
 
       applyPlayerCropConfig(movie);
 
-      let chosenLink = Array.isArray(movie.lnk) ? movie.lnk[Math.floor(Math.random() * movie.lnk.length)] : movie.lnk;
+      let rawLink = movie.lnk;
+      let chosenLink = "";
+
+      if (Array.isArray(rawLink) && rawLink.length > 0) {
+        const randomIndex = Math.floor(Math.random() * rawLink.length);
+        chosenLink = rawLink[randomIndex];
+      } else {
+        chosenLink = rawLink;
+      }
+
       const streamUrl = _decode(chosenLink);
       videoContainer.classList.add('buffering');
 
@@ -1702,18 +1918,23 @@
           enableWorker: true,
           xhrSetup: function (xhr, url) {
             if (url.includes("tiviku_system.bin") || url.includes(".key")) {
-              xhr.open = function(m, u, a, us, p) {
-                xhr.open.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, a, us, p);
+              const originalOpen = xhr.open;
+              xhr.open = function(method, url, async, user, password) {
+                originalOpen.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, async, user, password);
               };
             }
           }
         });
         hls.loadSource(streamUrl);
         hls.attachMedia(videoPlayer);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => { videoPlayer.play().catch(() => {}); });
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          videoPlayer.play().catch(() => {});
+        });
       } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
         videoPlayer.src = streamUrl;
-        videoPlayer.addEventListener('loadedmetadata', () => { videoPlayer.play().catch(() => {}); });
+        videoPlayer.addEventListener('loadedmetadata', () => {
+          videoPlayer.play().catch(() => {});
+        });
       }
 
       setupVideoEvents();
@@ -1721,95 +1942,197 @@
     }
 
     function checkAndTriggerNextEpisode() {
-      if (!videoPlayer || !videoPlayer.duration || !pendingMovieData || userCancelledNextEpisode) return;
+      if (!videoPlayer || !videoPlayer.duration) return;
+
+      if (!pendingMovieData || pendingMovieData.episode === undefined || pendingMovieData.episode === null || pendingMovieData.episode === "") {
+        return;
+      }
+
+      if (userCancelledNextEpisode) return;
+
       const timeLeft = videoPlayer.duration - videoPlayer.currentTime;
+      
       if (timeLeft <= 4 && timeLeft > 0) {
-        if (!nextEpisodeOverlay.classList.contains('active')) showNextEpisodeOverlay();
-      } else if (timeLeft > 4 && nextEpisodeOverlay.classList.contains('active')) {
+        if (!isOverlayShown()) {
+          showNextEpisodeOverlay();
+        }
+      } else if (timeLeft > 4 && isOverlayShown()) {
         cancelNextEpisodeOverlay();
       }
     }
 
+    function isOverlayShown() {
+      return nextEpisodeOverlay.classList.contains('active');
+    }
+
     function showNextEpisodeOverlay() {
-      const collectionItems = currentData.filter(item => item.koleksi === pendingMovieData.koleksi && item.episode !== undefined && item.episode !== null && item.episode !== "");
+      const currentCollection = pendingMovieData.koleksi;
+      const currentEpNum = parseFloat(pendingMovieData.episode);
+      
+      const collectionItems = currentData.filter(item => item.koleksi === currentCollection && item.episode !== undefined && item.episode !== null && item.episode !== "");
       collectionItems.sort((a, b) => (parseFloat(a.episode) || 0) - (parseFloat(b.episode) || 0));
 
-      const currentIndex = collectionItems.findIndex(item => parseFloat(item.episode) === parseFloat(pendingMovieData.episode));
+      const currentIndex = collectionItems.findIndex(item => parseFloat(item.episode) === currentEpNum);
       const nextItem = (currentIndex !== -1 && currentIndex < collectionItems.length - 1) ? collectionItems[currentIndex + 1] : null;
 
       if (!nextItem) return;
 
-      let prefixTitle = nextItem.episode ? `Ep. ${nextItem.episode} ` : '';
-      nextEpisodeTitle.innerText = nextItem.bahasa ? `${prefixTitle}${nextItem.ttl} [${nextItem.bahasa}]` : `${prefixTitle}${nextItem.ttl}`;
+      let prefixTitle = '';
+      if (nextItem.episode !== undefined && nextItem.episode !== null && nextItem.episode !== '') {
+        prefixTitle = `Ep. ${nextItem.episode} `;
+      }
+      let rawTitle = nextItem.ttl || 'Tanpa Judul';
+      const fullNextTitle = nextItem.bahasa ? `${prefixTitle}${rawTitle} [${nextItem.bahasa}]` : `${prefixTitle}${rawTitle}`;
+
+      nextEpisodeTitle.innerText = fullNextTitle;
       nextEpisodeOverlay.classList.add('active');
 
-      nextBtnPlay.onclick = () => { cancelNextEpisodeOverlay(); playMovie(nextItem); };
-      nextBtnCancel.onclick = () => { cancelNextEpisodeOverlay(); userCancelledNextEpisode = true; };
+      nextBtnPlay.onclick = () => {
+        cancelNextEpisodeOverlay();
+        playMovie(nextItem);
+      };
+
+      nextBtnCancel.onclick = () => {
+        cancelNextEpisodeOverlay();
+        userCancelledNextEpisode = true;
+      };
     }
 
     function cancelNextEpisodeOverlay() {
-      if (nextEpisodeOverlay) nextEpisodeOverlay.classList.remove('active');
+      if (nextEpisodeOverlay) {
+        nextEpisodeOverlay.classList.remove('active');
+      }
     }
 
     function setupVideoEvents() {
       if (!videoPlayer) return;
-      videoPlayer.onplay = () => { playBtn.innerText = '⏸'; showControls(); };
-      videoPlayer.onpause = () => { playBtn.innerText = '▶'; showControls(); };
+      videoPlayer.onplay = () => {
+        playBtn.innerText = '⏸';
+        showControls();
+      };
+      videoPlayer.onpause = () => {
+        playBtn.innerText = '▶';
+        showControls();
+      };
       videoPlayer.onwaiting = () => videoContainer.classList.add('buffering');
       videoPlayer.onplaying = () => videoContainer.classList.remove('buffering');
       videoPlayer.ontimeupdate = () => {
         if (videoPlayer.duration && !isScrubbing) {
-          progressFill.style.width = `${(videoPlayer.currentTime / videoPlayer.duration) * 100}%`;
+          const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+          progressFill.style.width = `${pct}%`;
           timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
+          
           checkAndTriggerNextEpisode();
         }
       };
     }
 
     window.addEventListener('popstate', () => {
-      if (playerModal.classList.contains('active')) closePlayerModalOnly(false);
+      if (playerModal.classList.contains('active')) {
+        closePlayerModalOnly(false);
+      }
     });
 
     function closePlayerModalOnly(backHistory = true) {
       cancelNextEpisodeOverlay();
       playerModal.classList.remove('active');
       videoContainer.classList.remove('buffering');
-      if (videoPlayer) { videoPlayer.pause(); videoPlayer.currentTime = 0; videoPlayer.removeAttribute('src'); videoPlayer.load(); }
-      if (hls) { hls.destroy(); hls = null; }
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+      }
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
       if (document.fullscreenElement || document.webkitFullscreenElement) {
         if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
       }
-      if (backHistory && window.location.hash.includes('player')) history.back();
+      if (backHistory && window.location.hash.includes('player')) {
+        history.back();
+      }
     }
 
-    playBtn.onclick = () => { if (videoPlayer.paused) videoPlayer.play(); else videoPlayer.pause(); };
-    muteBtn.onclick = () => { videoPlayer.muted = !videoPlayer.muted; muteBtn.innerText = videoPlayer.muted ? '🔇' : '🔊'; };
+    playBtn.onclick = () => {
+      if (videoPlayer.paused) videoPlayer.play();
+      else videoPlayer.pause();
+    };
+
+    muteBtn.onclick = () => {
+      videoPlayer.muted = !videoPlayer.muted;
+      muteBtn.innerText = videoPlayer.muted ? '🔇' : '🔊';
+    };
 
     fullscreenBtn.onclick = async () => {
       if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (videoContainer.requestFullscreen) await videoContainer.requestFullscreen();
-        if (screen.orientation && screen.orientation.lock) screen.orientation.lock('landscape').catch(() => {});
+        try {
+          if (videoContainer.requestFullscreen) {
+            await videoContainer.requestFullscreen();
+          } else if (videoContainer.webkitRequestFullscreen) {
+            await videoContainer.webkitRequestFullscreen();
+          }
+
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(() => {});
+          }
+        } catch (err) {
+          console.error("Gagal masuk fullscreen:", err);
+        }
       } else {
-        if (document.exitFullscreen) await document.exitFullscreen();
-        if (screen.orientation && screen.orientation.unlock) screen.orientation.unlock().catch(() => {});
+        try {
+          if (document.exitFullscreen) {
+            await document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            await document.webkitExitFullscreen();
+          }
+
+          if (screen.orientation && screen.orientation.unlock) {
+            screen.orientation.unlock().catch(() => {});
+          }
+
+          setTimeout(() => {
+            if (playerSearchInput) playerSearchInput.blur();
+            if (searchInput) searchInput.blur();
+            window.focus();
+          }, 300);
+
+        } catch (err) {
+          console.error("Gagal keluar fullscreen:", err);
+        }
       }
       showControls();
     };
 
     function executeSearch(query) {
       const trimmedQuery = query.trim().toLowerCase();
-      let baseList = activeFilterType ? currentData.filter(item => {
-        let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
-        let koleksiDisplayName = item.bahasa ? `${itemKoleksiName} [${item.bahasa.trim()}]` : itemKoleksiName;
-        return itemKoleksiName === activeFilterValue || koleksiDisplayName === activeFilterValue || item.thn?.toString().trim() === activeFilterValue || item.bahasa?.toString().trim() === activeFilterValue;
-      }) : displayData;
+      
+      let baseList = currentData;
+      if (activeFilterType === 'koleksi') {
+        baseList = currentData.filter(item => {
+          let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
+          let koleksiDisplayName = itemKoleksiName;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
+          return itemKoleksiName === activeFilterValue || koleksiDisplayName === activeFilterValue;
+        });
+      } else if (activeFilterType === 'thn') {
+        baseList = currentData.filter(item => item.thn && item.thn.toString().trim() === activeFilterValue);
+      } else if (activeFilterType === 'bahasa') {
+        baseList = currentData.filter(item => item.bahasa && item.bahasa.toString().trim() === activeFilterValue);
+      } else {
+        baseList = displayData;
+      }
 
       if (trimmedQuery.length > 0) {
-        searchClearBtn?.classList.add('show');
-        playerSearchClearBtn?.classList.add('show');
+        if(searchClearBtn) searchClearBtn.classList.add('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
       } else {
-        searchClearBtn?.classList.remove('show');
-        playerSearchClearBtn?.classList.remove('show');
+        if(searchClearBtn) searchClearBtn.classList.remove('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
       }
 
       if (!trimmedQuery) {
@@ -1818,59 +2141,119 @@
         return;
       }
 
-      const matched = baseList.filter(m => (m.ttl || '').toLowerCase().includes(trimmedQuery) || (m.bahasa || '').toLowerCase().includes(trimmedQuery));
-      const unmatched = baseList.filter(m => !(m.ttl || '').toLowerCase().includes(trimmedQuery) && !(m.bahasa || '').toLowerCase().includes(trimmedQuery));
+      const matched = baseList.filter(movie => {
+        const title = (movie.ttl || '').toLowerCase();
+        const lang = (movie.bahasa || '').toLowerCase();
+        const ep = movie.episode !== undefined && movie.episode !== null ? movie.episode.toString().toLowerCase() : '';
+        const epFormat = `ep ${ep}`;
+        const epFormatAlt = `episode ${ep}`;
+        
+        return title.includes(trimmedQuery) || 
+               lang.includes(trimmedQuery) || 
+               ep.includes(trimmedQuery) || 
+               epFormat.includes(trimmedQuery) || 
+               epFormatAlt.includes(trimmedQuery);
+      });
+
+      const unmatched = baseList.filter(movie => {
+        const title = (movie.ttl || '').toLowerCase();
+        const lang = (movie.bahasa || '').toLowerCase();
+        const ep = movie.episode !== undefined && movie.episode !== null ? movie.episode.toString().toLowerCase() : '';
+        const epFormat = `ep ${ep}`;
+        const epFormatAlt = `episode ${ep}`;
+
+        return !title.includes(trimmedQuery) && 
+               !lang.includes(trimmedQuery) && 
+               !ep.includes(trimmedQuery) && 
+               !epFormat.includes(trimmedQuery) && 
+               !epFormatAlt.includes(trimmedQuery);
+      });
+
       const sortedList = [...matched, ...unmatched];
 
       renderMoviesTo(sortedList, movieGrid);
       renderMoviesTo(sortedList, playerMovieGrid);
+      
+      if(searchInput) searchInput.blur();
+      if(playerSearchInput) playerSearchInput.blur();
     }
 
     function triggerSearch() {
-      executeSearch(searchInput.value || (playerSearchInput ? playerSearchInput.value : ''));
+      const query = searchInput.value || (playerSearchInput ? playerSearchInput.value : '');
+      executeSearch(query);
     }
 
     function clearSearchInput() {
-      searchInput.value = '';
-      if (playerSearchInput) playerSearchInput.value = '';
-      searchClearBtn?.classList.remove('show');
-      playerSearchClearBtn?.classList.remove('show');
-      renderMoviesTo(displayData, movieGrid);
-      renderMoviesTo(displayData, playerMovieGrid);
+      if(searchInput) searchInput.value = '';
+      if(playerSearchInput) playerSearchInput.value = '';
+      if(searchClearBtn) searchClearBtn.classList.remove('show');
+      if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
+      
+      let baseList = currentData;
+      if (activeFilterType === 'koleksi') {
+        baseList = currentData.filter(item => {
+          let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
+          let koleksiDisplayName = itemKoleksiName;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
+          return itemKoleksiName === activeFilterValue || koleksiDisplayName === activeFilterValue;
+        });
+      } else if (activeFilterType === 'thn') {
+        baseList = currentData.filter(item => item.thn && item.thn.toString().trim() === activeFilterValue);
+      } else if (activeFilterType === 'bahasa') {
+        baseList = currentData.filter(item => item.bahasa && item.bahasa.toString().trim() === activeFilterValue);
+      } else {
+        baseList = displayData;
+      }
+      renderMoviesTo(baseList, movieGrid);
+      renderMoviesTo(baseList, playerMovieGrid);
     }
 
     searchInput.addEventListener('input', (e) => {
-      if (playerSearchInput) playerSearchInput.value = e.target.value;
-      if (e.target.value.trim().length > 0) searchClearBtn.classList.add('show');
-      else clearSearchInput();
+      const val = e.target.value;
+      if(playerSearchInput) playerSearchInput.value = val;
+      if (val.trim().length > 0) {
+        if(searchClearBtn) searchClearBtn.classList.add('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+      } else {
+        clearSearchInput();
+      }
     });
 
-    if (playerSearchInput) {
+    if(playerSearchInput) {
       playerSearchInput.addEventListener('input', (e) => {
-        searchInput.value = e.target.value;
-        if (e.target.value.trim().length > 0) playerSearchClearBtn.classList.add('show');
-        else clearSearchInput();
+        const val = e.target.value;
+        searchInput.value = val;
+        if (val.trim().length > 0) {
+          if(searchClearBtn) searchClearBtn.classList.add('show');
+          if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+        } else {
+          clearSearchInput();
+        }
       });
     }
 
-    searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') triggerSearch(); });
-    if (playerSearchInput) playerSearchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') triggerSearch(); });
-
-    window.onload = async () => {
-      await loadAutoSourceList();
-      setTimeout(() => { checkAppNotification(); }, 2500);
-
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('play') === 'true') {
-        const savedMovieStr = localStorage.getItem('selectedMovie');
-        if (savedMovieStr) {
-          const savedMovie = JSON.parse(savedMovieStr);
-          setTimeout(() => {
-            playMovie(savedMovie);
-            window.history.replaceState({}, document.title, window.location.pathname);
-          }, 600);
-        }
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        triggerSearch();
       }
+    });
+
+    if(playerSearchInput) {
+      playerSearchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          triggerSearch();
+        }
+      });
+    }
+
+    window.onload = () => {
+      loadAutoSourceList();
+      
+      setTimeout(() => {
+        checkAppNotification();
+      }, 2500);
     };
   </script>
 </body>
