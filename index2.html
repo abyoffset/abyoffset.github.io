@@ -473,7 +473,6 @@
       object-fit: cover;
     }
 
-    /* Badge Bahasa di Pojok Kiri Atas */
     .language-badge {
       position: absolute;
       top: 5px;
@@ -629,7 +628,6 @@
       to { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
-    /* NEXT EPISODE OVERLAY */
     .next-episode-overlay {
       position: absolute;
       bottom: 70px;
@@ -898,7 +896,6 @@
       font-family: monospace;
     }
 
-    /* PLAYER BAR & INTERACTIVE TITLE / KILASAN SECTION */
     .player-details-row {
       padding: 12px 16px 0 16px;
       width: 100%;
@@ -959,7 +956,6 @@
       color: var(--text-secondary);
       line-height: 1.6;
       display: none;
-      
       max-height: 150px;
       overflow-y: auto;
       scrollbar-width: thin;
@@ -1082,7 +1078,6 @@
         </details>
       </div>
 
-      <!-- Menu Bahasa Baru -->
       <div class="drawer-section">
         <details id="detailsBahasa">
           <summary class="drawer-section-title">Bahasa / Audio</summary>
@@ -1133,7 +1128,6 @@
             <div class="video-spinner" id="videoSpinner"></div>
           </div>
 
-          <!-- Next Episode Overlay -->
           <div class="next-episode-overlay" id="nextEpisodeOverlay">
             <div class="next-episode-content">
               <span class="next-label">Episode Berikutnya</span>
@@ -1175,7 +1169,6 @@
           </div>
         </div>
         
-        <!-- Bagian Judul Interaktif -->
         <div class="player-details-row">
           <div class="player-title-container" id="playerTitleContainer" onclick="togglePlayerTitleDetails()" data-has-kilasan="false">
             <div class="player-title-header">
@@ -1532,6 +1525,7 @@
     progressBar.addEventListener('mousemove', (e) => { if (!isScrubbing) updateScrubbing(e); });
     progressBar.addEventListener('mouseleave', () => { if (!isScrubbing) previewBox.classList.remove('active'); });
 
+    // FUNGSI RENDER DIOPTIMASI MENGGUNAKAN CHUNKED RENDERING AGAR TIDAK LEMOT DI AWAL
     function renderMoviesTo(data, targetContainer) {
       targetContainer.innerHTML = '';
       if (!data || data.length === 0) {
@@ -1539,18 +1533,16 @@
         return;
       }
 
+      const limit = 24;
+      const initialData = data.slice(0, limit);
       const fragment = document.createDocumentFragment();
-      data.forEach((movie) => {
+
+      initialData.forEach((movie) => {
         const card = document.createElement('div');
         card.className = 'movie-card';
         
         const bahasaBadge = movie.bahasa ? `<span class="language-badge">${movie.bahasa}</span>` : '';
-        
-        let prefixTitle = '';
-        if (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') {
-          prefixTitle = `Ep. ${movie.episode} `;
-        }
-
+        let prefixTitle = (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') ? `Ep. ${movie.episode} ` : '';
         let rawTitle = movie.ttl || 'Tanpa Judul';
         let displayTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
 
@@ -1568,6 +1560,35 @@
         fragment.appendChild(card);
       });
       targetContainer.appendChild(fragment);
+
+      if (data.length > limit) {
+        setTimeout(() => {
+          const remainingFragment = document.createDocumentFragment();
+          data.slice(limit).forEach((movie) => {
+            const card = document.createElement('div');
+            card.className = 'movie-card';
+            
+            const bahasaBadge = movie.bahasa ? `<span class="language-badge">${movie.bahasa}</span>` : '';
+            let prefixTitle = (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') ? `Ep. ${movie.episode} ` : '';
+            let rawTitle = movie.ttl || 'Tanpa Judul';
+            let displayTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
+
+            card.innerHTML = `
+              <div class="poster-wrapper">
+                <img src="${movie.logo || ''}" alt="${movie.ttl}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'">
+                ${bahasaBadge}
+                <span class="duration-badge">${movie.dur || 'N/A'}</span>
+              </div>
+              <div class="movie-info">
+                <div class="movie-title">${displayTitle}</div>
+              </div>
+            `;
+            card.onclick = () => playMovie(movie);
+            remainingFragment.appendChild(card);
+          });
+          targetContainer.appendChild(remainingFragment);
+        }, 50);
+      }
     }
 
     function renderMovies(data) {
@@ -1685,11 +1706,7 @@
             const epB = parseFloat(b.episode) || 0;
             return epA - epB;
           });
-        } else {
-          filtered = shuffleArray(filtered);
         }
-      } else {
-        filtered = shuffleArray(filtered);
       }
 
       displayData = filtered;
@@ -1710,6 +1727,7 @@
       if(appDrawer.classList.contains('active')) toggleDrawer();
     }
 
+    // FUNGSI FETCH DIOPTIMASI MENGGUNAKAN PROMISE.ALL AGAR BERJALAN PARALEL (CEPAT)
     async function loadAutoSourceList() {
       const githubJsonUrl = "index.json";
       try {
@@ -1719,26 +1737,36 @@
         const rootJson = await response.json();
         let sourceFiles = rootJson.source_list || [];
 
-        let allMovies = [];
-        for (const fileUrl of sourceFiles) {
+        const fetchPromises = sourceFiles.map(async (fileUrl) => {
           try {
             const subRes = await fetch(fileUrl);
             if (subRes.ok) {
               const subData = await subRes.json();
               if (Array.isArray(subData)) {
-                allMovies = allMovies.concat(subData);
+                return subData;
               } else if (typeof subData === 'object' && subData !== null) {
-                allMovies.push(subData);
+                return [subData];
               }
             }
           } catch (e) {
             console.error(`Gagal memuat file cabang: ${fileUrl}`, e);
           }
-        }
+          return [];
+        });
+
+        const results = await Promise.all(fetchPromises);
+        
+        let allMovies = [];
+        results.forEach(subDataArray => {
+          allMovies = allMovies.concat(subDataArray);
+        });
 
         if (allMovies.length > 0) {
           currentData = allMovies;
-          displayData = shuffleArray(currentData);
+          
+          // Kartu film diacak khusus untuk beranda (home), data asli tetap utuh
+          displayData = shuffleArray(currentData); 
+          
           renderMovies(displayData);
           buildDrawerMenus(currentData);
         } else {
@@ -1808,8 +1836,6 @@
       }
       
       videoPlayer = document.getElementById('videoPlayer');
-      
-      // Sinkronkan status mute video baru dengan status tombol UI saat ini
       videoPlayer.muted = (muteBtn.innerText === '🔇');
 
       let prefixTitle = '';
