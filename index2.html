@@ -1521,7 +1521,15 @@
         if (item.bahasa && item.bahasa.trim() !== "") itemKoleksiName += ` [${item.bahasa.trim()}]`;
         return itemKoleksiName === value;
       });
-      displayData = shuffleArray(filtered);
+
+      // Urutkan episode secara otomatis dari yang terkecil ke terbesar
+      filtered.sort((a, b) => {
+        let epA = parseInt(a.episode) || 0;
+        let epB = parseInt(b.episode) || 0;
+        return epA - epB;
+      });
+
+      displayData = filtered;
       renderMovies(displayData);
     }
 
