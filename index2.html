@@ -327,63 +327,6 @@
       color: var(--accent-color);
     }
 
-    /* TOGGLE SWITCH STYLE */
-    .toggle-switch-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #121215;
-      border: 1px solid #24242a;
-      color: var(--text-color);
-      padding: 12px 16px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      width: 100%;
-    }
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 42px;
-      height: 22px;
-    }
-
-    .switch input {
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background-color: #333;
-      transition: .3s;
-      border-radius: 22px;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 16px;
-      width: 16px;
-      left: 3px;
-      bottom: 3px;
-      background-color: white;
-      transition: .3s;
-      border-radius: 50%;
-    }
-
-    input:checked + .slider {
-      background-color: var(--accent-color);
-    }
-
-    input:checked + .slider:before {
-      transform: translateX(20px);
-    }
-
     .drawer-footer {
       padding: 16px 20px;
       border-top: 1px solid #2a2a30;
@@ -530,6 +473,23 @@
       object-fit: cover;
     }
 
+    /* Badge Bahasa di Pojok Kiri Atas */
+    .language-badge {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      background-color: rgba(229, 9, 20, 0.9);
+      color: #fff;
+      font-size: 0.48rem;
+      font-weight: 700;
+      padding: 3px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(255,255,255,0.15);
+      z-index: 2;
+    }
+
     .duration-badge {
       position: absolute;
       bottom: 8px;
@@ -541,6 +501,7 @@
       padding: 3px 7px;
       border-radius: 4px;
       border: 1px solid rgba(255,255,255,0.1);
+      z-index: 2;
     }
 
     .movie-info {
@@ -999,7 +960,6 @@
       line-height: 1.6;
       display: none;
       
-      /* Fitur Scroll Kilasan */
       max-height: 150px;
       overflow-y: auto;
       scrollbar-width: thin;
@@ -1122,15 +1082,12 @@
         </details>
       </div>
 
+      <!-- Menu Bahasa Baru -->
       <div class="drawer-section">
-        <div class="drawer-section-title" style="cursor: default; pointer-events: none;">Pengaturan Pemutar</div>
-        <div class="toggle-switch-container">
-          <span>Auto-Next Episode</span>
-          <label class="switch">
-            <input type="checkbox" id="autoNextToggle" onchange="toggleAutoNextSetting(this)">
-            <span class="slider"></span>
-          </label>
-        </div>
+        <details id="detailsBahasa">
+          <summary class="drawer-section-title">Bahasa / Audio</summary>
+          <div id="drawerBahasaList" class="drawer-dropdown-content"></div>
+        </details>
       </div>
 
       <div class="drawer-section">
@@ -1141,7 +1098,7 @@
       </div>
     </div>
     <div class="drawer-footer">
-      tiviku v2.5 &bull; by,C
+      tiviku v2.6 &bull; by,C
     </div>
   </div>
 
@@ -1299,10 +1256,8 @@
     let activeFilterType = null;
     let activeFilterValue = null;
     let pendingMovieData = null;
+    let selectedMovieToPlay = null; // Menyimpan film sementara untuk modal iklan
     let userCancelledNextEpisode = false;
-
-    // Load setting Auto-Next dari localStorage (default true jika belum diset)
-    let autoNextEnabled = localStorage.getItem('tiviku_auto_next') !== 'false';
 
     const nextEpisodeOverlay = document.getElementById('nextEpisodeOverlay');
     const nextEpisodeTitle = document.getElementById('nextEpisodeTitle');
@@ -1319,6 +1274,7 @@
     const playerModal = document.getElementById('playerModal');
     const drawerKoleksiList = document.getElementById('drawerKoleksiList');
     const drawerTahunList = document.getElementById('drawerTahunList');
+    const drawerBahasaList = document.getElementById('drawerBahasaList');
     const currentFilterTitle = document.getElementById('currentFilterTitle');
     const resetFilterBtn = document.getElementById('resetFilterBtn');
     
@@ -1346,17 +1302,27 @@
 
     const detailsKoleksi = document.getElementById('detailsKoleksi');
     const detailsTahun = document.getElementById('detailsTahun');
+    const detailsBahasa = document.getElementById('detailsBahasa');
 
-    if (detailsKoleksi && detailsTahun) {
+    if (detailsKoleksi && detailsTahun && detailsBahasa) {
       detailsKoleksi.addEventListener('toggle', function() {
         if (this.open) {
           detailsTahun.open = false;
+          detailsBahasa.open = false;
         }
       });
 
       detailsTahun.addEventListener('toggle', function() {
         if (this.open) {
           detailsKoleksi.open = false;
+          detailsBahasa.open = false;
+        }
+      });
+
+      detailsBahasa.addEventListener('toggle', function() {
+        if (this.open) {
+          detailsKoleksi.open = false;
+          detailsTahun.open = false;
         }
       });
     }
@@ -1376,25 +1342,10 @@
       drawerOverlay.classList.toggle('active');
     }
 
-    function toggleAutoNextSetting(checkbox) {
-      autoNextEnabled = checkbox.checked;
-      localStorage.setItem('tiviku_auto_next', autoNextEnabled);
-      if (!autoNextEnabled) {
-        cancelNextEpisodeOverlay();
-      }
-    }
-
-    function initAutoNextToggleUI() {
-      const toggleEl = document.getElementById('autoNextToggle');
-      if (toggleEl) {
-        toggleEl.checked = autoNextEnabled;
-      }
-    }
-
     function showAppInfo() {
       showCustomAlert(
         "Tentang Aplikasi",
-        "<b>tiviku v2.5</b><br>"
+        "<b>tiviku v2.6</b><br>"
       );
     }
 
@@ -1593,13 +1544,25 @@
       data.forEach((movie) => {
         const card = document.createElement('div');
         card.className = 'movie-card';
+        
+        const bahasaBadge = movie.bahasa ? `<span class="language-badge">${movie.bahasa}</span>` : '';
+        
+        let prefixTitle = '';
+        if (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') {
+          prefixTitle = `Ep. ${movie.episode} `;
+        }
+
+        let rawTitle = movie.ttl || 'Tanpa Judul';
+        let displayTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
+
         card.innerHTML = `
           <div class="poster-wrapper">
             <img src="${movie.logo || ''}" alt="${movie.ttl}" loading="lazy" decoding="async" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'">
+            ${bahasaBadge}
             <span class="duration-badge">${movie.dur || 'N/A'}</span>
           </div>
           <div class="movie-info">
-            <div class="movie-title">${movie.ttl || 'Tanpa Judul'}</div>
+            <div class="movie-title">${displayTitle}</div>
           </div>
         `;
         card.onclick = () => playMovie(movie);
@@ -1617,21 +1580,25 @@
       drawerKoleksiList.innerHTML = '';
       const koleksiMap = new Map();
       data.forEach(item => {
-        if (item.koleksi) {
-          koleksiMap.set(item.koleksi, (koleksiMap.get(item.koleksi) || 0) + 1);
+        if (item.koleksi && item.koleksi.trim() !== "") {
+          let koleksiName = item.koleksi.trim();
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiName = `${item.koleksi.trim()} [${item.bahasa.trim()}]`;
+          }
+          koleksiMap.set(koleksiName, (koleksiMap.get(koleksiName) || 0) + 1);
         }
       });
 
       if (koleksiMap.size === 0) {
         drawerKoleksiList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada koleksi</span>';
       } else {
-        koleksiMap.forEach((count, koleksiName) => {
+        koleksiMap.forEach((count, koleksiDisplayName) => {
           const btn = document.createElement('button');
-          const isActive = (activeFilterType === 'koleksi' && activeFilterValue === koleksiName);
+          const isActive = (activeFilterType === 'koleksi' && activeFilterValue === koleksiDisplayName);
           btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
-          btn.innerHTML = `<span>📂 ${koleksiName}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
+          btn.innerHTML = `<span>📂 ${koleksiDisplayName}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
           btn.onclick = () => {
-            filterBy('koleksi', koleksiName);
+            filterBy('koleksi', koleksiDisplayName);
             toggleDrawer();
           };
           drawerKoleksiList.appendChild(btn);
@@ -1663,6 +1630,31 @@
           drawerTahunList.appendChild(btn);
         });
       }
+
+      drawerBahasaList.innerHTML = '';
+      const bahasaMap = new Map();
+      data.forEach(item => {
+        if (item.bahasa && item.bahasa.toString().trim() !== "") {
+          const bahasaVal = item.bahasa.toString().trim();
+          bahasaMap.set(bahasaVal, (bahasaMap.get(bahasaVal) || 0) + 1);
+        }
+      });
+
+      if (bahasaMap.size === 0) {
+        drawerBahasaList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada data bahasa</span>';
+      } else {
+        bahasaMap.forEach((count, bahasaVal) => {
+          const btn = document.createElement('button');
+          const isActive = (activeFilterType === 'bahasa' && activeFilterValue === bahasaVal);
+          btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
+          btn.innerHTML = `<span>🌐 ${bahasaVal}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
+          btn.onclick = () => {
+            filterBy('bahasa', bahasaVal);
+            toggleDrawer();
+          };
+          drawerBahasaList.appendChild(btn);
+        });
+      }
     }
 
     function filterBy(type, value) {
@@ -1673,8 +1665,16 @@
       resetFilterBtn.classList.add('show');
 
       let filtered = currentData.filter(item => {
-        if (type === 'koleksi') return item.koleksi === value;
+        if (type === 'koleksi') {
+          let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
+          let koleksiDisplayName = itemKoleksiName;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
+          return itemKoleksiName === value || koleksiDisplayName === value;
+        }
         if (type === 'thn') return item.thn && item.thn.toString().trim() === value;
+        if (type === 'bahasa') return item.bahasa && item.bahasa.toString().trim() === value;
         return false;
       });
 
@@ -1776,18 +1776,52 @@
       }
     }
 
+    // Integrasi Modal Preview dan Iklan Adsterra saat kartu diklik
     function playMovie(movie) {
-      cancelNextEpisodeOverlay();
-      userCancelledNextEpisode = false;
-      pendingMovieData = movie;
+      selectedMovieToPlay = movie;
       
-      playerModal.classList.add('active');
-      if (!window.location.hash.includes('player')) {
-        history.pushState({ modalOpen: true }, '', '#player');
+      let prefixTitle = '';
+      if (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') {
+        prefixTitle = `Ep. ${movie.episode} `;
       }
+      let rawTitle = movie.ttl || 'Tanpa Judul';
+      let fullTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
 
-      clearSearchInput();
-      executeDirectPlay(movie);
+      showCustomAlert(
+        "Putar Film",
+        `<div style="text-align:center;">
+           <img src="${movie.logo || ''}" style="width:100px; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px;" onerror="this.src='https://via.placeholder.com/150x210?text=No+Image'"><br>
+           <b>${fullTitle}</b><br>
+           <span style="font-size:0.8rem; color:#aaa;">Durasi: ${movie.dur || '-'}</span>
+         </div>`,
+        `<button class="btn" onclick="triggerAdAndPlay()">Tonton Sekarang</button>
+         <button class="btn" style="background:#333; color:#ccc;" onclick="closeCustomAlert()">Batal</button>`
+      );
+    }
+
+    // Fungsi pemicu iklan Adsterra & eksekusi putar video
+    function triggerAdAndPlay() {
+      closeCustomAlert();
+      
+      // 1. Panggil script Social Bar Adsterra secara dinamis
+      const adScript = document.createElement('script');
+      adScript.src = "https://pl30775961.effectivecpmnetwork.com/d4/08/d1/d408d1c2d38eb5ffb20c4b45bd9cff56.js";
+      document.body.appendChild(adScript);
+
+      // 2. Buka pemutar video film
+      if (selectedMovieToPlay) {
+        cancelNextEpisodeOverlay();
+        userCancelledNextEpisode = false;
+        pendingMovieData = selectedMovieToPlay;
+        
+        playerModal.classList.add('active');
+        if (!window.location.hash.includes('player')) {
+          history.pushState({ modalOpen: true }, '', '#player');
+        }
+
+        clearSearchInput();
+        executeDirectPlay(selectedMovieToPlay);
+      }
     }
 
     function togglePlayerTitleDetails() {
@@ -1809,7 +1843,17 @@
       }
       
       videoPlayer = document.getElementById('videoPlayer');
-      playingTitle.innerText = movie.ttl || 'Playing Video';
+      
+      // Sinkronkan status mute video baru dengan status tombol UI saat ini
+      videoPlayer.muted = (muteBtn.innerText === '🔇');
+
+      let prefixTitle = '';
+      if (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') {
+        prefixTitle = `Ep. ${movie.episode} `;
+      }
+      let rawTitle = movie.ttl || 'Playing Video';
+      const fullPlayingTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
+      playingTitle.innerText = fullPlayingTitle;
 
       const titleContainer = document.getElementById('playerTitleContainer');
       const kilasanText = document.getElementById('playingKilasanText');
@@ -1826,7 +1870,17 @@
 
       applyPlayerCropConfig(movie);
 
-      const streamUrl = _decode(movie.lnk);
+      let rawLink = movie.lnk;
+      let chosenLink = "";
+
+      if (Array.isArray(rawLink) && rawLink.length > 0) {
+        const randomIndex = Math.floor(Math.random() * rawLink.length);
+        chosenLink = rawLink[randomIndex];
+      } else {
+        chosenLink = rawLink;
+      }
+
+      const streamUrl = _decode(chosenLink);
       videoContainer.classList.add('buffering');
 
       if (Hls.isSupported()) {
@@ -1861,7 +1915,6 @@
     }
 
     function checkAndTriggerNextEpisode() {
-      if (!autoNextEnabled) return;
       if (!videoPlayer || !videoPlayer.duration) return;
 
       if (!pendingMovieData || pendingMovieData.episode === undefined || pendingMovieData.episode === null || pendingMovieData.episode === "") {
@@ -1897,7 +1950,14 @@
 
       if (!nextItem) return;
 
-      nextEpisodeTitle.innerText = nextItem.ttl || `Episode ${nextItem.episode}`;
+      let prefixTitle = '';
+      if (nextItem.episode !== undefined && nextItem.episode !== null && nextItem.episode !== '') {
+        prefixTitle = `Ep. ${nextItem.episode} `;
+      }
+      let rawTitle = nextItem.ttl || 'Tanpa Judul';
+      const fullNextTitle = nextItem.bahasa ? `${prefixTitle}${rawTitle} [${nextItem.bahasa}]` : `${prefixTitle}${rawTitle}`;
+
+      nextEpisodeTitle.innerText = fullNextTitle;
       nextEpisodeOverlay.classList.add('active');
 
       nextBtnPlay.onclick = () => {
@@ -2024,9 +2084,18 @@
       
       let baseList = currentData;
       if (activeFilterType === 'koleksi') {
-        baseList = currentData.filter(item => item.koleksi === activeFilterValue);
+        baseList = currentData.filter(item => {
+          let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
+          let koleksiDisplayName = itemKoleksiName;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
+          return itemKoleksiName === activeFilterValue || koleksiDisplayName === activeFilterValue;
+        });
       } else if (activeFilterType === 'thn') {
         baseList = currentData.filter(item => item.thn && item.thn.toString().trim() === activeFilterValue);
+      } else if (activeFilterType === 'bahasa') {
+        baseList = currentData.filter(item => item.bahasa && item.bahasa.toString().trim() === activeFilterValue);
       } else {
         baseList = displayData;
       }
@@ -2045,8 +2114,34 @@
         return;
       }
 
-      const matched = baseList.filter(movie => (movie.ttl || '').toLowerCase().includes(trimmedQuery));
-      const unmatched = baseList.filter(movie => !(movie.ttl || '').toLowerCase().includes(trimmedQuery));
+      const matched = baseList.filter(movie => {
+        const title = (movie.ttl || '').toLowerCase();
+        const lang = (movie.bahasa || '').toLowerCase();
+        const ep = movie.episode !== undefined && movie.episode !== null ? movie.episode.toString().toLowerCase() : '';
+        const epFormat = `ep ${ep}`;
+        const epFormatAlt = `episode ${ep}`;
+        
+        return title.includes(trimmedQuery) || 
+               lang.includes(trimmedQuery) || 
+               ep.includes(trimmedQuery) || 
+               epFormat.includes(trimmedQuery) || 
+               epFormatAlt.includes(trimmedQuery);
+      });
+
+      const unmatched = baseList.filter(movie => {
+        const title = (movie.ttl || '').toLowerCase();
+        const lang = (movie.bahasa || '').toLowerCase();
+        const ep = movie.episode !== undefined && movie.episode !== null ? movie.episode.toString().toLowerCase() : '';
+        const epFormat = `ep ${ep}`;
+        const epFormatAlt = `episode ${ep}`;
+
+        return !title.includes(trimmedQuery) && 
+               !lang.includes(trimmedQuery) && 
+               !ep.includes(trimmedQuery) && 
+               !epFormat.includes(trimmedQuery) && 
+               !epFormatAlt.includes(trimmedQuery);
+      });
+
       const sortedList = [...matched, ...unmatched];
 
       renderMoviesTo(sortedList, movieGrid);
@@ -2069,9 +2164,18 @@
       
       let baseList = currentData;
       if (activeFilterType === 'koleksi') {
-        baseList = currentData.filter(item => item.koleksi === activeFilterValue);
+        baseList = currentData.filter(item => {
+          let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
+          let koleksiDisplayName = itemKoleksiName;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
+          return itemKoleksiName === activeFilterValue || koleksiDisplayName === activeFilterValue;
+        });
       } else if (activeFilterType === 'thn') {
         baseList = currentData.filter(item => item.thn && item.thn.toString().trim() === activeFilterValue);
+      } else if (activeFilterType === 'bahasa') {
+        baseList = currentData.filter(item => item.bahasa && item.bahasa.toString().trim() === activeFilterValue);
       } else {
         baseList = displayData;
       }
@@ -2118,7 +2222,6 @@
     }
 
     window.onload = () => {
-      initAutoNextToggleUI();
       loadAutoSourceList();
       
       setTimeout(() => {
