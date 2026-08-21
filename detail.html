@@ -116,7 +116,6 @@
             document.getElementById('score').innerText = data.score ? data.score + '%' : '85%';
             document.getElementById('meta').innerText = (data.thn || '202x') + ' • ' + (data.dur || 'N/A');
             
-            // Perbaikan logika penggabungan kategori & bahasa agar aman jika kosong
             let genreParts = [];
             if (data.koleksi && data.koleksi.trim() !== "") genreParts.push(data.koleksi.trim());
             if (data.bahasa && data.bahasa.trim() !== "") genreParts.push(data.bahasa.trim());
@@ -129,6 +128,7 @@
             document.getElementById('playBtn').style.display = 'none';
         }
 
+        // Aksi tombol tonton untuk kembali ke index2.html dan langsung memicu pemutaran video
         document.getElementById('playBtn').addEventListener('click', () => {
             window.location.href = 'index2.html?play=true';
         });

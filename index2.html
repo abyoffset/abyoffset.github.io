@@ -1632,7 +1632,6 @@
       videoPlayer.style.objectPosition = '50% 50%';
       videoPlayer.style.transform = 'none';
 
-      // Diperbaiki agar mendukung stretch_crop atau cover
       if (movie.crop_mode === 'cover' || movie.crop_mode === 'stretch_crop') {
         videoPlayer.style.objectFit = 'cover';
         videoPlayer.style.objectPosition = movie.crop_position || '50% 50%';
@@ -1857,8 +1856,8 @@
     searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') triggerSearch(); });
     if (playerSearchInput) playerSearchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') triggerSearch(); });
 
-    window.onload = () => {
-      loadAutoSourceList();
+    window.onload = async () => {
+      await loadAutoSourceList();
       setTimeout(() => { checkAppNotification(); }, 2500);
 
       const urlParams = new URLSearchParams(window.location.search);
