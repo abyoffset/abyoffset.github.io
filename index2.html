@@ -1706,7 +1706,11 @@
             const epB = parseFloat(b.episode) || 0;
             return epA - epB;
           });
+        } else {
+          filtered = shuffleArray(filtered);
         }
+      } else {
+        filtered = shuffleArray(filtered);
       }
 
       displayData = filtered;
@@ -1763,9 +1767,7 @@
 
         if (allMovies.length > 0) {
           currentData = allMovies;
-          
-          // Kartu film diacak khusus untuk beranda (home), data asli tetap utuh
-          displayData = shuffleArray(currentData); 
+          displayData = currentData; 
           
           renderMovies(displayData);
           buildDrawerMenus(currentData);
