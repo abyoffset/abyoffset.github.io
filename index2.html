@@ -1285,6 +1285,13 @@
     let currentTapSide = null;
     let resetAccumulatedTimeout = null;
 
+    // MENANGANI TOMBOL BACK / GESTURE KEMBALI DI PERANGKAT
+    window.addEventListener('popstate', (event) => {
+      if (playerModal.classList.contains('active')) {
+        closePlayerModal(false);
+      }
+    });
+
     function toggleDrawer() {
       appDrawer.classList.toggle('active');
       drawerOverlay.classList.toggle('active');
@@ -1559,6 +1566,26 @@
       executeDirectPlay(movie);
     }
 
+    function closePlayerModal(shouldGoBack = true) {
+      playerModal.classList.remove('active');
+      document.getElementById('playerTitleContainer').classList.remove('open');
+      
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.src = "";
+      }
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
+      
+      cancelNextEpisodeOverlay();
+
+      if (shouldGoBack && window.location.hash.includes('player')) {
+        history.back();
+      }
+    }
+
     function togglePlayerTitleDetails() {
       document.getElementById('playerTitleContainer').classList.toggle('open');
     }
@@ -1654,10 +1681,14 @@
 
     function executeSearch(query) {
       const q = query.trim().toLowerCase();
-      renderMoviesTo(currentData.filter(m => (m.ttl || '').toLowerCase().includes(q) || (m.bahasa || '').toLowerCase().includes(q)), movieGrid);
+      const results = currentData.filter(m => (m.ttl || '').toLowerCase().includes(q) || (m.bahasa || '').toLowerCase().includes(q));
+      
+      renderMoviesTo(results, movieGrid);
+      renderMoviesTo(results, playerMovieGrid);
     }
     
     searchInput.addEventListener('input', (e) => executeSearch(e.target.value));
+    playerSearchInput.addEventListener('input', (e) => executeSearch(e.target.value));
 
     window.onload = () => loadAutoSourceList();
   </script>
