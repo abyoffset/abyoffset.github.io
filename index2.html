@@ -473,6 +473,7 @@
       object-fit: cover;
     }
 
+    /* Badge Bahasa di Pojok Kiri Atas */
     .language-badge {
       position: absolute;
       top: 5px;
@@ -628,6 +629,7 @@
       to { transform: translate(-50%, -50%) rotate(360deg); }
     }
 
+    /* NEXT EPISODE OVERLAY */
     .next-episode-overlay {
       position: absolute;
       bottom: 70px;
@@ -896,6 +898,7 @@
       font-family: monospace;
     }
 
+    /* PLAYER BAR & INTERACTIVE TITLE / KILASAN SECTION */
     .player-details-row {
       padding: 12px 16px 0 16px;
       width: 100%;
@@ -956,6 +959,7 @@
       color: var(--text-secondary);
       line-height: 1.6;
       display: none;
+      
       max-height: 150px;
       overflow-y: auto;
       scrollbar-width: thin;
@@ -1030,12 +1034,14 @@
 </head>
 <body oncontextmenu="return false;">
 
+  <!-- LAYOUT ERROR OFFLINE -->
   <div id="offlineErrorContainer" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: #0f0f12; z-index: 99999; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 20px;">
     <h2 style="color: #e50914; margin-bottom: 10px; font-size: 1.5rem; font-weight: 700;">Koneksi Internet Terputus</h2>
     <p style="color: #a0a0a0; font-size: 0.95rem; margin-bottom: 24px;">Silakan periksa kembali jaringan Anda agar aplikasi dapat berjalan.</p>
     <button onclick="location.reload()" style="background-color: #e50914; color: white; border: none; padding: 10px 24px; border-radius: 20px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);">Coba Lagi</button>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="header-left">
       <button class="hamburger-btn" onclick="toggleDrawer()" title="Menu">
@@ -1053,6 +1059,7 @@
     </div>
   </header>
 
+  <!-- Drawer / Sidebar Menu -->
   <div id="drawerOverlay" class="drawer-overlay" onclick="toggleDrawer()"></div>
   <div id="appDrawer" class="drawer">
     <div class="drawer-header">
@@ -1060,6 +1067,7 @@
       <button class="drawer-close" onclick="toggleDrawer()">✕</button>
     </div>
     <div class="drawer-content">
+      
       <div class="drawer-section">
         <details id="detailsKoleksi">
           <summary class="drawer-section-title">Kategori</summary>
@@ -1074,6 +1082,7 @@
         </details>
       </div>
 
+      <!-- Menu Bahasa Baru -->
       <div class="drawer-section">
         <details id="detailsBahasa">
           <summary class="drawer-section-title">Bahasa / Audio</summary>
@@ -1093,6 +1102,7 @@
     </div>
   </div>
 
+  <!-- Custom Alert Modal -->
   <div id="customAlertModal" class="modal">
     <div class="modal-content">
       <h3 id="customAlertTitle">Informasi</h3>
@@ -1103,6 +1113,7 @@
     </div>
   </div>
 
+  <!-- Grid Utama -->
   <div class="container">
     <div class="section-info-bar">
       <span id="currentFilterTitle" class="current-filter-title">Semua Koleksi</span>
@@ -1111,6 +1122,7 @@
     <div id="movieGrid" class="movie-grid"></div>
   </div>
 
+  <!-- Player Modal -->
   <div id="playerModal" class="player-modal">
     <div class="player-inner">
 
@@ -1121,6 +1133,7 @@
             <div class="video-spinner" id="videoSpinner"></div>
           </div>
 
+          <!-- Next Episode Overlay -->
           <div class="next-episode-overlay" id="nextEpisodeOverlay">
             <div class="next-episode-content">
               <span class="next-label">Episode Berikutnya</span>
@@ -1162,6 +1175,7 @@
           </div>
         </div>
         
+        <!-- Bagian Judul Interaktif -->
         <div class="player-details-row">
           <div class="player-title-container" id="playerTitleContainer" onclick="togglePlayerTitleDetails()" data-has-kilasan="false">
             <div class="player-title-header">
@@ -1177,6 +1191,7 @@
             <button id="playerSearchClearBtn" class="search-clear-btn" onclick="clearSearchInput()">✕</button>
           </div>
         </div>
+
       </div>
 
       <div class="recommendation-header">Rekomendasi film lainnya</div>
@@ -1202,6 +1217,12 @@
       checkConnectionStatus();
       location.reload();
     });
+
+    const allowedDomain = ""; 
+    if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
+      document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
+      throw new Error("Unauthorized domain");
+    }
 
     function _decode(_0x3c21) {
       try {
@@ -1256,6 +1277,7 @@
     
     const videoContainer = document.getElementById('videoContainer');
     let videoPlayer = document.getElementById('videoPlayer');
+    const videoSpinner = document.getElementById('videoSpinner');
     const playingTitle = document.getElementById('playingTitle');
     
     const seekLeft = document.getElementById('seekLeft');
@@ -1275,6 +1297,33 @@
     const appDrawer = document.getElementById('appDrawer');
     const drawerOverlay = document.getElementById('drawerOverlay');
 
+    const detailsKoleksi = document.getElementById('detailsKoleksi');
+    const detailsTahun = document.getElementById('detailsTahun');
+    const detailsBahasa = document.getElementById('detailsBahasa');
+
+    if (detailsKoleksi && detailsTahun && detailsBahasa) {
+      detailsKoleksi.addEventListener('toggle', function() {
+        if (this.open) {
+          detailsTahun.open = false;
+          detailsBahasa.open = false;
+        }
+      });
+
+      detailsTahun.addEventListener('toggle', function() {
+        if (this.open) {
+          detailsKoleksi.open = false;
+          detailsBahasa.open = false;
+        }
+      });
+
+      detailsBahasa.addEventListener('toggle', function() {
+        if (this.open) {
+          detailsKoleksi.open = false;
+          detailsTahun.open = false;
+        }
+      });
+    }
+
     let hls = null;
     let controlsTimeout = null;
     let isScrubbing = false;
@@ -1285,20 +1334,44 @@
     let currentTapSide = null;
     let resetAccumulatedTimeout = null;
 
-    // MENANGANI TOMBOL BACK / GESTURE KEMBALI DI PERANGKAT
-    window.addEventListener('popstate', (event) => {
-      if (playerModal.classList.contains('active')) {
-        closePlayerModal(false);
-      }
-    });
-
     function toggleDrawer() {
       appDrawer.classList.toggle('active');
       drawerOverlay.classList.toggle('active');
     }
 
     function showAppInfo() {
-      showCustomAlert("Tentang Aplikasi", "<b>tiviku v2.6</b><br>");
+      showCustomAlert(
+        "Tentang Aplikasi",
+        "<b>tiviku v2.6</b><br>"
+      );
+    }
+
+    async function checkAppNotification() {
+      try {
+        const response = await fetch('notification.json?t=' + new Date().getTime());
+        if (!response.ok) return;
+        
+        const notif = await response.json();
+        
+        if (notif.active) {
+          const lastReadId = localStorage.getItem('last_read_notif_id');
+          
+          if (lastReadId !== notif.id) {
+            showCustomAlert(
+              notif.title,
+              notif.message,
+              `<button class="btn" onclick="markNotifAsRead('${notif.id}')">Mengerti</button>`
+            );
+          }
+        }
+      } catch (error) {
+        console.log("Gagal memuat notifikasi:", error);
+      }
+    }
+
+    function markNotifAsRead(id) {
+      localStorage.setItem('last_read_notif_id', id);
+      closeCustomAlert();
     }
 
     function shuffleArray(array) {
@@ -1398,6 +1471,7 @@
 
     function formatTime(seconds) {
       if (isNaN(seconds) || seconds < 0) return "00:00";
+      
       const hrs = Math.floor(seconds / 3600);
       const min = Math.floor((seconds % 3600) / 60);
       const sec = Math.floor(seconds % 60);
@@ -1453,6 +1527,8 @@
 
     progressBar.addEventListener('mousedown', startScrubbing);
     progressBar.addEventListener('touchstart', startScrubbing, { passive: true });
+    progressBar.addEventListener('mousemove', (e) => { if (!isScrubbing) updateScrubbing(e); });
+    progressBar.addEventListener('mouseleave', () => { if (!isScrubbing) previewBox.classList.remove('active'); });
 
     function renderMoviesTo(data, targetContainer) {
       targetContainer.innerHTML = '';
@@ -1465,9 +1541,16 @@
       data.forEach((movie) => {
         const card = document.createElement('div');
         card.className = 'movie-card';
+        
         const bahasaBadge = movie.bahasa ? `<span class="language-badge">${movie.bahasa}</span>` : '';
-        let prefixTitle = movie.episode ? `Ep. ${movie.episode} ` : '';
-        let displayTitle = `${prefixTitle}${movie.ttl || 'Tanpa Judul'}${movie.bahasa ? ` [${movie.bahasa}]` : ''}`;
+        
+        let prefixTitle = '';
+        if (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') {
+          prefixTitle = `Ep. ${movie.episode} `;
+        }
+
+        let rawTitle = movie.ttl || 'Tanpa Judul';
+        let displayTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
 
         card.innerHTML = `
           <div class="poster-wrapper">
@@ -1496,33 +1579,120 @@
       data.forEach(item => {
         if (item.koleksi && item.koleksi.trim() !== "") {
           let koleksiName = item.koleksi.trim();
-          if (item.bahasa && item.bahasa.trim() !== "") koleksiName += ` [${item.bahasa.trim()}]`;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiName = `${item.koleksi.trim()} [${item.bahasa.trim()}]`;
+          }
           koleksiMap.set(koleksiName, (koleksiMap.get(koleksiName) || 0) + 1);
         }
       });
 
-      koleksiMap.forEach((count, koleksiDisplayName) => {
-        const btn = document.createElement('button');
-        btn.className = `drawer-item ${activeFilterType === 'koleksi' && activeFilterValue === koleksiDisplayName ? 'active-filter' : ''}`;
-        btn.innerHTML = `<span>📂 ${koleksiDisplayName}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
-        btn.onclick = () => { filterBy('koleksi', koleksiDisplayName); toggleDrawer(); };
-        drawerKoleksiList.appendChild(btn);
+      if (koleksiMap.size === 0) {
+        drawerKoleksiList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada koleksi</span>';
+      } else {
+        koleksiMap.forEach((count, koleksiDisplayName) => {
+          const btn = document.createElement('button');
+          const isActive = (activeFilterType === 'koleksi' && activeFilterValue === koleksiDisplayName);
+          btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
+          btn.innerHTML = `<span>📂 ${koleksiDisplayName}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
+          btn.onclick = () => {
+            filterBy('koleksi', koleksiDisplayName);
+            toggleDrawer();
+          };
+          drawerKoleksiList.appendChild(btn);
+        });
+      }
+
+      drawerTahunList.innerHTML = '';
+      const tahunMap = new Map();
+      data.forEach(item => {
+        if (item.thn && item.thn.toString().trim() !== "") {
+          const tahunVal = item.thn.toString().trim();
+          tahunMap.set(tahunVal, (tahunMap.get(tahunVal) || 0) + 1);
+        }
       });
+
+      if (tahunMap.size === 0) {
+        drawerTahunList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada data tahun</span>';
+      } else {
+        const sortedTahun = Array.from(tahunMap.keys()).sort((a, b) => b.localeCompare(a));
+        sortedTahun.forEach(tahunVal => {
+          const btn = document.createElement('button');
+          const isActive = (activeFilterType === 'thn' && activeFilterValue === tahunVal);
+          btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
+          btn.innerHTML = `<span>📅 ${tahunVal}</span>`;
+          btn.onclick = () => {
+            filterBy('thn', tahunVal);
+            toggleDrawer();
+          };
+          drawerTahunList.appendChild(btn);
+        });
+      }
+
+      drawerBahasaList.innerHTML = '';
+      const bahasaMap = new Map();
+      data.forEach(item => {
+        if (item.bahasa && item.bahasa.toString().trim() !== "") {
+          const bahasaVal = item.bahasa.toString().trim();
+          bahasaMap.set(bahasaVal, (bahasaMap.get(bahasaVal) || 0) + 1);
+        }
+      });
+
+      if (bahasaMap.size === 0) {
+        drawerBahasaList.innerHTML = '<span style="font-size:0.85rem; color:#666;">Tidak ada data bahasa</span>';
+      } else {
+        bahasaMap.forEach((count, bahasaVal) => {
+          const btn = document.createElement('button');
+          const isActive = (activeFilterType === 'bahasa' && activeFilterValue === bahasaVal);
+          btn.className = `drawer-item ${isActive ? 'active-filter' : ''}`;
+          btn.innerHTML = `<span>🌐 ${bahasaVal}</span> <span style="font-size:0.75rem; background:#222; padding:2px 6px; border-radius:10px; color:#aaa;">${count}</span>`;
+          btn.onclick = () => {
+            filterBy('bahasa', bahasaVal);
+            toggleDrawer();
+          };
+          drawerBahasaList.appendChild(btn);
+        });
+      }
     }
 
     function filterBy(type, value) {
       activeFilterType = type;
       activeFilterValue = value;
+      
       currentFilterTitle.innerText = value;
       resetFilterBtn.classList.add('show');
 
       let filtered = currentData.filter(item => {
-        let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
-        if (item.bahasa && item.bahasa.trim() !== "") itemKoleksiName += ` [${item.bahasa.trim()}]`;
-        return itemKoleksiName === value;
+        if (type === 'koleksi') {
+          let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
+          let koleksiDisplayName = itemKoleksiName;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
+          return itemKoleksiName === value || koleksiDisplayName === value;
+        }
+        if (type === 'thn') return item.thn && item.thn.toString().trim() === value;
+        if (type === 'bahasa') return item.bahasa && item.bahasa.toString().trim() === value;
+        return false;
       });
-      displayData = shuffleArray(filtered);
+
+      if (type === 'koleksi') {
+        const hasEpisode = filtered.some(item => item.episode !== undefined && item.episode !== null && item.episode !== "");
+        if (hasEpisode) {
+          filtered.sort((a, b) => {
+            const epA = parseFloat(a.episode) || 0;
+            const epB = parseFloat(b.episode) || 0;
+            return epA - epB;
+          });
+        } else {
+          filtered = shuffleArray(filtered);
+        }
+      } else {
+        filtered = shuffleArray(filtered);
+      }
+
+      displayData = filtered;
       renderMovies(displayData);
+      buildDrawerMenus(currentData);
     }
 
     function resetFilter() {
@@ -1530,64 +1700,96 @@
       activeFilterValue = null;
       currentFilterTitle.innerText = "Semua Koleksi";
       resetFilterBtn.classList.remove('show');
+      clearSearchInput();
+      
       displayData = shuffleArray(currentData);
       renderMovies(displayData);
+      buildDrawerMenus(currentData);
       if(appDrawer.classList.contains('active')) toggleDrawer();
     }
 
     async function loadAutoSourceList() {
+      const githubJsonUrl = "index.json";
       try {
-        const response = await fetch("index.json");
+        const response = await fetch(githubJsonUrl);
+        if (!response.ok) throw new Error("Gagal mengambil data index.json");
+        
         const rootJson = await response.json();
+        let sourceFiles = rootJson.source_list || [];
+
         let allMovies = [];
-        for (const fileUrl of (rootJson.source_list || [])) {
-          const subRes = await fetch(fileUrl);
-          if (subRes.ok) {
-            const subData = await subRes.json();
-            allMovies = allMovies.concat(Array.isArray(subData) ? subData : [subData]);
+        for (const fileUrl of sourceFiles) {
+          try {
+            const subRes = await fetch(fileUrl);
+            if (subRes.ok) {
+              const subData = await subRes.json();
+              if (Array.isArray(subData)) {
+                allMovies = allMovies.concat(subData);
+              } else if (typeof subData === 'object' && subData !== null) {
+                allMovies.push(subData);
+              }
+            }
+          } catch (e) {
+            console.error(`Gagal memuat file cabang: ${fileUrl}`, e);
           }
         }
-        currentData = allMovies;
-        displayData = shuffleArray(currentData);
-        renderMovies(displayData);
-        buildDrawerMenus(currentData);
+
+        if (allMovies.length > 0) {
+          currentData = allMovies;
+          displayData = shuffleArray(currentData);
+          renderMovies(displayData);
+          buildDrawerMenus(currentData);
+        } else {
+          renderMovies([]);
+        }
       } catch (err) {
+        console.error("Gagal memuat otomatis:", err.message);
         renderMovies([]);
+      }
+    }
+
+    function applyPlayerCropConfig(movie) {
+      const cropMode = movie.crop_mode || (movie.crop_scale ? 'fill_width' : 'fill');
+      const cropPosition = movie.crop_position || '50% 50%';
+      const cropScale = parseFloat(movie.crop_scale) || 1.2;
+
+      videoPlayer.style.objectFit = 'fill';
+      videoPlayer.style.objectPosition = '50% 50%';
+      videoPlayer.style.transform = 'none';
+
+      if (cropMode === 'cover') {
+        videoPlayer.style.objectFit = 'cover';
+        videoPlayer.style.objectPosition = cropPosition;
+      } else if (cropMode === 'stretch_crop') {
+        videoPlayer.style.objectFit = 'fill';
+        videoPlayer.style.transform = `scaleY(${cropScale})`;
+        videoPlayer.style.objectPosition = '50% 50%';
+      } else if (cropMode === 'fill_width') {
+        videoPlayer.style.objectFit = 'fill';
+        videoPlayer.style.transform = `scaleY(${cropScale})`;
+        videoPlayer.style.objectPosition = '50% 50%';
+      } else {
+        videoPlayer.style.objectFit = 'fill';
       }
     }
 
     function playMovie(movie) {
       cancelNextEpisodeOverlay();
+      userCancelledNextEpisode = false;
       pendingMovieData = movie;
+      
       playerModal.classList.add('active');
       if (!window.location.hash.includes('player')) {
         history.pushState({ modalOpen: true }, '', '#player');
       }
+
+      clearSearchInput();
       executeDirectPlay(movie);
     }
 
-    function closePlayerModal(shouldGoBack = true) {
-      playerModal.classList.remove('active');
-      document.getElementById('playerTitleContainer').classList.remove('open');
-      
-      if (videoPlayer) {
-        videoPlayer.pause();
-        videoPlayer.src = "";
-      }
-      if (hls) {
-        hls.destroy();
-        hls = null;
-      }
-      
-      cancelNextEpisodeOverlay();
-
-      if (shouldGoBack && window.location.hash.includes('player')) {
-        history.back();
-      }
-    }
-
     function togglePlayerTitleDetails() {
-      document.getElementById('playerTitleContainer').classList.toggle('open');
+      const container = document.getElementById('playerTitleContainer');
+      container.classList.toggle('open');
     }
 
     function executeDirectPlay(movie) {
@@ -1598,16 +1800,29 @@
         <video id="videoPlayer" playsinline></video>
         <div class="video-spinner" id="videoSpinner"></div>
       `;
-      if (existingOverlay) videoWrapper.appendChild(existingOverlay);
+      
+      if (existingOverlay) {
+        videoWrapper.appendChild(existingOverlay);
+      }
       
       videoPlayer = document.getElementById('videoPlayer');
+      
+      // Sinkronkan status mute video baru dengan status tombol UI saat ini
       videoPlayer.muted = (muteBtn.innerText === '🔇');
 
-      let prefixTitle = movie.episode ? `Ep. ${movie.episode} ` : '';
-      playingTitle.innerText = `${prefixTitle}${movie.ttl || 'Playing'}${movie.bahasa ? ` [${movie.bahasa}]` : ''}`;
+      let prefixTitle = '';
+      if (movie.episode !== undefined && movie.episode !== null && movie.episode !== '') {
+        prefixTitle = `Ep. ${movie.episode} `;
+      }
+      let rawTitle = movie.ttl || 'Playing Video';
+      const fullPlayingTitle = movie.bahasa ? `${prefixTitle}${rawTitle} [${movie.bahasa}]` : `${prefixTitle}${rawTitle}`;
+      playingTitle.innerText = fullPlayingTitle;
 
       const titleContainer = document.getElementById('playerTitleContainer');
       const kilasanText = document.getElementById('playingKilasanText');
+
+      titleContainer.classList.remove('open');
+
       if (movie.kilasan && movie.kilasan.trim() !== "") {
         kilasanText.innerText = movie.kilasan;
         titleContainer.dataset.hasKilasan = "true";
@@ -1616,7 +1831,19 @@
         titleContainer.dataset.hasKilasan = "false";
       }
 
-      const streamUrl = _decode(Array.isArray(movie.lnk) ? movie.lnk[Math.floor(Math.random() * movie.lnk.length)] : movie.lnk);
+      applyPlayerCropConfig(movie);
+
+      let rawLink = movie.lnk;
+      let chosenLink = "";
+
+      if (Array.isArray(rawLink) && rawLink.length > 0) {
+        const randomIndex = Math.floor(Math.random() * rawLink.length);
+        chosenLink = rawLink[randomIndex];
+      } else {
+        chosenLink = rawLink;
+      }
+
+      const streamUrl = _decode(chosenLink);
       videoContainer.classList.add('buffering');
 
       if (Hls.isSupported()) {
@@ -1624,73 +1851,343 @@
         hls = new Hls({
           maxBufferLength: 15,
           maxMaxBufferLength: 30,
-          enableWorker: true
+          enableWorker: true,
+          xhrSetup: function (xhr, url) {
+            if (url.includes("tiviku_system.bin") || url.includes(".key")) {
+              xhr.open('GET', 'file:///android_asset/tiviku_system.bin', true);
+            }
+          }
         });
         hls.loadSource(streamUrl);
         hls.attachMedia(videoPlayer);
-        hls.on(Hls.Events.MANIFEST_PARSED, () => videoPlayer.play().catch(() => {}));
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          videoPlayer.play().catch(() => {});
+        });
       } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
         videoPlayer.src = streamUrl;
-        videoPlayer.addEventListener('loadedmetadata', () => videoPlayer.play().catch(() => {}));
+        videoPlayer.addEventListener('loadedmetadata', () => {
+          videoPlayer.play().catch(() => {});
+        });
       }
+
       setupVideoEvents();
       showControls();
     }
 
     function checkAndTriggerNextEpisode() {
-      if (!videoPlayer || !videoPlayer.duration || userCancelledNextEpisode) return;
-      if (!pendingMovieData || !pendingMovieData.episode) return;
+      if (!videoPlayer || !videoPlayer.duration) return;
+
+      if (!pendingMovieData || pendingMovieData.episode === undefined || pendingMovieData.episode === null || pendingMovieData.episode === "") {
+        return;
+      }
+
+      if (userCancelledNextEpisode) return;
+
       const timeLeft = videoPlayer.duration - videoPlayer.currentTime;
-      if (timeLeft <= 4 && timeLeft > 0 && !nextEpisodeOverlay.classList.contains('active')) {
-        nextEpisodeOverlay.classList.add('active');
+      
+      if (timeLeft <= 4 && timeLeft > 0) {
+        if (!isOverlayShown()) {
+          showNextEpisodeOverlay();
+        }
+      } else if (timeLeft > 4 && isOverlayShown()) {
+        cancelNextEpisodeOverlay();
       }
     }
 
+    function isOverlayShown() {
+      return nextEpisodeOverlay.classList.contains('active');
+    }
+
+    function showNextEpisodeOverlay() {
+      const currentCollection = pendingMovieData.koleksi;
+      const currentEpNum = parseFloat(pendingMovieData.episode);
+      
+      const collectionItems = currentData.filter(item => item.koleksi === currentCollection && item.episode !== undefined && item.episode !== null && item.episode !== "");
+      collectionItems.sort((a, b) => (parseFloat(a.episode) || 0) - (parseFloat(b.episode) || 0));
+
+      const currentIndex = collectionItems.findIndex(item => parseFloat(item.episode) === currentEpNum);
+      const nextItem = (currentIndex !== -1 && currentIndex < collectionItems.length - 1) ? collectionItems[currentIndex + 1] : null;
+
+      if (!nextItem) return;
+
+      let prefixTitle = '';
+      if (nextItem.episode !== undefined && nextItem.episode !== null && nextItem.episode !== '') {
+        prefixTitle = `Ep. ${nextItem.episode} `;
+      }
+      let rawTitle = nextItem.ttl || 'Tanpa Judul';
+      const fullNextTitle = nextItem.bahasa ? `${prefixTitle}${rawTitle} [${nextItem.bahasa}]` : `${prefixTitle}${rawTitle}`;
+
+      nextEpisodeTitle.innerText = fullNextTitle;
+      nextEpisodeOverlay.classList.add('active');
+
+      nextBtnPlay.onclick = () => {
+        cancelNextEpisodeOverlay();
+        playMovie(nextItem);
+      };
+
+      nextBtnCancel.onclick = () => {
+        cancelNextEpisodeOverlay();
+        userCancelledNextEpisode = true;
+      };
+    }
+
     function cancelNextEpisodeOverlay() {
-      nextEpisodeOverlay.classList.remove('active');
+      if (nextEpisodeOverlay) {
+        nextEpisodeOverlay.classList.remove('active');
+      }
     }
 
     function setupVideoEvents() {
       if (!videoPlayer) return;
-      videoPlayer.onplay = () => { playBtn.innerText = '⏸'; showControls(); };
-      videoPlayer.onpause = () => { playBtn.innerText = '▶'; showControls(); };
+      videoPlayer.onplay = () => {
+        playBtn.innerText = '⏸';
+        showControls();
+      };
+      videoPlayer.onpause = () => {
+        playBtn.innerText = '▶';
+        showControls();
+      };
       videoPlayer.onwaiting = () => videoContainer.classList.add('buffering');
       videoPlayer.onplaying = () => videoContainer.classList.remove('buffering');
       videoPlayer.ontimeupdate = () => {
         if (videoPlayer.duration && !isScrubbing) {
-          progressFill.style.width = `${(videoPlayer.currentTime / videoPlayer.duration) * 100}%`;
+          const pct = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+          progressFill.style.width = `${pct}%`;
           timeDisplay.innerText = `${formatTime(videoPlayer.currentTime)} / ${formatTime(videoPlayer.duration)}`;
+          
           checkAndTriggerNextEpisode();
         }
       };
     }
 
-    playBtn.onclick = () => { if (videoPlayer.paused) videoPlayer.play(); else videoPlayer.pause(); };
-    muteBtn.onclick = () => { videoPlayer.muted = !videoPlayer.muted; muteBtn.innerText = videoPlayer.muted ? '🔇' : '🔊'; };
+    window.addEventListener('popstate', () => {
+      if (playerModal.classList.contains('active')) {
+        closePlayerModalOnly(false);
+      }
+    });
+
+    function closePlayerModalOnly(backHistory = true) {
+      cancelNextEpisodeOverlay();
+      playerModal.classList.remove('active');
+      videoContainer.classList.remove('buffering');
+      if (videoPlayer) {
+        videoPlayer.pause();
+        videoPlayer.currentTime = 0;
+        videoPlayer.removeAttribute('src');
+        videoPlayer.load();
+      }
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
+      if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+        else if (document.webkitExitFullscreen) document.webkitExitFullscreen().catch(() => {});
+      }
+      if (backHistory && window.location.hash.includes('player')) {
+        history.back();
+      }
+    }
+
+    playBtn.onclick = () => {
+      if (videoPlayer.paused) videoPlayer.play();
+      else videoPlayer.pause();
+    };
+
+    muteBtn.onclick = () => {
+      videoPlayer.muted = !videoPlayer.muted;
+      muteBtn.innerText = videoPlayer.muted ? '🔇' : '🔊';
+    };
 
     fullscreenBtn.onclick = async () => {
       if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (videoContainer.requestFullscreen) await videoContainer.requestFullscreen();
-        if (screen.orientation) screen.orientation.lock('landscape').catch(() => {});
+        try {
+          if (videoContainer.requestFullscreen) {
+            await videoContainer.requestFullscreen();
+          } else if (videoContainer.webkitRequestFullscreen) {
+            await videoContainer.webkitRequestFullscreen();
+          }
+
+          if (screen.orientation && screen.orientation.lock) {
+            screen.orientation.lock('landscape').catch(() => {});
+          }
+        } catch (err) {
+          console.error("Gagal masuk fullscreen:", err);
+        }
       } else {
-        if (document.exitFullscreen) await document.exitFullscreen();
-        if (screen.orientation) screen.orientation.unlock().catch(() => {});
+        try {
+          if (document.exitFullscreen) {
+            await document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            await document.webkitExitFullscreen();
+          }
+
+          if (screen.orientation && screen.orientation.unlock) {
+            screen.orientation.unlock().catch(() => {});
+          }
+
+          setTimeout(() => {
+            if (playerSearchInput) playerSearchInput.blur();
+            if (searchInput) searchInput.blur();
+            window.focus();
+          }, 300);
+
+        } catch (err) {
+          console.error("Gagal keluar fullscreen:", err);
+        }
       }
       showControls();
     };
 
     function executeSearch(query) {
-      const q = query.trim().toLowerCase();
-      const results = currentData.filter(m => (m.ttl || '').toLowerCase().includes(q) || (m.bahasa || '').toLowerCase().includes(q));
+      const trimmedQuery = query.trim().toLowerCase();
       
-      renderMoviesTo(results, movieGrid);
-      renderMoviesTo(results, playerMovieGrid);
-    }
-    
-    searchInput.addEventListener('input', (e) => executeSearch(e.target.value));
-    playerSearchInput.addEventListener('input', (e) => executeSearch(e.target.value));
+      let baseList = currentData;
+      if (activeFilterType === 'koleksi') {
+        baseList = currentData.filter(item => {
+          let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
+          let koleksiDisplayName = itemKoleksiName;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
+          return itemKoleksiName === activeFilterValue || koleksiDisplayName === activeFilterValue;
+        });
+      } else if (activeFilterType === 'thn') {
+        baseList = currentData.filter(item => item.thn && item.thn.toString().trim() === activeFilterValue);
+      } else if (activeFilterType === 'bahasa') {
+        baseList = currentData.filter(item => item.bahasa && item.bahasa.toString().trim() === activeFilterValue);
+      } else {
+        baseList = displayData;
+      }
 
-    window.onload = () => loadAutoSourceList();
+      if (trimmedQuery.length > 0) {
+        if(searchClearBtn) searchClearBtn.classList.add('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+      } else {
+        if(searchClearBtn) searchClearBtn.classList.remove('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
+      }
+
+      if (!trimmedQuery) {
+        renderMoviesTo(baseList, movieGrid);
+        renderMoviesTo(baseList, playerMovieGrid);
+        return;
+      }
+
+      const matched = baseList.filter(movie => {
+        const title = (movie.ttl || '').toLowerCase();
+        const lang = (movie.bahasa || '').toLowerCase();
+        const ep = movie.episode !== undefined && movie.episode !== null ? movie.episode.toString().toLowerCase() : '';
+        const epFormat = `ep ${ep}`;
+        const epFormatAlt = `episode ${ep}`;
+        
+        return title.includes(trimmedQuery) || 
+               lang.includes(trimmedQuery) || 
+               ep.includes(trimmedQuery) || 
+               epFormat.includes(trimmedQuery) || 
+               epFormatAlt.includes(trimmedQuery);
+      });
+
+      const unmatched = baseList.filter(movie => {
+        const title = (movie.ttl || '').toLowerCase();
+        const lang = (movie.bahasa || '').toLowerCase();
+        const ep = movie.episode !== undefined && movie.episode !== null ? movie.episode.toString().toLowerCase() : '';
+        const epFormat = `ep ${ep}`;
+        const epFormatAlt = `episode ${ep}`;
+
+        return !title.includes(trimmedQuery) && 
+               !lang.includes(trimmedQuery) && 
+               !ep.includes(trimmedQuery) && 
+               !epFormat.includes(trimmedQuery) && 
+               !epFormatAlt.includes(trimmedQuery);
+      });
+
+      const sortedList = [...matched, ...unmatched];
+
+      renderMoviesTo(sortedList, movieGrid);
+      renderMoviesTo(sortedList, playerMovieGrid);
+      
+      if(searchInput) searchInput.blur();
+      if(playerSearchInput) playerSearchInput.blur();
+    }
+
+    function triggerSearch() {
+      const query = searchInput.value || (playerSearchInput ? playerSearchInput.value : '');
+      executeSearch(query);
+    }
+
+    function clearSearchInput() {
+      if(searchInput) searchInput.value = '';
+      if(playerSearchInput) playerSearchInput.value = '';
+      if(searchClearBtn) searchClearBtn.classList.remove('show');
+      if(playerSearchClearBtn) playerSearchClearBtn.classList.remove('show');
+      
+      let baseList = currentData;
+      if (activeFilterType === 'koleksi') {
+        baseList = currentData.filter(item => {
+          let itemKoleksiName = item.koleksi ? item.koleksi.trim() : "";
+          let koleksiDisplayName = itemKoleksiName;
+          if (item.bahasa && item.bahasa.trim() !== "") {
+            koleksiDisplayName = `${itemKoleksiName} [${item.bahasa.trim()}]`;
+          }
+          return itemKoleksiName === activeFilterValue || koleksiDisplayName === activeFilterValue;
+        });
+      } else if (activeFilterType === 'thn') {
+        baseList = currentData.filter(item => item.thn && item.thn.toString().trim() === activeFilterValue);
+      } else if (activeFilterType === 'bahasa') {
+        baseList = currentData.filter(item => item.bahasa && item.bahasa.toString().trim() === activeFilterValue);
+      } else {
+        baseList = displayData;
+      }
+      renderMoviesTo(baseList, movieGrid);
+      renderMoviesTo(baseList, playerMovieGrid);
+    }
+
+    searchInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      if(playerSearchInput) playerSearchInput.value = val;
+      if (val.trim().length > 0) {
+        if(searchClearBtn) searchClearBtn.classList.add('show');
+        if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+      } else {
+        clearSearchInput();
+      }
+    });
+
+    if(playerSearchInput) {
+      playerSearchInput.addEventListener('input', (e) => {
+        const val = e.target.value;
+        searchInput.value = val;
+        if (val.trim().length > 0) {
+          if(searchClearBtn) searchClearBtn.classList.add('show');
+          if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+        } else {
+          clearSearchInput();
+        }
+      });
+    }
+
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        triggerSearch();
+      }
+    });
+
+    if(playerSearchInput) {
+      playerSearchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          triggerSearch();
+        }
+      });
+    }
+
+    window.onload = () => {
+      loadAutoSourceList();
+      
+      setTimeout(() => {
+        checkAppNotification();
+      }, 2500);
+    };
   </script>
 </body>
 </html>
