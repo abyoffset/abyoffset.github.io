@@ -8,8 +8,8 @@
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0f0f12">
 
-  <!-- CDN HLS.js untuk pemutaran streaming -->
-  <script src="hls.js"></script>
+  <!-- CDN HLS.js Resmi yang Stabil -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
   <style>
     :root {
@@ -1199,12 +1199,6 @@
       location.reload();
     });
 
-    const allowedDomain = ""; 
-    if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
-      document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
-      throw new Error("Unauthorized domain");
-    }
-
     const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
 
     function _decode(_0x3c21) {
@@ -1503,7 +1497,6 @@
           </div>
         `;
         
-        // KARTU DIKLIK ➔ MENGARAH KE HALAMAN DETAIL (DETAIL.HTML)
         card.onclick = () => {
           localStorage.setItem('selectedMovie', JSON.stringify(movie));
           window.location.href = 'detail.html';
@@ -1638,10 +1631,14 @@
       videoPlayer.style.objectFit = 'fill';
       videoPlayer.style.objectPosition = '50% 50%';
       videoPlayer.style.transform = 'none';
-      if (movie.crop_mode === 'cover') {
+
+      // Diperbaiki agar mendukung stretch_crop atau cover
+      if (movie.crop_mode === 'cover' || movie.crop_mode === 'stretch_crop') {
         videoPlayer.style.objectFit = 'cover';
         videoPlayer.style.objectPosition = movie.crop_position || '50% 50%';
-      } else if (movie.crop_scale) {
+      }
+      
+      if (movie.crop_scale) {
         videoPlayer.style.transform = `scaleY(${parseFloat(movie.crop_scale) || 1.2})`;
       }
     }
@@ -1864,7 +1861,6 @@
       loadAutoSourceList();
       setTimeout(() => { checkAppNotification(); }, 2500);
 
-      // CEK APAKAH USER KEMBALI DARI HALAMAN DETAIL UNTUK MENONTON FILM
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('play') === 'true') {
         const savedMovieStr = localStorage.getItem('selectedMovie');
