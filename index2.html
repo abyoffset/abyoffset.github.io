@@ -473,6 +473,7 @@
       object-fit: cover;
     }
 
+    /* Badge Bahasa di Pojok Kiri Atas */
     .language-badge {
       position: absolute;
       top: 5px;
@@ -897,6 +898,7 @@
       font-family: monospace;
     }
 
+    /* PLAYER BAR & INTERACTIVE TITLE / KILASAN SECTION */
     .player-details-row {
       padding: 12px 16px 0 16px;
       width: 100%;
@@ -957,6 +959,7 @@
       color: var(--text-secondary);
       line-height: 1.6;
       display: none;
+      
       max-height: 150px;
       overflow-y: auto;
       scrollbar-width: thin;
@@ -1079,6 +1082,7 @@
         </details>
       </div>
 
+      <!-- Menu Bahasa Baru -->
       <div class="drawer-section">
         <details id="detailsBahasa">
           <summary class="drawer-section-title">Bahasa / Audio</summary>
@@ -1198,20 +1202,6 @@
   </div>
 
   <script>
-    // Fungsi Decoder (Mendukung Base64 atau Text Biasa)
-    function _decode(encodedLink) {
-      if (!encodedLink) return "";
-      try {
-        // Coba decode sebagai Base64 jika valid
-        if (/^[a-zA-Z0-9+/]*={0,2}$/.test(encodedLink) && encodedLink.length % 4 === 0) {
-          return atob(encodedLink);
-        }
-        return encodedLink;
-      } catch (e) {
-        return encodedLink;
-      }
-    }
-
     function checkConnectionStatus() {
       const offlineContainer = document.getElementById('offlineErrorContainer');
       if (!navigator.onLine) {
@@ -1232,6 +1222,17 @@
     if (window.location.hostname !== "localhost" && window.location.hostname !== "127.0.0.1" && !window.location.hostname.endsWith(allowedDomain)) {
       document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
       throw new Error("Unauthorized domain");
+    }
+
+    const SECURE_KEY_BASE64 = "sFVdj5Nkt4n9Pbe+xuo70g==";
+
+    function _decode(_0x3c21) {
+      try {
+        if (!_0x3c21 || ![_0x3c21][0].match(/^[A-Za-z0-9+/=]+$/)) return _0x3c21;
+        return decodeURIComponent(atob(_0x3c21));
+      } catch (_0x5e12) {
+        return _0x3c21;
+      }
     }
 
     const customAlertModal = document.getElementById('customAlertModal');
@@ -1807,6 +1808,8 @@
       }
       
       videoPlayer = document.getElementById('videoPlayer');
+      
+      // Sinkronkan status mute video baru dengan status tombol UI saat ini
       videoPlayer.muted = (muteBtn.innerText === '🔇');
 
       let prefixTitle = '';
@@ -1845,12 +1848,21 @@
       const streamUrl = _decode(chosenLink);
       videoContainer.classList.add('buffering');
 
-      // Pemutaran dengan HLS.js atau Native
-      if (streamUrl.includes('.m3u8') && Hls.isSupported()) {
-        if (hls) {
-          hls.destroy();
-        }
-        hls = new Hls();
+      if (Hls.isSupported()) {
+        if (hls) hls.destroy();
+        hls = new Hls({
+          maxBufferLength: 15,
+          maxMaxBufferLength: 30,
+          enableWorker: true,
+          xhrSetup: function (xhr, url) {
+            if (url.includes("tiviku_system.bin") || url.includes(".key")) {
+              const originalOpen = xhr.open;
+              xhr.open = function(method, url, async, user, password) {
+                originalOpen.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, async, user, password);
+              };
+            }
+          }
+        });
         hls.loadSource(streamUrl);
         hls.attachMedia(videoPlayer);
         hls.on(Hls.Events.MANIFEST_PARSED, () => {
@@ -1861,9 +1873,6 @@
         videoPlayer.addEventListener('loadedmetadata', () => {
           videoPlayer.play().catch(() => {});
         });
-      } else {
-        videoPlayer.src = streamUrl;
-        videoPlayer.play().catch(() => {});
       }
 
       setupVideoEvents();
