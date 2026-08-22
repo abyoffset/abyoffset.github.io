@@ -473,7 +473,6 @@
       object-fit: cover;
     }
 
-    /* Badge Bahasa di Pojok Kiri Atas */
     .language-badge {
       position: absolute;
       top: 5px;
@@ -898,7 +897,6 @@
       font-family: monospace;
     }
 
-    /* PLAYER BAR & INTERACTIVE TITLE / KILASAN SECTION */
     .player-details-row {
       padding: 12px 16px 0 16px;
       width: 100%;
@@ -959,7 +957,6 @@
       color: var(--text-secondary);
       line-height: 1.6;
       display: none;
-      
       max-height: 150px;
       overflow-y: auto;
       scrollbar-width: thin;
@@ -1082,7 +1079,6 @@
         </details>
       </div>
 
-      <!-- Menu Bahasa Baru -->
       <div class="drawer-section">
         <details id="detailsBahasa">
           <summary class="drawer-section-title">Bahasa / Audio</summary>
@@ -1202,6 +1198,20 @@
   </div>
 
   <script>
+    // Fungsi Decoder (Mendukung Base64 atau Text Biasa)
+    function _decode(encodedLink) {
+      if (!encodedLink) return "";
+      try {
+        // Coba decode sebagai Base64 jika valid
+        if (/^[a-zA-Z0-9+/]*={0,2}$/.test(encodedLink) && encodedLink.length % 4 === 0) {
+          return atob(encodedLink);
+        }
+        return encodedLink;
+      } catch (e) {
+        return encodedLink;
+      }
+    }
+
     function checkConnectionStatus() {
       const offlineContainer = document.getElementById('offlineErrorContainer');
       if (!navigator.onLine) {
@@ -1797,8 +1807,6 @@
       }
       
       videoPlayer = document.getElementById('videoPlayer');
-      
-      // Sinkronkan status mute video baru dengan status tombol UI saat ini
       videoPlayer.muted = (muteBtn.innerText === '🔇');
 
       let prefixTitle = '';
@@ -1836,6 +1844,27 @@
 
       const streamUrl = _decode(chosenLink);
       videoContainer.classList.add('buffering');
+
+      // Pemutaran dengan HLS.js atau Native
+      if (streamUrl.includes('.m3u8') && Hls.isSupported()) {
+        if (hls) {
+          hls.destroy();
+        }
+        hls = new Hls();
+        hls.loadSource(streamUrl);
+        hls.attachMedia(videoPlayer);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          videoPlayer.play().catch(() => {});
+        });
+      } else if (videoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+        videoPlayer.src = streamUrl;
+        videoPlayer.addEventListener('loadedmetadata', () => {
+          videoPlayer.play().catch(() => {});
+        });
+      } else {
+        videoPlayer.src = streamUrl;
+        videoPlayer.play().catch(() => {});
+      }
 
       setupVideoEvents();
       showControls();
