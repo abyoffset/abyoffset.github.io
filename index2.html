@@ -1198,6 +1198,15 @@
   </div>
 
   <script>
+    // --- VALIDASI USER-AGENT KHUSUS ---
+    const allowedUserAgentKeyword = "TivikuApp"; 
+    const isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+    if (!isLocalhost && !navigator.userAgent.includes(allowedUserAgentKeyword)) {
+      document.body.innerHTML = "<div style='display:flex;justify-content:center;align-items:center;height:100vh;background:#0f0f12;color:#e50914;font-family:sans-serif;text-align:center;padding:20px;'><h1>Akses Ditolak!<br><span style='font-size:1rem;color:#a0a0a0;font-weight:normal;'>Aplikasi ini hanya dapat dijalankan melalui aplikasi resmi Tiviku.</span></h1></div>";
+      throw new Error("Unauthorized User-Agent");
+    }
+
     function checkConnectionStatus() {
       const offlineContainer = document.getElementById('offlineErrorContainer');
       if (!navigator.onLine) {
@@ -1847,8 +1856,6 @@
           maxBufferLength: 15,
           maxMaxBufferLength: 30,
           enableWorker: true
-          // xhrSetup dihapus agar request key (.key) diteruskan secara normal 
-          // ke WebView Sketchware dan ditangkap oleh shouldInterceptRequest
         });
         hls.loadSource(streamUrl);
         hls.attachMedia(videoPlayer);
@@ -2152,7 +2159,7 @@
         searchInput.value = val;
         if (val.trim().length > 0) {
           if(searchClearBtn) searchClearBtn.classList.add('show');
-          if(playerSearchClearBtn) searchClearBtn.classList.add('show');
+          if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
         } else {
           clearSearchInput();
         }
