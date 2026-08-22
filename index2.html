@@ -473,7 +473,6 @@
       object-fit: cover;
     }
 
-    /* Badge Bahasa di Pojok Kiri Atas */
     .language-badge {
       position: absolute;
       top: 5px;
@@ -898,7 +897,6 @@
       font-family: monospace;
     }
 
-    /* PLAYER BAR & INTERACTIVE TITLE / KILASAN SECTION */
     .player-details-row {
       padding: 12px 16px 0 16px;
       width: 100%;
@@ -959,7 +957,6 @@
       color: var(--text-secondary);
       line-height: 1.6;
       display: none;
-      
       max-height: 150px;
       overflow-y: auto;
       scrollbar-width: thin;
@@ -1082,7 +1079,6 @@
         </details>
       </div>
 
-      <!-- Menu Bahasa Baru -->
       <div class="drawer-section">
         <details id="detailsBahasa">
           <summary class="drawer-section-title">Bahasa / Audio</summary>
@@ -1223,8 +1219,6 @@
       document.body.innerHTML = "<h1 style='color:white;text-align:center;margin-top:20vh;'>Website tidak sah atau telah dicuri!</h1>";
       throw new Error("Unauthorized domain");
     }
-
-    const SECURE_KEY_BASE64 = "";
 
     function _decode(_0x3c21) {
       try {
@@ -1809,7 +1803,6 @@
       
       videoPlayer = document.getElementById('videoPlayer');
       
-      // Sinkronkan status mute video baru dengan status tombol UI saat ini
       videoPlayer.muted = (muteBtn.innerText === '🔇');
 
       let prefixTitle = '';
@@ -1853,15 +1846,9 @@
         hls = new Hls({
           maxBufferLength: 15,
           maxMaxBufferLength: 30,
-          enableWorker: true,
-          xhrSetup: function (xhr, url) {
-            if (url.includes("tiviku_system.bin") || url.includes(".key")) {
-              const originalOpen = xhr.open;
-              xhr.open = function(method, url, async, user, password) {
-                originalOpen.call(this, 'GET', 'data:application/octet-stream;base64,' + SECURE_KEY_BASE64, async, user, password);
-              };
-            }
-          }
+          enableWorker: true
+          // xhrSetup dihapus agar request key (.key) diteruskan secara normal 
+          // ke WebView Sketchware dan ditangkap oleh shouldInterceptRequest
         });
         hls.loadSource(streamUrl);
         hls.attachMedia(videoPlayer);
@@ -2165,7 +2152,7 @@
         searchInput.value = val;
         if (val.trim().length > 0) {
           if(searchClearBtn) searchClearBtn.classList.add('show');
-          if(playerSearchClearBtn) playerSearchClearBtn.classList.add('show');
+          if(playerSearchClearBtn) searchClearBtn.classList.add('show');
         } else {
           clearSearchInput();
         }
