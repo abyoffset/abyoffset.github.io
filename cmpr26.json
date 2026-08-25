@@ -1,5 +1,33 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/poster_1.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app1@0b7ba04/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Jung_E (2023))",
+"episode": "",
+"thn": "2023",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:38:07",
+"kilasan": "Di era pasca apokalips pada masa depan, seorang peneliti di sebuah lab AI memimpin upaya mengakhiri perang sipil dengan mengkloning otak sesosok prajurit heroik: ibunya.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/poster.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/4713e0e@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/4713e0e@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/4713e0e@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/4713e0e@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/4713e0e@4713e0e/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Toy Story 2 (1999)",
+"episode": "",
+"thn": "1999",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:28:17",
+"kilasan": "Andy berangkat ke Cowboy Camp, meninggalkan mainannya sendiri. Keadaan menjadi semakin rumit ketika seorang kolektor mainan yang obsesif bernama Al McWhiggen, pemilik Als Toy Barn menculik Woody. Mainan-mainan Andy melakukan misi penyelamatan yang berani, Buzz Lightyear bertemu dengan lawannya dan Woody harus memutuskan di mana ia dan hatinya benar-benar berada.",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/op9qJBB.jpeg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8" ],
 "bahasa": "",
@@ -420,18 +448,6 @@
 "crop_scale": "1.00",
 "dur": "3:05:03",
 "kilasan": "Sesuai dengan keinginan terakhir ibunya, seorang gadis berusia 8 tahun berangkat untuk mempertemukan kembali ayahnya dengan sahabat terbaiknya di perguruan tinggi yang pernah mencintainya.",
-"tiviku": "apk"
-},
-{
-"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/poster.jpg",
-"lnk": "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/master.m3u8",
-"ttl": "Toy Story 2 (1999)",
-"bahasa": "dub indo",
-"thn": "1999",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "1:28:17",
-"kilasan": "Andy berangkat ke Cowboy Camp, meninggalkan mainannya sendiri. Keadaan menjadi semakin rumit ketika seorang kolektor mainan yang obsesif bernama Al McWhiggen, pemilik Al's Toy Barn menculik Woody. Mainan-mainan Andy melakukan misi penyelamatan yang berani, Buzz Lightyear bertemu dengan lawannya dan Woody harus memutuskan di mana ia dan hatinya benar-benar berada.",
 "tiviku": "apk"
 },
 {
