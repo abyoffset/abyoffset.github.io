@@ -1,5 +1,33 @@
 [
 {
+"logo": "https://i.imgur.com/h3ijVXY.jpeg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/filmovie.github.io@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Titanic (1997)",
+"episode": "",
+"thn": "1997",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "3:06:26",
+"kilasan": "Seorang bangsawan berusia tujuh belas tahun jatuh cinta dengan artis yang baik hati namun miskin di atas kapal R.M.S. Raksasa.",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/9vPLD6H.jpeg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/abyoffset/0adec8a@0adec8a/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/0adec8a@0adec8a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/0adec8a@0adec8a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/0adec8a@0adec8a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/0adec8a@0adec8a/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Pokémon Detective Pikachu (2019)",
+"episode": "",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:44:23",
+"kilasan": "Di sebuah penjara yang terkenal kejam, sebuah kekuatan tak terlihat mulai membunuh para narapidana secara brutal, memaksa geng-geng musuh dan penjaga yang korup untuk bekerja sama saat mereka mencoba bertahan hidup di tengah pertumpahan darah yang semakin meningkat.",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/yaurCUq.jpeg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq22@83368c4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/dunkirk@83368c4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/dunkirk@83368c4/1/master.m3u8" ],
 "bahasa": "dub indo",
@@ -699,16 +727,6 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://i.imgur.com/9vPLD6H.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@0adec8a/1/master.m3u8",
-"ttl": "Pokémon Detective Pikachu (2019) dubbing",
-"dur": "1:44:23",
-"thn": "2019",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"tiviku": "apk"
-},
-{
 "logo": "https://i.imgur.com/iA9yPnJ.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@2f106a9/1/master.m3u8",
 "ttl": "Bayi Ajaib (1982)",
@@ -822,17 +840,6 @@
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/yZ53f/upl87/upl87.m3u8",
 "ttl": "Pamali (2022)",
 "dur": "1:34:52",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/h3ijVXY.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie/filmovie.github.io@6a4ac50/967teD7/titanic/07gA6zz4.m3u8",
-"ttl": "Titanic (1997)",
-"bahasa": "dub indo",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "3:06:26",
-"kilasan": "Seorang bangsawan berusia tujuh belas tahun jatuh cinta dengan artis yang baik hati namun miskin di atas kapal R.M.S. Raksasa.",
 "tiviku": "apk"
 },
 {
