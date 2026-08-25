@@ -1,5 +1,47 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq70@28361c8/1/poster.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/tvq70@28361c8/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/tvq70@28361c8/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq70@28361c8/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/tvq70@28361c8/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/tvq70@28361c8/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "squid game 2 (2024)",
+"episode": "04",
+"thn": "2024",
+"koleksi": "squid game 2 (2024)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:02:43",
+"kilasan": "Para peserta bersiap untuk permainan berikutnya: pancalomba enam kaki, di mana tiap anggota tim harus lolos permainan mini. Jika tidak, semua anggota akan dieliminasi.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq70@3c9c6cb/1/poster.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/tvq70@3c9c6cb/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/tvq70@3c9c6cb/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq70@3c9c6cb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/tvq70@3c9c6cb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/tvq70@3c9c6cb/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "squid game 2 (2024)",
+"episode": "03",
+"thn": "2024",
+"koleksi": "squid game 2 (2024)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:01:55",
+"kilasan": "Para pemain baru berkumpul untuk merebut hadiah 45,6 miliar won. Setelah ronde pertama yang intens, nasib peserta yang tersisa terancam—sampai suara terakhir diberikan.",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/O85HfUV.jpeg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/psq@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/psq@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/psq@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/psq@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/psq@0b6b1c9/1/master.m3u8" ],
+"bahasa": "",
+"ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 2 (2017)",
+"episode": "",
+"thn": "2016",
+"koleksi": "warkop",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:31:05",
+"kilasan": "Jangkrik Boss Part 2, meneruskan pertualangan Dono (Abimana Aryasatya), Kasino (Vino G Bastian) dan Indro (Tora Sudiro) dalam mencari harta karun untuk membayar hutang, agar mereka tidak masuk ke dalam penjara. Negri Jiran, Malaysia menjadi destinasi awal perjalanan mereka di film ini.",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/CIPnPmC.jpeg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/psq@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/psq@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/psq@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/psq@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/psq@6f596bd/1/master.m3u8" ],
 "bahasa": "",
@@ -8,7 +50,7 @@
 "thn": "2016",
 "koleksi": "warkop",
 "crop_mode": "stretch_crop",
-"crop_scale": "1.00",
+"crop_scale": "1.05",
 "dur": "1:32:04",
 "kilasan": "Dono (Abimana Aryasatya), Kasino (Vino G. Bastian) dan Indro (Tora Sudiro) kembali beraksi di tengah hiruk pikuknya kota DKI Jakarta. Mereka sekali lagi berperan sebagai personel sebuah Lembaga Swasta yang bernama CHIIPS (Cara Hebat Ikut-Ikutan Penanggulangan Sosial).",
 "tiviku": "apk"
@@ -562,17 +604,6 @@
 "thn": "2024",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.05",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/O85HfUV.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@0b6b1c9/1/master.m3u8",
-"ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 2 (2017)",
-"koleksi": "warkop",
-"dur": "1:31:05",
-"thn": "2017",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
 "tiviku": "apk"
 },
 {
