@@ -1,5 +1,45 @@
 [
 {
+"logo": "https://i.imgur.com/yaurCUq.jpeg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq22@83368c4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/dunkirk@83368c4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/dunkirk@83368c4/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Dunkirk (2017)",
+"thn": "2017",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.20",
+"dur": "1:46:38",
+"kilasan": "Pasukan sekutu dari Belgia, Inggris Raya, Kanada dan Perancis terkepung oleh pasukan Jerman pada Perang Dunia II di wilayah pantai Dunkirk Perancis. Ini adalah kisah heroik upaya penyelamatan mereka yang berlangsung dari 24 Mei hingga 4 Juni 1940.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app1@55ced4b/1/poster_1.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app1@55ced4b/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app1@55ced4b/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app1@55ced4b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app1@55ced4b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app1@55ced4b/1/master.m3u8" ],
+"bahasa": "",
+"ttl": "Ghost in the cell (2026)",
+"episode": "",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "1:46:10",
+"kilasan": "Di sebuah penjara yang terkenal kejam, sebuah kekuatan tak terlihat mulai membunuh para narapidana secara brutal, memaksa geng-geng musuh dan penjaga yang korup untuk bekerja sama saat mereka mencoba bertahan hidup di tengah pertumpahan darah yang semakin meningkat.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app1@1c4652c/1/poster_1.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app1@1c4652c/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app1@1c4652c/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app1@1c4652c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app1@1c4652c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app1@1c4652c/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Doraemon: Nobita and the Winged Braves (2001)",
+"episode": "",
+"thn": "2001",
+"koleksi": "doraemon",
+"crop_mode": "stretch_crop",
+"crop_scale": "3.15",
+"dur": "1:30:49",
+"kilasan": "Doraemon dan teman-temannya harus menyelamatkan penduduk Birdopia dari perbuatan jahat mantan pasukan burung yang pendendam sebelum mereka melepaskan naga kuno yang jahat.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app1@fd056b4/1/poster.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app1@fd056b4/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app1@fd056b4/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app1@fd056b4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app1@fd056b4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app1@fd056b4/1/master.m3u8" ],
 "bahasa": "dub indo",
@@ -433,16 +473,6 @@
 "crop_mode": "stretch_crop",
 "crop_scale": "1.35",
 "dur": "1:26:36",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/yaurCUq.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq22@83368c4/1/master.m3u8",
-"ttl": "Dunkirk (2017) dubbing",
-"thn": "2017",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "1:46:38",
 "tiviku": "apk"
 },
 {
