@@ -1,5 +1,19 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tvq45@fbd3fc7/1/poster.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/tvq45@fbd3fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/fbd3fc7@fbd3fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/fbd3fc7@fbd3fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/fbd3fc7@fbd3fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/fbd3fc7@fbd3fc7/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "BLUELOCK (2022)",
+"episode": "17",
+"thn": "2022",
+"koleksi": "BLUELOCK (2022)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:18",
+"kilasan": "Para pemain sepak bola SMA dari seluruh Jepang berkumpul untuk sebuah proyek kontroversial yang dirancang untuk menciptakan striker terbaik — dan paling egois — di dunia.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/poster.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app3@4d673c1/1/master.m3u8" ],
 "bahasa": "dub indo",
@@ -443,19 +457,6 @@
 "crop_scale": "3.15",
 "dur": "1:48:32",
 "kilasan": "Doraemon, Nobita, dan teman-temannya pergi mencari Utopia, negeri sempurna di langit tempat semua orang hidup bahagia, menggunakan pesawat udara yang memiliki fungsi penjelajah waktu.",
-"tiviku": "apk"
-},
-{
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tvq45@fbd3fc7/1/poster.jpg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkapp691/tvq45@fbd3fc7/1/master.m3u8",
-"ttl": "BLUELOCK (2022)",
-"bahasa": "dub indo",
-"episode": "17",
-"thn": "2022",
-"koleksi": "BLUELOCK (2022)",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "24:18",
 "tiviku": "apk"
 },
 {
