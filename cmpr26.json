@@ -1,5 +1,32 @@
 [
 {
+"logo": "https://i.imgur.com/RL2CDEJ.jpeg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/tvq4@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/f42c3ee@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/f42c3ee@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/f42c3ee@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/f42c3ee@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/f42c3ee@f42c3ee/1/master.m3u8" ],
+"ttl": "Doraemon: Nobita and the Legend of the Sun King (2000)",
+"bahasa": "dub indo",
+"episode": "",
+"thn": "2000",
+"koleksi": "doraemon",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:31:24",
+"kilasan": "Doraemon dan teman-temannya membuka lubang waktu dan mereka melakukan perjalanan ke Negeri Mayana, sebuah peradaban Maya yang hilang di dalam hutan.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq41@21847f3/1/poster_1.jpg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq41@21847f3/1/master.m3u8",
+"ttl": "Bebas Aturan Main (1994) warkop",
+"episode": "",
+"thn": "1994",
+"koleksi": "warkop",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:21:31",
+"kilasan": "Dono, Kasino, dan Indro kehilangan celana mereka saat buang air besar di toilet umum di sebuah tempat hiburan. Sebagai upaya terakhir untuk menutupi rasa malunya, Dono mencuri celana pria di bilik sebelah. Ternyata, pria itu adalah ayah dari tiga wanita muda yang kemudian dikencani oleh Dono, Kasino, dan Indro. Kisah ini, yang sebenarnya hanyalah kumpulan sketsa yang dirangkai menjadi satu, dimulai dari sini.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/poster_1.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/a547b2f@a547b2f/1/master.m3u8" ],
 "ttl": "Doraemon the Movie: Nobita's Sky Utopia (2023)",
@@ -723,19 +750,6 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq41@21847f3/1/poster_1.jpg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq41@21847f3/1/master.m3u8",
-"ttl": "Bebas Aturan Main (1994) warkop",
-"episode": "",
-"thn": "1994",
-"koleksi": "warkop",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "1:21:31",
-"kilasan": "Dono, Kasino, dan Indro kehilangan celana mereka saat buang air besar di toilet umum di sebuah tempat hiburan. Sebagai upaya terakhir untuk menutupi rasa malunya, Dono mencuri celana pria di bilik sebelah. Ternyata, pria itu adalah ayah dari tiga wanita muda yang kemudian dikencani oleh Dono, Kasino, dan Indro. Kisah ini, yang sebenarnya hanyalah kumpulan sketsa yang dirangkai menjadi satu, dimulai dari sini.",
-"tiviku": "apk"
-},
-{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq39@d081ad7/1/poster.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq39@d081ad7/1/master.m3u8",
 "ttl": "Cars 2 (2011)",
@@ -1115,17 +1129,6 @@
 "thn": "2022",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/RL2CDEJ.jpeg",
-"ttl": "Doraemon: Nobita and the Legend of the Sun King (2000)",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq4@f42c3ee/1/master.m3u8",
-"koleksi": "doraemon dubbing",
-"thn": "2000",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "1:31:24",
 "tiviku": "apk"
 },
 {
