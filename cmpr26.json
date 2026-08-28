@@ -1,10 +1,14 @@
 [
 {
 "logo": "https://i.imgur.com/uQV96oc.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8",
+"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8" ],
 "bahasa": "dub indo",
 "ttl": "2012 (2009)",
+"episode": "",
 "thn": "2009",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
 "dur": "2:31:11",
 "kilasan": "Dr. Adrian Helmsley, anggota tim geofisika global yang meneliti dampak radiasi akibat badai matahari berskala belum pernah terjadi sebelumnya terhadap Bumi, mendapati bahwa inti Bumi sedang memanas. Ia memperingatkan Presiden AS Thomas Wilson bahwa kerak Bumi mulai tidak stabil dan, tanpa persiapan memadai untuk menyelamatkan sebagian kecil populasi dunia, seluruh umat manusia akan musnah. Sementara itu, seorang penulis bernama Jackson Curtis secara tidak sengaja menemukan informasi yang sama. Di saat para pemimpin dunia berlomba membangun bahterauntuk meloloskan diri dari bencana dahsyat yang mengancam, Curtis berjuang mencari cara untuk menyelamatkan keluarganya. Pada saat yang bersamaan, letusan gunung berapi dan gempa bumi dengan kekuatan yang belum pernah terjadi sebelumnya menimbulkan kekacauan di seluruh dunia.",
 "tiviku": "apk"
