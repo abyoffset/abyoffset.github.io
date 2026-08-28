@@ -1,5 +1,33 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/poster_1.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/a547b2f@a547b2f/1/master.m3u8" ],
+"ttl": "Doraemon the Movie: Nobita's Sky Utopia (2023)",
+"bahasa": "dub indo",
+"episode": "",
+"thn": "2023",
+"koleksi": "doraemon",
+"crop_mode": "stretch_crop",
+"crop_scale": "3.15",
+"dur": "1:48:32",
+"kilasan": "Doraemon, Nobita, dan teman-temannya pergi mencari Utopia, negeri sempurna di langit tempat semua orang hidup bahagia, menggunakan pesawat udara yang memiliki fungsi penjelajah waktu.",
+"tiviku": "apk"
+},
+{
+"logo": "https://image.tmdb.org/t/p/w220_and_h330_face/A5imhXiFF3AL9RRA4FBzNDFmfgW.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq21@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/720d5e4@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/720d5e4@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/720d5e4@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/720d5e4@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/720d5e4@720d5e4/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Black Adam (2022)",
+"episode": "",
+"thn": "2022",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "2:04:50",
+"kilasan": "Hampir 5.000 tahun setelah dia dianugerahi kekuatan maha kuasa para dewa Mesir—dan dipenjara dengan cepat—Black Adam dibebaskan dari makam duniawinya, siap untuk melepaskan bentuk keadilannya yang unik di dunia modern.",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/uQV96oc.jpeg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8" ],
 "bahasa": "dub indo",
@@ -670,20 +698,6 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/poster_1.jpg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/master.m3u8",
-"ttl": "Doraemon the Movie: Nobita's Sky Utopia (2023)",
-"bahasa": "dub indo",
-"episode": "",
-"thn": "2023",
-"koleksi": "doraemon",
-"crop_mode": "stretch_crop",
-"crop_scale": "3.15",
-"dur": "1:48:32",
-"kilasan": "Doraemon, Nobita, dan teman-temannya pergi mencari Utopia, negeri sempurna di langit tempat semua orang hidup bahagia, menggunakan pesawat udara yang memiliki fungsi penjelajah waktu.",
-"tiviku": "apk"
-},
-{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tvq44@2cbeb09/1/poster_1.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkapp69/tvq44@2cbeb09/1/master.m3u8",
 "ttl": "Qorin (2022)",
@@ -878,18 +892,6 @@
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:50:03",
-"tiviku": "apk"
-},
-{
-"logo": "https://image.tmdb.org/t/p/w220_and_h330_face/A5imhXiFF3AL9RRA4FBzNDFmfgW.jpg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq21@720d5e4/1/master.m3u8",
-"ttl": "Black Adam (2022)",
-"bahasa": "dub indo",
-"thn": "2022",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.35",
-"dur": "2:04:50",
-"kilasan": "Hampir 5.000 tahun setelah dia dianugerahi kekuatan maha kuasa para dewa Mesir—dan dipenjara dengan cepat—Black Adam dibebaskan dari makam duniawinya, siap untuk melepaskan bentuk keadilannya yang unik di dunia modern.",
 "tiviku": "apk"
 },
 {
