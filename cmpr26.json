@@ -1,5 +1,33 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tvq49@1c11d9c/1/poster_1.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp692/tvq49@1c11d9c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/1c11d9c@1c11d9c/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/1c11d9c@1c11d9c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/1c11d9c@1c11d9c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/1c11d9c@1c11d9c/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Cars 3 (2017)",
+"episode": "",
+"thn": "2017",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.33",
+"dur": "1:42:23",
+"kilasan": "Dikejutkan oleh generasi baru pembalap yang sangat cepat, Lightning McQueen yang legendaris tiba-tiba tersingkir dari olahraga yang dicintainya. Untuk kembali ke permainan, ia akan membutuhkan bantuan seorang teknisi balap muda yang bersemangat dengan rencananya sendiri untuk menang, inspirasi dari mendiang Hudson Hornet yang Luar Biasa, dan beberapa tikungan yang tak terduga. Membuktikan bahwa #95 belum selesai akan menguji hati seorang juara di panggung terbesar Piston Cup Racing!",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/poster.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@75fac6d/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "squid game 3 (2025)",
+"episode": "03",
+"thn": "2025",
+"koleksi": "squid game 3 (2025)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:06:02",
+"kilasan": "Tim Jun-ho hampir menemukan pulaunya. Jang Geum-ja memohon dengan putus asa kepada Gi-hun agar membantu Jun-hee. Para VIP membahas sebuah usulan kejam.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/poster.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@546f99b/1/master.m3u8" ],
 "bahasa": "dub indo",
@@ -778,20 +806,6 @@
 "crop_scale": "1.00",
 "dur": "1:05:22",
 "kilasan": "Gi-hun yang menyimpan dendam batal pergi ke bandara. Lalu, di persembunyian, ia menggencarkan pencarian terhadap si perekrut licin yang sedang mencari pemain-pemain baru.",
-"tiviku": "apk"
-},
-{
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tvq49@1c11d9c/1/poster_1.jpg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkapp692/tvq49@1c11d9c/1/master.m3u8",
-"bahasa": "dub indo",
-"ttl": "Cars 3 (2017)",
-"episode": "",
-"thn": "2017",
-"koleksi": "",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.33",
-"dur": "1:42:23",
-"kilasan": "Dikejutkan oleh generasi baru pembalap yang sangat cepat, Lightning McQueen yang legendaris tiba-tiba tersingkir dari olahraga yang dicintainya. Untuk kembali ke permainan, ia akan membutuhkan bantuan seorang teknisi balap muda yang bersemangat dengan rencananya sendiri untuk menang, inspirasi dari mendiang Hudson Hornet yang Luar Biasa, dan beberapa tikungan yang tak terduga. Membuktikan bahwa #95 belum selesai akan menguji hati seorang juara di panggung terbesar Piston Cup Racing!",
 "tiviku": "apk"
 },
 {
