@@ -1,5 +1,19 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/poster_1.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app9@29524e3/1/master.m3u8" ],
+"bahasa": "",
+"ttl": "Danur 3: Sunyaruri (2019)",
+"episode": "",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.30",
+"dur": "1:29:37",
+"kilasan": "Berdasarkan novel 'Sunyaruri' karya Risa Saraswati",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/poster_1.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app9@0be538a/1/master.m3u8" ],
 "bahasa": "",
@@ -786,7 +800,7 @@
 "bahasa": "",
 "ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 2 (2017)",
 "episode": "",
-"thn": "2016",
+"thn": "2017",
 "koleksi": "warkop",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
