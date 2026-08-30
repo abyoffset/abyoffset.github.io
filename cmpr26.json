@@ -1,5 +1,33 @@
 [
 {
+"logo": "https://i.imgur.com/g23f6dK.jpeg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@15206ab/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/15206ab@15206ab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/15206ab@15206ab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/15206ab@15206ab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/15206ab@15206ab/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Mufasa: The Lion King (2024)",
+"episode": "",
+"thn": "2024",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.05",
+"dur": "1:57:58",
+"kilasan": "Mufasa, seekor anak singa yang tersesat dan sendirian, bertemu dengan seekor singa yang baik hati bernama Taka, pewaris garis keturunan kerajaan. Pertemuan tak sengaja itu memicu perjalanan panjang sekelompok orang yang tidak beruntung dalam mencari takdir mereka.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/poster_1.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app10@d40dd32/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "The Whisper Man (2026)",
+"episode": "",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:51:10",
+"kilasan": "Saat putra kecilnya hilang, seorang duda meminta bantuan ayahnya yang lama terpisah, pensiunan detektif yang menangkap pembunuh berantai yang kini terkait kasus itu.",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.ibb.co.com/wrcJhB4s/Toy-Story-1995-Poster-The-Movie-Database-TMDB-1.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq19@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/56b61a1@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/56b61a1@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/56b61a1@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/56b61a1@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/56b61a1@56b61a1/1/master.m3u8" ],
 "bahasa": "dub indo",
@@ -1253,16 +1281,6 @@
 "thn": "2025",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/g23f6dK.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@15206ab/1/master.m3u8",
-"ttl": "Mufasa: The Lion King (2024) dubbing",
-"dur": "1:57:58",
-"thn": "2024",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.05",
 "tiviku": "apk"
 },
 {
