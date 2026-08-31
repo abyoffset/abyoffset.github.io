@@ -1,5 +1,19 @@
 [
 {
+"logo": "https://i.ibb.co.com/4ZGz4yzx/Godzilla-2014-Wikizilla-the-kaiju-encyclopedia.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq28@b470d45/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/b470d45@b470d45/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/b470d45@b470d45/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/b470d45@b470d45/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/b470d45@b470d45/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Godzilla (2014)",
+"episode": "",
+"thn": "2014",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:51:23",
+"kilasan": "Ketika makhluk-makhluk jahat, yang diperkuat oleh kesombongan ilmiah manusia, mengancam umat manusia dan kelangsungan hidupnya, Ibu Pertiwi membalas dengan senjata pamungkasnya, Godzilla, kekuatan alam yang menghancurkan, yang akan menghadapi makhluk-makhluk ini dalam pertarungan yang sengit. Di tengah semua kekerasan dan kekacauan, kita mengikuti tiga anggota keluarga. Joe Brody adalah seorang ilmuwan di Jepang.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/poster_1.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app11@4496aa6/1/master.m3u8" ],
 "bahasa": "dub indo",
@@ -1100,16 +1114,6 @@
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:16:11",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.ibb.co.com/4ZGz4yzx/Godzilla-2014-Wikizilla-the-kaiju-encyclopedia.jpg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq28@b470d45/1/master.m3u8",
-"ttl": "Godzilla (2014) dubbing",
-"thn": "2014",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "1:51:23",
 "tiviku": "apk"
 },
 {
