@@ -1,5 +1,33 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/poster_1.jpg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app15@09149eb/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Fantastic Four (2005)",
+"episode": "",
+"thn": "2005",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.30",
+"dur": "1:45:52",
+"kilasan": "Selama perjalanan luar angkasa, empat ilmuwan berubah karena sinar kosmik: Reed Richards memperoleh kemampuan untuk meregangkan tubuhnya; Sue Storm dapat menjadi tidak terlihat; Johnny Storm mengendalikan api; dan Ben Grimm berubah menjadi makhluk super kuat. Bersama-sama, Fantastic Four ini sekarang harus menggagalkan rencana jahat Dr. Doom dan menyelamatkan dunia dari kehancuran.",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/502nt2H.jpeg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/drae30n@9821542/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq16@9821542/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/drae30n@98215/1/master.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Doraemon: Nobita and the Island of Miracles – Animal Adventure (2012)",
+"episode": "",
+"thn": "2012",
+"koleksi": "doraemon",
+"crop_mode": "stretch_crop",
+"crop_scale": "3.15",
+"dur": "1:39:30",
+"kilasan": "Nobita dan Doraemon menggunakan Mochi Pohon Waktu untuk menangkap seekor burung besar yang telah punah sejak 500 tahun yang lalu. Demi melindungi hewan tersebut, Nobita dan Doraemon pergi ke Pulau Beremon, yang diawasi oleh seekor kumbang emas bernama Herakles.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/poster.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app15@865a4a2/1/master.m3u8" ],
 "bahasa": "dub indo",
@@ -1364,17 +1392,6 @@
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:51:34",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/502nt2H.jpeg",
-"ttl": "Doraemon: Nobita and the Island of Miracles – Animal Adventure (2012) dubbing",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie1/tvq16@9821542/1/master.m3u8",
-"koleksi": "doraemon dubbing",
-"thn": "2012",
-"crop_mode": "stretch_crop",
-"crop_scale": "3.15",
-"dur": "1:39:30",
 "tiviku": "apk"
 },
 {
