@@ -1,5 +1,55 @@
 [
 {
+"logo": "https://i.imgur.com/xPjWyiL.png",
+"lnk": "https://filmovie.github.io/oq90jy/fmtvonytq996/tv9_nusantara.m3u8",
+"ttl": "tv9 nusantara",
+"tv_live": "live",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "live",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/cKpgbgW.png",
+"lnk": "https://filmovie.github.io/oq90jy/fmtvonytq996/madu_tv.m3u8",
+"ttl": "madu tv",
+"tv_live": "live",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "live",
+"tiviku": "apk"
+},
+{
+"logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUbCUBYH4Im290EaaTmqm33uUQzbg2sNFOMUH3ROKvcX80O17D_2qVa0Q&s=10",
+"lnk": "https://filmovie.github.io/oq90jy/fmtvonytq996/real_madrid_tv.m3u8",
+"ttl": "real madrid tv",
+"tv_live": "live",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "live",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/uJb4VOc.png",
+"lnk": "https://filmovie.github.io/96/live/bek_sports.m3u8",
+"ttl": "bek sports",
+"tv_live": "live",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "live",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/tfJo0SO.png",
+"lnk": "https://filmovie.github.io/oq90jy/fmtvonytq996/magna_channel.m3u8",
+"ttl": "magna channel",
+"tv_live": "live",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "live",
+"tiviku": "apk"
+},
+{
 "logo": "https://i.imgur.com/B4JW54M.png",
 "lnk": "https://filmovie.github.io/oq90jy/fmtvonytq996/duta_tv.m3u8",
 "ttl": "duta tv",
