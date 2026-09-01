@@ -1,0 +1,30 @@
+[
+{
+"logo": "https://filmovie.github.io/oq90jy/fmlogo/tvku.jpg",
+"lnk": "https://filmovie.github.io/oq90jy/fmtvonytq996/tvku.m3u8",
+"bahasa": "",
+"ttl": "tvku",
+"episode": "",
+"tv_live": "live",
+"koleksi": "live",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:04:50",
+"kilasan": "",
+"tiviku": "apk"
+},
+{
+"logo": "https://filmovie.github.io/oq90jy/fmlogo/banyumas_tv.jpg",
+"lnk": "https://filmovie.github.io/oq90jy/fmtvonytq996/banyumas_tv.m3u8",
+"bahasa": "",
+"ttl": "banyumas tv",
+"episode": "",
+"tv_live": "live",
+"koleksi": "live",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:04:50",
+"kilasan": "",
+"tiviku": "apk"
+}
+]
