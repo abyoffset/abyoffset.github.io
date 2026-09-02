@@ -1,5 +1,33 @@
 [
 {
+"logo": "https://i.imgur.com/6y92lkV.jpeg",
+"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/nwe@24ab677/6/master.m3u8",
+"bahasa": "dub indo",
+"ttl": "Detective Conan: Episode One - The Great Detective Turned Small (2017)",
+"episode": "",
+"thn": "2017",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:35:33",
+"kilasan": "Versi *remake* berdurasi dua jam dari episode pertama yang orisinal, yang dihadirkan untuk merayakan peringatan 20 tahun penayangan anime ini. Tayangan spesial ini mengisahkan kembali peristiwa pada hari saat Shinichi berubah menjadi sosok anak kecil. Tayangan ini juga memuat adegan-adegan baru yang tidak ada dalam manga aslinya maupun episode pertama anime versi awal.",
+"tiviku": "apk"
+},
+{
+"logo": "https://i.imgur.com/rhRAtXr.jpeg",
+"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/0306d17@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/0306d17@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/0306d17@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/0306d17@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/0306d17@0306d17/Ztf7/Ztf7.m3u8" ],
+"bahasa": "dub indo",
+"ttl": "Detective Conan Movie 2 Case Closed: The Fourteenth Target (1998)",
+"episode": "",
+"thn": "1998",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.05",
+"dur": "1:39:37",
+"kilasan": "Masa lalu Ran yang tersembunyi akhirnya terungkap! Sepuluh tahun yang lalu, sebuah peristiwa terjadi di antara ayah dan ibunya. Kini, dihantui oleh mimpi buruk, ingatan Ran mulai kembali... Sementara itu, seorang bandar kartu yang kejam melarikan diri dari penjara demi membalas dendam. Targetnya: ayah Ran. Akankah Conan berhasil menghentikannya tepat waktu dan menyelamatkan keluarga kekasihnya?",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/poster.jpg",
 "lnk": [ "https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app17@5bf0589/1/master.m3u8" ],
 "bahasa": "dub indo",
@@ -1557,16 +1585,6 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://i.imgur.com/rhRAtXr.jpeg",
-"ttl": "Detective Conan Movie 2 Case Closed: The Fourteenth Target (1998) dubbing",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/Ztf7/Ztf7.m3u8",
-"thn": "1998",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.03",
-"dur": "1:39:37",
-"tiviku": "apk"
-},
-{
 "logo": "https://i.imgur.com/h0yqLLJ.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@0ceb284/1/master.m3u8",
 "ttl": "Yowis Ben 2 (2019)",
@@ -2040,13 +2058,6 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq11@5e5ce59/5/master.m3u8",
 "ttl": "Detective Conan: The Time Bombed Skyscraper (1997) dubbing",
 "dur": "1:34:15",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/6y92lkV.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/nwe@24ab677/6/master.m3u8",
-"ttl": "Detective Conan: Episode One - The Great Detective Turned Small (2017) dubbing",
-"dur": "1:35:33",
 "tiviku": "apk"
 },
 {
