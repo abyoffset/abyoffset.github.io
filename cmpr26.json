@@ -1,7 +1,20 @@
 [
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app21@15177c6/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app21@15177c6/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "King Kong (2005)",
 "episode": "",
@@ -15,7 +28,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app21@77a4053/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app21@77a4053/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app21@77a4053/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Monsters vs Aliens (2009)",
 "episode": "",
@@ -29,7 +55,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/p/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app20@d3588c9/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@d3588c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app20@d3588c9/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Jack the Giant Slayer (2013)",
 "episode": "",
@@ -43,7 +82,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/p/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app20@79a85ea/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app20@79a85ea/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app20@79a85ea/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita and the Robot Kingdom (2002)",
 "episode": "",
@@ -57,7 +109,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/app19@d26591c/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app19@e147b7f/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@e147b7f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app19@e147b7f/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Siksa Neraka (2023)",
 "episode": "",
@@ -71,7 +136,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app19@5773086/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app19@5773086/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app19@5773086/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Fantastic Four (2015)",
 "episode": "",
@@ -85,7 +163,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app18@6693a22/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app18@6693a22/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Dinosaur (2000)",
 "episode": "",
@@ -99,7 +190,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app18@9d0df08/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@9d0df08/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app18@9d0df08/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Telaga Angker (1984)",
 "episode": "",
@@ -113,7 +217,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app18@d663824/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@d663824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app18@d663824/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017) end",
 "episode": "13",
@@ -127,7 +244,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app18@6a0c113/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6a0c113/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app18@6a0c113/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "12",
@@ -141,7 +271,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app17@18b688c/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@18b688c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app17@18b688c/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "11",
@@ -155,7 +298,14 @@
 },
 {
 "logo": "https://i.imgur.com/lSoVC05.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq11@5e5ce59/5/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/5e5ce59@5e5ce59/5/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/5e5ce59@5e5ce59/5/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/5e5ce59@5e5ce59/5/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/5e5ce59@5e5ce59/5/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/5e5ce59@5e5ce59/5/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tvq11@5e5ce59/5/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/5e5ce59@5e5ce59/5/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/5e5ce59@5e5ce59/5/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/5e5ce59@5e5ce59/5/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/5e5ce59@5e5ce59/5/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/5e5ce59@5e5ce59/5/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Detective Conan: The Time Bombed Skyscraper (1997)",
 "episode": "",
@@ -183,7 +333,14 @@
 },
 {
 "logo": "https://i.imgur.com/rhRAtXr.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/0306d17@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/0306d17@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/0306d17@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/0306d17@0306d17/Ztf7/Ztf7.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/0306d17@0306d17/Ztf7/Ztf7.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/s8wq@0306d17/Ztf7/Ztf7.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/0306d17@0306d17/Ztf7/Ztf7.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/0306d17@0306d17/Ztf7/Ztf7.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/0306d17@0306d17/Ztf7/Ztf7.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/0306d17@0306d17/Ztf7/Ztf7.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/0306d17@0306d17/Ztf7/Ztf7.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Detective Conan Movie 2 Case Closed: The Fourteenth Target (1998)",
 "episode": "",
@@ -197,7 +354,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app17@5bf0589/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@5bf0589/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app17@5bf0589/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "10",
@@ -211,7 +381,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app17@8b0a190/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@8b0a190/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app17@8b0a190/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "09",
@@ -225,7 +408,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app17@554fffd/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app17@554fffd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app17@554fffd/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "08",
@@ -239,7 +435,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app16@a5ce726/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@a5ce726/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app16@a5ce726/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "07",
@@ -252,22 +461,21 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp69/app16@d26f16e/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@d26f16e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app16@d26f16e/1/master.m3u8" ],
-"bahasa": "dub indo",
-"ttl": "Captain Tsubasa: Road to 2002 (2001)",
-"episode": "30",
-"thn": "2001",
-"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "24:00",
-"kilasan": "Tsubasa menjadi superstar di antara para pemain sepak bola di Brasil. Ia kini berencana untuk bermain di Eropa. Dalam pertandingan penting yang harus dimenangkan, saat para penggemar bersorak menyemangatinya, Tsubasa mengenang kembali masa-masa awal karier sepak bolanya. Semangatnya untuk mencetak gol dan memenangkan pertandingan sama kuatnya seperti saat masa kecilnya. Ia mengingat kembali pertandingan dan momen-momen yang memberikan dampak besar dalam hidupnya. Ia mengingat kiper Wakabayashi, striker jenius Hyuga, Misaki yang berhati lembut, dan pelatih Roberto. Ia senang bertemu mereka, menikmati bermain bersama mereka, dan belajar banyak hal dari mereka. Peluit berbunyi dan pertandingan dimulai. Tsubasa berlari mengejar bola!",
-"tiviku": "apk"
-},
-{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app16@3ad2482/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@3ad2482/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app16@3ad2482/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "29",
@@ -281,7 +489,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app16@84fd126/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app16@84fd126/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app16@84fd126/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "28",
@@ -295,7 +516,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app15@d2a1dfb/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@d2a1dfb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app15@d2a1dfb/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "27",
@@ -309,7 +543,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app15@09149eb/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@09149eb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app15@09149eb/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Fantastic Four (2005)",
 "episode": "",
@@ -323,7 +570,11 @@
 },
 {
 "logo": "https://i.imgur.com/502nt2H.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/drae30n@9821542/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq16@9821542/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/drae30n@98215/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/drae30n@9821542/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tvq16@9821542/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/drae30n@98215/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita and the Island of Miracles – Animal Adventure (2012)",
 "episode": "",
@@ -337,7 +588,20 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app15@865a4a2/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app15@865a4a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app15@865a4a2/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "06",
@@ -351,7 +615,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app15@fbef0ff/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app15@fbef0ff/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app15@fbef0ff/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "05",
@@ -365,7 +641,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app14@adcc615/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app14@adcc615/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app14@adcc615/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "04",
@@ -379,7 +667,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app13@b438a39/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@b438a39/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app13@b438a39/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "03",
@@ -393,7 +693,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app13@4bc2db5/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app13@4bc2db5/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "01",
@@ -407,7 +719,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app13@4bc2db5/2/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@4bc2db5/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app13@4bc2db5/2/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Made in Abyss (2017)",
 "episode": "02",
@@ -421,7 +745,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app13@98f6b01/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app13@98f6b01/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app13@98f6b01/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Dilan ITB 1997 (2026)",
 "episode": "",
@@ -435,7 +771,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app12@1e7929d/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@1e7929d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app12@1e7929d/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s3 (2025)",
 "episode": "06",
@@ -449,7 +797,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app12@0286466/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@0286466/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app12@0286466/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s3 (2025)",
 "episode": "05",
@@ -463,7 +823,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app12@d8e0c6d/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app12@d8e0c6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app12@d8e0c6d/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s3 (2025)",
 "episode": "04",
@@ -477,7 +849,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app11@066a39e/26/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@066a39e/26/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app11@066a39e/26/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "26",
@@ -491,7 +875,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app11@b693092/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@b693092/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app11@b693092/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain America: Civil War (2016)",
 "episode": "",
@@ -505,7 +901,13 @@
 },
 {
 "logo": "https://i.ibb.co.com/4ZGz4yzx/Godzilla-2014-Wikizilla-the-kaiju-encyclopedia.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq28@b470d45/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/b470d45@b470d45/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/b470d45@b470d45/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/b470d45@b470d45/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/b470d45@b470d45/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tvq28@b470d45/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/b470d45@b470d45/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/b470d45@b470d45/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/b470d45@b470d45/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/b470d45@b470d45/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Godzilla (2014)",
 "episode": "",
@@ -519,7 +921,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app11@4496aa6/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app11@4496aa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app11@4496aa6/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita's Dinosaur (2006)",
 "episode": "",
@@ -533,7 +947,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app10@b98490a/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@b98490a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app10@b98490a/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "BLUELOCK (2022)",
 "episode": "24",
@@ -547,7 +973,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app10@4aac6f6/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@4aac6f6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app10@4aac6f6/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "BLUELOCK (2022)",
 "episode": "23",
@@ -561,7 +999,13 @@
 },
 {
 "logo": "https://i.imgur.com/g23f6dK.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@15206ab/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/15206ab@15206ab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/15206ab@15206ab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/15206ab@15206ab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/15206ab@15206ab/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tvq8@15206ab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/15206ab@15206ab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/15206ab@15206ab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/15206ab@15206ab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/15206ab@15206ab/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Mufasa: The Lion King (2024)",
 "episode": "",
@@ -575,7 +1019,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app10@d40dd32/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@d40dd32/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app10@d40dd32/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "The Whisper Man (2026)",
 "episode": "",
@@ -589,7 +1045,14 @@
 },
 {
 "logo": "https://i.ibb.co.com/wrcJhB4s/Toy-Story-1995-Poster-The-Movie-Database-TMDB-1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/tvq19@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/56b61a1@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/56b61a1@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/56b61a1@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/56b61a1@56b61a1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/56b61a1@56b61a1/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tvq19@56b61a1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/56b61a1@56b61a1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/56b61a1@56b61a1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/56b61a1@56b61a1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/56b61a1@56b61a1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/56b61a1@56b61a1/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Toy Story (1995)",
 "episode": "",
@@ -603,7 +1066,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app10@f0295a4/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app10@f0295a4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app10@f0295a4/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Toy Story 4 (2019)",
 "episode": "",
@@ -617,7 +1092,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app9@29524e3/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@29524e3/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app9@29524e3/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Danur 3: Sunyaruri (2019)",
 "episode": "",
@@ -631,7 +1118,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app9@0be538a/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@0be538a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app9@0be538a/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Danur 2: Maddah (2018)",
 "episode": "",
@@ -645,7 +1144,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app9@9505457/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@9505457/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app9@9505457/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Danur (2017)",
 "episode": "",
@@ -659,7 +1170,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app9@134e675/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app9@134e675/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita and the Green Giant Legend (2008)",
 "episode": "",
@@ -673,7 +1196,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@8be3eb6/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@8be3eb6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app8@8be3eb6/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: The New Record of Nobita's Spaceblazer (2009)",
 "episode": "",
@@ -687,7 +1222,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tvq49@1c11d9c/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp692/tvq49@1c11d9c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/1c11d9c@1c11d9c/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/1c11d9c@1c11d9c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/1c11d9c@1c11d9c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/1c11d9c@1c11d9c/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/tvq49@1c11d9c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/1c11d9c@1c11d9c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/1c11d9c@1c11d9c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/1c11d9c@1c11d9c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/1c11d9c@1c11d9c/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Cars 3 (2017)",
 "episode": "",
@@ -701,7 +1242,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@75fac6d/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@75fac6d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app8@75fac6d/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s3 (2025)",
 "episode": "03",
@@ -715,7 +1268,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@546f99b/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@546f99b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app8@546f99b/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s3 (2025)",
 "episode": "02",
@@ -729,7 +1294,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@c716208/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app8@c716208/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app8@c716208/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s3 (2025)",
 "episode": "01",
@@ -743,7 +1320,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app7@eedc0f9/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@eedc0f9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app7@eedc0f9/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita in the Wan-Nyan Spacetime Odyssey (2004)",
 "episode": "",
@@ -757,7 +1346,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app7@0f29b24/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app7@0f29b24/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app7@0f29b24/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita and the Birth of Japan (2016)",
 "episode": "",
@@ -771,7 +1372,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@fa7b8ce/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@fa7b8ce/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app8@fa7b8ce/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita's Great Adventure in the Antarctic Kachi Kochi (2017)",
 "episode": "",
@@ -785,7 +1398,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@844f6fe/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app8@844f6fe/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "The Ant Bully (2006)",
 "episode": "",
@@ -799,7 +1424,14 @@
 },
 {
 "logo": "https://i.imgur.com/RL2CDEJ.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/tvq4@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/f42c3ee@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/f42c3ee@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/f42c3ee@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/f42c3ee@f42c3ee/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/f42c3ee@f42c3ee/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tvq4@f42c3ee/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/f42c3ee@f42c3ee/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/f42c3ee@f42c3ee/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/f42c3ee@f42c3ee/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/f42c3ee@f42c3ee/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/f42c3ee@f42c3ee/1/master.m3u8"
+],
 "ttl": "Doraemon: Nobita and the Legend of the Sun King (2000)",
 "bahasa": "dub indo",
 "episode": "",
@@ -826,7 +1458,14 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/a547b2f@a547b2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/a547b2f@a547b2f/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tvq47@a547b2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/a547b2f@a547b2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/a547b2f@a547b2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/a547b2f@a547b2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/a547b2f@a547b2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/a547b2f@a547b2f/1/master.m3u8"
+],
 "ttl": "Doraemon the Movie: Nobita's Sky Utopia (2023)",
 "bahasa": "dub indo",
 "episode": "",
@@ -840,7 +1479,14 @@
 },
 {
 "logo": "https://image.tmdb.org/t/p/w220_and_h330_face/A5imhXiFF3AL9RRA4FBzNDFmfgW.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq21@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/720d5e4@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/720d5e4@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/720d5e4@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/720d5e4@720d5e4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/720d5e4@720d5e4/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tvq21@720d5e4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/720d5e4@720d5e4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/720d5e4@720d5e4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/720d5e4@720d5e4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/720d5e4@720d5e4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/720d5e4@720d5e4/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Black Adam (2022)",
 "episode": "",
@@ -854,7 +1500,14 @@
 },
 {
 "logo": "https://i.imgur.com/uQV96oc.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/54e86a4@54e86a4/vods/2012%20(2009)%20dubb/2012.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "2012 (2009)",
 "episode": "",
@@ -868,7 +1521,19 @@
 },
 {
 "logo": "https://i.imgur.com/ITcYb8v.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app8@7ce9ab5/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@7ce9ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app8@7ce9ab5/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "LEGO DC Comics Super Heroes: Justice League - Attack of the Legion of Doom! (2015)",
 "episode": "",
@@ -882,7 +1547,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app7@080d0b1/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app7@080d0b1/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "25",
@@ -896,7 +1573,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app7@a15ff30/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@a15ff30/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app7@a15ff30/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "24",
@@ -910,7 +1599,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app7@cf40dab/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@cf40dab/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app7@cf40dab/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "23",
@@ -924,7 +1625,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app7@bd4a6d1/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app7@bd4a6d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app7@bd4a6d1/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita and the Space Heroes (2015)",
 "episode": "",
@@ -938,7 +1651,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app6@285c976/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app6@285c976/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app6@285c976/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Facing El Chapo (2026)",
 "episode": "",
@@ -952,7 +1677,19 @@
 },
 {
 "logo": "https://i.imgur.com/qvr3YRu.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app5@02a0bfe/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app5@02a0bfe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app5@02a0bfe/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Djoerig Salawe (2026)",
 "episode": "",
@@ -966,7 +1703,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app4@8089873/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@8089873/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app4@8089873/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "BLUELOCK (2022)",
 "episode": "22",
@@ -980,7 +1729,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app4@17b1b7b/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@17b1b7b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app4@17b1b7b/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "BLUELOCK (2022)",
 "episode": "21",
@@ -994,7 +1755,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app4@22be44f/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@22be44f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app4@22be44f/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "BLUELOCK (2022)",
 "episode": "20",
@@ -1008,7 +1781,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app4@bfedfbe/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app4@bfedfbe/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app4@bfedfbe/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Chicken Little (2005)",
 "episode": "",
@@ -1022,7 +1807,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tvq45@fbd3fc7/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp691/tvq45@fbd3fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/fbd3fc7@fbd3fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/fbd3fc7@fbd3fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/fbd3fc7@fbd3fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/fbd3fc7@fbd3fc7/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/tvq45@fbd3fc7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/fbd3fc7@fbd3fc7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/fbd3fc7@fbd3fc7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/fbd3fc7@fbd3fc7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/fbd3fc7@fbd3fc7/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "BLUELOCK (2022)",
 "episode": "17",
@@ -1036,7 +1827,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app3@4d673c1/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@4d673c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app3@4d673c1/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "BLUELOCK (2022)",
 "episode": "19",
@@ -1050,7 +1853,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app3@05d3caa/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@05d3caa/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app3@05d3caa/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "22",
@@ -1064,7 +1879,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app3@b74a6b7/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@b74a6b7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app3@b74a6b7/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Jumanji (1995)",
 "episode": "",
@@ -1078,7 +1905,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app3@f92fb2f/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app3@f92fb2f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app3@f92fb2f/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Toy Story 3 (2010)",
 "episode": "",
@@ -1106,7 +1945,13 @@
 },
 {
 "logo": "https://i.imgur.com/sQAOWLu.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie1/tvq16@b61e470/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/b61e470@b61e470/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/b61e470@b61e470/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/b61e470@b61e470/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/b61e470@b61e470/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tvq16@b61e470/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/b61e470@b61e470/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/b61e470@b61e470/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/b61e470@b61e470/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/b61e470@b61e470/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Migration (2023)",
 "episode": "",
@@ -1120,7 +1965,14 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq46@3016796/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/tvq46@3016796/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/3016796@3016796/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/3016796@3016796/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/3016796@3016796/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/3016796@3016796/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/3016796@3016796/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tvq46@3016796/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/3016796@3016796/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/3016796@3016796/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/3016796@3016796/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/3016796@3016796/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/3016796@3016796/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Thunderbolts* (2025)",
 "episode": "",
@@ -1134,7 +1986,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app2@7cf7cc6/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@7cf7cc6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app2@7cf7cc6/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Marvel (2019)",
 "episode": "",
@@ -1148,7 +2012,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app2@67db546/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@67db546/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app2@67db546/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "21",
@@ -1162,7 +2038,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app2@70edf66/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app2@70edf66/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app2@70edf66/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Captain Tsubasa: Road to 2002 (2001)",
 "episode": "20",
@@ -1176,7 +2064,19 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app1@0b7ba04/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app1@0b7ba04/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app1@0b7ba04/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Jung_E (2023))",
 "episode": "",
@@ -1190,7 +2090,14 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/4713e0e@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/4713e0e@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/4713e0e@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/4713e0e@4713e0e/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/4713e0e@4713e0e/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/tvq32@4713e0e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/4713e0e@4713e0e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/4713e0e@4713e0e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/4713e0e@4713e0e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/4713e0e@4713e0e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/4713e0e@4713e0e/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Toy Story 2 (1999)",
 "episode": "",
@@ -1204,7 +2111,14 @@
 },
 {
 "logo": "https://i.imgur.com/op9qJBB.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/54e86a4@54e86a4/vods/air%20terjun%20pengantin%20(2009)/ind.m3u8"
+],
 "bahasa": "",
 "ttl": "Air Terjun Pengantin (2009)",
 "episode": "",
@@ -1218,7 +2132,14 @@
 },
 {
 "logo": "https://i.imgur.com/h3ijVXY.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/filmovie/filmovie.github.io@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/filmovie.github.io@6a4ac50/967teD7/titanic/07gA6zz4.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/6a4ac50@6a4ac50/967teD7/titanic/07gA6zz4.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Titanic (1997)",
 "episode": "",
@@ -1232,7 +2153,13 @@
 },
 {
 "logo": "https://i.imgur.com/9vPLD6H.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/abyoffset/0adec8a@0adec8a/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/0adec8a@0adec8a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/0adec8a@0adec8a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/0adec8a@0adec8a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/0adec8a@0adec8a/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/0adec8a@0adec8a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/0adec8a@0adec8a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/0adec8a@0adec8a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/0adec8a@0adec8a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/0adec8a@0adec8a/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Pokémon Detective Pikachu (2019)",
 "episode": "",
@@ -1246,7 +2173,11 @@
 },
 {
 "logo": "https://i.imgur.com/yaurCUq.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq22@83368c4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/dunkirk@83368c4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp/dunkirk@83368c4/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tvq22@83368c4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/dunkirk@83368c4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/dunkirk@83368c4/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Dunkirk (2017)",
 "thn": "2017",
@@ -1258,7 +2189,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app1@55ced4b/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app1@55ced4b/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app1@55ced4b/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app1@55ced4b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app1@55ced4b/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app1@55ced4b/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/app1@55ced4b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app1@55ced4b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app1@55ced4b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app1@55ced4b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app1@55ced4b/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Ghost in the cell (2026)",
 "episode": "",
@@ -1272,7 +2209,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app1@1c4652c/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app1@1c4652c/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app1@1c4652c/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app1@1c4652c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app1@1c4652c/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app1@1c4652c/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/app1@1c4652c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app1@1c4652c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app1@1c4652c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app1@1c4652c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app1@1c4652c/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "Doraemon: Nobita and the Winged Braves (2001)",
 "episode": "",
@@ -1286,7 +2229,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app1@fd056b4/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app1@fd056b4/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app1@fd056b4/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app1@fd056b4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app1@fd056b4/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app1@fd056b4/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/app1@fd056b4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app1@fd056b4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app1@fd056b4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app1@fd056b4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app1@fd056b4/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s2 (2024)",
 "episode": "07",
@@ -1300,7 +2249,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app@84e2e7a/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/app@84e2e7a/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/app@84e2e7a/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/app@84e2e7a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/app@84e2e7a/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/app@84e2e7a/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/app@84e2e7a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app@84e2e7a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app@84e2e7a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app@84e2e7a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app@84e2e7a/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s2 (2024)",
 "episode": "06",
@@ -1314,7 +2269,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq70@28361c8/1/poster.jpg",
-"lnk":[ "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq70@28361c8/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/tvq70-1@28361c8/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/tvq70-1@28361c8/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/tvq70-1@28361c8/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/tvq70-1@28361c8/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tvq70@28361c8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tvq70-1@28361c8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tvq70-1@28361c8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tvq70-1@28361c8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tvq70-1@28361c8/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s2 (2024)",
 "episode": "04",
@@ -1328,7 +2289,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/tvq70@5d98fc7/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/tvq70@5d98fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/tvq70@5d98fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq70@5d98fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/tvq70@5d98fc7/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/tvq70@5d98fc7/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/tvq70@5d98fc7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tvq70@5d98fc7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tvq70@5d98fc7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tvq70@5d98fc7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tvq70@5d98fc7/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s2 (2024)",
 "episode": "05",
@@ -1342,7 +2309,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq70@3c9c6cb/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/tvq70@3c9c6cb/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/tvq70-1@3c9c6cb/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq70-1@3c9c6cb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp7/tvq70-1@3c9c6cb/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/tvq70-1@3c9c6cb/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/tvq70@3c9c6cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tvq70-1@3c9c6cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tvq70-1@3c9c6cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tvq70-1@3c9c6cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tvq70-1@3c9c6cb/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s2 (2024)",
 "episode": "03",
@@ -1356,7 +2329,14 @@
 },
 {
 "logo": "https://i.imgur.com/O85HfUV.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/psq@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/psq@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/psq@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/psq@0b6b1c9/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/psq@0b6b1c9/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@0b6b1c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/psq@0b6b1c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/psq@0b6b1c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/psq@0b6b1c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/psq@0b6b1c9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/psq@0b6b1c9/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 2 (2017)",
 "episode": "",
@@ -1370,7 +2350,14 @@
 },
 {
 "logo": "https://i.imgur.com/CIPnPmC.jpeg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/psq@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/psq@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/psq@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie/psq@6f596bd/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/psq@6f596bd/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tvq7@6f596bd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/psq@6f596bd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/psq@6f596bd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/psq@6f596bd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/psq@6f596bd/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/psq@6f596bd/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Warkop DKI Reborn: Jangkrik Boss! Part 1 (2016)",
 "episode": "",
@@ -1384,7 +2371,12 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tvq59@21d3aa8/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkapp69/tvq59@21d3aa8/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/tvq59@21d3aa8/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq59@21d3aa8/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/tvq59@21d3aa8/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/tvq59@21d3aa8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tvq59@21d3aa8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tvq59@21d3aa8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tvq59@21d3aa8/1/master.m3u8"
+],
 "bahasa": "",
 "ttl": "Sobat Ambyar (2021)",
 "episode": "",
@@ -1398,7 +2390,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq51@4a31785/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq51@4a31785/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp1/tvq51@4a31785/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/tvq51@4a31785/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq51@4a31785/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/tvq51@4a31785/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tvq51@4a31785/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tvq51@4a31785/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tvq51@4a31785/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tvq51@4a31785/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tvq51@4a31785/1/master.m3u8"
+],
 "bahasa": "sub indo",
 "ttl": "Shaolin Soccer (2001)",
 "episode": "",
@@ -1412,7 +2410,13 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/tvq58@6a7f71d/1/poster.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tivikufm/tvq58@6a7f71d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/tvq58@6a7f71d/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/tvq58@6a7f71d/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq58@6a7f71d/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/tvq58@6a7f71d/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tvq58@6a7f71d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tvq58@6a7f71d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tvq58@6a7f71d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tvq58@6a7f71d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tvq58@6a7f71d/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s2 (2024)",
 "episode": "02",
@@ -1426,7 +2430,14 @@
 },
 {
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tvq53@da63eec/1/poster_1.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/tvq53@da63eec/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp2/tvq53@da63eec/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/tvq53@da63eec/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/tvq53@da63eec/1/master.m3u8","https://cdn.jsdelivr.net/gh/abyoffset/tvq53@da63eec/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/tvq53@da63eec/1/master.m3u8" ],
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tvq53@da63eec/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tvq53@da63eec/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tvq53@da63eec/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tvq53@da63eec/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tvq53@da63eec/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tvq53@da63eec/1/master.m3u8"
+],
 "bahasa": "dub indo",
 "ttl": "squid game s2 (2024)",
 "episode": "01",
