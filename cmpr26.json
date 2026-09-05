@@ -1,5 +1,27 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app24@392593a/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app24@392593a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app24@392593a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app24@392593a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app24@392593a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app24@392593a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app24@392593a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app24@392593a/1/master.m3u8"
+],
+"bahasa": "",
+"ttl": "Sengkolo: Malam Satu Suro (2024)",
+"episode": "",
+"thn": "2024",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.32",
+"dur": "1:37:13",
+"kilasan": "Kisah seorang pria yang merasa terpuruk dan kehilangan keyakinan setelah mengalami tragedi kehilangan istri dan anak-anaknya pada malam pertama bulan Suro.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp692/app21@15177c6/1/master.m3u8",
@@ -136,7 +158,6 @@
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8",
 "https://cdn.jsdelivr.net/gh/tvkuapp1/app18@6693a22/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app18@6693a22/1/master.m3u8",
 "https://cdn.jsdelivr.net/gh/tvkuapp2/app18@6693a22/1/master.m3u8",
 "https://cdn.jsdelivr.net/gh/tvkuapp6/app18@6693a22/1/master.m3u8",
 "https://cdn.jsdelivr.net/gh/filmovie1/app18@6693a22/1/master.m3u8",
