@@ -39,13 +39,15 @@
 {
 "logo": "https://i.imgur.com/nqRaBfX.png",
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/by@54e86a4/vods/squid.game.2021/squid2.m3u8",
-"ttl": "Squid Game (2021)",
 "bahasa": "dub indo",
+"ttl": "Squid Game (2021)",
 "episode": "02",
-"koleksi": "Squid Game (2021)",
-"dur": "1:02:30",
+"thn": "2021",
+"season": "1",
+"koleksi": "Squid Game",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.13",
+"dur": "1:02:30",
 "kilasan": "Terpecah antara ada yang mau lanjut dan berhenti, grup pemain memungut suara. Namun, kenyataan di luar sana mungkin terbukti sama kejamnya seperti permainan itu.",
 "tiviku": "apk"
 },
