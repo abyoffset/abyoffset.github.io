@@ -1,5 +1,27 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app25@4dc8bd9/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app25@4dc8bd9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app25@4dc8bd9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app25@4dc8bd9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app25@4dc8bd9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app25@4dc8bd9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app25@4dc8bd9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app25@4dc8bd9/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"ttl": "Mohabbatein (2000)",
+"episode": "",
+"thn": "2000",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:45:58",
+"kilasan": "Di sebuah universitas khusus pria yang bergengsi, tiga sahabat mencari cinta di luar lingkungan kampus. pada saat yang sama, seorang guru musik yang baru direkrut berusaha menjalin pertemanan dan mencairkan suasana dengan sang kepala sekolah yang sangat kaku dan disiplin.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app24@a7dc99c/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp4/app24@a7dc99c/1/master.m3u8",
