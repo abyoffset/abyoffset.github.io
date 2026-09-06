@@ -1,5 +1,27 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app24@a7dc99c/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app24@a7dc99c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app24@a7dc99c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app24@a7dc99c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app24@a7dc99c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/app24@a7dc99c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/app24@a7dc99c/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/app24@a7dc99c/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"ttl": "Doraemon: Petualangan Nobita di Pulau Harta Karun (2018)",
+"episode": "",
+"thn": "2018",
+"koleksi": "doraemon",
+"crop_mode": "stretch_crop",
+"crop_scale": "3.00",
+"dur": "1:43:29",
+"kilasan": "Doraemon, Nobita, Shizuka, Giant, dan Suneo datang ke Laut Karibia. Mereka jauh-jauh datang ke sana karena rasa penasaran untuk mengetahui harta karun, yang ditinggalkan oleh para perompak pada era pelayaran besar. Di sinilah awal petualangan mereka. Nobita berperan sebagai kapten, sudah menjadi tugasnya untuk melawan musuh-musuhnya di kapal. Nasib yang tidak mengenakan juga menimpa Shizuka, ia sempat diculik! Mereka juga harus berhadapan dengan alam, badai mengamuk menghalangi perjalanan mereka. Mini-Dora yang baik hati membantu Nobita dan teman-teman untuk melanjutkan perjalanan mereka. Akhirnya, mereka terdampar di sebuah pulau, yang bernama Pulau Harta Misterius. Mereka menemukan fakta bahwa pulau ini lebih dari sekedar pulau biasa.",
+"tiviku": "apk"
+},
+{
 "logo": "https://image.tmdb.org/t/p/w220_and_h330_face/9AKMIyyjYxCBYnlqnZt85OrMyLU.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie/op8@13f6bda/55dTziseD4/onepiece/o0nep.m3u8",
