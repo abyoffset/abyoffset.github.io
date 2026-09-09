@@ -1,5 +1,48 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app28@ce14ab5/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/app28@ce14ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app28@ce14ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app28@ce14ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app28@ce14ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app28@ce14ab5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app28@ce14ab5/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"ttl": "Doraemon: Nobita's Secret Gadget Museum (2013)",
+"episode": "",
+"thn": "2013",
+"koleksi": "doraemon",
+"crop_mode": "stretch_crop",
+"crop_scale": "3.13",
+"dur": "1:43:40",
+"kilasan": "Doraemon dan teman-temannya pergi ke abad ke-22 untuk mencari lonceng emasnya yang dicuri oleh seorang pencuri terkenal bernama Kaito DX.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app28@a1258db/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/app28@a1258db/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app28@a1258db/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app28@a1258db/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app28@a1258db/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app28@a1258db/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app28@a1258db/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app28@a1258db/1/master.m3u8"
+],
+"bahasa": "",
+"ttl": "Neraka Lembah Tengkorak (1988)",
+"episode": "",
+"thn": "1988",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "3.15",
+"dur": "1:12:13",
+"kilasan": "Perang pecah antara dua organisasi seni bela diri.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/app28@3763d81/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/abyoffset/app28@3763d81/1/master.m3u8",
