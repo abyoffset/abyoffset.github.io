@@ -1,5 +1,49 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/abyoffset/app28@3763d81/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/app28@3763d81/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app28@3763d81/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app28@3763d81/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app28@3763d81/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app28@3763d81/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app28@3763d81/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app28@3763d81/1/master.m3u8"
+],
+"bahasa": "",
+"ttl": "Pelangi di Mars (2026)",
+"episode": "",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "1:48:49",
+"kilasan": "Kisah tentang perjuangan seorang anak dalam menghadapi tantangan hidup dan mengejar mimpi-mimpinya, yang dianalogikan seperti mencari pelangi di tempat yang mustahil (Mars). Film ini mengeksplorasi tema harapan, keluarga, dan keteguhan hati di tengah kesulitan.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/app27@0398a67/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app27@0398a67/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app27@0398a67/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app27@0398a67/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app27@0398a67/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/app27@0398a67/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app27@0398a67/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/app27@0398a67/1/master.m3u8"
+],
+"bahasa": "",
+"ttl": "Jaka Sembung dan Dewi Samudra (1990)",
+"episode": "",
+"thn": "1990",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "4.13",
+"dur": "1:22:17",
+"kilasan": "Jaka Sembung meminta bantuan dewi laut, Nyi Roro Kidul, untuk melawan penjajah Belanda yang hendak menaklukkan negerinya. Barry Prima",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app25@4dc8bd9/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/app25@4dc8bd9/1/master.m3u8",
@@ -18,7 +62,7 @@
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:45:58",
-"kilasan": "Di sebuah universitas khusus pria yang bergengsi, tiga sahabat mencari cinta di luar lingkungan kampus. pada saat yang sama, seorang guru musik yang baru direkrut berusaha menjalin pertemanan dan mencairkan suasana dengan sang kepala sekolah yang sangat kaku dan disiplin.",
+"kilasan": "Di sebuah universitas khusus pria yang bergengsi, tiga sahabat mencari cinta di luar lingkungan kampus. pada saat yang sama, seorang guru musik yang baru direkrut berusaha menjalin pertemanan dan mencairkan suasana dengan sang kepala sekolah yang sangat kaku dan disiplin. india",
 "tiviku": "apk"
 },
 {
