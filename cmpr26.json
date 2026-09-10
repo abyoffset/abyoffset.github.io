@@ -1,5 +1,27 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/app30@fbe2286/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/app30@fbe2286/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app30@fbe2286/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app30@fbe2286/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app30@fbe2286/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app30@fbe2286/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app30@fbe2286/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app30@fbe2286/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"ttl": "The Chronicles of Narnia: Prince Caspian (2008)",
+"episode": "",
+"thn": "2008",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.20",
+"dur": "2:17:38",
+"kilasan": "Setahun setelah petualangan luar biasa mereka dalam kisah *The Lion, the Witch and the Wardrobe*, Peter, Edmund, Lucy, dan Susan Pevensie kembali ke Narnia untuk membantu seorang pangeran muda yang nyawanya terancam oleh Raja Miraz yang jahat. Kini, dengan bantuan berbagai karakter baru yang unik—termasuk Trufflehunter si luak dan Nikabrik si kurcaci—keluarga Pevensie memulai misi luar biasa demi mengembalikan Narnia kepada pewarisnya yang sah.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/app29@db81162/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp69/app29@db81162/1/master.m3u8",
