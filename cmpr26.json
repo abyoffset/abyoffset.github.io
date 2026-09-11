@@ -1,5 +1,27 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app31@059a576/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app31@059a576/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app31@059a576/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app31@059a576/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app31@059a576/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app31@059a576/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app31@059a576/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/app31@059a576/1/sub.vtt",
+"ttl": "Buaya Deli (1978)",
+"episode": "",
+"thn": "1978",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:51:56",
+"kilasan": "Kisah ini menceritakan tentang Tijah, anak seorang pekerja kontrak di Deli pada masa kolonial Belanda. Kecantikannya menarik perhatian Bustaman dan Tuan Pieter Dikkert. Saat Bustaman hendak melamarnya, ternyata Tijah telah dijadikan pelayan sekaligus gundik di rumah Pieter Dikkert hingga ia hamil. Meski demikian, Bustaman tetap menginginkan Tijah. Ia sempat tertangkap basah saat berusaha menemui Tijah, yang kemudian berujung pada pengusiran Tijah dan pemisahannya dari sang anak laki-laki. Setahun kemudian, setelah kondisinya pulih, justru Bustaman-lah yang mempertemukan kembali Tijah dengan anaknya yang kini telah beranjak remaja.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app30@07572a0/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp4/app30@07572a0/1/master.m3u8",
