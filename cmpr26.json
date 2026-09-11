@@ -1,5 +1,27 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/app30@3ad6a6e/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/app30@3ad6a6e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app30@3ad6a6e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app30@3ad6a6e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app30@3ad6a6e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app30@3ad6a6e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app30@3ad6a6e/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app30@3ad6a6e/1/master.m3u8"
+],
+"bahasa": "",
+"ttl": "Untuk sebuah nama (1985)",
+"episode": "",
+"thn": "1985",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.73",
+"dur": "1:48:02",
+"kilasan": "Cerita film ini bermula ketika Merry kecil dilarang oleh ayahnya untuk bergaul dengan Miki, anak dari pembantu rumah tangga mereka. Suatu hari, ayah Merry memergoki Miki sedang bermain bersama Merry, yang berujung pada penamparan terhadap Miki dan pengusiran ibu Miki dari rumah tersebut. Miki dan ibunya kemudian terpaksa pindah ke ibu kota untuk menyambung hidup.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/vodm3u1/app30@fbe2286/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/vodm3u1/app30@fbe2286/1/master.m3u8",
