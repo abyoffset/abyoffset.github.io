@@ -1,5 +1,28 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app31@42f3ac6/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app31@42f3ac6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app31@42f3ac6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app31@42f3ac6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app31@42f3ac6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app31@42f3ac6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app31@42f3ac6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app31@42f3ac6/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/app31@42f3ac6/1/sub.vtt",
+"ttl": "Slam Dunk (1993)",
+"episode": "11",
+"thn": "1993",
+"koleksi": "Slam Dunk (1993)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:09",
+"kilasan": "Sakuragi Hanamichi adalah seorang anak nakal SMP yang suka berkelahi dan ditolak oleh anak perempuan. Namun saat masuk SMA, ia bertemu gadis impiannya, Haruko Akagi. Ia mau melakukan apa saja demi memenangkannya, termasuk masuk tim basket sekolah yang ingin jadi nomor satu di negeri ini, yang dipimpin oleh kakak Haruko. Masalahnya, Sakuragi belum pernah main basket sebelumnya, dan ada pemain baru hebat yang merebut perhatian serta rasa sayang Haruko darinya.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app30@7431a33/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp4/app30@7431a33/1/master.m3u8",
