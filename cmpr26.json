@@ -1,5 +1,28 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@63f4861/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app32@63f4861/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app32@63f4861/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app32@63f4861/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app32@63f4861/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app32@63f4861/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app32@63f4861/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app32@63f4861/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@63f4861/1/sub.vtt",
+"ttl": "Kain Kafan Hitam (2019)",
+"episode": "",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.30",
+"dur": "1:16:16",
+"kilasan": "Evelyn, seorang mahasiswi, memiliki dua adik—Arya dan Maya—yang masih duduk di bangku SD dan SMP. Evelyn memiliki kekasih bernama Bimo yang gemar dengan hal-hal berbau horor; bahkan, Bimo tergabung dalam sebuah komunitas unik di kampus yang berfokus pada pencarian sosok iblis. Di komunitas tersebut, Bimo ditemani oleh Angeline dan Roy. Evelyn menuturkan bahwa setelah kedua orang tuanya meninggal akibat kecelakaan, ia harus pindah rumah karena rumah lama mereka telah lama digadaikan ke bank. Mereka pun menemukan sebuah rumah yang sesuai dengan kemampuan finansial Evelyn, namun berbagai kejadian misterius mulai terjadi di rumah tersebut.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app31@059a576/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp2/app31@059a576/1/master.m3u8",
