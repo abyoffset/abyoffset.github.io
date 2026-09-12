@@ -1,5 +1,28 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@9112556/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app32@9112556/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app32@9112556/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app32@9112556/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app32@9112556/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app32@9112556/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app32@9112556/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app32@9112556/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@9112556/1/sub.vtt",
+"ttl": "Sangkuriang (1982)",
+"episode": "",
+"thn": "1982",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.30",
+"dur": "1:35:06",
+"kilasan": "Setelah bersumpah akan menikahi orang yang mengambil tongkat tenunnya, Dayang Sumbi memulai kisah cinta tak terduga dengan seorang anggota staf kerajaan. Suzzanna",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@63f4861/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@63f4861/1/master.m3u8",
