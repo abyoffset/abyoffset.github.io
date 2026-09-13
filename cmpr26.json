@@ -1,5 +1,23 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/app33@05ae5f0/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/app33@05ae5f0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app33@05ae5f0/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/app33@05ae5f0/1/sub.vtt",
+"ttl": "Sampai Titik Terakhirmu (2025)",
+"episode": "",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.07",
+"dur": "1:55:27",
+"kilasan": "Ketika wanita yang diam-diam dicintainya sejak lama didiagnosis menderita kanker ovarium, seorang pria yang setia dengan teguh mendampinginya saat kondisinya memburuk dan memilih untuk menikahinya, membuktikan bahwa cinta sejati mampu bertahan menghadapi ujian terberat.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/app33@8e7c8ed/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp1/app33@8e7c8ed/1/master.m3u8",
