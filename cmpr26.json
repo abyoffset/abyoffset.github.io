@@ -1,5 +1,28 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@44903cb/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/app32@44903cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/app32@44903cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/app32@44903cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app32@44903cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app32@44903cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app32@44903cb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app32@44903cb/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@44903cb/1/sub.vtt",
+"ttl": "Warkop DKI Reborn 3 (2019)",
+"episode": "",
+"thn": "2019",
+"koleksi": "warkop",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.07",
+"dur": "1:35:44",
+"kilasan": "Dono, Kasino, dan Indro mendapatkan tugas sebagai polisi rahasia perihal pencucian uang di industri perfilman Indonesia. Mereka pun terlibat dalam pembuatan sebuah film dan tiba-tiba terbangun di padang pasir setelah jatuh pingsan.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@9112556/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp6/app32@9112556/1/master.m3u8",
