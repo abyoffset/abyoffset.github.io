@@ -1,5 +1,44 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@d867c11/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@d867c11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp1@d867c11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp1@d867c11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp1@d867c11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp1@d867c11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp1@d867c11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@d867c11/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@d867c11/1/sub.vtt",
+"ttl": "Argantara (2022)",
+"episode": "",
+"thn": "2022",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.33",
+"dur": "1:49:15",
+"kilasan": "Menikah di usia muda tak pernah terlintas di benak Arga; ia tak habis pikir dengan jalan pikiran orang tuanya yang hendak menikahkannya dengan anak sahabat sang ayah—sebuah amanat yang wajib dipenuhi saat Arga menginjak usia delapan belas tahun.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/poster_1.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"ttl": "The Ant Bully (2006)",
+"episode": "",
+"thn": "2006",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:29:00",
+"kilasan": "Muak karena terus diganggu oleh anak nakal di lingkungannya, Lucas Nickle yang berusia 10 tahun melampiaskan kekesalannya pada sebuah sarang semut di halaman depan rumahnya... hingga akhirnya kawanan serangga itu menyusutkan tubuhnya seukuran serangga menggunakan ramuan ajaib. Karena dinyatakan bersalah melakukan kejahatan terhadap koloni, Lucas hanya bisa mendapatkan kembali kebebasannya dengan cara hidup bersama para semut dan mempelajari cara hidup mereka.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie1/app33@05ae5f0/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie1/app33@05ae5f0/1/master.m3u8",
@@ -1595,32 +1634,6 @@
 "crop_scale": "3.00",
 "dur": "1:40:48",
 "kilasan": "Doraemon dan Nobita menemukan cincin emas misterius jauh di bawah lapisan es di Antartika, yang membawa mereka untuk mengungkap sebuah kota kuno yang telah hancur.",
-"tiviku": "apk"
-},
-{
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/poster_1.jpg",
-"lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/app8@844f6fe/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/app8@844f6fe/1/master.m3u8"
-],
-"bahasa": "dub indo",
-"ttl": "The Ant Bully (2006)",
-"episode": "",
-"thn": "2006",
-"koleksi": "",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "1:29:00",
-"kilasan": "Muak karena terus diganggu oleh anak nakal di lingkungannya, Lucas Nickle yang berusia 10 tahun melampiaskan kekesalannya pada sebuah sarang semut di halaman depan rumahnya... hingga akhirnya kawanan serangga itu menyusutkan tubuhnya seukuran serangga menggunakan ramuan ajaib. Karena dinyatakan bersalah melakukan kejahatan terhadap koloni, Lucas hanya bisa mendapatkan kembali kebebasannya dengan cara hidup bersama para semut dan mempelajari cara hidup mereka.",
 "tiviku": "apk"
 },
 {
