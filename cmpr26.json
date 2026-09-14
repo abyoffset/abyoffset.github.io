@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp2@e9da6bf/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp2@e9da6bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp2@e9da6bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp2@e9da6bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp2@e9da6bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp2@e9da6bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp2@e9da6bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp2@e9da6bf/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/abyoffset/tapp2@e9da6bf/1/sub.vtt",
+"ttl": "Bisikan Pontianak (2026)",
+"episode": "",
+"negara": "MY",
+"thn": "2026",
+"koleksi": "warkop",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:36:50",
+"kilasan": "Suraya membesarkan dua orang anaknya seorang diri di sebuah rumah terpencil selepas ditinggalkan suami. Kehidupan tenang mereka bertukar huru-hara apabila Arfan, bekas suaminya, muncul kembali untuk menuntut tanah warisan keluarga. Sejak kepulangan Arfan, kejadian-kejadian pelik mula berlaku dan menghantui seisi kampung.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp2@130c65a/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie/tapp2@130c65a/1/master.m3u8",
