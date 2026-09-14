@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@4e44f11/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@4e44f11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@4e44f11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp1@4e44f11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp1@4e44f11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp1@4e44f11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp1@4e44f11/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp1@4e44f11/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@4e44f11/1/sub.vtt",
+"ttl": "The Sea Beast (2022)",
+"episode": "",
+"negara": "id",
+"thn": "2022",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:59:25",
+"kilasan": "Saat gadis belia ini menyusup ke kapal sang pemburu monster laut legendaris, keduanya melakukan perjalanan epik ke perairan yang belum terjamah dan memulai sejarah baru.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@3d5de14/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@3d5de14/1/master.m3u8",
