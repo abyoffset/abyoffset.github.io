@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@3d5de14/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@3d5de14/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@3d5de14/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp1@3d5de14/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp1@3d5de14/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp1@3d5de14/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp1@3d5de14/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp1@3d5de14/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@3d5de14/1/sub.vtt",
+"ttl": "Dilwale (2015)",
+"episode": "",
+"negara": "in",
+"thn": "2015",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"dur": "2:34:18",
+"kilasan": "Dilwale adalah film India tahun 2015 bergenre romantis, aksi dan komedi disutradarai oleh Rohit Shetty, dan diproduseri oleh Gauri Khan dan Rohit Shetty di bawah bendera Red Chillies Entertainment dan Rohit Shetty Productions. Shah Rukh Khan, Kajol",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@d867c11/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@d867c11/1/master.m3u8",
