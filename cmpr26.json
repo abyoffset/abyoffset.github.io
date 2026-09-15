@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp2@49b7c5a/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp2@49b7c5a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp2@49b7c5a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp2@49b7c5a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp2@49b7c5a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp2@49b7c5a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp2@49b7c5a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp2@49b7c5a/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/abyoffset/tapp2@49b7c5a/1/sub.vtt",
+"ttl": "Aap Mujhe Achche Lagne Lage (2002)",
+"episode": "",
+"negara": "IN",
+"thn": "2002",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:44:18",
+"kilasan": "Sapna Dholakia tidak menginginkan apa pun selain menikah dengan kekasihnya, Rohit, namun keluarganya yang konservatif dan ayahnya yang keras kepala akan melakukan segala cara untuk memastikan ia menikah dengan putra dari seorang teman keluarga. #Hrithik Roshan, Ameesha Patel",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp2@e9da6bf/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/abyoffset/tapp2@e9da6bf/1/master.m3u8",
@@ -16,7 +40,7 @@
 "episode": "",
 "negara": "MY",
 "thn": "2026",
-"koleksi": "warkop",
+"koleksi": "",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "1:36:50",
