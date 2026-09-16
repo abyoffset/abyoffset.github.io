@@ -1,5 +1,77 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@b6629d1/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@b6629d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@b6629d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@b6629d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp4@b6629d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@b6629d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@b6629d1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@b6629d1/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@b6629d1/1/sub.vtt",
+"ttl": "Slam Dunk (1993)",
+"episode": "15",
+"negara": "",
+"thn": "1993",
+"koleksi": "Slam Dunk (1993)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:09",
+"kilasan": "Sakuragi Hanamichi adalah seorang anak nakal SMP yang suka berkelahi dan ditolak oleh anak perempuan. Namun saat masuk SMA, ia bertemu gadis impiannya, Haruko Akagi. Ia mau melakukan apa saja demi memenangkannya, termasuk masuk tim basket sekolah yang ingin jadi nomor satu di negeri ini, yang dipimpin oleh kakak Haruko. Masalahnya, Sakuragi belum pernah main basket sebelumnya, dan ada pemain baru hebat yang merebut perhatian serta rasa sayang Haruko darinya.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@0118ebb/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@0118ebb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@0118ebb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@0118ebb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp4@0118ebb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@0118ebb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@0118ebb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@0118ebb/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@0118ebb/1/sub.vtt",
+"ttl": "Slam Dunk (1993)",
+"episode": "14",
+"negara": "",
+"thn": "1993",
+"koleksi": "Slam Dunk (1993)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:09",
+"kilasan": "Sakuragi Hanamichi adalah seorang anak nakal SMP yang suka berkelahi dan ditolak oleh anak perempuan. Namun saat masuk SMA, ia bertemu gadis impiannya, Haruko Akagi. Ia mau melakukan apa saja demi memenangkannya, termasuk masuk tim basket sekolah yang ingin jadi nomor satu di negeri ini, yang dipimpin oleh kakak Haruko. Masalahnya, Sakuragi belum pernah main basket sebelumnya, dan ada pemain baru hebat yang merebut perhatian serta rasa sayang Haruko darinya.",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@b0a19a2/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@b0a19a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@b0a19a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp4@b0a19a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@b0a19a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@b0a19a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@b0a19a2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@b0a19a2/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@b0a19a2/1/sub.vtt",
+"ttl": "Slam Dunk (1993)",
+"episode": "13",
+"negara": "",
+"thn": "1993",
+"koleksi": "Slam Dunk (1993)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:09",
+"kilasan": "Sakuragi Hanamichi adalah seorang anak nakal SMP yang suka berkelahi dan ditolak oleh anak perempuan. Namun saat masuk SMA, ia bertemu gadis impiannya, Haruko Akagi. Ia mau melakukan apa saja demi memenangkannya, termasuk masuk tim basket sekolah yang ingin jadi nomor satu di negeri ini, yang dipimpin oleh kakak Haruko. Masalahnya, Sakuragi belum pernah main basket sebelumnya, dan ada pemain baru hebat yang merebut perhatian serta rasa sayang Haruko darinya.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@5ed75d5/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@5ed75d5/1/master.m3u8",
