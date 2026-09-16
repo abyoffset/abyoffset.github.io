@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp3@a6f2c1d/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp3@a6f2c1d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp3@a6f2c1d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp3@a6f2c1d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp3@a6f2c1d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp3@a6f2c1d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp3@a6f2c1d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp3@a6f2c1d/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp3@a6f2c1d/1/sub.vtt",
+"ttl": "Jurassic World (2015)",
+"episode": "",
+"negara": "US",
+"thn": "2015",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:59:12",
+"kilasan": "Dua puluh dua tahun setelah peristiwa Jurassic Park, Isla Nublar kini memiliki taman hiburan dinosaurus yang beroperasi sepenuhnya, Jurassic World, sebagaimana yang awalnya dibayangkan oleh John Hammond. #Chris Pratt",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp2@49b7c5a/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/abyoffset/tapp2@49b7c5a/1/master.m3u8",
