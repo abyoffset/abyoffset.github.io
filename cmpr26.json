@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp3@fed5bc8/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp3@fed5bc8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp3@fed5bc8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp3@fed5bc8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp3@fed5bc8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp3@fed5bc8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp3@fed5bc8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp3@fed5bc8/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp3@fed5bc8/1/sub.vtt",
+"ttl": "Animal Kingdom: Let's Go Ape (2015)",
+"episode": "",
+"negara": "FR",
+"thn": "2015",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:41:00",
+"kilasan": "Diadaptasi dari novel *Evolution Man* karya Roy Lewis, kisah ini menceritakan tentang manusia pertama—Edward muda—yang berevolusi dari kera. Edward diusir dari sukunya, namun ia memiliki kecerdikan dan kemampuan beradaptasi yang tinggi. Ia belajar berjalan, menemukan api, dan berhasil berburu; kita pun mengikuti perjalanannya saat ia berevolusi. Berbekal sifat yang murah hati, ia mencari makna kemanusiaan sejati—sebuah dunia di mana kita tidak memangsa ayah kita sendiri. #Jamel Debbouze",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp3@a6f2c1d/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp691/tapp3@a6f2c1d/1/master.m3u8",
