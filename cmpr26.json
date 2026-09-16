@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@787aceb/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@787aceb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@787aceb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp4@787aceb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@787aceb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@787aceb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@787aceb/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@787aceb/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@787aceb/1/sub.vtt",
+"ttl": "Detective Conan: The Last Wizard of the Century (1999)",
+"episode": "",
+"negara": "JP",
+"thn": "1999",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.08",
+"dur": "1:39:41",
+"kilasan": "Kaitou Kid kembali menantang pihak kepolisian dengan mengincar Russian Imperial Easter Egg. Berbekal informasi mengenai tanggal, waktu, dan lokasinya, kepolisian Osaka bergegas untuk menghentikan aksinya. Namun, kali ini Kid mungkin menghadapi tantangan yang lebih berat dari perkiraannya—Conan Edogawa, Heiji Hattori, dan sejumlah pihak lainnya juga berusaha mendapatkan telur berhiaskan permata tersebut.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp3@e824513/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp69/tapp3@e824513/1/master.m3u8",
