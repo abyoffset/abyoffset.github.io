@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@41b4a02/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@41b4a02/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@41b4a02/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@41b4a02/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp4@41b4a02/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@41b4a02/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@41b4a02/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@41b4a02/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@41b4a02/1/sub.vtt",
+"ttl": "Tarzan (2013)",
+"episode": "",
+"negara": "US",
+"thn": "2013",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:34:11",
+"kilasan": "Sebagai salah satu kisah paling klasik dan legendaris sepanjang masa, Tarzan karya Edgar Rice Burroughs kembali hadir di layar lebar untuk generasi baru. Tarzan dan Jane harus menghadapi pasukan tentara bayaran yang dikerahkan oleh CEO jahat Greystoke Energies—sosok yang mengambil alih perusahaan tersebut dari orang tua Tarzan setelah mereka tewas dalam kecelakaan pesawat di hutan Afrika.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@787aceb/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@787aceb/1/master.m3u8",
