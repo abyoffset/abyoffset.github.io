@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp5@b5ea4c2/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp5@b5ea4c2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp5@b5ea4c2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp5@b5ea4c2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp5@b5ea4c2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp5@b5ea4c2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp5@b5ea4c2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@b5ea4c2/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp5@b5ea4c2/1/sub.vtt",
+"ttl": "Lantai 13 (2007)",
+"episode": "",
+"negara": "ID",
+"thn": "2007",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:50:59",
+"kilasan": "seorang wanita yang sudah menganggur selama setahun dan akhirnya mendapatkan surat panggilan wawancara kerja di sebuah gedung perkantoran mewah. Kejanggalan mulai terjadi sejak awal karena alamat yang tertera di surat panggilan mencantumkan Lantai 13—sebuah lantai yang menurut resepsionis gedung tersebut sebenarnya tidak ada. *Widi Mulia",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp5@67fc4d2/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp5@67fc4d2/1/master.m3u8",
