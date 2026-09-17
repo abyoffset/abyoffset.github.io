@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp5@67fc4d2/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp5@67fc4d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp5@67fc4d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp5@67fc4d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp5@67fc4d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp5@67fc4d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@67fc4d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp5@67fc4d2/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp5@67fc4d2/1/sub.vtt",
+"ttl": "Vanguard (2020)",
+"episode": "",
+"negara": "CN",
+"thn": "2020",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:42:43",
+"kilasan": "Perusahaan keamanan rahasia Vanguard menjadi harapan terakhir bagi seorang akuntan untuk bertahan hidup setelah ia menjadi target organisasi tentara bayaran paling mematikan di dunia. *Jackie Chan",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@41b4a02/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@41b4a02/1/master.m3u8",
