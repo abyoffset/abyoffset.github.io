@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@b4df3f8/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@b4df3f8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp6@b4df3f8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp6@b4df3f8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp6@b4df3f8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp6@b4df3f8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp6@b4df3f8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp6@b4df3f8/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@b4df3f8/1/sub.vtt",
+"ttl": "Mr. Vampire (1985)",
+"episode": "",
+"negara": "HK",
+"thn": "1985",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.10",
+"dur": "1:34:58",
+"kilasan": "Setelah rencana pemakaman ulang seorang tetua desa kacau dan jenazahnya bangkit kembali sebagai vampir pelompat, seorang pendeta Tao beserta dua muridnya berusaha menghentikannya.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@e26f103/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@e26f103/1/master.m3u8",
