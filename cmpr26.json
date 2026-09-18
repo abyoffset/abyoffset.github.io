@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@e26f103/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@e26f103/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp5@e26f103/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp5@e26f103/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp5@e26f103/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp5@e26f103/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp5@e26f103/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp5@e26f103/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@e26f103/1/sub.vtt",
+"ttl": "Astro Boy (2009)",
+"episode": "",
+"negara": "US",
+"thn": "2009",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:33:48",
+"kilasan": "Astro Boy, robot muda dengan kekuatan super, memulai perjalanan berbahaya demi mencari tujuan hidup sebelum pulang untuk menyelamatkan orang-orang terkasihnya.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@7b6ca5a/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@7b6ca5a/1/master.m3u8",
