@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@504baf0/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@504baf0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp5@504baf0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp5@504baf0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp5@504baf0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp5@504baf0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp5@504baf0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp5@504baf0/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp5@504baf0/1/sub.vtt",
+"ttl": "Lawang Sewu (2007)",
+"episode": "",
+"negara": "ID",
+"thn": "2007",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:35:43",
+"kilasan": "sekelompok remaja asal Jakarta (Diska, Yugo, Armen, Dinda, Naya, Onil, dan Cika) yang pergi berlibur ke Semarang untuk merayakan kelulusan SMA mereka. Di sana, mereka menjelajahi bangunan ikonik yang terkenal angker, yaitu Lawang Sewu.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp5@b5ea4c2/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp5@b5ea4c2/1/master.m3u8",
