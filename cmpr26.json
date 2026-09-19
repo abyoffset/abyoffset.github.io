@@ -1,11 +1,29 @@
 [
 {
+"logo": "https://i.imgur.com/LKCFuzp.jpeg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/op8@13f6bda/uZiv5tA/0p8trd.m3u8"
+],
+"bahasa": "",
+"sub": "",
+"ttl": "The Raid: Redemption (2012)",
+"episode": "",
+"negara": "ID",
+"thn": "2012",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:40:45",
+"kilasan": "Terperangkap dalam bangunan tenemen semasa serbuan, sepasukan SWAT harus mencari jalan untuk melawan konco raja dadah yang menjadi sasaran misi pembunuhan mereka.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@c481ab0/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp7/nwe1@dc0aa6e/1/master.m3u8"
 ],
 "bahasa": "",
-"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@a9fc205/1/sub.vtt",
+"sub": "",
 "ttl": "Dark Eyes (2025)",
 "episode": "",
 "negara": "ID",
@@ -3513,13 +3531,6 @@
 "lnk": "https://cdn.jsdelivr.net/gh/filmovie/op8@13f6bda/uZiv5tA/Zts0p.m3u8",
 "ttl": "Manou the Swift (2019) Dubbing",
 "dur": "1:28:36",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/LKCFuzp.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/filmovie/op8@13f6bda/uZiv5tA/0p8trd.m3u8",
-"ttl": "The Raid: Redemption (2012)",
-"dur": "1:40:45",
 "tiviku": "apk"
 },
 {
