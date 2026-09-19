@@ -1,5 +1,23 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@c481ab0/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/nwe1@dc0aa6e/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@a9fc205/1/sub.vtt",
+"ttl": "Dark Eyes (2025)",
+"episode": "",
+"negara": "ID",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:03:25",
+"kilasan": "Seorang pekerja rumah tangga menemukan uang tunai milik majikannya yang telah ditangkap karena kasus korupsi. Ternyata, bukan hanya dia yang mengincar uang tersebut. *Gelap Mata (2025)",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@b4df3f8/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@b4df3f8/1/master.m3u8",
@@ -3579,13 +3597,6 @@
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/nwe2@be917c7/2/master.m3u8",
 "ttl": "Dhaai Akshar Prem Ke (2000) dubbing",
 "dur": "2:44:29",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/BwM3Knj.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/nwe1@dc0aa6e/1/master.m3u8",
-"ttl": "Dark Eyes (2025)",
-"dur": "1:03:25",
 "tiviku": "apk"
 },
 {
