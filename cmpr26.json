@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp7@6e1ad62/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp7@6e1ad62/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp7@6e1ad62/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp7@6e1ad62/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp7@6e1ad62/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp7@6e1ad62/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp7@6e1ad62/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp7@6e1ad62/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp7@6e1ad62/1/sub.vtt",
+"ttl": "Cinta Dalam Ikhlas (2024)",
+"episode": "",
+"negara": "ID",
+"thn": "2024",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "1:49:09",
+"kilasan": "Seorang remaja bermasalah mengubah hidupnya berkat bantuan teman sekelasnya. Bertahun-tahun kemudian, pertemuan kembali mereka memicu bangkitnya perasaan lama, namun ketidakpastian membayangi kisah mereka.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp6@071d3bb/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/tapp6@071d3bb/1/master.m3u8",
