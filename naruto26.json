@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@6623b94/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@6623b94/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@6623b94/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp8@6623b94/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp8@6623b94/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp8@6623b94/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp8@6623b94/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp8@6623b94/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@6623b94/1/sub.vtt",
+"ttl": "Naruto Shippuden (2007)",
+"episode": "05",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:07",
+"kilasan": "pertarungan sengit antara Kakashi melawan anggota Akatsuki, Deidara, mulai memanas, di mana Kakashi mulai mendesak musuh menggunakan kekuatan mata Sharingan barunya",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@ed67fa6/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@ed67fa6/1/master.m3u8",
