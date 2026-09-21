@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp8@cc9a363/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp8@cc9a363/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp8@cc9a363/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp8@cc9a363/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp8@cc9a363/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp8@cc9a363/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@cc9a363/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@cc9a363/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp8@cc9a363/1/sub.vtt",
+"ttl": "Blinky Bill the Movie (2015)",
+"episode": "",
+"negara": "AU",
+"thn": "2015",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:31:11",
+"kilasan": "Blinky Bill adalah seekor koala kecil dengan imajinasi yang besar. Berjiwa petualang, ia bermimpi untuk meninggalkan kota kecil Green Patch dan mengikuti jejak ayahnya yang hilang. Saat Blinky menemukan sebuah penanda misterius yang memberi petunjuk tentang keberadaan ayahnya, ia memulai perjalanan yang membawanya melampaui batas Green Patch menuju wilayah Outback yang liar dan berbahaya.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp7@b0fc7ed/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie/tapp7@b0fc7ed/1/master.m3u8",
