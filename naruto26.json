@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@ed67fa6/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@ed67fa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp8@ed67fa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp8@ed67fa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp8@ed67fa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp8@ed67fa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp8@ed67fa6/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@ed67fa6/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@ed67fa6/1/sub.vtt",
+"ttl": "Naruto Shippuden (2007)",
+"episode": "04",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:16",
+"kilasan": "pada awal perjalanan Tim Kakashi Kakashi, Naruto, dan Sakura yang tiba di Desa Pasir Tersembunyi Sunagakure. Di sisi lain, kelompok Akatsuki yang beranggotakan Deidara dan Sasori mulai bergerak aktif untuk menyusup ke desa tersebut demi menangkap Gaara, Kazekage kelima yang juga merupakan wadah dari monster ekor satu Shukaku. Episode ini membangun ketegangan menjelang konflik besar penyelamatan Gaara.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp7@7c2b9a6/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie/tapp7@7c2b9a6/1/master.m3u8",
