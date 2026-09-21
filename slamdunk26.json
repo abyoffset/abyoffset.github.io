@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@85875b2/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@85875b2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp8@85875b2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp8@85875b2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp8@85875b2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp8@85875b2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp8@85875b2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@85875b2/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@85875b2/1/sub.vtt",
+"ttl": "Slam Dunk (1993)",
+"episode": "18",
+"negara": "JP",
+"thn": "1993",
+"koleksi": "Slam Dunk (1993)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:09",
+"kilasan": "Hanamichi Sakuragi (sang tokoh utama) berusaha keras memberikan kontribusi besar di lapangan demi menghentikan pergerakan Sendoh sekaligus membuktikan kemampuannya sebagai senjata rahasia tim Shohoku.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp7@b900314/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie/tapp7@b900314/1/master.m3u8",
