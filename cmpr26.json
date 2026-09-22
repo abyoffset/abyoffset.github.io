@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@0391820/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@0391820/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp9@0391820/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp9@0391820/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp9@0391820/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp9@0391820/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp9@0391820/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp9@0391820/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@0391820/1/sub.vtt",
+"ttl": "Kuntilanak (2006)",
+"episode": "",
+"negara": "ID",
+"thn": "2006",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:35:24",
+"kilasan": "seorang wanita muda yang pindah ke sebuah rumah kos baru setelah mengalami hubungan yang rumit dengan ibu tiri dan kekasihnya. Tanpa ia sadari, rumah kos tersebut menyimpan sejarah kelam dan misteri mengenai teror Kuntilanak. Samantha menyadari bahwa dirinya memiliki ikatan khusus dengan makhluk gaib tersebut—ia bisa memanggil sang kuntilanak menggunakan sebuah tembang atau durhaka kuno, namun hal itu juga mendatangkan malapetaka dan mengancam nyawa orang-orang di sekitarnya.*Julie Estelle",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp8@cc9a363/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie1/tapp8@cc9a363/1/master.m3u8",
