@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@2d42537/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@2d42537/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp9@2d42537/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp9@2d42537/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp9@2d42537/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp9@2d42537/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp9@2d42537/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp9@2d42537/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@2d42537/1/sub.vtt",
+"ttl": "Naruto Shippuden (2007)",
+"episode": "06",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:07",
+"kilasan": "Kakashi Hatake mengerahkan kemampuan terbaiknya, termasuk menggunakan Mangekyo Sharingan, untuk menghadapi anggota Akatsuki, Deidara.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@6623b94/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@6623b94/1/master.m3u8",
