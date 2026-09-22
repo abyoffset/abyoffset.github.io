@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@c007c47/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp9@c007c47/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@c007c47/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp9@c007c47/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp9@c007c47/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp9@c007c47/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp9@c007c47/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp9@c007c47/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@c007c47/1/sub.vtt",
+"ttl": "Detective Conan: Captured in Her Eyes (2000)",
+"episode": "",
+"negara": "JP",
+"thn": "2000",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.05",
+"dur": "1:39:32",
+"kilasan": "Para petugas polisi di sekitar Tokyo dibunuh oleh pelaku tak dikenal. Saat Ran menyaksikan upaya pembunuhan terhadap salah satu temannya yang merupakan anggota polisi, ia kehilangan ingatannya. Kini, Conan dan Inspektur Megure harus menemukan sang pembunuh sementara Ran berusaha memulihkan ingatannya yang hilang.",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@0391820/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@0391820/1/master.m3u8",
