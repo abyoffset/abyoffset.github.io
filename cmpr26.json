@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@878e494/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp9@878e494/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@878e494/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp9@878e494/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp9@878e494/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp9@878e494/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp9@878e494/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp9@878e494/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@878e494/1/sub.vtt",
+"ttl": " Journey 2: The Mysterious Island (2012) ",
+"episode": "",
+"negara": "US",
+"thn": "2012",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:34:10",
+"kilasan": " menerima sinyal sandi misterius dari sebuah pulau terpencil yang seharusnya tidak ada di peta, ​Bersama ayah tirinya yang baru, Hank, seorang pemandu wisata helikopter dan putrinya nekat menjelajahi pulau tersebut. Di sana, mereka menemukan dunia menakjubkan tempat flora dan fauna berukuran terbalik (hewan kecil menjadi raksasa, dan sebaliknya) serta harus berpacu dengan waktu untuk melarikan diri sebelum pulau tersebut tenggelam ke dasar laut. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@c007c47/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@c007c47/1/master.m3u8",
