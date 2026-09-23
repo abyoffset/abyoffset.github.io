@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@b9dbffc/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@b9dbffc/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp10@b9dbffc/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp10@b9dbffc/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp10@b9dbffc/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp10@b9dbffc/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp10@b9dbffc/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp10@b9dbffc/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@b9dbffc/1/sub.vtt",
+"ttl": " Badoet (2015) ",
+"episode": "",
+"negara": "ID",
+"thn": "2015",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:25:54",
+"kilasan": " Setelah tiga anak ditemukan tewas secara tragis, sekelompok mahasiswa terpaksa melakukan penyelidikan. Saat itulah teror dari sosok badut misterius mulai memuncak. Para tokoh utama kita segera menyadari bahwa mereka sedang menghadapi kekuatan yang menyembunyikan kegelapannya di balik tawa—sebuah kekuatan yang begitu mengerikan, yang tak segan-segan merenggut nyawa demi mendapatkan apa yang diinginkannya: keabadian. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@878e494/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@878e494/1/master.m3u8",
