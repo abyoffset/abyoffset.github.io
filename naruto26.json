@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@e8651bf/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@e8651bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp10@e8651bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp10@e8651bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp10@e8651bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp10@e8651bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp10@e8651bf/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp10@e8651bf/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@e8651bf/1/sub10.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "10",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:05",
+"kilasan": " para ninja medis berpacu dengan waktu untuk menyelamatkan Kankuro yang telah terkena racun mematikan dari Sasori. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp10@b0eb0db/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/abyoffset/tapp10@b0eb0db/1/master.m3u8",
