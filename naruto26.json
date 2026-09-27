@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f80a4c1/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f80a4c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@f80a4c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp11@f80a4c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp11@f80a4c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp11@f80a4c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp11@f80a4c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp11@f80a4c1/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f80a4c1/1/sub.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "15",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:06",
+"kilasan": " Tim Kakashi dan Tim Guy yang masih berpacu dengan waktu untuk menyelamatkan Gaara dari cengkeraman kelompok Akatsuki (organisasi kriminal bayangan). Tim Guy yang dipimpin oleh Might Guy berhadapan langsung dengan bayangan klon dari Kisame Hoshigaki yang menggunakan teknik penjara air (Water Prison) untuk menjebak anggota tim lainnya, memaksa Guy harus bertarung dalam kondisi yang sangat terbatas dan mengerahkan kemampuan fisik tingkat tingginya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@7574052/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@7574052/1/master.m3u8",

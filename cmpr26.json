@@ -1,5 +1,52 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@d4c305f/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@d4c305f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp12@d4c305f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp12@d4c305f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp12@d4c305f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp12@d4c305f/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp12@d4c305f/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@d4c305f/1/sub.vtt",
+"ttl": " Sekawan Limo 2: Gunung Klawih (2026) ",
+"episode": "",
+"negara": "ID",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.35",
+"dur": "2:02:28",
+"kilasan": " Tiga tahun setelah mendaki Gunung Madyopuro, persahabatan kelima sekawan itu semakin erat. Saat mereka berkumpul kembali untuk merayakan ulang tahun putri Andrew, mereka menyaksikan keluarga tersebut terancam menjadi tumbal ritual ilmu hitam! Mereka pun berangkat menemani Andrew menuju Gunung Klawih. Namun, Juna menghilang dan masuk ke alam iblis! ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@2be152b/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@2be152b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp12@2be152b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp12@2be152b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp12@2be152b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp12@2be152b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp12@2be152b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp12@2be152b/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@2be152b/1/sub.vtt",
+"ttl": " The Last Dragonslayer (2016) ",
+"episode": "",
+"negara": "GB",
+"thn": "2016",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:40:57",
+"kilasan": " Di dunia fantasi tempat sihir mulai digantikan oleh teknologi, seorang remaja yatim piatu menemukan takdirnya untuk menjadi pembunuh naga. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@9179777/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@9179777/1/master.m3u8",
