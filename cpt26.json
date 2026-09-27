@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp12@15ba356/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp12@15ba356/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@15ba356/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp12@15ba356/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp12@15ba356/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp12@15ba356/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp12@15ba356/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp12@15ba356/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp12@15ba356/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "42",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "21:01",
+"kilasan": " Tsubasa Ozora memutuskan untuk pergi sejenak ke Hawaii guna menjalani latihan khusus sebelum kembali ke Spanyol untuk bergabung dengan klub Catalonia. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp691/app7@080d0b1/1/master.m3u8",
