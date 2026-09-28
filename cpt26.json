@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@88f6450/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@88f6450/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp13@88f6450/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp13@88f6450/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp13@88f6450/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp13@88f6450/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp13@88f6450/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@88f6450/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@88f6450/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "46",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:01",
+"kilasan": " Tsubasa Ozora yang harus menerima keputusan pelatih untuk bermain di tim Catalunya B (divisi kedua) alih-alih langsung masuk tim utama FC Barcelona di Spanyol. Di tengah kekecewaan dan rasa sakit akibat cedera, Hyuga meneleponnya dan menyarankan agar Tsubasa pindah ke Italia saja. Namun, Tsubasa menolak karena menganggap hal itu sebagai bentuk melarikan diri. Ia kemudian berlari melewati jalanan Barcelona untuk melawan rasa sakitnya dan berhasil memperbarui tekad serta harapannya saat memandangi pemandangan kota dari atas bukit. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@ec3708f/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@ec3708f/1/master.m3u8",
