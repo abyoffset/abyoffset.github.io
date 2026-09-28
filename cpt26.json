@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@9922c55/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@9922c55/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@9922c55/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp13@9922c55/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp13@9922c55/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp13@9922c55/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp13@9922c55/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp13@9922c55/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@9922c55/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "47",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:01",
+"kilasan": " Meski sempat kesulitan menghadapi ketatnya lini pertahanan lawan, Hyuga menunjukkan kecerdasan taktik dengan memberikan asis bagi rekan setimnya, Francesco, untuk mencetak gol (meski sempat dianulir/diwarnai drama pertandingan). ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@88f6450/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@88f6450/1/master.m3u8",
