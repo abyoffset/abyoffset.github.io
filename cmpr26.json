@@ -1,5 +1,23 @@
 [
 {
+"logo": "https://i.imgur.com/t7E33jD.jpeg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@84afe08/1/master.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/tvq6@84afe08/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "",
+"ttl": " George of the Jungle (1997) ",
+"episode": "",
+"negara": "US",
+"thn": "1997",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:31:44",
+"kilasan": " mengisahkan tentang George (diperankan oleh Brendan Fraser), seorang pria baik hati yang sejak bayi terdampar akibat kecelakaan pesawat di hutan Afrika. Ia dibesarkan oleh seekor gorila cerdas bernama Ape dan tumbuh menjadi Raja Hutan yang tangguh namun sangat ceroboh (sering menabrak pohon saat berayun dari satu akar ke akar lain). ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@972d5b4/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@972d5b4/1/master.m3u8",
@@ -3614,16 +3632,6 @@
 "ttl": "Up (2009) dubbing",
 "dur": "1:31:33",
 "thn": "2009",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.imgur.com/t7E33jD.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@84afe08/1/master.m3u8",
-"ttl": "George of the Jungle (1997) dubbing",
-"dur": "1:31:44",
-"thn": "1997",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "tiviku": "apk"
