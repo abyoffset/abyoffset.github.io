@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp12@f47068d/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp12@f47068d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@f47068d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp12@f47068d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp12@f47068d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp12@f47068d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp12@f47068d/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp12@f47068d/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp12@f47068d/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "44",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "22:30",
+"kilasan": " Tsubasa menjalani sesi latihan intensif bersama tim utamanya. Pelatih menguji kemampuan Tsubasa dengan menempatkannya di berbagai posisi berbeda untuk melihat adaptasi serta potensinya di lapangan. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp12@c2d8c8f/2/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp12@c2d8c8f/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp12@c2d8c8f/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp12@c2d8c8f/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp12@c2d8c8f/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp12@c2d8c8f/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp12@c2d8c8f/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp12@c2d8c8f/2/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp12@c2d8c8f/2/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "43",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "22:31",
+"kilasan": " Tsubasa Ozora kembali ke Spanyol dan untuk pertama kalinya berhadapan langsung dengan Rivaul—pemain andalan FC Catalonia yang dijuluki (Catalonia's Eagle) sekaligus pemain terbaik di Spanyol. Dalam duel singkat tersebut, Tsubasa sempat kewalahan hingga terjatuh. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp12@15ba356/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie1/tapp12@15ba356/1/master.m3u8",
