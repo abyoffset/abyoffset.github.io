@@ -1,5 +1,47 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@56638b0/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@56638b0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp13@56638b0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp13@56638b0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp13@56638b0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp13@56638b0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp13@56638b0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp13@56638b0/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@56638b0/1/sub.vtt",
+"ttl": " Pengabdi Setan (2017) ",
+"episode": "",
+"negara": "ID",
+"thn": "2017",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:41:48",
+"kilasan": " Setelah sakit aneh selama tiga tahun, Ibu akhirnya meninggal dunia. Bapak lalu memutuskan untuk bekerja di luar kota meninggalkan anak-anak. Tak lama kemudian, anak-anak merasa bahwa Ibu kembali berada di rumah. Situasi menjadi mencekam ketika mereka mengetahui bahwa Ibu datang bukan sekadar untuk menjenguk, melainkan untuk menjemput mereka. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@56638b0/1/poster2.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8","https://cdn.jsdelivr.net/gh/tivikufm/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "",
+"ttl": " Thunderbolt (1995) ",
+"episode": "",
+"negara": "HK",
+"thn": "1995",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:50:13",
+"kilasan": " Film ini bergenre aksi olahraga dan balap mobil. Ceritanya berpusat pada Chan Foh To (diperankan oleh Jackie Chan), seorang mekanik berbakat sekaligus pembalap mobil yang membantu kepolisian Hong Kong dalam memberantas sindikat balap liar berbahaya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@af30669/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@af30669/1/master.m3u8",
@@ -3478,16 +3520,6 @@
 "crop_scale": "1.00",
 "dur": "1:55:22",
 "kilasan": "Lightning McQueen, mobil balap rookie jagoan yang digerakkan untuk sukses, menemukan bahwa hidup adalah tentang perjalanan, bukan garis finish, ketika dia mendapati dirinya tiba-tiba berbelok di Radiator Springs, kota Route 66 yang mengantuk. Dalam perjalanan melintasi negara ke Kejuaraan Piala Piston besar di California untuk bersaing dengan dua pemain pro berpengalaman, McQueen mengenal karakter offbeat kota.",
-"tiviku": "apk"
-},
-{
-"logo": "https://i.ibb.co.com/Kj84spPv/Thunderbolt.jpg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp7/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8",
-"ttl": "Thunderbolt (1995) hardsub",
-"thn": "1995",
-"crop_mode": "stretch_crop",
-"crop_scale": "1.00",
-"dur": "1:50:13",
 "tiviku": "apk"
 },
 {
