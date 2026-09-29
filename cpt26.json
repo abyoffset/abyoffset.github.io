@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@6c1a2d2/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@6c1a2d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp14@6c1a2d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp14@6c1a2d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp14@6c1a2d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp14@6c1a2d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp14@6c1a2d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp14@6c1a2d2/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@6c1a2d2/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "48",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:01",
+"kilasan": " perjuangan Kojiro Hyuga yang berkarier di Liga Italia (bermain untuk klub FC Piemonte). Setelah sempat tampil menjanjikan di laga debutnya, Hyuga kembali menghadapi ujian berat saat menghadapi pertahanan lawan yang sangat ketat dan kasar, yang membuatnya kesulitan untuk mencetak gol. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@9922c55/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@9922c55/1/master.m3u8",
