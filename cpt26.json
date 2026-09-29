@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@ca86ca5/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@ca86ca5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp14@ca86ca5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp14@ca86ca5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp14@ca86ca5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp14@ca86ca5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp14@ca86ca5/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp14@ca86ca5/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@ca86ca5/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "49",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "16:07",
+"kilasan": " Fokus cerita memperlihatkan bagaimana strategi tim dikerahkan secara maksimal, pertahanan yang diperkuat, serta ambisi para pemain kunci (seperti Kojiro Hyuga dan Tsubasa Ozora) untuk menembus batas performa mereka demi mencetak gol maupun asis krusial bagi klub masing-masing. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@6c1a2d2/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@6c1a2d2/1/master.m3u8",
