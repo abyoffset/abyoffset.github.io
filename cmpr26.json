@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp14@c02b4b1/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp14@c02b4b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@c02b4b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp14@c02b4b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp14@c02b4b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp14@c02b4b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp14@c02b4b1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp14@c02b4b1/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp14@c02b4b1/1/sub.vtt",
+"ttl": " Havoc (2025) ",
+"episode": "",
+"negara": "UK",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:47:22",
+"kilasan": " Saat perampokan narkoba menjadi kacau, seorang polisi yang ogah-ogahan berjuang menerobos dunia kriminal di kota yang korup demi menyelamatkan putra seorang politisi. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@56638b0/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp691/tapp13@56638b0/1/master.m3u8",
