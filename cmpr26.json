@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp15@149b6c1/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/tapp15@149b6c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp15@149b6c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp15@149b6c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp15@149b6c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp15@149b6c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp15@149b6c1/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp15@149b6c1/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp15@149b6c1/1/sub.vtt",
+"ttl": " Resident Evil (2002) ",
+"episode": "",
+"negara": "US",
+"thn": "2002",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:40:21",
+"kilasan": " Ketika sebuah virus bocor dari sebuah fasilitas rahasia, mengubah semua peneliti yang tinggal di sana menjadi zombi yang rakus dan hewan-hewan laboratorium mereka menjadi anjing-anjing yang bermutasi dari neraka, pemerintah mengirimkan satuan tugas militer elit untuk membendung wabah tersebut. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp14@c02b4b1/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp14@c02b4b1/1/master.m3u8",
