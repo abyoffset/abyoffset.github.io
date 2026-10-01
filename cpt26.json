@@ -1,5 +1,77 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp15@5f95824/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp15@5f95824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp15@5f95824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp15@5f95824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp15@5f95824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp15@5f95824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp15@5f95824/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp15@5f95824/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/abyoffset/tapp15@5f95824/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "52",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:30",
+"kilasan": " Seluruh bintang sepak bola muda Jepang bersiap dan menyatukan kekuatan sebagai representasi tim nasional Jepang (Golden Age) untuk menghadapi tantangan besar di ajang Piala Dunia. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp15@56bbcb7/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/tapp15@56bbcb7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp15@56bbcb7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp15@56bbcb7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp15@56bbcb7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp15@56bbcb7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp15@56bbcb7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp15@56bbcb7/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp15@56bbcb7/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "51",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "24:01",
+"kilasan": " Tsubasa Ozora berhasil memenuhi syarat yang diajukan oleh pelatih tim utama Catalonia (FC Barcelona), yaitu mencetak 10 gol dan 10 assist di tim satelit (Catalonia B),. Berkat pencapaian ini, Tsubasa akhirnya dipromosikan ke skuad tim utama Catalonia. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp15@4ef8a40/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/tapp15@4ef8a40/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp15@4ef8a40/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp15@4ef8a40/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp15@4ef8a40/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp15@4ef8a40/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp15@4ef8a40/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp15@4ef8a40/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp15@4ef8a40/1/sub.vtt",
+"ttl": " Captain Tsubasa: Road to 2002 (2001) ",
+"episode": "50",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "Captain Tsubasa: Road to 2002 (2001)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:59",
+"kilasan": " Tsubasa yang bermain untuk klub asal Spanyol, FC Barcelona (Catalunya), harus menghadapi tantangan besar dan ketegangan mental serta taktik di lapangan hijau demi mengamankan posisinya dan meraih kemenangan bagi timnya melawan rival-rival berat di liga Eropa. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@ca86ca5/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/tapp14@ca86ca5/1/master.m3u8",
