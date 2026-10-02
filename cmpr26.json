@@ -1,5 +1,28 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/poster_1.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/app9@134e675/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/app9@134e675/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"ttl": "Doraemon: Nobita and the Green Giant Legend (2008)",
+"sub": "",
+"episode": "",
+"negara": "JP",
+"thn": "2008",
+"koleksi": "doraemon",
+"crop_mode": "stretch_crop",
+"crop_scale": "3.15",
+"dur": "1:46:27",
+"kilasan": " Sebuah bibit tanaman yang ditemukan Nobita diubah menjadi sosok anak laki-laki tanaman dengan bantuan Doraemon, dan ia pun menjadi satu-satunya harapan Bumi dalam menghadapi penghakiman dari alien *dryad* penghuni Planet Hijau. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp15@a9ea08a/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/abyoffset/tapp15@a9ea08a/1/master.m3u8",
@@ -2369,32 +2392,6 @@
 "crop_scale": "1.00",
 "dur": "1:14:59",
 "kilasan": "Film ini bercerita tentang Risa di hari ulang tahunnya ke-8, Risa dengan polosnya meminta seorang teman agar ia tidak kesepian lagi. Namun ternyata ibunya, Elly, mulai curiga mendapati anaknya sering tertawa sendiri dan bermain seolah-olah dengan banyak teman, padahal Elly hanya melihatnya bermain sendiri! Elly mencari jalan untuk memisahkan Risa dari sahabat nya yang ternyata hantu.",
-"tiviku": "apk"
-},
-{
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/poster_1.jpg",
-"lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/app9@134e675/1/master.m3u8"
-],
-"bahasa": "dub indo",
-"ttl": "Doraemon: Nobita and the Green Giant Legend (2008)",
-"episode": "",
-"thn": "2008",
-"koleksi": "doraemon",
-"crop_mode": "stretch_crop",
-"crop_scale": "3.15",
-"dur": "1:46:27",
-"kilasan": "Sebuah bibit tanaman yang ditemukan Nobita diubah menjadi sosok anak laki-laki tanaman dengan bantuan Doraemon, dan ia pun menjadi satu-satunya harapan Bumi dalam menghadapi penghakiman dari alien *dryad* penghuni Planet Hijau.",
 "tiviku": "apk"
 },
 {
