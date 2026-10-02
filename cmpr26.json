@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u2/tapp16@157e845/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp16@157e845/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp16@157e845/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp16@157e845/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp16@157e845/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp16@157e845/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp16@157e845/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp16@157e845/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u2/tapp16@157e845/1/sub.vtt",
+"ttl": " Fight Back to School (1991) ",
+"episode": "",
+"negara": "HK",
+"thn": "1991",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:40:58",
+"kilasan": " Chow Sing Sing nyaris dikeluarkan dari Unit Tugas Khusus (SDU)—unit elite Kepolisian Hong Kong. Namun, seorang perwira senior memutuskan untuk memberinya satu kesempatan terakhir: Star harus menyamar sebagai siswa di Edinburgh High School di Hong Kong demi menemukan kembali revolver milik perwira tersebut yang hilang. *Stephen Chow ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/poster_1.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp4/app9@134e675/1/master.m3u8",
