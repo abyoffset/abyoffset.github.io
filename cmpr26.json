@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp15@a9ea08a/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp15@a9ea08a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp15@a9ea08a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp15@a9ea08a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp15@a9ea08a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp15@a9ea08a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp15@a9ea08a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp15@a9ea08a/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/abyoffset/tapp15@a9ea08a/1/sub.vtt",
+"ttl": " Barbi3 (2008) ",
+"episode": "",
+"negara": "ID",
+"thn": "2008",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:22:13",
+"kilasan": " Tiga gadis cantik dan populer—Marion, Alya, dan Aline—berhadapan langsung dengan akibat dari perundungan serta perilaku buruk mereka di alam baka. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp15@43d8812/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/abyoffset/tapp15@43d8812/1/master.m3u8",
