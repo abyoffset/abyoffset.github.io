@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@0bb4297/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@0bb4297/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp17@0bb4297/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp17@0bb4297/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp17@0bb4297/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp17@0bb4297/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp17@0bb4297/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp17@0bb4297/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@0bb4297/1/sub.vtt",
+"ttl": " Bring Her Back (2025) ",
+"episode": "",
+"negara": "AU",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.13",
+"dur": "1:43:44",
+"kilasan": " Setelah kematian ayah mereka, sepasang kakak-beradik dikirim untuk tinggal bersama seorang ibu asuh, namun mereka kemudian mengetahui bahwa wanita itu menyembunyikan sebuah rahasia yang mengerikan. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@9825227/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@9825227/1/master.m3u8",
