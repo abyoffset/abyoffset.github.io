@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@9825227/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@9825227/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp17@9825227/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp17@9825227/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp17@9825227/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp17@9825227/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp17@9825227/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp17@9825227/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@9825227/1/sub.vtt",
+"ttl": " Kal Ho Naa Ho (2003) ",
+"episode": "",
+"negara": "IN",
+"thn": "2003",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.20",
+"dur": "3:07:54",
+"kilasan": " Seorang mahasiswi MBA yang kaku jatuh hati pada tetangga baru yang karismatik—sosok yang berhasil memikat hati keluarganya yang bermasalah—namun pria itu menyimpan rahasia yang memaksanya untuk menjauhi sang wanita. *Shah Rukh Khan india",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp16@af96030/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp16@af96030/1/master.m3u8",
