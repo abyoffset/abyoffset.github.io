@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp16@af96030/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp16@af96030/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp16@af96030/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp16@af96030/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp16@af96030/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp16@af96030/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp16@af96030/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp16@af96030/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp16@af96030/1/sub.vtt",
+"ttl": " Ninja Kids!!! (2011) ",
+"episode": "",
+"negara": "JP",
+"thn": "2011",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.36",
+"dur": "1:41:32",
+"kilasan": " Film ini dibintangi oleh Seishiro Kato sebagai Rantaro, yang dikirim oleh orang tuanya ke sekolah pelatihan ninja. Selama musim panas, tempat guru mereka diserbu oleh sekelompok ninja saingan, yang berujung pada perlombaan untuk membunyikan lonceng di puncak gunung. *Nintama Rantaro live action. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp16@be23b8b/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp16@be23b8b/1/master.m3u8",
