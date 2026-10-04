@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@d9e72d2/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp18@d9e72d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp18@d9e72d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp18@d9e72d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp18@d9e72d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp18@d9e72d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp18@d9e72d2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp18@d9e72d2/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@d9e72d2/1/sub.vtt",
+"ttl": " Battle Creek Brawl (1980) ",
+"episode": "",
+"negara": "US",
+"thn": "1980",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:30:47",
+"kilasan": " Di Battle Creek, dekat Chicago, 1938 sebagian besar tentara Amerika sedang berperang melawan orang-orang biasa. The Big Brawl *Jackie Chan ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp17@cdb124a/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp69/tapp17@cdb124a/1/master.m3u8",
