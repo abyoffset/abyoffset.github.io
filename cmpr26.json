@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp17@7107d6b/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp17@7107d6b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@7107d6b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp17@7107d6b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp17@7107d6b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp17@7107d6b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp17@7107d6b/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp17@7107d6b/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp17@7107d6b/1/sub.vtt",
+"ttl": " Rush Hour 2 (2001) ",
+"episode": "",
+"negara": "US",
+"thn": "2001",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:23:23",
+"kilasan": " Ini adalah waktu liburan bagi Carter saat ia mendapati dirinya bersama Lee di Hong Kong dan mengharapkan lebih banyak kegembiraan. Saat Carter ingin berpesta dan bertemu para wanita, Lee keluar untuk melacak pemimpin geng Triad yang mungkin bertanggung jawab atas pembunuhan dua pria di Kedutaan Besar Amerika. Segalanya menjadi rumit ketika pasangan tersebut tersandung pada plot palsu. Anak-anak lelaki itu segera terlibat perkelahian dan situasi yang mengancam jiwa. Perjalanan kembali ke AS mungkin memberikan jawaban tentang pemboman, pemalsuan, dan kesetiaan sebenarnya dari agen bea cukai seksi Isabella. *Jackie Chan ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@0bb4297/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp692/tapp17@0bb4297/1/master.m3u8",
