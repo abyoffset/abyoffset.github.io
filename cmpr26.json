@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@949c937/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp18@949c937/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp18@949c937/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp18@949c937/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp18@949c937/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp18@949c937/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp18@949c937/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp18@949c937/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@949c937/1/sub.vtt",
+"ttl": " Sky High (2005) ",
+"episode": "",
+"negara": "ID",
+"thn": "2005",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:35:19",
+"kilasan": " Berlatar di dunia tempat para pahlawan super dikenal dan diterima secara umum, Will Stronghold muda—putra dari Commander dan Jetstream—berusaha menyeimbangkan kehidupannya sebagai remaja biasa dengan jati dirinya sebagai sosok yang luar biasa. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@889e0ad/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@889e0ad/1/master.m3u8",
