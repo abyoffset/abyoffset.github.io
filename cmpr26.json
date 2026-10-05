@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@889e0ad/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp18@889e0ad/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp18@889e0ad/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp18@889e0ad/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp18@889e0ad/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp18@889e0ad/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp18@889e0ad/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp18@889e0ad/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@889e0ad/1/sub.vtt",
+"ttl": " Tarung Sarung (2020) ",
+"episode": "",
+"negara": "ID",
+"thn": "2020",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.33",
+"dur": "1:55:46",
+"kilasan": " DENI RUSO terlahir dari salah satu keluarga terkaya di Indonesia. Bagi Deni uang adalah segalanya, ia bahkan kehilangan kepercayaan terhadap Tuhan. Semuanya berubah ketika ia ke Makassar mengurus bisnis keluarga, dan bertemu TENRI gadis Makassar aktivis yang membenci RUSO CORP sebagai kapitalis perusak lingkungan. Deni pun menyembunyikan identitas demi mendapatkan cinta Tenri. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@d9e72d2/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@d9e72d2/1/master.m3u8",
