@@ -1,5 +1,77 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/3/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/3/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp19@93ae1c0/3/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp19@93ae1c0/3/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp19@93ae1c0/3/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp19@93ae1c0/3/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp19@93ae1c0/3/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@93ae1c0/3/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/3/20.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "20",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:13",
+"kilasan": " Sakura dan Nenek Chiyo harus menghadapi Hiruko, sebuah boneka pertahanan berlapis cangkang keras yang dikendalikan dari dalam oleh Sasori. Di tengah hujan jarum beracun, Sakura menggunakan kekuatan fisik luar biasa dan kecerdikannya untuk menghancurkan boneka Hiruko, yang akhirnya memaksa Sasori keluar dari cangkang pelindungnya. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/2/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp19@93ae1c0/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp19@93ae1c0/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp19@93ae1c0/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp19@93ae1c0/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp19@93ae1c0/2/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@93ae1c0/2/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/2/19.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "19",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:07",
+"kilasan": " Tim Guy (Maito Guy, Rock Lee, Neji Hyuga, dan Tenten) terjebak dan harus bertarung melawan klon atau bayangan diri mereka sendiri yang memiliki kekuatan dan kemampuan bertarung yang sama persis. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp19@93ae1c0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp19@93ae1c0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp19@93ae1c0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp19@93ae1c0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp19@93ae1c0/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@93ae1c0/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/1/18.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "18",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:07",
+"kilasan": " Tim Kakashi dan Tim Guy yang bekerja sama untuk mendobrak segel pelindung di pintu masuk markas organisasi Akatsuki. Segel tersebut dilindungi oleh lima penghalang kertas yang tersebar di lokasi berbeda, sehingga memaksa kedua tim untuk memecah konsentrasi dan membukanya secara bersamaan demi menyelamatkan Kazekage Gaara. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@4170568/2/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@4170568/2/master.m3u8",
