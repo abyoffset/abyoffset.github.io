@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@b0e6970/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@b0e6970/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@b0e6970/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp19@b0e6970/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp19@b0e6970/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp19@b0e6970/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp19@b0e6970/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp19@b0e6970/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@b0e6970/1/sub.vtt",
+"ttl": " Kung Fu Cult Master (1993) ",
+"episode": "",
+"negara": "HK",
+"thn": "1993",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:35:46",
+"kilasan": " Sebuah tontonan fantasi seni bela diri yang liar dan seru, menampilkan pedang serta pendekar pedang legendaris, seorang biksu nyentrik yang terikat pada bongkahan batu bulat, persaingan sengit antar-klan dan sekte, serta sarat akan sihir dan aksi terbang. *Jet Li ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@949c937/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@949c937/1/master.m3u8",
