@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@79237ac/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@79237ac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp20@79237ac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp20@79237ac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp20@79237ac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp20@79237ac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp20@79237ac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp20@79237ac/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@79237ac/1/sub.vtt",
+"ttl": " Hunter x Hunter (2011) ",
+"episode": "35",
+"negara": "JP",
+"thn": "2011",
+"koleksi": "Hunter x Hunter (2011)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:35",
+"kilasan": " Di awal episode, Wing mengajarkan dasar-dasar tipe Nen kepada Gon dan Killua melalui tes air. Hasilnya menunjukkan bahwa Gon adalah seorang Enhancer (Penguat) dan Killua adalah seorang Transmuter (Pengubah). ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@afbe1d7/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@afbe1d7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp20@afbe1d7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp20@afbe1d7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp20@afbe1d7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp20@afbe1d7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp20@afbe1d7/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp20@afbe1d7/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@afbe1d7/1/sub.vtt",
+"ttl": " Hunter x Hunter (2011) ",
+"episode": "34",
+"negara": "JP",
+"thn": "2011",
+"koleksi": "Hunter x Hunter (2011)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:35",
+"kilasan": " Killua mendatangi Gido dan Riehlvelt secara diam-diam untuk memberikan ancaman dingin. Ia memperingatkan mereka agar tidak lagi menggunakan trik kotor atau taktik curang dalam pertarungan mendatang. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@6b9c578/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@6b9c578/1/master.m3u8",
