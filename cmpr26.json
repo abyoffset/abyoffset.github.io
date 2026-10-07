@@ -3936,6 +3936,8 @@
 {
 "logo": "https://i.ibb.co.com/cXbfTHG2/sk.jpg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq20@95780ad/1/master.m3u8",
+"episode": "",
+"negara": "ID",
 "ttl": "Sekawan Limo (2024)",
 "thn": "2024",
 "crop_mode": "stretch_crop",
@@ -3947,6 +3949,8 @@
 "logo": "https://i.imgur.com/uVEtQ8L.jpeg",
 "ttl": "Yowis Ben 3 (2021)",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp/tvq17@8455d6e/1/master.m3u8",
+"episode": "",
+"negara": "ID",
 "thn": "2021",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
@@ -3967,6 +3971,8 @@
 "logo": "https://i.imgur.com/Y16AmhN.jpeg",
 "ttl": "Suzzanna: Santet Dosa di Atas Dosa (2026)",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@e824070/1/master.m3u8",
+"episode": "",
+"negara": "ID",
 "thn": "2026",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
@@ -3976,6 +3982,8 @@
 {
 "logo": "https://i.imgur.com/QIQ3XAL.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@7e30153/1/master.m3u8",
+"episode": "",
+"negara": "ID",
 "ttl": "Danur: The Last Chapter (2026)",
 "thn": "2026",
 "crop_mode": "stretch_crop",
@@ -4006,6 +4014,8 @@
 {
 "logo": "https://i.imgur.com/h0yqLLJ.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp6/tvq10@0ceb284/1/master.m3u8",
+"episode": "",
+"negara": "ID",
 "ttl": "Yowis Ben 2 (2019)",
 "thn": "2019",
 "crop_mode": "stretch_crop",
@@ -4026,6 +4036,8 @@
 {
 "logo": "https://i.imgur.com/TH4z4yg.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@cd8e13d/1/master.m3u8",
+"episode": "",
+"negara": "ID",
 "ttl": "Oo Nina Bobo (2014)",
 "dur": "1:28:21",
 "thn": "2014",
@@ -4036,6 +4048,8 @@
 {
 "logo": "https://i.imgur.com/9pe5H7J.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/tvq9@5a52c61/1/master.m3u8",
+"episode": "",
+"negara": "ID",
 "ttl": "Bayi Ajaib (2023)",
 "dur": "1:38:58",
 "thn": "2023",
@@ -4076,6 +4090,8 @@
 {
 "logo": "https://i.imgur.com/iA9yPnJ.jpeg",
 "lnk": "https://cdn.jsdelivr.net/gh/tvkuapp1/tvq6@2f106a9/1/master.m3u8",
+"episode": "",
+"negara": "ID",
 "ttl": "Bayi Ajaib (1982)",
 "dur": "1:37:15",
 "thn": "1982",
