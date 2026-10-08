@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5bbcb71/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5bbcb71/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp21@5bbcb71/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp21@5bbcb71/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp21@5bbcb71/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp21@5bbcb71/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp21@5bbcb71/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp21@5bbcb71/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5bbcb71/1/sub.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "22",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:10",
+"kilasan": " Sakura Haruno sempat terjebak dalam kepulan gas beracun yang mematikan akibat serangan boneka Sasori, namun ia berhasil lolos menggunakan kecerdikannya dengan meledakkan paper bomb (surat bom) untuk membuyarkan gas tersebut. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@942d6f4/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp21@942d6f4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp21@942d6f4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp21@942d6f4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp21@942d6f4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp21@942d6f4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp21@942d6f4/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp21@942d6f4/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@942d6f4/1/sub.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "21",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:09",
+"kilasan": " Setelah Sakura Haruno berhasil menghancurkan boneka pelindung Sasori yang bernama Hiruko, terungkaplah wujud asli Sasori. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/3/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/3/master.m3u8",
