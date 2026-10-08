@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5295899/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5295899/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp21@5295899/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp21@5295899/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp21@5295899/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp21@5295899/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp21@5295899/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp21@5295899/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5295899/1/sub.vtt",
+"ttl": " The Lost City (2022) ",
+"episode": "",
+"negara": "US",
+"thn": "2022",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:51:44",
+"kilasan": " The Lost City mengisahkan tentang seorang penulis novel yang hobi menyendiri bernama Loretta Sage. Ia baru saja menyelesaikan novel romantis terbarunya yang bercerita tentang kota yang hilang. Saat tengah melakukan promosi untuk novel terbarunya, Loretta Sage diculik oleh lelaki bernama Abigail Fairfax. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp20@40806af/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp20@40806af/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@40806af/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp20@40806af/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp20@40806af/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp20@40806af/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp20@40806af/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp20@40806af/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp20@40806af/1/sub.vtt",
+"ttl": " Garuda Di Dadaku (2009) ",
+"episode": "",
+"negara": "ID",
+"thn": "2009",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:36:02",
+"kilasan": " Seorang anak laki-laki berusia 12 tahun yang berbakat bermimpi menjadi pemain sepak bola hebat, meskipun kakeknya yang penyayang menentang keras hal itu. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@b0e6970/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@b0e6970/1/master.m3u8",
