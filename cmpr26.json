@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@71449d9/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@71449d9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp22@71449d9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp22@71449d9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp22@71449d9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp22@71449d9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp22@71449d9/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp22@71449d9/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@71449d9/1/sub.vtt",
+"ttl": " 5 Cowok Jagoan: Rise of the Zombies (2017) ",
+"episode": "",
+"negara": "ID",
+"thn": "2017",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.36",
+"dur": "1:46:12",
+"kilasan": " Yanto meminta teman-temannya untuk membantunya menyelamatkan kekasihnya yang telah diculik oleh sekelompok mafia profesional. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp22@a3e20b5/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp691/tapp22@a3e20b5/1/master.m3u8",
