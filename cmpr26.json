@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@f98b109/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp21@f98b109/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp21@f98b109/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp21@f98b109/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp21@f98b109/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp21@f98b109/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp21@f98b109/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp21@f98b109/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@f98b109/1/sub.vtt",
+"ttl": " Ikut-Ikutan (1990) ",
+"episode": "",
+"negara": "ID",
+"thn": "1990",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:19:07",
+"kilasan": " Kisah cinta Doyok dan Kadir terhadap dua bersaudara, Rosa dan Ira. Keluarga kedua wanita tersebut tidak merestui hubungan mereka, sehingga Doyok dan Kadir berusaha mencari cara untuk menyiasati situasi ini. Upaya mereka berlanjut saat Rosa dan Ira pergi berlibur bersama orang tua mereka ke Puncak. Doyok dan Kadir pun menyusul ke Puncak dengan menyamar sebagai seorang pria kaya dan anaknya yang sedang mencari lahan untuk dibeli. Pada akhirnya, siasat keempat orang yang sedang dimabuk cinta ini pun terbongkar. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5295899/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5295899/1/master.m3u8",
