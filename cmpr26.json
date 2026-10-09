@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@18cd95a/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@18cd95a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp22@18cd95a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp22@18cd95a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp22@18cd95a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp22@18cd95a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp22@18cd95a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp22@18cd95a/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@18cd95a/1/sub.vtt",
+"ttl": " Rise of the Conqueror (2026) ",
+"episode": "",
+"negara": "KZ",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:58:58",
+"kilasan": " Pada abad ke-14, saat Jalur Sutra runtuh dan berbagai faksi yang saling bersaing mencabik-cabik wilayah tersebut, seorang pejuang pemberani bernama Timur bangkit dari pengasingan. Meski telah kehilangan segalanya, ia berjuang menyatukan kerajaan-kerajaan yang terpecah belah, mengerahkan strategi dan tekad baja untuk membangun sebuah kekaisaran di tengah kekacauan. Tak pernah terkalahkan dalam pertempuran dan diakui luas sebagai salah satu pemimpin militer serta ahli taktik terhebat—sekaligus salah satu yang paling kejam—dalam sejarah, Timur kemudian mendirikan Kekaisaran Timuriyah yang menguasai wilayah yang kini mencakup Afganistan, Iran, dan Asia Tengah. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@71449d9/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@71449d9/1/master.m3u8",
