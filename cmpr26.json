@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@45771a8/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@45771a8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp22@45771a8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp22@45771a8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp22@45771a8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp22@45771a8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp22@45771a8/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp22@45771a8/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@45771a8/1/sub.vtt",
+"ttl": " Kun Ana Wa Anta (2023) ",
+"episode": "",
+"negara": "ID",
+"thn": "2023",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.34",
+"dur": "1:39:11",
+"kilasan": " Tanpa diduga, Firman dan teman-temannya menemukan seekor orangutan yang telah meloloskan diri dan sedang melarikan diri dari kejaran penyelundup satwa langka Indonesia. Firman dan teman-temannya, yang sangat menyayangi hewan, berusaha melindungi orangutan tersebut. Dengan bantuan pihak-pihak terkait, mereka berupaya menggagalkan aksi penyelundupan dan menyelamatkan satwa langka tersebut. Akankah Firman dan teman-temannya berhasil menyelamatkan satwa langka itu? ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@18cd95a/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@18cd95a/1/master.m3u8",
