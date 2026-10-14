@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp23@c95ba82/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie/tapp23@c95ba82/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@c95ba82/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp23@c95ba82/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp23@c95ba82/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp23@c95ba82/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp23@c95ba82/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp23@c95ba82/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp23@c95ba82/1/sub.vtt",
+"ttl": " Bike Boyz (2019) ",
+"episode": "",
+"negara": "ID",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:30:59",
+"kilasan": " Ketika Agus (Aep Bancet) hendak membantu Lilis (Aline Manza) mencari suaminya yang sudah 3 bulan tidak pulang dan tidak berkabar, Vespa Agus hilang diambil orang. Bersama teman-temannya sesama anak Vespa, Agus keliling Bandung mencari Vespa miliknya dan juga suami Lilis, kemudian tanpa sengaja masuk ke dalam kasus yang melibatkan komplotan pencuri, geng motor sampai teroris dan polisi. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@45771a8/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp/tapp22@45771a8/1/master.m3u8",
