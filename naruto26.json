@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@56a709a/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@56a709a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp23@56a709a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp23@56a709a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp23@56a709a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp692/tapp23@56a709a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/vodm3u2/tapp23@56a709a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie/tapp23@56a709a/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@4f95390/1/sub.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "23",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:05",
+"kilasan": " kelanjutan pertarungan sengit antara tim penyelamat dari Konoha—khususnya tim Kakashi—melawan anggota Akatsuki. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5bbcb71/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5bbcb71/1/master.m3u8",
