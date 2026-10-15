@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@b6a4fb2/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@b6a4fb2/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp26@b6a4fb2/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp26@b6a4fb2/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp26@b6a4fb2/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp26@b6a4fb2/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp26@b6a4fb2/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp26@b6a4fb2/1/manifest.mpd"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@b6a4fb2/1/sub.vtt",
+"ttl": " Garuda Di Dadaku 2 (2011) ",
+"episode": "",
+"negara": "ID",
+"thn": "2011",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.33",
+"dur": "1:35:26",
+"kilasan": " Bayu, yang merupakan anggota tim sepak bola nasional elit U -15, ingin membuktikan bahwa ia dapat membawa timnya untuk memenangkan kompetisi junior ASEAN di Jakarta. Dengan dukungan dari sahabatnya, Heri, gadis baru di sekolah yang membuatnya tertarik, Anya, dan pelatih baru Pak Wisnu, Bayu memimpin teman - temannya bekerja keras untuk mencapai final. Namun, seorang pria baru di tim, Yusuf, mencuri perhatian Bayu sebagai bintang yang sedang naik daun. Sekarang tim dalam kekacauan besar, dan Bayu melarikan diri dari pelatihan. Karena pertandingan besar adalah approac ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/vodm3u2/tapp24@8030522/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/vodm3u2/tapp24@8030522/1/master.m3u8",
@@ -10,7 +34,7 @@
 "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp24@8030522/1/master.m3u8",
 "https://cdn.jsdelivr.net/gh/tvkapp692/tapp24@8030522/1/master.m3u8"
 ],
-"bahasa": "",
+"bahasa": "sub indo",
 "sub": "https://cdn.jsdelivr.net/gh/vodm3u2/tapp24@8030522/1/sub.vtt",
 "ttl": " Kung Fu Soccer (2026) ",
 "episode": "",
