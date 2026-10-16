@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@d062e39/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp27@d062e39/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp27@d062e39/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp27@d062e39/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp27@d062e39/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp27@d062e39/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp27@d062e39/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp27@d062e39/1/manifest.mpd"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@d062e39/1/sub.vtt",
+"ttl": " Dog Man (2025) ",
+"episode": "",
+"negara": "US",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:25:33",
+"kilasan": " Ketika seekor anjing polisi yang setia dan pemilik petugas polisi manusianya terluka bersama - sama di tempat kerja, operasi yang kejam tetapi menyelamatkan jiwa menyatukan mereka berdua dan Dog Man lahir. Dog Man disumpah untuk melindungi dan melayani - dan mengambil, duduk, dan berguling. Saat Dog Man merangkul identitas barunya dan berusaha untuk mengesankan Chief - nya, dia harus menghentikan plot jahat penjahat super kucing Petey the Cat. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@54f9c8f/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@54f9c8f/1/manifest.mpd",
