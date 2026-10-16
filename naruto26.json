@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@b03eeed/1/poster.png",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp27@b03eeed/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp27@b03eeed/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp27@b03eeed/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp27@b03eeed/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp27@b03eeed/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp27@b03eeed/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp27@b03eeed/1/manifest.mpd"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@b03eeed/1/sub.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "28",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:16",
+"kilasan": " Kakashi dan Naruto masih direpotkan oleh serangan boneka tanah liat peledak berukuran kecil milik Deidara yang lincah dan sulit ditebak. Kakashi menyusun strategi dan menggunakan teknik bayangan serta kerja sama tim untuk menghadapi Deidara yang bertarung dari jarak jauh. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp25@77f3719/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp25@7887658/1/manifest.mpd",
