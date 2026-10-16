@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@12f8198/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@12f8198/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp26@12f8198/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp26@12f8198/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp26@12f8198/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp26@12f8198/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp26@12f8198/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp26@12f8198/1/manifest.mpd"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@12f8198/1/sub.vtt",
+"ttl": " Kuntilanak 2 (2019) ",
+"episode": "",
+"negara": "ID",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.33",
+"dur": "1:40:38",
+"kilasan": " Dinda yang berhasil lepas dari teror Kuntilanak, tanpa persetujuan Tante Donna, berniat untuk menemui seseorang yang diyakini sebagai ibu kandungnya, Karmila. Bersama adik-adiknya dan ditemani Julia dan Edwin, mereka malah terjebak dalam sebuah rumah di tengah hutan. Banyak kejanggalan terjadi. Dinda kembali harus berhadapan dengan Kuntilanak, tetapi berbeda dengan yang pernah dikalahkannya dengan menggunakan paku atau mantra. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@b6a4fb2/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@b6a4fb2/1/manifest.mpd",
