@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@54f9c8f/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp27@54f9c8f/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp27@54f9c8f/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp27@54f9c8f/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp27@54f9c8f/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp27@54f9c8f/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp27@54f9c8f/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp27@54f9c8f/1/manifest.mpd"
+],
+"bahasa": "sub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@54f9c8f/1/sub.vtt",
+"ttl": " Resident Evil: The Final Chapter (2016) ",
+"episode": "",
+"negara": "US",
+"thn": "2016",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:46:40",
+"kilasan": " Alice berjuang untuk sampai ke Raccoon City dan mendapatkan antivirus yang penting, namun Dr. Isaacs, Perusahaan Umbrella, dan kawanan zombie brutal menghalanginya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@12f8198/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkapp69/tapp26@12f8198/1/manifest.mpd",
