@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@534fc0c/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp27@534fc0c/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp27@534fc0c/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp27@534fc0c/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp27@534fc0c/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp27@534fc0c/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp27@534fc0c/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp27@534fc0c/1/manifest.mpd"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@534fc0c/1/sub.vtt",
+"ttl": " Detective Conan: Case Closed: Countdown to Heaven (2001) ",
+"episode": "",
+"negara": "JP",
+"thn": "2001",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.03",
+"dur": "1:39:39",
+"kilasan": " Saat sepasang menara di Tokyo sedang dipersiapkan untuk pembukaannya, ada serangkaian pembunuhan orang - orang yang terhubung ke menara. Conan mencurigai bahwa Sindikat misterius juga mungkin terlibat. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@d062e39/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@d062e39/1/manifest.mpd",
