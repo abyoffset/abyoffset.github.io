@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@00f1ae6/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp27@00f1ae6/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp27@00f1ae6/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp27@00f1ae6/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp27@00f1ae6/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp27@00f1ae6/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp27@00f1ae6/1/manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp27@00f1ae6/1/manifest.mpd"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@00f1ae6/1/sub.vtt",
+"ttl": " Punk in Love (2009) ",
+"episode": "",
+"negara": "ID",
+"thn": "2009",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:38:41",
+"kilasan": " Kisah tentang cinta, kehidupan, dan persahabatan empat sahabat punk jalanan. Dari kampung halamannya di Malang, Jawa Timur, mereka merencanakan perjalanan ke Jakarta dengan tujuan membantu temannya menyatakan cintanya kepada kekasihnya sebelum pernikahannya... ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@534fc0c/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@534fc0c/1/manifest.mpd",
