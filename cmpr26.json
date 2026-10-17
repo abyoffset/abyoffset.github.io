@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@232d3ad/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@232d3ad/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp28@232d3ad/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp28@232d3ad/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp28@232d3ad/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp28@232d3ad/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp28@232d3ad/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp28@232d3ad/1/tiviku_app_manifest.mpd"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@232d3ad/1/sub.vtt",
+"ttl": " The Karate Kid (2010) ",
+"episode": "",
+"negara": "US",
+"thn": "2010",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:20:01",
+"kilasan": " Dalam versi baru film klasik tahun 1984 ini, Dre belajar membela dirinya dari perundung di Tiongkok di bawah arahan seorang master kungfu yang berpenampilan sederhana.*Jackie Chan ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@afdf82e/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@afdf82e/1/tiviku_app_manifest.mpd",
