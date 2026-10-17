@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@afdf82e/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@afdf82e/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp28@afdf82e/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp28@afdf82e/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp28@afdf82e/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp28@afdf82e/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp28@afdf82e/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp28@afdf82e/1/tiviku_app_manifest.mpd"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@afdf82e/1/sub.vtt",
+"ttl": " 'Ain (2026) ",
+"episode": "",
+"negara": "ID",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.33",
+"dur": "1:50:06",
+"kilasan": " Didorong oleh trauma masa kecil tentang pengabaian dan masalah citra tubuh yang parah, upaya obsesif influencer kecantikan terkemuka untuk mendapatkan validasi online memicu kutukan spiritual yang menghancurkan, yang mengakibatkan kerusakan fisik yang mengerikan yang menantang kesombongannya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@00f1ae6/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@00f1ae6/1/manifest.mpd",
