@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@c6e9fed/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp29@c6e9fed/1/tiviku_app_manifest.mpd"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@c6e9fed/1/sub.vtt",
+"ttl": " Ip Man 2 (2010) ",
+"episode": "",
+"negara": "HK",
+"thn": "2010",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:48:06",
+"kilasan": " Setelah mengalahkan pejuang terbaik tentara Kekaisaran Jepang di Shanghai yang diduduki, Ip Man dan keluarganya menetap di Hong Kong pasca perang. Berjuang untuk mencari nafkah, Master Ip membuka sekolah kung fu untuk membawa seni Wing Chun yang terkenal kepada pemuda Hong Kong yang bermasalah. Reputasinya yang berkembang segera membawa tantangan dari musuh yang kuat, termasuk master Hung Gar yang unggul, Hung Quan. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@e039a26/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@e039a26/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tivikufm/tapp29@e039a26/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp29@e039a26/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp29@e039a26/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp29@e039a26/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp29@e039a26/1/tiviku_app_manifest.mpd",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp29@e039a26/1/tiviku_app_manifest.mpd"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@e039a26/1/sub.vtt",
+"ttl": " Ip Man: The Awakening (2021) ",
+"episode": "",
+"negara": "CN",
+"thn": "2021",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:19:39",
+"kilasan": " Ketika Master Ip muda menghentikan penculikan, ia memicu perang perebutan wilayah dengan sindikat perdagangan manusia yang kejam. Sebagai balasan, geng tersebut menculik salah satu teman dekat Ip Man, memaksanya untuk berhadapan langsung dengan juara tinju brutal kelompok tersebut. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@232d3ad/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/vodm3u1/tapp28@232d3ad/1/tiviku_app_manifest.mpd",
