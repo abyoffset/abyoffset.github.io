@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp30@e3e1357/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp30@e3e1357/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp30@e3e1357/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp30@e3e1357/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp30@e3e1357/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp30@e3e1357/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp30@e3e1357/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp30@e3e1357/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp30@e3e1357/1/sub.vtt",
+"ttl": " Cinderela (1950) ",
+"episode": "",
+"negara": "US",
+"thn": "1950",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:11:20",
+"kilasan": " Cinderella tinggal bersama ibu tirinya, Lady Tremaine, dan kedua putri sang ibu tiri. Ia dipaksa bekerja sebagai pelayan di rumah tersebut, dengan hewan-hewan di sekitarnya sebagai satu-satunya teman. Suasana menjadi ramai karena akan ada pesta dansa di istana yang juga akan dihadiri oleh sang pangeran. Berharap salah satu putrinya dapat menikahi sang pangeran, Lady Tremaine memastikan mereka bersiap untuk acara tersebut dengan sangat saksama. Namun, Cinderella tidak diizinkan untuk pergi—sampai akhirnya Ibu Peri muncul dan memberinya gaun serta segala perlengkapan yang ia butuhkan untuk menghadiri pesta dansa dengan anggun. Akan tetapi, ada satu syarat: Cinderella harus kembali sebelum tengah malam, jika tidak, mantra tersebut akan hilang. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp30@262a219/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/filmovie1/tapp30@262a219/1/master.m3u8",
