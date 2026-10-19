@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp30@262a219/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp30@262a219/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp30@262a219/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp30@262a219/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp30@262a219/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp30@262a219/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp30@262a219/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp30@262a219/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp30@262a219/1/sub.vtt",
+"ttl": " Transformers: Age of Extinction (2014) ",
+"episode": "",
+"negara": "US",
+"thn": "2014",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:14:46",
+"kilasan": " Lima tahun setelah Chicago dihancurkan, manusia berbalik melawan robot. Namun seorang ayah tunggal dan penemu membangkitkan robot yang dapat menyelamatkan dunia. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@c6e9fed/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
