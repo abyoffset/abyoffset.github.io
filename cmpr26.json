@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp35@0e3154a/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp35@0e3154a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp35@0e3154a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp35@0e3154a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp35@0e3154a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp35@0e3154a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp35@0e3154a/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp35@0e3154a/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp35@0e3154a/1/sub.vtt",
+"ttl": " Warung Pocong (2026) ",
+"episode": "",
+"negara": "ID",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.32",
+"dur": "1:36:37",
+"kilasan": " Tiga pemuda — Kartono, Agus, dan Makmur — menerima pekerjaan di sebuah warung makan tanpa mengetahui bahwa mereka akan dijadikan kambing hitam. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp31@8666fac/1/poster.jpg",
+"lnk": [
+"https://cdn.jsdelivr.net/gh/tvkuapp/tapp31@8666fac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/filmovie1/tapp31@8666fac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp31@8666fac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/abyoffset/tapp31@8666fac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp31@8666fac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkapp691/tapp31@8666fac/1/master.m3u8",
+"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp31@8666fac/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp31@8666fac/1/sub.vtt",
+"ttl": " Ip Man 3 (2015) ",
+"episode": "",
+"negara": "US",
+"thn": "2015",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:44:41",
+"kilasan": " Ketika sekelompok gangster brutal yang dipimpin oleh pengembang properti bengkok bermain untuk mengambil alih kota, Master Ip terpaksa mengambil sikap. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp30@e3e1357/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp30@e3e1357/1/master.m3u8",
