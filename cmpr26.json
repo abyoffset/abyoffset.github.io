@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp36@ada59f4/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp36@ada59f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp36@ada59f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp36@ada59f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp36@ada59f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp36@ada59f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp36@ada59f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp36@ada59f4/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp36@ada59f4/1/sub.vtt",
+"ttl": " Badut Gendong (2026) ",
+"episode": "",
+"negara": "ID",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:40:45",
+"kilasan": " Darso, seorang pengamen badut, kehilangan istri dan anaknya yang belum lahir karena kekerasan preman. Dalam kesedihan, ia membawa jenazah istrinya kembali ke desanya. Namun, desa ini berada dalam kekacauan karena konflik dengan pengembang jahat dan ritual kutukan yang memanggil kekuatan gelap. Darso juga terjebak dalam kekuatan jahat yang terhubung dengan orang yang paling dia cintai. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp35@0e3154a/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp35@0e3154a/1/master.m3u8",
