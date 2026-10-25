@@ -11,7 +11,7 @@
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp35@0e3154a/1/master.m3u8"
 ],
 "bahasa": "",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp35@0e3154a/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp35@0e3154a/1/sub.vtt",
 "ttl": " Warung Pocong (2026) ",
 "episode": "",
 "negara": "ID",
@@ -24,18 +24,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp31@8666fac/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp31@8666fac/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp31@8666fac/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp31@8666fac/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp31@8666fac/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp31@8666fac/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp31@8666fac/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp31@8666fac/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp31@8666fac/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp31@8666fac/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp31@8666fac/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp31@8666fac/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp31@8666fac/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp31@8666fac/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp31@8666fac/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp31@8666fac/1/master.m3u8"
 ],
 "bahasa": "dub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp31@8666fac/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp31@8666fac/1/sub.vtt",
 "ttl": " Ip Man 3 (2015) ",
 "episode": "",
 "negara": "US",
@@ -96,18 +96,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@c6e9fed/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp29@c6e9fed/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp29@c6e9fed/1/tiviku_app_manifest.mpd"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp29@c6e9fed/1/tiviku_app_manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp29@c6e9fed/1/tiviku_app_manifest.mpd"
 ],
 "bahasa": "dub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp1/tapp29@c6e9fed/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp29@c6e9fed/1/sub.vtt",
 "ttl": " Ip Man 2 (2010) ",
 "episode": "",
 "negara": "HK",
