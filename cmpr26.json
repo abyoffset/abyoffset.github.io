@@ -1,14 +1,14 @@
 [
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp35@0e3154a/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp35@0e3154a/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp35@0e3154a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp35@0e3154a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp35@0e3154a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp35@0e3154a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp35@0e3154a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp35@0e3154a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp35@0e3154a/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp35@0e3154a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp35@0e3154a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp35@0e3154a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp35@0e3154a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp35@0e3154a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp35@0e3154a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp35@0e3154a/1/master.m3u8"
 ],
 "bahasa": "",
 "sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp35@0e3154a/1/sub.vtt",
