@@ -1,11 +1,17 @@
 [
 {
-"logo": "https://archive.org/download/identifier-tvq3/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp36@16b4019/1/poster.jpg",
 "lnk": [
-"https://archive.org/download/identifier-tvq3/tiviku_0.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp36@16b4019/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp36@16b4019/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp36@16b4019/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp36@16b4019/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp36@16b4019/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp36@16b4019/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp36@16b4019/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@b03eeed/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp36@16b4019/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "29",
 "negara": "JP",
@@ -14,22 +20,22 @@
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
 "dur": "23:06",
-"kilasan": "  ",
+"kilasan": " Kakashi menggunakan Mangekyo Sharingan serta jurus dimensi visual yang mampu menyedot objek atau bagian tubuh musuh ke ruang lain. ",
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@b03eeed/1/poster.png",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp27@b03eeed/1/poster.png",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp27@b03eeed/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp27@b03eeed/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp27@b03eeed/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp27@b03eeed/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp27@b03eeed/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp27@b03eeed/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp27@b03eeed/1/manifest.mpd"
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp27@b03eeed/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp27@b03eeed/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp27@b03eeed/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp27@b03eeed/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp27@b03eeed/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp27@b03eeed/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp27@b03eeed/1/manifest.mpd"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp27@b03eeed/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp27@b03eeed/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "28",
 "negara": "JP",
@@ -42,18 +48,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp25@77f3719/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp25@77f3719/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp25@7887658/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp25@7887658/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp25@7887658/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp25@7887658/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp25@7887658/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp25@7887658/1/manifest.mpd",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp25@7887658/1/manifest.mpd"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp25@7887658/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp25@7887658/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp25@7887658/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp25@7887658/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp25@7887658/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp25@7887658/1/manifest.mpd",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp25@7887658/1/manifest.mpd"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp25@499340d/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp25@499340d/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "27",
 "negara": "JP",
@@ -66,18 +72,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp24@3d5a42f/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp24@3d5a42f/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp24@3d5a42f/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp24@3d5a42f/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp24@3d5a42f/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp24@3d5a42f/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp24@3d5a42f/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp24@3d5a42f/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp24@3d5a42f/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp24@3d5a42f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp24@3d5a42f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp24@3d5a42f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp24@3d5a42f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp24@3d5a42f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp24@3d5a42f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp24@3d5a42f/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/vodm3u2/tapp24@8030522/1/sub2.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp24@8030522/1/sub2.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "26",
 "negara": "JP",
@@ -90,18 +96,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp23@7fde712/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp23@7fde712/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/filmovie/tapp23@7fde712/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@7fde712/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp23@7fde712/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp23@7fde712/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp23@7fde712/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp23@7fde712/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp23@7fde712/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp23@7fde712/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp23@7fde712/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp23@7fde712/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp23@7fde712/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp23@7fde712/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp23@7fde712/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp23@7fde712/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp23@7fde712/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp23@7fde712/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "25",
 "negara": "JP",
@@ -114,18 +120,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp23@94262e8/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp23@94262e8/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/filmovie/tapp23@94262e8/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@94262e8/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp23@94262e8/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp23@94262e8/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp23@94262e8/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp23@94262e8/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp23@94262e8/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp23@94262e8/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp23@94262e8/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp23@94262e8/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp23@94262e8/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp23@94262e8/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp23@94262e8/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp23@94262e8/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp23@94262e8/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp23@94262e8/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "24",
 "negara": "JP",
@@ -138,18 +144,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@56a709a/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp23@56a709a/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@56a709a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp23@56a709a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp23@56a709a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp23@56a709a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp23@56a709a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp23@56a709a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp23@56a709a/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp23@56a709a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp23@56a709a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp23@56a709a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp23@56a709a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp23@56a709a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp23@56a709a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp23@56a709a/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp23@4f95390/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp23@4f95390/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "23",
 "negara": "JP",
@@ -162,18 +168,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5bbcb71/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp21@5bbcb71/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5bbcb71/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp21@5bbcb71/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp21@5bbcb71/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp21@5bbcb71/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp21@5bbcb71/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp21@5bbcb71/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp21@5bbcb71/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp21@5bbcb71/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp21@5bbcb71/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp21@5bbcb71/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp21@5bbcb71/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp21@5bbcb71/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp21@5bbcb71/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp21@5bbcb71/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@5bbcb71/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp21@5bbcb71/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "22",
 "negara": "JP",
@@ -186,18 +192,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@942d6f4/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp21@942d6f4/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp21@942d6f4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp21@942d6f4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp21@942d6f4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp21@942d6f4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp21@942d6f4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp21@942d6f4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp21@942d6f4/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp21@942d6f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp21@942d6f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp21@942d6f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp21@942d6f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp21@942d6f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp21@942d6f4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp21@942d6f4/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/filmovie1/tapp21@942d6f4/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp21@942d6f4/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "21",
 "negara": "JP",
@@ -210,18 +216,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/3/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/3/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/3/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp19@93ae1c0/3/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp19@93ae1c0/3/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp19@93ae1c0/3/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp19@93ae1c0/3/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp19@93ae1c0/3/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@93ae1c0/3/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/3/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp19@93ae1c0/3/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp19@93ae1c0/3/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp19@93ae1c0/3/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp19@93ae1c0/3/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp19@93ae1c0/3/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp19@93ae1c0/3/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/3/20.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/3/20.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "20",
 "negara": "JP",
@@ -234,18 +240,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/2/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/2/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp19@93ae1c0/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp19@93ae1c0/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp19@93ae1c0/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp19@93ae1c0/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp19@93ae1c0/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@93ae1c0/2/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp19@93ae1c0/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp19@93ae1c0/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp19@93ae1c0/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp19@93ae1c0/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp19@93ae1c0/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp19@93ae1c0/2/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/2/19.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/2/19.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "19",
 "negara": "JP",
@@ -258,18 +264,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp19@93ae1c0/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp19@93ae1c0/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp19@93ae1c0/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp19@93ae1c0/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp19@93ae1c0/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp19@93ae1c0/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp19@93ae1c0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp19@93ae1c0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp19@93ae1c0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp19@93ae1c0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp19@93ae1c0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp19@93ae1c0/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp19@93ae1c0/1/18.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp19@93ae1c0/1/18.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "18",
 "negara": "JP",
@@ -282,18 +288,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@4170568/2/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp18@4170568/2/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp18@4170568/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp18@4170568/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp18@4170568/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp18@4170568/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp18@4170568/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp18@4170568/2/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp18@4170568/2/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp18@4170568/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp18@4170568/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp18@4170568/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp18@4170568/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp18@4170568/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp18@4170568/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp18@4170568/2/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@4170568/2/17.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp18@4170568/2/17.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "17",
 "negara": "JP",
@@ -306,18 +312,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@4170568/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp18@4170568/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp18@4170568/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp18@4170568/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u2/tapp18@4170568/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp18@4170568/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp18@4170568/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp18@4170568/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp18@4170568/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp18@4170568/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp18@4170568/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp18@4170568/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp18@4170568/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp18@4170568/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp18@4170568/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp18@4170568/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp18@4170568/1/16.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp18@4170568/1/16.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "16",
 "negara": "JP",
@@ -330,18 +336,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f80a4c1/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@f80a4c1/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f80a4c1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@f80a4c1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp11@f80a4c1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp11@f80a4c1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp11@f80a4c1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp11@f80a4c1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp11@f80a4c1/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@f80a4c1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp11@f80a4c1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp11@f80a4c1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp11@f80a4c1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp11@f80a4c1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp11@f80a4c1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp11@f80a4c1/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f80a4c1/1/sub15.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@f80a4c1/1/sub15.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "15",
 "negara": "JP",
@@ -354,18 +360,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@7574052/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@7574052/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@7574052/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@7574052/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp11@7574052/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp11@7574052/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp11@7574052/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp11@7574052/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp11@7574052/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@7574052/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp11@7574052/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp11@7574052/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp11@7574052/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp11@7574052/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp11@7574052/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp11@7574052/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@7574052/1/sub14.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@7574052/1/sub14.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "14",
 "negara": "JP",
@@ -378,18 +384,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f164e68/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@f164e68/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f164e68/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@f164e68/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp11@f164e68/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp11@f164e68/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp11@f164e68/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp11@f164e68/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp11@f164e68/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@f164e68/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp11@f164e68/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp11@f164e68/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp11@f164e68/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp11@f164e68/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp11@f164e68/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp11@f164e68/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@f164e68/1/sub13.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@f164e68/1/sub13.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "13",
 "negara": "JP",
@@ -402,18 +408,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@92ad51a/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp11@92ad51a/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@92ad51a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp11@92ad51a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp11@92ad51a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp11@92ad51a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp11@92ad51a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp11@92ad51a/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp11@92ad51a/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp11@92ad51a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp11@92ad51a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp11@92ad51a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp11@92ad51a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp11@92ad51a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp11@92ad51a/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp11@92ad51a/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkapp69/tapp11@92ad51a/1/sub12.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp11@92ad51a/1/sub12.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "12",
 "negara": "JP",
@@ -426,18 +432,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp10@f5d1d62/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp10@f5d1d62/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp10@f5d1d62/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@f5d1d62/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp10@f5d1d62/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp10@f5d1d62/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp10@f5d1d62/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp10@f5d1d62/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp10@f5d1d62/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp10@f5d1d62/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp10@f5d1d62/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp10@f5d1d62/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp10@f5d1d62/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp10@f5d1d62/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp10@f5d1d62/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp10@f5d1d62/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp10@f5d1d62/1/sub11.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp10@f5d1d62/1/sub11.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "11",
 "negara": "JP",
@@ -450,18 +456,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@e8651bf/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp10@e8651bf/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@e8651bf/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp10@e8651bf/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp10@e8651bf/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp10@e8651bf/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp10@e8651bf/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp10@e8651bf/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp10@e8651bf/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp10@e8651bf/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp10@e8651bf/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp10@e8651bf/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp10@e8651bf/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp10@e8651bf/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp10@e8651bf/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp10@e8651bf/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@e8651bf/1/sub10.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp10@e8651bf/1/sub10.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "10",
 "negara": "JP",
@@ -474,18 +480,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp10@b0eb0db/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp10@b0eb0db/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp10@b0eb0db/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp10@b0eb0db/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp10@b0eb0db/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp10@b0eb0db/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp10@b0eb0db/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp10@b0eb0db/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@b0eb0db/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp10@b0eb0db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp10@b0eb0db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp10@b0eb0db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp10@b0eb0db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp10@b0eb0db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp10@b0eb0db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp10@b0eb0db/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/abyoffset/tapp10@b0eb0db/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp10@b0eb0db/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "09",
 "negara": "JP",
@@ -498,18 +504,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/abyoffset/tapp10@7acc28e/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp10@7acc28e/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp10@7acc28e/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp10@7acc28e/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp10@7acc28e/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp10@7acc28e/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp10@7acc28e/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp10@7acc28e/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp10@7acc28e/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp10@7acc28e/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp10@7acc28e/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp10@7acc28e/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp10@7acc28e/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp10@7acc28e/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp10@7acc28e/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp10@7acc28e/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/abyoffset/tapp10@7acc28e/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp10@7acc28e/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "08",
 "negara": "JP",
@@ -522,18 +528,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@224b570/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp9@224b570/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp9@224b570/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@224b570/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp9@224b570/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp9@224b570/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp9@224b570/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp9@224b570/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp9@224b570/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp9@224b570/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp9@224b570/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp9@224b570/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp9@224b570/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp9@224b570/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp9@224b570/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp9@224b570/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tivikufm/tapp9@224b570/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp9@224b570/1/sub.vtt",
 "ttl": " Naruto Shippuden (2007) ",
 "episode": "07",
 "negara": "JP",
@@ -546,18 +552,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@2d42537/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp9@2d42537/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@2d42537/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp9@2d42537/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp9@2d42537/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp9@2d42537/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp9@2d42537/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp9@2d42537/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp9@2d42537/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp9@2d42537/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp9@2d42537/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp9@2d42537/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp9@2d42537/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp9@2d42537/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp9@2d42537/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp9@2d42537/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/tapp9@2d42537/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp9@2d42537/1/sub.vtt",
 "ttl": "Naruto Shippuden (2007)",
 "episode": "06",
 "negara": "JP",
@@ -570,18 +576,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@6623b94/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp8@6623b94/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@6623b94/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@6623b94/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp8@6623b94/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp8@6623b94/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp8@6623b94/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp8@6623b94/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp8@6623b94/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp8@6623b94/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp8@6623b94/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp8@6623b94/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp8@6623b94/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp8@6623b94/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp8@6623b94/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp8@6623b94/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@6623b94/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp8@6623b94/1/sub.vtt",
 "ttl": "Naruto Shippuden (2007)",
 "episode": "05",
 "negara": "JP",
@@ -594,18 +600,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@ed67fa6/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp8@ed67fa6/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@ed67fa6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp8@ed67fa6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp8@ed67fa6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp8@ed67fa6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp8@ed67fa6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp8@ed67fa6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@ed67fa6/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp8@ed67fa6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp8@ed67fa6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp8@ed67fa6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp8@ed67fa6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp8@ed67fa6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp8@ed67fa6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp8@ed67fa6/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@ed67fa6/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp8@ed67fa6/1/sub.vtt",
 "ttl": "Naruto Shippuden (2007)",
 "episode": "04",
 "negara": "JP",
@@ -618,18 +624,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp7@7c2b9a6/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp7@7c2b9a6/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/filmovie/tapp7@7c2b9a6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp7@7c2b9a6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp7@7c2b9a6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp7@7c2b9a6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp7@7c2b9a6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp7@7c2b9a6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp7@7c2b9a6/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp7@7c2b9a6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp7@7c2b9a6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp7@7c2b9a6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp7@7c2b9a6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp7@7c2b9a6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp7@7c2b9a6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp7@7c2b9a6/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp7@7c2b9a6/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp7@7c2b9a6/1/sub.vtt",
 "ttl": "Naruto Shippuden (2007)",
 "episode": "03",
 "negara": "JP",
@@ -642,18 +648,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@bbef0f5/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp6@bbef0f5/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@bbef0f5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp6@bbef0f5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp6@bbef0f5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp6@bbef0f5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp6@bbef0f5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp6@bbef0f5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp6@bbef0f5/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp6@bbef0f5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp6@bbef0f5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp6@bbef0f5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp6@bbef0f5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp6@bbef0f5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp6@bbef0f5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp6@bbef0f5/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@bbef0f5/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp6@bbef0f5/1/sub.vtt",
 "ttl": "Naruto Shippuden (2007)",
 "episode": "02",
 "negara": "JP",
@@ -666,18 +672,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@96d4fa4/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp6@96d4fa4/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@96d4fa4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp6@96d4fa4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp6@96d4fa4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp6@96d4fa4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp6@96d4fa4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp6@96d4fa4/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp6@96d4fa4/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp6@96d4fa4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp6@96d4fa4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp6@96d4fa4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp6@96d4fa4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp6@96d4fa4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp6@96d4fa4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp6@96d4fa4/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/tapp6@0cf8000/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp6@0cf8000/1/sub.vtt",
 "ttl": "Naruto Shippuden (2007)",
 "episode": "01",
 "negara": "JP",
