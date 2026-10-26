@@ -1,14 +1,32 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp38@fa9b07f/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp38@fa9b07f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp38@fa9b07f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp38@fa9b07f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp38@fa9b07f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp38@fa9b07f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp38@fa9b07f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp38@fa9b07f/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp38@fa9b07f/1/sub.vtt",
+"ttl": " Yoko (2012) ",
+"episode": "",
+"negara": "DE",
+"thn": "2012",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:38:10",
+"kilasan": " Kehidupan Pia, seorang gadis dari kota kecil Jerman, berubah ketika secara mengejutkan, menemukan di kebunnya monster hitam besar. Dia segera menemukan bahwa makhluk misterius, yang disebut Yoko, sebenarnya adalah jenis yeti yang secara spiritual melindungi hewan dan anak - anak di seluruh dunia. Nilainya yang besar menarik perhatian dua pemburu yang ingin memanfaatkan yeti. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@914ea41/1/poster.jpg",
 "lnk": [
-"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@914ea41/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp38@914ea41/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp38@914ea41/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp38@914ea41/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp38@914ea41/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp38@914ea41/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp38@914ea41/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@914ea41/1/master.m3u8"
 ],
 "bahasa": "",
 "sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@914ea41/1/sub.vtt",
@@ -26,13 +44,7 @@
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@f8a07bd/1/poster.jpg",
 "lnk": [
-"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@f8a07bd/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp38@f8a07bd/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp38@f8a07bd/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp38@f8a07bd/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp38@f8a07bd/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp38@f8a07bd/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp38@f8a07bd/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@f8a07bd/1/master.m3u8"
 ],
 "bahasa": "dub indo",
 "sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@f8a07bd/1/sub.vtt",
@@ -50,13 +62,7 @@
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/poster.jpg",
 "lnk": [
-"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp38@9399a63/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp38@9399a63/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp38@9399a63/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp38@9399a63/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp38@9399a63/1/master.m3u8",
-"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp38@9399a63/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/master.m3u8"
 ],
 "bahasa": "dub indo",
 "sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/sub.vtt",
