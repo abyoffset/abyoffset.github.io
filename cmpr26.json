@@ -1,5 +1,77 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@a310614/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@a310614/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp37@a310614/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp37@a310614/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp37@a310614/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp37@a310614/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp37@a310614/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp37@a310614/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@a310614/1/sub.vtt",
+"ttl": " Saltburn (2023) ",
+"episode": "",
+"negara": "US",
+"thn": "2023",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:11:45",
+"kilasan": " Berjuang untuk menemukan tempatnya di Universitas Oxford, mahasiswa Oliver Quick menemukan dirinya tertarik ke dunia Felix Catton yang menawan dan aristokrat, yang mengundangnya ke Saltburn, perkebunan keluarganya yang eksentrik, untuk musim panas yang tidak pernah terlupakan. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@6f3078c/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@6f3078c/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp37@6f3078c/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp37@6f3078c/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp37@6f3078c/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp37@6f3078c/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp37@6f3078c/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp37@6f3078c/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@6f3078c/1/sub.vtt",
+"ttl": " Joker (2019) ",
+"episode": "",
+"negara": "US",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:01:45",
+"kilasan": " Selama 1980-an, seorang pelawak berdiri gagal didorong gila dan beralih ke kehidupan kejahatan dan kekacauan di Kota Gotham sambil menjadi tokoh kejahatan psikopat terkenal. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@4550bf6/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@4550bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp37@4550bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp37@4550bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp37@4550bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp37@4550bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp37@4550bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp37@4550bf6/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@4550bf6/1/sub.vtt",
+"ttl": " Ip Man 4 (2019) ",
+"episode": "",
+"negara": "CN",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:45:14",
+"kilasan": " Setelah kematian istrinya, Ip Man melakukan perjalanan ke San Francisco untuk meredakan ketegangan di antara para guru kungfu lokal dengan muridnya yang cemerlang, Bruce Lee, sambil mencari masa depan yang lebih baik untuk anak laki-lakinya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp36@ada59f4/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp36@ada59f4/1/master.m3u8",
