@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@914ea41/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@914ea41/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp38@914ea41/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp38@914ea41/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp38@914ea41/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp38@914ea41/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp38@914ea41/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp38@914ea41/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@914ea41/1/sub.vtt",
+"ttl": " Pengepungan di Bukit Duri (2025) ",
+"episode": "",
+"negara": "ID",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:57:50",
+"kilasan": " Edwin berjanji pada kakaknya sebelum meninggal untuk menemukan anak kakaknya yang hilang. Pencarian Edwin membawanya menjadi guru di SMA Duri, sekolah untuk anak-anak bermasalah. Di sana, Edwin menghadapi murid-murid paling beringas sambil mencari keponakannya. Ketika akhirnya ia menemukan sang keponakan, kerusuhan pecah di seluruh kota dan mereka terjebak di sekolah, melawan anak-anak brutal yang kini mengincar nyawa mereka. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@f8a07bd/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@f8a07bd/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp38@f8a07bd/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp38@f8a07bd/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp38@f8a07bd/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp38@f8a07bd/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp38@f8a07bd/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp38@f8a07bd/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@f8a07bd/1/sub.vtt",
+"ttl": " Kung Fu Jungle (2014) ",
+"episode": "",
+"negara": "HK",
+"thn": "2014",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:40:02",
+"kilasan": " Seorang instruktur seni bela diri yang bekerja di akademi polisi dipenjara setelah membunuh seorang pria secara tidak sengaja. Tetapi ketika seorang pembunuh ganas mulai menargetkan master seni bela diri, instruktur menawarkan untuk membantu polisi sebagai imbalan atas kebebasannya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/master.m3u8",
