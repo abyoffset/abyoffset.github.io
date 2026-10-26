@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp38@9399a63/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp38@9399a63/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp38@9399a63/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp38@9399a63/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp38@9399a63/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp38@9399a63/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp38@9399a63/1/sub.vtt",
+"ttl": " Jumanji: Welcome to the Jungle (2017) ",
+"episode": "",
+"negara": "US",
+"thn": "2017",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:59:03",
+"kilasan": " Dalam sebuah petualangan Jumanji yang baru, empat anak sekolah menengah menemukan sebuah konsol video game tua dan ditarik ke dalam setting hutan permainan, yang secara harfiah menjadi avatar dewasa yang mereka pilih. Apa yang mereka temukan adalah bahwa Anda tidak hanya bermain Jumanji - Anda harus bisa bertahan. Untuk mengalahkan permainan dan kembali ke dunia nyata, mereka harus menjalani petualangan paling berbahaya dalam hidup mereka, menemukan apa yang Alan Parrish tinggalkan 20 tahun yang lalu, dan mengubah cara mereka memikirkan diri mereka sendiri - atau mereka akan terjebak. dalam permainan selamanya, untuk dimainkan oleh orang lain tanpa henti. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@a310614/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp37@a310614/1/master.m3u8",
