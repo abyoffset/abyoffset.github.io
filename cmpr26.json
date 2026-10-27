@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@ded35db/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@ded35db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp40@ded35db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp40@ded35db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp40@ded35db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp40@ded35db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp40@ded35db/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp40@ded35db/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@ded35db/1/sub.vtt",
+"ttl": " A Shaun the Sheep Movie: Farmageddon (2019) ",
+"episode": "",
+"negara": "GB",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:26:46",
+"kilasan": " Ketika sebuah alien dengan kekuatan yang luar biasa menabrak daratan di dekat Mossy Bottom Farm, Shaun the Sheep melakukan sebuah misi untuk menggembalakan tamu antargalaksi itu pulang sebelum sebuah organisasi jahat menangkapnya. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@3541f13/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@3541f13/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp40@3541f13/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp40@3541f13/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp40@3541f13/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp40@3541f13/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp40@3541f13/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp40@3541f13/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@3541f13/1/sub.vtt",
+"ttl": " Geng: The Adventure Begins (2009) ",
+"episode": "",
+"negara": "MY",
+"thn": "2009",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:33:57",
+"kilasan": " dua pemuda bernama Badrol dan Lim yang pergi berlibur ke desa kakek mereka di Kampung Durian Runtuh. Di sana, mereka berkenalan dengan Rajoo serta dua anak kembar yang cerdas dan menggemaskan, Upin dan Ipin. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@9977746/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@9977746/1/master.m3u8",
