@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@58c3ea4/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@58c3ea4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp39@58c3ea4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp39@58c3ea4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp39@58c3ea4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp39@58c3ea4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp39@58c3ea4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp39@58c3ea4/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@58c3ea4/1/sub.vtt",
+"ttl": " Cerita Lila (2026) ",
+"episode": "",
+"negara": "ID",
+"thn": "2026",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:46:09",
+"kilasan": " Lila, arwah seorang gadis kecil yang masih terikat pada masa lalunya, terus mencari saudari kembarnya yang hilang, Lili. Kehidupannya berubah saat Nia dan ibunya, Tari, pindah ke rumah tempat Lila berada. Persahabatan yang terjalin antara Lila dan Nia membawa mereka pada pencarian yang perlahan membuka rahasia kelam yang lama terkubur. Ketika kehadiran sosok Rahma mulai mengancam keselamatan mereka, Nia meminta bantuan Sara Wijayanto dan Wisnu untuk mengungkap kebenaran di balik tragedi masa lalu. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@c013969/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@c013969/1/master.m3u8",
