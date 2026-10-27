@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@9768bf6/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@9768bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp40@9768bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp40@9768bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp40@9768bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp40@9768bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp40@9768bf6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp40@9768bf6/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@9768bf6/1/sub.vtt",
+"ttl": " Akal-Akalan (1991) ",
+"episode": "",
+"negara": "ID",
+"thn": "1991",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:18:09",
+"kilasan": " Hara (Robert Syarief) tidak menyetujui hubungan kedua putrinya, Rosa (Lia Waroka) dan Ira (Kiki Fatmala), dengan Kadir (Kadir) dan Doyok (Doyok Sudarmadji). Namun, akhirnya, karena para pemuda yang gigih tampak serius, Harja akhirnya setuju untuk mengizinkan Kadir dan Doyok membuktikan bahwa mereka cukup mandiri secara finansial untuk membuatnya sendiri. Kedua pemuda itu kemudian berebut untuk mencoba menemukan cara menghasilkan uang. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@ded35db/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp40@ded35db/1/master.m3u8",
