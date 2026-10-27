@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@9977746/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@9977746/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp39@9977746/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp39@9977746/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp39@9977746/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp39@9977746/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp39@9977746/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp39@9977746/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@9977746/1/sub.vtt",
+"ttl": " Planes: Fire & Rescue (2014) ",
+"episode": "",
+"negara": "US",
+"thn": "2014",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:20:01",
+"kilasan": " Ketika pembalap udara terkenal di dunia Dusty mengetahui bahwa mesinnya rusak dan dia mungkin tidak akan pernah balapan lagi, dia harus menggeser persneling dan diluncurkan ke dunia pemadam kebakaran udara. Dusty bergabung dengan pasukan pemadam kebakaran veteran dan helikopter penyelamat Blade Ranger dan timnya, sekelompok kendaraan segala medan yang dikenal sebagai The Smokejumpers. Bersama - sama, tim yang tak kenal takut melawan api besar, dan Dusty belajar apa yang diperlukan untuk menjadi pahlawan sejati. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@58c3ea4/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp39@58c3ea4/1/master.m3u8",
