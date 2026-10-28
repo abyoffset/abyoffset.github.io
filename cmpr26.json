@@ -1,4 +1,28 @@
 [
+[{
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@d976ecb/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@d976ecb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp41@d976ecb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp41@d976ecb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp41@d976ecb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp41@d976ecb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp41@d976ecb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp41@d976ecb/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@d976ecb/1/sub.vtt",
+"ttl": " Badarawuhi di Desa Penari (2024) ",
+"episode": "",
+"negara": "ID",
+"thn": "2024",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.32",
+"dur": "2:02:56",
+"kilasan": " Mila harus mengembalikan gelang mistis ke Desa Menari , tanpa menyadari bahwa Badarawuhi - makhluk misterius dan mistis yang memerintah desa - menunggunya. ",
+"tiviku": "apk"
+},
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp41@7c94e26/1/poster.jpg",
 "lnk": [
