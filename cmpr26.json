@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp41@7c94e26/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp41@7c94e26/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp41@7c94e26/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp41@7c94e26/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp41@7c94e26/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp41@7c94e26/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp41@7c94e26/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@7c94e26/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp41@7c94e26/1/sub.vtt",
+"ttl": " Tutur Tinular IV: Mendung Bergulung di Atas Majapahit (1992) ",
+"episode": "",
+"negara": "ID",
+"thn": "1992",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.33",
+"dur": "1:20:13",
+"kilasan": " Mpu Bajil (diperankan oleh Wingky Haroen) dibunuh oleh Ramapati (Remy Sylado) karena balas dendam terhadap Kamandanu (Benny G. Rahardja), karena Kamandanu memegang kepercayaan yang lebih besar dari Raja. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp41@f609c73/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp41@f609c73/1/master.m3u8",
