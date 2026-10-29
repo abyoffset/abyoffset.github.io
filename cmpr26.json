@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp42@3c0c1d4/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp42@3c0c1d4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp42@3c0c1d4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp42@3c0c1d4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp42@3c0c1d4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp42@3c0c1d4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp42@3c0c1d4/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp42@3c0c1d4/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp42@3c0c1d4/1/sub.vtt",
+"ttl": " Walet merah (1993) ",
+"episode": "",
+"negara": "ID",
+"thn": "1993",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:18:57",
+"kilasan": " Terdampar di pulau bajak laut, Walet Merah (Devi Permatasari), yang diterjemahkan menjadi Burung Walet Merah, berburu harta karun dan cintanya yang hilang, sesama pahlawan super Panji Tengkorak (Barry Prima). ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@08e2ed5/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp42@6994df5/1/master.m3u8",
