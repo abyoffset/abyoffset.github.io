@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@08e2ed5/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp42@6994df5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp42@6994df5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp42@6994df5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp42@6994df5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp42@6994df5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp42@6994df5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp42@6994df5/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@08e2ed5/1/sub.vtt",
+"ttl": " Jumanji: The Next Level (2019) ",
+"episode": "",
+"negara": "US",
+"thn": "2019",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:03:10",
+"kilasan": " Dalam Jumanji: The Next Level, keempat sahabat kembali lagi, tetapi permainannya telah berubah. Saat memutuskan masuk lagi ke Jumanji untuk menyelamatkan salah satu dari mereka, mereka menemukan segalanya tak seperti yang diduga. Para pemain harus melaju ke wilayah-wilayah tersembunyi dan belum dijamah, dari gurun nan gersang ke pegunungan bersalju, demi meloloskan diri dari permainan paling berbahaya di dunia. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@d976ecb/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp41@d976ecb/1/master.m3u8",
