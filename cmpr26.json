@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp45@54313ef/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp45@54313ef/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp45@54313ef/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp45@54313ef/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp45@54313ef/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp45@54313ef/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp45@54313ef/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp45@54313ef/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp45@54313ef/1/sub.vtt",
+"ttl": " Detective Conan: Magician of the Silver Sky (2004) ",
+"episode": "",
+"negara": "JP",
+"thn": "2004",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:48:13",
+"kilasan": " Sekali lagi, Kaitou Kid berhadapan dengan Conan Edogawa dalam seri tahunan waralaba film Detective Conan ini. Setelah menerima surat dari sang pencuri, aktris ternama Juri Maki meminta bantuan detektif swasta Kogorou Mouri untuk melindungi Star Sapphire Permata Takdir yang konon melambangkan keyakinan, nasib, dan harapan. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@ef29a82/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@ef29a82/1/master.m3u8",
