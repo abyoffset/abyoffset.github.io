@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@df49c69/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@df49c69/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp44@df49c69/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp44@df49c69/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp44@df49c69/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp44@df49c69/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp44@df49c69/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp44@df49c69/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@df49c69/1/sub.vtt",
+"ttl": " Gitar Tua Oma Irama (1977) ",
+"episode": "",
+"negara": "ID",
+"thn": "1977",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.22",
+"dur": "1:49:54",
+"kilasan": " Rencana pernikahan Oma dan Ani hancur berantakan karena kehadiran Ir. Dana di perkebunan tempat ayah Ani bekerja. Karena ayahnya ambisius dan menginginkan posisi yang lebih tinggi, ia ingin Dana menjadi suami Ani. Ani bekerja di perkebunan sebagai sekretaris dan Dana tertarik padanya tetapi dia tidak membalas. Ami dan Oma menjalin hubungan jarak jauh dan hal - hal mulai berubah ketika Oma tidak datang pada hari ulang tahunnya. *rhoma irama ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp44@6791218/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp44@6791218/1/master.m3u8",
