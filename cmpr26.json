@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@ef29a82/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@ef29a82/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp44@ef29a82/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp44@ef29a82/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp44@ef29a82/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp44@ef29a82/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp44@ef29a82/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp44@ef29a82/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@ef29a82/1/sub.vtt",
+"ttl": " Detective Conan: Crossroad in the Ancient Capital (2003) ",
+"episode": "",
+"negara": "JP",
+"thn": "2003",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:47:56",
+"kilasan": " Mouri Kogoro dipanggil untuk menangani sebuah kasus khusus di ibu kota kuno Kyoto. Di sana, Conan bertemu dengan Heiji, dan mereka kembali bekerja sama untuk memecahkan kasus tersebut, menemukan kembali patung Buddha Penyembuh yang dicuri, serta mengungkap identitas cinta pertama Heiji. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@df49c69/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp44@df49c69/1/master.m3u8",
