@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp45@13186e3/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp45@13186e3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp45@13186e3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp45@13186e3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp45@13186e3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp45@13186e3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp45@13186e3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp45@13186e3/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp45@13186e3/1/sub.vtt",
+"ttl": " Santet 2: Wanita Harimau (1989) ",
+"episode": "",
+"negara": "ID",
+"thn": "1989",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:31:58",
+"kilasan": " Katemi, yang dikucilkan karena pembunuhan di masa lalu, dikutuk oleh mentor Nyi Angker. Kutukan itu mengubahnya menjadi harimau ganas setiap malam, yang kemudian membantai penduduk desa dengan kejam. Kegilaan pun melanda seiring dengan terus berlanjutnya aksi mengamuk Katemi setiap malam, di mana ia mencabik-cabik tubuh korbannya hingga terpotong-potong. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp45@54313ef/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp45@54313ef/1/master.m3u8",
