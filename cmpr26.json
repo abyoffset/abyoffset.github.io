@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@2ca89d0/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@2ca89d0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp46@2ca89d0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp46@2ca89d0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp46@2ca89d0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp46@2ca89d0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp46@2ca89d0/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp46@2ca89d0/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@2ca89d0/1/sub.vtt",
+"ttl": " Ratu Buaya Putih (1988) ",
+"episode": "",
+"negara": "ID",
+"thn": "1988",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.29",
+"dur": "1:20:56",
+"kilasan": " Ada adegan berdarah akibat serangan senjata maupun serangan buaya, humor konyol, banyak sekali buaya karet, ada pria yang dikencingi, seorang wanita melahirkan buaya, tarian/video musik aneh yang ternyata cukup bagus, seorang anak tertabrak sepeda motor, bahkan ada pula sekilas penampakan payudara. Ini adalah contoh kegilaan film eksploitasi khas Indonesia yang mantap. * Suzzanna",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp46@5c12e88/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp46@5c12e88/1/master.m3u8",
