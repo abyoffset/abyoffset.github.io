@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@a75de64/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@a75de64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp47@a75de64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp47@a75de64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp47@a75de64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp47@a75de64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp47@a75de64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp47@a75de64/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@a75de64/1/sub.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "32",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:18",
+"kilasan": " Terungkap informasi mengenai rencana pertemuan agen rahasia Sasori dengan mata-mata Orochimaru di Jembatan Tenchi, yang menjadi petunjuk baru bagi misi selanjutnya. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@4a1bb2b/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@4a1bb2b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp47@4a1bb2b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp47@4a1bb2b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp47@4a1bb2b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp47@4a1bb2b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp47@4a1bb2b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp47@4a1bb2b/1/master.m3u8"
+],
+"bahasa": "sub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@a75de64/1/sub2.vtt",
+"ttl": " Naruto Shippuden (2007) ",
+"episode": "31",
+"negara": "JP",
+"thn": "2007",
+"koleksi": "Naruto Shippuden (2007)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:06",
+"kilasan": " Berkat cakra tambahan dari Naruto dan pengorbanan Nenek Chiyo, Gaara akhirnya berhasil hidup kembali dan disambut haru oleh para pengikut serta teman-temannya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp37@4a002b1/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp37@4a002b1/1/master.m3u8",
