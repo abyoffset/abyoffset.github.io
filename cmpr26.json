@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@6bb4053/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@6bb4053/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp46@6bb4053/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp46@6bb4053/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp46@6bb4053/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp46@6bb4053/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp46@6bb4053/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp46@6bb4053/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@6bb4053/1/sub.vtt",
+"ttl": " Chappie (2015) ",
+"episode": "",
+"negara": "US",
+"thn": "2015",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:52:02",
+"kilasan": " Di masyarakat futuristik dengan pasukan polisi robot tangguh sebagai penjaga keamanan, salah satu robot berevolusi hingga level kecerdasan buatan yang lebih tinggi. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@a7d5fbd/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@a7d5fbd/1/master.m3u8",
