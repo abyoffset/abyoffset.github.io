@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@b21c0ed/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@b21c0ed/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp48@b21c0ed/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp48@b21c0ed/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp48@b21c0ed/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp48@b21c0ed/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp48@b21c0ed/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp48@b21c0ed/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@b21c0ed/1/sub.vtt",
+"ttl": " Blood & Gold (2023) ",
+"episode": "",
+"negara": "DE",
+"thn": "2023",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:38:38",
+"kilasan": " Pada akhir Perang Dunia II, seorang tentara Jerman mencari putrinya, sementara seorang anggota pasukan SS mencari harta karun Yahudi. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@5cc5c5b/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@5cc5c5b/1/master.m3u8",
