@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@5cc5c5b/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@5cc5c5b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp47@5cc5c5b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp47@5cc5c5b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp47@5cc5c5b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp47@5cc5c5b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp47@5cc5c5b/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp47@5cc5c5b/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp47@5cc5c5b/1/sub.vtt",
+"ttl": " Angél Pol (2025) ",
+"episode": "",
+"negara": "ID",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.30",
+"dur": "1:49:09",
+"kilasan": " Jati dan Lastri membentuk orkes dangdut keliling dengan menggunakan sebuah truk demi bertahan hidup di tengah komunitas-komunitas yang terpinggirkan. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@6bb4053/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp46@6bb4053/1/master.m3u8",
