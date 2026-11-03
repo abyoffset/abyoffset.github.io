@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@f8d56eb/2/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@f8d56eb/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp48@f8d56eb/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp48@f8d56eb/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp48@f8d56eb/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp48@f8d56eb/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp48@f8d56eb/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp48@f8d56eb/2/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@f8d56eb/2/sub.vtt",
+"ttl": " Hunter x Hunter (2011) ",
+"episode": "37",
+"negara": "JP",
+"thn": "2011",
+"koleksi": "Hunter x Hunter (2011)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:35",
+"kilasan": " Gon Freecss, seorang bocah laki-laki berusia 12 tahun yang bercita-cita menjadi seorang Hunter —profesional elit yang menjelajahi dunia untuk melacak harta karun, menemukan spesies langka, dan memburu kriminal berbahaya. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@f8d56eb/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@f8d56eb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp48@f8d56eb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp48@f8d56eb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp48@f8d56eb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp48@f8d56eb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp48@f8d56eb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp48@f8d56eb/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@f8d56eb/1/sub.vtt",
+"ttl": " Hunter x Hunter (2011) ",
+"episode": "36",
+"negara": "JP",
+"thn": "2011",
+"koleksi": "Hunter x Hunter (2011)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:35",
+"kilasan": " Gon bertekad untuk mengembalikan nomor tag milik Hisoka yang diambil saat Ujian Hunter sebagai wujud pembuktian diri dan harga dirinya. Meskipun secara kekuatan fisik dan pengalaman Gon jauh tertinggal, ia berhasil mendaratkan satu pukulan telak yang mengejutkan Hisoka menggunakan tongkat pancingnya—sebuah momen klimaks yang emosional sekaligus memuaskan bagi Gon. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@79237ac/1/poster.jpg",
 "lnk": [
 "https://cdn.jsdelivr.net/gh/tvkuapp6/tapp20@79237ac/1/master.m3u8",
