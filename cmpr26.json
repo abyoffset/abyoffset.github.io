@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp49@f84dad7/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp49@f84dad7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp49@f84dad7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp49@f84dad7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp49@f84dad7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp49@f84dad7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp49@f84dad7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp49@f84dad7/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp49@f84dad7/1/sub.vtt",
+"ttl": " The Day After Tomorrow (2004) ",
+"episode": "",
+"negara": "US",
+"thn": "2004",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "2:03:55",
+"kilasan": " Setelah kekhawatiran lingkungan yang disampaikan oleh paleoklimatolog Jack Hall mengenai awal Zaman Es baru sebagian besar diabaikan oleh para pejabat PBB, penelitiannya terbukti benar ketika sebuah badai dahsyat muncul dan memicu bencana alam katastrofik di seluruh dunia. Berupaya menjangkau putranya, Sam—yang terjebak di Kota New York bersama temannya, Laura, dan orang-orang lainnya—Jack beserta timnya harus melakukan perjalanan untuk menemui Sam sebelum terlambat. ",
+"tiviku": "apk"
+},
+{
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp48@1c112e2/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp48@1c112e2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp48@1c112e2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp48@1c112e2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp48@1c112e2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp48@1c112e2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp48@1c112e2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp48@1c112e2/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp48@1c112e2/1/sub.vtt",
+"ttl": " Tenggelamnya Kapal Van Der Wijck (2013) ",
+"episode": "",
+"negara": "ID",
+"thn": "2013",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.02",
+"dur": "3:14:32",
+"kilasan": " Nusantara 1930, dari tanah kelahirannya Makasar, Zainuddin berlayar menuju tanah kelahiran ayahnya di Batipuh, Padang Panjang. Diantara keindahan ranah negeri Minangkabau ia bertemu Hayati, gadis cantik jelita, bunga di persukuannya. Kedua muda mudi itu jatuh cinta. Apa daya adat dan istiadat yang kuat meruntuhkan cinta suci mereka berdua. Zainuddin hanya seorang melarat tak berbangsa, sementara Hayati perempuan Minang keturunan bangsawan. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp48@7de0e38/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp48@7de0e38/1/master.m3u8",
@@ -1783,7 +1831,8 @@
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp13@56638b0/1/poster2.jpg",
 "lnk": [
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8","https://vod-proxy.vodm3u.workers.dev/tivikufm/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/filmovies8wq@0306d17/yZ53f/9pZt5/9pZt5.m3u8"
 ],
 "bahasa": "sub indo",
 "sub": "",
@@ -1825,7 +1874,8 @@
 {
 "logo": "https://i.imgur.com/t7E33jD.jpeg",
 "lnk": [
-"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tvq6@84afe08/1/master.m3u8","https://vod-proxy.vodm3u.workers.dev/tivikufm/tvq6@84afe08/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tvq6@84afe08/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tvq6@84afe08/1/master.m3u8"
 ],
 "bahasa": "dub indo",
 "sub": "",
@@ -1962,7 +2012,8 @@
 {
 "logo": "https://i.imgur.com/EePozSS.jpeg",
 "lnk": [
-"https://vod-proxy.vodm3u.workers.dev/tivikufm/filmovie96@8fcc8a9/t9960i/kafprm.mp4.m3u8","https://vod-proxy.vodm3u.workers.dev/tivikufm/filmovie96@8fcc8a9/t9960i/kafprm.mp4.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/filmovie96@8fcc8a9/t9960i/kafprm.mp4.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/filmovie96@8fcc8a9/t9960i/kafprm.mp4.m3u8"
 ],
 "bahasa": "",
 "sub": "",
@@ -2915,7 +2966,8 @@
 "crop_scale": "3.13",
 "dur": "1:43:40",
 "kilasan": "Doraemon dan teman-temannya pergi ke abad ke-22 untuk mencari lonceng emasnya yang dicuri oleh seorang pencuri terkenal bernama Kaito DX.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/app28@a1258db/1/poster.jpg",
@@ -3138,7 +3190,8 @@
 "crop_scale": "3.15",
 "dur": "1:20:21",
 "kilasan": "Nobita, Doraemon, dan kawan-kawan melakukan perjalanan ke masa depan yang jauh, menuju sebuah planet berpenghuni tempat manusia dan robot hidup berdampingan. Sang Ratu Kerajaan Robot berencana melenyapkan emosi para penduduk robot, sehingga Nobita dan teman-temannya harus menggagalkan rencana tersebut sembari melindungi seorang anak robot bernama Poko agar tidak terjebak di tengah konflik itu.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app19@d26591c/1/poster.jpg",
@@ -3494,7 +3547,8 @@
 "crop_scale": "3.15",
 "dur": "1:39:30",
 "kilasan": "Nobita dan Doraemon menggunakan Mochi Pohon Waktu untuk menangkap seekor burung besar yang telah punah sejak 500 tahun yang lalu. Demi melindungi hewan tersebut, Nobita dan Doraemon pergi ke Pulau Beremon, yang diawasi oleh seekor kumbang emas bernama Herakles.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/app15@865a4a2/1/poster.jpg",
@@ -3807,7 +3861,8 @@
 "crop_scale": "3.10",
 "dur": "1:43:18",
 "kilasan": "Setelah menghidupkan kembali sebutir telur yang telah menjadi fosil menggunakan Kain Waktu, Nobita mendapati dirinya kini memelihara seekor bayi dinosaurus. Semuanya berjalan lancar hingga dinosaurus itu tumbuh besar. Nobita dan teman-temannya pun menggunakan mesin waktu Doraemon untuk mengembalikannya ke zaman asalnya.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app10@b98490a/1/poster.jpg",
@@ -4056,7 +4111,8 @@
 "crop_scale": "3.10",
 "dur": "1:42:16",
 "kilasan": "Nobita menemukan jalan menuju sebuah pesawat luar angkasa di dimensi lain. Bersama teman-teman baru mereka, ia dan Doraemon melawan pemimpin kejam di sebuah planet yang penduduknya ditindas.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tvq49@1c11d9c/1/poster_1.jpg",
@@ -4076,7 +4132,8 @@
 "crop_scale": "1.33",
 "dur": "1:42:23",
 "kilasan": "Dikejutkan oleh generasi baru pembalap yang sangat cepat, Lightning McQueen yang legendaris tiba-tiba tersingkir dari olahraga yang dicintainya. Untuk kembali ke permainan, ia akan membutuhkan bantuan seorang teknisi balap muda yang bersemangat dengan rencananya sendiri untuk menang, inspirasi dari mendiang Hudson Hornet yang Luar Biasa, dan beberapa tikungan yang tak terduga. Membuktikan bahwa #95 belum selesai akan menguji hati seorang juara di panggung terbesar Piston Cup Racing!",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "US"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/app8@75fac6d/1/poster.jpg",
@@ -4180,7 +4237,8 @@
 "crop_scale": "3.13",
 "dur": "1:24:00",
 "kilasan": "Nobita, yang awalnya mengira ia dan Doraemon telah melakukan perbuatan baik dengan menyelamatkan kucing dan anjing terlantar serta mengirim mereka kembali ke masa 300 juta tahun yang lalu, mendapati bahwa penggunaan Sinar Evolusi milik Doraemon telah menciptakan masyarakat manusia kucing dan manusia anjing yang setara dengan peradaban di zaman Nobita. Ketika sebuah asteroid mengancam akan menghantam kota tersebut, Nobita dan teman-temannya harus menyelamatkan Doraemon serta meredakan ketegangan di antara kedua belah pihak.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp1/app7@0f29b24/1/poster_1.jpg",
@@ -4206,7 +4264,8 @@
 "crop_scale": "3.13",
 "dur": "1:43:53",
 "kilasan": "Doraemon dan teman-temannya melakukan perjalanan ke Jepang zaman purba dan bertemu dengan Kukuru. Ketika Kukuru menceritakan bahwa sukunya telah diperbudak oleh Gigazombie, Doraemon memutuskan untuk membantunya.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/app8@fa7b8ce/1/poster_1.jpg",
@@ -4232,7 +4291,8 @@
 "crop_scale": "3.00",
 "dur": "1:40:48",
 "kilasan": "Doraemon dan Nobita menemukan cincin emas misterius jauh di bawah lapisan es di Antartika, yang membawa mereka untuk mengungkap sebuah kota kuno yang telah hancur.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://i.imgur.com/RL2CDEJ.jpeg",
@@ -4253,7 +4313,8 @@
 "crop_scale": "1.00",
 "dur": "1:31:24",
 "kilasan": "Doraemon dan teman-temannya membuka lubang waktu dan mereka melakukan perjalanan ke Negeri Mayana, sebuah peradaban Maya yang hilang di dalam hutan.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tvq41@21847f3/1/poster_1.jpg",
@@ -4287,7 +4348,8 @@
 "crop_scale": "3.15",
 "dur": "1:48:32",
 "kilasan": "Doraemon, Nobita, dan teman-temannya pergi mencari Utopia, negeri sempurna di langit tempat semua orang hidup bahagia, menggunakan pesawat udara yang memiliki fungsi penjelajah waktu.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://image.tmdb.org/t/p/w220_and_h330_face/A5imhXiFF3AL9RRA4FBzNDFmfgW.jpg",
@@ -4381,7 +4443,8 @@
 "crop_scale": "3.10",
 "dur": "1:40:37",
 "kilasan": "Nobita dan teman-temannya memutuskan untuk membuat film yang terinspirasi oleh petualangan luar angkasa para pahlawan mereka, tetapi fiksi mereka berubah menjadi kenyataan.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/app6@285c976/1/poster_1.jpg",
@@ -4881,7 +4944,8 @@
 "crop_scale": "3.15",
 "dur": "1:30:49",
 "kilasan": "Doraemon dan teman-temannya harus menyelamatkan penduduk Birdopia dari perbuatan jahat mantan pasukan burung yang pendendam sebelum mereka melepaskan naga kuno yang jahat.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "JP"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/app1@fd056b4/1/poster.jpg",
@@ -5156,7 +5220,8 @@
 "crop_scale": "1.35",
 "dur": "1:46:12",
 "kilasan": "Mobil balap terkenal Lightning McQueen dan kawannya Mater pergi untuk bertanding pada balapan World Grand Prix. Tetapi jalan menuju kemenangan menjadi sulit saat Mater terjebak dalam petualangannya: spionase internasional.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "US"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tvq38@274f979/1/poster.jpg",
@@ -5251,7 +5316,8 @@
 "crop_scale": "1.00",
 "dur": "1:55:22",
 "kilasan": "Lightning McQueen, mobil balap rookie jagoan yang digerakkan untuk sukses, menemukan bahwa hidup adalah tentang perjalanan, bukan garis finish, ketika dia mendapati dirinya tiba-tiba berbelok di Radiator Springs, kota Route 66 yang mengantuk. Dalam perjalanan melintasi negara ke Kejuaraan Piala Piston besar di California untuk bersaing dengan dua pemain pro berpengalaman, McQueen mengenal karakter offbeat kota.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "US"
 },
 {
 "logo": "https://i.ibb.co.com/pBXWh4dC/Jembatan-Shiratal-Mustaqim.jpg",
@@ -5504,7 +5570,9 @@
 "dur": "2:21:52",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.15",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "ID",
+"kilasan": "Seorang detektif wanita bekerja sama dengan empat pembunuh bayaran untuk menyelidiki pembunuhan ayahnya."
 },
 {
 "logo": "https://i.imgur.com/OnrVnnF.jpeg",
