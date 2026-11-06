@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@eb2ef40/2/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@eb2ef40/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp50@eb2ef40/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp50@eb2ef40/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp50@eb2ef40/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp50@eb2ef40/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp50@eb2ef40/2/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp50@eb2ef40/2/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@eb2ef40/2/sub.vtt",
+"ttl": " Hunter x Hunter (2011) ",
+"episode": "41",
+"negara": "JP",
+"thn": "2011",
+"koleksi": "Hunter x Hunter (2011)",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "23:35",
+"kilasan": " seorang anak laki-laki bernama Gon Freecss yang bertekad menjadi seorang Hunter profesional—petualang elite yang mendedikasikan hidup untuk mencari harta karun, makhluk misterius, hingga memburu kriminal—demi bisa menemukan ayahnya yang dikira sudah tiada. Dalam perjalanannya, Gon harus melewati Ujian Hunter yang sangat berbahaya dan bersahabat dengan karakter-karakter hebat seperti Killua, Kurapika, dan Leorio. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp49@60f3e65/3/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp49@60f3e65/3/master.m3u8",
@@ -628,16 +652,27 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://i.imgur.com/ECaK4Pe.jpeg",
-"lnk": "https://cdn.jsdelivr.net/gh/tvkuapp4/nwe@01a88b5/3/master.m3u8",
-"ttl": "Hunter x Hunter (2011)",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@eb2ef40/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@eb2ef40/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp50@eb2ef40/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp50@eb2ef40/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp50@eb2ef40/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp50@eb2ef40/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp50@eb2ef40/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp50@eb2ef40/1/master.m3u8"
+],
 "bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@eb2ef40/2/sub.vtt",
+"ttl": " Hunter x Hunter (2011) ",
 "episode": "02",
+"negara": "JP",
 "thn": "2011",
 "koleksi": "Hunter x Hunter (2011)",
-"dur": "23:35",
 "crop_mode": "stretch_crop",
 "crop_scale": "1.00",
+"dur": "23:35",
+"kilasan": " seorang anak laki-laki bernama Gon Freecss yang bertekad menjadi seorang Hunter profesional—petualang elite yang mendedikasikan hidup untuk mencari harta karun, makhluk misterius, hingga memburu kriminal—demi bisa menemukan ayahnya yang dikira sudah tiada. Dalam perjalanannya, Gon harus melewati Ujian Hunter yang sangat berbahaya dan bersahabat dengan karakter-karakter hebat seperti Killua, Kurapika, dan Leorio. ",
 "tiviku": "apk"
 },
 {
