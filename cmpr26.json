@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp51@c9fa7b3/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp51@c9fa7b3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp51@c9fa7b3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp51@c9fa7b3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp51@c9fa7b3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp51@c9fa7b3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp51@c9fa7b3/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp51@c9fa7b3/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp51@c9fa7b3/1/sub.vtt",
+"ttl": " Qorin 2 (2025) ",
+"episode": "",
+"negara": "ID",
+"thn": "2025",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.32",
+"dur": "1:49:28",
+"kilasan": " Fitri (Wavi Zihan), seorang guru BP muda, sudah beberapa lama mencurigai terjadinya perundungan terhadap muridnya, Jaya (Ali Fikry). Bukan hanya Fitri, bapak Jaya, Makmur (Fedi Nuril), juga sudah pernah meminta pihak sekolah menolong anaknya namun tidak digubris. Hal ini membuat Fitri terdorong mengusut kasus Jaya sendiri, dengan mencari saksi dan bukti dari warga. Namun, pencarian itu malah mengantarkan Fitri pada misteri lain di kampung, di mana orang-orang mulai bertindak bukan seperti diri sendiri, melainkan sebagai jin Qorin mereka. Semakin Fitri menelusuri, kaitan antara dua kasus semakin jelas, dan kejadian-kejadian mencekam pun semakin mengikuti. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@2919fa9/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@2919fa9/1/master.m3u8",
@@ -5290,7 +5314,8 @@
 "crop_scale": "1.10",
 "dur": "1:48:14",
 "kilasan": "Kehidupan di sekolah berasrama berubah menjadi kacau ketika seorang guru memerintahkan murid-muridnya untuk melakukan ritual terlarang yang memanggil kembaran mereka.",
-"tiviku": "apk"
+"tiviku": "apk",
+"negara": "ID"
 },
 {
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tvq42@030d1b0/1/poster_1.jpg",
