@@ -1,5 +1,53 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@2919fa9/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@2919fa9/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp50@2919fa9/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp50@2919fa9/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp50@2919fa9/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp50@2919fa9/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp50@2919fa9/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp50@2919fa9/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@2919fa9/1/sub.vtt",
+"ttl": " Toilet 105 (2010) ",
+"episode": "",
+"negara": "ID",
+"thn": "2010",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:21:36",
+"kilasan": " Tiga sekawan yang dikenal sebagai playboy merupakan siswa di SMA Bina Persada. Okta, Ical, dan Rio secara terang-terangan mendekati Marsya, seorang siswi pindahan dari Prancis. Kepala sekolah, Ibu Endang—dengan dibantu suaminya, Pak Wahyu, yang merupakan guru bimbingan konseling—berulang kali mengingatkan para siswa untuk menerima Marsya sebagai bagian dari sekolah. Kepolosan Marsya sering kali membuatnya tertimpa masalah, namun satu hal yang paling mengganggunya adalah kemunculan sosok hantu perempuan di toilet sekolah. Apakah hantu tersebut memiliki keterkaitan dengan hilangnya Adelia beberapa waktu lalu? Apa rahasia sebenarnya yang selama ini tersembunyi? ",
+"tiviku": "apk"
+},
+{
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@e766732/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@e766732/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp50@e766732/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp50@e766732/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp50@e766732/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp50@e766732/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp50@e766732/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp50@e766732/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp50@e766732/1/sub.vtt",
+"ttl": " Cinta Pertama (1973) ",
+"episode": "",
+"negara": "ID",
+"thn": "1973",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:46:17",
+"kilasan": " Kisah cinta di mana orang tua sang gadis tidak merestui kekasihnya karena pria tersebut dituduh telah membunuh mantan istrinya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp50@370af4b/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp50@370af4b/1/master.m3u8",
