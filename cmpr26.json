@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp54@9bc86ca/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp54@9bc86ca/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp54@9bc86ca/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp54@9bc86ca/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp54@9bc86ca/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp54@9bc86ca/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp54@9bc86ca/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp54@9bc86ca/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp54@9bc86ca/1/sub.vtt",
+"ttl": " The SpongeBob Movie: Sponge Out of Water (2015) ",
+"episode": "",
+"negara": "US",
+"thn": "2015",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:32:34",
+"kilasan": " Burger Beard adalah bajak laut yang sedang mencari halaman akhir dari buku ajaib yang membuat segala rencana jahat yang ia tulis di dalamnya menjadi nyata, yang terjadi kepada formula rahasia Krabby Patty. Saat seluruh kota Bikini Bottom dalam bahaya, SpongeBob, Patrick, Tuan Krabs, Squidward, Sandy, dan Plankton perlu melakukan misi yang membawa mereka ke permukaan. Untuk membawa kembali resepnya dan menyelamatkan kota, mereka harus mengambil bukunya dan mengubah mereka menjadi pahlawan super. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp53@ea8b053/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp53@ea8b053/1/master.m3u8",
