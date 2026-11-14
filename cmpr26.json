@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp54@8590748/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp54@8590748/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp54@8590748/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp54@8590748/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp54@8590748/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp54@8590748/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp54@8590748/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp54@8590748/1/master.m3u8"
+],
+"bahasa": "dub indo",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp54@8590748/1/sub.vtt",
+"ttl": " Monster House (2006) ",
+"episode": "",
+"negara": "US",
+"thn": "2006",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:30:38",
+"kilasan": " Monster di bawah tempat tidur saja sudah cukup menakutkan, tetapi bagaimana jika satu rumah utuh justru mengincar Anda? Tiga remaja berusaha mencari tahu saat mereka menghadapi rumah tetangga yang sudah reyot dan mengungkap rahasia-rahasia mengerikan di dalamnya. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp54@b468825/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp54@b468825/1/master.m3u8",
