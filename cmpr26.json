@@ -1,5 +1,29 @@
 [
 {
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp55@797ac7f/1/poster.jpg",
+"lnk": [
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp55@797ac7f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp55@797ac7f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp55@797ac7f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp55@797ac7f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp55@797ac7f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp55@797ac7f/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/agueztpsq3/tapp55@797ac7f/1/master.m3u8"
+],
+"bahasa": "",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp55@797ac7f/1/sub.vtt",
+"ttl": " Kanibal: Sumanto (2004) ",
+"episode": "",
+"negara": "ID",
+"thn": "2004",
+"koleksi": "",
+"crop_mode": "stretch_crop",
+"crop_scale": "1.00",
+"dur": "1:37:40",
+"kilasan": " Kejahatan kanibalisme yang dilakukan Sumanto menimbulkan kehebohan di kalangan warga sebuah desa kecil dan menjadi berita utama di surat kabar. Ia menceritakan perjalanan hidup serta tindak kejahatannya kepada seorang jurnalis. ",
+"tiviku": "apk"
+},
+{
 "logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp54@8590748/1/poster.jpg",
 "lnk": [
 "https://vod-proxy.vodm3u.workers.dev/vodm3u2/tapp54@8590748/1/master.m3u8",
