@@ -1,17 +1,17 @@
 [
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@85875b2/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp8@85875b2/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@85875b2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/tapp8@85875b2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp8@85875b2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp8@85875b2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp8@85875b2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp8@85875b2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp8@85875b2/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp8@85875b2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/tapp8@85875b2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp8@85875b2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp8@85875b2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp8@85875b2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp8@85875b2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp8@85875b2/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkapp691/tapp8@85875b2/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp8@85875b2/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "18",
 "negara": "JP",
@@ -24,18 +24,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/filmovie/tapp7@b900314/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp7@b900314/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/filmovie/tapp7@b900314/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/tapp7@b900314/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/tapp7@b900314/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp7@b900314/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/tapp7@b900314/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp7@b900314/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp7@b900314/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp7@b900314/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/tapp7@b900314/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/tapp7@b900314/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp7@b900314/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/tapp7@b900314/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp7@b900314/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp7@b900314/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp7@b900314/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp7@b900314/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "17",
 "negara": "JP",
@@ -48,18 +48,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@a9fc205/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@a9fc205/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@a9fc205/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@a9fc205/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@a9fc205/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp4@a9fc205/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@a9fc205/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@a9fc205/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@a9fc205/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@a9fc205/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp4@a9fc205/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp4@a9fc205/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp4@a9fc205/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp4@a9fc205/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp4@a9fc205/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp4@a9fc205/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/filmovie/tapp7@b900314/1/sub2.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/filmovie/tapp7@b900314/1/sub2.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "16",
 "negara": "JP",
@@ -72,18 +72,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@b6629d1/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@b6629d1/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@b6629d1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@b6629d1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@b6629d1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp4@b6629d1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@b6629d1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@b6629d1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@b6629d1/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@b6629d1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp4@b6629d1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp4@b6629d1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp4@b6629d1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp4@b6629d1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp4@b6629d1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp4@b6629d1/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@b6629d1/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@b6629d1/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "15",
 "negara": "JP",
@@ -96,18 +96,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@0118ebb/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@0118ebb/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@0118ebb/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@0118ebb/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@0118ebb/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp4@0118ebb/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@0118ebb/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@0118ebb/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@0118ebb/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@0118ebb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp4@0118ebb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp4@0118ebb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp4@0118ebb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp4@0118ebb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp4@0118ebb/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp4@0118ebb/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@0118ebb/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@0118ebb/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "14",
 "negara": "",
@@ -120,18 +120,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@b0a19a2/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp4@b0a19a2/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@b0a19a2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/tapp4@b0a19a2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/tapp4@b0a19a2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp4@b0a19a2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp4@b0a19a2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp4@b0a19a2/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp4@b0a19a2/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp4@b0a19a2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/tapp4@b0a19a2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/tapp4@b0a19a2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp4@b0a19a2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp4@b0a19a2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp4@b0a19a2/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp4@b0a19a2/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkapp692/tapp4@b0a19a2/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/tapp4@b0a19a2/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "13",
 "negara": "",
@@ -144,18 +144,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@5ed75d5/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp1@5ed75d5/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@5ed75d5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp1/tapp1@5ed75d5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp2/tapp1@5ed75d5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/tapp1@5ed75d5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/tapp1@5ed75d5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/tapp1@5ed75d5/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/tapp1@5ed75d5/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp1@5ed75d5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp1/tapp1@5ed75d5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/tapp1@5ed75d5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/tapp1@5ed75d5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/tapp1@5ed75d5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/tapp1@5ed75d5/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/tapp1@5ed75d5/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp/tapp1@5ed75d5/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tapp1@5ed75d5/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "12",
 "thn": "1993",
@@ -167,18 +167,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp2/app31@42f3ac6/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/app31@42f3ac6/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp2/app31@42f3ac6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/app31@42f3ac6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/app31@42f3ac6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/app31@42f3ac6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app31@42f3ac6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app31@42f3ac6/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app31@42f3ac6/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp2/app31@42f3ac6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/app31@42f3ac6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/app31@42f3ac6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/app31@42f3ac6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app31@42f3ac6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app31@42f3ac6/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app31@42f3ac6/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp2/app31@42f3ac6/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp2/app31@42f3ac6/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "11",
 "thn": "1993",
@@ -190,18 +190,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app30@7431a33/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app30@7431a33/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app30@7431a33/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/app30@7431a33/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/app30@7431a33/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/app30@7431a33/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app30@7431a33/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app30@7431a33/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app30@7431a33/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app30@7431a33/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/app30@7431a33/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/app30@7431a33/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/app30@7431a33/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app30@7431a33/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app30@7431a33/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app30@7431a33/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/app30@7431a33/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app30@7431a33/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "10",
 "thn": "1993",
@@ -213,18 +213,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp4/app30@4dea5f7/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app30@4dea5f7/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app30@4dea5f7/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/vodm3u1/app30@4dea5f7/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/app30@4dea5f7/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/app30@4dea5f7/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app30@4dea5f7/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app30@4dea5f7/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app30@4dea5f7/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app30@4dea5f7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/vodm3u1/app30@4dea5f7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/app30@4dea5f7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/app30@4dea5f7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app30@4dea5f7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app30@4dea5f7/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app30@4dea5f7/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp4/app30@4dea5f7/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app30@4dea5f7/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "09",
 "koleksi": "Slam Dunk (1993)",
@@ -236,18 +236,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tivikufm/app29@dbfe926/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tivikufm/app29@dbfe926/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tivikufm/app29@dbfe926/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp69/app29@dbfe926/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/app29@dbfe926/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app29@dbfe926/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app29@dbfe926/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app29@dbfe926/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app29@dbfe926/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/app29@dbfe926/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/app29@dbfe926/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/app29@dbfe926/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app29@dbfe926/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app29@dbfe926/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app29@dbfe926/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app29@dbfe926/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tivikufm/app29@dbfe926/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tivikufm/app29@dbfe926/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "08",
 "koleksi": "Slam Dunk (1993)",
@@ -259,18 +259,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp69/app29@30b9827/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/app29@30b9827/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkapp69/app29@30b9827/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/app29@30b9827/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app29@30b9827/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app29@30b9827/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app29@30b9827/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app29@30b9827/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/app29@30b9827/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkapp69/app29@30b9827/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/app29@30b9827/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app29@30b9827/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app29@30b9827/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app29@30b9827/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app29@30b9827/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/app29@30b9827/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkapp69/app29@30b9827/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp69/app29@30b9827/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "07",
 "koleksi": "Slam Dunk (1993)",
@@ -282,18 +282,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app28@8e2e6b1/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/app28@8e2e6b1/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkapp692/app28@8e2e6b1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/abyoffset/app28@8e2e6b1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app28@8e2e6b1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app28@8e2e6b1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app28@8e2e6b1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app28@8e2e6b1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/app28@8e2e6b1/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/app28@8e2e6b1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/abyoffset/app28@8e2e6b1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app28@8e2e6b1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app28@8e2e6b1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app28@8e2e6b1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app28@8e2e6b1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/app28@8e2e6b1/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkapp692/app28@8e2e6b1/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/app28@8e2e6b1/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "06",
 "koleksi": "Slam Dunk (1993)",
@@ -305,18 +305,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/app27@c2baf74/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app27@c2baf74/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app27@c2baf74/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app27@c2baf74/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app27@c2baf74/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app27@c2baf74/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/app27@c2baf74/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/app27@c2baf74/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/app27@c2baf74/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app27@c2baf74/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app27@c2baf74/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app27@c2baf74/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app27@c2baf74/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/app27@c2baf74/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/app27@c2baf74/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/app27@c2baf74/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/app27@c2baf74/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app27@c2baf74/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "05",
 "koleksi": "Slam Dunk (1993)",
@@ -328,18 +328,18 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkuapp7/app27@dc6d204/1/poster.jpg",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app27@dc6d204/1/poster.jpg",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/tvkuapp7/app27@dc6d204/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app27@dc6d204/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app27@dc6d204/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app27@dc6d204/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/app27@dc6d204/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/app27@dc6d204/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/app27@dc6d204/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app27@dc6d204/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app27@dc6d204/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app27@dc6d204/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app27@dc6d204/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/app27@dc6d204/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/app27@dc6d204/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/app27@dc6d204/1/master.m3u8"
 ],
 "bahasa": "sub indo",
-"sub": "https://cdn.jsdelivr.net/gh/tvkuapp7/app27@dc6d204/1/sub.vtt",
+"sub": "https://vod-proxy.vodm3u.workers.dev/tvkuapp7/app27@dc6d204/1/sub.vtt",
 "ttl": "Slam Dunk (1993)",
 "episode": "04",
 "koleksi": "Slam Dunk (1993)",
@@ -351,15 +351,15 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app26@df6c2f1/1/poster.png",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/app26@df6c2f1/1/poster.png",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/filmovie/app26@df6c2f1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie1/app26@df6c2f1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app26@df6c2f1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app26@df6c2f1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/app26@df6c2f1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/app26@df6c2f1/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/app26@df6c2f1/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/filmovie/app26@df6c2f1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app26@df6c2f1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app26@df6c2f1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app26@df6c2f1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/app26@df6c2f1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/app26@df6c2f1/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/app26@df6c2f1/1/master.m3u8"
 ],
 "bahasa": "sub indo",
 "ttl": "Slam Dunk (1993)",
@@ -373,15 +373,15 @@
 "tiviku": "apk"
 },
 {
-"logo": "https://cdn.jsdelivr.net/gh/tvkapp692/app26@cf87f64/1/poster.png",
+"logo": "https://vod-proxy.vodm3u.workers.dev/tvkapp692/app26@cf87f64/1/poster.png",
 "lnk": [
-"https://cdn.jsdelivr.net/gh/filmovie1/app26@cf87f64/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp6/app26@cf87f64/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkuapp4/app26@cf87f64/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tivikufm/app26@cf87f64/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp692/app26@cf87f64/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/tvkapp691/app26@cf87f64/1/master.m3u8",
-"https://cdn.jsdelivr.net/gh/filmovie/app26@cf87f64/1/master.m3u8"
+"https://vod-proxy.vodm3u.workers.dev/filmovie1/app26@cf87f64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp6/app26@cf87f64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkuapp4/app26@cf87f64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tivikufm/app26@cf87f64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp692/app26@cf87f64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/tvkapp691/app26@cf87f64/1/master.m3u8",
+"https://vod-proxy.vodm3u.workers.dev/filmovie/app26@cf87f64/1/master.m3u8"
 ],
 "bahasa": "sub indo",
 "ttl": "Slam Dunk (1993)",
@@ -396,7 +396,7 @@
 },
 {
 "logo": "https://i.ibb.co.com/yFv1pd7H/Slam-Dunk.jpg",
-"lnk": [ "https://cdn.jsdelivr.net/gh/tvkuapp/tvq25@5841111/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkuapp4/5841111@5841111/1/master.m3u8","https://cdn.jsdelivr.net/gh/filmovie1/5841111@5841111/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp69/5841111@5841111/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp692/5841111@5841111/1/master.m3u8","https://cdn.jsdelivr.net/gh/tvkapp691/5841111@5841111/1/master.m3u8" ],
+"lnk": [ "https://vod-proxy.vodm3u.workers.dev/tvkuapp/tvq25@5841111/1/master.m3u8","https://vod-proxy.vodm3u.workers.dev/tvkuapp4/5841111@5841111/1/master.m3u8","https://vod-proxy.vodm3u.workers.dev/filmovie1/5841111@5841111/1/master.m3u8","https://vod-proxy.vodm3u.workers.dev/tvkapp69/5841111@5841111/1/master.m3u8","https://vod-proxy.vodm3u.workers.dev/tvkapp692/5841111@5841111/1/master.m3u8","https://vod-proxy.vodm3u.workers.dev/tvkapp691/5841111@5841111/1/master.m3u8" ],
 "ttl": "Slam Dunk (1993)",
 "bahasa": "sub indo",
 "episode": "01",
